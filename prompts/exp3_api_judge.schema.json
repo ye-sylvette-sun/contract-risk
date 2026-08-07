@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["judgments"],
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "description": "One judgment per target provision id.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["clause_id", "prob_cat1", "prob_cat2",
+                     "reasoning_cat1", "reasoning_cat2"],
+        "properties": {
+          "clause_id": {
+            "type": "string",
+            "description": "The provision id exactly as given in the prompt."
+          },
+          "prob_cat1": {
+            "type": "number",
+            "description": "Probability of an intrinsic textual defect, in [0,1]. The bound is stated here rather than as minimum/maximum: the structured-output dialect rejects numeric range keywords, and the reader clamps."
+          },
+          "prob_cat2": {
+            "type": "number",
+            "description": "Probability of a defect relative to the rest of the instrument, in [0,1]. Bound stated here for the same reason as prob_cat1."
+          },
+          "reasoning_cat1": {
+            "type": "string",
+            "description": "The provision's own wording only; justifies prob_cat1."
+          },
+          "reasoning_cat2": {
+            "type": "string",
+            "description": "The provision's fit with the rest of the instrument only; justifies prob_cat2."
+          }
+        }
+      }
+    }
+  }
+}

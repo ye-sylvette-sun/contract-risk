@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["instrument_name", "instrument_start_line", "instrument_end_line",
+               "continues_from", "ends_mid_document", "provisions", "note"],
+  "properties": {
+    "instrument_name": {
+      "type": "string",
+      "description": "Human-readable name of the instrument, or \"\" when the file contains none."
+    },
+    "instrument_start_line": {
+      "type": "integer",
+      "description": "First line of the instrument itself; 0 when there is none."
+    },
+    "instrument_end_line": {
+      "type": "integer",
+      "description": "Last line of the instrument itself; 0 when there is none."
+    },
+    "continues_from": {
+      "type": "string",
+      "description": "Name of the sibling file whose text this file continues, or \"\"."
+    },
+    "ends_mid_document": {
+      "type": "boolean",
+      "description": "True when this file breaks off mid-document rather than ending properly."
+    },
+    "provisions": {
+      "type": "array",
+      "description": "Every substantive provision of the instrument, in document order.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "start_line", "end_line", "text", "repairs"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short name including the provision's number, e.g. \"8. Notices\"."
+          },
+          "start_line": {"type": "integer", "description": "First line the provision occupies."},
+          "end_line": {"type": "integer", "description": "Last line the provision occupies."},
+          "text": {
+            "type": "string",
+            "description": "The provision verbatim from those lines, with OCR damage repaired."
+          },
+          "repairs": {
+            "type": "string",
+            "description": "One sentence on what was repaired, or \"\" if nothing was."
+          }
+        }
+      }
+    },
+    "note": {
+      "type": "string",
+      "description": "One or two sentences: what the document is and what fixed the boundaries, or why there is no instrument."
+    }
+  }
+}

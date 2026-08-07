@@ -1,0 +1,400 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "prob_cat1": 0.78,
+      "prob_cat2": 0.62,
+      "reasoning_cat1": "The clause fixes the measure of cargo loss as \"the Shipper's replacement value,\" a term it does not define and which is reasonably susceptible to several readings: the Shipper's own cost to replace (manufacturing/replacement cost), the market or wholesale price at destination, or the invoice/sale price. The very next sentence then switches metrics, directing deduction of salvage \"from the invoice price,\" so the operative benchmark oscillates between \"replacement value\" and \"invoice price\" within three sentences. The final sentence (\"some of the Commodities may be disposed of in a manner that will prevent the damaged goods from being sold\") is an acknowledgement of indeterminate legal effect — it neither eliminates the salvage deduction nor states when it is inapplicable. Named ambiguous terms: \"replacement value,\" \"invoice price,\" \"reasonable salvage value,\" \"released to Carrier.\"",
+      "reasoning_cat2": "The paragraph is expressly a subpart (b) of a larger liability article, so it presupposes a subsection (a) fixing the basis and limits of Carrier's cargo liability (and any Carmack-style or dollar cap terms), yet it announces its own measure of loss without a cross-reference or a \"subject to\" qualifier. It also sits against the indemnification article, which carves the Commodities out of Carrier's indemnity (\"but excluding the Commodities\"), and against the compensation/limitation articles that fix billing and claim procedures — leaving unclear how a replacement-value cargo claim interacts with those. The reference to \"Shipper,\" a party defined in the recitals as a non-signatory principal of Customer, imports a valuation standard set by someone outside the contract, which is difficult to harmonise with the clause requiring Carrier to look exclusively to Customer and with Customer's role as the contracting counterparty.",
+      "gold": "risky_cat1",
+      "clause_name": "Liabilities and Claims for Commodities, para 9(b) (measure of loss — \"replacement value\")"
+    },
+    {
+      "clause_id": "neg1",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.24,
+      "reasoning_cat1": "Standard preamble and recitals: parties, dates, states of incorporation, and defined terms (\"Commodities,\" \"Shipper,\" \"Services\") are introduced definitely. \"General commodities\" is broad but is expressly defined as the contract term, not left to construction.",
+      "reasoning_cat2": "The recitals characterise Carrier as a contract motor carrier and Customer as one who \"arranges for the transportation\" for underlying shippers; other provisions in this instrument twice refer to \"Broker\" (the scope-of-work paragraph and the compensation paragraph's \"contract Broker agreement\") and to Carrier's use of \"underlying carriers.\" That creates some tension between the recital characterisation and the operative text, though it is a stray-word problem rather than a clear recital/operative contradiction.",
+      "gold": "not_risky",
+      "clause_name": "Preamble and Recitals"
+    },
+    {
+      "clause_id": "neg2",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.18,
+      "reasoning_cat1": "The sentence \"shall continue for a period of one year from the date of execution or unless earlier terminated\" is syntactically garbled (\"or unless\"), but its meaning — one year subject to 30 days' termination on notice — is recoverable and definite. Renewal, notice period and survival of accrued obligations are all stated.",
+      "reasoning_cat2": "It coexists with a separate default article permitting termination after a 30-day cure period; the two are cumulative rather than contradictory (one is with-or-without cause on notice, the other for uncured default). The \"except as otherwise provided in this Agreement\" carve-out points outward but is a standard saving clause, and the survivability article expressly preserves indemnities.",
+      "gold": "not_risky",
+      "clause_name": "1. Term, Renewal and Termination"
+    },
+    {
+      "clause_id": "neg3",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "reasoning_cat1": "Three short, unambiguous sentences establishing non-exclusivity in both directions. No vague standard, no catch-all.",
+      "reasoning_cat2": "Nothing in the text cross-references or qualifies another provision, and no other provision in the list purports to grant exclusivity.",
+      "gold": "not_risky",
+      "clause_name": "2. Agreement Non-Exclusive"
+    },
+    {
+      "clause_id": "neg4",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.42,
+      "reasoning_cat1": "Mostly definite operating obligations, but the lead-in reads \"Broker agrees to provide the Services\" in an agreement whose only defined parties are \"Carrier\" and \"Customer\" — an undefined actor is made the promisor of the core obligation. Sub-paragraph (e) uses an open-ended list (\"Special services such as ... and other similar services\"), a classic general-catch-all-after-specifics formulation whose reach is uncertain, and (j) makes performance evaluation \"as designated by the Customer's representative and may be modified from time to time,\" a standard with no fixed content. Lettering also skips (g).",
+      "reasoning_cat2": "The stray \"Broker\" recurs in the compensation article (\"purported to be a contract Broker agreement\"), so the instrument is internally inconsistent about whether the counterparty is a carrier or a broker — a characterisation the recitals resolve one way and these clauses another. Sub-paragraphs (l)-(m) define \"pick up\" and \"delivery,\" but Exhibit A separately defines \"delivery\" as transport to the consignee's receiving location from Shipper's facilities, and Exhibit A Item 100 duplicates (k) verbatim; the entire-agreement article gives the Exhibits priority in conflict, so these duplicate definitions could displace the body's.",
+      "gold": "not_risky",
+      "clause_name": "3. Scope of Work"
+    },
+    {
+      "clause_id": "neg5",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.15,
+      "reasoning_cat1": "Definite: who issues receipts, subordination of bill-of-lading terms, prima facie effect of signature, and the delivery-receipt requirement are all specified. \"In the form acceptable to Customer and the Shipper\" is open but is a procedural approval right, not an operative ambiguity.",
+      "reasoning_cat2": "It states a priority rule (this Agreement governs over bills of lading) that is repeated in the other-documents article; the two are consistent. The entire-agreement article's rule that Exhibits control over the Agreement is a different priority question and does not contradict this clause.",
+      "gold": "not_risky",
+      "clause_name": "4. Receipts and Bills of Lading"
+    },
+    {
+      "clause_id": "neg6",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "reasoning_cat1": "Short procedural directions with definite triggers (\"pickup or delivery problems that prevent the timely pickup or delivery\"), notification means, and a consent requirement. \"Prior to Carrier accepting legal responsibility for the shipment\" is slightly imprecise as to timing but is not the operative allocation of risk.",
+      "reasoning_cat2": "It expressly defers to Exhibit A for reconsignment procedures and for refused/undelivered shipments, and Exhibit A does contain matching items (reconsignment/diversion; return of shipments). The cross-references are honoured rather than contradicted.",
+      "gold": "not_risky",
+      "clause_name": "5. Delivery Arrangements; Delays; Reconsignment"
+    },
+    {
+      "clause_id": "neg7",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.24,
+      "reasoning_cat1": "Detailed and largely definite: rate source, amendment mechanics, 30-day payment, 180-day invoicing cut-off with forfeiture, and an express bar on unapproved accessorials. The phrase \"services outside the scope of this Agreement\" is somewhat elastic, and (c)'s ratification of acts \"pursuant to any prior contract ... which purported to be a contract Broker agreement\" is obscure, but neither is the operative term likely to be litigated as ambiguous.",
+      "reasoning_cat2": "(c) says the Exhibit A rates supersede all prior rates, while the entire-agreement article separately supersedes all prior agreements — consistent. The \"contract Broker agreement\" reference again sits oddly with the recitals' carrier characterisation and with the scope article's stray \"Broker,\" but this is a residue of a prior form rather than an operative conflict.",
+      "gold": "not_risky",
+      "clause_name": "6. Compensation and Billing"
+    },
+    {
+      "clause_id": "neg8",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "Concrete deadlines (180 days to bill or contest; 18 months to sue) and a defined consequence for non-compliance. \"Prevailing party\" is a familiar, workable term.",
+      "reasoning_cat2": "It is confined by its heading and text to charges and fees, leaving cargo-loss claims to the liability article; nothing in it purports to govern cargo claims, so no overlap conflict is apparent from the text.",
+      "gold": "not_risky",
+      "clause_name": "7. Limitation on Actions for Charges and Fees"
+    },
+    {
+      "clause_id": "neg9",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.18,
+      "reasoning_cat1": "A conventional broad indemnity with an express carve-out for the Commodities and an express comparative carve-back for Customer's negligence (\"except to the extent (but only to the extent)\"). The parenthetical \"including, without limitation, Carrier's and Carrier's agents and Customer's employees\" is grammatically rough but its scope is intelligible.",
+      "reasoning_cat2": "The exclusion of \"the Commodities\" deliberately routes cargo damage to the separate liability article, so the two dovetail rather than clash; the survivability article expressly continues indemnities past termination.",
+      "gold": "not_risky",
+      "clause_name": "8. Indemnification"
+    },
+    {
+      "clause_id": "neg10",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.22,
+      "reasoning_cat1": "A warranty tied to an externally defined federal rating scheme, with the prohibited ratings named. \"Satisfactory,\" \"Conditional,\" \"Unsatisfactory\" are DOT terms of art, not vague.",
+      "reasoning_cat2": "It presupposes that Carrier may tender freight to \"underlying carriers,\" which fits the compliance article but sits awkwardly with the independent-contractor article's premise that Carrier itself controls the persons providing the Services and with the recitals' contract-carrier characterisation. The tension is thematic rather than a direct contradiction.",
+      "gold": "not_risky",
+      "clause_name": "11. Safety Rating"
+    },
+    {
+      "clause_id": "neg11",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "Compliance covenant with named statutes and agencies and an \"including but not limited to\" list; the general obligation (comply with all applicable law) is independently definite, so the catch-all does not create scope uncertainty.",
+      "reasoning_cat2": "Notification duties dovetail with the notices article; nothing points to a conflicting provision.",
+      "gold": "not_risky",
+      "clause_name": "12. Compliance with Laws"
+    },
+    {
+      "clause_id": "neg12",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "reasoning_cat1": "Purely mechanical: permitted delivery methods and specific addresses. Definite.",
+      "reasoning_cat2": "Other provisions requiring written notice (termination, default, amendments) are served by this clause rather than contradicted by it.",
+      "gold": "not_risky",
+      "clause_name": "13. Notices"
+    },
+    {
+      "clause_id": "neg13",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.16,
+      "reasoning_cat1": "One sentence, definite in effect: Carrier's indemnities, warranties, guarantees and obligations survive. It is one-sided (only Carrier's obligations survive), but a one-sided allocation is not itself an ambiguity.",
+      "reasoning_cat2": "The term clause separately provides that termination does not release either party from obligations accruing before termination, so both parties' accrued obligations are preserved there; this clause adds forward survival for Carrier only. The two can be harmonised.",
+      "gold": "not_risky",
+      "clause_name": "14. Survivability"
+    },
+    {
+      "clause_id": "neg14",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.28,
+      "reasoning_cat1": "The operative sentence contains a drafting error — \"shall not assign or transfer this Agreement in whole or in part or without the prior written consent\" — where the stray \"or\" could be read as an absolute bar on partial assignment. The proviso deeming \"Customer\" to include Exel's subsidiaries and divisions is clear.",
+      "reasoning_cat2": "A separate assignability article states the Agreement binds successors and assigns and that terms are unaffected by transfer or assignment from Customer to the underlying Shipper — an assignment this clause would otherwise require Carrier's consent for. That is a real, if modest, tension between two provisions in this instrument.",
+      "gold": "not_risky",
+      "clause_name": "15. Assignment of Agreement; Subsidiaries and Divisions"
+    },
+    {
+      "clause_id": "neg15",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "reasoning_cat1": "Definite mechanics: written request, 30-day cure, then termination. \"Any default thereunder\" is broad but the concept of default under the Agreement is determinable from the substantive covenants.",
+      "reasoning_cat2": "It coexists with the term article's right to terminate on 30 days' notice with or without cause; the default remedy is cumulative and the two produce the same practical notice period, so no genuine inconsistency appears.",
+      "gold": "not_risky",
+      "clause_name": "16. Default"
+    },
+    {
+      "clause_id": "neg16",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "Clear status declaration plus a specific tax/benefits indemnity naming the categories covered. Definite.",
+      "reasoning_cat2": "The safety-rating and compliance articles contemplate Carrier using underlying carriers, which is compatible with independent-contractor status; nothing here contradicts another provision.",
+      "gold": "not_risky",
+      "clause_name": "17. Independent Contractor"
+    },
+    {
+      "clause_id": "neg17",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "reasoning_cat1": "Boilerplate severability, definite in operation.",
+      "reasoning_cat2": "Applies generally to the instrument and conflicts with nothing.",
+      "gold": "not_risky",
+      "clause_name": "18. Invalidity of Provisions"
+    },
+    {
+      "clause_id": "neg18",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "Defines the protected information by an enumerated list closing with \"and other details of Customer's business obtained by Carrier in connection with the performance of the Services\" — a catch-all after specifics whose outer boundary is soft, though the connective limitation (obtained in connection with the Services) tempers it. No survival term or exceptions are stated.",
+      "reasoning_cat2": "The survivability article carries Carrier's obligations past termination, which supplies the missing duration; nothing else in the list addresses confidentiality, so no conflict is visible.",
+      "gold": "not_risky",
+      "clause_name": "19. Confidentiality of Information"
+    },
+    {
+      "clause_id": "neg19",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "\"The applicable laws of the United States OR the laws of the State of Ohio\" leaves the choice between federal and Ohio law unspecified rather than establishing a hierarchy, and the forum clause is likewise disjunctive without stating exclusivity. The transport context (federal transportation law overlaying state contract law) makes the disjunction workable, so the ambiguity is mild.",
+      "reasoning_cat2": "No other provision in the list purports to select law or forum; the limitation-of-actions article's 18-month suit period operates independently of the governing-law choice.",
+      "gold": "not_risky",
+      "clause_name": "20. Applicable Law"
+    },
+    {
+      "clause_id": "neg20",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "\"Acts of God or circumstances and/or conditions occurring without human intervention\" is an unusually narrow and imprecise formulation — it excludes strikes, war and government action by implication, and \"without human intervention\" is a boundary that will be hard to apply. The money carve-out is clear.",
+      "reasoning_cat2": "Nothing in the clause cross-references another provision, and no other provision in the list allocates excuse for non-performance.",
+      "gold": "not_risky",
+      "clause_name": "21. Force Majeure"
+    },
+    {
+      "clause_id": "neg21",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.36,
+      "reasoning_cat1": "A clear priority rule: ancillary documents and tariffs are subordinate to the Agreement, with a stated conflict-resolution direction, plus a definite audit right and a two-year post-termination window.",
+      "reasoning_cat2": "It declares that this Agreement's provisions govern conflicts, while the entire-agreement article provides that where the Exhibits and Schedules conflict with the Agreement, the Exhibits control. The two priority rules point in opposite directions for Exhibit A material (this clause treats the Agreement and the Exhibits together as governing, the other subordinates the Agreement to them), and Exhibit A does contain terms — e.g. its own definition of \"delivery\" — that differ from the body.",
+      "gold": "not_risky",
+      "clause_name": "22. Other Documents; Audit"
+    },
+    {
+      "clause_id": "neg22",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.28,
+      "reasoning_cat1": "Two definite sentences: successors and assigns are bound, and a transfer or assignment from Customer to its underlying Shipper does not alter the terms. \"Affected, modified, altered, or changed\" is a synonym string, not an ambiguity.",
+      "reasoning_cat2": "The assignment article forbids either party from assigning or transferring the Agreement in whole or in part without the other's prior written consent, whereas this clause contemplates and validates an assignment from Customer to the Shipper without mentioning consent. That is a nameable tension between two operative provisions in the same instrument.",
+      "gold": "not_risky",
+      "clause_name": "23. Assignability of Contract"
+    },
+    {
+      "clause_id": "neg23",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.44,
+      "reasoning_cat1": "Standard integration language, definite on its face; the order-of-precedence sentence is a clear statement (Exhibits and Schedules control over the Agreement).",
+      "reasoning_cat2": "That precedence rule is the mirror image of the other-documents article, which provides that in a conflict the terms of this Agreement govern and that any conflict between the Agreement and a referenced tariff is resolved in favour of the Agreement; the receipts article likewise subordinates conflicting documents to the Agreement. Because Exhibit A contains substantive terms that differ from the body (for example its own definition of \"delivery\" and its no-detention deeming rule for dropped trailers), the competing precedence rules produce a genuine whole-instrument inconsistency.",
+      "gold": "not_risky",
+      "clause_name": "24. Entire Agreement"
+    },
+    {
+      "clause_id": "neg24",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "reasoning_cat1": "Two short, definite statements: no appointment-related charges, and scheduling may be by phone or fax.",
+      "reasoning_cat2": "It duplicates verbatim a sub-paragraph of the scope-of-work article; identical duplication is harmless, but it illustrates the overlap between the body and Exhibit A that the competing precedence clauses govern.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 100 – Appointment Notification"
+    },
+    {
+      "clause_id": "neg25",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "Rate, free period, exclusion for early/late arrival, and a stated maximum are all quantified. The trailing \"$/hour paid in 15 minute increments\" is a fragment but is consistent with the $65 hourly rate above it.",
+      "reasoning_cat2": "It coexists with the free-time provision in the base-rates item (two hours free for unloading with power), which matches the two-hour threshold here rather than contradicting it.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 120 – Detention With Power"
+    },
+    {
+      "clause_id": "neg26",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "reasoning_cat1": "Quantified free time, quantified daily charge, and an express weekend carve-out. \"Charges may be assessed\" is permissive rather than mandatory, a minor softness only.",
+      "reasoning_cat2": "It sits alongside the trailer-placement item, which deems dropped trailers to be for Carrier's sole convenience and not subject to detention or demurrage; the two address different fact patterns (Shipper-required holding versus Carrier drop-off), so they can be harmonised, though the boundary is not drawn explicitly.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 130 – Storage – OTR Shipments"
+    },
+    {
+      "clause_id": "neg27",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "A single definite entitlement with a single stated exception requiring a written request.",
+      "reasoning_cat2": "It is consistent with the body's prohibition on commingling TL freight without Customer's prior written consent; the exception mechanisms differ slightly in who may waive (Shipper here, Customer in the body), but both require a writing.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 140 – Exclusive Use of Vehicle"
+    },
+    {
+      "clause_id": "neg28",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "Rate, minimum and maximum are quantified. \"Sort and segregate\" is a trade term with settled meaning in transportation practice.",
+      "reasoning_cat2": "It complements the lumper item, which covers hired laborers rather than driver labor; no conflict is apparent.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 170 – Labor - Driver Loading or Unloading"
+    },
+    {
+      "clause_id": "neg29",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.26,
+      "reasoning_cat1": "The operative charge is left blank: \"Rate per day for detention in excess of six hours\" states no dollar amount, so the item announces a charge without fixing it. The trigger is also imprecise — the first sentence conditions the charge on the driver being \"detained overnight,\" while the second measures it by \"detention in excess of six hours,\" two different thresholds within the same item.",
+      "reasoning_cat2": "The six-hour measure also sits against the detention-with-power item, which starts at two hours and caps at $390; without a stated layover rate it is unclear whether layover displaces or stacks on detention. The compensation article's rule that the Exhibit A charges are the sole charges Customer will pay makes the blank consequential.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 180 – Layover"
+    },
+    {
+      "clause_id": "neg30",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "Defines what the base rate includes and the placement obligations at loading and unloading in plain terms. \"During business hours at one site\" is a definite limitation.",
+      "reasoning_cat2": "It overlaps with the base-rates item, which restates the one-pickup/one-delivery inclusion; the restatements are consistent, and the stops-in-transit item prices additional stops.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 190 – Pick Up or Delivery"
+    },
+    {
+      "clause_id": "neg31",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.34,
+      "reasoning_cat1": "Several sub-items are indeterminate on their face: item 11 (\"Single shipment charge.\") and item 12 (\"Inspection charge.\") name charges without rate, trigger or payer, and sub-paragraph 3 is grammatically broken (\"has ever been used for without sufficient cleaning\"), closing with an ejusdem-generis catch-all (\"or other similar items\") after a long specific list. Sub-paragraph 2 makes cleanliness \"the Shipper's sole judgement,\" an unreviewable standard.",
+      "reasoning_cat2": "Its definition of \"delivery\" (transport to the consignee's receiving location from the Shipper's facilities) differs from the body's definition (transport to the consignee's door or job site), and the entire-agreement article gives the Exhibits priority over the Agreement, so the differing definitions cannot simply be read as surplusage. Sub-paragraph 2 also confers rejection judgment on the Shipper, whereas the body's equipment-condition provision gives rejection rights to Customer.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 200 – Provisions Included in Base Rates"
+    },
+    {
+      "clause_id": "neg32",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.22,
+      "reasoning_cat1": "A specific mileage source is named, with a version rule (\"the version of which is in effect for Exel at time of tendering\") that makes the reference determinable at any point in time.",
+      "reasoning_cat2": "The out-of-route item names a fixed version instead (\"PC Miler 2000, V16 (Practical Miles)\"), which does not match this floating-version rule; that is a small but nameable inconsistency across Exhibit A items.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 210 – Rate Base for Mileage Calculation Applications"
+    },
+    {
+      "clause_id": "neg33",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "Fixed fee, a definition of when a shipment counts as reconsigned (before or after attempted delivery), and a named mileage source. Definite.",
+      "reasoning_cat2": "It implements the body's reconsignment provision, which expressly defers to Exhibit A procedures; the cross-reference is satisfied.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 220 – Re-consignments and/or Diversion"
+    },
+    {
+      "clause_id": "neg34",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.3,
+      "reasoning_cat1": "\"Reasons beyond control of the carrier\" is a familiar standard, and the return obligation is definite; the softness is in the referenced rate rather than in the wording itself.",
+      "reasoning_cat2": "It fixes the applicable rate by reference to \"Schedule B herein,\" a document not otherwise identified in the material available; and the body provides that refused or undelivered shipments \"shall be as set forth in Exhibit A,\" so this item bears the whole weight of that cross-reference while itself pointing elsewhere.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 230 – Return of Shipments"
+    },
+    {
+      "clause_id": "neg35",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "Quantified per-stop charges, a stated maximum number of stops, and a rule for additional line-haul miles. Definite.",
+      "reasoning_cat2": "Consistent with the body's obligation to stop in transit at Customer's request and with the base-rates item's one-pickup/one-delivery inclusion.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 240 – Stops in Transit"
+    },
+    {
+      "clause_id": "neg36",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "A single quantified surcharge with a stated trigger. Definite.",
+      "reasoning_cat2": "Fits the body's undertaking to provide special services such as short-notice pickup and delivery; nothing points to a conflict.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 250 – Expedited Team Service"
+    },
+    {
+      "clause_id": "neg37",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.3,
+      "reasoning_cat1": "The deeming language (\"Notwithstanding consignor's consent, each such delivery or drop-off shall be deemed to be for the sole convenience of Carrier\") is definite in effect, and the consequence — no detention or demurrage — is clearly stated. \"Demurrage\" is a trade term of settled meaning.",
+      "reasoning_cat2": "The \"notwithstanding\" formulation itself signals an override, and it must be squared with the storage item, which permits charges of $40 per day for trailers held after two free days, and with the detention item's hourly charges. Which item governs a dropped-and-held trailer is not expressly resolved.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 260 – Trailer Placement for Loading"
+    },
+    {
+      "clause_id": "neg38",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "A quantified minimum charge with two clearly stated exceptions (eight hours' cancellation notice; substitute load). \"$250.00 minimum charge\" without a stated maximum is a pricing choice, not an ambiguity.",
+      "reasoning_cat2": "Nothing in the item cross-references another provision, and no other item in the list prices a cancelled pickup.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 270 – Truck Ordered Not Used"
+    },
+    {
+      "clause_id": "neg39",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.32,
+      "reasoning_cat1": "The operative rate is missing: \"Charge per mile for any out-of-route miles\" states no amount, so the item defines a concept without pricing it. The definition of out-of-route miles is, by contrast, precise.",
+      "reasoning_cat2": "It fixes the mileage source as \"PC Miler 2000, V16 (Practical Miles)\" while the dedicated mileage item fixes it as the PC Miler version \"in effect for Exel at time of tendering\" — two different rules for the same computation. The compensation article's statement that the Exhibit A charges are the sole charges payable makes the blank rate consequential.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 280 – Out of Route Miles"
+    },
+    {
+      "clause_id": "neg40",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "Defines \"lumper,\" states pass-through at actual cost, and prescribes receipt documentation. \"Required to hire\" is mildly open but workable.",
+      "reasoning_cat2": "Reimbursement at actual cost is compatible with the compensation article's requirement that unloading/lumping receipts accompany the invoice; that article's bar on unapproved accessorial charges is satisfied because this item is itself a pre-approved Exhibit A charge.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 290 – Lumper Charges"
+    },
+    {
+      "clause_id": "neg41",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "reasoning_cat1": "\"Deemed as the cause for the consignee inability to unload\" is grammatically incomplete and leaves the deeming agent unnamed; the item is also purely negative — it says when no redelivery charge applies without ever establishing a redelivery charge or its amount.",
+      "reasoning_cat2": "Because no other item in Exhibit A sets a redelivery charge, this exception has no stated counterpart to operate on, and the compensation article bars charges not approved in advance — so the item's implicit premise that a redelivery charge otherwise exists is not supported elsewhere in the visible text.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 300 – Redelivery"
+    },
+    {
+      "clause_id": "neg42",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "reasoning_cat1": "Detailed and quantified: rate per day, definitions of free time at origin and destination, and explicit weekend rules keyed to the pickup or notify day. Definite despite its complexity.",
+      "reasoning_cat2": "Cross-referenced by the intermodal storage item, which adopts the same free-time schedule; the two are consistent.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 310 – Per Diem - Intermodal Only"
+    },
+    {
+      "clause_id": "neg43",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "Quantified free time and daily rate, with the free-time computation imported by express cross-reference. Definite.",
+      "reasoning_cat2": "It expressly incorporates the per-diem item's free-time schedule, and that item supplies the rules; the only softness is that the per-diem schedule is keyed to rail equipment, which may not map cleanly onto every storage scenario.",
+      "gold": "not_risky",
+      "clause_name": "Exhibit A, Item 320 – Intermodal Storage"
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "prob_cat1": 0.68,
+      "prob_cat2": 0.62,
+      "reasoning_cat1": "The operative verb phrase \"projects to manufacture at least\" is genuinely susceptible of two reasonable constructions. \"Projects\" is the language of forecast or estimate — a non-binding statement of expectation — while \"at least\" is the language of a binding floor or minimum commitment. A reader cannot tell from the clause's own words whether Licensee has undertaken an enforceable minimum-volume obligation or merely stated a business projection. Compounding this, the numbers are tied to \"manufacture,\" not to sale, so even on the binding reading it is unclear what is promised: units made, or units moved. The clause also supplies no consequence for falling short, leaving the promissory character of \"projects\" undetermined on its face. This is the same species of defect the Hartford court found in \"premises\"/\"person\"/\"occupy\": a term that on ordinary usage bears more than one reasonable meaning, each of which a party can fairly advance.",
+      "reasoning_cat2": "Section 2(d) requires fixed monthly payments of $16,313 / $19,031 / $23,562, which are precisely the projected quantities multiplied by the $0.87 Royalty Rate of §2(a) and divided by twelve (225,000 × $0.87 ÷ 12 = $16,312.50). Section 2(e) then computes an \"Excess Payment\" on Products *sold* \"in excess of the projected amount for that year set forth in section (b)\" — treating (b)'s manufacturing projections as a sales baseline. Section 2(f) speaks of an aggregate 812,500 units \"for which payment had already been made,\" which is the sum of the three (b) figures. So the rest of Section 2 operates as though (b) fixed binding minimums measured in sales, while (b) itself says only that Licensee \"projects to manufacture.\" Section 5(d) reinforces the tension by contrasting the (d)/(e) regime with a fallback of \"no minimum quantities required,\" implying the ordinary regime does impose minimums. Pulling the other way, §14(g) disclaims any guarantee as to sales activity. Harmonising all of these still leaves a genuine internal inconsistency about whether (b) is a commitment or a forecast, and whether it is measured by manufacture or by sale.",
+      "gold": "risky_cat2",
+      "clause_name": "Royalties, Quantity and Payments \\u2014 Section 2(b) (projected manufacturing quantities)"
+    },
+    {
+      "clause_id": "pos2",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.85,
+      "reasoning_cat1": "\"Good faith, best efforts\" is a recognised commercial standard, but as drafted here it is left wholly undefined and unbenchmarked — no minimum spend, no sales targets, no reference point against which effort is measured. The compound \"good faith, best efforts\" is itself uncertain: it may state one hybrid standard or two cumulative ones, and \"best efforts\" is variously construed as anything from ordinary diligence to a near-fiduciary exertion. The object, \"all Products manufactured,\" is definite enough. Standing alone the clause is vague but not incoherent, and courts routinely enforce best-efforts covenants, so this sits below the flagging line — the real problem is relational, not intrinsic.",
+      "reasoning_cat2": "This provision is squarely contradicted by §14(g), which states that Licensee \"makes no guarantees, representations, warranties, or promises regarding its sales activity of the Product and shall in its sole discretion devote as much or as little (or none) of its time and resources to selling the Product.\" One clause imposes an affirmative best-efforts duty to market and sell; the other disclaims any promise about sales and reserves absolute discretion to devote nothing. These cannot both be given full force: a party who devotes none of its resources to selling has by definition not used best efforts. This is the Roadlink pattern — a broad disclaimer sitting against an affirmative quality/performance undertaking elsewhere in the same instrument, with no conditional language subordinating one to the other, and no \"notwithstanding\" clause resolving priority (contrast §2(h) and §2(j), which do carry such language). The tension is aggravated by §2(b)/(e), whose volume projections presuppose active selling effort.",
+      "gold": "risky_cat2",
+      "clause_name": "Royalties, Quantity and Payments \\u2014 Section 2(i) (Best Efforts Provision)"
+    },
+    {
+      "clause_id": "pos3",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.85,
+      "reasoning_cat1": "Read alone, the wording is definite: \"sole discretion,\" \"as much or as little (or none) of its time and resources\" leaves no boundary problem — the parenthetical \"(or none)\" deliberately closes off any argument that some minimum effort is required. The enumerated disclaimer list (\"guarantees, representations, warranties, or promises\") is a closed set of near-synonyms with no trailing catch-all, so there is no ejusdem generis issue. The only intrinsic softness is the reach of \"regarding its sales activity of the Product,\" which might or might not extend to manufacturing volumes. That is a modest concern; the clause's own drafting is clear.",
+      "reasoning_cat2": "Buried in a boilerplate \"Miscellaneous\" section, this clause negates the operative covenant in §2(i) that \"Licensee shall use good faith, best efforts to market and sell all Products manufactured.\" A sole-discretion right to devote no resources to selling cannot be reconciled with an affirmative best-efforts selling covenant. It also sits awkwardly against the §2(b) volume projections and the §2(e) Excess Payment mechanism, which are built on an assumption of sales activity, and against §2(a)'s sales-based Royalty Rate. Neither §2(i) nor §14(g) is subordinated by conditional or \"notwithstanding\" language, and §14(b) expressly bars using headings/arrangement to interpret the Agreement, so its placement in \"Miscellaneous\" cannot be invoked to demote it. Harmonising every provision still leaves a genuine, unresolved internal inconsistency about whether Licensee owes any selling effort at all.",
+      "gold": "risky_cat2",
+      "clause_name": "Miscellaneous \\u2014 Section 14(g) (Discretionary Clause)"
+    },
+    {
+      "clause_id": "neg1",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "An introductory identification paragraph: it names both parties, assigns defined labels (\"Licensee\" for Medical Components, \"Licensor\" for Osiris), gives addresses, and ties formation to \"the Effective Date.\" Every element is definite and no term carries a second reasonable meaning. Deferring the date to a defined term is ordinary drafting, and \"Effective Date\" is expressly defined in §1(a).",
+      "reasoning_cat2": "Checked against §1(a) (\"Effective Date\" = date of execution by both parties) and §1(f) (\"Party to this Agreement\"). The role labels are used consistently throughout, and the addresses match those in §15(a) exactly. The variant spellings \"Licensor\"/\"Licensors\"/\"Licenser\" that appear elsewhere are typographical, not substantive, and §14(d) supplies a singular/plural rule. The signature block dates (12/19 and 12/20/2011) sit slightly against the recital that the Agreement was signed \"this 19 day of Dec, 2011,\" but §1(a)'s \"executed by both parties\" resolves that. No conflict.",
+      "gold": "not_risky",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.18,
+      "reasoning_cat1": "Most of the definitions are tightly drawn — the Patent is identified by number, \"IP Rights\" is bounded to that patent plus reissues and continuations, and \"Product\" is expressly narrowed by \"Product only includes devices that would infringe the Patent,\" which cures what would otherwise be a vague reference to a product design. Two minor soft spots: the Year definitions produce a one-day overlap (First Year ends on, and Second Year begins on, \"the last day of the month falling 12 months after the Validation Date\"), and \"Validation Date\" turns partly on Licensee's own acceptance of parts, though the thirty-day review cap disciplines that discretion. These are drafting imprecisions rather than genuine multiple-meaning ambiguities.",
+      "reasoning_cat2": "Checked against §2(b)-(f), which key the payment schedule to First/Second/Third Year, and against §8(a), which folds a future CT Huber 510k product into \"Product\" using the same infringement test as §1(d). Also checked §9(a), which sets the term at three years from the Effective Date while the Year definitions run from the Validation Date — the two can diverge, but §9(a) governs duration and the Year definitions govern payment periodicity, so they operate on different axes and can be harmonised. No operative contradiction.",
+      "gold": "not_risky",
+      "clause_name": "1. Definitions"
+    },
+    {
+      "clause_id": "neg3",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.22,
+      "reasoning_cat1": "The grant is definite in its essentials: non-exclusive, non-assignable, term-limited, with enumerated permitted uses (manufacturing, advertising, selling) and a closing restriction (\"Licensee may not make any other use of the IP Rights\") that forecloses catch-all expansion. One internal wrinkle: \"Licensee's manufacturers so identified may manufacture Products for Licenser, but exclusively for Licensee\" is self-contradictory on its face, though \"for Licenser\" reads as an evident scrivener's slip that the immediately following \"but exclusively for Licensee\" corrects. Subsection (b)'s \"any other use\" is broad but is a grant of disposal freedom rather than a boundary that must be policed.",
+      "reasoning_cat2": "Checked against §16, which repeats the manufacturer carve-out in matching terms, and against §11(a), whose no-assignment rule is consistent with the \"non-assignable\" grant. Checked §3(b) (\"free to dispose of that Product in any manner ... including ... a gift\") against §2(h), which defines \"sale\" to include a gift or transfer without consideration — but (b) confers freedom of disposition while 2(h) fixes what triggers royalty, so they operate compatibly. Section 3(c)'s recital of the Raul Garcia head licence matches §16 and §6. No irreconcilable conflict.",
+      "gold": "not_risky",
+      "clause_name": "3. Rights"
+    },
+    {
+      "clause_id": "neg4",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "reasoning_cat1": "Each representation is discrete and testable: authority to contract, that the Patent has issued, and a 90-day pre-notice obligation before a proposed acquisition or transfer with a numerically capped guarantee of open orders. The bracketed \"[up to a maximum of 275,000 units in the aggregate]\" is unusual typography but perfectly definite as to quantity. \"Which Licensors intends to conclude\" turns on intent and is somewhat soft, but it operates as a trigger condition rather than a boundary term with competing meanings.",
+      "reasoning_cat2": "Checked against §6 (Licensor's duty to maintain the Patent, or cause Raul Garcia to do so) and §3(c)/§16 (Licensor holds only a sublicensable interest from Raul Garcia) — a transfer-notice covenant fits coherently with that structure. Also checked §11(a), which permits Licensor to assign the right to receive royalties; §4(c) addresses transfer of the Patent itself, a different subject, so the two do not collide. The 275,000-unit order cap is not contradicted by the §2(b) volume figures, since it governs open orders at a transfer event rather than annual quantities.",
+      "gold": "not_risky",
+      "clause_name": "4. Representations"
+    },
+    {
+      "clause_id": "neg5",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.33,
+      "reasoning_cat1": "Subsections (a) and (b) are drafted as mirror-image indemnities, but (b) says Licensee indemnifies Licensor for harm \"arising from Licensors material breach\" — indemnifying a party against the consequences of its own breach, which is nonsensical as a reciprocal provision and is plainly a copy-paste slip for \"Licensee's material breach.\" That is a visible textual defect rather than a term bearing two reasonable meanings, and a court would very likely correct it as an obvious scrivener's error from the manifest parallel structure, so it falls short of true ambiguity. \"Proportional extent\" and \"material breach\" are common, workable standards.",
+      "reasoning_cat2": "Subsection (c) presupposes \"a situation where both indemnification obligations apply\" and allocates comparatively \"based upon the respective fault of the parties\" — which only makes sense if (a) and (b) are triggered by each party's own breach. Read literally, (b) as written could never combine with (a) in the way (c) contemplates, so (c) itself supplies the strongest evidence that (b) contains a typographical error and simultaneously supplies the cure. Subsection (d) meshes cleanly with §2(d)-(f), expressly naming the provisions it suspends. The tension is real but self-correcting on a whole-instrument reading, so it stays below the flagging line.",
+      "gold": "not_risky",
+      "clause_name": "5. Indemnifications"
+    },
+    {
+      "clause_id": "neg6",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "The obligation is affirmative and clear — maintain the validity and enforceability of the Patent — with two concrete illustrations (paying maintenance fees when due, defending reexaminations). The structure \"all customary actions ... such as [specifics] ... and any other action needed\" does place a catch-all alongside enumerated examples, which invites an ejusdem generis argument about how far \"any other action\" reaches (does it compel expensive litigation?). But the governing limiter is the purpose clause — \"needed to maintain the validity and enforceability of the Patent\" — which supplies an objective boundary the catch-all must satisfy, so the general-versus-specific tension is contained.",
+      "reasoning_cat2": "Checked against §3(c) and §16, which establish that Raul Garcia owns the Patent and Licensor holds only a licence — hence the \"or cause Raul Garcia to take\" formulation, which is exactly what that structure requires. Also checked §7, which puts the notification burden for third-party infringement on Licensee, and §5(d), which addresses what happens if a third-party infringement claim arises; neither contradicts a maintenance covenant. Consistent throughout.",
+      "gold": "not_risky",
+      "clause_name": "6. Patent Maintenance"
+    },
+    {
+      "clause_id": "neg7",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "A single-sentence notice duty. \"Promptly\" is a standard elastic-but-workable temporal term, and the obligation is expressly bounded by actual knowledge (\"known to Licensee\"), which forecloses any argument about a duty to investigate. No enumerated list, no catch-all, no term carrying a competing reasonable meaning.",
+      "reasoning_cat2": "Checked against §6 (Licensor bears the maintenance and enforcement-side burden) and §16 (Licensee's own non-infringement and non-interference covenant) — a bare notice obligation on Licensee complements both without overlapping. Also checked §5(d), which handles the financial consequences of a third-party infringement claim; §7 concerns third parties infringing the Patent, a distinct subject. No conflict.",
+      "gold": "not_risky",
+      "clause_name": "7. Third party Infringements of the Patent"
+    },
+    {
+      "clause_id": "neg8",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.26,
+      "reasoning_cat1": "Subsection (a) is definite: it uses the same infringement test as §1(d) to fold a future CT Huber 510k product into \"Product.\" Subsection (b) contains an arithmetic oddity — the option covers \"each of the 510k or CE approval files ... for $15,000.00 each, for a total not to exceed $60,000.00,\" but only two categories of file are named, so the $60,000 cap implies four files. That leaves the number of purchasable files, and hence the option's scope, uncertain on the clause's own terms. It is a modest quantitative loose end rather than a term with two competing meanings.",
+      "reasoning_cat2": "Checked against §9(b), which says that on termination \"all rights and obligations set forth in this Agreement have terminated\" — yet §8(b) confers an option exercisable \"upon termination of this Agreement for any reason.\" Read strictly, §9(b) would extinguish the very right §8(b) creates. The natural harmonisation is that §9(b) addresses the licence and performance obligations while §8(b), §9(d), §2(j) and §17(a) are express survival provisions; that reading is available and reasonable, so the tension does not rise to genuine incoherence attributable to this clause.",
+      "gold": "not_risky",
+      "clause_name": "8. New Product"
+    },
+    {
+      "clause_id": "neg9",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.38,
+      "reasoning_cat1": "Subsections (a), (b) and the option in (d) are largely definite. Two soft spots: (c)'s \"[a]t a time close to the expiration of the three year term\" supplies no ascertainable window, though the clause requires mutual written agreement anyway and so creates no enforceable obligation whose breach would turn on the timing; and (d)'s valuation formula — \"at their value, calculated by the original purchase price therefore, depreciated with an equal amortization over the Term\" — is workable but does not specify measurement date or treatment of molds acquired mid-term. These are drafting imprecisions in ancillary machinery rather than ambiguity in the operative term-length provision.",
+      "reasoning_cat2": "Subsection (b)'s sweeping statement that on termination \"all rights and obligations set forth in this Agreement have terminated\" sits against several provisions that expressly survive: §2(j) (post-termination royalties payable within thirty days), §8(b) (Licensor's file-purchase option \"upon termination\"), §9(d) itself (mold-purchase option on termination), and §17(a) (audit rights \"for a period of three (3) years after the termination\"). Section 2(j) opens \"Notwithstanding anything herein to the contrary,\" which expressly overrides §9(b), and the remaining options are all keyed to termination, so they can be read as carve-outs from a general rule. There is also a mismatch between §9(a)'s three years \"from the Effective Date\" and the §1(g)-(j) Year definitions running from the Validation Date. Real tension, but each strand is harmonisable on a whole-instrument reading, so it stays under the line.",
+      "gold": "not_risky",
+      "clause_name": "9. Term"
+    },
+    {
+      "clause_id": "neg10",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.12,
+      "reasoning_cat1": "A one-sentence consent to jurisdiction and venue in a named forum, covering \"any legal proceedings arising out of this Agreement.\" \"Arising out of\" is a settled term of art with well-established scope, and the forum is identified without qualification. There is no enumerated list against a catch-all, and no word here carries a second reasonable meaning. That the chosen forum (Delaware) has no evident connection to the parties' Pennsylvania and Texas addresses may raise enforceability questions, but that is not a defect in the clause's wording.",
+      "reasoning_cat2": "Checked against §13 (entire agreement and severability), §14(i) (prevailing-party attorneys' fees) and §15 (notice and cure before liability attaches) — all litigation-related machinery, none of which nominates a different forum or a competing dispute-resolution mechanism. There is no arbitration clause anywhere in the instrument to compete with it, and no choice-of-law provision that could pull against the forum selection. Consistent.",
+      "gold": "not_risky",
+      "clause_name": "10. Choice of Jurisdiction"
+    },
+    {
+      "clause_id": "neg11",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.17,
+      "reasoning_cat1": "The rule and its single exception are cleanly stated: no assignment or transfer without the other party's permission, \"provided, however, that Licenser shall be entitled to assign the right to receive royalties.\" The proviso is precisely delimited to a payment stream. Subsection (b)'s successors-and-assigns language uses \"permitted assigns,\" which correctly ties back to the consent requirement rather than undercutting it. No vague term requiring a boundary judgment.",
+      "reasoning_cat2": "Checked against §3(a), which grants a \"non-assignable\" licence — consistent with, and reinforced by, §11(a). Checked §3(b)'s reference to \"Licensee's permitted assigns,\" which presupposes exactly the consent mechanism §11(a) creates. Checked §4(c), which contemplates a transfer of the Patent by Licensor with 90 days' notice: that concerns transfer of the underlying property rather than assignment of this Agreement, so the two operate on different objects. Also checked §12 (bankruptcy/§365(n)), which is compatible. No conflict.",
+      "gold": "not_risky",
+      "clause_name": "11. Assignment"
+    },
+    {
+      "clause_id": "neg12",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.14,
+      "reasoning_cat1": "A short, targeted provision invoking a specific statutory regime, 11 U.S.C. § 365(n), and stating in terms the two things that section turns on: election to retain licence rights, and withholding of consent to transfer or termination. It identifies the rights preserved by cross-reference to \"Section 3 of this Agreement,\" so scope is fixed rather than open-textured. Nothing here bears a competing reasonable meaning.",
+      "reasoning_cat2": "Checked against §3, the grant it expressly preserves, and against §9(b)'s general statement that all rights terminate on termination — §12 addresses a bankruptcy-triggered attempt to reject or terminate, which is the precise situation § 365(n) governs, so the two address different events. Also checked §11(a): a bankruptcy trustee's transfer attempt is separately constrained by the no-assignment rule, which reinforces rather than contradicts §12. Coherent.",
+      "gold": "not_risky",
+      "clause_name": "12. Bankruptcy"
+    },
+    {
+      "clause_id": "neg13",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.2,
+      "reasoning_cat1": "Three standard, discrete components: integration, a written-modification requirement, and severability. Each is stated in definite terms with no elastic qualifier and no general catch-all sitting against enumerated specifics. \"Entire, final, and integrated\" is a conventional triad signalling a fully integrated writing. Nothing requires a boundary judgment.",
+      "reasoning_cat2": "Checked against §3(c) and §16, which acknowledge and rely upon an external instrument — the January 1, 2007 License Agreement between Licensor and Raul Garcia. An integration clause coexists comfortably with recitals acknowledging a third-party head licence, since that licence is not an agreement between these two parties on this subject matter. Also checked §9(c) (extension only by mutual written agreement) and §14(a) (no waiver by failure to enforce), both of which reinforce the written-modification rule. Consistent with the instrument as a whole.",
+      "gold": "not_risky",
+      "clause_name": "13. Entire Agreement"
+    },
+    {
+      "clause_id": "neg14",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.18,
+      "reasoning_cat1": "The mechanics are concrete: written notice to a stated street address, and fixed numerical cure periods of thirty days for monetary and sixty days for non-monetary breaches. The monetary/non-monetary dichotomy is exhaustive, so no residual category is left unaddressed. Minor looseness: the clause does not specify the method of delivery or when notice is deemed effective, and it lists both parties' addresses without labelling which is the recipient in a given case — but the party names supplied make that obvious. No genuine multiple-meaning problem.",
+      "reasoning_cat2": "Checked against §2(g), which imposes 1.5% monthly interest on royalties \"more than 30 days past due\" — this dovetails with, rather than contradicts, the thirty-day monetary cure period. Checked §9, which contains no separate termination-for-breach mechanism that would bypass the cure regime, and §14(i) (attorneys' fees on enforcement), which operates after cure has failed. The addresses match the Preamble exactly. No inconsistency.",
+      "gold": "not_risky",
+      "clause_name": "15. Notices and Opportunity to Cure"
+    },
+    {
+      "clause_id": "neg15",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.15,
+      "reasoning_cat1": "An acknowledgement of ownership plus a negative covenant, closed by an express carve-out. \"Otherwise interfere with the IP Rights\" is the one open-textured phrase, sitting after the specific \"infringe upon the Patent or IP Rights\" — a mild general-after-specific structure — but the surrounding subject matter (patent rights held under a head licence) supplies a workable genus, and the semicolon-linked \"however\" clause expressly removes the one class of conduct that would otherwise be contentious, namely contract manufacture for Licensee.",
+      "reasoning_cat2": "Checked against §3(a), which contains the parallel manufacturer authorisation in matching language (\"for Licensee, and exclusively for Licensee\") — §16 confirms rather than contradicts it, and indeed cures the stray \"for Licenser\" slip in §3(a). Checked §3(c), which recites the same Raul Garcia ownership and sublicence structure, and §6, which assigns maintenance duties consistently with Licensor's licensee status. Fully harmonious.",
+      "gold": "not_risky",
+      "clause_name": "16. Intellectual Property"
+    },
+    {
+      "clause_id": "neg16",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.27,
+      "reasoning_cat1": "A long but carefully specified audit regime: defined records, a three-year post-termination tail, three business days' notice, normal business hours, a confidentiality precondition on any representative, a 5% shortfall threshold triggering cost-shifting, and express treatment of overpayments. The quantities and triggers are all numerical. Two blemishes: the clause both grants access \"[a]t any time during the term\" and then, \"[n]otwithstanding the foregoing,\" a further right to inquire \"at any time and from time to time,\" which leaves the relationship between formal audits and informal inquiries loose; and subsection (b) refers to a shortfall \"of the amounts due Licensee,\" plainly a slip for \"due Licenser\" given (a)'s parallel wording. Both are evident scrivener-level errors rather than genuine ambiguity.",
+      "reasoning_cat2": "Subsection (b)'s two-requests-per-year cap sits against (a)'s \"at any time\" and its \"[n]otwithstanding the foregoing\" inquiry right, but (b) is drafted expressly as a limit on \"requests under subsection (a) of this Section,\" which resolves the priority question on the face of the instrument. Checked against §2(c) (quarterly sales reporting) and §2(e)-(f), which supply the payment figures the audit tests — the audit machinery is built to police exactly those obligations. Checked §9(b)'s general termination language against the three-year post-termination audit tail; as with §8(b) and §9(d), this reads as an express survival carve-out. Tension present but harmonisable.",
+      "gold": "not_risky",
+      "clause_name": "17. Records/Audits"
+    }
+  ]
+}
