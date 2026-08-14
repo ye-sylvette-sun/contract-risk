@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["clauses"],
+  "properties": {
+    "clauses": {
+      "type": "array",
+      "description": "Every substantive clause of the contract, in document order.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "start_line", "end_line", "head", "tail"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Short name including the clause number if it has one, e.g. \"8. Notices\"."
+          },
+          "start_line": {
+            "type": "integer",
+            "description": "First line the clause occupies."
+          },
+          "end_line": {
+            "type": "integer",
+            "description": "Last line the clause occupies."
+          },
+          "head": {
+            "type": "string",
+            "description": "The clause's first 8 words, copied EXACTLY as the lines show them. Do not repair the OCR here. If the whole clause is under 16 words, put all of it here."
+          },
+          "tail": {
+            "type": "string",
+            "description": "The clause's last 8 words, copied EXACTLY as the lines show them. Do not repair the OCR here. Empty string if the whole clause is already in head."
+          }
+        }
+      }
+    }
+  }
+}
