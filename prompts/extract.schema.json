@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_desc", "clauses"],
+  "properties": {
+    "case_desc": {
+      "type": "string",
+      "description": "One line: the parties, and what the construction dispute was about."
+    },
+    "clauses": {
+      "type": "array",
+      "description": "The clauses the court construed. An empty list is a valid answer when the construed contract is not in the record.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["clause_name", "taxonomy", "contract_id", "start_line",
+                     "end_line", "head", "tail",
+                     "opinion_comment_start_line", "opinion_comment_end_line"],
+        "properties": {
+          "clause_name": {
+            "type": "string",
+            "description": "Short name including the section number, e.g. \"Section 8 — Indemnity\"."
+          },
+          "taxonomy": {
+            "type": "string",
+            "description": "Which of the risk type codes listed in the task this clause carries. One of those codes and no other."
+          },
+          "contract_id": {
+            "type": "string",
+            "description": "The contract_id of the contract this clause came from, copied exactly from that document's START marker."
+          },
+          "start_line": {
+            "type": "integer",
+            "description": "First line the clause occupies in that contract."
+          },
+          "end_line": {
+            "type": "integer",
+            "description": "Last line the clause occupies in that contract."
+          },
+          "head": {
+            "type": "string",
+            "description": "The clause's first 8 words, copied EXACTLY as the lines show them. Do not repair the OCR here. If the whole clause is under 16 words, put all of it here."
+          },
+          "tail": {
+            "type": "string",
+            "description": "The clause's last 8 words, copied EXACTLY as the lines show them. Do not repair the OCR here. Empty string if the whole clause is already in head."
+          },
+          "opinion_comment_start_line": {
+            "type": "integer",
+            "description": "First line in the OPINION of the passage where the court construes this clause."
+          },
+          "opinion_comment_end_line": {
+            "type": "integer",
+            "description": "Last line in the OPINION of that passage."
+          }
+        }
+      }
+    }
+  }
+}
