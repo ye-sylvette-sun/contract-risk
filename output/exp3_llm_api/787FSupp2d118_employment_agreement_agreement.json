@@ -1,0 +1,374 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "Clause (iv) bars Employee from \"Participat[ing] in any business in which he would be reasonably likely to employ, reveal, or otherwise utilize Trade Secrets\" \"in any geographical area in which the Company or any of its affiliates conduct business\" — both the \"reasonably likely to ... utilize\" trigger and the worldwide geographic reach are vague, and the \"Participate\" list ends in an open \"or otherwise\" catch-all. It also mixes a Trade-Secret-based limit with an unlimited-geography covenant, which two parties could readily read at very different breadths.",
+      "reasoning_cat2": "Section 7(b) asserts a worldwide geographic scope while 7(a)(iv) ties the restriction only to areas where Trade Secrets would likely be used, and Section 7(c)/Section 12 offer competing reformation-vs-excision treatments of an overbroad covenant. That interplay gives a court a genuine whole-instrument question about how far the restraint reaches.",
+      "prob_cat1": 0.81,
+      "prob_cat2": 0.37,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 7(a) — Noncompete; Non-Solicitation"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble simply identifies the parties, the Effective Date and the intended role in definite terms with no ambiguous operative language. Nothing here creates a boundary problem.",
+      "reasoning_cat2": "The stated role matches the operative appointment in Section 2(a), so the recital and operative text point the same way. No conflict found.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble / Recitals"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A short, definite employment-and-acceptance clause that cross-references Section 4 for the end of the term; no vague or multi-meaning term appears.",
+      "reasoning_cat2": "Section 4(a) supplies the termination events referenced, so the cross-reference is coherent with the rest of the instrument.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Employment"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The title and reporting line are stated definitely, with \"overall direction and authority of Employee's manager or supervisor as designated by the Company\" being broad but not genuinely ambiguous.",
+      "reasoning_cat2": "Consistent with the preamble's description of the role and with Section 2(b)'s duty of effort; nothing contradicts it.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(a) Position and Duties"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Reasonable best efforts\" combined with \"full business time\" and a carve-out for \"charitable or other similar activities\" leaves a soft boundary, though such formulations are conventional and rarely litigated on their own.",
+      "reasoning_cat2": "Section 9 forbids engaging in any business other than the Company's without written consent, which sits alongside but does not squarely contradict the charitable carve-out here.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(b) Devotion of time"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The two salary figures and their periods are stated numerically, and the \"Notwithstanding the above\" sentence cleanly handles the pre-2006 period; \"subject to review\" creates no obligation ambiguity.",
+      "reasoning_cat2": "Section 4(b) and 4(c) both refer back to \"Base Salary described in Section 3(a)\", and the definition here supports them without inconsistency.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(a) Base Salary"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Participation is expressly limited to programs \"for which managerial employees ... are generally eligible\" and to those programs' own terms as amended, which is definite if broad.",
+      "reasoning_cat2": "It coexists with Section 4(d)'s cessation of fringe benefits on termination and 4(b)'s medical/dental continuation; the parenthetical \"including cash bonus programs\" does not conflict with the Section 20 sign-on bonus.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(b) Employee benefit programs"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"All reasonable expenses\" is a standard qualifier further constrained by consistency with Company policy and documentation requirements, leaving little to construe.",
+      "reasoning_cat2": "Nothing elsewhere in the Agreement addresses expenses differently; it is consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(c) Expense reimbursement"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The three automatic-termination events and the for-Cause/without-Cause right are enumerated definitely with defined terms cross-referenced; there is no catch-all.",
+      "reasoning_cat2": "Sections 4(c), 4(e) and 4(f) supply the cross-referenced content and Section 4(c)'s reference to \"Section 4(a)(i)\" matches; consistent with the whole.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(a) Term commencement and termination"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The severance mechanics are spelled out with numeric definitions (twelve months, 30 or more hours per week) and the release condition is express; \"in breach of Sections 5, 6 or 7\" is the only soft trigger.",
+      "reasoning_cat2": "Read with Section 4(d), which preserves only what 4(b) expressly provides, and with Section 20's promise of the bonus on any termination, the treatment of post-termination compensation is not perfectly harmonised.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(b) Severance on termination without Cause"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A short entitlement-limiting sentence with a clear cross-reference and the word \"only\"; nothing ambiguous.",
+      "reasoning_cat2": "Section 20, however, promises the unpaid Bonus in full even on termination with Cause, which sits in some tension with \"entitled only to receive his or her Base Salary through the date of termination.\"",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(c) Termination for Cause"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The cessation, offset and automatic-resignation-from-offices sentences are each definite; \"other compensation hereunder\" is broad but bounded by \"hereunder.\"",
+      "reasoning_cat2": "It says all rights to bonuses cease on termination \"[e]xcept as otherwise expressly provided in Section 4(b)\", yet Section 20 expressly makes the unpaid Bonus payable after termination — a specific conflict a court could be asked to reconcile.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(d) Cessation of rights; offset"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "\"A total of 120 days during any twelve-month period\" is quantified and the CEO's good-faith determination is specified, though \"physical or mental incapacitation\" resulting in inability to perform duties has some inherent softness.",
+      "reasoning_cat2": "Consistent with Section 4(a)(i) and Section 20's cross-reference to this definition; no contradiction found.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(e) Definition of Disability"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Clause (i) attaches \"or any other act or omission involving dishonesty, disloyalty or fraud\" to a felony plea, and clause (v) adds \"any other material breach\" — classic general-catch-all-against-specifics problems, compounded by the vague \"conduct tending to bring the Company ... into substantial public disgrace or disrepute.\"",
+      "reasoning_cat2": "The definition is used consistently in 4(a), 4(c), 19(c) and 20; no operative provision contradicts it.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(f) Definition of Cause"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "The definition runs through a long illustrative list and closes with \"other technical and business information,\" a catch-all whose reach against the enumerated items could be argued, and the public-domain carve-out adds a further boundary question.",
+      "reasoning_cat2": "It dovetails with Section 6's Work Product and Section 7(a)'s narrower Trade Secrets definition; the coexistence of two protected-information standards is manageable rather than contradictory.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Confidential Information"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "\"Actual or anticipated business\" and \"all similar or related information\" are broad, and the list of covered outputs ends in an open-ended similar-or-related formulation whose reach is uncertain.",
+      "reasoning_cat2": "Section 5's delivery obligation expressly incorporates Work Product as defined here, so the two fit together; no conflict identified.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Inventions and Patents"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "This is an acknowledgment rather than an operative restraint; its terms (\"reasonable with respect to its duration, geographical area and scope\") are conclusory but not ambiguous in application.",
+      "reasoning_cat2": "It asserts a worldwide geographic necessity while Section 7(a)(iv) limits the restraint to areas where Trade Secrets would likely be used, and Section 12's severability differs from 7(c)'s reformation approach — a real if secondary tension.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(b) Reasonableness acknowledgment"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The substitution mechanic is stated clearly, though \"the maximum period, scope or geographical area reasonable under such circumstances\" leaves the court to fill the content.",
+      "reasoning_cat2": "Section 12 directs that an unenforceable provision be treated \"as if ... never been contained herein,\" which points in a different direction from reformation of Section 7 restrictions here.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(c) Reformation by court"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"Money damages may not be an adequate remedy\" is hedged wording, and the tolling trigger of a merely \"alleged breach\" until \"duly cured\" is imprecise in duration.",
+      "reasoning_cat2": "The tolling extends the Protection Period defined in Section 7(a) and coexists with 7(b)'s independence clause; no direct contradiction.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(d) Specific performance; tolling"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Consideration and acknowledgment language is boilerplate; \"additional good and valuable consideration as set forth in this Agreement\" is unspecific but the provision imposes no obligation to construe.",
+      "reasoning_cat2": "It restates Section 7(b)'s and 7(d)'s reasonableness acknowledgments consistently; nothing conflicts.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Additional Acknowledgments"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"Become engaged in, render services for, or permit his or her name to be used in connection with any business other than the business of the Company\" is a sweeping prohibition whose application to non-commercial or passive activity is uncertain.",
+      "reasoning_cat2": "Section 2(b) expressly permits a reasonable amount of time for charitable or similar activities, and Section 7(a)'s proviso allows passive sub-5% public-company ownership, both of which sit awkwardly with this unqualified bar.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Other Businesses"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The three representations are stated in definite, conventional terms about existing facts and enforceability; nothing requires construction.",
+      "reasoning_cat2": "Consistent with the noncompete and confidentiality obligations elsewhere and with Section 10's counsel acknowledgment; no conflict located.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Employee’s Representations"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Method, addresses and deemed-delivery timing are specified; \"when so delivered or mailed\" is slightly generous but unambiguous.",
+      "reasoning_cat2": "No other provision prescribes a different notice mechanic; consistent with the whole.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Notices"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Standard severability wording, definite in operation, with the good-faith renegotiation sentence adding a soft but non-operative duty.",
+      "reasoning_cat2": "Section 7(c) requires a court to substitute the maximum reasonable restriction, whereas this clause treats an unenforceable provision as never included — a specific divergence in treatment of the covenants.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Severability"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "A conventional integration clause; \"related to the subject matter hereof in any way\" is broad but its operation is clear.",
+      "reasoning_cat2": "Section 19 preserves and modifies the separate Equity Agreements and 19(f) says nothing else limits the \"Option Agreements,\" which requires reading this merger clause as not superseding them.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Complete Agreement"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "The clause plainly disclaims strict construction against any party; nothing ambiguous in it.",
+      "reasoning_cat2": "It disables contra proferentem for the one-sided Section 7 covenants, which is a limitation on construction rather than a contradiction of another term.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "14. No Strict Construction"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "Pure boilerplate with a single definite effect.",
+      "reasoning_cat2": "Nothing elsewhere addresses execution differently; consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15. Counterparts"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The binding effect and assignment bar are definite; the third-party-beneficiary sentence has a minor subject-verb slip (\"affiliates are\") that does not change meaning.",
+      "reasoning_cat2": "Affiliate beneficiary status aligns with the affiliate-protective wording of Sections 5, 6, 7 and 9; no conflict found.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Successors and Assigns"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"Co-exclusive jurisdiction\" is an unusual formulation whose meaning — exclusive as between the two named fora, or merely non-exclusive consent — is genuinely open to argument.",
+      "reasoning_cat2": "No other provision addresses forum or governing law, so it stands alone consistently with the rest of the instrument.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. Choice of Law"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The written-consent requirement and no-waiver-by-conduct language are definite; the final sentence about binding the Company is clear enough.",
+      "reasoning_cat2": "Consistent with the whole; no provision purports to permit informal amendment.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18. Amendment and Waiver"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "A definitional cross-reference clause with no operative ambiguity, though it defines by reference to \"any\" such agreements without identifying them.",
+      "reasoning_cat2": "Section 19(f) then refers to \"Option Agreements,\" a term never defined here, so the defined term \"Equity Agreements\" is not carried through consistently.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(a) Incentive Equity reference"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The 50% acceleration trigger and measurement date are stated precisely; \"Change of Control\" is separately defined.",
+      "reasoning_cat2": "Section 19(d) refers to acceleration \"provided for in each of Sections 19(a) and 19(b)\" when the acceleration provisions are in fact (b) and (c), so the cross-referencing scheme around this clause is internally off.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(b) Vesting on Change of Control"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "It gives effect to \"the vesting provided in subsection (a) above,\" but subsection (a) provides no vesting — the 50% acceleration is in subsection (b) — a mechanical cross-reference error affecting the calculation.",
+      "reasoning_cat2": "The same mislabeling recurs in Section 19(d) (\"Sections 19(a) and 19(b)\"), so the numbering of the vesting cascade cannot be reconciled without reading (a) as (b) and (b) as (c).",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(c) Vesting on termination after Change of Control"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "It refers to acceleration \"provided for in each of Sections 19(a) and 19(b)\" although 19(a) contains only definitions, and \"pro rata strip\" is an undefined term of art whose application to differing grants is unclear.",
+      "reasoning_cat2": "The cross-reference conflicts with the actual placement of the acceleration provisions in 19(b) and 19(c), mirroring the same error in 19(c).",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(d) Pro rata strip"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The definition contains a duplicated block of text and labels two different limbs \"(ii),\" so the enumeration is broken; \"all or substantially all\" is at least anchored to Delaware law.",
+      "reasoning_cat2": "It supplies the trigger used in 19(b) and 19(c) and is otherwise consistent with them; the defect is internal to the definition rather than a clash with another provision.",
+      "prob_cat1": 0.49,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(e) Definition of Change of Control"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "It preserves the \"Option Agreements,\" a term nowhere defined — Section 19(a) defines \"Equity Agreements\" — which is a mechanical mismatch in the operative carve-out.",
+      "reasoning_cat2": "Read against Section 19(a)'s definition and Section 13's integration clause, the scope of what is preserved is uncertain because the preserved instruments are misnamed.",
+      "prob_cat1": 0.43,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(f) No limitation of Option Agreements"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The amounts and dates are numeric, but the payment schedule ($264,000 then \"the remainder ... ratably over the following twelve months\") sits oddly with the statement that the Bonus is \"deemed to be earned as of the date of this Agreement,\" and the final sentence lists resignation, death, Disability and termination with or without Cause without addressing any other exit.",
+      "reasoning_cat2": "Section 4(d) says all rights to bonuses accruing or payable after termination cease except as expressly provided in Section 4(b), and 4(c) limits a for-Cause terminee to Base Salary through termination — both of which pull against the promise here to pay the unpaid Bonus in full.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20. Sign-On Bonus"
+    }
+  ]
+}

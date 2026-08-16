@@ -1,0 +1,944 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The applicability clause defines \"Securities\" as \"securities or other assets,\" a broad catch-all whose reach beyond conventional securities could be argued, and \"unless otherwise agreed in writing\" leaves the governing set of terms open. Still, the operative language is standard and its core meaning is definite.",
+      "reasoning_cat2": "It incorporates Annex I, and Annex I's preamble gives Annex I priority in conflict, which is consistent; the only tension elsewhere is the Confirmation-priority reversal in Annex I paragraph 3, which does not touch this clause directly.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Applicability"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The definition is long but enumerated with specific triggers and time limits; the phrases \"similar law,\" \"similar official\" and \"substantial part of its property\" are catch-alls of the ejusdem generis type whose outer edge could be argued. Overall the drafting is precise and the OCR \"(8)\" for \"(B)\" does not change meaning.",
+      "reasoning_cat2": "It feeds Paragraph 11(v) and 11(a)'s automatic acceleration, and I found no provision that contradicts it; clause (iv) overlaps with Event of Default (vii) but both point the same way.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(a) Definition of \"Act of Insolvency\""
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A pure cross-reference definition tied to Paragraph 4(a) with nothing vague in it.",
+      "reasoning_cat2": "Paragraph 4(a) does define the term identically, so the cross-reference is coherent.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(b) Definition of \"Additional Purchased Securities\""
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A mechanical formula: percentage applied to Repurchase Price as of a date, with no undefined term.",
+      "reasoning_cat2": "Consistent with Paragraph 4(a) and the Repurchase Price definition in 2(r); no conflict found.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(c) Definition of \"Buyer's Margin Amount\""
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The default fallback ratio (Market Value divided by Purchase Price) is definite, and the parenthetical only permits equality with Seller's percentage.",
+      "reasoning_cat2": "It dovetails with 2(c), 2(t) and Paragraph 4(a)-(b); nothing elsewhere displaces it.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(d) Definition of \"Buyer's Margin Percentage\""
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "A bare cross-reference with no operative content to construe.",
+      "reasoning_cat2": "Paragraph 3(b) supplies the meaning, though Annex I paragraph 3 amends 3(b)'s priority rule; that does not affect this definition.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(e) Definition of \"Confirmation\""
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"Other distributions\" is a catch-all after \"interest, dividends,\" but the class is well understood and the definition is short and clear.",
+      "reasoning_cat2": "It is used consistently in Paragraphs 5, 8, 11(b) and Annex I's tax provisions, which reference \"Income Payments\" as income received from the issuer; the mapping is close enough to raise only a slight question.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(f) Definition of \"Income\""
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A cross-reference definition; the stray colon is a typographical artifact that changes nothing.",
+      "reasoning_cat2": "Paragraph 4(a) defines the term as promised; internally consistent.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(g) Definition of \"Margin Deficit\""
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "Again a bare cross-reference with no ambiguity in the words.",
+      "reasoning_cat2": "Paragraph 4(b) supplies the definition; no conflict.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(h) Definition of \"Margin Excess\""
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The fallback \"deadline ... established in accordance with market practice\" is genuinely vague — market practice is an extrinsic and contestable standard for a same-day margin deadline.",
+      "reasoning_cat2": "Neither the Confirmation form in 3(b) nor Annex I fixes a Margin Notice Deadline, so the vague fallback is the operative rule and Paragraph 4(c)'s timing turns on it; that gap is a mild whole-instrument concern.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(i) Definition of \"Margin Notice Deadline\""
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Generally recognized source agreed to by the parties,\" \"most recent closing bid quotation\" and the carve-out \"unless contrary to market practice\" leave real room for argument about which price governs on a stressed day.",
+      "reasoning_cat2": "Annex I paragraph 7 names Telerate, Reuters or Bloomberg and makes CSFB (HK) or an affiliate the fallback pricing source, which partly supersedes the \"agreed source\" mechanic and could be read against 11(e)'s sole-discretion source rule.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(j) Definition of \"Market Value\""
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "A precise arithmetic definition with day-count, inclusive/exclusive endpoints and a reduction for prior payments.",
+      "reasoning_cat2": "Consistent with 2(r) and Paragraph 11(h)'s use of the Pricing Rate; no conflicting provision found.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(k) Definition of \"Price Differential\""
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A one-line definition; the rate itself is left to the Confirmation, which is a gap by design rather than an ambiguity.",
+      "reasoning_cat2": "Paragraph 3(b)(iv) requires the Confirmation to state the Pricing Rate or Repurchase Price, so the scheme is coherent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(l) Definition of \"Pricing Rate\""
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "The reference to a published prime rate with an averaging rule if more than one is published is definite (the \"fournal\" typo is plainly OCR).",
+      "reasoning_cat2": "Used only in Paragraph 11(h); no inconsistency with the LIBOR-plus-1% rate in new 5(b), which addresses a different failure.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(m) Definition of \"Prime Rate\""
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "A single-clause date definition with nothing contestable.",
+      "reasoning_cat2": "Consistent with 3(a) and 3(b)(i); no conflict.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.02,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(n) Definition of \"Purchase Date\""
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "A mechanical adjustment definition keyed to specific paragraphs, with an express \"except where Buyer and Seller agree otherwise\" carve-out that is clear on its face.",
+      "reasoning_cat2": "It ties correctly to 4(a)/(b) and Paragraph 5(ii); I found no provision pulling the other way.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(o) Definition of \"Purchase Price\""
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The definition is definite; the missing opening quotation mark before \"Purchased Securities\" in the second sentence is a harmless typographic slip.",
+      "reasoning_cat2": "It coordinates with Paragraph 9 substitution (including Annex I's new 9(c) \"substantially the same Securities\"), which introduces a slightly different substitution standard but does not contradict the definition.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(p) Definition of \"Purchased Securities\""
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Clear definition that expressly incorporates dates arising under 3(c) and 11.",
+      "reasoning_cat2": "Annex I's new 5(d) Tax Event also deems a Repurchase Date to occur without being listed here, a small omission from the \"including\" list but the word \"including\" is non-exhaustive.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(q) Definition of \"Repurchase Date\""
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "A precise sum-of-two-components formula covering demand transactions expressly.",
+      "reasoning_cat2": "Consistent with 2(k), 11(b) and the 11(g) cap; no contradiction found.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(r) Definition of \"Repurchase Price\""
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "Mirror-image mechanical definition with no vague term.",
+      "reasoning_cat2": "Fits 4(b) and 2(t); no conflict.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(s) Definition of \"Seller's Margin Amount\""
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The fallback computation is arithmetic and definite.",
+      "reasoning_cat2": "Symmetrical with 2(d) and consistent with Paragraph 4; nothing else displaces it.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(t) Definition of \"Seller's Margin Percentage\""
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Permitting oral agreement to enter a Transaction is clear, though what suffices to form the oral agreement is inherently a factual rather than textual question.",
+      "reasoning_cat2": "It sits against 3(b), under which the Confirmation plus this Agreement is \"conclusive evidence\" of terms, and against Annex I paragraph 3 making the Confirmation prevail — a real tension about whether oral terms or the Confirmation govern.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(a) Initiation"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"Specific objection ... made promptly after receipt\" is a vague timing standard, and the conclusive-evidence sentence invites argument about oral terms not captured in the Confirmation.",
+      "reasoning_cat2": "Its last sentence (Agreement prevails over Confirmation) is expressly reversed by Annex I paragraph 3, and Annex I's preamble gives Annex I priority — so the unamended text as quoted directly contradicts an operative amendment.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.55,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(b) Confirmation"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"No later than such time as is customary in accordance with market practice\" is an open, extrinsic standard for the timing of a termination demand.",
+      "reasoning_cat2": "It works with 2(q) and 3(b)(iii); Annex I 5(d) treats a Tax Event notice as a 3(c) demand, which is a deliberate extension rather than a conflict.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(c) Termination"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"Additional Securities reasonably acceptable to Buyer\" imports a reasonableness judgment, and the phrase \"then Buyer may by notice to Seller require Seller ... at Seller's option\" is awkward as to who chooses cash versus securities.",
+      "reasoning_cat2": "It interlocks with 4(c) timing, 4(e)/(f) thresholds and Event of Default (iii); no contradicting provision, though the Margin Notice Deadline is left to market practice.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(a) Margin Deficit"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "Mirror provision with the same \"at Buyer's option\" structure; the mechanics are otherwise arithmetic and clear.",
+      "reasoning_cat2": "Consistent with 4(a), 4(c) and the 2(o) Purchase Price adjustment for cash returned under 4(b).",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(b) Margin Excess"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The rule is definite once the Margin Notice Deadline is known, but \"close of business in the relevant market\" depends on an unspecified market.",
+      "reasoning_cat2": "It depends on 2(i)'s Margin Notice Deadline, which no Confirmation or Annex here fixes, leaving the same-day/next-day switch to market practice — a modest gap rather than a conflict.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(c) Timing of margin transfers"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Short and definite, though it says nothing about what happens absent agreement on attribution.",
+      "reasoning_cat2": "Attribution matters for the 2(o) Purchase Price adjustment; the silence is a gap but I found no provision it contradicts.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(d) Attribution of cash"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Purely enabling language requiring a separate agreement; nothing vague within it.",
+      "reasoning_cat2": "Consistent with 4(a)/(b) and 3(b)(v)'s allowance of additional Confirmation terms.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(e) Threshold amounts"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Again enabling and conditional on the parties' agreement; the wording is clear.",
+      "reasoning_cat2": "Fits alongside 4(e) and the aggregate approach of 4(a)/(b) without contradiction.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(f) Transaction-by-transaction margining"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "\"As Buyer shall reasonably determine in its discretion\" combines two standards, and the lower-case \"seller\" opening is only an OCR artifact.",
+      "reasoning_cat2": "Annex I paragraph 4 renumbers this as 5(a) and adds tax gross-up provisions capped by a proviso that Seller receive no more than it would have absent the Transaction, which sits in some tension with this clause's \"full extent it would be so entitled if the Securities had not been sold\" — a reconcilable but arguable interaction.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Income Payments"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "A conditional deemed-pledge that is standard and unambiguous on its face.",
+      "reasoning_cat2": "Annex I paragraph 2 reaffirms the sale characterization and Annex I paragraph 8 adds a broader security interest; both are compatible with this fallback pledge.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Security Interest"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The three delivery methods are alternatives introduced by \"or,\" with a reasonableness qualifier on requested documentation; the meaning is workable.",
+      "reasoning_cat2": "Consistent with Paragraph 8 and Paragraph 3; nothing elsewhere conflicts.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Payment and Transfer"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "\"To the extent required by applicable law\" and the broad list of Buyer's permitted dealings are clear, and the proviso preserving Buyer's return obligation is explicit.",
+      "reasoning_cat2": "It contemplates Seller-held Purchased Securities, as does 9(b) and the Required Disclosure, while Paragraph 8 also says all of Seller's interest passes to Buyer on the Purchase Date — a coexistence courts have sometimes probed but which is reconcilable here.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Segregation of Purchased Securities"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "The provision is left with unselected bracketed alternatives ([will]/[may], [its clearing bank]/[third parties]) and unmarked footnote symbols, so the text does not state which version applies — a plain mechanical defect.",
+      "reasoning_cat2": "It is a regulatory disclosure aimed at Seller-custody transactions, and 9(b) grants deemed consent to substitution in exactly that case; the unresolved brackets leave its fit with 9(b) and Paragraph 8 unsettled.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Required Disclosure for Transactions in Which the Seller Retains Custody"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"Subject to agreement with and acceptance by Buyer\" is definite as a consent requirement.",
+      "reasoning_cat2": "Annex I paragraph 11 adds 9(c)-(d) granting Seller a notice-based substitution right subject to Buyer's election to refuse, which qualifies but does not contradict (a); 9(b)'s deemed consent is a further carve-out.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9(a) Substitution"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The deemed-consent rule is clear and the Market Value proviso is a definite test.",
+      "reasoning_cat2": "It coexists with new 9(c), which grants a substitution right only where Seller \"does not have any existing right to substitute,\" and with the bracketed Required Disclosure; determining whether 9(b) supplies such an existing right is a genuine internal question.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9(b) Deemed consent to substitution where Seller retains custody"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Standard enumerated representations, each verifiable; \"any agreement by which it is bound\" is broad but the meaning is plain.",
+      "reasoning_cat2": "Annex I paragraph 9 adds FIRREA representations and paragraph 12 adds a reliance representation, both expressly additive; and Paragraph 11(vi) makes untrue representations an Event of Default, consistently.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Representations"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The seven triggers are specifically enumerated with no catch-all, and \"material respect\" is a familiar qualifier.",
+      "reasoning_cat2": "Annex I paragraph 8 broadens Events of Default to defaults under any other agreement between the parties, expanding this list; that is an intended amendment, and Annex I prevails per its preamble.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Events of Default (chapeau)"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "The deemed automatic exercise on an Act of Insolvency and the cancellation carve-out are stated explicitly; \"as promptly as practicable\" is a soft but conventional standard.",
+      "reasoning_cat2": "It works with 2(a), 2(q) and 11(g)'s valuation date; I found no contradicting provision.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(a) Declaration of Event of Default"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Three enumerated consequences, each specific; the wording is definite.",
+      "reasoning_cat2": "Consistent with Paragraph 5(B) (no Income obligation during Seller default) and with 11(d)(i) remedies.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(b) Defaulting party as Seller"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Clear conditional transfer of title upon tender of the aggregate Repurchase Prices.",
+      "reasoning_cat2": "Coheres with 11(d)(ii), 11(f) and 11(g); no conflict identified.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(c) Defaulting party as Buyer"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "\"Commercially reasonable manner\" and \"such price or prices as the nondefaulting party may reasonably deem satisfactory\" are open standards, and the quoted text carries stray subparagraph letters (e)-(h) misplaced in the chapeau from OCR.",
+      "reasoning_cat2": "11(e) deems the Securities to trade in a recognized market unless Annex I provides otherwise, and Annex I paragraph 7 designates pricing sources for Market Value; these interact but do not plainly conflict.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(d) Remedies without prior notice"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "A deemed acknowledgement that securities trade in a recognized market plus sole discretion to establish a price source — a factual deeming that a party could dispute for illiquid mortgage assets, and \"contrary to market practice\" is vague.",
+      "reasoning_cat2": "Its opening \"Unless otherwise provided in Annex I\" points to Annex I paragraph 7, which does specify pricing sources and an affiliate fallback, so the two must be read together — a live question about whose valuation controls on default.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(e) Recognized market acknowledgements"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "A definite damages measure: excess of replacement price over Repurchase Price.",
+      "reasoning_cat2": "It interacts with 11(g)'s cap and Annex I paragraph 13's exclusion of indirect and consequential damages, but replacement-cost damages are direct, so no clear conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(f) Liability for Replacement Securities excess"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "A precise cap fixed by reference to a determinable date.",
+      "reasoning_cat2": "Consistent with 11(a)'s deemed Repurchase Date and 2(r); no contradiction found.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(g) Cap on Repurchase Price"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Item (iii), \"any other loss, damage, cost or expense directly arising or resulting from\" an Event of Default, is a general catch-all following two specifics, so its reach is uncertain.",
+      "reasoning_cat2": "Annex I paragraph 13 bars indirect, incidental, special and consequential damages and punitive damages, which cuts directly against how broadly (iii) and the hedge-termination measure in (ii) can be read.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(h) Liability for expenses and damages"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "The interest rate is fixed as the greater of the Pricing Rate or Prime Rate, and the accrual period is stated; the wording is definite.",
+      "reasoning_cat2": "New 5(b) sets a different default-interest rate (LIBOR plus 1%) for Buyer's failure to remit amounts owing, which overlaps with this clause and raises a question of which rate applies to that failure.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(h) Interest on amounts owing"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "A short preservation-of-rights clause; \"any rights otherwise available\" is broad but standard and cumulative.",
+      "reasoning_cat2": "It sits against Annex I paragraph 13's damages exclusion and the exclusive-forum clause, but preservation of remedies is generally read subject to express limits.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11(i) Other rights preserved"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "The single-agreement and netting language is clear and internally consistent.",
+      "reasoning_cat2": "Annex I paragraph 8 expressly deletes Paragraph 12 in its entirety and substitutes a broader version, so this quoted text is superseded and cannot both operate.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Single Agreement"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "\"Or otherwise\" following mail, facsimile, telegraph and messenger is an open catch-all, and permitting all notices orally sits oddly with provisions elsewhere requiring written notice.",
+      "reasoning_cat2": "Paragraph 15(a) requires \"written notice\" to terminate and 17 requires written modification, while this clause says all notices \"may be made orally\" — a genuine tension over notice formality.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Notices and Other Communications"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "It is labelled \"Entire Agreement\" but only supersedes prior general terms for repurchase transactions; the mismatch between heading and text plus the absence of a true integration clause is arguable.",
+      "reasoning_cat2": "Read with 3(a)'s oral agreements, 3(b)'s conclusive-evidence rule and Annex I paragraph 15 covering pre-existing Transactions, the scope of what survives is not perfectly settled.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "14. Entire Agreement; Severability"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "Assignment bar and termination-with-survival mechanics are stated definitely; the term \"assigned\" without an express change-of-control gloss is the only soft edge.",
+      "reasoning_cat2": "15(b) expressly carves out assignment of Paragraph 11 sums, and Annex I paragraph 8's cross-agreement setoff is unaffected; consistent overall.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(a) Non-assignability; Termination"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "A narrow, clearly worded carve-out from the assignment prohibition.",
+      "reasoning_cat2": "It expressly qualifies 15(a) and does not disturb any other provision.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(b) Assignment of sums under Paragraph 11"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "A single-sentence New York choice of law excluding conflicts principles; nothing to construe.",
+      "reasoning_cat2": "Consistent with Annex I paragraph 14's New York forum selection, notwithstanding the Hong Kong counterparty and UK/HK tax references.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Governing Law"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "Anti-waiver and written-modification requirements are stated in definite terms with a specific example.",
+      "reasoning_cat2": "It cuts against Paragraph 13's allowance of oral notices and demands, but the two can be harmonised since 17 speaks only to modification, consent and waiver.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. No Waivers, Etc."
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The mechanic (notify, represent in writing, other party may but need not proceed) is clear.",
+      "reasoning_cat2": "18(b)'s financial-statement condition is expressly subject to this subparagraph's last sentence, so the two fit together.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18(a) Use of Employee Plan Assets - notice and representation"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "\"Most recent available audited statement\" and \"most recent subsequent unaudited statement\" are determinable, if slightly awkward.",
+      "reasoning_cat2": "Its \"subject to the last sentence of subparagraph (a)\" opening reconciles it with 18(a); no conflict elsewhere.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18(b) Financial statements condition"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "\"No material adverse change in Seller's financial condition\" is the classic vague standard, though it appears here only as a deemed representation in a narrow ERISA context.",
+      "reasoning_cat2": "It feeds Paragraph 11(vi) (incorrect representation as an Event of Default), which is consistent; no contradicting provision.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18(c) Deemed representations of Seller"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "A statutory characterization with express carve-outs where the definitions would not fit; clear as written.",
+      "reasoning_cat2": "Annex I paragraph 10 adds a parallel FIRREA characterization, and Paragraph 6 and Annex I paragraph 2 preserve the sale intent; all consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(a) Intent - repurchase agreement and securities contract"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "A straightforward acknowledgement of a statutory liquidation right; nothing ambiguous.",
+      "reasoning_cat2": "Ties to Paragraph 11 remedies without tension.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(b) Contractual right to liquidate"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "Conditional statutory characterization; the \"FDLA\" typo is an obvious OCR slip for FDIA and does not change meaning.",
+      "reasoning_cat2": "Consistent with 19(d) and Annex I paragraph 9's Depository Institution provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(c) Qualified financial contract"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "Clear characterization with an express carve-out if a party is not a \"financial institution\" under FDICIA.",
+      "reasoning_cat2": "Fits with 19(c) and Paragraph 12/Annex I paragraph 8 netting language.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(d) Netting contract under FDICIA"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "A pure disclosure/acknowledgement of a third party's position, imposing no obligation.",
+      "reasoning_cat2": "Consistent with 20(b)-(c) and with Annex I paragraph 6's broker-dealer agency provisions.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20(a) Disclosure - SIPA does not protect"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Definite statutory disclosure with no operative ambiguity.",
+      "reasoning_cat2": "Parallel to 20(a) and (c); no conflict in the instrument.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20(b) Disclosure - government securities broker"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "A clear disclosure that funds are not insured deposits.",
+      "reasoning_cat2": "Consistent with 19(c)'s insured-depository-institution provisions.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20(c) Disclosure - funds not insured"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "The preamble recites the Agreement as \"dated as of September 20, 1997\" while the Agreement's cover page is dated September 20, 1998 — a date discrepancy on the face of the incorporating language.",
+      "reasoning_cat2": "It also sets Annex I as prevailing over the Agreement generally, which combines with Annex I paragraph 3's reversal of 3(b) and paragraph 8's deletion of Paragraph 12 to create the layered priority questions in this instrument.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I Preamble - Supplemental Terms or Conditions"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "The list of additional applicable annexes is completed with \"None,\" which is definite.",
+      "reasoning_cat2": "Paragraph 1 refers to \"any other annexes identified herein or therein as applicable,\" and this answers that; consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 1. Other Applicable Annexes"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "A short confirmation of sale characterization with no contestable term.",
+      "reasoning_cat2": "Paragraph 6 itself contemplates that Transactions may be \"deemed to be loans,\" so this restatement of intent coexists with a fallback rather than contradicting it.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 2. Sales and purchases"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "The amendment is short and unambiguous in effect: the Confirmation prevails over the Agreement.",
+      "reasoning_cat2": "It flatly reverses the last sentence of Paragraph 3(b) as printed, so the two texts read together contradict one another absent the Annex's priority rule; that is the paradigm of a relational tension.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.45,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 3. Amendment to Paragraph 3(b)"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Purely a renumbering instruction; the OCR mangling of \"5(a)\" is cosmetic.",
+      "reasoning_cat2": "It correctly sets up new subparagraphs 5(b)-(f) that follow; consistent with Paragraph 5.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 4. Amendment to Paragraph 5 (renumbering)"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "It uses \"LIBOR Rate\" and \"Business Day\" without defining either anywhere in the instrument, and the proviso capping Seller's Income Payment recovery pulls against the gross-up obligation in the same sentence.",
+      "reasoning_cat2": "The proviso sits in tension with Paragraph 5(a)'s promise that Seller receive Income \"to the full extent it would be so entitled if the Securities had not been sold,\" and the LIBOR-plus-1% default interest overlaps 11(h)'s Pricing Rate/Prime Rate measure.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(b) Taxes and withholding"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "\"Reasonably satisfactory,\" \"reasonably requested\" and the final sentence's conditional termination of the gross-up obligation are qualitative but conventionally applied.",
+      "reasoning_cat2": "It cross-refers to 5(b)'s additional-amounts obligation coherently; no contradicting provision found.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(c) Tax forms and documents"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "\"Substantial likelihood\" in (ii) is a genuinely vague trigger for accelerating a Repurchase Date, and clause (iii) refers confusingly to \"such other party\" when the acting party is the one required to pay.",
+      "reasoning_cat2": "It deems a Repurchase Date to occur outside the list in 2(q) and treats notice as a 3(c) demand, which is workable, but clause (iii)'s pronoun confusion makes its fit with 5(b) uncertain.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(d) Tax Event"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "The Stamp Tax Jurisdiction test strings together incorporation, organization, management and control and seat with \"or\"/\"and\" in a way that is hard to parse, and \"Defaulting Party\" is capitalized but nowhere defined (the Agreement uses \"defaulting party\").",
+      "reasoning_cat2": "The undefined \"Defaulting Party\" must be mapped to Paragraph 11's \"defaulting party,\" and the indemnity for enforcement costs overlaps 11(h)(i)'s expense liability without contradicting it.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(e) Stamp Tax"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "A definition covering enactment through change in \"application or official interpretation,\" which is broad but clearly stated; mislabelled as \"(i)\" rather than \"(f)\" in the OCR.",
+      "reasoning_cat2": "Used only in 5(d)(2)(i); consistent with 5(f)(2)'s definition of Law.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(f)(1) Definition of \"Change in Tax Law\""
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "\"Includes\" makes the list non-exhaustive, and incorporation of a revenue authority's \"practice\" as law is broad but expressly intended.",
+      "reasoning_cat2": "It dovetails with 5(b)'s \"as modified by the practice of any relevant governmental revenue authority\"; consistent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(f)(2) Definition of \"Law\""
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "\"Or similar tax\" is a catch-all after three specifics, but the class is narrow and well understood.",
+      "reasoning_cat2": "Used only in 5(e); no conflict with any other provision.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(f)(3) Definition of \"Stamp Tax\""
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "The definition is deliberately sweeping (\"of any nature\") but is bounded by \"in respect of any payment under this Agreement,\" which gives it a workable limit.",
+      "reasoning_cat2": "It supports 5(b)-(d) coherently and is distinguished from Stamp Tax in 5(e)/(f)(3).",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New Paragraph 5(f)(4) Definition of \"Tax\""
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "The eligibility conditions are specific, but the third turns on whether Thornburg \"is a UK person or entity\" — plainly inapplicable to a New Mexico corporation, leaving a conditional that never bites.",
+      "reasoning_cat2": "It opens \"Notwithstanding any provision contained in this Agreement,\" overriding the broad \"securities or other assets\" definition in Paragraph 1; that restriction is intentional and does not create incoherence.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 5. Eligible Securities"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "The condition (\"a U.S. person or entity not registered as a broker-dealer\") and the requirement that CSFB Corporation confirm each Transaction on the Purchase Date are definite.",
+      "reasoning_cat2": "It supplements 3(b), which allows either party to deliver the Confirmation, so the two must be read together on who issues confirmations; the Annex prevails and the fit is workable.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 6.a Confirmation by Agent"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "The Agent's duties are enumerated by specific rule reference, though citing Rule 15c3-1 (net capital) for issuing confirmations and statements is an apparent mis-citation for Rule 10b-10 or 15c3-2.",
+      "reasoning_cat2": "The Agent is not a signatory party to the operative Agreement yet is assigned duties here, and 6.b(ii) disclaims its liability; that combination is coherent as drafted.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 6.b(i) Agent's responsibilities under Rule 15a-6"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "The disclaimer is broad but carves out gross negligence, willful misconduct and securities-law non-compliance in explicit terms.",
+      "reasoning_cat2": "It coexists with 6.b(i)'s affirmative Agent duties and with the signature block where CSFB Corporation accepts \"solely in its capacity as Agent\"; consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 6.b(ii) Agent has no liability"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "Naming three vendors and then making Buyer's own affiliate the fallback pricing source is clear but one-sided, and \"if a price is not available from such pricing sources\" is an open judgment.",
+      "reasoning_cat2": "It amends 2(j)'s \"generally recognized source agreed to by the parties\" and interacts with 11(e)(2)'s sole-discretion source rule, so which pricing mechanic governs on default is a live question.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 7. Pricing source"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "\"All transactions and agreements between them\" and \"any other agreement or transaction whatsoever\" are extremely broad, and cross-default to obligations arising outside this Agreement expands \"Event of Default\" well beyond Paragraph 11's list.",
+      "reasoning_cat2": "It deletes and replaces Paragraph 12 and enlarges Paragraph 11's closed list of Events of Default, so the interaction between this cross-default and Paragraph 11 must be reconciled; that is exactly the sort of whole-instrument question courts construe.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 8. Replacement Paragraph 12 Single Agreement"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "The FIRREA representations are specific and conditional on a party being a domestic insured bank or savings association.",
+      "reasoning_cat2": "Expressly additive to Paragraph 10 and aligned with 19(c) and Annex I paragraph 10; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 9. FIRREA representations by Depository Institution"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "A parallel statutory characterization with the same carve-out formula used in 19(a); definite.",
+      "reasoning_cat2": "Consistent with 19(a)-(d) and with Annex I paragraph 9's FIRREA provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 10. New Paragraph 19(e)"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "\"Substantially the same Securities\" is an undefined and contestable standard, and the condition \"with respect to which Seller does not have any existing right to substitute\" makes the clause's availability depend on a circular inquiry into other substitution rights.",
+      "reasoning_cat2": "That condition points back to 9(a) and 9(b)'s deemed consent, so whether Seller already has an \"existing right\" (and hence whether 9(c) applies) is genuinely uncertain across the instrument.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.35,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 11(c) New right of substitution"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "\"The loss incurred by Buyer directly arising or resulting from such substitution or termination,\" with amounts \"solely determined and calculated by Buyer in good faith,\" is a one-sided and open-ended measure.",
+      "reasoning_cat2": "It parallels 11(h)(ii)-(iii) but applies absent any default, and Annex I paragraph 13's bar on indirect and consequential loss constrains how broadly \"loss incurred\" can be read.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 11(d) Costs of substitution or termination"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "A short non-reliance representation; \"as it deems necessary\" is subjective by design and unambiguous.",
+      "reasoning_cat2": "Consistent with Paragraph 10's representations and with Paragraph 14; nothing contradicts it.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 12. Reliance on own advice"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "The categories \"indirect, incidental, special or consequential\" are conventional, and the exclusion is absolute on its face.",
+      "reasoning_cat2": "It sits against 11(h)(ii)-(iii) (hedge-termination costs and \"any other loss, damage, cost or expense\") and Annex I 11(d)(B), which award loss measures a party could characterize as consequential — a genuine reconciliation problem.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 13. No punitive or consequential damages"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "The submission is exclusive and clearly worded, though \"SOLELY FOR THE PURPOSE OF ANY SUIT ... RELATING IN ANY WAY TO THIS AGREEMENT\" mixes a limiting adverb with expansive scope.",
+      "reasoning_cat2": "Consistent with the New York governing-law clause in Paragraph 16; the Hong Kong/Singapore addresses in Annex II do not displace it.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 14. Submission to jurisdiction"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "A standard, unambiguous jury-trial waiver.",
+      "reasoning_cat2": "Fits with the New York forum and governing-law provisions; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 14. Waiver of jury trial"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "A single sentence whose reach is unclear: \"all Transactions in effect as of the date hereof\" retroactively subjects pre-existing trades to this Agreement without specifying which of their terms survive.",
+      "reasoning_cat2": "It pulls against Paragraph 14, which supersedes prior general terms and conditions, and against 3(b)/Annex I paragraph 3 on the priority of earlier Confirmations, leaving the treatment of legacy Transactions genuinely uncertain.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annex I, 15. Coverage of existing Transactions"
+    }
+  ]
+}

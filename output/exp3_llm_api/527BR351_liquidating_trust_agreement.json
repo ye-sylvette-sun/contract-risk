@@ -1,0 +1,884 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble is a long sentence fragment lacking a main verb ('by and among ... executed in connection with the Plan'), but its identifying content — parties, case number, defined terms — is definite. The incorporation of Plan definitions is a standard, workable mechanism.",
+      "reasoning_cat2": "It is consistent with Section 9.8 (Plan controls) and Section 1.1's transfer of estate assets; no other provision contradicts the description of the trust as successor to and representative of the estate.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The recitals are definite in stating the sole purpose and the Register-only definition of 'holder'; the phrase 'sole purpose of liquidating its assets for the benefit of the holders of allowed Class 2 claims' is precise as far as it goes.",
+      "reasoning_cat2": "There is a genuine recital-versus-operative tension: the recitals say the trust exists solely for Class 2 holders, while Section 3.6 directs the Trustee to make distributions to holders of Class 1 claims from proceeds of their collateral, and Section 1.2 mentions Class 3 holders. That mismatch is exactly the kind of recital/operative divergence a court could be asked to reconcile.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recitals"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The transfer language is definite — 'each and every asset of the estate free and clear of any lien, claim or interest' — though 'free and clear' sits oddly with the later acknowledgment of Class 1 secured claims and assumed liabilities. The phrase 'whether allowed on or after the Effective Date' is clear enough.",
+      "reasoning_cat2": "The 'free and clear of any lien' language is in tension with Section 3.6, which contemplates distributions to Class 1 claim holders 'from the proceeds of sales or other disposition of the assets securing said claims,' and with 1.1(b)'s subject-to-liabilities transfer. That is a specific, nameable internal inconsistency about whether liens survive the transfer.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.1(a) Transfer of Property to Trustee"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The list of assumed liabilities is enumerated in two closed items with an express exclusion, so the scope is reasonably bounded; 'to be incurred' expenses is slightly open-ended but conventional. No catch-all creates ejusdem generis difficulty.",
+      "reasoning_cat2": "It sits against 1.1(a)'s 'free and clear' transfer language, but the two can be harmonised as liens versus assumed obligations; otherwise it aligns with Section 4.7 on Trustee compensation from Trust Assets.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.1(b) Assumption of Liabilities"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Short and definite: an authority to transfer assets and execute documents in the Trustee's own name. 'Any and all assets of the Debtor or its estate' is broad but not ambiguous.",
+      "reasoning_cat2": "It duplicates and supports Section 1.1(a) and Section 9.3 (Debtor cooperation) without contradiction.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.1(c) Authority to Transfer Assets"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The reference to 'holders of allowed Class 3 claims' in the parenthetical list of parties bound appears to be a drafting slip where Class 2 is meant, since the deemed transfer is entirely to Class 2 holders. That is a mechanical error that could change who is bound by the tax treatment.",
+      "reasoning_cat2": "No other provision anywhere mentions Class 3 claims; the recitals and Sections 2.1 and 3.6 speak only of Class 2 (and Class 1), so the reference cannot be reconciled with the instrument as a whole.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.2 Treatment of Transfer of Trust Assets"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "A one-sentence identification of a named individual and successors; nothing to construe.",
+      "reasoning_cat2": "Consistent with Article 5 on resignation, removal and successor trustees.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.3 Trustee"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "'as are necessary and appropriate and that the Trustee determines are in the best interests' is loosely attached grammatically, and 'a custodian (such as a qualified bank...)' is illustrative rather than exhaustive, leaving the required qualifications of a custodian somewhat vague.",
+      "reasoning_cat2": "The custodian requirement fits with Section 4.6's investment rules and Section 3.3(b)'s no-commingling rule; no conflict found.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.4 Ownership by Trustee"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "A pure naming provision; entirely definite.",
+      "reasoning_cat2": "Matches the signature block and the notice address; consistent throughout.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.02,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.5 Name"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Clear and self-defining: holders are Class 2 claimants of record on the Register, and interests are uncertificated.",
+      "reasoning_cat2": "Consistent with the recital on the Register and with Section 6.2's reference to holders appearing on the Register; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1 Identification of Holders of Liquidating Trust Interests"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The prohibition on 'any steps, directly or indirectly, to facilitate the development of a secondary market' is a general phrase followed by four illustrative examples, leaving uncertain what other conduct is captured; 'includmg' is also a typo. There is a real general-versus-specific scope question.",
+      "reasoning_cat2": "It coexists with Section 6.1 on securities law exemption without contradiction; transferability upon notice is not inconsistent with the Register mechanism in 2.1.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2 Transferability of Liquidating Trust Interests"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Definite: holders have no voting or administration rights, subject to an 'except as provided in the Plan' carve-out whose content is external but identifiable.",
+      "reasoning_cat2": "It sits alongside Section 3.4, which does give holders a qualified information right, and Section 3.3(e), which gives the Committee supervisory power; these are reconcilable as non-administration rights but the boundary is arguable.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3 Holders of Liquidating Trust Interests Have No Rights in Connection with Administration"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "'in an expeditious but orderly manner' and 'not unduly prolong' are inherently vague standards, and 'or otherwise' extends the liquidation methods open-endedly. Still, these are boilerplate liquidating-trust formulations.",
+      "reasoning_cat2": "It duplicates Section 4.2 and coheres with Section 7.1's termination timetable; no contradiction identified.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1 Purpose of the Liquidating Trust"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "'any and all acts necessary or desirable' is a broad grant qualified by 'except as set forth in this Trust Agreement or the Plan,' which is clear in principle; the chapeau's 'without limitation, but subject to the foregoing' invites argument about the reach of the enumerated list that follows.",
+      "reasoning_cat2": "It must be read against Section 3.3(e), which requires Committee approval for dispositions of assets worth $5,000 or more, and against 3.3(d) limiting powers to the Plan; the interplay of broad grant and specific limits is a live but manageable tension.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2 Authority of Trustee"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Standard enumerated power with a proviso about nominees; wording is definite.",
+      "reasoning_cat2": "Consistent with Section 1.4 on recording ownership in nominee names.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(a) Hold legal title"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "'Sections 704, 108 and 1106' is likely a mis-ordering or mis-citation (Section 108 is not a trustee-duties provision), a small mechanical oddity; 'Reserved Claims' is defined in the Plan.",
+      "reasoning_cat2": "Consistent with the preamble's description of the Trustee as representative of the estate and with 9.2 on privileges.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(b) Perform duties of a trustee"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "'any necessary or appropriate means, including... and similar law and general principles of equity' is a broad catch-all but of a common protective kind; little to construe.",
+      "reasoning_cat2": "Consistent with 3.2(d) and 4.2's litigation powers.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(c) Protect and enforce rights"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The verb list repeats 'compromise' twice and ends with the garbled 'take any and action all necessary or appropriate,' a clear transposition; the meaning is nonetheless recoverable.",
+      "reasoning_cat2": "It substantially duplicates 3.2(v), which is redundant but not contradictory.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(d) Compromise and litigate claims"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "'the Debtors'' plural is inconsistent with the single defined Debtor, and 'those identified in the Disclosure Statement' points outside the instrument, but the power itself is definite.",
+      "reasoning_cat2": "The plural 'Debtors' recurs in 3.2(h) and 3.2(j) though only one Debtor is defined in the preamble; a minor whole-instrument inconsistency.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(e) Avoid and recover transfers"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "A terse, definite power to determine and satisfy liabilities.",
+      "reasoning_cat2": "Consistent with 1.1(b)'s assumed liabilities and 3.2(k)'s expense payment power.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(f) Determine and satisfy liabilities"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "Clear and specific tax filing and payment power.",
+      "reasoning_cat2": "Consistent with Sections 3.8(a) and 6.2 on tax reporting.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(g) File tax returns"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Definite in substance; the plural 'Debtors' against singular 'Debtor's Chapter 11 Case' within the same clause is a small mechanical inconsistency.",
+      "reasoning_cat2": "Duplicates 3.2(t) but consistent with it and with 1.1(b)'s reference to Section 505 determinations.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(h) Section 505 determinations"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Short, definite, and expressly tied to the Plan.",
+      "reasoning_cat2": "Consistent with Section 9.8's Plan-controls rule.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(i) Execute offsets"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Plain grant to assert or waive privilege; 'the Debtors' plural again, but no ambiguity of substance.",
+      "reasoning_cat2": "Aligns squarely with Section 9.2, which vests privileges in the Trust and gives sole-discretion waiver.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(j) Assert or waive privilege"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Definite; 'any expense incurred... in the course of administering' is broad but ordinary.",
+      "reasoning_cat2": "Consistent with Section 4.7 on reimbursement and with 3.3(d)'s Plan-based limit on compensation.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(k) Pay expenses"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "'PCCC' is an undefined acronym appearing nowhere else in the agreement, and 'reimburse the of expenses' is garbled; this is a plain mechanical defect that obscures whose professionals may be paid. Both the word salad and the orphan defined term make the reach uncertain.",
+      "reasoning_cat2": "No other provision in the instrument mentions PCCC — the parties are the Debtor, the Committee and the Trustee — so the clause cannot be reconciled with the document read as a whole.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(l) Pay professionals employed by PCCC"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "'in the form of an errors and omissions policy or otherwise' is illustrative but the power is clear and permissive.",
+      "reasoning_cat2": "Interacts sensibly with Section 4.3(f), which limits indemnification to uninsured amounts.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(m) Obtain insurance for Trustee liabilities"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Brief and definite permissive insurance power.",
+      "reasoning_cat2": "Consistent with 3.2(m) and the general expense provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(n) Insurance on property"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "'such other functions as may be appropriate' is a vague catch-all following two specific functions, though in a permissive power clause the stakes are low.",
+      "reasoning_cat2": "Consistent with 3.2(dd) (no court approval needed) and Section 4.3's indemnity scheme.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(o) Retain and pay legal counsel"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Clear enumerated power with a conflicts-waiver sentence; no ambiguous term of consequence.",
+      "reasoning_cat2": "Parallel to 3.2(o) and 3.2(q) and consistent with the tax reporting sections.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(p) Retain accountants"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "'professionals' is undefined and broad, but the clause is a permissive retention power rather than an obligation.",
+      "reasoning_cat2": "Consistent with 3.2(dd) and 3.3(d) which subject compensation to the Plan.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(q) Retain professionals"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Detailed and definite as to payroll, withholding and workers' compensation; 'amounts he or she shall determine to be appropriate' is discretionary but expressly so.",
+      "reasoning_cat2": "Consistent with 4.7(a)'s hourly rate schedule for the Trustee's employees, though that schedule and this open discretion could be read together with some friction.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(r) Employ employees"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "An express cross-reference to Section 4.6 and the Treasury Regulation makes the limits definite.",
+      "reasoning_cat2": "Directly harmonious with Section 4.6 and Section 3.3(a).",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(s) Invest moneys"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "'any appropriate tax determination' is somewhat open but the illustrative Section 505 reference anchors it.",
+      "reasoning_cat2": "Duplicates 3.2(h) without contradiction.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(t) Request tax determination"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Stray characters aside, the power is a plain reference to Bankruptcy Rule 2004.",
+      "reasoning_cat2": "Consistent with the Trustee's litigation and investigation powers elsewhere in 3.2.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(u) Rule 2004 examination"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "'or otherwise deal with' is a catch-all after a long verb list, and 'compromise' again appears twice; the reach of 'otherwise deal with' is fuzzy.",
+      "reasoning_cat2": "It largely repeats 3.2(d), and the redundancy plus the added qualifier 'in accordance with the terms hereof' could invite argument about which controls.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(v) Compromise actions"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Specific statutory reference; 'claim' singular is a trivial slip.",
+      "reasoning_cat2": "Consistent with the claim-resolution powers in 3.2(d) and 4.2.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(w) Seek estimation of claims"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The disposition power is stated broadly with 'as the Trustee shall deem advisable,' which is definite discretion language.",
+      "reasoning_cat2": "It sits directly against Section 3.3(e), which requires Committee approval for disposing of any asset worth $5,000 or more; the unqualified 'as the Trustee shall deem advisable' must yield to that limit, a tension a court could be asked to resolve.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(x) Sell or transfer Trust Assets"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "'cannot be sold or otherwise disposed of for value' and 'feasible or cost-effective based on the judgment and discretion of the Trustee' are vague standards, but discretion is expressly conferred.",
+      "reasoning_cat2": "Abandonment is also an act listed in Section 3.3(e) as requiring Committee approval above $5,000, creating a specific overlap between this unfettered abandonment power and the Committee gate.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(y) Abandon Trust Assets"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Definite reporting obligation tied to the Plan and case closure.",
+      "reasoning_cat2": "Consistent with Section 3.2's statement that no accounting need be filed except as provided in the Plan.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(z) File reports with the Bankruptcy Court"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "A closed enumerated list of five proceeding types with no catch-all; wording is definite.",
+      "reasoning_cat2": "Consistent with Section 9.4's exclusive Bankruptcy Court jurisdiction.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(aa) Appear as party in interest"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Brief and definite permissive power to seek court instruction.",
+      "reasoning_cat2": "Consistent with Section 3.2's statement that the Trustee 'may seek approval of the Bankruptcy Court.'",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(bb) File motions"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "'take or refrain from taking any and all actions the Trustee reasonably deems necessary' is a sweeping residual catch-all after twenty-eight specific powers, and its outer boundary is genuinely uncertain. That is the classic general-versus-specific tension.",
+      "reasoning_cat2": "Read literally it would let the Trustee act unconstrained by Section 3.3(e)'s Committee-approval threshold and 3.3(a)'s prohibitions, so the harmonisation is not entirely clean.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(cc) Take or refrain from actions"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Short and definite: retention without Bankruptcy Court approval.",
+      "reasoning_cat2": "Consistent with Section 3.2's opening and with 3.2(o)-(r); no conflict, though Committee supervision under 3.3(e) is limited to asset dispositions.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(dd) Retain professionals without court approval"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "'snconsistent' is an obvious typo for 'inconsistent,' and 'actions inconsistent with the orderly liquidation... as are required by applicable law' is syntactically muddled; the substantive prohibitions are nonetheless understandable.",
+      "reasoning_cat2": "The 'notwithstanding anything herein to the contrary' opener is designed to override the broad grants in 3.2, particularly 3.2(cc), so it coheres as the intended limiter.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(a) Limitation of Trustee's Authority"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Flat, unambiguous prohibition on commingling.",
+      "reasoning_cat2": "Consistent with Section 1.4's custodian requirement.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(b) No commingling"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Definite prohibition keyed to a named statute.",
+      "reasoning_cat2": "Sits against Section 6.1, which contemplates the Trustee taking actions to comply with the Investment Company Act if required — a mild tension between 'shall not take any action that would result in' registration and 'if required... comply.'",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(c) No investment company registration"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "Short and clear: powers and compensation limited as provided in the Plan.",
+      "reasoning_cat2": "It qualifies Section 4.7(a)'s fixed hourly rates and unilateral annual increase without Bankruptcy Court approval; whether the Plan permits that self-increase is a real point of friction between the two provisions.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(d) Rights and powers limited by Plan"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "The second sentence is self-contradictory on its face: dispositions of assets at or above $5,000 need Committee approval, yet 'the Trustee shall be entitled to take any other action with respect to such assets... without obtaining approval,' and 'gross fair market value' of an asset is itself a judgment call. The scope of 'any other action' against the enumerated disposition verbs is genuinely uncertain.",
+      "reasoning_cat2": "It cuts across Section 3.2(x), 3.2(y) and 3.5's 'without prior or further authorization' grant of control over disposition of Trust Assets, which on their face permit unapproved disposals; reconciling those with the Committee gate is a live whole-instrument problem.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(e) Supervision by Committee"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "'reasonable notice,' 'a period of time reasonable under the circumstances' and the deemed-approval-by-email mechanism are vague, and the quorum definition ('three members' versus 'if reduced to three or fewer, all members') is internally awkward when the number is exactly three. That overlap is a nameable drafting defect.",
+      "reasoning_cat2": "It supports Section 3.3(e)'s approval requirement and 3.3(g)'s dispute mechanism without contradiction.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(f) Committee procedures"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Definite: disputes go to the Bankruptcy Court on five calendar days' notice, with a cause-based shortening.",
+      "reasoning_cat2": "Consistent with Section 9.4's exclusive jurisdiction provision, though 9.4 is limited to 'so long as the Chapter 11 Case may be pending' while this clause has no such limit — a small gap.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3(g) Dispute resolution"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "'purposes reasonably related to such holder's interests,' 'undue burden' and 'detrimental to the Liquidating Trust' are vague qualifiers on the holder's information right, and the Trustee is effectively the judge of each. The boundary of the access right is genuinely contestable.",
+      "reasoning_cat2": "It grants holders a right that Section 2.3 says they lack in respect of administration; the two are reconcilable (information is not administration) but the interaction is arguable.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4 Books and Records"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "'without prior or further authorization' is clear, and the opening carve-outs identify the limits by reference.",
+      "reasoning_cat2": "It sits directly against Section 3.3(e)'s Committee-approval requirement for dispositions over $5,000, since 3.5 purports to give unauthorised control over 'disposition' of Trust Assets; the 'except as otherwise set forth in this Trust Agreement' opener probably saves it but the point is contestable.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.5 Additional Powers"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "'within a reasonable time after liquidation of all assets' is a vague timing standard, and the mandatory distribution to Class 1 holders appears without any prior definition of Class 1 in this instrument. The mix of mandatory and permissive distribution language invites argument.",
+      "reasoning_cat2": "The direction to distribute to Class 1 claim holders conflicts with the recitals and Section 1.1(a), which say the Trust exists solely for and holds assets solely for Class 2 holders, and with 1.1(a)'s 'free and clear of any lien' transfer.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.6 Distributions; Withholding"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "The parenthetical is unbalanced — an extra closing paren after 'Internal Revenue Service)' before 'upon audit if not contested' — leaving the qualifying condition garbled. The substance (file as a grantor trust) is nonetheless plain.",
+      "reasoning_cat2": "Consistent with Section 6.2's grantor-trust style allocations and Section 9.1's tax intention.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.8(a) Federal Income Tax Reporting"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "Broad but plain catch-all reporting obligation; 'any governmental authority' is wide yet not ambiguous.",
+      "reasoning_cat2": "Consistent with 3.8(a) and 6.1.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.8(b) Other Reporting"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "'including, but not limited to, applicable federal and state securities laws' is an illustrative catch-all, and the reference to 'proceeds of borrowings' assumes a borrowing power not expressly granted. The mismatch is nameable.",
+      "reasoning_cat2": "This clause is numbered 3.8 a second time, duplicating the reporting section's number — a numbering collision within the instrument — and it presupposes borrowing authority that only Section 4.7(b) obliquely mentions.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.8 Compliance with Laws"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "'except that the Trustee may deal with the Trust Assets as permitted by herein' contains a mechanical error ('by herein') and the exception arguably swallows the fiduciary-only rule it follows. That is both a grammatical slip and a substantive tension.",
+      "reasoning_cat2": "It coexists with Section 4.3's exculpation for all but willful misconduct, gross negligence or fraud; a fiduciary standard alongside broad exculpation is a familiar but genuine point of friction.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.1 Generally"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "'expeditious but orderly,' 'timely distributions,' 'unduly prolong' and 'reasonable business judgment' are all soft standards, but they are conventional and mutually reinforcing.",
+      "reasoning_cat2": "It duplicates Section 3.1 nearly verbatim; duplication is not contradiction, and the 'reasonable business judgment' standard here coexists with 4.3's gross-negligence exculpation with only mild friction.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 Responsibilities of Trustee"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "'willful misconduct, gross negligence or fraud' is a well-understood triad, and the class of protected persons is enumerated; the wording is definite.",
+      "reasoning_cat2": "It is in tension with Section 4.1's requirement that powers be exercised solely in a fiduciary capacity, but such carve-outs routinely coexist with fiduciary language.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3(a) Standard of Care"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The final phrase 'their determinations shall not result in the imposition of liability upon the Trustee' is oddly worded given the advisors are not decision-makers, but the reliance protection is otherwise clear.",
+      "reasoning_cat2": "Consistent with Section 4.4's reliance-on-counsel language, which it partly duplicates.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3(b) Reliance on advisors"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "Broad indemnity with a clear carve-out for willful misconduct, gross negligence or fraud; 'arising out of or due to their actions or omissions' is wide but standard.",
+      "reasoning_cat2": "Consistent with 4.3(d), (e) and (f), and with 3.2(m)'s insurance power; 4.3(f) limits Trustee indemnity to uninsured amounts, which harmonises rather than conflicts.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3(c) Indemnification"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "The repayment obligation is imposed only on 'the Trustee' though advances may go to the Committee or its members, leaving a gap as to whether Committee members must repay. That asymmetry is a nameable drafting defect.",
+      "reasoning_cat2": "It fits with 4.3(c)'s indemnity and 4.3(f)'s insurance limitation, but the missing Committee repayment duty sits awkwardly beside 4.3(c)'s parity treatment of Committee members.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3(d) Advancement of expenses"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "Brief and definite survival clause.",
+      "reasoning_cat2": "Consistent with Sections 5.1-5.4 on succession.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3(e) Survival for former Trustees"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Clear priority rule: indemnity only for amounts not covered by insurance.",
+      "reasoning_cat2": "It qualifies 4.3(c) and pairs with 3.2(m); no inconsistency, though it protects only the Trustee and not the other indemnitees named in 4.3(c).",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3(f) Indemnification limited to uninsured amounts"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "'no reason to believe to be other than genuine' combined with 'may conclusively rely' is a slightly circular standard, but the protection is conventional and clear enough.",
+      "reasoning_cat2": "Overlaps 4.3(b) on counsel reliance without contradiction.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.4 Reliance by Trustee"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "'In the absence of actual knowledge to the contrary' is a definite qualifier; the third-party protection is plainly stated.",
+      "reasoning_cat2": "There is a real question whether this lets a third party rely on a disposition made without the Committee approval Section 3.3(e) requires, but that is the clause's evident purpose rather than an incoherence.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.5 Reliance by Persons Dealing With the Trust"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "A closed three-item list of permitted investments with an express expansion/contraction mechanism tied to the Treasury Regulations; the wording is careful and definite.",
+      "reasoning_cat2": "Directly cross-referenced by 3.2(s) and consistent with 3.3(a) and 3.3(c).",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.6 Investment and Safekeeping of Trust Assets"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "'The Trust Assets shall be subject to the claims of the Trustee, and the Trustee and shall be entitled' contains a dangling repetition, and 'initial hourly rates' subject to unilateral annual increase with no cap is open-ended. The garbled sentence and the uncapped increase are both nameable.",
+      "reasoning_cat2": "The unilateral rate increase 'without approval of the Bankruptcy Court' is in tension with Section 3.3(d), which limits Trustee compensation 'to the extent, and in the manner provided in, the Plan,' and with Section 9.8's Plan-controls rule.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.7(a) Expense Reimbursement and Compensation"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "The clause conditions self-help on the Trustee being 'unable to borrow funds... in accordance with the terms of this Trust Agreement,' yet no borrowing power is granted anywhere in the agreement. That reference to a non-existent mechanism is a defect in the provision's own operation.",
+      "reasoning_cat2": "Section 3.2's enumerated powers contain no borrowing authority (only Section 3.8 mentions 'proceeds of borrowings, if any'), so the condition cannot be reconciled with the instrument as a whole.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.7(b) Insufficient cash"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Five words, entirely definite.",
+      "reasoning_cat2": "Nothing elsewhere requires a bond; consistent.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.8 Bond"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "The temporal phrase 'while serving as Trustee... following the termination of this Trust Agreement or following the earlier of his or her removal or resignation' is internally garbled — 'while serving' and 'following termination' cannot both hold — and appears to be missing an 'and'. That mechanical defect obscures when the duty runs.",
+      "reasoning_cat2": "It coheres with Section 3.4's confidentiality-agreement mechanism and Section 9.2 on privilege; no conflict.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.9 Confidentiality"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "The last clause — 'unless the Bankruptcy Court otherwise determines or consents to an earlier effective date, which shall be the date that appointment of a successor Trustee becomes effective' — is confusing as to what 'which' refers to and when service actually ends. That is a nameable syntactic ambiguity.",
+      "reasoning_cat2": "Section 5.2 lets the Committee remove and replace the Trustee, while 5.1 gives appointment on resignation to the Bankruptcy Court alone; the two appointment routes are not reconciled.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.1 Resignation"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "'Cause' is expressly defined, but the clause then permits removal by the Committee 'without cause,' so the defined-Cause limitation applies only to the court — a structure that reads as internally at odds and could be argued either way. 'Unresolved material conflict of interest' and 'reasonable time' add vagueness.",
+      "reasoning_cat2": "It conflicts in substance with Section 5.1, under which the Bankruptcy Court appoints a successor, whereas here the Committee replaces the Trustee; and with Section 2.3's grant of exclusive administrative authority to the Trustee subject only to the Plan.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.2 Removal"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "'in form satisfactory to the successor Trustee' is odd (the successor approves its own acceptance form) but harmless; the vesting language is definite.",
+      "reasoning_cat2": "Consistent with Sections 5.1, 5.2 and 5.4 on succession mechanics.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.3 Acceptance of Appointment by Successor Trustee"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "Long but carefully enumerated obligations on a departing Trustee, with a clear power of attorney; the reference to the Trustee's 'heirs, legal and personal representatives, successors or assigns' is broad but standard.",
+      "reasoning_cat2": "Consistent with 5.1, 5.2, 5.3 and 4.3(e) on former Trustees.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.4 Continuance of Trust"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "'if applicable' trailing the 1145 exemption sentence is vague as to what it qualifies, and 'as necessary' at the end is similarly loose; the operative obligation is otherwise clear.",
+      "reasoning_cat2": "It contemplates possible Investment Company Act compliance whereas Section 3.3(c) flatly forbids any action resulting in such registration — a specific, identifiable tension.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.1 Securities Laws Reporting"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "Technical but precisely specified allocation mechanics keyed to tax book value and the Code; 'Promptly following the end of each calendar year' is the only soft term.",
+      "reasoning_cat2": "Consistent with 3.8(a)'s grantor trust filing position and Section 9.1's tax intention.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 Tax Reporting"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "The provision says the Trust terminates on the earlier of full administration or the fifth anniversary 'unless extended,' then allows extensions aggregating three years and further extensions on an IRS ruling, and finally says the Trustee may terminate 'without further order of the Bankruptcy Court' though extensions require the court. The interplay of the automatic outer date, extensions and unclaimed-asset redistribution is genuinely tangled.",
+      "reasoning_cat2": "It must be read with Section 3.6, which requires distributions to Class 1 holders and permits interim distributions, and with 7.1's own 'prior to and upon termination' distribution direction; the treatment of unclaimed assets also has no counterpart elsewhere.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.1 Termination of Liquidating Trust"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "'Any substantive provision' is odd — it invites a question about non-substantive provisions, which are left unaddressed — and the amendment power is otherwise clear. The substantive/non-substantive line is a nameable ambiguity.",
+      "reasoning_cat2": "Amendment by Trustee and Committee alone excludes the Debtor, a signatory party, and Section 9.1 separately permits retroactive amendment 'to comply with such federal income tax laws' without saying who may make it; those two amendment routes are not reconciled.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.1 Amendment and Waiver"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "'any ambiguity herein shall be construed consistent herewith' is a self-referential construction rule, and the retroactive-amendment permission does not say who may effect it. Both are identifiable soft spots.",
+      "reasoning_cat2": "It overlaps Section 8.1's amendment procedure (Trustee plus Committee approval) without specifying whether that procedure governs these tax-driven amendments, and it also competes with Section 9.4's California-law construction rule.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.1 Intention of Parties to Establish Liquidating Trust"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "Clear vesting of privileges and an express sole-discretion waiver power.",
+      "reasoning_cat2": "Consistent with 3.2(j); no other provision limits privilege waiver.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.2 Preservation of Privilege and Defenses"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "'necessary or proper' and 'reasonable request' are standard soft qualifiers in a further-assurances clause; the waiver of reversionary interests is definite.",
+      "reasoning_cat2": "Consistent with 1.1(a)'s statement that the Debtor retains no further interest and with 1.1(c).",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.3 Cooperation and Further Assurances of the Debtor"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "California law plus federal bankruptcy law 'to the extent applicable' leaves the boundary between the two undefined, and exclusive jurisdiction lasts only 'for so long as the Chapter 11 Case may be pending,' with no stated forum thereafter. Those are identifiable gaps.",
+      "reasoning_cat2": "It coexists with Section 3.3(g)'s unlimited Bankruptcy Court dispute mechanism, which has no case-pending limitation, so the two jurisdiction provisions do not align in duration.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.4 Laws as to Construction; Jurisdiction of Bankruptcy Court"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "Standard severability wording; definite.",
+      "reasoning_cat2": "Consistent with the whole instrument.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.5 Severability"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "The clause specifies only mailing ('if deposited, postage prepaid, in a post office or letter box'), which sits oddly with the email approvals contemplated in 3.3(f), and 'if no proof of claim has filed' is a grammatical slip. No notice address is given for the Debtor or Committee.",
+      "reasoning_cat2": "Section 3.3(f) expressly allows notice and approval by email on 24 hours' notice, which this mail-only formality does not accommodate; the omission of Debtor and Committee addresses is a further gap.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.6 Notices"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "Boilerplate headings clause; entirely definite.",
+      "reasoning_cat2": "Consistent throughout, though it means the mis-numbered duplicate 3.8 headings carry no weight.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.7 Headings"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "The clause both 'incorporates the provisions of the Plan' and subordinates the Agreement to the Plan on inconsistency; 'found to be inconsistent' does not say by whom, and full incorporation plus a priority rule is slightly circular. The wording is nonetheless workable.",
+      "reasoning_cat2": "It is the designated resolver of Plan-versus-Agreement conflicts and thus governs the several 'except as provided in the Plan' carve-outs in 3.2, 3.3(d) and 2.3; it is consistent with the whole but is exactly the provision a party would invoke to attack, say, 4.7(a)'s compensation terms.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.8 Relationship to the Plan"
+    }
+  ]
+}

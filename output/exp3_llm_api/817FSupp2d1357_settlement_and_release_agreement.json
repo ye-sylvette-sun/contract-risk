@@ -1,0 +1,154 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause is mechanically corrupted at its operative close — \"the terms of this reement ae conzartunl an not 8 mere rsa\" is unreadable and only guessable as \"this agreement are contractual and not a mere recital,\" so a reader cannot know what the final term says. That is a plain mechanical defect going to meaning, and \"no promise or inducement or agreement not herein expressed\" is itself a broad integration formula.",
+      "reasoning_cat2": "As an entire-agreement clause it must be squared with the surrounding representations, notably paragraph 2's disclaimer of reliance and the acknowledgment that Releasees \"duly rely upon the truth\" of Releasors' warranties; the merger language raises the question whether those warranties survive as contractual promises. The tension is real but modest since all the representations are within this same instrument.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.29,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 4 — Entire Agreement / Merger"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "The sentence breaks off mid-clause — \"no part of the monetary payment is in\" — leaving an incomplete term, and \"shall not be used to the detriment of the Parties\" is a vague standard with no discernible boundary, while \"any person not party or privy to this settlement\" and \"except as may be required by law\" are undefined carve-outs. Multiple named defects support a high score.",
+      "reasoning_cat2": "Confidentiality sits alongside the dismissal-with-prejudice obligation and the public court filings contemplated in the opening release paragraph, and the truncated \"no part of the monetary payment is in [consideration of confidentiality]\" bears on the allocation of the $350,000 recited at the outset. That interaction is a plausible but not clearly contradictory friction.",
+      "prob_cat1": 0.64,
+      "prob_cat2": 0.26,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Confidentiality and No-Detriment Provision"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The operative release is drafted in sweeping terms — \"any and all consequences of the incident(s) underlying or giving rise to\" the Lawsuits and claims \"directly or indirectly related\" — and the reciprocal sentence trails off at \"as part of the consideration for Releasors'\", an incomplete clause. The breadth of \"indirectly related\" plus the truncation give a court something to construe about the release's reach.",
+      "reasoning_cat2": "It must be read with the later \"Scope of Release of All Actions\" paragraph and the \"Full and Final Satisfaction\" paragraph, which repeat the release in differing formulations (\"between the Parties\" versus release of Releasees); the overlap is broadly harmonious rather than contradictory. No squarely conflicting term was found.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The no-assignment/no-subrogation warranty is a definite factual representation with named parties and no elastic term; only minor typographical slips (\"othec\") appear and they do not alter meaning. Little to construe.",
+      "reasoning_cat2": "This paragraph is duplicated almost verbatim later as numbered paragraph 5, which creates redundancy rather than conflict, though duplication in an integrated instrument can raise a question of which text controls. The two versions say the same thing, so risk stays low.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representation of No Assignment of Claims"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The disjunctive \"persons over 18 years of age or corporate entities registered to do business in the State of Georgia\" imposes a registration condition that may not fit the insurer Releasee, and \"sui juris\" is a term of art applied to corporations. The drafting is loose but the clause is merely a capacity recital.",
+      "reasoning_cat2": "It is consistent with the rest of the instrument, including the Georgia governing-law clause and the signature/notary blocks; nothing else in the document contradicts the capacity representation. Low relational risk.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Capacity of Parties"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The non-reliance representation is standard and its terms (\"merits, legal liability or value of this claim\") are reasonably bounded, with only a typo in \"jadgment.\" Nothing genuinely ambiguous is named.",
+      "reasoning_cat2": "It sits uneasily with the later acknowledgment that Releasees \"duly rely upon the truth, accuracy and validity of all promises, representations and warranties of the Releasors contained herein\" — one paragraph disclaims reliance on the other side's representations while another affirms reliance. That is a specific, if reconcilable, tension.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Reliance on Own Judgment"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A one-line voluntariness recital with no operative term to interpret and no ambiguous word. Essentially nothing to construe.",
+      "reasoning_cat2": "It duplicates the later \"voluntarily accept all the terms hereof\" representation but in fully consistent terms. No conflict with any other provision.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Voluntary Execution"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Same definite no-assignment warranty, expressed with typos (\"werrent\", \"Releases\") that do not change meaning. No named ambiguity.",
+      "reasoning_cat2": "It is a near-verbatim repetition of the earlier no-assignment paragraph, producing redundancy within an instrument that also declares itself the entire agreement; the duplication is harmless because the texts agree. Low risk.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. No Assignment or Subrogation"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"All promises, representations and warranties of the Releasors contained herein\" is a general reference but bounded to the four corners of this document, and the meaning of reliance is plain despite the OCR noise. Little intrinsic ambiguity.",
+      "reasoning_cat2": "It points the opposite way from paragraph 2, which states the decision was made \"without reliance upon any statement or representation by Releasees, Releasors, or their respective representatives\"; the two reliance provisions can be harmonised but present a genuine reading question. That specific pairing raises the relational score.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Reliance on Releasors' Representations"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A conventional no-admission clause; \"doubtful and disputed claims\" is boilerplate and the operative direction (not to be construed as an admission) is definite. Minor typos only.",
+      "reasoning_cat2": "It coheres with the release and full-and-final-satisfaction paragraphs, none of which concede liability. No conflicting provision identified.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "No Admission of Liability"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The scope language is expansive and somewhat self-cancelling — claims \"traced either directly or indirectly,\" \"even to the extent of death,\" \"no matter how remotely any such potential claim may be related\" — and \"remotely related\" has no ascertainable boundary. That vagueness in the outer limit of the release is a genuine construction hook.",
+      "reasoning_cat2": "Read against the opening release, which is framed as Releasors releasing Releasees with a reciprocal sentence, this paragraph describes a mutual release \"between the Parties\"; the two describe the same bargain in different scope language but are reconcilable. Moderate-low relational risk.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Scope of Release of All Actions"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The indemnity runs to \"any claim or lien, or any other subrogation claim or lien by any insurance company, government agency, law firm, including, but not limited to, Alston & Bird LLP and Mason Bahr LLP, or any other entity related to the Lawsuits\" — a classic catch-all against enumerated specifics, and \"related to the Lawsuits\" may modify only the last item or the whole list. That general-vs-specific tension is nameable.",
+      "reasoning_cat2": "It complements the no-assignment/no-subrogation warranties rather than contradicting them, and no other provision limits Releasors' indemnity obligation. Low relational risk.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Indemnification Against Claims and Liens"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Full and Final Satisfaction of any and all claims, whether specifically stated or not, which were asserted or might have been asserted by the Parties in the Lawsuits\" is broad but its anchor — claims assertable in the Lawsuits — is definite. Only mild uncertainty in \"might have been asserted.\"",
+      "reasoning_cat2": "It overlaps with the release paragraph and the scope-of-release paragraph, which extend to claims \"remotely\" related to the Lawsuits rather than only those assertable in them; the slight difference in reach is reconcilable. Low but not nil.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Full and Final Satisfaction"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "A plain acknowledgment of reading, understanding and representation by counsel, with no elastic term. Nothing to construe.",
+      "reasoning_cat2": "Consistent with paragraphs 2 and 3 on reliance on counsel and voluntariness. No conflict found.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Review of Terms and Advice of Counsel"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A single-sentence choice-of-law clause naming Georgia; the only flaw is a missing space (\"State ofGeorgia\"), which does not affect meaning. Definite.",
+      "reasoning_cat2": "It fits the Georgia venue of both Lawsuits and the DeKalb County execution recital; no competing forum or law provision exists in the document. Consistent with the whole.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Governing Law"
+    }
+  ]
+}

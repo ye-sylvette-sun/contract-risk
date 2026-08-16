@@ -1,0 +1,494 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The phrase \"based upon the actual first-hand experiences other users have had\" is a factual-sounding representation whose status (promise about review integrity versus mere description of the service) and scope are genuinely contestable. Whether \"based upon\" warrants accuracy, non-manipulation or ordering of reviews is precisely the kind of term two parties would read differently.",
+      "reasoning_cat2": "It sits directly against Section 13's statement that Angie's List \"does not guarantee the accuracy, integrity, quality or appropriateness of any Content\" and acts as a \"passive conduit,\" and against the Section 24 warranty disclaimer, so an affirmative descriptive promise must be harmonised with sweeping disclaimers. That tension is a specific, nameable conflict within the instrument.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.62,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Section 1 — Angie's List Service (first paragraph)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"Passive conduit\" and \"interactive computer service provider\" are legally loaded characterisations whose reach is arguable, and the disclaimer of responsibility for Content does not on its face say whether it covers Angie's List's own arrangement or ordering of reviews. The breadth of \"any Content transmitted to or through the Service\" leaves a real question of scope.",
+      "reasoning_cat2": "Read against Section 1's representation that reviews are based on actual first-hand user experiences (and the Plan benefits described there), this blanket disclaimer of accuracy and integrity is hard to reconcile with the affirmative description of the Service. Section 16(J) and the review-removal feature in Section 11 also cut against the \"no control\" characterisation.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.55,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Section 13 — Publication and Distribution of Content"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The repeated \"which includes, but is not limited to, health care and wellness providers\" parenthetical is a catch-all attached to an enumeration, and \"available or unavailable from, or through\" is loose; the waiver's reach over claims against Angie's List itself is arguable. The provision is also markedly one-sided, inviting construction against the drafter if genuine ambiguity exists.",
+      "reasoning_cat2": "It must be read with Section 11's Complaint Resolution Process, which has Angie's List intervene in member–Service Provider disputes while Section 14 says such dealings \"do not involve Angie's List,\" and with Section 1's representation about review provenance. That creates a concrete point of friction across provisions.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.48,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Section 14 — Service Providers"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The text contains a mechanical error (\"vouchers, ordeals\" for \"or deals\") and an open-ended definition of \"Service\" sweeping in \"any other products and services offered by Angie's List at any time\" after a specific list, which is a general-vs-specific scope issue. It also repeats the contestable \"experiences other users have had\" description.",
+      "reasoning_cat2": "Its statement that \"You will receive notice if modifications to the Agreement are made\" sits awkwardly with Section 19, under which modifications are \"effective immediately upon being posted\" and the member bears the review burden. That is a mild but real inconsistency in notice mechanics.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble and Acceptance"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"Good standing\" is undefined and the garbled \"within cone-year period\" is a mechanical defect affecting the redemption window; the interaction of cancel-then-renew with the annual redemption limit is not clearly expressed. These are nameable textual soft spots.",
+      "reasoning_cat2": "The reservation of a right to \"modify the Plans at any time and in its sole discretion\" against the enumerated Plan benefits in Section 1 and the pro-rata refund in Section 18 raises some tension, but nothing squarely contradictory. Overall it fits the fee and renewal machinery of Section 6.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Membership Benefits"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The obligation to provide \"true, accurate, current and complete\" registration information is a standard, definite undertaking with no catch-all or ambiguous operative term. Nothing here requires construction.",
+      "reasoning_cat2": "It is consistent with Section 16(F) and (T) on impersonation and with Section 26's indemnity for inaccurate information. No conflict located.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Registration Information"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A single age threshold, expressed numerically, with no ambiguous term. Definite.",
+      "reasoning_cat2": "It matches Section 16(A)'s representation of being above eighteen, so the instrument is internally consistent on age. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Minimum Age"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "\"Void where prohibited\" is a compressed boilerplate phrase that does not say by what law or in what circumstances membership is void, so its boundary is vague. That vagueness is nameable, though it is rarely operative.",
+      "reasoning_cat2": "It coexists without friction with Section 30's Indiana governing law and the severability language in Section 32. Nothing contradicts it.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Use Void Where Prohibited"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "A purely informational pointer to a URL; there is no operative promise or ambiguous term to construe. Definite.",
+      "reasoning_cat2": "Consistent with the consent to information transfer in Section 17 and Account Updater consents in Section 6. No conflict found.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Privacy Policy"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The definition of \"Membership Fee\" as the amount charged \"not including any promotions or discounts\" is capable of two readings (the discounted amount actually paid versus the undiscounted list price) and drives renewal pricing. The reserved right to modify fees \"at any time\" compounds that uncertainty.",
+      "reasoning_cat2": "The clause promises an opt-out from automatic renewal \"AS PROVIDED BELOW,\" but no opt-out mechanism appears below — only the cancellation procedure — which is a specific unfulfilled cross-reference. It also states no pre-renewal notice will be given, while the Membership Renewals subsection does promise email notice for free-offer Additional Lists.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Service Fees and Billing Methods; Automatic Renewal"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The renewal mechanics are stated with definite timing (\"on or about Your expiration date\") and a 180-day retry window; \"standard renewal practices then in effect\" is somewhat open but subordinate. Little to construe.",
+      "reasoning_cat2": "The no-notice statement is qualified by \"except as otherwise required by applicable law\" and is consistent with Section 6's opening automatic-renewal paragraph, aside from the missing opt-out mechanism flagged there. No direct contradiction.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Monthly Payment Subscriptions"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "Parallel to the monthly provision and equally definite as to amount, timing and retry period. No ambiguous operative term.",
+      "reasoning_cat2": "It fits the cancellation deadline in the Canceling subsection and the Plan structure in Section 1. No conflict identified.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Annual Payment Subscriptions"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"You formerly had to option to purchase access\" is a mechanical error, and the past-tense discontinuation of the feature leaves the present status of existing Additional Lists unclear. The defect is nameable though of limited operative bite.",
+      "reasoning_cat2": "The Membership Renewals subsection still provides for renewing \"the Additional List,\" which sits oddly with this statement that the feature was only formerly available. That is a modest internal inconsistency.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Additional List Subscription"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The sentence structure conflates free-offer recipients with all existing memberships, and \"the Membership Fee\" for someone who received a free offer is not obviously determinate. The reference to cancelling access \"in accordance with the provisions set forth below\" is loose.",
+      "reasoning_cat2": "It provides email notice before renewing a free-offer Additional List while Section 6's monthly/annual subsections say no pre-renewal notices will be given, a small but locatable tension. Otherwise it fits the renewal scheme.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Membership Renewals"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The upgrade mechanic (buying an \"additional annual subscription\" that starts at expiration of the first) is confusingly expressed, and the header is garbled; the refund measure on downgrade (\"difference between Your current Plan and the new Plan\") does not say whether it is prorated. Those are nameable soft spots.",
+      "reasoning_cat2": "It coexists with the Section 18 pro-rata refund on convenience termination and the Membership Benefits redemption limits, though the interaction of two overlapping annual subscriptions with the once-annual Redeemable Benefit is not spelled out. Mild rather than sharp friction.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Upgrading and Downgrading Plans"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The deadline is precise (5:00 p.m. Eastern on the business day prior to the scheduled renewal payment date) and the channels are enumerated. Definite wording.",
+      "reasoning_cat2": "It is the operative cancellation route referenced by Section 6's automatic renewal paragraphs and by Section 18; the only gap is that Section 6 promises an \"opt out\" feature not described here. That gap is attributed to Section 6 rather than this clause.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Canceling Your Subscription"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "\"Where applicable\" is a small qualifier, and the statement that the magazine fee \"is not deductible from Your Membership Fee\" after saying a portion of the Membership Fee is applied to it is slightly self-tangled. Otherwise the dollar figure is precise.",
+      "reasoning_cat2": "Section 1 makes the print magazine available only \"where available\" for particular Plans, which is compatible with \"where applicable\" here. No real conflict.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Angie's List Magazine Subscription Fee"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The authorisations are specific as to what may be updated and by whom, with \"solely in connection with Account Updater\" bounding third-party use. Nothing ambiguous is named.",
+      "reasoning_cat2": "It expressly ties back to the privacy policy in Section 5 and dovetails with the 180-day retry language. Consistent with the whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Authorization to Update Credit Card Account Information; Account Updater"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "\"Incorrect, unfit, or unusable in any way\" is a broad catch-all, and the absolute covenant not to bring \"any action\" relating to Incentives is one-sided enough that a genuine ambiguity would be read against the drafter. Still, the operative intent is plain.",
+      "reasoning_cat2": "It parallels Sections 24 and 25's disclaimers and does not contradict any benefit promised in Section 1. No specific conflict located.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Incentives"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"Members of Your household\" is expressly defined by shared registered address, which removes the usual vagueness. Wording is definite.",
+      "reasoning_cat2": "It aligns with the per-household redemption limit in Membership Benefits and with Section 16(T)'s one-account rule. Consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Account Security"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The prohibition on \"visit\" for any \"commercial, educational, or any other non-personal purpose\" is an odd and broad catch-all after specific verbs, leaving its reach uncertain. That is a nameable general-vs-specific tension.",
+      "reasoning_cat2": "It substantially duplicates Section 16(P) and (Q), and Section 16(Q) omits the words \"without\" before \"the express written consent,\" so the two overlapping statements are not perfectly parallel. Minor rather than material.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Limited License to Website and Magazine"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"Qualifying Plan,\" \"reasonable timeframe\" and a discretionary right to reject participation \"for any reason\" leave the member's entitlement indeterminate, and one sentence is truncated mid-clause (\"discuss the issue with\"). Both a vagueness and a mechanical defect can be named.",
+      "reasoning_cat2": "Section 1 lists \"Access to Angie's List's Complaint Resolution Process\" as a paid Premium benefit, which sits uneasily with participation being wholly at Angie's List's \"sole discretion\" here. The provision itself flags Sections 14, 24 and 25, acknowledging the disclaimer overlap.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Complaint Resolution Process"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "The licence grant is enumerated and unqualified, with the scope of rights spelled out; \"all rights necessary to prohibit\" is broad but its purpose is stated. Little to construe.",
+      "reasoning_cat2": "It matches the identical grant in Section 16(R) and the survival list in Section 31 (which includes Section 12). Consistent with the whole.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Content License"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"Website Content\" is defined as Angie's List's own site material but is then used to describe content the member posts about another individual, so the defined term is applied inconsistently within the same section. That is a nameable definitional slip.",
+      "reasoning_cat2": "The statement that posted health information \"will be placing it into the public domain\" and is unprotected sits against Section 5's privacy policy and the Section 12 licence framework, and the HIPAA waiver step in Section 11. The friction is noticeable but not squarely contradictory.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15. Health Related Providers"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Subsection (D)'s \"thorough and thoughtful\" standard is inherently vague despite the illustration, and (C)'s \"or otherwise objectionable\" plus (H)'s \"other such means\" are catch-alls after enumerated lists. Multiple named ambiguities are present.",
+      "reasoning_cat2": "It largely tracks Sections 9, 12 and 32 (assignment) without contradiction, though the discretionary judgment reserved to Angie's List overlaps Section 13's \"no obligation to screen.\" No sharp conflict located.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Your Conduct"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"Customer information generally is one of the transferred business assets\" is descriptive rather than operative, and the consent extends to use \"for any purpose allowed under this Agreement,\" which is broad but tethered. Modest vagueness.",
+      "reasoning_cat2": "It depends on the privacy policy referenced in Section 5, which is outside the four corners, but nothing in the Agreement contradicts it. Consistent enough.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. Disclosure of Information"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"For any reason in its sole discretion\" is plain, and the refund trigger turns on the distinguishable notion of terminating \"merely ... for its convenience,\" which is somewhat elastic. The initial term is defined only by reference to \"Your membership Plan.\"",
+      "reasoning_cat2": "Read with the Section 6 cancellation deadline and the Membership Benefits rule that unredeemed Redeemable Benefits expire on cancellation, the pro-rata refund on company-side termination is coherent. No direct contradiction identified.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18. Term and Termination"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Modifications effective \"immediately upon being posted\" combined with \"You will receive notice\" leaves the relationship between posting and notice unclear, and \"conclusive acceptance\" by continued use is a strong construction. The tension is nameable.",
+      "reasoning_cat2": "The preamble also says modifications may be made at sole discretion with notice, so the two are broadly aligned but differ on whether posting alone suffices. A modest inconsistency in the notice mechanism.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19. Modification of Terms and Conditions"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "The reservation is broad but expressed in definite terms, with an illustrative \"including without limitation\" list of practices; \"which may or may not be published\" is unusual but clear in effect. Limited construction risk.",
+      "reasoning_cat2": "A right to discontinue the Service without liability sits against the paid Plan benefits enumerated in Section 1 and the pro-rata refund in Section 18, but Section 25's cap harmonises the exposure. Tension is generic rather than specific.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20. Modification, Limitation and Discontinuance of Service"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "\"Problems inherent in the use of the Internet\" is a somewhat open category, but the sentence is short and its effect plain. Little to construe.",
+      "reasoning_cat2": "It reinforces Sections 20, 24 and 25 rather than conflicting with any of them. Consistent with the whole.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "21. Delays"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"Creative ideas, suggestions, or materials other than those which we have specifically requested\" is a fuzzy boundary, and the definition of \"Submissions\" sweeps in \"other information\" after a specific list. That catch-all is nameable.",
+      "reasoning_cat2": "The assignment of ownership in Submissions differs from the mere licence taken over \"Content\" in Section 12, and the line between comments on the Service and Content is not drawn. The overlap is a locatable but low-stakes tension.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "22. User Feedback"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The carve-out for user and Service Provider Content is explicit and the enumerated list is introduced by \"including, but not limited to,\" which is conventional here. Wording is workable.",
+      "reasoning_cat2": "It is consistent with Section 12's non-ownership of user Content and with the survival list in Section 31. No conflict found.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "23. Copyright Materials"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "A long, carefully enumerated disclaimer with an express jurisdictional savings clause; \"AS IS\" and \"AS AVAILABLE\" are settled formulations. Low intrinsic risk despite one OCR artefact.",
+      "reasoning_cat2": "It disclaims accuracy of results, which pulls against Section 1's description of reviews based on actual first-hand experiences, but Sections 13 and 14 carry that argument more directly. Moderate, derivative tension only.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "24. Warranty Disclaimer"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The categories of excluded damages and the causal list (A)–(H) are exhaustively drafted, and \"ANY OTHER MATTER RELATING TO THE SERVICE\" is a catch-all but conventional in this position. Modest general-vs-specific exposure.",
+      "reasoning_cat2": "It excludes \"DIRECT\" damages while the following paragraph caps liability at one month's fees, which presupposes some recoverable damages — an internal awkwardness. That is a specific, if familiar, drafting tension.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "25. Limitation of Liability"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "The cap is quantified precisely, including the proration rule for non-monthly payers, so its mechanics are definite. The recital-like premise about \"a substantial portion of the value\" is argumentative but not operative.",
+      "reasoning_cat2": "It presumes recoverable liability that the immediately preceding paragraph purports to exclude entirely for direct damages, so the two paragraphs of Section 25 must be reconciled. A named, if modest, incoherence.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "25. Cap on Damages"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "There is an unclosed parenthesis in \"(AS DEFINED HEREIN AND SUBJECT TO THE LIMITATIONS SET FORTH IN THIS SECTION SUFFERED BY YOU,\" which garbles the sentence, and \"any other party involved in the credit card processing process\" is an open-ended class after specific examples. Both defects can be named.",
+      "reasoning_cat2": "It is supported by Section 32's designation of the Released Parties as third-party beneficiaries, so it fits the instrument; the closing statement that Angie's List is \"SOLELY LIABLE\" coexists with the Section 25 cap. No sharp conflict.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "25. Released Parties / Credit Card Processor"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The triggers are enumerated in three lettered limbs with no residual catch-all, and \"intentional or willful\" is a familiar standard. Reasonably definite.",
+      "reasoning_cat2": "Sole control of the defence sits with Angie's List and nothing elsewhere in the Agreement grants the member competing rights. Consistent with the whole.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "26. Indemnification"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "It is an introductory stem whose only soft element is the recital that damages \"are often difficult to calculate\" supporting the liquidated-damages characterisation. Nothing operative is ambiguous on its own.",
+      "reasoning_cat2": "It introduces subsections lettered (A)–(C) but subsection (d) refers back to \"subsections (a) through (c),\" a lettering mismatch across the section. Minor internal inconsistency.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "27. Breach of Agreement and Liquidated Damages"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"Each item of Content\" is not defined for counting purposes (a review, a sentence, a photograph), which matters when the sum is $1,000 per item, and \"in violation of this Agreement\" imports the whole conduct code. The unit of account is a nameable vagueness.",
+      "reasoning_cat2": "It presupposes breaches defined in Section 16, which includes vague standards like \"thorough and thoughtful,\" but nothing contradicts the penalty. No specific conflict.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "27(A) Content Posted in Violation"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "It ends without a full stop and again turns on the undefined counting unit \"each item of Content\"; \"exploit for any purpose\" is a catch-all following specific verbs. Nameable defects.",
+      "reasoning_cat2": "It overlaps Section 9's licence restrictions and Section 16(P), which prohibit the same conduct, so the remedies stack without contradiction. Consistent.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "27(B) Copying or Exploiting Content"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "\"Or otherwise damage, interfere with, disrupt, impair, disable or otherwise overburden\" is a broad residual category, and \"each review or record ... otherwise affected\" leaves the multiplier indeterminate. The scope problem is specific.",
+      "reasoning_cat2": "It mirrors Section 16(G)–(I) and does not clash with any other remedy provision. Consistent with the whole.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "27(C) Computer Programming Routines"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"To the extent such actual damages can be reasonably calculated\" is an elastic qualifier, and the cross-reference to \"subsections (a) through (c)\" does not match the (A)–(C) lettering used above. Both are nameable.",
+      "reasoning_cat2": "The \"Notwithstanding any other provision\" reservation of specific performance and injunctions overlaps but does not contradict Section 16's remedies paragraph. Only the lettering mismatch links it to the rest.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "27(d) Actual Damages and Specific Performance"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Channels and a deemed-delivery rule (earlier of verification or two business days) are stated precisely. Definite.",
+      "reasoning_cat2": "It matches the cancellation contact details in Section 6 and the notice references in Section 19. No conflict located.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "28. Notice"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "The six-item notification list is drawn from the statute and \"substantially the following\" is a familiar qualifier; the extension to trademark claims under the DMCA is legally loose but plainly intended. Low intrinsic risk.",
+      "reasoning_cat2": "It coexists with Section 23's copyright claim and Section 13's no-monitoring stance without contradiction. Consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "28. DMCA Infringement Notification Procedure"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "A standard integration clause; the added member warranty that third-party agreements \"do not interfere with\" obligations is broad but comprehensible. Little to construe.",
+      "reasoning_cat2": "It says this Agreement is the entire agreement while the preamble incorporates \"terms and conditions in, and linked to\" it and contemplates separate terms for other Angie's List sites, plus the Section 5 privacy policy — a locatable tension about what is incorporated.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "29. Entire Agreement"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "\"Exclusive jurisdiction\" in Marion County is immediately qualified by Angie's List's unilateral election to sue elsewhere, so the exclusivity is not truly exclusive; that internal qualification, plus the one-year limitation \"regardless of any statute or law to the contrary,\" gives something to construe.",
+      "reasoning_cat2": "The one-year contractual limitation interacts with the survival list in Section 31 and with the modification right in Section 19, but no other provision fixes a different forum or period. No sharp conflict elsewhere.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "30. Governing Law"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "\"Including, but not limited to, Sections 12, 14, 15, 17 and 23 through 31\" is a textbook general catch-all against enumerated specifics, leaving unstated which other sections survive. That is precisely the ejusdem generis/expressio unius tension.",
+      "reasoning_cat2": "Because the list is open-ended, whether survival extends to Sections 13 and 27 (both remedial) is unresolved against those provisions' evident intended reach. That uncertainty ties directly to other clauses.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "31. Provisions Remaining in Effect"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "Standard boilerplate on assignment, waiver, severability, relationship of parties and third-party beneficiaries, each expressed definitely. The reformation instruction to a court is unusual in phrasing but clear in aim.",
+      "reasoning_cat2": "The third-party beneficiary designation is exactly what Section 25's Released Parties paragraph requires, and the assignment bar matches Section 16(O). Consistent with the whole.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "32. Miscellaneous"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "A short assent statement in capitals with no operative ambiguity or catch-all. Definite.",
+      "reasoning_cat2": "It repeats the preamble's acceptance language and matches Section 19's continued-use acceptance rule. Consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Acknowledgment"
+    }
+  ]
+}

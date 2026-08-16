@@ -1,0 +1,64 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The definition stacks vague terms — \"reasonable expenses,\" \"holding costs,\" \"expenses relating to transactions regarding the property\" — and then closes with the parenthetical \"(i.e. donations, etc)\", which misuses \"i.e.\" for \"e.g.\" and adds an open-ended \"etc.\" catch-all whose reach cannot be fixed. Whether a donation of land is an \"expense\" deductible from proceeds at all is a genuine two-reading question on these words.",
+      "reasoning_cat2": "Read against Section 2.b, which grants Consultants 20% of tax savings arising from the very donation that the Profit definition appears to treat as a deductible expense, the two provisions pull in different directions on how the donation is accounted for. That interaction gives a court something real to reconcile.",
+      "prob_cat1": 0.82,
+      "prob_cat2": 0.44,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 1 — Definition of \"Profit\""
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "The operative words \"Upon sale of a portion or all of Delta Bluffs\" and \"twenty-percent (20%) of the Profits\" are definite in themselves, though the singular \"Consultant\" against the defined plural \"Consultants\" leaves it unclear whether 20% is shared or payable to each. Its content otherwise depends wholly on the imported defined term \"Profits.\"",
+      "reasoning_cat2": "It incorporates the Section 1 definition, so any uncertainty about \"reasonable expenses\" and the donation parenthetical transmits directly into the payment obligation; it also does not address whether a partial sale's holding costs are allocated. No outright contradiction with another clause was found.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.31,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 2.a — Profits from Sale"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "\"Once the risk of a federal or state tax audit has expired, which is expected to occur in October 2016\" leaves the trigger uncertain — an expectation, not a fixed date — and \"Company or its principal may realize certain tax savings\" makes the very existence and measurement of \"such savings\" indefinite. The comma splice joining the two sentences compounds the looseness.",
+      "reasoning_cat2": "Its heading calls the payment \"Profits from Tax Savings\" while the text awards a share of \"such savings\" rather than of \"Profit\" as defined in Section 1, and the donation it rests on may simultaneously be a deduction under that definition. That is a real internal fit problem.",
+      "prob_cat1": 0.57,
+      "prob_cat2": 0.41,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 2.b — Profits from Tax Savings"
+    },
+    {
+      "clause_id": "pos4",
+      "reasoning_cat1": "The merger language is conventional and definite, although \"in connection with Delta Bluffs\" narrows the integration to a subject matter rather than to all dealings between the parties, and the clause ends in a comma. That limitation is a modest, nameable source of argument about what other understandings survive.",
+      "reasoning_cat2": "Checked against the recital promising \"future consulting services\" upon request, which the operative text nowhere specifies; the integration clause would bar resort to any separate services understanding. That is a mild tension rather than a contradiction.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.22,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 3 — Integration (merger clause)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The parties are named and the effective date rule — \"the date it is last signed\" — is a clear, mechanically applicable test. Nothing in the wording carries a second reasonable meaning.",
+      "reasoning_cat2": "The signature block shows differing dates, but that is a factual matter, not a conflict with any other provision; no clause elsewhere fixes a different effective date. Consistent with the instrument as a whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble - Parties and Effective Date"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The recitals are narrative and use soft terms like \"enhance the value for the sale of the property,\" but as background they impose no operative test to apply. The only notable phrase is the promise of \"future consulting services\" upon request, which is undefined.",
+      "reasoning_cat2": "That recited promise of future services has no counterpart anywhere in the operative Sections 1–3, which impose only payment obligations on the Company, so a court could be asked whether the recital creates a condition to the profit share. That is a specific recital-versus-operative tension worth some weight.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recitals"
+    }
+  ]
+}

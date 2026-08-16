@@ -1,0 +1,964 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The text is badly degraded (\"\\ill pey the proceeds cf this Folicy according to the ie sowing provisions\"), but the underlying promise — to pay proceeds according to the following provisions — is a standard insuring clause with no genuinely ambiguous term once the OCR noise is discounted. Its incorporation-by-reference of \"the following provisions\" is ordinary in a policy of this kind.",
+      "reasoning_cat2": "It simply points to Sections 4 and 10, which do specify proceeds and payment options, so it harmonises with the operative text. No conflicting provision was found.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Insuring Agreement"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A 20-day free-look with a stated address and refund of \"any premium you have peid\" is definite as to period, act (return) and consequence (void from the beginning, refund). The only uncertainty is whether the 20 days runs from receipt, which the garbled text obscures but which the standard wording resolves.",
+      "reasoning_cat2": "It sits beside 3.1 (no coverage until premium paid) and 7.2 (effective date) without contradiction, since a void-from-inception return simply undoes both. Consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20 Day Right to Examine Policy"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The clause is truncated after condition 1(a) — \"The Death Benefit will be level amount based on: a. The current Policy Account Value less any Policy Indebtedness\" — leaving the actual paid-up amount and remaining conditions unstated, and the trigger age is unreadable (\"SSth binhcay\"). A reader cannot determine either the triggering anniversary or the benefit amount from the words given.",
+      "reasoning_cat2": "It must be reconciled with Section 4.2, which fixes the death benefit by Specified Amount and the risk-percentage table, and with the Maturity Date shown in Section 1; a paid-up benefit keyed only to Account Value pulls against that scheme. That tension is real though not clearly a direct contradiction.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Paid-Up Life Insurance Benefit"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The introduction is descriptive and creates no obligation; its only substantive statement is that Sections 3 through 10 give a \"more complete description\" than the definitions. That is a hierarchy hint rather than a defined term.",
+      "reasoning_cat2": "It arguably subordinates Section 2 definitions to the operative sections, which could matter where a definition (e.g., 2.15's cross-reference) diverges from the operative text, but no concrete conflict is created by this sentence itself.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2 - Definitions of Terms Used (introduction)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Even garbled, the definition identifies the Insured as the person listed in Section 1 whose death causes proceeds to be paid — a single, determinate referent. Nothing in it admits of two readings.",
+      "reasoning_cat2": "Section 1 does name the Insured (Lori Antonio), and Section 4.1 keys payment to the Insured's death, so it fits the instrument. No conflict found.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1 - The Insured"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "\"You or your\" is tied to the Owner listed in Section 1 and expressly allows Owner and Insured to differ; that is definite. No term invites competing constructions.",
+      "reasoning_cat2": "It is consistent with Section 8.1–8.2 on ownership and with Section 1, where Owner and Insured are the same person. Nothing contradicts it.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2 - You or Your"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "A naming definition of the insurer; there is no operative content to construe. Wording is definite.",
+      "reasoning_cat2": "Consistent throughout, including the cover page and Section 6.4's reference to company officers. No conflict.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3 - We or Us"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The definition is cut off mid-sentence (\"as named in the onigine! ed\"), so the mechanism for later change is not visible in this text alone. The residual sense — beneficiary as named in the original application, subject to change — is nonetheless recoverable.",
+      "reasoning_cat2": "Section 8.4 supplies the full change mechanism and the default that the Owner is beneficiary if none is named, so the truncated definition is subsumed rather than contradicted; Section 1 also says \"AS SPECIFIED ON THE\" application. Low relational risk.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4 - Beneficiary"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The sentence lumps death proceeds and surrender proceeds together and the clause \"while this Policy is in force and the Insured is alive\" reads oddly against the death branch, creating a grammatical ambiguity about which condition attaches to which event. That is a genuine, nameable wording problem.",
+      "reasoning_cat2": "Section 4.1 separates the two cleanly (Surrender Value if the Insured is living; Death Proceeds if the Insured dies), which cures the definition rather than conflicting with it. Low relational risk.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.5 - Proceeds"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Policy Date is defined by reference to Section 1 and drives months, anniversaries and Monthly Due Dates — a single determinate date. No ambiguous term.",
+      "reasoning_cat2": "Section 1 shows a Policy Date and Section 2.17 keys the Monthly Due Date to it, consistently. No conflict found.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.6 - Policy Date"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The definition itself is a pure cross-reference; it names Section 7.2 for the initial policy and 6.2 for increases, both of which are the right targets. Little to construe on its own words.",
+      "reasoning_cat2": "It coexists with 2.6 (Policy Date) and 7.2, which makes the effective date the later of Policy Date or premium payment — a distinction that could be argued but is spelled out there rather than contradicted here.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.7 - Effective Date"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Only a fragment survives — \"upon the Insured's age on the birthday nearest the first\" — so the definition of Age is incomplete on its face and cannot be applied without supplying missing words. That is a nameable textual gap.",
+      "reasoning_cat2": "Age drives the Cost of Insurance table in 5.4 and the risk-percentage table in 4.2, so an incomplete age definition has downstream effect, but no operative provision contradicts it. Moderate-low relational risk.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.8 - Age (partial)"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The definition is internally layered — the amount \"you most recently elect\" but during the first two years the Section 1 figure is \"the minimum that must be paid\" — yet each layer is stated with reasonable precision. The narrative about larger payments increasing account values is descriptive, not operative.",
+      "reasoning_cat2": "It tracks Section 3.2(1)–(2) and the first-two-year no-lapse rule in 5.10, which use the same one-twelfth-times-elapsed-months test; the pieces fit. No conflict identified.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.9 - Planned Periodic Premium"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "A one-line definition tying the Minimum Initial Premium to Section 1 and requiring payment before delivery; the amount is specified in the schedule. Definite.",
+      "reasoning_cat2": "Consistent with 3.1 and 7.2, which repeat the pay-before-delivery requirement and make coverage depend on it. No conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.10 - Minimum Initial Premium"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Severely truncated — the sentence about specifying the amount in the original application and its use in determining death benefit is only half legible, and the increase/decrease sentence breaks off. The core concept remains recoverable.",
+      "reasoning_cat2": "Section 6.2 fully governs increases and decreases and Section 1 states the Specified Amount ($25,000), so the definition is completed elsewhere rather than contradicted. Low.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.12 - Specified Amount"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The definition defers entirely to Section 4.2 for computation and flags that adjustments may apply; that deferral is clear even through the OCR damage. Nothing here carries two meanings.",
+      "reasoning_cat2": "Section 4.2 does supply the two-limb greater-of formula for each Coverage Option, matching the definition. Consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.13 - Death Benefit"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The final sentence — an increased death benefit \"when the difference between the Policy Account Value and the death benefit reaches a minimum size\" — uses an undefined, vague standard (\"minimum size\") on its own terms. That phrase is the kind of term parties argue over.",
+      "reasoning_cat2": "Section 4.2 replaces the vague phrase with a concrete risk-percentage table by age, so the operative text cures it; the definition is a loose paraphrase rather than a conflicting rule. Some tension but not contradiction.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.14 - Coverage Options"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The substance — a monthly deduction covering Cost of Insurance plus rider costs for the month just ended — is definite. Only the closing cross-reference is suspect.",
+      "reasoning_cat2": "It directs the reader to \"Section 4.3,\" which is Interest on Death Proceeds; the Monthly Insurance Charge is actually in Section 5.3, a misdirected internal reference. That is a real, if minor, mismatch with the rest of the instrument.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.15 - Monthly Insurance Charge"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Defines the charge for \"pure insurance protection\" at current rates and excludes rider costs; the exclusion is stated expressly. No ambiguous operative term.",
+      "reasoning_cat2": "Cross-reference to Section 5.4 is correct and 5.5 handles rider costs separately, so the scheme coheres. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.16 - Cost of Insurance"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "The Monthly Due Date is fixed as the same day of each month as the Policy Date — a mechanical, determinate rule. Nothing vague.",
+      "reasoning_cat2": "Section 1 shows a Policy Date and 5.3/5.10 key deductions and lapse to Monthly Due Dates consistently. No conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.17 - Monthly Due Date"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"There is no insurance coverage in effect until the payment is made\" is a flat, definite condition, though the disjunctive \"Planned Periodic Premium or Minimum Initial Premium\" leaves which one governs slightly open. The disjunction is the only nameable softness.",
+      "reasoning_cat2": "Section 7.2 makes the effective date the later of Policy Date or premium payment and alludes to a Temporary Insurance Agreement taken with the application, which can be read as coverage before delivery payment — a modest tension with the flat \"no coverage\" rule here.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1 - Payment of Premiums"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "An introductory sentence granting flexibility \"subject to the following\"; the substance is in the enumerated items. Definite as far as it goes.",
+      "reasoning_cat2": "It correctly heads items 1–4 and matches 2.9's description of flexible premiums. Consistent with the whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2 - Planned Premium Payments"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "The item is mangled to the point that the operative requirement is missing (\"The tctal of your premium payments Curing in Premium shown in Section I\"), so the two-year minimum cannot be read off this text. That is a self-evident textual defect.",
+      "reasoning_cat2": "Item 2 immediately below and Section 2.9 restate the same first-two-year minimum in usable form, so the gap is filled elsewhere. Low relational risk.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(1) - Total of premium payments in first two policy years"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "The running test — cumulative premium by the end of each of the first twenty-four months at least one-twelfth of the annualised Planned Periodic Premium times elapsed months — is arithmetically precise. No vague term.",
+      "reasoning_cat2": "It mirrors the first-two-year no-lapse guarantee in 5.10 almost word for word, except 5.10 subtracts partial withdrawals and indebtedness while this clause does not; the two tests are close cousins but not identical.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(2) - Payment on or before delivery"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "A floor on remittances plus a unilateral right to change it \"at any time\" with notice; \"at any time\" is broad but the notice requirement bounds it. Little genuine ambiguity.",
+      "reasoning_cat2": "Section 2.9 repeats the same floor and Section 1 lists a Minimum Premium Remittance, so it fits. No conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(3) - Minimum Premium Remittance"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "The insurer may impose \"minimum and maximum limitations\" and limit the \"number\" of additional premiums, then says \"This will happen only if\" the payment would increase the gap between death benefit and Account Value — a limiting sentence whose antecedent (which of the preceding powers it qualifies) is genuinely uncertain. The evidence-of-insurability condition is also awkwardly attached.",
+      "reasoning_cat2": "It coexists with 3.3's tax-driven limit on total premiums and with 2.9's promise that you may pay excess premium at any time, and the latter promise is qualified rather than contradicted. Modest tension only.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2(4) - Limits on additional premiums"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The limit is tied to an external legal standard (TEFRA 1982 / IRC section, \"or any future applicable regulations\"), which imports whatever the tax law requires rather than stating a figure. The open reference to future regulations is broad but is a recognised drafting device.",
+      "reasoning_cat2": "It qualifies 2.9 and 3.2's freedom to pay premiums at any time, but expressly so, and 4.2 contains a parallel tax-compliance modification right. Consistent.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3 - Limitation on Total Premiums"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "The passage is scrambled and its two halves are transposed, but the operative content — reinstatement within five years after the Grace Period expires and before surrender, on written request — is discernible. The five-year window and the surrender bar are definite.",
+      "reasoning_cat2": "It dovetails with 5.10 (grace period and lapse) and with the later sentence barring reinstatement after surrender. No contradiction found.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4 - Reinstatement (introduction)"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The item is cut off — \"Receipt of evidence of insurebility of th\" — so whose insurability and to whose satisfaction is not stated in this text. The standard reading (the Insured, satisfactory to the insurer) is obvious but supplied from convention.",
+      "reasoning_cat2": "Section 6.2 uses \"evidence of insurability satisfactory to us\" for increases, supplying the parallel standard. Low relational risk.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4(1) - Evidence of insurability"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "A premium sufficient for at least the next two Monthly Insurance Charges is a precise, computable requirement. Nothing vague in the words.",
+      "reasoning_cat2": "It cites \"Section 5.2\" for Monthly Insurance Charges, but 5.2 is the Interest Rate provision and the charge is defined in 5.3 — a misdirected cross-reference within the instrument.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4(2) - Payment of premium"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Reinstated indebtedness \"if it is not paid\" is a plain conditional with no term of uncertain scope. Definite.",
+      "reasoning_cat2": "Consistent with Section 9.4's treatment of Policy Indebtedness and with item 4's use of pre-lapse values. No conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4(3) - Reinstatement of Policy Indebtedness"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Freezing Account Value, indebtedness and Surrender Charges at the values in effect when the Policy lapsed is a determinate rule. No ambiguous term.",
+      "reasoning_cat2": "It interacts with the Section 1 surrender-fee schedule, which steps down by coverage year, leaving open whether the fee schedule resumes at the lapse-year step — an implementation gap rather than a contradiction.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4(4) - Values used on reinstatement"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The sentence stops at \"will be the Monit\", so the reinstatement effective date is simply absent from the text. That is an outright gap in the provision.",
+      "reasoning_cat2": "Other provisions (6.2, 6.3) use \"the Monthly Due Date following\" approval, which strongly indicates the missing words, so the instrument as a whole is not incoherent. Low.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4(5) - Effective date of reinstatement"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Truncated at \"returned for its S\", but the bar on reinstatement after a surrender for Surrender Value is unmistakable. Little to construe.",
+      "reasoning_cat2": "Section 5.8 permits surrender at any time with termination of all insurance, which this complements. Consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4 - No reinstatement after surrender"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "The provision cleanly separates living-surrender and death scenarios and imposes a proof-of-death and policy-return condition. \"We must receive proof\" is standard and definite.",
+      "reasoning_cat2": "It matches 2.5, 4.2 and 8.4, and the return-of-policy condition is not contradicted anywhere. Consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.1 - Payment of Proceeds"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "A spendthrift statement expressly qualified by \"to the extent permitted by law\"; the qualifier removes most of the interpretive work to external law. Definite in form.",
+      "reasoning_cat2": "Nothing else in the policy addresses creditors, and Section 8.3's assignment right operates on the Owner's rights, not the beneficiary's creditors. No conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.1 - Proceeds exempt from Beneficiary's creditors"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Only the lead-in survives, stating that the amount depends on Specified Amount and Coverage Option in effect; the substance is in the two Option paragraphs. Nothing ambiguous in the fragment.",
+      "reasoning_cat2": "Section 1 does identify Option A as currently in effect, matching the reference. Consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 - Amount of Proceeds Payable at Death"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The greater-of formula is arithmetically specified, but limb 1 adds premiums received \"since the prior Monthly Due Date\" with interest, and the interaction of that with limb 2's Monthly-Due-Date-based valuation is not spelled out. That is a modest computational ambiguity rather than a lexical one.",
+      "reasoning_cat2": "It is reinforced by 2.14 and by the risk-percentage table immediately following, and the withdrawal rule in 5.9 (reducing Specified Amount under Option A) fits it. No contradiction found.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 - Coverage Option A"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "Parallel to Option A with a determinate greater-of test; the only oddity is the typo \"prior to our coinciding with\" in limb 2, which does not change meaning. Largely definite.",
+      "reasoning_cat2": "Consistent with 2.14 and with 5.9's statement that under Option B the Specified Amount is unchanged but the death benefit falls with the Account Value. No conflict.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 - Coverage Option B"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Increasing the death benefit \"by any premiums received after the date of death\" is a curious rule but stated plainly; the indebtedness deduction is equally plain. Little genuine ambiguity in the terms used.",
+      "reasoning_cat2": "It overlaps Option A limb 1, which already adds premiums received since the prior Monthly Due Date, raising a possible double-count; and it must be read with 5.10(3), which deducts unpaid grace-period premium from proceeds. Mild tension.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 - Increases and decreases to death benefits"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "A unilateral right to modify death benefits \"in order to comply with Federal tax laws or regulations,\" paired with the Owner's right to refuse — the interaction of a right to modify and a right to refuse leaves the outcome of a refusal undefined. That is a nameable gap.",
+      "reasoning_cat2": "Section 3.3 gives a parallel tax-driven right over premiums, and 6.4 requires officer signature for policy changes, which sits awkwardly with a unilateral modification right here. Modest relational tension.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 - Modification to comply with Federal tax laws"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Interest runs from death to settlement at a rate \"determined by us but never less than the rate required by the state in which the Insured resides\" — the discretionary element is floored by statute, so the term is workable though the insurer's discretion is unbounded upward. Low-moderate.",
+      "reasoning_cat2": "No other provision addresses post-death interest; 10.1's Option 1 single-sum payment at claim settlement is compatible. Consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3 - Interest on Death Proceeds"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "The formula \"A + B + C - D - E\" appears without legible definitions for A, B, C and D, and the surviving text labels the Monthly Insurance Charge as \"&\" while referring to \"Section 2\" — the core valuation mechanism cannot be applied from these words. That is a serious textual defect on its face.",
+      "reasoning_cat2": "The missing pieces are recoverable from 5.2 (interest), 5.3 (monthly charge) and 5.9 (withdrawals), so the instrument as a whole supplies most content; the stray reference to Section 2 rather than 5.3 is a minor mismatch.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.1 - Policy Account Value"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "\"At the rates declared by us\" is discretionary but expressly floored by the guaranteed rate in Section 1; the loan-offset rule is given with a worked example (though the example's arithmetic reads \"6% less 2 points equals 6%\"). That example error is a nameable mechanical defect.",
+      "reasoning_cat2": "It works with 9.3's loan interest rate and Section 1's stated Policy Loan Interest Rate, both of which are illegible in the schedule here; nothing contradicts it. Low.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.2 - Interest Rate"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "A one-sentence rule equating the monthly charge to Cost of Insurance plus rider costs, deducted on each Monthly Due Date. Definite.",
+      "reasoning_cat2": "Matches 2.15 and 5.4/5.5 exactly. Consistent with the whole.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.3 - Monthly Insurance Charge"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "The formula A x (B-C) is given but \"C\" is never legibly defined in the surviving text, and the rate table is headed \"per $1,050\" where $1,000 is plainly intended — both are nameable defects. The change-in-rates language (\"based on our expectation of future experience\") is also open-ended.",
+      "reasoning_cat2": "The clause says the Cost of Insurance is computed \"on any Premium Due Date,\" whereas 2.17, 5.3 and 5.10 all key deductions to the Monthly Due Date and the policy defines no \"Premium Due Date\" — a mismatch with the rest of the instrument.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.4 - Cost of Insurance"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "The adjustment rule survives only as fragments — \"(a) For a flat ... the rating percentage; or (b) For a flat extra rating\" — so neither limb states a usable operation. The two-limb structure cannot be applied as written.",
+      "reasoning_cat2": "Section 1 records a \"STANDARD\" risk class for this Insured, so the special-class rule has no application here and cannot conflict with anything operative. Low.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.4 - Adjustment of rates for special risk classes"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "A pure pointer to Section 1 for rider costs; no operative standard to construe. Definite.",
+      "reasoning_cat2": "Section 1 does list the Waiver of Deduction rider with a monthly cost, matching the pointer. Consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.5 - Cost of Additional Benefits"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "The formula's operators are lost, and component \"C\" — \"the difference in interest between the amount of interest actually credited and the guaranteed interest during the 12 month period preceeding the last Monthly Due Date\" — does not say whether it is added or subtracted or under what circumstances. That is a real ambiguity in a value-determining term.",
+      "reasoning_cat2": "5.7 (Surrender Value) and 5.9 (withdrawals) both build on Cash Value, and 5.11 imposes a statutory minimum, so the surrounding text constrains but does not resolve the missing operator. Modest relational risk.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.6 - Cash Value"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Two-line subtraction: Cash Value less any Policy Indebtedness. As definite as a provision can be.",
+      "reasoning_cat2": "Consistent with 5.6, 5.8, 5.9 and 9.4, which all use Surrender Value in the same sense. No conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.7 - Surrender Value"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "The right to surrender at any time and the termination of all insurance are stated plainly; the six-month postponement right and its exception are conventional. Only the OCR gap obscures \"six months\".",
+      "reasoning_cat2": "It coheres with 5.7, with 3.4's bar on reinstatement after surrender, and with 5.1's crediting of interest to date of payment. Consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.8 - Surrender"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "The Withdrawal Charge formula \"A + B + $25\" leaves B undefined in the legible text (\"ed rate multiplied by the Partial Withdrawal\"), and the recalculation sentence — first-year Surrender Fee \"decreased by A ... divided by the Percent of Surrender Fee\" — is opaque. Named components of a charge cannot be computed.",
+      "reasoning_cat2": "It interacts with Section 1's percent-of-surrender-fee schedule, with 5.6's Cash Value formula and with 4.2's Option A/B death benefits, and the Option A reduction of Specified Amount must be squared with the Minimum Specified Amount; those fit together but the withdrawal-charge feedback loop is awkward.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.9 - Partial Withdrawals"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "The lapse trigger — Surrender Value on a Monthly Due Date insufficient to pay the next Monthly Insurance Charges — is precise, but the sentence is broken and the length of the grace period reads \"60 cays\" while the enumerated notice item speaks of \"50 cays\", so the period itself is textually unstable. Lapse timing is exactly the sort of term parties litigate.",
+      "reasoning_cat2": "It must be read with 9.4, which states a lapse trigger in terms of the excess of Cash Value over indebtedness, and with the first-two-year no-lapse guarantee below and 3.2(2)'s parallel test; these are close but not identically worded triggers.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10 - Grace Period and Policy Lapse"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "As written the insurer must mail notice \"at least 50 days before the end of the Grace Period,\" which in a 60-day grace period would require notice within ten days of its start — an apparently mistranscribed figure (30) that changes the obligation. The number is the defect and it is nameable.",
+      "reasoning_cat2": "Set against the 60-day grace period stated in the opening sentence of 5.10, the 50-day figure produces a timetable that is difficult to reconcile with the purpose of a grace period and with 7.4(10)'s separate lapse warning. That is a genuine internal mismatch.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10(1) - Notice before end of Grace Period"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "\"Terminate without value\" is stark but definite as to consequence and trigger (adequate premium not paid by the end of the Grace Period). \"Adequate\" ties back to the notice amount in item 1.",
+      "reasoning_cat2": "It sits against 3.4's five-year reinstatement right, which presupposes a lapsed policy can be revived, and against the first-two-year no-lapse guarantee; those are exceptions rather than contradictions.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10(2) - Termination without value"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "Deduction of unpaid premium from proceeds on death during the grace period is a single, determinate rule. No vague term.",
+      "reasoning_cat2": "It overlaps with 4.2's rule that death benefits are increased by premiums received after the date of death and decreased by indebtedness, so the netting of unpaid grace-period premium requires harmonising. Mild tension only.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10(3) - Death during Grace Period"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The no-lapse test is arithmetic — premiums paid less withdrawals less indebtedness against one-twelfth of annualised Planned Periodic Premium times elapsed months — and is applied with precision, though the sentence is truncated at \"Policy Dalg\". The terms themselves are defined elsewhere.",
+      "reasoning_cat2": "It is a near-duplicate of the 3.2(2) test but adds subtraction of partial withdrawals and indebtedness, so the two premium-sufficiency tests are not identical; it also carves an exception out of the general lapse rule in the same section.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10 - No lapse during first 2 Policy years"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "Reserves and minimum values are tied to a named mortality table, a stated 4.5% rate and a named valuation method — highly determinate. Nothing to construe.",
+      "reasoning_cat2": "It backstops 5.6's floor on Cash Value by reference to the state of delivery, consistently. No conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.11 - Basis of Computation"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "A procedural right to request changes \"provided for in this section\" in writing; the scope is expressly limited to Section 6. Definite.",
+      "reasoning_cat2": "6.4 handles changes not provided for in the section, so the two together are complete. Consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.1 - Right to Change"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "A bare lead-in stating that the Specified Amount may be changed subject to the conditions below. No operative ambiguity.",
+      "reasoning_cat2": "The increase and decrease paragraphs that follow supply the conditions, and 2.12 anticipates change. Consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 - Changes in Specified Amount"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "Four enumerated conditions, two of which turn on the insurer's satisfaction (\"application satisfactory to us\", \"evidence of insurability satisfactory to us\"); such satisfaction standards are conventional but discretionary. The zero-Surrender-Value and minimum-increase conditions are objective.",
+      "reasoning_cat2": "Condition 4 points to a Minimum Increase in Specified Amount in Section 1, which the schedule lists, and 7.8 addresses contestability of increases. Consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 - Increases in the Specified Amount"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "The sentence is scrambled but conveys that the increase takes effect on the Monthly Due Date following approval, evidenced by an addition to Section 1. Recoverable meaning.",
+      "reasoning_cat2": "It matches 2.7's reference to Section 6.2 for increase effective dates. Consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 - Effective date of an increase"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "A permissive cap of one increase per twelve months, stated numerically. Definite.",
+      "reasoning_cat2": "Compatible with 6.2's increase conditions and 3.2(4)'s limits on Planned Periodic Premium increases. No conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 - Limit on number of increases"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "The last-in-first-out ordering rule for applying decreases is precise, though the closing sentence about the amount remaining in force is cut off. The ordering itself admits of one reading.",
+      "reasoning_cat2": "The truncated tail evidently imposes the Minimum Specified Amount floor also referenced in 5.9, so the scheme is coherent. Low.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 - Decreases in the Specified Amount"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "The text is heavily damaged: it permits a change from Option A to (presumably) Option B on evidence of insurability, and says the new Specified Amount will be \"the death benefit less the\" something as of the effective date — the subtrahend is missing. A change-of-option formula with a missing term is a real defect.",
+      "reasoning_cat2": "Given 2.14 and 4.2, the missing term is almost certainly the Policy Account Value, and the direction of change (A to B, or B to A) is also unclear against those provisions. Moderate relational uncertainty.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.3 - Change of Coverage Option"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "An officer-signature requirement plus a no-agent-authority clause; both are categorical and their scope (\"any change to your Policy not provided for in this section\") is stated. Little to construe.",
+      "reasoning_cat2": "It sits beside 7.1's entire-contract clause and 4.2's unilateral tax-driven modification right, the latter being an exception the officer-signature rule does not expressly acknowledge. Mild tension.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.4 - Changing Your Policy"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "The list — Policy, application, supplemental applications — is closed and the consideration recital is plain; the missing comma after \"This Policy\" is trivial. Standard integration language.",
+      "reasoning_cat2": "It coexists with 6.4's endorsement requirement and 7.8's incontestability limits, and with Section 1 riders that must be treated as attached; nothing contradicts it. Consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.1 - Entire Contract"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "The representations-not-warranties rule and the requirement that any statement relied on be in a written application are conventional and definite, subject to the \"absence of fraud\" carve-out. That carve-out is a familiar, workable standard.",
+      "reasoning_cat2": "It pairs with 7.8's incontestability clause and 7.1's entire-contract statement without inconsistency. No conflict found.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.1 - Statements deemed representations"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "The later-of test is clear, but the proviso — that on the later date the Insured is alive and \"health and all other conditions affecting the insurability of the Insured have remained as stated in the application\" — is a broad, open-ended condition of the kind that generates disputes. The reference to a Temporary Insurance Agreement is also half-lost.",
+      "reasoning_cat2": "The clause directs the reader to \"Section 7.7 - Incontestability,\" but 7.7 is Misstatement of Age and Sex and incontestability is 7.8; more substantively, an unlimited good-health condition sits uneasily with 7.8's two-year contest bar.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.2 - Effective Date"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "A ten-item enumerated disclosure list introduced by \"at least the following information\" — the \"at least\" opens the floor but nothing is left uncertain about what must be included. Definite.",
+      "reasoning_cat2": "Each item maps to a defined value elsewhere (5.1, 5.6, 5.7, 5.3, 5.9, 9.4, 4.2), and item 10's lapse warning complements 5.10(1). Consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.4 - Annual Report"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "The sentence is broken (\"we will send you 4 me during the year\") so what may be requested is not stated, and \"a reasonable charge as determined by us\" leaves the fee to one party's judgment. Both are nameable softnesses.",
+      "reasoning_cat2": "7.5 uses the same \"reasonable charge determined by us\" formula, so the instrument is internally consistent in this respect. Low.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.4 - Additional report upon written request"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "The report's contents are specified (projected Account Values, Surrender Values and Proceeds at Death) and the fee standard is the same reasonable-charge formula used in 7.4. The sentence is cut off at \"information supplied in\", a minor gap.",
+      "reasoning_cat2": "Consistent with 7.4's annual report obligations and with the value definitions in Section 5. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.5 - Illustrative Report"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "\"Within two years from the Issue Date\" is definite, and \"while sane or insane\" removes the usual argument; the refund measure (premium less indebtedness and partial withdrawals) is computable. The only softness is \"Issue Date\", a term the policy does not define.",
+      "reasoning_cat2": "Section 2.6 defines Policy Date and 2.7 Effective Date but no provision defines \"Issue Date\", which 7.8 also uses — a small definitional gap running across the instrument.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.6 - Suicide"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "Only fragments of the misstatement clause survive; the operative adjustment rule (benefit the premium would have purchased at the correct age and sex) is only half visible, so the provision cannot be applied from these words. The gap is plain on the face of the text.",
+      "reasoning_cat2": "7.2 cross-refers to \"Section 7.7 - Incontestability\" while 7.7 is in fact this misstatement clause, so the numbering itself is unsettled across the instrument. Modest relational risk.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.7 - Misstatement of Age and Sex (partial)"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "The clause contains an unusual carve-out — the two-year bar applies \"unless the Surrender Value is insufficient to cover the next Monthly Cost of Insurance\" — whose reach (does insufficiency at any moment reopen contestability forever?) is genuinely uncertain. It also runs from the undefined \"Issue Date\".",
+      "reasoning_cat2": "That carve-out interlocks with the lapse machinery in 5.10 and 9.4, so a lapse could be argued to revive the insurer's right to contest, which sits awkwardly with 3.4's reinstatement scheme and its own two-year reinstatement bar. A real point of friction.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.8 - Incontestability"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "A two-year bar measured from the effective date of each increase, stated simply. The only softness is the implicit reference to the increase's effective date under 6.2.",
+      "reasoning_cat2": "It complements the first paragraph of 7.8 and 6.2's increase mechanics without contradiction. Consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.8 - Contestability of increases"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "A flat statement of no participation in earnings and no dividends. As definite as possible.",
+      "reasoning_cat2": "Matches the cover page designation \"NONPARTICIPATING\". No conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.9 - Nonparticipating"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "The two conditions are stated categorically — no irrevocable beneficiary and no assignment — but taken literally they suspend \"every right\" of the Owner on any assignment, however limited. That absolute framing is the nameable issue.",
+      "reasoning_cat2": "8.3 says only that the Owner's rights \"are subject to any assignment\", which is narrower than the flat condition here; and 8.4 lets the Owner change a revocable beneficiary. Some tension between 8.1(2) and 8.3.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.1 - Ownership"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "The sentence is largely destroyed, but the recoverable rule — written notice to the insurer, effective on the date the request was signed, no effect on prior action, policy may be required for endorsement — is conventional. The retroactive-effectiveness feature is the one substantive point.",
+      "reasoning_cat2": "It mirrors 8.4's change-of-beneficiary mechanics word for word in effect, so the instrument is internally consistent. Low.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.2 - Change of Ownership"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "Notification, non-responsibility for validity, and subordination of the Owner's and revocable beneficiary's rights are each stated plainly. No ambiguous term.",
+      "reasoning_cat2": "It qualifies 8.1(2), which conditions the exercise of Owner rights on the policy not having been assigned at all; the two express the assignment consequence differently. Mild tension.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.3 - Assignment"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "Default rules are explicit: as shown on the application, else the Owner, and payment to the beneficiary \"except as provided in this section\". The exception is internal and identified.",
+      "reasoning_cat2": "Consistent with 2.4, with Section 1's \"AS SPECIFIED ON THE\" application, and with 4.1's direction to pay Death Proceeds to the Beneficiary. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.4 - Beneficiary"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "The survivorship cascade — beneficiary, then Owner, then Owner's executor or administrator — is complete and determinate. Nothing vague.",
+      "reasoning_cat2": "It fits 8.4's opening default and 4.1's payment rule. Consistent with the whole.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.4 - Death of beneficiary before the Insured"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "Effectiveness \"upon the date your request was signed\" combined with \"no effect on any payment made before we receive it\" creates a retroactive rule with a protective proviso; the interaction can be argued but is expressly addressed. Moderately low.",
+      "reasoning_cat2": "It parallels 8.2's change-of-ownership mechanics and is limited by 8.1's irrevocable-beneficiary condition. Consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.4 - Change of beneficiary"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "Only a fragment remains — a right to obtain a Policy loan with the Policy as the only security — so the amount, conditions and repayment terms are absent from this text. The residual rule is nonetheless clear as far as it goes.",
+      "reasoning_cat2": "9.2, 9.3 and 9.4 supply the amount, interest and indebtedness rules, completing the scheme. Low.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.1 - Policy Loans"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "The base figure from which the deductions are taken is missing from the legible text, so \"the amount [available] less: 1. loan interest to the next anniversary; and 2. Monthly Insurance Charges for the balance of the Policy year\" cannot be computed. The formula's starting point is the named gap.",
+      "reasoning_cat2": "The obvious base is the Surrender Value defined in 5.7, and 9.4 uses the same excess-over-indebtedness idea, so the surrounding text points to the answer. Low relational risk.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.2 - Amount of Loan Available"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "Interest from the date of the loan at \"the rate specified in Section\" (1), payable annually and on repayment, with capitalisation if unpaid — mechanically clear, though the trailing sentence is clipped. Little to construe.",
+      "reasoning_cat2": "It works with 5.2's rule crediting loaned Account Value at the loan rate less two points and with 9.4's definition of indebtedness. Consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.3 - Loan Interest"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "The definition of indebtedness and the deduction from proceeds are plain; the lapse sentence is a precise sufficiency test. No vague term.",
+      "reasoning_cat2": "Its lapse trigger is framed as the excess of Cash Value over indebtedness, while 5.10's trigger is Surrender Value on a Monthly Due Date; these should be arithmetically equal under 5.7 but are separately worded triggers, and 5.10 alone carries the 60-day grace period and notice.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.4 - Policy Indebtedness"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "The transposed text makes the identification of the payee hard to read, but the rule — beneficiary elects for Death Proceeds, Insured or Owner for other proceeds, subject to Section 8 — is recoverable. Moderate-low.",
+      "reasoning_cat2": "The reference to Section 8 correctly picks up ownership, assignment and beneficiary constraints; no operative conflict appears. Low.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10.1 - Elective Options"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "Single lump payment at claim settlement to the payee; nothing to interpret. Definite.",
+      "reasoning_cat2": "Consistent with 4.1 and 4.3's interest-to-settlement rule. No conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 1 - Single Sum"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "The sentence is garbled around \"the present value, which is equal to the Policy Proceeds using the rate then declared by us\" and it is unclear whether the 4% floor governs the crediting rate or the payment computation. That is a genuine wording knot in a payment formula.",
+      "reasoning_cat2": "The Fixed Period table that follows and 10.2's basis-of-options rule supply concrete guaranteed amounts, largely resolving it. Low relational risk.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 2 - Installment Payments"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "The illustrative figure \"$6,384\" is plainly a mistranscription of a per-$1,000 monthly amount (compare $6.77 and the table's $6.38), and the guarantee period is rendered \"0 year\"; the numbers as printed do not cohere. Those are nameable mechanical errors in a benefit illustration.",
+      "reasoning_cat2": "The Payments for Life table below gives male age 65 at 6.72/6.62/6.38/5.40/5.24, which does not exactly match the 6.77 quoted here — a small numerical divergence between text and table.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 3 - Life Income"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "The joint-life option survives only in fragments, with the opening words lost, but its structure (income during two lives, optional guaranteed period, rates furnished on request) is discernible. Rates left to be \"furnished upon request\" are less definite than the other options.",
+      "reasoning_cat2": "Unlike Options 2, 3 and 5, no guaranteed rate or table is provided for Option 4, but 10.2 supplies a general basis, so the omission is filled generally. Low.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 4 - Joint Life Income"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "The text is clipped so that the withdrawal-limitation proviso ends mid-word (\"unless the B B\"), leaving the restriction on withdrawals unstated. The 4% minimum interest and annual payment default are clear.",
+      "reasoning_cat2": "The missing proviso evidently refers to a beneficiary designation limiting withdrawals, a concept 8.4 supports; 10.2's basis-of-options rule also applies. Low.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 5 - Interest"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "Determining amounts using \"our rates in effect at the time of settlement\" is definite in mechanism, though it leaves the rate to the insurer subject to the guarantees in the individual options. The present-value equivalence sentence is clear.",
+      "reasoning_cat2": "It must be reconciled with Options 2, 3 and 5, each of which sets a guaranteed floor (4%, tabled amounts), so a settlement-time rate could be argued to override those floors — a point of tension the clause does not expressly resolve.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10.2 - Basis of Options"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "A single informational sentence with no obligation or standard. Nothing to construe.",
+      "reasoning_cat2": "It merely supplements the monthly table in Option 2. Consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Annual, semi-annual or quarterly payment amounts"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "The list of elective guarantee periods is corrupted (\"not less than % 10, Ss, -or 20 yegrs\"), so the available options are not fully legible, though the table headings (5, 10, 15, 20 years certain) supply them. Minor mechanical defect.",
+      "reasoning_cat2": "The accompanying table's column headings resolve the garbled list, and Option 3 describes the same choice. Consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments for Life Table basis"
+    }
+  ]
+}

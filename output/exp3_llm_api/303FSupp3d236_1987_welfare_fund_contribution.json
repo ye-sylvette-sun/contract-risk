@@ -1,0 +1,594 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The term dates are definite, but the second sentence — \"The Contract shall be the present contract with the changes made by this Memorandum\" — leaves the composite document to be assembled by inference rather than stating it.",
+      "reasoning_cat2": "It works with paragraph 14 (survival of prior agreements) and paragraph 15 (new contract document), so its meaning depends on those; no direct contradiction found.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. New Contract Term"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The $3.67 \"per shift from wages and after taxes (maximum of five (5) shifts)\" is genuinely ambiguous as to whether it is an employer contribution or an employee wage deduction, and \"Pension and welfare contributions shall be made on this amount\" leaves the contribution base uncertain.",
+      "reasoning_cat2": "It must be read against the Section 13-H.1 revisions (7.678% and the added \"after tax deduction from wages of $3.67\") and against Earnings Bonus paragraph 8, which excludes fund contributions on the $25.93 — a real risk of inconsistency in the contribution base.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(a). Wage Increases 1987-1988"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "Pure schedule of dated dollar increases with no evaluative term; only OCR artefacts (\"March 3], 1992\") mar it.",
+      "reasoning_cat2": "Consistent with 2(a) and with the Earnings Bonus letter's $25.93 wage-scale references; no conflict identified.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(b). Wage Increases 1989-1992"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"pursuant to the relevant provisions of the Contract\" imports unspecified terms, and the bracketed index sentence is grammatically broken, leaving the measurement mechanism only partly specified.",
+      "reasoning_cat2": "It depends on unquoted COLA provisions of the 1981-84 booklet preserved by paragraph 14, but nothing in this instrument contradicts it.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(c). Cost of Living Adjustments"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The first sentence is textually incomplete (\"full force and effect at the Edison, New Jersey by The Times within the Northeast Corridor\"), and phrases like \"every effort shall be made\" and \"to the extent practicable\" are open-textured; the layoff-protection carve-out (\"because of the introduction of automated processes\") is a further contested limit.",
+      "reasoning_cat2": "It reaffirms the grievance and arbitration route also invoked in paragraph 4, and its interim-ruling mechanism sits awkwardly beside the general arbitration procedure preserved by paragraph 14, though no flat contradiction appears.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Application of Contract at New or Rebuilt Facilities; Arbitration"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The enumerated list of nine unions against \"any labor organization\" raises an expressio unius question, and the proviso excluding benefits \"granted in exchange for productivity improvements or attrition, or ... diverted from an existing or subsequently negotiated wage and benefit package\" is highly indeterminate.",
+      "reasoning_cat2": "It interacts with the Earnings Bonus letter paragraph 7 (applying $25.93 to a benefit \"negotiated by any other union and the Times\"), which overlaps the same subject without clear coordination.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Most Favored Nation Wage and Benefit Package"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"such agreements and execute such documents ... as are necessary to administer\" is a general catch-all after specific examples (group contracts, trust agreements), leaving its reach open.",
+      "reasoning_cat2": "Paragraph 5(c) expressly caps the financial consequence of this duty, so the two read together coherently.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(a). Welfare Fund Agreements"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Same catch-all structure — \"including but not limited to\" the Pension Plan and trust agreement, followed by \"as are necessary to administer\" — with an uncertain outer boundary.",
+      "reasoning_cat2": "It is parallel to 5(a) and expressly limited by 5(c); no conflict found.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(b). Pension Fund Agreements"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"its obligation to make contributions required by the Contract for The Times deliverers\" is the operative limit and its scope (which contributions, for whom) is arguable in a fund-contribution dispute.",
+      "reasoning_cat2": "It cuts against the open-ended duties in 5(a) and 5(b) and against paragraph 2(a)'s contribution language, so a court could be asked to reconcile the cap with the contribution obligations.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(c). No Additional Expenditure"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A bare cross-reference to Appendix A with nothing evaluative to construe.",
+      "reasoning_cat2": "Appendix A exists and its items are self-contained; consistent with the whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Shop Disputes"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The quoted non-discrimination language is standard and closed-ended, though the enumerated grounds (color, race, sex, religion, national origin) exclude others by implication.",
+      "reasoning_cat2": "Nothing elsewhere in the memorandum addresses discrimination; no tension found.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Non-Discrimination Amendment to Section 4"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "A simple undertaking to furnish a letter attached as Appendix D; definite.",
+      "reasoning_cat2": "Appendix D is in fact attached and matches the description; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Accidental Death and Dismemberment Insurance Increase"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"Group I employees not so scheduled\" has no antecedent in this document, so what condition \"so scheduled\" refers to must be supplied from Section 13-J; the averaging formula itself is otherwise mechanical.",
+      "reasoning_cat2": "It amends Section 13-J of the preserved 1981-84 agreement under paragraph 14, and the incorporation route is coherent even if the underlying text is not reproduced.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Jury Service Pay"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "\"a foreman or assistant foreman in each plant\" is definite in obligation, with only mild uncertainty in the \"or\".",
+      "reasoning_cat2": "No other provision addresses supervision staffing; consistent with the whole.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Revision of Section 6-D (Foreman)"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "A short undertaking to provide a letter attached as an appendix; nothing to construe.",
+      "reasoning_cat2": "Appendix C is attached and consistent with paragraph 2(a)'s welfare contribution scheme.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Letter Regarding Weekly Welfare Fund Contributions"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Bare undertaking to provide the Section 3-P letter; definite.",
+      "reasoning_cat2": "Appendix D matches; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Letter Regarding Section 3-P Interpretation"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "Definite agreement to execute a letter, with \"Status Quo\" and \"Merits\" arbitrator labels left undefined here.",
+      "reasoning_cat2": "Appendix E is attached but only promises a further meeting, a mild gap rather than a conflict.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Letter of Understanding on Arbitrator Designations"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"All letter agreements, side agreements, supplementary agreements, memoranda of agreement and memoranda of understanding\" is a broad enumeration followed by an open priority rule, and \"unless modified by this Memorandum\" invites argument about implicit modification.",
+      "reasoning_cat2": "It governs the numerous appendices and side letters, including the West Side Direct abolition and the September 9 confirmation letter, and is the natural clause a court would use to resolve any conflict among them.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "14. Survival of Existing Agreements"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"Promptly\" is soft but the obligation to prepare a consolidated document is clear.",
+      "reasoning_cat2": "It sits with paragraph 1's definition of \"the Contract\" and paragraph 14's survival rule; if the new document was never executed, questions could arise, but nothing here contradicts.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15. Execution of New Contract Document"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "A single-sentence effective-date clause with no ambiguous term.",
+      "reasoning_cat2": "Consistent with the several provisions keyed to \"ratification\" in paragraphs 2, 8, 9 and Appendix C.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Effective Date"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The condition \"Subject to there being no increase in the number of floor hires as set forth in the Collective Bargaining Agreement\" makes the creation of the situations contingent on an externally defined figure.",
+      "reasoning_cat2": "The Four Man Board award fixing the Paragraph 3 number at eighty-eight bears on floor staffing counts, a possible but unspecified interaction.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, 1.A. Ten Additional Floor Regular Situations"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Counts and schedules are specific, though \"dayside (4 days and Monday night)\" is internally odd wording.",
+      "reasoning_cat2": "Subject to the same floor-hire cap in 1.A and the Four Man Board number; no direct conflict located.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, 1.B. Five Additional Floor Regular Situations and Chauffeurs"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"the third recovery car\" is an undefined operational referent, but the obligation to create one situation is plain.",
+      "reasoning_cat2": "Nothing else in the document mentions recovery cars; consistent.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, 2. Third Recovery Car Situation"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "A ministerial updating of names in a referenced page of the prior booklet; nothing evaluative.",
+      "reasoning_cat2": "Compatible with paragraph 14's preservation of the 1981-84 booklet terms.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, 3. Jitney (\"Blue Goose\") Work"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"delivery points designated by the Publisher\" confers undefined discretion, and \"dealers, agents, or T-Route contractors\" is a list whose outer edge (who counts as an agent) is arguable.",
+      "reasoning_cat2": "It coexists with the West Side Direct reorganization right and the honor box/vending machine practices letter, which address adjacent delivery arrangements without clearly ranking against it.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix B, Home Delivery Copies"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"the right to reorganize these routes\" against the proviso that \"the present number of routes ... shall not be reduced\" leaves the boundary of permitted reorganization genuinely contestable.",
+      "reasoning_cat2": "The September 9, 1988 letter says the \"abolition\" does not affect other agreements in the 1983 memorandum except the attrition portion, which pulls against the flat statement that the memorandum \"shall be abolished\".",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix B, West Side Direct Routes"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "A garbled cross-reference (\"se. Appendix B-1\") that says nothing substantive on its own.",
+      "reasoning_cat2": "It points to the B-1 side letter and, indirectly, to the Spinelli memo describing practices, so its content is entirely borrowed; some risk of mismatch among those documents.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix B, Honor Boxes and Vending Machines"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"the headsheet or other designated portion of each copy\" is an open catch-all, and \"Any existing physical pick-up ... shall continue\" depends on unrecorded existing practice.",
+      "reasoning_cat2": "It parallels the \"present practices\" approach in the honor box letter but nothing contradicts it.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix B, Returns Handling"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "\"maintain present practices\" is the classic vague standard — what the practices are, and at what level of detail they are frozen, cannot be read off the words.",
+      "reasoning_cat2": "The attached counsel letter and Spinelli memo purport to identify those practices only for the West Side Direct area, narrower than the letter's reference to \"The Times direct operation\".",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix B-1, Honor Boxes and Vending Machines Side Letter"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Weekly contributions and a ten-day availability deadline are stated with precision; \"made available\" is only mildly softer than \"paid\".",
+      "reasoning_cat2": "It supplements paragraph 2(a) and paragraph 11 on Welfare Fund contributions without contradicting either.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix C, Weekly Contributions to the Welfare Fund"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The letter exists precisely because \"Grandfather\" and \"Grandmother\" had been applied inconsistently, and the supplied definition (including a spouse's grandparent \"at the time the grandparent dies\") is itself capable of argument.",
+      "reasoning_cat2": "It construes Section 3-P of the preserved 1981-84 agreement and is expressly contemplated by paragraph 12, so it fits the instrument.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix D, Section 3-P Interpretation of Grandfather/Grandmother"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "A clear anti-retroactivity limit keyed to \"a death occurring prior to the date hereof\", though the letter is undated in the copy.",
+      "reasoning_cat2": "Consistent with paragraph 12; the missing date is a formal rather than substantive mismatch.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix D, No Retroactive Effect"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The text is mangled and incomplete — the replacement first sentence is unreadable and the deleted fifth sentence breaks off mid-clause — so what was actually amended cannot be determined from the words.",
+      "reasoning_cat2": "It operates on Section 13-K.2 preserved by paragraph 14, and deleting the liquidation-on-expiration sentence has consequences for the six-year term in paragraph 1 that are left unaddressed.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Revision of Section 13-K.2 (Accumulated Leave)"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "\"certain neutrals subject to their availability and willingness to serve\" identifies no one, and \"effectuate the designation process\" describes no mechanism.",
+      "reasoning_cat2": "Paragraph 13 promises a letter of understanding on \"Status Quo\" and Merits arbitrators, and this letter does not actually designate them — a gap between promise and delivery.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix E, Designation of Neutrals"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "An agreement to \"negotiate the conditions\" triggered when \"the normal daily order reaches 2500 copies\" leaves both the trigger measurement and the content of the duty open.",
+      "reasoning_cat2": "It matches the other negotiate-later commitments (Glen Burnie/Lancaster) in style and does not conflict with them.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Atlantic City Run"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"satisfactory arrangements\", \"the revised Glen Burnie agreement\" and \"shall not involve The Times in increased costs\" are all undefined conditions on the assignment obligation.",
+      "reasoning_cat2": "It dovetails with the following Edison paragraph on the same magazine transport without contradicting it.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Glen Burnie/Lancaster Transport"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The obligation is only to \"negotiate ... arrangements\" after all grievances are \"resolved satisfactorily\", a doubly indefinite precondition, and \"increased costs\" is again unquantified.",
+      "reasoning_cat2": "It presupposes the Edison operation addressed in paragraph 3, whose text on Edison coverage is itself incomplete, so the two must be read together.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Edison Plant Additional Magazine Transport"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "A precise numerical substitution, but the parenthetical rationale (\"to reflect the present welfare contribution percentage\") could be read as descriptive of a figure that may not match actual practice.",
+      "reasoning_cat2": "It is the operative amendment behind paragraph 2(a)'s contribution language and 13-H.1(b)'s wage deduction, so the base to which 7.678% applies must be harmonised with those.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Revision of Section 13-H.1(a) Welfare Contribution Percentage"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The insertion is written with an unclosed quotation and no clear placement (\"after the words 'per shift' in the first sentence\"), so whether the $3.67 is a deduction from wages or a contribution, and on how many shifts, is left uncertain.",
+      "reasoning_cat2": "It duplicates and may not exactly track paragraph 2(a)'s \"$3.67 per shift from wages and after taxes (maximum of five (5) shifts) shall be contributed to the Welfare Fund\" — the same money described in two different ways.",
+      "prob_cat1": 0.5,
+      "prob_cat2": 0.45,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Revision of Section 13-H.1(b) After Tax Deduction"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "The schedule is otherwise mechanical but the 3/31/87 figure appears as \"$.00 per shift\", a defect that leaves the first year's casual contribution unstated.",
+      "reasoning_cat2": "It fits the contribution scheme in paragraph 2(a) and 13-H.1(a)–(b); the only issue is the missing figure, not a clash.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Revision of Section 13-H.1(c) Casual Welfare Contributions"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "A short, precise insertion of a written sixty-day notice requirement, marked \"[balance as in original]\".",
+      "reasoning_cat2": "It is immediately qualified by the added paragraph excusing notice in some circumstances, which is presented as a companion rather than a contradiction.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amend Section 9B - Sixty Day Notice Insertion"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "\"a New York Times part or section regularly inserted\" and \"the promptest practicable notice\" are both vague, and the excuse turns on The Times demonstrating it \"did not have sixty (60) days' notice itself\".",
+      "reasoning_cat2": "It cuts back the sixty-day rule just inserted by the preceding amendment while disclaiming any modification of \"other notice requirements pursuant to the Contract\", leaving the interaction to be worked out.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amend Section 9B - Added Paragraph"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "\"a uniform portion of each employee's wage increase\" is indefinite as to amount and as to which increases (\"to become effective then or thereafter\") may be diverted.",
+      "reasoning_cat2": "It sits against paragraph 2(a)'s statement that pension and welfare contributions are made on the wage increase, and against Earnings Bonus paragraph 7's competing diversion rights, without ranking them.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Diversion of Wages to Vacation Pay Benefit"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "\"no increase in cost to The Times other than nominal administrative costs\" and \"fully cooperate\" are both standards without measurable boundaries.",
+      "reasoning_cat2": "It is the qualifier on the diversion right in the preceding sentence and is consistent with the cost-neutrality language used in the Glen Burnie/Lancaster letters.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "No Increased Cost from Diversion; Cooperation"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "An agreement only to establish a committee \"to study possible methods\", which is definite as to composition and imposes no substantive duty.",
+      "reasoning_cat2": "Nothing elsewhere addresses terminally ill employees; consistent with the whole.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Terminally Ill Employees Committee"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "The text is materially incomplete — \"it will guarantee all Saturday night Bulldog uding routes and relays)\" omits the object of the guarantee, so the promise cannot be read from the words.",
+      "reasoning_cat2": "It touches the bulldog-route carve-out in the Appendix B returns provision, but the incoherence is internal to this sentence rather than relational.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Saturday Night Bulldog Guarantee"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "\"notwithstanding any provision to the contrary\" is an unanchored override, and the carve-out excluding retroactive 1987 wages from the bonus base is otherwise specific.",
+      "reasoning_cat2": "It coordinates with paragraph 4(a)'s gross wages definition, which repeats the same 1987 retroactive exclusion, so the two agree.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 1. 1987 Bonus Already Paid"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "A flat percentage of gross wages for named years, with \"gross wages\" defined in paragraph 4(a).",
+      "reasoning_cat2": "Consistent with paragraphs 3, 5 and 6 of the same letter; no conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 2. Bonus for 1988-1992"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "A stub-period bonus at the same rate, with a fixed start and end date; definite.",
+      "reasoning_cat2": "Aligned with paragraph 6's payment rule for that same stub period and with the March 30, 1993 contract expiry in paragraph 1.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 3. Bonus for January 1 - March 30, 1993"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "The definition is anchored to a W-2 line item with express exclusions, which is about as determinate as such a definition gets.",
+      "reasoning_cat2": "Paragraph 4(b) supplements it for disability shifts and paragraph 8 excludes the bonus from fund contributions; the set reads coherently.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 4(a). Definition of Gross Wages"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "A narrow, mechanical add-back keyed to whether the benefits appear on the W-2; no ambiguous term.",
+      "reasoning_cat2": "It expressly qualifies paragraph 4(a) and does not disturb any other provision.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 4(b). Disability and Workers' Compensation Benefits"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "A single deadline of sixty days after the bonus period; unambiguous.",
+      "reasoning_cat2": "Paragraph 6 sets a thirty-day rule for the final stub period, an express and reconcilable variation.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 5. Payment Deadline"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "The default on non-agreement gives the Union an option to add $25.93 \"to the weekly wage scales or allocated in the manner set forth in Paragraph 7\", a compound mechanism with a garbled phrase (\"in accordg with the Contract\").",
+      "reasoning_cat2": "It overlaps paragraph 7's separate termination-and-allocation right and paragraph 8's wage-rate imputation, so the three must be harmonised on the same $25.93.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 6. Continuation After March 30, 1993"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "\"any fringe benefit provided under the contract or negotiated by any other union and the Times in connection with the current extension negotiations or at any time through March 30, 1993\" is a sprawling catch-all whose scope is genuinely uncertain.",
+      "reasoning_cat2": "It overlaps both paragraph 6's default allocation and the most-favoured-nation right in paragraph 4, raising a real question whether the Union could claim the same money twice.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.35,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 7. Union's Right to Terminate"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "\"any benefit ... calculated on or determined by the employee's wage rate\" with an illustrative and non-exhaustive list, coupled with the anti-duplication sentence, leaves the reach of the $25.93 imputation arguable.",
+      "reasoning_cat2": "Its closing carve-out — no Welfare or Pension Fund contributions on Earnings Bonus payments or on the imputed $25.93 — stands directly against paragraph 2(a)'s \"Pension and welfare contributions shall be made on this amount\" and the 13-H.1 percentage amendment.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Earnings Bonus 8. Benefit Calculation as if Wages Increased"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "The statement is numerically definite but wholly dependent on an unquoted \"first sentence of Paragraph 3\" of a prior memorandum, so what eighty-eight counts cannot be read here.",
+      "reasoning_cat2": "It bears on the floor-hire cap referenced in Appendix A item 1.A, but no inconsistency is visible on these texts.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Four Man Board Award 1. Number in First Sentence of Paragraph 3"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The deleted sentence is identified only by description (\"the sentence providing for certain floormen being available for driving assignments\"), which invites argument if more than one sentence fits.",
+      "reasoning_cat2": "It interacts with the additional chauffeur situations in Appendix A item 1.B, but no conflict is apparent.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Four Man Board Award 2. Deletion of Floormen Driving Sentence"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "It is a descriptive memorandum, garbled in transcription (the three locations run together), and its statement that deliveries have been \"incorporated into one of the three locations\" as machine numbers grew is itself imprecise.",
+      "reasoning_cat2": "It is offered as the content of the \"present practices\" frozen by the Appendix B-1 side letter, yet covers only the West Side Direct area while B-1 speaks of \"The Times direct operation\".",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Vending Machine Present Practice Memorandum"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "The scare-quoted \"abolition\" and the exception for \"that portion providing for attrition of those routes\" leave which parts of the 1983 memorandum survive genuinely open.",
+      "reasoning_cat2": "It directly qualifies Appendix B's statement that the November 22, 1983 memorandum \"shall be abolished\", and paragraph 14 makes the Memorandum prevail over other agreements — a pointed relational tension.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "West Side Directs Confirmation Letter"
+    }
+  ]
+}

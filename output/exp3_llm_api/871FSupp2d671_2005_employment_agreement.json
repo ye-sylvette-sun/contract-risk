@@ -1,0 +1,854 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble is a standard identification of parties, though the Effective Date is left as \"July ¥, 2005\" — an OCR/typographic gap that leaves the actual date unstated in the text. Since so much in the agreement runs from the \"Effective Date\" (third anniversary, twelve-month commission window), an illegible date is a mechanical defect that could matter.",
+      "reasoning_cat2": "The defined \"Company\" here is both Ajuba and Ajuba India jointly, yet operative sections consistently assign payment obligations to \"Ajuba India\" alone (2.2(a), 8.4), creating some tension over which entity employs and owes. That tension is real but modest since 2.1 expressly says Ajuba India employs the Employee.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A one-line definition tying \"Board\" to the Board of Directors of Ajuba; no ambiguous term.",
+      "reasoning_cat2": "Section 2.1 says Employee reports to the Board \"or selected designee of the Board of Directors of the Parent,\" and Schedule 2.1 says he reports to the Chairman of Ajuba International — a slight strain but the definition itself is coherent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.1 Board"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The definition uses an open-ended catch-all — \"such other entities serviced by the Company\" and \"including but not limited to ... and other related services\" — whose reach against a long enumerated list is precisely the ejusdem generis problem, and \"Business\" drives the noncompete's scope.",
+      "reasoning_cat2": "It interacts with Section V(a)'s Restricted-Period ban on any activity \"in competition with the Business\" and with 1.6's narrower \"Core Business\" substitution under V(d); the breadth is intended but its scope is contestable rather than internally contradictory.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.2 Business"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A standard statutory reference definition with no ambiguity.",
+      "reasoning_cat2": "\"Code\" is defined but never used in the operative text, which is surplusage rather than incoherence.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.3 Code"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "\"Known to the Employee as a consequence of or through the Employee's employment\" is broad and the list of item types is open, but the qualifier \"which relate to the Business\" bounds it; missing punctuation makes the modifier's reach slightly uncertain.",
+      "reasoning_cat2": "It fits Article IV's assignment obligation and 4.2's return duty; no conflicting provision identified.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.4 Company Technology"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "\"All information, in whatever form, regarding Parent, the Company their Business and their clients\" is extremely broad with a non-exhaustive \"including, without limitation\" list, and the missing comma after \"Company\" is a minor mechanical slip.",
+      "reasoning_cat2": "Section 3.1's carve-outs (public domain, rightfully received, required by law) cabin the definition sensibly; no direct conflict elsewhere.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.5 Confidential Information"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The (a)/(b) structure with \"or\" makes the definition arguably self-swallowing: limb (a) covers anything provided to healthcare-related entities, which is most of the Business, so the 1% revenue threshold in (b) may add nothing; the (b)(ii) formula is also garbled and hard to apply.",
+      "reasoning_cat2": "Under V(d) the substitution of \"Core Business\" for \"Business\" is meant to narrow the noncompete after a Section 8.4 termination, yet limb (a) makes Core Business nearly coextensive with Business, undercutting the intended relief.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.6 Core Business"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"Actively sought\" and \"material contact\" are vague boundary terms, and limb (a) has no time limit at all, making \"a client of the Parent\" potentially perpetual.",
+      "reasoning_cat2": "It keys to \"date of termination of this Agreement\" while the Restricted Period in 1.14 runs from the end of the Employment Term, a slight mismatch of reference dates.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.7 Customer"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The formula is standard and includes a dispute-resolution mechanism naming Ajuba's accountants; the term is definite.",
+      "reasoning_cat2": "It supports the bonus tables in 2.2(b) and the salary escalator in 2.2(a) without conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.8 EBITDA"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"Third anniversary of this Agreement\" versus the Effective Date is a small slip since the Agreement is dated as of the Effective Date, so no real ambiguity.",
+      "reasoning_cat2": "Section 8.1 measures termination from the third anniversary of the Effective Date, which matches only if the Agreement date and Effective Date coincide; the preamble's illegible date makes this marginally uncertain.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.9 Employment Term"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Definite calendar definition with an alternative if Ajuba changes its fiscal year.",
+      "reasoning_cat2": "Consistent with the bonus tables and EBITDA definition; no conflict found.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.10 Fiscal Year"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "A named-entity definition with no interpretive room.",
+      "reasoning_cat2": "Parent is used consistently in 1.5, 1.7 and 9.9; coherent.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.11 Parent"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A conventional catch-all definition; \"other entity\" is broad but that is its purpose.",
+      "reasoning_cat2": "Used only in 2.1(b); no tension with other provisions.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.12 Person"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Geographically definite, listing the US, territories and protectorates and India.",
+      "reasoning_cat2": "Matches the Business definition's US-and-India scope in 1.2; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.13 Restricted Area"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The wording is arithmetically clear but produces a strikingly long restraint (three years past a three-year term), which invites reasonableness challenge rather than construction.",
+      "reasoning_cat2": "Article VII's blue-pencil clause anticipates that a court may find the restriction overbroad, so the contract itself contemplates modification rather than contradiction.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.14 Restricted Period"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "\"Duties as are customarily performed by a President,\" \"such other legally permissible and proper duties,\" and \"full professional and business-related time\" are open-textured, and the deemed-amendment sentence tied to Section 8.4(a) functions creates uncertainty about what the job actually is.",
+      "reasoning_cat2": "It sits against 8.4(a)'s Good Reason for \"material diminution ... as outlined in Section 2.1\" while simultaneously deeming Schedule 2.1 amended when those very functions are consolidated or outsourced, and against 8.4's last sentence allowing a title change to Senior Vice President — a live tension over what diminution remains actionable.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1 Employment of the Employee"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The escalator says the increase is \"retroactive to the first business day of the year following the Fiscal Year in which such EBITDA was achieved,\" which is confusingly worded — retroactivity to a future-year date — and it does not state which fiscal years' EBITDA counts.",
+      "reasoning_cat2": "It works with the EBITDA definition in 1.8 and the bonus thresholds in 2.2(b) but assigns payment to Ajuba India while \"Company\" elsewhere means both entities; no square conflict.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(a) Salary"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The tables set precise thresholds, but the final sentence's condition — Bonus payable if employed \"through the entire Employment Term, unless such employee is terminated pursuant to Sections 8.3 or 8.4\" — is awkward and the 2005 proration interacts oddly with a fixed EBITDA threshold.",
+      "reasoning_cat2": "Sections 8.2, 8.3, 8.4 and 8.5 each recite bonus consequences, and 8.3/8.4 preserve only a \"prior Fiscal Year\" bonus, which may not match this clause's separate FY2007 carve-out; the overlap is a plausible source of dispute.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(b) Annual Bonus"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"All employee benefit plans ... made available to the Company's Senior executives or to its Employees generally\" is standard, and the sole-discretion modification right is clear.",
+      "reasoning_cat2": "Section 2.2(a) gives an Allowance \"in lieu of receiving health, dental and other benefits afforded to Ajuba US employees,\" which sits uneasily with this general entitlement to participate in all plans.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(c) Benefits"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"Substantially similar to the D&O Policy maintained by the Company immediately prior to the date hereof\" imports a comparative standard, but that phrasing is conventional and reasonably ascertainable.",
+      "reasoning_cat2": "No other provision addresses insurance or indemnity; consistent with the whole.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(d) Director and Officer Liability Coverage"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"Generated by the Company, by the Employee or by Samii\" is undefined as to what generating means, \"Samii\" is never identified anywhere in the agreement, and \"net sales\" is undefined; the twelve-month \"goes live\" cutoff adds a further undefined trigger.",
+      "reasoning_cat2": "It requires employment as of the Payment Date whereas 2.2(f) and Sections 8.3/8.4 preserve other post-termination payments, and 8.3/8.4's cross-references to \"Section 2.2(e)\" for the Reorganization Bonus actually point at this Commissions subsection rather than 2.2(f).",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(e) Commissions"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "\"When and if the Company's UK office is shut down and the Company's Novi office is restructured\" is anchored to Schedule I's completion definitions, but the timing sentence (\"If the foregoing actions have been completed, ... paid on the twelve month anniversary\") leaves unclear what happens if they complete later.",
+      "reasoning_cat2": "Sections 8.3 and 8.4 promise the Reorganization Bonus \"in accordance with Section 2.2(e),\" but the Reorganization Bonus is in 2.2(f) — a cross-reference error creating a genuine mismatch across provisions.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(f) Reorganization Bonus"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"Reasonable out-of-pocket expenses\" and \"in accordance with Company policies\" are standard, mildly elastic terms.",
+      "reasoning_cat2": "Breach of 2.3 is a Good Reason trigger under 8.4(c), which is consistent rather than contradictory.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3 Expense Reimbursement"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "The exceptions are enumerated and the obligation clear; \"provide ... to any entity\" arguably omits natural persons, a small drafting slip.",
+      "reasoning_cat2": "It coheres with 1.5 and 3.2 and with the Exhibit A continuing-obligations clause; no conflict located.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1 Confidentiality"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Definite return-and-delete obligation triggered on termination.",
+      "reasoning_cat2": "Exhibit A paragraph 2 imposes a broadly parallel return obligation with a different defined term (\"Company Information and Property\"), but they are cumulative rather than inconsistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2 Return of Confidential Information"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"Except for legitimate business purposes\" is a genuinely vague carve-out that could swallow the confidentiality promise, and the sentence is one-sided in its looseness.",
+      "reasoning_cat2": "Exhibit A paragraph 13 repeats the same \"legitimate business purposes\" formula, so the vagueness is consistent across the instrument rather than conflicting.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3 Company Obligation"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The assignment sweeps in inventions \"relating in any way to the Business\" and things \"acquired\" during the term, which is broad, but \"upon the Company's request and to the extent permitted by law\" is a clear qualifier.",
+      "reasoning_cat2": "It matches the Company Technology definition in 1.4 and the return duty in 4.2; consistent.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.1 Ownership and Assignment"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Clear obligation to return and not use Company Technology after termination.",
+      "reasoning_cat2": "Consistent with 1.4 and 4.1 and with Exhibit A paragraph 5's continuing obligations.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 Return of Company Technology"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "\"Any activity which is in competition with the Business\" plus the catch-all \"or otherwise\" after an enumerated list of capacities leaves the restraint's outer edge uncertain, and the breadth invites construction against the drafter.",
+      "reasoning_cat2": "V(d) substitutes \"Core Business\" only for this subsection after an 8.4 termination, and 9.8 preserves a separate Non-Competition Agreement of even date, raising a question of which restraint governs.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V(a) Noncompetition"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "\"Canvas, solicit or accept\" extends to passive acceptance and \"any Customer, or any of their affiliates\" is broad, but the prohibited acts are enumerated with reasonable precision.",
+      "reasoning_cat2": "It depends on the wide \"Customer\" definition in 1.7 and is not narrowed by V(d), which applies only to subsection (a) — intentional, not incoherent.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V(b) Non-solicitation of Customers"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The long single sentence mixes a no-solicit and a no-hire covenant with a Supervisor-and-above carve-out for India, and the advertising proviso is internally awkward, making the scope of the \"employ or seek to employ\" limb hard to pin down.",
+      "reasoning_cat2": "No other provision addresses employee solicitation; the blue-pencil sentence in Article VII anticipates judicial trimming.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V(c) Non-solicitation of Employees"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "The substitution rule is expressed precisely and limited expressly to subsection (a) only.",
+      "reasoning_cat2": "Its practical effect depends on 1.6, whose limb (a) makes Core Business nearly as broad as Business, so the intended narrowing may be illusory — a genuine whole-instrument tension.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V(d) Core Business substitution"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "A bare acknowledgment of reasonableness; conclusory but not ambiguous.",
+      "reasoning_cat2": "Article VII contemplates a court finding the same restrictions overbroad and reforming them, which sits somewhat awkwardly with this acknowledgment though such pairings are routine.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V(e) Acknowledgment of Reasonableness"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "An enumerated representation with a written-disclosure carve-out; the terms are definite.",
+      "reasoning_cat2": "Section 9.8 acknowledges a separate Non-Competition Agreement of even date to which Employee is subject, which the representation's \"except for this Agreement\" carve-out does not expressly cover — a small mismatch.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.1 Contracts"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A standard no-conflict warranty with clear scope.",
+      "reasoning_cat2": "Consistent with 6.1 and with Article VIII's inclusion of Article VI breaches as Cause.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 No Violation of Other Agreements"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The cross-references are garbled — it invokes \"Articles I, IV or V\" and then \"Articles IW, IV or V\" and refers to \"the Company's rights under Article VII hereof\" inside Article VII itself, which is a self-referential mechanical error over which articles are protected.",
+      "reasoning_cat2": "Article III (Confidentiality) is plainly the intended referent rather than Article I (Definitions), and Section 8.2(c) lists \"Articles I, IV, V or VI\" with the same apparent slip, so the error propagates across the instrument.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Remedies"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "\"The earliest of the third anniversary ... or the first to occur of the events set forth in Sections 8.2 through 8.5\" is clear in operation.",
+      "reasoning_cat2": "It matches the Employment Term definition in 1.9, subject only to the Agreement-date/Effective-Date wrinkle noted there.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.1 Termination"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "\"Conduct causing ... substantial public disgrace or disrepute\" and \"a violation of governmental laws\" are notably vague Cause triggers, and the stray \"or\" opening subsection (d) plus \"failure in any material respect\" add looseness; the cure right applies to \"such failure\" without saying which grounds are curable.",
+      "reasoning_cat2": "Its reference to breach of \"Articles I, IV, V or VI\" repeats the Article VII mis-citation (Article I is Definitions, not Confidentiality), and it denies bonuses for the prior year whereas 8.3/8.4 preserve them — intentional contrast, but the Cause definition's scope determines which regime applies.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.2 Cause"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"Substantially failed to perform his essential duties ... for one hundred twenty (120) days in any two hundred forty (240) day period\" is quantified, though \"substantially\" and the with-or-without-accommodation clause leave some edge.",
+      "reasoning_cat2": "It preserves the Reorganization Bonus \"in accordance with Section 2.2(e)\" when that bonus is actually in 2.2(f), an incorrect cross-reference to the Commissions clause.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.3 Death and Disability"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "\"Material diminution\" in position or duties, hedged by a long proviso excluding consolidation, elimination or outsourcing of named functions, is a classic contested phrase, and the severance measure — \"the compensation at the rate or level, as applicable, in effect on the date of such termination\" — does not say whether Bonus, Allowance or commissions are included.",
+      "reasoning_cat2": "It conflicts in tendency with 2.1's deemed amendment of Schedule 2.1 for the same 8.4(a) functions and with the closing sentence permitting demotion to Senior Vice President after year one, and it again cross-references \"Section 2.2(e)\" for the Reorganization Bonus that lives in 2.2(f).",
+      "prob_cat1": 0.54,
+      "prob_cat2": 0.51,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.4 Without Cause; Good Reason"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "The clause lets the Company choose the effective date of the Employee's own resignation notice \"no later than thirty (30) business days\" later, which is unusual but stated clearly; the benefit sentence says \"unless allowed by\" law where parallel sections say \"unless required,\" a wording slip.",
+      "reasoning_cat2": "Section 8.4 also permits Employee resignation \"for any other reason pursuant to this Section 8.4,\" overlapping this section and leaving unclear which governs a no-reason resignation and thus whether severance is owed.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.5 Termination By Employee"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "A conventional headings clause with definite effect.",
+      "reasoning_cat2": "Consistent with the whole instrument; no conflict.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.1 Section and Other Headings"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "Standard severability wording; nothing to construe.",
+      "reasoning_cat2": "Article VII's blue-pencil sentence adds reformation for restrictive covenants, which supplements rather than contradicts this clause.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.2 Severability"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "The first sentence speaks of any waiver while the second requires a \"written waiver\" without having said waivers must be written, a minor drafting gap; also it protects only the Company's delay.",
+      "reasoning_cat2": "No other provision addresses waiver; consistent with the instrument.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.3 Waiver"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "The permitted assignment events are enumerated and definite.",
+      "reasoning_cat2": "\"Company\" means both Ajuba and Ajuba India, so an assignment on merger of one entity is slightly imprecise, but nothing squarely conflicts.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.4 Assignment"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Standard notice mechanics with named addresses; no ambiguity beyond the omission of a deemed-receipt timing rule.",
+      "reasoning_cat2": "Section 8.2's notice-and-cure and 8.5's notice both rely on this clause without conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.5 Notices"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Clear withholding provision, though it references only federal, state and local taxes for an India-resident employee paid by an Indian entity.",
+      "reasoning_cat2": "Sections 2.2(a) and 8.4 direct payment by Ajuba India, so the US-centric withholding language sits a little oddly but does not contradict any term.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.6 Withholding Taxes"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "\"Ongoing provisions ... which shall survive such termination in accordance with their terms\" is circular: it does not identify which provisions are ongoing, leaving survival to be argued.",
+      "reasoning_cat2": "Articles III, IV and V plainly contemplate post-termination effect and 1.14 extends the Restricted Period past the term, so survival is inferable, but the clause supplies no list to resolve disputes.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.7 Survival"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "The integration clause carves out a Non-Competition Agreement of even date, which is a clear exception, though it leaves the relationship between the two restraint regimes unspecified.",
+      "reasoning_cat2": "Article V contains its own full covenants and 1.14's Restricted Period, so the coexisting separate Non-Competition Agreement raises a real question of which controls if their terms differ.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.8 Entire Agreement"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "The clause is definite: only Parent is a third-party beneficiary.",
+      "reasoning_cat2": "Parent's rights are referenced in V(b) (business with Parent) and elsewhere, consistent with beneficiary status.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.9 Third Party Beneficiary"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "A clean Michigan choice-of-law clause excluding renvoi.",
+      "reasoning_cat2": "Consistent with 9.15's venue clause and Exhibit A paragraph 17; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.10 Governing Law"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "Boilerplate counterparts language; definite.",
+      "reasoning_cat2": "The two signature pages in the document are consistent with counterpart execution.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.11 Counterparts"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "\"Except as may be contrary to applicable law\" is a soft qualifier, but the prohibited acts are enumerated clearly.",
+      "reasoning_cat2": "Section 8.4's offset of \"any amounts owing by the Employee to the Company\" is a company-side setoff not obviously barred; no real conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.12 Nonalienation of Benefits"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "\"Disparage\" is undefined and open-ended and the obligation runs indefinitely (\"and thereafter\") with no carve-out even for legally required statements.",
+      "reasoning_cat2": "Exhibit A paragraph 3 states a different, narrower non-disparagement bargain (tied to holding Restricted Stock Units, with a law-required exception), so the two regimes do not align.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.13 Non-Disparagement"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "A clear recusal undertaking with definite scope.",
+      "reasoning_cat2": "It presupposes Employee's Board membership, which 8.4(b) also contemplates; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.14 Board"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "\"May be brought\" is permissive rather than exclusive, which leaves genuine room to argue whether Michigan venue is mandatory, though the waiver of venue objections cuts the other way.",
+      "reasoning_cat2": "No arbitration or other forum clause exists elsewhere, so nothing contradicts it within the instrument.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.15 Venue"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "These are form recitals with blanks left unfilled and garbled OCR, but as a template that is expected rather than a meaning-changing defect.",
+      "reasoning_cat2": "Recital A and the release's carve-out for amounts due under the Employment Agreement align with Section 8.4's requirement of a signed release; consistent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - Recitals"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "A very broad enumerated release ending in \"any other claims ... in any local, state or federal or other forum,\" with the sole exclusion of claims \"to compel the payment of amounts due to Employee as provided in the Employment Agreement\" — the reach of that exclusion against the sweeping general language is contestable.",
+      "reasoning_cat2": "Section 8.4 conditions severance on this release, so the scope of the payment carve-out directly determines whether the Employee can sue for severance, bonus or commissions — a genuine interaction point.",
+      "prob_cat1": 0.39,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 1. Complete Release"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "A long enumerated list closing with \"all other assets, materials and information of any kind or nature, belonging or pertaining to Company,\" a catch-all whose reach beyond the listed items is uncertain.",
+      "reasoning_cat2": "It overlaps Sections 3.2 and 4.2 of the main agreement using a different defined term, but the obligations are cumulative and compatible.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 2. Return of Company Property"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "The Employee's obligation is limited \"for so long as Employee holds Restricted Stock Units\" — a condition tied to instruments nowhere referenced in this agreement — while the language then says he shall \"never\" make such statements, an internal tension in the same sentence.",
+      "reasoning_cat2": "Section 9.13 of the Employment Agreement imposes an unconditional mutual non-disparagement duty \"during the Employment Term and thereafter,\" which does not match this conditional, asymmetric version.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 3. Non-Disparagement"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The paragraph is a sentence fragment beginning \"To never seek or accept employment with Company,\" lacking a subject and verb of undertaking — a mechanical defect in a covenant.",
+      "reasoning_cat2": "Nothing else in the instrument addresses re-employment; no conflict identified.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 4. Not Seek Employment"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "A clear statement that Articles III, IV and V obligations survive.",
+      "reasoning_cat2": "It harmonises with Section 9.7's survival clause and confirms the restrictive covenants continue post-termination.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 5. Continuing Obligations"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "\"Reasonable notice,\" \"a reasonable amount of the Employee's time\" and reimbursement of \"lost wages\" are elastic but conventional cooperation terms.",
+      "reasoning_cat2": "No other provision addresses litigation cooperation; consistent with the whole.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 6. Assistance in the Defense of Claims"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "A definite factual acknowledgment.",
+      "reasoning_cat2": "Consistent with the release in paragraph 1; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 7. No Current Litigation"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Straightforward ADEA-style acknowledgment; the assertion that he \"did so\" is factual but unambiguous.",
+      "reasoning_cat2": "Fits with paragraphs 9 and 10's OWBPA machinery.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 8. Right to Consult Counsel"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "A precise twenty-one day consideration period.",
+      "reasoning_cat2": "Consistent with paragraph 10's seven-day revocation and paragraph 11's payment condition.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 9. Review Period"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "The revocation addressee blanks are unfilled, so the mechanism for effective revocation is incomplete on the face of the form.",
+      "reasoning_cat2": "Paragraph 11 makes the Company's obligations contingent on non-revocation, so the missing addressee could matter operationally, though it is a template gap.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 10. Employee's Right to Revoke Agreement"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "Three enumerated conditions stated clearly.",
+      "reasoning_cat2": "Section 8.4 conditions severance on execution \"without revocation\" of the release, matching this paragraph.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 11. Commencement of severance payment(s)"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "Standard voluntariness acknowledgment; definite.",
+      "reasoning_cat2": "Consistent with paragraphs 8 and 9 and with the main agreement's integration clause.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 12. Understanding of Agreement and Voluntary Execution"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "The Company's side says it \"agrees to disclose the terms ... only for legitimate business purposes,\" an undefined and elastic permission that guts the mutuality of the confidentiality promise.",
+      "reasoning_cat2": "It mirrors Section 3.3 of the Employment Agreement using the same loose formula, so it is consistent across the instrument.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 13. Non-Disclosure"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "A conventional non-admission clause.",
+      "reasoning_cat2": "Recital D likewise says the settlement is without admission of liability; consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 14. Non-Admission of Liability"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "\"Regarding the matters set forth herein\" limits the merger clause sensibly.",
+      "reasoning_cat2": "Paragraph 5 preserves the Employment Agreement's continuing obligations and paragraph 1 excludes claims for amounts due, so the integration language does not swallow the main agreement.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 15. Entire Agreement"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "A standard unknown-facts clause; definite in effect.",
+      "reasoning_cat2": "Consistent with the \"known or unknown\" language in paragraph 1.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 16. Newly Discovered Facts"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "Clean Michigan choice-of-law with express exclusion of conflicts rules.",
+      "reasoning_cat2": "Matches Section 9.10 of the Employment Agreement.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 17. Applicable Law"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "A reformation-style severability clause with clear alternative outcomes.",
+      "reasoning_cat2": "Compatible with Section 9.2 and Article VII of the main agreement.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 18. Severability"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "The paragraph releases the Company from obligations \"under the Severance Agreement\" — a term used nowhere else and never defined, and the sentence ends with a comma rather than a full stop, leaving it apparently incomplete.",
+      "reasoning_cat2": "The severance obligation actually arises under Section 8.4 of the Employment Agreement, so the reference to a non-existent \"Severance Agreement\" cannot be reconciled with the rest of the instrument without construction.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.45,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - 19. Consequences of Employee Violation of Promises"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "A duty to provide \"recommendations\" on strategy is inherently soft, but as a job-description item that is expected.",
+      "reasoning_cat2": "Schedule 2.1 controls over the Bylaws per Section 2.1 and feeds the 8.4(a) diminution test, so its vagueness has downstream effect but no direct contradiction.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule 2.1 - Strategic recommendations"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "Assigning responsibility for \"Finance/Accounting/Cash Management (including Ajuba US and all subsidiaries)\" to the President of Ajuba India is broad, and \"efficient operations\" is a vague standard.",
+      "reasoning_cat2": "Section 8.4(a) expressly says consolidation, elimination or outsourcing of cash management, accounting and sales and marketing is not a material diminution, and Section 2.1 deems this Schedule amended accordingly — a direct pull against the duties stated here.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule 2.1 - Management of Ajuba India"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "\"Directly or indirectly\" is broad but the reporting-line statement is plain.",
+      "reasoning_cat2": "It coexists with 8.4(a)'s permitted consolidation of functions and with the Bylaws-override in Section 2.1; mild tension only.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule 2.1 - Reporting of India employees"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "A one-line reporting line; definite.",
+      "reasoning_cat2": "Section 2.1 says Employee \"shall report directly to the Board (or selected designee of the Board of Directors of the Parent),\" which is not the same as reporting to Ajuba's Chairman, and Section 2.1 makes Schedule 2.1 control in a conflict with the Bylaws but not with Section 2.1 itself.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule 2.1 - Reports to Chairman"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "A concrete quarterly attendance and reporting duty.",
+      "reasoning_cat2": "Consistent with Section 2.1's reporting obligations and 9.14's recusal provision.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule 2.1 - Board Meetings"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "Completion is defined by four objective events (last to occur of three departures and a lease termination), which is unusually precise; the cost figures are labelled estimates.",
+      "reasoning_cat2": "It supplies the trigger for the 2.2(f) Reorganization Bonus and squares with Schedule I's last line placing costs on Ajuba; consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule I - Closure of Ajuba's UK Office"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "\"Restructure\" is deemed complete on termination of a specified lease, an objective trigger, though the section header speaks of restructuring while the text describes closure — a slight mismatch in terminology.",
+      "reasoning_cat2": "Section 2.2(f) requires the Novi office be \"restructured\" and the UK office \"shut down,\" and this schedule's mixed closure/restructure language for Novi could be argued over when fixing bonus entitlement.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule I - Restructure of Novi, MI Office"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "A clear disclaimer of representation or warranty tied to good-faith estimates.",
+      "reasoning_cat2": "Section 2.2(f) refers to Schedule I as setting out \"the specific cost savings\" and \"a reasonable risk assessment,\" which this disclaimer materially softens — a modest recital-versus-schedule tension.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule I - No warranty of estimates"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "A single definite allocation of costs to Ajuba.",
+      "reasoning_cat2": "It sits with 2.3's expense reimbursement and 2.2(f)'s bonus without contradiction, though payment obligations elsewhere run through Ajuba India.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Schedule I - Costs borne by Ajuba"
+    }
+  ]
+}

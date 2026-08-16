@@ -1,0 +1,204 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "This is a checkbox menu whose OCR-mangled options ('Balance of term insurance — Retain/Cancel', 'Proceeds payable in accordance with designation of beneficiary') leave no operative sentence to construe, only unfilled elections. The only latent uncertainty is which beneficiary designation controls the new policy if neither box is marked.",
+      "reasoning_cat2": "The beneficiary election here parallels the beneficiary designation in the Loan Request block and Form 3116 reference, and nothing in the endorsement paragraphs contradicts it. No specific conflicting provision identified.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Conversion of Term Insurance"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A pure fill-in election of premium mode with blank amounts and a cross-reference to 'MAPP Section 03', which is external and not defined here, but the wording itself states no obligation capable of two readings.",
+      "reasoning_cat2": "Consistent with the premium payment mode fields in item 1 and the premium-adjustment sentence in paragraph 3 of the signature block; no contradiction found.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Change Premium Payment Mode"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A yes/no question plus an instruction to submit 'appropriate NEW assignment forms'; 'appropriate' is loose but the sentence is procedural rather than operative.",
+      "reasoning_cat2": "It sits alongside the Assignee's Consent line and the loan provision's assignment of 'right, title and interest' to Ohio National, which are complementary rather than inconsistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Assignment of converted or changed policy"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A bare unchecked heading with no substantive text; the referenced 'guaranteed purchase option' terms live in the policy, not here, so there is nothing in the wording to construe.",
+      "reasoning_cat2": "The adjacent Option/Marriage/Birth-or-Adoption occasion list appears to belong to this item, and no other provision in the form contradicts it.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Request for guaranteed purchase option"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The interest sentence — 'On full or gross loans, policy loan interest is deducted while loan interest is added to any net loan' — distinguishes cash/net from gross loans in a way that is genuinely hard to apply, and the rate is left to 'the interest rate and in the manner set forth in the' policy (text truncated).",
+      "reasoning_cat2": "It assigns all right, title and interest as security while the separate assignment question asks whether the policy is to be assigned and requires new forms; the two could be read as overlapping but are reconcilable as security versus absolute assignment.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Loan Request"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The provision records a change of basic amount 'from $252000 to $___' with the destination figure blank, so on its face the operative change is unstated — an incompleteness that directly affects meaning.",
+      "reasoning_cat2": "Read against the Home Office Endorsement paragraph, which says there can be no change of amount unless the owner agrees in writing, a blank new amount leaves the face amount after the change indeterminate.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Change basic amount"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Both type fields are blank and the item is unchecked, so no term is even asserted; the only defect is emptiness rather than ambiguity.",
+      "reasoning_cat2": "Nothing elsewhere in the form depends on a type change; the endorsement paragraph on 'plan or benefits' changes is consistent with leaving this unused.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Change from type to type"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The replacement question uses the broad phrase 'to serve as a replacement, in whole or in part, of any existing insurance or annuities', which is a standard regulatory formula but genuinely open-ended at its edges.",
+      "reasoning_cat2": "No other provision of the form addresses replacement, so there is no companion text to conflict with.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Replacement question"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "An isolated pair of labels — '(Amount of check)' and 'Gross (Amount of withdrawal including charges)' — with the election itself missing, so the difference between net and gross is only signposted, not defined.",
+      "reasoning_cat2": "It mirrors the Cash/Gross distinction in the Loan Request block, and the two are consistent in structure rather than contradictory.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Withdrawal amount election"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The instruction is a two-box withholding election whose text is badly fragmented, but the underlying choice (no withholding versus withholding) is binary and definite.",
+      "reasoning_cat2": "It is consistent with the Box A and Box B election lines and the 20% withholding sentence tied to a missing Social Security number.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Withholding Instructions"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Two unrelated column texts have been merged, so the operative sentence — that any additional benefit provision attached to the policy terminates according to its terms 'unless otherwise provided' — is interleaved with tax language, and 'unless otherwise provided' is itself open.",
+      "reasoning_cat2": "That termination-of-riders language overlaps item 8's separate election to cancel Supplementary Agreements, raising a question whether paid-up status cancels riders automatically or only by election.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Change to paid-up insurance"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The estimated-tax notice is a truncated statement of law ('may be subject to estimated tax payment rules if your payments... are not adequate') and imposes no contractual obligation.",
+      "reasoning_cat2": "It is consistent with the Box A/Box B withholding elections and the 20% withholding sentence; no conflicting provision found.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Tax liability and estimated tax notice"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The substantive sentence — future monthly insurance costs will be charged based on the reduced or removed rating — is definite, though the OCR has spliced withholding text into it.",
+      "reasoning_cat2": "It coheres with the premium-adjustment sentence in paragraph 3 of the signature block; no inconsistency identified.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Remove or reduce rating"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "A single truncated election sentence declining federal income tax withholding; the choice expressed is unambiguous.",
+      "reasoning_cat2": "It matches the Instructions block and the Box B alternative and creates no tension with any other term.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Box A election (no withholding)"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "An unfilled blank inviting the owner to list Supplementary Agreements to cancel; the term 'Supplementary Agreement' is not defined in this form, but the mechanism is plain.",
+      "reasoning_cat2": "It overlaps the paid-up insurance item's statement that additional benefit provisions terminate according to their terms, though the two can be harmonised as separate routes.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Cancel Supplementary Agreements"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "A one-line affirmative withholding election; nothing in the phrase carries a second reasonable meaning.",
+      "reasoning_cat2": "Consistent with the Instructions block and the Box A alternative; no conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Box B election (withholding)"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The sentence states that absent the owner's Social Security number the distribution 'will be subject to 20% withholding', a definite rule, albeit OCR-garbled.",
+      "reasoning_cat2": "It arguably overrides the Box A no-withholding election, but the two read together as election-subject-to-a-condition rather than as a genuine contradiction.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Social Security number / 20% withholding"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The representation is truncated mid-sentence ('no bankruptcy proceedings, attachment, tax or other lien claim pending against me'), and the reach of 'other lien claim' after enumerated specifics is uncertain.",
+      "reasoning_cat2": "No other provision of the form addresses the owner's solvency or liens, so there is nothing to reconcile it with.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1) Representation as to bankruptcy, attachment, tax or lien"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The clause both ratifies any correction noted under 'Home Office Endorsement' and then says there can be no change of amount, age at issue, risk, plan or benefits unless the owner agrees in writing — an internal tension over what corrections are self-ratifying.",
+      "reasoning_cat2": "Read against the 'FOR HOME OFFICE ENDORSEMENT ONLY' block, which purports to endorse the policy by attachment effective December 1995 without the owner's signature, the written-agreement carve-out may be contradicted in practice.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2) Ratification of corrections by Home Office Endorsement"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "'If any part of the policy is cancelled by a change, Ohio National will be released from any claims or liability under such part' turns on the undefined scope of 'any part' and 'by a change', and the premium-adjustment sentence is truncated.",
+      "reasoning_cat2": "It interacts with item 8's cancellation of Supplementary Agreements and the paid-up insurance item's rider-termination language, leaving uncertain which benefits a change extinguishes and releases.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3) Release on cancellation of part of policy"
+    }
+  ]
+}

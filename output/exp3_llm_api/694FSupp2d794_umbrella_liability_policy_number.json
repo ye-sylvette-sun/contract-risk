@@ -1,0 +1,1224 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The grant turns entirely on defined terms — \"ultimate net loss,\" \"retained limit,\" \"occurrence\" — and the phrase \"to which this policy applies\" imports every exclusion and endorsement, so its reach is not self-contained and \"legally obligated to pay as damages\" is itself contestable (does it include defense outlay?).",
+      "reasoning_cat2": "Read against Definition c (which excludes loss and legal expenses from ultimate net loss) and Insuring Agreement II (supplementary payments only where underlying insurance does not apply), the scope of what this promise actually indemnifies is genuinely in play.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.52,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Insuring Agreement I — COVERAGE (Umbrella Policy)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"Covered by underlying insurance\" is ambiguous between expenses of a type the underlying policy insures and expenses the underlying insurer actually pays or has limits left to pay, and it is a single general phrase carrying the whole exclusion.",
+      "reasoning_cat2": "It sits directly against the II lead-in (payments only where the loss is \"not covered\" by underlying insurance) and II(b) (company assumes defense on exhaustion of underlying limits), leaving the umbrella's defense-cost obligation after exhaustion genuinely unresolved.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.58,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Insuring Agreement II(a) — underlying insurance defense/legal expense exclusion (Umbrella Policy)"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The clause excludes \"all loss expenses and legal expenses (including attorneys' fees, court costs and interest)\" but the trailing words \"and all salaries of employees and office expenses of the insured; the company or any underlying insurer so incurred\" are punctuated so as to leave whose expenses are meant unclear — a mechanical defect on top of a scope question.",
+      "reasoning_cat2": "It cuts against Insuring Agreement II(c) (\"pay all expenses incurred by the company, all costs taxed against the insured and all interest\") and Condition 4 (taxable costs and interest payable in addition to the limit), so whether legal expenses are ever indemnified is contestable across the instrument.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.55,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition c. — \"Ultimate net loss\" (Umbrella Policy)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "Standard consideration/reliance preamble; nothing in it operates on coverage and no term needs construing beyond the declarations it references.",
+      "reasoning_cat2": "Consistent with the Declarations and the Wisconsin Declarations amendatory endorsement on misrepresentation; no conflict found.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Insuring Agreement Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The qualifier \"not covered by any underlying coverage ... or any other underlying insurance collectible by the insured\" repeats the same \"covered\" ambiguity, though as a lead-in its work is limited.",
+      "reasoning_cat2": "It must be harmonised with the same section's later paragraphs (a) and (b) governing occurrences where underlying insurance does apply, which is where the friction actually lies.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Supplementary Payments - lead-in"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "\"Defend any suit ... even if groundless, false or fraudulent\" is conventional language, but the tail permitting settlement \"as it deems expedient\" leaves the company's discretion loosely bounded.",
+      "reasoning_cat2": "Checked against the Asbestos endorsement's express no-duty-to-defend and against II(a) on underlying-covered defense; the duty is conditioned rather than contradicted.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II(a) Defense of suits"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "Bond-premium obligations are enumerated with a clear disclaimer of any duty to furnish bonds; wording is definite.",
+      "reasoning_cat2": "Consistent with Condition 4 (Appeals) and the limit provisions; nothing conflicts.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II(b) Bond premiums"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "\"All expenses incurred by the company\" and post-judgment interest are stated with a clear cap by reference to the company's limit; the wording itself is workable.",
+      "reasoning_cat2": "It pulls against Definition c's exclusion of legal expenses and interest from ultimate net loss, though the \"in addition to ultimate net loss\" sentence is designed to reconcile them.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II(c) Expenses, costs and interest"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "\"Reasonable expenses, other than loss of earnings, incurred at the company's request\" is a narrow and familiar formula.",
+      "reasoning_cat2": "Fits with the rest of the supplementary payments section and Condition 3's cooperation duty.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II(d) Reimbursement of insured's expenses"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"Immediately in excess of underlying insurance listed on the declarations page without intervening insurance\" is a condition whose application to a partially exhausted or unlisted layer is not spelled out.",
+      "reasoning_cat2": "It interacts with Condition 9 (Other Insurance), Condition 13 (maintenance of underlying insurance) and paragraph (a) above it, so the trigger for assuming defense is contestable.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II - Where underlying insurance applies (b)"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The carve-out \"except settlement of claims or suits\" is terse and its interaction with the listed payments is not obvious on the face.",
+      "reasoning_cat2": "Read with Definition c and II(c), it is the reconciling sentence, and its adequacy for that job is itself arguable.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II - Amounts payable in addition to ultimate net loss"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "A savings clause for jurisdictions where the company cannot carry out the agreement; the operative promise (pay expenses incurred with written consent) is clear enough.",
+      "reasoning_cat2": "Consistent with the Wisconsin amendatory endorsements which perform the same conforming function.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II - Jurisdictions preventing agreement"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A definite reimbursement obligation tied to the stated Item 4 self-insured retention.",
+      "reasoning_cat2": "Squares with Definition d(2), which applies the Item 4 SIR only where underlying insurance is inapplicable; a small question whether reimbursement can arise otherwise.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II - Reimbursement of self insured retention"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The limit language is mechanical and self-referencing to Items 3 and the declarations; the aggregate applies only to products/completed operations hazards, which is stated plainly.",
+      "reasoning_cat2": "This paragraph is superseded by the Aggregate Limits Endorsement (009-064) and the declared limits are themselves altered by Endorsement No. 4, so the operative limit requires reading across documents.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Limit of Liability"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "\"Occurrences happening anywhere\" is about as definite as drafting gets.",
+      "reasoning_cat2": "The two Policy Territory Amended endorsements purport to amend territory provisions of a Hospital Professional Liability coverage part that is not part of this umbrella form, creating a loose fit.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Territory"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The stray \"{a} fb)\" lettering and the catch-all \"or similar law\" after enumerated workers' and unemployment compensation statutes leave the outer edge of the exclusion open.",
+      "reasoning_cat2": "The declarations schedule Employers Liability underlying coverage, but that is a different exposure; no direct conflict located.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion (a) Workers compensation"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Standard nuclear energy liability exclusion with named associations and statutory references; heavily particularised.",
+      "reasoning_cat2": "Supported by the accompanying nuclear definitions paragraph; internally consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion (b) Nuclear energy liability"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "A detailed enumeration keyed to nuclear facility, spent fuel and waste, all separately defined; little room to argue meaning.",
+      "reasoning_cat2": "Reads with exclusion (b) and the definitions paragraph without tension.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion (c) Hazardous properties of nuclear material"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Definitional catalogue drawn from the Atomic Energy Act; the text is badly degraded but each term is anchored to a statute.",
+      "reasoning_cat2": "Serves exclusions (b) and (c) only, as it says; consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Nuclear definitions for exclusions (b) & (c)"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "This block runs the loss-of-use exclusion into the start of the Definitions section, so the exclusion's own boundary — delay, non-performance, failure to meet warranted quality — is hard to trace as written.",
+      "reasoning_cat2": "It overlaps the separate care-custody-control and property-of-the-insured exclusions, but nothing contradicts it outright.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - loss of use of tangible property"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"Any subsidiary and any other organization coming under the named insured's control of which it exercises active management\" turns on the vague test of \"active management\" and \"control.\"",
+      "reasoning_cat2": "Endorsement 009-052 and later amendments name specific insureds, which may cut against an open-ended control test (expressio unius), but the two can co-exist.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition a. Named Insured"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The text of insured (1) is so degraded that the classes of persons covered (executive officers, directors, stockholders, real-estate managers) can only be inferred, and \"within the scope of his duties\" is a familiar soft boundary.",
+      "reasoning_cat2": "Interacts with the D&O exclusion (X-19), which removes directors and officers for wrongful acts while this includes them; the carve-out largely reconciles.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition b. Insured (1) - premises and executive officers"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "An omnibus automobile-insured clause; the surviving wording is fragmentary but the concept is standard.",
+      "reasoning_cat2": "Consistent with the scheduled Automobile Liability underlying policy and the intrafamily carve-out in the Cross Suits endorsement.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition b. Insured (2) - automobiles"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"Except insofar as coverage is provided in the underlying insurance as scheduled herein\" is a following-form qualifier whose operation where underlying limits are exhausted is not stated.",
+      "reasoning_cat2": "Checked against the schedule in Item 7, which lists no aircraft coverage, so the qualifier may be empty; that mismatch is a modest coherence point.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - aircraft"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "The final limb — property in the insured's care, custody or control \"to the extent the insured is under contract to provide insurance\" — is an awkward and arguable qualifier.",
+      "reasoning_cat2": "The X-12 Care, Custody & Control endorsement excludes such property outright without that qualifier, so the two provisions differ in reach.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - property damage to property of insured"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "A conventional sistership/recall exclusion keyed to withdrawal because of a known or suspected defect.",
+      "reasoning_cat2": "Consistent with the products hazard and completed operations definitions.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - withdrawal / recall of products"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "An enumerated list of advertising offenses with the odd rider \"but this shall not relate to ... slogans,\" which sits uneasily against the enumerated infringement items.",
+      "reasoning_cat2": "Definition g includes \"infringement of ... slogan (other than a patent)\" as covered advertising liability, so exclusion and definition must be read together carefully.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - advertising offense"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Racing, speed and demolition contests are enumerated with practice and preparation expressly added; definite.",
+      "reasoning_cat2": "No other provision addresses racing; nothing to reconcile.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - racing / demolition contest"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "The surviving text preserves a \"sudden and accidental\" carve-out whose meaning is the archetypal pollution-coverage fight, and the list of discharge media is degraded.",
+      "reasoning_cat2": "The Total Pollution Exclusion (009-070) expressly replaces this exclusion, so the question becomes which text governs and whether the replacement captured this clause.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion - pollution discharge"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The fragment covering watercraft, aircraft and persons obligated by written contract is so broken that the classes of insured cannot be read off the page with confidence.",
+      "reasoning_cat2": "Relates to the aircraft exclusion and the contractual exclusion endorsement; no outright contradiction identified.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition b. Insured (3) - watercraft/aircraft and others"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A short continuation phrase limiting cover to operations by or on behalf of the named insured; nothing independently ambiguous.",
+      "reasoning_cat2": "Consistent with the additional-insureds endorsement limiting cover to their interest in the named insured's operations.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition b. Insured (4) continued - operations"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Clear drop-down of underlying insureds \"subject to all the limitations upon coverage under such policy other than the limits.\"",
+      "reasoning_cat2": "Must be read with the Additional Named Insureds endorsement and the Cross Suits exclusion, which turns on who is a Named Insured versus an insured; a modest interpretive interface.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition b. Insured (5) - other insureds under underlying policy"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Conditional on the Declarations designating a partnership or joint venture; the language is definite.",
+      "reasoning_cat2": "The Declarations designate a corporation, so the clause is dormant and cannot conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition b. Insured (6) - partnership or joint venture"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "\"The greater of\" plus the condition \"if the insurance afforded by the underlying insurance is inapplicable\" invites argument where underlying cover applies but is exhausted or partially inapplicable.",
+      "reasoning_cat2": "It meshes with Condition 5 (Loss Payable), Condition 13 (maintenance) and Condition 9 (Other Insurance), and the interaction with the $10,000 Item 4 SIR is a plausible fighting point.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition d. Retained Limit"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Sub-paragraph (5), \"except where prohibited by law, racial or religious discrimination not committed by or on behalf of the insured,\" is convoluted and near self-defeating as drafted.",
+      "reasoning_cat2": "The FF-15 endorsement strips most of the listed heads and X-20 removes discrimination entirely, so the operative definition of personal injury exists only after reconciling three documents.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition e. Personal Injury"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Two clear limbs, physical injury during the policy period and loss of use caused by an occurrence during the period; standard and workable.",
+      "reasoning_cat2": "Consistent with the occurrence definition and the loss-of-use exclusion.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition f. Property Damage"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "\"Idea misappropriation under an implied contract\" and \"unfair competition\" are broad heads, but each is enumerated rather than left to a catch-all.",
+      "reasoning_cat2": "Set against the advertising offense exclusion, which excepts slogans, the boundary between covered and excluded advertising liability requires reading both.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition g. Advertising Liability"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "\"Neither expected nor intended from the standpoint of the insured\" and the deeming rule for exposure to \"substantially the same general conditions existing at or emanating from one location or source\" are classic sites of number-of-occurrences and intent disputes.",
+      "reasoning_cat2": "It drives the limit provisions in III and the Aggregate Limits Endorsement, so a deeming dispute has direct consequences elsewhere, but no contradiction appears.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition h. Occurrence"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "A short, complete definition keyed to design to transport persons or property.",
+      "reasoning_cat2": "Used by the aircraft exclusion; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition i. Aircraft"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "\"A land motor vehicle, trailer or semi-trailer\" is a definite three-item definition.",
+      "reasoning_cat2": "Consistent with the automobile insured clause and the scheduled Automobile Liability policy.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition j. Automobile"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The definition opens with \"personal injury and property damage\" but the operative proviso then speaks of \"bodily injury or property damage,\" a slippage between a defined and an undefined term.",
+      "reasoning_cat2": "Personal injury is defined to include bodily injury, so the mismatch is reconcilable, though it interacts with the aggregate limit that applies only to products hazards.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition k. Products hazard"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "Keyed to completion or abandonment and location away from the insured's premises; the supporting \"operations\" definition supplies the timing test.",
+      "reasoning_cat2": "Consistent with the operations definition and the aggregate limit provision.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition l. Completed operations hazard"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "A three-limb \"earliest of\" completion test with express treatment of remedial work; detailed and largely self-applying.",
+      "reasoning_cat2": "Fits the completed operations hazard definition it serves.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition m. Operations"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "One sentence pointing to the declarations; nothing to construe.",
+      "reasoning_cat2": "The Pay Plan endorsement's installments and the declared $29,890 premium are the only interface, and Endorsement No. 4 leaves the additional premium blank — a loose end rather than a conflict here.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 1. Premium"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Rights of inspection and audit with an express disclaimer of any safety undertaking; definite.",
+      "reasoning_cat2": "No other provision addresses inspection; consistent with the whole.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 2. Inspection and Audit"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "\"As soon as practicable\" and \"when in the judgment of the company\" are open-textured triggers, and the paragraph is badly degraded where it sets the participation threshold.",
+      "reasoning_cat2": "It is the condition precedent referenced by the Wisconsin Action Against Company endorsement (\"full compliance with all the terms\"), which raises the stakes but does not contradict it.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 3. Insured's Duties in the Event of Occurrence Claim or Suit"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "The appeal right is stated with a clear cost consequence, though \"in excess of the underlying or retained limit\" mixes two defined concepts.",
+      "reasoning_cat2": "Sits against Definition c, which excludes interest and legal expenses from ultimate net loss, while this makes them payable in addition to the limit.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 4. Appeals"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "\"Shall not attach until the amount of the underlying limit has been paid by or on behalf of the insured\" is the classic exhaustion-by-payment formula whose application to settlements below limits is genuinely disputable, and the text here is mangled.",
+      "reasoning_cat2": "It must be reconciled with Condition 13 (failure to maintain underlying insurance treated as if maintained) and Definition d, which together can point to a different result on exhaustion.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 5. Loss Payable"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "The surviving text is a no-direct-action and no-impleader provision; its sense is recoverable but the sentence is broken.",
+      "reasoning_cat2": "The Wisconsin Amendatory Endorsement deletes the Action Against Company condition in its entirety and replaces it, so this text is displaced.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 6. Action Against Company"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "The sentence is garbled but its only possible meaning — insolvency does not relieve the company — is unmistakable.",
+      "reasoning_cat2": "Duplicated in the Wisconsin Amendatory Endorsement to the same effect; consistent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 7. Bankruptcy or Insolvency"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "As reproduced the clause has lost the death/bankruptcy-of-insured limb, so \"unless canceled, shall cover the insured's legal representative\" reads as a non-sequitur after the assignment sentence.",
+      "reasoning_cat2": "No other provision deals with assignment; nothing to reconcile beyond Condition 11 on changes requiring endorsement.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 8. Assignment"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "\"Other valid and collectible insurance ... whether or not described in the Schedule of Underlying Insurance\" with a proportionate-contribution proviso is a dense formula whose application to concurrent excess layers is regularly argued.",
+      "reasoning_cat2": "It interacts with Definition d (retained limit includes \"any other underlying insurance collectible\") and with the Overlap Endorsement on inter-insurer disputes, so priority questions require harmonising three provisions.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 9. Other Insurance"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "A recovery-apportionment waterfall stated in order of priority; mechanical rather than ambiguous.",
+      "reasoning_cat2": "The Wisconsin Amendatory Endorsement adds a made-whole rule (\"recovery only after the insured has been fully compensated\") that reorders this waterfall.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 10. Subrogation"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "A clear no-waiver clause requiring endorsement for any change.",
+      "reasoning_cat2": "The Wisconsin Changes endorsement imputes agent knowledge to the company and bars voiding, which directly cuts across this clause's denial of effect to agent knowledge.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 11. Changes"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "The text is heavily degraded around the notice-mailing mechanics, but the 30-day company notice period is legible.",
+      "reasoning_cat2": "The Wisconsin Cancellation endorsement substitutes 10-day periods and Endorsement No. 3 requires 60 days' notice of cancellation or non-renewal, so three different notice periods sit in one instrument.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 12. Cancellation"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "The warranty to maintain underlying policies \"not more restricted\" and the deeming rule on failure to maintain are conceptually clear, though the degraded text obscures the reduction-of-aggregate proviso.",
+      "reasoning_cat2": "It pulls against Condition 5's payment-based attachment rule and Definition d, and the 30-day exhaustion notice duty adds a further condition to reconcile.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Condition 13. Maintenance of Underlying Insurance"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "\"Except insofar as coverage is available to the insured in the underlying insurance listed\" is a following-form qualifier with no object stated after \"listed,\" and \"liability assumed ... under any contract\" is itself a contested phrase.",
+      "reasoning_cat2": "Its reach depends on the Item 7 schedule and interacts with the additional-insured endorsements naming lessors and lenders whose protection typically rests on contractual assumption.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contractual Exclusion Endorsement (FF-6)"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "It refers to the \"self insured retention listed in Item 7 of the Declarations,\" but Item 7 is the schedule of underlying insurance and the retention is Item 4 — a cross-reference error going to when the exclusion bites.",
+      "reasoning_cat2": "It strips almost every head of the policy's own Personal Injury definition, and overlaps X-20's discrimination exclusion, so the operative definition emerges only from reading all three.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Personal Injury Endorsement (FF-15)"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "\"Initiated, alleged or caused to be brought about by a Named Insured ... against any other Named Insured\" is broad, and the typo \"severed\" for \"covered\" is minor.",
+      "reasoning_cat2": "Named Insured status is spread across the Declarations, 009-052 and Endorsements 6-8, so identifying who falls inside the exclusion requires assembling several endorsements.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cross Suits Endorsement - Wisconsin (GP-10 WIS)"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The carve-out is conditional on \"if this policy applies to professional liability,\" a self-referential premise left for the reader to resolve.",
+      "reasoning_cat2": "Form 035 WI excludes professional health care services while the Aggregate Limits Endorsement and the Contingent Excess endorsement contemplate a professional liability hazard, so whether the premise is satisfied is genuinely unclear.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cross Suits Endorsement - professional liability carve-out"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "A single-sentence carve-out for intrafamily automobile liability; narrow and plain.",
+      "reasoning_cat2": "Consistent with the automobile insured clause and the scheduled automobile underlying policy.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cross Suits Endorsement - intrafamily liability"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "A purely formal substitution of the execution clause; no operative content to construe.",
+      "reasoning_cat2": "It removes the countersignature condition in the original In Witness clause, which the Declarations still contemplate, but nothing turns on it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Umbrella Liability Changes - Wisconsin (009-097)"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "Cancellation by the named insured by surrender or written notice stating the effective date; definite.",
+      "reasoning_cat2": "Duplicates Condition 12's first limb and coexists with Item 6's minimum-premium rule; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin: cancellation by named insured"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "A bare lead-in with no substantive content.",
+      "reasoning_cat2": "Introduces sub-paragraphs (a)-(e) which are internally consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin: lead-in"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "Conditioned on the policy being in force less than 60 days and not a renewal; both facts are readily determined from the Declarations.",
+      "reasoning_cat2": "The Declarations state this policy renews UML-95-4104-00-OH, so the sub-paragraph is inapplicable on its face — a fit question rather than a conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin (a) New policies in force less than 60 days"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "Non-payment cancellation on 10 days' notice, with premium obligations described broadly but comprehensibly.",
+      "reasoning_cat2": "It sits against Endorsement No. 3's blanket 60-day notice requirement and the Pay Plan endorsement's past-due mechanism.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin (b) Non-payment of premium"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "\"Substantial change in the risk assumed\" and \"substantial breaches of contractual duties, conditions or warranties\" are vague thresholds, though statutory in origin.",
+      "reasoning_cat2": "The 10-day notice conflicts with Endorsement No. 3's promise of 60 days' written notice of cancellation.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin (c) Mid-term cancellation"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Applies only where the policy has no fixed expiration or a term longer than one year; the garbled \"ifn addition\" does not obscure the sense.",
+      "reasoning_cat2": "The Declarations give a fixed one-year term, so this limb is dormant.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin (d) Policies with term of more than one year"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "\"Right te to renewal\" is a typographical stutter only; the 60-day non-renewal notice and term-equivalence rule are clear.",
+      "reasoning_cat2": "Aligns with Endorsement No. 3's 60-day notice for non-renewal; consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cancellation - Wisconsin (e) Non-renewal of policy"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "\"Full compliance by the insured with all the terms of this policy\" as a condition precedent is broad but is a standard and well-understood formula.",
+      "reasoning_cat2": "It replaces Condition 6 and expands who may recover, which sits awkwardly with the deleted no-direct-action rule but is expressly substitutional.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendatory Endorsement - Wisconsin: Action Against Company"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "One added sentence imposing a made-whole rule; \"fully compensated for damages\" is reasonably determinate.",
+      "reasoning_cat2": "It reorders Condition 10's apportionment waterfall, which pays the party that paid above the retained limit plus the company before the insured is made whole.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendatory Endorsement - Wisconsin: Subrogation"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "The agent-knowledge rule is stated in two clear sentences tracking the Wisconsin statute.",
+      "reasoning_cat2": "It directly reverses Condition 11's statement that notice to or knowledge of any agent effects no waiver or change and does not estop the company.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendatory Endorsement - Wisconsin: Changes"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Statutory materiality and contribution tests, closely tracking Wis. Stat. 631.11; determinate.",
+      "reasoning_cat2": "Consistent with the preamble's reliance on declarations statements and with Condition 13's warranty language.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendatory Endorsement - Wisconsin: Declarations"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "\"Any insured subject of the Employee Retirement Income Security Act\" is garbled where it should read \"subject to,\" and \"pension or Employee benefit plans\" is a broad tail.",
+      "reasoning_cat2": "No other provision addresses fiduciary or benefit-plan liability; nothing to reconcile.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "E.R.I.S.A. Exclusion (1277-D)"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "Three limbs plus \"as to which any insured, his agents or subcontractors are for any purpose exercising physical control\" — a very broad general tail after specific categories.",
+      "reasoning_cat2": "It is materially wider than the base policy's property-of-the-insured exclusion, which limits the care-custody limb to cases where the insured is contractually bound to insure.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Care, Custody & Control Exclusion (X-12)"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "\"Directors and officers are excluded from this contract for liability arising out of wrongful acts\" is clumsily framed (persons excluded rather than coverage), leaving whether the whole person or only the wrongful-act head is removed arguable.",
+      "reasoning_cat2": "Definition b(1) expressly makes executive officers and directors insureds, so the two must be reconciled through the endorsement's own carve-out.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Directors and Officers Liability Exclusion (X-19)"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "The tail \"or any other matter claimed against them solely by reason of their being directors or officers\" is an open-ended catch-all after an enumeration of error, misstatement, omission and breach of duty.",
+      "reasoning_cat2": "Read with the carve-out for personal injury, bodily injury, property damage and professional liability, the excluded residue is small but its edge is unclear.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Directors and Officers Liability - \"Wrongful Acts\" definition"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "The list mixes defined terms (personal injury, property damage) with undefined ones (\"bodily injury,\" \"hospital professional liability,\" \"advertisers liability\"), inviting argument about what is preserved.",
+      "reasoning_cat2": "It preserves hospital professional liability while Form 035 WI excludes professional health care services, a tension that has to be resolved across endorsements.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Directors and Officers Liability - carve-out"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "One sentence removing discrimination injury from the personal injury definition; plain.",
+      "reasoning_cat2": "It contradicts Definition e(5), which affirmatively includes racial or religious discrimination not committed by or on behalf of the insured, and duplicates part of FF-15.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.35,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exclusion of Discrimination (X-20)"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "The reproduced text is missing its opening words and much of the exposure list, so the exclusion's subject and scope cannot be read cleanly from the page.",
+      "reasoning_cat2": "No other provision addresses asbestos; consistent with the pollution exclusion in aim.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Asbestos Exclusion Endorsement (X-77)"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "The degraded sentence still conveys a no-duty-to-defend rule for asbestos suits.",
+      "reasoning_cat2": "It carves back Insuring Agreement II(a)'s duty to defend groundless suits, which the endorsement is entitled to do but which requires reading both.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Asbestos Exclusion - no duty to defend"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "\"Professional health care services including the furnishing of food, beverages, medications or appliances in connection with such services\" mixes a general concept with illustrative specifics, and the accreditation-committee limb adds \"or similar professional board or committee.\"",
+      "reasoning_cat2": "For an insured whose declared business is a hospital, this exclusion sits against the Aggregate Limits Endorsement's reference to a professional liability hazard, the Cross Suits professional carve-out and the Contingent Excess endorsement.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Professional Services Excluded (035 WI)"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "The carve-out depends entirely on the external test of who is \"subject to the Wisconsin Patients Compensation Fund,\" which the endorsement does not define.",
+      "reasoning_cat2": "The Contingent Excess endorsement supplies a different, expanded reading of health care provider status, so the same boundary is drawn twice in different words.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Professional Services Excluded - carve-out"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "The substituted paragraph is clear on its face and simply adds \"or any professional liability hazard\" to the aggregate trigger.",
+      "reasoning_cat2": "That addition presupposes professional liability cover which Form 035 WI excludes, and the Item 3 amounts it references are altered by Endorsement No. 4 and appear garbled in the Declarations ($18,000,000 occurrence / 9,000,000 aggregate).",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Aggregate Limits Endorsement (009-064) - III. Limit of Liability"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "A closed list of named insureds with an express disclaimer of automatic cover for newly acquired entities; definite.",
+      "reasoning_cat2": "Endorsements 6, 7 and 8 add entities to this form and Endorsement 8 restyles the Item 1 named insured, all consistently done by amendment.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Additional Named Insureds (009-052)"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "Deems notice to the Item 1 named insured notice to all; a single clear rule.",
+      "reasoning_cat2": "Consistent with Condition 12's first-named-insured provision and the Wisconsin cancellation endorsement.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Additional Named Insureds - notice of cancellation"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "Pure attachment boilerplate with a stated default effective date and an \"unless otherwise stated\" saver.",
+      "reasoning_cat2": "The endorsement header states 03/01/1996, matching inception; no tension.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 1 - attachment"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "\"Only with respect to their interest in the operations of the Named Insured\" is a vague limitation, and the schedule's \"Insurable Interest\" entries such as \"As their interest may appear\" leave scope open.",
+      "reasoning_cat2": "It interacts with the Contractual Exclusion endorsement, since most listed additional insureds are lessors and lenders whose claims typically rest on assumed contractual liability.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 1 - additional insureds"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "Attachment boilerplate; nothing operative.",
+      "reasoning_cat2": "Effective date matches inception; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 2 - attachment"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "Attaches the collection-agency exclusion \"only as respects Med-Health Financial Services\" — a precisely bounded application.",
+      "reasoning_cat2": "Med-Health Financial Services is a named insured under 009-052, so the limitation fits; the exclusion itself speaks of \"the Insured\" generally, a small mismatch.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 2 - Form 009-400 attached"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "Attachment boilerplate; no operative content.",
+      "reasoning_cat2": "Consistent with the endorsement's stated effective date.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 3 - attachment"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "One short sentence promising 60 days' written notice; the wording itself is definite.",
+      "reasoning_cat2": "It contradicts Condition 12's 30-day notice and each 10-day period in the Wisconsin Cancellation endorsement, including non-payment cancellation, without saying which prevails.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 3 - sixty days notice"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "A replacement lead-in identifying the superseded exclusion by its subject matter rather than by paragraph letter, which leaves the identification to inference.",
+      "reasoning_cat2": "The base pollution exclusion it means to replace is itself degraded in the policy text, so confirming that the intended clause has been displaced requires interpretation.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Total Pollution Exclusion (009-070) - lead-in"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "Standard ISO CG 21 49 language with an express definition of \"hostile fire\"; detailed and enumerated rather than open-ended.",
+      "reasoning_cat2": "Consistent with the Pollutants definition that follows and with the removal of the base exclusion.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Total Pollution Exclusion (1) - bodily injury or property damage from pollutants"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "Clean-up costs and governmental claims are excluded in two clearly separated limbs.",
+      "reasoning_cat2": "Consistent with paragraph (1) and the Pollutants definition; nothing conflicts.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Total Pollution Exclusion (2) - loss, cost or expense"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "\"Any solid, liquid, gaseous or thermal irritant or contaminant, including smoke, vapor, soot, fumes, acids, alkalis, chemicals and waste\" is the archetypal broad definition with illustrative specifics, frequently argued as to ordinary substances.",
+      "reasoning_cat2": "It serves only the pollution exclusion and is consistent with it.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Total Pollution Exclusion - Pollutants definition"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "Attachment boilerplate; no operative content.",
+      "reasoning_cat2": "Consistent with the Declarations premium and the installment schedule.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pay Plan Endorsement (009-021) - attachment"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "A single definite sentence tying default to the specified due dates.",
+      "reasoning_cat2": "Interacts with the Wisconsin non-payment cancellation limb, which supplies the consequence; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pay Plan Endorsement - past due payments"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "\"Errors or omissions, malpractice or mistake of a professional nature ... as a collection agency\" is bounded by the business activity named.",
+      "reasoning_cat2": "Endorsement No. 2 confines it to Med-Health Financial Services although the text says \"the Insured\" generally, a minor reconciliation point.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Collection Agency Errors and Omissions Exclusion (009-400)"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "The exclusion of medical malpractice cover for statutory health care providers is stated crisply by reference to Wis. Stat. 655.001.",
+      "reasoning_cat2": "It overlaps Form 035 WI's professional services exclusion and its carve-out, and the Aggregate Limits Endorsement's professional liability hazard, so the professional-liability position must be assembled from several endorsements.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contingent Excess Medical Malpractice Liability - Wisconsin (009-108 WI)"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "\"Subsidiaries of holding companies of the named insured\" stretches a statutory definition in an unusual direction and does not say which holding companies are meant.",
+      "reasoning_cat2": "It bears on who falls inside 035 WI's carve-out for entities not subject to the Fund, so the two definitions of provider status interact.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contingent Excess - definition of health care provider"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "The three-limb trigger is precise, but the drop-down operates over \"underlying insurance listed in this policy and identified as being listed for contingency coverage purposes,\" a description whose referent is not stated.",
+      "reasoning_cat2": "Item 7's schedule contains no such identification, so the condition may have no object — a genuine whole-instrument gap.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contingent Excess - contingency coverage"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "\"Appropriate premium charge\" at the company's \"sole option\" is loose, but it is a familiar pricing mechanic.",
+      "reasoning_cat2": "Mirrors the identical sentence in the professional liability limits endorsement; consistent.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contingent Excess - premium charge"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "It disapplies \"Form No. 035(12/87) Professional Services Excluded,\" but the form actually attached is 035 WI (1/94) — a wrong form reference going to whether the disapplication operates.",
+      "reasoning_cat2": "That mismatch, read with the endorsement schedule listing only 035 WI (1/94), leaves the interaction between contingent cover and the professional services exclusion uncertain.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contingent Excess - Form 035 not applicable"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "It amends the territory provisions of a \"Hospital Professional Liability coverage part attached to the policy,\" but no such coverage part is attached to this umbrella form.",
+      "reasoning_cat2": "Endorsement No. 5 declares this form null and void, yet it remains in the endorsement schedule and a differently dated replacement is attached.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policy Territory Amended - Wisconsin (009-118 WI 10/92)"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "\"Legal or other expenses necessarily incurred\" is a soft measure, and the indemnity is conditioned on the loss being determined payable under this policy — arguably self-cancelling in a genuine priority fight.",
+      "reasoning_cat2": "It works alongside Condition 9 (Other Insurance) and Definition c's exclusion of legal expenses from ultimate net loss, so the source of payment for these expenses is not obvious.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Overlap Endorsement (009-148)"
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "The mechanism is arithmetically clear (one-third of a trebled award), though the label \"exclusion\" for a partial payment obligation is loose.",
+      "reasoning_cat2": "Endorsement No. 5 deletes Form 009-133 as null and void while the endorsement schedule still lists it, leaving whether it forms part of the policy contested.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Trebled Damages Exclusion (009-133)"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "Attachment boilerplate; nothing to construe.",
+      "reasoning_cat2": "Effective date matches inception even though the endorsement is dated 05/06/1996; a minor timing point only.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 4 - attachment"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "The additional premium amount is left blank and it purports to amend \"the policy limits in Item 2,\" whereas Item 2 is the policy period and the limits are Item 3 — a cross-reference and completion error.",
+      "reasoning_cat2": "The Declarations show $18,000,000 each occurrence and a garbled $9,000,000 aggregate while this endorsement states $20,000,000/$20,000,000, so the operative limit is genuinely in doubt.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 4 - amended policy limits"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "Attachment boilerplate; no operative content.",
+      "reasoning_cat2": "Its inception-date effectiveness is consistent with the deletions it makes.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 5 - attachment"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "\"Deleted from the policy and considered null and void\" is unambiguous as to effect.",
+      "reasoning_cat2": "Both deleted forms remain in the Schedule of Endorsements and 009-133 is still physically attached, so the document as assembled contradicts the deletion.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 5 - forms deleted"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "A one-line attachment of a specified replacement form; definite.",
+      "reasoning_cat2": "The Schedule of Endorsements lists only the 10/92 version of 009-118, so the schedule and this endorsement do not match.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 5 - form attached"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "It quotes the statute at length and its own operative words are short and clear, though it amends provisions of a coverage part not present here.",
+      "reasoning_cat2": "Like its predecessor it addresses a Hospital Professional Liability coverage part while Form 035 WI excludes professional services from this umbrella, a loose fit with the whole.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policy Territory Amended - Wisconsin (009-118 WI 02/96)"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "Attachment boilerplate with an \"unless otherwise stated\" saver; nothing ambiguous in itself.",
+      "reasoning_cat2": "The header gives an effective date of 07/08/1996 while the text defaults to inception, so which date governs the added insured requires a choice.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 6 - attachment"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "Adds one named entity to a specified form; entirely definite.",
+      "reasoning_cat2": "Consistent with 009-052's closed list and its no-automatic-cover proviso.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 6 - Form 009-052 amended"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "Same boilerplate; no operative uncertainty on its own terms.",
+      "reasoning_cat2": "The header effective date 01/01/1997 conflicts with the text's default of inception, which matters for a mid-term added insured.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 7 - attachment"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "Names one campus and calls it a Named Insured; short and clear.",
+      "reasoning_cat2": "Other additions were made by amending Form 009-052 rather than by direct designation, so the route differs but the effect is reconcilable.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 7 - Named Insured added"
+    },
+    {
+      "clause_id": "neg115",
+      "reasoning_cat1": "Attachment boilerplate; nothing to construe.",
+      "reasoning_cat2": "Consistent with the endorsements it accompanies.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 8 - attachment"
+    },
+    {
+      "clause_id": "neg116",
+      "reasoning_cat1": "A one-word corporate-name correction (\"Systems\" to \"System\"); plain on its face.",
+      "reasoning_cat2": "It is dated 11/03/1997, after the 03/01/1997 expiry, yet made effective at inception, which sits oddly with Condition 11's requirement that changes be by endorsement during the term.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 8 - named insured amended"
+    },
+    {
+      "clause_id": "neg117",
+      "reasoning_cat1": "Two named campuses added to a specified form; definite.",
+      "reasoning_cat2": "Consistent with 009-052 and the earlier amending endorsements.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Amendatory Endorsement No. 8 - Form 009-052 additions"
+    },
+    {
+      "clause_id": "neg118",
+      "reasoning_cat1": "The limits increase is stated numerically and the class is defined by non-subjection to the Wisconsin Fund, though \"those individuals and/or entities to whom this coverage applies\" is circular.",
+      "reasoning_cat2": "The header attaches it to Policy No. HPP-1996-4104-00, the underlying CGL, not to this umbrella policy, and it does not appear in the umbrella endorsement schedule.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Professional Liability Limits Endorsement (009-123 WI)"
+    },
+    {
+      "clause_id": "neg119",
+      "reasoning_cat1": "\"Appropriate premium charge\" at sole option is loose but conventional pricing language.",
+      "reasoning_cat2": "Duplicates the contingent excess endorsement's premium sentence; consistent, subject to the same misattachment point.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Professional Liability Limits - premium charge"
+    }
+  ]
+}

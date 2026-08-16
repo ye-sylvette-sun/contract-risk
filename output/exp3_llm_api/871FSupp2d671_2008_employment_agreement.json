@@ -1,0 +1,404 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause sweeps away all prior agreements \"relating to the subject matter of this Agreement\" while separately having the Employee acknowledge he is not party to \"any other employment agreement,\" and the final sentence is broken off mid-phrase (\"Without limiting the foregoing, the Employee and the company ... of be seerned to conte\"), leaving an operative acknowledgment whose content cannot be read. Both the reach of \"subject matter\" and the truncated final sentence give a court something concrete to construe.",
+      "reasoning_cat2": "It sits directly against Section 2.4(a), which says the Contingent Payout Amount is \"in lieu of any amounts otherwise payable to you on account of any prior agreements entered into by you and the Company or MiraMed\" — a provision that presupposes prior agreements still have force, whereas 7.8 purports to supersede them entirely. The clause also names Parent as a party whose prior arrangements are superseded although Parent did not sign as a contracting party, deepening the tension.",
+      "prob_cat1": 0.54,
+      "prob_cat2": 0.61,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 7.8 — Entire Agreement (integration clause)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble identifies the parties, the effective date and the Employee's address in ordinary terms and does nothing operative beyond recording acceptance of employment. Nothing in it carries a second reasonable meaning.",
+      "reasoning_cat2": "It is consistent with Article 2 (employment of the Employee) and Section 1.5 (Employment Term commencing on the Effective Date); the only oddity is the signature block labelling the Employee \"THE EMPLOYER,\" which is plainly a scrivener's slip elsewhere.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble and Employment Acceptance"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"Business\" is defined by an open-ended \"including but not limited to\" list of billing and coding services plus \"such other entities serviced by the Company,\" so its outer boundary depends on a catch-all against enumerated specifics. The territorial limit (United States and India) is definite, but the activity scope is not.",
+      "reasoning_cat2": "The definition feeds Article 4 (Company Technology \"which relate to the Business\") and Section 1.3, and nothing in those provisions contradicts it; there is no non-compete in this agreement that would make the breadth operationally decisive.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.1 Definition of \"Business\""
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The text as reproduced is fragmentary, but the concept turns on technology \"known to the Employee as a result of or through the Employee's employment\" and which \"relate to the Business\" — a relational test whose edges (pre-existing knowledge, tangential relation) are inherently soft. The vagueness is real though the garbling appears to be a reproduction artifact.",
+      "reasoning_cat2": "It is used consistently in Sections 4.1 and 4.2, which assign and require return of Company Technology; no other provision cuts against it.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.2 Definition of \"Company Technology\""
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"All information, in whatever form, regarding the Company and the Business, and their clients\" is a very broad general term followed by an \"including, without limitation\" list of nine specifics, so the catch-all's reach against the enumerated items is a classic scope question. No public-domain carve-out appears in the definition itself.",
+      "reasoning_cat2": "Section 3.1 supplies the exceptions (public domain, rightfully received, legally compelled), which harmonises the breadth of the definition; nothing else in the instrument conflicts.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.3 Definition of \"Confidential Information\""
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "\"A client of the Company\" is short and undefined as to whether it includes past or prospective clients, but the term is barely used operatively. The wording is simple enough that little turns on it.",
+      "reasoning_cat2": "Section 1.3 separately speaks of \"present, past and prospective clients,\" which is a slight definitional mismatch, but \"Customer\" is not used in any operative obligation here.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.4 Definition of \"Customer\""
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The term is fixed by dates — Effective Date to December 31, 2013 — with an express cross-reference to Article 6 for earlier termination. That is about as definite as a definition gets.",
+      "reasoning_cat2": "Section 6.1 adds that employment terminates \"upon the consummation of a Liquidity Event,\" which is an Article 6 event and so is captured by the \"unless earlier terminated\" proviso; the fit is workable though the interaction with the 2.4 bonus timing is not seamless.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.5 Definition of \"Employment Term\""
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "A standard calendar-year fiscal year definition with a flexible tail allowing the Company to adopt another 12-month period. The mechanics are ordinary and self-executing.",
+      "reasoning_cat2": "No operative provision keys payments to Fiscal Year (Section 6.3 speaks of the calendar year), so the definition is essentially inert and cannot conflict with anything.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.6 Definition of \"Fiscal Year\""
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The definition is cut off mid-list (\"any corporation, company, partnership, other entity or ...\"), so the enumeration plus catch-all cannot be fully assessed, though the pattern is boilerplate. Little meaning turns on the missing tail.",
+      "reasoning_cat2": "\"Person\" does not appear to drive any operative obligation in the visible text, so there is nothing for it to contradict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.7 Definition of \"Person\""
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "Duties are set by reference to Schedule 2.1 and to what a President \"customarily\" performs, and the exclusivity covenant bars \"any other business or professional activity\" without carve-outs — both the \"customarily performed\" standard and the unqualified exclusivity are soft-edged. The passage is also heavily fragmented in reproduction.",
+      "reasoning_cat2": "Section 6.4(a) makes a \"material diminution ... in the Employee's position, duties, authority, or responsibilities, as outlined in Section 2.1\" a Good Reason trigger, so the imprecision here is imported into the severance mechanism; Section 6.2(b) likewise keys Cause to Schedule 2.1.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1 Employment of Employee; Duties"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The salary figure is illegible in the text and the Allowance is stated \"in lieu of\" US benefits, but the structure (Base Salary plus US$18,800 Allowance, benefits modifiable at Company discretion) is otherwise straightforward. The discretionary benefits sentence is broad but conventional.",
+      "reasoning_cat2": "Sections 6.2, 6.3, 6.4 and 6.5 all repeatedly promise or exclude a capitalised \"Bonus,\" yet this compensation section as written establishes no bonus entitlement and does not define \"Bonus\" — a gap that makes the severance formula in 6.4 hard to apply.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2 Compensation and Benefits"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Reasonable out-of-pocket expenses\" and \"in accordance with Company policies\" are standard qualifiers that rarely generate a construction fight of their own. The submission condition is clear.",
+      "reasoning_cat2": "It sits comfortably with Section 2.2's benefits regime and with the termination sections, which do not address expenses; no conflict appears.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3 Expense Reimbursement"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The three tiers are numerically discontinuous — 2.73% at US$180m yields about US$4.91m, a flat US$5m in the middle band, then 2.3% above US$200m yields only US$4.6m at the threshold — so the schedule produces a drop in payout as value rises, and the repeated \"2.73% of the of Enterprise Value\" contains a mechanical slip. The condition of being \"employed by the Company at the time of consummation\" is clear, but the payout arithmetic invites argument.",
+      "reasoning_cat2": "The \"in lieu of any amounts otherwise payable ... on account of any prior agreements\" language presupposes surviving prior agreements that Section 7.8 purports to supersede, and the employment condition sits awkwardly with Section 6.1, under which employment terminates upon consummation of a Liquidity Event; the required Separation Agreement \"in the form attached hereto\" also depends on an attachment.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(a) Liquidity Event Bonus — Contingent Payout Amount"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The trigger (Liquidity Event within 12 months of a without-Cause or Good Reason termination) and the rate (1.75% of Enterprise Value) are stated with precision and cross-referenced to Section 6.4. Little is left open on the face of it.",
+      "reasoning_cat2": "It coexists with 2.4(a) as a mutually exclusive alternative and depends on the Good Reason definition in 6.4; the only friction is that the 1.75% figure can exceed or fall below the 2.4(a) tiers, which is a commercial rather than textual inconsistency.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(b) Liquidity Event After Termination"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "The definition is a long enumerated list with precise percentage and dollar thresholds and an express carve-out for the sale of MiraMed Revenue Group, and clause (v) permits combinations of (iii) and (iv) — detailed, though \"members of his immediate family\" and \"other business combination\" are somewhat open. Overall the drafting is specific rather than catch-all.",
+      "reasoning_cat2": "It supplies the trigger for 2.4(a), 2.4(b) and 6.1, and is used consistently across them; the definition centres on MiraMed, a non-signatory, but the payment obligation is placed on the Company, which is coherent if commercially odd.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(c) Definition of \"Liquidity Event\""
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The definition is heavily fragmented in reproduction and mixes valuation components with an unrelated deferred-payment condition, and \"fair market value of other property paid or payable\" plus contingent amounts leaves genuine valuation questions. The \"without duplication\" additions are only partly legible.",
+      "reasoning_cat2": "The embedded condition that deferred Contingent Payout instalments require \"you remaining as an employee of the Company at the time that payment is due\" cannot be squared with Section 6.1, under which employment terminates upon consummation of the Liquidity Event, so the condition could never be satisfied for deferred amounts.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(d) Definition of \"Enterprise Value\""
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The mechanics — Wall Street Journal rate, valuation on the business day preceding closing, 10-day average for marketable securities — are precise and mechanical. The only soft point is \"prevailing market rate\" if no WSJ rate is published.",
+      "reasoning_cat2": "The clause repeatedly refers to a capitalised \"Transaction,\" a term never defined anywhere in the Agreement (Section 2.4(c) defines \"Liquidity Event\" instead), so the timing rules key off an undefined term.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(e) Currency Translation and Valuation"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The confidentiality covenant is broad but its exceptions (a)–(d) are conventional carve-outs, and the reproduced text breaks off mid-exception for legally compelled disclosure. The listed verbs (\"use, publish, divulge, reproduce, transmit, or provide\") are cumulative and clear.",
+      "reasoning_cat2": "It fits Section 1.3's definition and Section 3.2's return obligation, and there is no other provision authorising disclosure that would conflict.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1 Confidentiality"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The obligation — return all Confidential Information on termination, including tangible copies, and permanently delete electronic copies — is concrete and self-executing. No term needs construing.",
+      "reasoning_cat2": "It parallels Section 4.2 for Company Technology and follows naturally from Sections 1.3 and 3.1; it is consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2 Return of Confidential Information"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The single exception, \"except for legitimate business purposes,\" is an unbounded standard that could justify almost any disclosure by the Company and is the sort of phrase two parties would read very differently. That is a nameable vagueness in a one-sentence obligation.",
+      "reasoning_cat2": "No other provision defines legitimate business purposes or limits Company disclosure, and Section 7.12's non-disparagement covers different ground; there is no direct conflict.",
+      "prob_cat1": 0.43,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3 Company Non-Disclosure of Agreement Terms"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "The assignment obligation is triggered only \"upon the Company's request\" and is qualified \"to the extent permitted by law,\" which leaves ownership uncertain absent a request, and \"relating in any way to the Business\" is expansive. Those qualifiers are the arguable points.",
+      "reasoning_cat2": "It works with the Section 1.2 definition and Section 4.2's return obligation; Indian statutory limits on invention assignment are external to the instrument rather than an internal conflict.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.1 Ownership and Assignment"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The provision states ownership, return on termination, a use bar and a deletion duty in plain mandatory terms. Nothing in it admits of two readings.",
+      "reasoning_cat2": "It mirrors Section 3.2 and depends on the Section 1.2 definition; the two return provisions are consistent with each other.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 Return of Company Technology"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "This is a three-part representation about pre-existing confidentiality, IP-ownership and non-compete commitments, carved out for anything \"disclosed to the Company in writing\" — a factual warranty rather than an open-ended standard. The reproduced numbering is garbled but the substance is clear.",
+      "reasoning_cat2": "It complements Section 5.2 and is referenced as a Cause trigger in Section 6.2(c); no provision contradicts it.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.1 Contracts"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "A conventional no-conflict warranty naming non-compete and confidentiality agreements with a former employer as examples of the general category. The wording is definite.",
+      "reasoning_cat2": "It sits alongside Section 5.1 and Section 7.8's acknowledgment that the Employee is not party to another employment agreement; the provisions reinforce one another.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.2 No Violation of Other Agreements"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "The cross-reference is defective: it lists termination \"at the end of the Employment Term,\" \"upon the consummation of a Liquidity Event,\" or on events \"set forth in Sections 6.4 through 6.5,\" thereby omitting the Cause and Death/Disability events in Sections 6.2 and 6.3 that plainly are termination events. That mis-numbering is a mechanical error that changes the apparent scope of the clause.",
+      "reasoning_cat2": "Making a Liquidity Event an automatic terminating event collides with Section 2.4(a), which conditions the payout on the Employee being employed \"at the time of consummation,\" and with 2.4(d)'s requirement that he remain an employee when deferred instalments fall due; it also cuts short the fixed term set by Section 1.5.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.1 Termination"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"Conduct causing the Company or its subsidiaries substantial public disgrace or disrepute\" and \"failure in any material respect\" are evaluative standards whose application is genuinely contestable, sitting in a list of otherwise concrete grounds such as felony conviction. The cure right also refers to curing \"such failure,\" which does not fit non-curable grounds like fraud.",
+      "reasoning_cat2": "Ground (b) is tied to Schedule 2.1, the same schedule underpinning Section 2.1 and the Good Reason test in 6.4(a), and the residency requirement matches nothing elsewhere but contradicts nothing; the payment consequence again references an undefined \"Bonus.\"",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 Termination for Cause"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"Disability\" is given a numeric definition (120 days in any 240-day period, competent medical evidence), which is definite, but the severance measure — Base Salary \"for the remainder of the calendar year in which his employment was terminated\" — is only partly legible and its interaction with the disability determination date is loose. The 6% discount mechanic is precise.",
+      "reasoning_cat2": "It excludes \"any Bonus\" while Sections 6.2, 6.4 and 6.5 assume a Bonus exists, and its remainder-of-calendar-year measure differs from 6.4's remainder-of-Term measure; the two are distinguishable but the Bonus references remain unanchored.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.3 Death or Disability"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "\"Good Reason\" turns on a \"material diminution\" in position, duties, authority or responsibilities and on a breach of the compensation provisions — evaluative triggers, and the reproduced text omits any notice-and-cure step. The severance formula (present value at 6% of Base Salary and Bonus for the remainder of the Term) is otherwise mechanical.",
+      "reasoning_cat2": "The formula expressly includes \"Bonus,\" a capitalised term that Section 2.2 never establishes or quantifies, and the payout interacts with Section 2.4(b)'s separate 1.75% post-termination Liquidity Event entitlement; that leaves a genuine gap in computing severance.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.4 Without Cause; Good Reason"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "The Employee may resign for any reason on notice, with the Company choosing the effective date up to 30 business days out — clear allocation of control. The wording leaves little to argue about.",
+      "reasoning_cat2": "It overlaps with Section 6.4, which also lets the Employee terminate \"for any other reason,\" but 6.4's severance is tied to Good Reason, so the two can be harmonised; the recurring \"Bonus\" reference is the only loose end.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.5 Termination By Employee"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "A standard statement that headings are for reference only and do not control interpretation. Nothing ambiguous.",
+      "reasoning_cat2": "It is consistent with the rest of the Agreement and does not disturb any operative term.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.1 Section and Other Headings"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Only a fragment survives in the text, but the evident content is boilerplate severability leaving the remaining provisions unaffected. Standard and unremarkable.",
+      "reasoning_cat2": "No other provision addresses invalidity or reformation, so there is nothing for it to conflict with.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.2 Severability"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The reproduced text is partial, but the substance — no waiver on a future occasion, waivers effective only for the specific instance and purpose — is conventional. Nothing invites competing readings.",
+      "reasoning_cat2": "It complements Section 7.8's writing requirement for modifications and does not contradict any other term.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.3 Waiver"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Assignment by the Company is permitted \"only\" in two enumerated circumstances (merger/consolidation, sale of substantially all assets or becoming a subsidiary), so the word \"only\" against those specifics may exclude other transfers — an expressio unius point, though the drafting is fairly tight. The binding-on-successors sentence is standard.",
+      "reasoning_cat2": "The enumerated events overlap with the Liquidity Event triggers in Section 2.4(c), which contemplate transactions at the MiraMed level rather than the Company level; the two operate on different entities and can be reconciled.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.4 Assignment"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Delivery methods and deemed-receipt rules are enumerated and the addresses are set out, making the mechanics definite. Only the fax option lacks a confirmation requirement, which is minor.",
+      "reasoning_cat2": "The Company's notice address is given as Ajuba International, LLC/MiraMed Global Services in Michigan although the contracting Company is the Indian entity, a small mismatch with the preamble but not an operative conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.5 Notices"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The provision is one sentence subjecting all payments to withholding \"as required by Indian law,\" which is specific about the governing tax regime. Nothing ambiguous in the wording.",
+      "reasoning_cat2": "The Agreement contains no governing-law clause at all, and the Liquidity Event payments are US-dollar amounts tied to a US parent, so an exclusive reference to Indian withholding sits somewhat oddly with the rest of the instrument without squarely contradicting any provision.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.6 Withholding Taxes"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "\"The ongoing provisions of this Agreement, which shall survive such termination in accordance with their terms\" identifies no provisions by number, so which obligations are \"ongoing\" is left entirely to inference. That is a nameable indeterminacy in a survival clause.",
+      "reasoning_cat2": "Articles 3 and 4 and Section 7.12 expressly extend beyond termination and so plainly survive, which softens the gap; but the status of Section 2.4(b)'s post-termination Liquidity Event payout depends on this clause.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.7 Survival"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The text is fragmentary but the evident sense — no rights or remedies conferred on anyone other than the Parties — is boilerplate. Little turns on the wording itself.",
+      "reasoning_cat2": "Section 2.4 imposes payment obligations measured by MiraMed transactions and Section 7.8 purports to supersede agreements involving Parent, so a bar on non-party rights raises a question about the standing of Parent and MiraMed under the instrument.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.9 No Third Party Beneficiaries"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Pure boilerplate on execution in counterparts constituting one instrument. Nothing to construe.",
+      "reasoning_cat2": "Consistent with the signature pages and with the whole instrument.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.10 Counterparts"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The list of prohibited dealings (sale, transfer, alienation, assignment, pledge, collateralization, attachment) is enumerated and closed, qualified only by \"except as may be contrary to applicable law.\" The wording is definite.",
+      "reasoning_cat2": "It reinforces Section 7.4's bar on assignment by the Employee and does not conflict with the payment provisions in Article 2.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.11 Nonalienation of Benefits"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"Disparage\" is undefined and unqualified, applies \"during the Employment Term and thereafter\" without limit, and the reference to \"their respective officers, directors or employers\" appears to be a slip for \"employees.\" Both the vague verb and the apparent word error are arguable points.",
+      "reasoning_cat2": "It runs alongside Section 3.3's limited Company non-disclosure duty without contradicting it, and no carve-out for truthful or legally compelled statements appears elsewhere to create a conflict.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.12 Non-Disparagement"
+    }
+  ]
+}

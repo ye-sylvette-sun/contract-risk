@@ -4,14 +4,15 @@ One call per case. Which clauses did the parties dispute, and where are they in
 the documents filed with the case? The risk label is NOT decided here — it
 comes from the Westlaw key the case was selected under and never from the model.
 
-Sections below are sent as the system prompt, a cache-marked document block, the
-instructions and the task, in that order. Braces are placeholders filled by
-`src/lib.py` — do not use a literal brace anywhere in this file.
+Sections below are sent as the system prompt, the document, the instructions and
+the task, in that order — instructions after the document, so a rule sits next
+to the text it governs. Braces are placeholders filled by `src/lib.py` — do not
+use a literal brace anywhere in this file.
 
 ## SYSTEM
 
 You build a research dataset of contract clauses whose drafting caused a
-dispute. You are given a court opinion and the documents filed in that case, and
+dispute. You are given a court opinion and the contracts filed in that case, and
 you identify the clauses the parties disputed and say exactly where they sit.
 
 ### What you produce
@@ -32,32 +33,35 @@ you identify the clauses the parties disputed and say exactly where they sit.
 {opinion}
 ---------- OPINION END ----------
 
-### The documents filed in this case
+### The contracts filed in this case
 
-Each document from the docket is wrapped in its own marker below, and that
-marker names the document's `contract_id` at both ends.
+Each contract is wrapped in its own marker below, and that marker names its
+`contract_id` at both ends.
 
 {contracts}
 
 ## INSTRUCTIONS
 
-### Which documents can hold a clause
+### What the blocks above are
 
-- The blocks above are everything downloaded from the docket for this case.
-  **Most of them are not contracts.**
-- A document made for the court is a filing, not a contract, and holds no clause
-  you can cite: a complaint, answer, motion, brief, memorandum, order,
-  affidavit, declaration, notice, docket sheet, certificate of service, civil
-  cover sheet.
-- Neither is a document that only records or summarises, even when signed or
-  filled in: a blank or fill-in form, an agency certificate or registration, an
-  exhibit index, a declarations page, a coverage-summary table, a schedule of
-  rates standing alone, an invoice, a statement of account.
-- A filing that **attaches** a contract does count. Cite the attached contract's
-  own text, not the filing that wraps it.
-- A filing that merely **quotes** a contract does not count at all. A brief
-  reproducing three sentences of an agreement is a filing, and the clause is not
-  in the record.
+- **Every block is a contract.** Each one is a single named agreement, already
+  cut out of the court filing it was attached to. You do not have to work out
+  which block is a contract and which is a brief.
+- Where more than one block appears, they are **different agreements** — often
+  related, sometimes successive versions of the same deal. Say which one a
+  clause came from with the `contract_id` in its marker.
+
+Because each block was cut as a line range, a little of the wrapper can survive
+at its edges. Expect, and read past:
+
+- an exhibit label on the first line — `EXHIBIT A`, `EXHIBIT 64`;
+- a table of contents, a cover page, or an `Execution Version` line;
+- page numbers, `Page 12 of 40`, and Bates stamps anywhere in the text;
+- a signature, notary or attestation block at the end;
+- occasionally a court caption page ahead of the agreement itself.
+
+None of those is a clause. But none of them means the block is not a contract
+either — do not let one at the top make you skip the agreement below it.
 
 ### Take the clause from the contract, not from the opinion
 
@@ -113,11 +117,14 @@ does not belong in the list.
 
 ### When the answer is no clause at all
 
-- If the disputed language is not in any document above — because the contract
-  is not in the record, only quoted in a brief — return an empty `clauses` list
-  and say so in `case_desc`.
-- That is a valid answer and a common one. Do not reach for the nearest similar
-  clause instead.
+- If the disputed language is not in any block above, return an empty `clauses`
+  list and say so in `case_desc`.
+- That happens legitimately. The opinion may turn on an agreement that was never
+  filed, or on a different one from the agreements shown; a block may be only
+  part of a longer contract; and the OCR may have lost the page the clause was
+  on.
+- It is a valid answer. Do not reach for the nearest similar clause instead, and
+  do not report a clause from the wrong agreement to avoid returning nothing.
 
 ## TASK
 
@@ -136,17 +143,17 @@ does not belong in the list.
 1. `case_desc` — one line: the parties, and what the construction dispute was
    about.
 
-2. `clauses` — every clause of the documents above that the parties disputed
+2. `clauses` — every clause of the contracts above that the parties disputed
    and the court discussed, whose dispute falls under one of the risk types
    listed. For each one:
 
    - `clause_name` — a short name including its section number.
    - `taxonomy` — which of the risk types above the dispute over this clause
      falls under. Use one of the codes listed and no other.
-   - `contract_id` — the id in that document's START marker, copied exactly.
+   - `contract_id` — the id in that contract's START marker, copied exactly.
    - `start_line`, `end_line` — the first and last line the clause occupies
-     **in that document**.
-   - `head`, `tail` — copied exactly as that document's lines show them.
+     **in that contract**.
+   - `head`, `tail` — copied exactly as that contract's lines show them.
    - `opinion_comment_start_line`, `opinion_comment_end_line` — the first and
      last line **in the opinion** of the passage that shows the dispute over
      this clause: the competing readings the parties advanced and the court's

@@ -1,0 +1,634 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause is permissive in form (\"may be instituted in or ... removed to\") rather than exclusive, so a court could be asked whether it is a mandatory or merely non-exclusive forum selection clause; the parenthetical \"(other than by the Guarantor)\" and the reference to enforcement \"in any other jurisdiction, including Singapore\" add further room to argue about scope.",
+      "reasoning_cat2": "Section 4.10(b)'s closing sentence expressly preserves the Lenders' right \"to commence proceedings against the Guarantor in any other venue where assets of the Guarantor may be found,\" which sits in tension with the New York submission and could be read as making the New York consent non-exclusive or one-sided.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.44,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 4.10(a) — Submission to Jurisdiction; Venue (consent to New York courts and waiver of venue/forum non conveniens objections)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble identifies the parties definitely, though it says the Agreement is made \"by and between\" EGL and the Borrower while labelling only EGL as \"the Guarantor\" and describing it as made \"in favor of\" the Facility Agent, leaving the Borrower's party status slightly odd.",
+      "reasoning_cat2": "Article III (o) and the reference to \"either Guarantor\"/\"either Guarantee Agreement\" imply a second guarantor not named in the preamble, and the execution pages show unsigned Borrower and Facility Agent blocks, which invites argument about who is bound.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A short, standard recital reciting the Lenders' several commitment; no term in it is vague or capable of two readings.",
+      "reasoning_cat2": "It is consistent with the guarantee's operative provisions, which repeatedly refer to extensions of credit under the Credit Agreement.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (Credit Agreement extensions of credit)"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "\"Affiliated group of companies\" is loose but the recital states a simple fact and imposes no obligation.",
+      "reasoning_cat2": "Nothing operative turns on the group relationship, so it cannot conflict with Article II or III.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (Borrower affiliated group)"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Substantial direct and indirect benefit\" is a conclusory consideration recital whose vagueness is conventional and not operative.",
+      "reasoning_cat2": "It supports the consideration clause and Article III(e) solvency representation rather than contradicting them, though such recitals are sometimes contested in fraudulent-transfer disputes.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (benefit to EGL)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The recital of a condition precedent is definite in wording and identifies the Lenders' entry into the Credit Agreement as the triggering benefit.",
+      "reasoning_cat2": "Consistent with the \"NOW, THEREFORE\" clause and Section 2.01; no operative provision points the other way.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (condition precedent)"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Standard consideration and inducement language; \"ratable benefit of the Lenders\" is a defined-group reference and not ambiguous here.",
+      "reasoning_cat2": "Section 4.15 limits third-party rights to the Lenders, which is consistent with the ratable-benefit language.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consideration clause"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Ordinary incorporation-by-reference of Credit Agreement definitions with a \"unless the context requires otherwise\" saver, a conventional and workable formula.",
+      "reasoning_cat2": "Some capitalized terms used later (e.g. \"Event of Default\", \"Parent\", \"Disclosed Matters\") are neither defined here nor visible in this document, so reliance on the Credit Agreement is essential but coherent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 1.01 Definitions (introduction)"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A self-referential definition with plainly bounded content.",
+      "reasoning_cat2": "Consistent with Sections 4.14 and 4.08.",
+      "prob_cat1": 0.02,
+      "prob_cat2": 0.02,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “Agreement”"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The definition is sprawling but expressly open-ended (\"all other obligations and liabilities\"), and the disjunctive \"Term Loans, if any, or the LC Exposure\" is awkwardly punctuated, leaving some scope argument.",
+      "reasoning_cat2": "It interacts with Section 2.01(a)(iii)'s $250,000,000 cap and with the \"Obligations\" definition, but the pieces can be harmonised as stated.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “Borrower Obligations”"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"As determined by the Borrower or the Required Lenders\" gives two possibly conflicting determinants of the same amount, and \"any actual shortfall, howsoever caused, in funds available ... required\" is vague about the measurement date and the baseline; clause (ii) is also grammatically broken (\"any increase\" following \"required: for\").",
+      "reasoning_cat2": "It drives Section 2.01(a)(ii) and Section 2.02(a), where the Borrower's notice duty and the Lenders' backstop notice right could yield inconsistent Deficiency amounts, and Section 2.02(a) adds an Engineering Consultant certification only for the Lenders' route.",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “Deficiency”"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The definition is a single overlong sentence turning on \"reasonably acceptable\" offtakers and \"form and substance and for a term ... reasonably acceptable,\" plus a good-faith negotiation proviso, all of which are classic sources of dispute about whether the release condition has been met.",
+      "reasoning_cat2": "It is the trigger for release in Sections 2.01(a)(iii) and 2.01(d), so its uncertainty propagates, but no other provision contradicts it outright.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “EGL Guarantee Release Date”"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "A pure cross-reference definition with no independent content.",
+      "reasoning_cat2": "Section 2.01(a) indeed supplies the meaning, so the cross-reference holds.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “Guarantor Obligations”"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"Material adverse effect\" on the Guarantor's \"business, financial condition, operations or performance or properties\" is circular and famously vague, and limb (a) is qualified oddly by \"since the date of this Agreement\".",
+      "reasoning_cat2": "The term is used in Article III (a), (c), (d) and (m), and those uses are consistent with this definition even if its content is soft.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “Material Adverse Effect”"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "A short two-limb definition with no ambiguous term.",
+      "reasoning_cat2": "Fits with Section 4.02(c)'s reference to \"the Obligations\" and with the Borrower Obligations definition.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition of “Obligations”"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Limb (e) expressly reverses ejusdem generis by saying a general statement followed by enumerated specifics \"shall not be limited to matters similar to the matters specifically mentioned,\" which is precisely the general-vs-specific battleground even though it is drafted to resolve it.",
+      "reasoning_cat2": "This anti-ejusdem rule bears on the broad catch-alls in the Borrower Obligations definition and Section 2.05(iii), and it operates consistently with them.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 1.02 Rules of Interpretation"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The override is limited to \"the matters covered by this Agreement,\" a boundary phrase that is itself uncertain in reach.",
+      "reasoning_cat2": "It sits against Section 2.01(b)'s \"anything herein or in any other Loan Document to the contrary notwithstanding\" and against the many provisions that defer to the Credit Agreement (Sections 2.03, 2.02(d), 4.12), so which document governs on overlapping points is genuinely arguable.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 1.03 Inconsistency with Loan Documents"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The three time-period tranches use different triggers and clause (ii) has the Guarantor pay the Borrower \"for the ratable benefit of the Borrower and the Lenders,\" while the cap in the proviso refers to \"the Borrower Obligation\" in the singular; whether the periods in (i) and (ii) overlap or leave a gap is arguable.",
+      "reasoning_cat2": "The $250,000,000 cap in clause (iii) must be read against the uncapped clause (i) guarantee and against Section 2.01(b)(ii)'s separate maximum, and Section 2.01(d)'s release mechanics, which is a real harmonisation problem litigants would press.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.45,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.01(a) Guarantor Obligations"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Clause (i) is grammatically incomplete — \"the obligations of the Guarantor hereunder are primary and notwithstanding the obligations of any other Person\" lacks a verb after \"notwithstanding\" — which obscures its intended effect.",
+      "reasoning_cat2": "Clause (ii)'s fraudulent-conveyance cap and the \"anything herein to the contrary notwithstanding\" opening must be reconciled with the $250,000,000 cap in Section 2.01(a)(iii) and with Section 1.03's override, leaving a layered priority question.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.01(b)"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Short and definite: excess Borrower Obligations do not impair the guarantee.",
+      "reasoning_cat2": "It dovetails with the caps in Sections 2.01(a)(iii) and 2.01(b)(ii) rather than contradicting them.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.01(c)"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"The earlier of\" is definite, but limb (ii) bundles three cumulative conditions and the closing \"notwithstanding that ... the Borrower may be free from any Borrower Obligations\" is a continuing-guarantee saver that could be argued about.",
+      "reasoning_cat2": "It ties to the EGL Guarantee Release Date definition and Section 2.06 reinstatement; the Deficiency obligation under 2.01(a)(ii) is not obviously covered by \"the guarantee contained in this Section 2.01,\" a small coherence gap.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.01(d)"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The first sentence is garbled — \"shall notify the Guarantor ... and that the Guarantor provides to the Borrower the amount\" mixes notice and demand — so whether it imposes a payment obligation is unclear; \"if no action is taken by the Borrower\" is also an imprecise trigger.",
+      "reasoning_cat2": "The Engineering Consultant certification is required only for the Facility Agent's notice, not the Borrower's, and Section 2.01(a)(ii) conditions the Guarantor's obligation on notice \"as set forth in Section 2.02(a),\" so the two routes must be reconciled.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.02(a) Deficiency Procedures"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "A clear no-duty and no-liability acknowledgement in favour of the Facility Agent and Lenders.",
+      "reasoning_cat2": "Consistent with Section 2.02(a)'s permissive \"may give a notice\" and with Section 4.01.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.02(b)"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "The two funding routes are stated definitely, though \"charter capital\" is an odd term for a Minnesota LLC and \"all appropriate action\" is soft.",
+      "reasoning_cat2": "The lettering jumps from (b) to (d) to (f), so subsections (c) and (e) are missing from Section 2.02, which raises a genuine question whether part of the Deficiency mechanics is absent.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.02(d)"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"To pay the cost or cost that has created the Deficiency\" is a duplicated-word error and the sentence structure leaves who pays unclear.",
+      "reasoning_cat2": "It overlaps with Section 2.02(d) on the same subject and shares the missing-subsection problem, but the substance is reconcilable.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.02(f)"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Long but conventional subrogation subordination with definite triggers; the reference to \"any other Guarantor\" presumes a second guarantor.",
+      "reasoning_cat2": "It expressly carves out payments permitted under Credit Agreement Section 6.07 and coordinates with Article III(o), which is consistent; the \"other Guarantor\" references match the \"either Guarantor\" language in III(o).",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.03 Subrogation"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "Boilerplate waiver of the effect of amendments and releases; a single overlong sentence but each permitted action is enumerated.",
+      "reasoning_cat2": "Consistent with Sections 2.05 and 4.01 on the absolute nature of the guarantee.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.04 Amendments, etc. with respect to the Borrower Obligations"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "It refers once to \"a Guaranteed Obligation,\" a term not defined anywhere in this Agreement, and the catch-all \"(iii) any other circumstance whatsoever\" is a classic general-after-specifics problem.",
+      "reasoning_cat2": "The undefined \"Guaranteed Obligation\" sits against the defined \"Guarantor Obligations\" and \"Borrower Obligations,\" and the clause also toggles between the two, which a court might have to sort out.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.05 Guarantee Absolute and Unconditional"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Standard reinstatement clause; \"or otherwise\" is a catch-all but the operative trigger (rescinded or restored payment) is clear.",
+      "reasoning_cat2": "It sits alongside Section 2.01(d)'s termination on the EGL Guarantee Release Date, and the two can be harmonised as most guarantees are.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.06 Reinstatement"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Very short and definite: payments in Dollars without set-off or counterclaim.",
+      "reasoning_cat2": "Section 2.02(a) directs Deficiency funds to the Borrower rather than the Lenders, a minor mismatch with \"paid to the Lenders,\" but Section 2.07 is naturally read as covering guarantee payments.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 2.07 Payments"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Definite in stating who represents, to whom, and on what dates.",
+      "reasoning_cat2": "\"Effective Date\" is undefined here and drawn from the Credit Agreement, which Section 1.01 permits; otherwise consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III Representations introduction"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Ordinary corporate-existence representation; \"in compliance in all material respects\" is standard and materiality-qualified.",
+      "reasoning_cat2": "Uses \"Material Adverse Effect\" as defined in Section 1.01 and is consistent with it.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (a) Organization"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "An unqualified \"no consent or authorization ... is required\" is strong but definite, and the enforceability limbs carry the usual bankruptcy/equity carve-outs.",
+      "reasoning_cat2": "Consistent with the recital that execution was a condition precedent and with Section 4.09.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (b) Authority and enforceability"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Definite two-limb no-conflict representation with materiality qualification on limb (i).",
+      "reasoning_cat2": "The stamp-duty statement dovetails with Section 4.02(b)'s indemnity for stamp taxes, which assumes such taxes may arise — a mild tension but reconcilable.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (c) No conflict"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Contains the grammatical slip \"reasonably be expect to result,\" a minor typo that does not alter meaning.",
+      "reasoning_cat2": "Consistent with the Material Adverse Effect definition and the other Article III representations.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (d) No litigation"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A conventional solvency representation; \"unreasonably small capital\" is a term of art from fraudulent-transfer law rather than a drafting defect.",
+      "reasoning_cat2": "It complements Section 2.01(b)(ii)'s fraudulent-conveyance cap and is consistent with the benefit recital.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (e) Solvency"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"Shall at all time rank\" is a small grammatical error, and pari passu \"in right of payment in insolvency\" is stated definitely enough.",
+      "reasoning_cat2": "It coexists with Article III(l)'s no-more-favourable-guarantee covenant without contradiction.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (f) Pari passu ranking"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The phrase \"none of the or governors or managers\" contains a plain drafting error, and \"substantial Equity Interest\" and \"near relative\" are undefined thresholds.",
+      "reasoning_cat2": "\"Disclosed Matters\" is drawn from the Credit Agreement, which Section 1.01 permits; no conflicting provision.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (g) No director relationships"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "It mixes representations with a forward-looking covenant in one lettered paragraph and refers to \"the Facility,\" a term not defined here, but the substance is clear.",
+      "reasoning_cat2": "It cross-references Section 4.13 (Patriot Act) accurately and is consistent with it.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (h) Willful defaulter; OFAC"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The middle limb refers to immunity \"attributed to the Borrower\" in a Guarantor representation, an apparent mis-substitution of party that muddles the sentence.",
+      "reasoning_cat2": "It supports Section 4.10's jurisdiction submission and does not conflict with it, though the Borrower reference sits oddly with the Guarantor-only Article III.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (i) Waiver of immunity"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "A one-line representation using the defined term \"Default\" from the Credit Agreement; nothing vague on its face.",
+      "reasoning_cat2": "Consistent with Article III(m)(1)'s notice covenant regarding Defaults.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (j) No Default"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Standard information representation with a projections carve-out; \"taken as a whole\" and \"good faith\" are conventional qualifiers.",
+      "reasoning_cat2": "\"Confidential Information Material\" is undefined in this Agreement and taken from the Credit Agreement, which Section 1.01 allows.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (k) Confidential Information Material"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "\"Substantially more favorable to the beneficiary\" is a comparative standard with no metric, making breach hard to test.",
+      "reasoning_cat2": "It is a covenant placed inside a representations article introduced by \"represents and warrants,\" a structural mismatch shared with (m), (n) and (o).",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (l) No more favorable guarantee"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "Definite five-Business-Day notice trigger keyed to a Responsible Officer's knowledge; \"would reasonably be expected to\" is standard.",
+      "reasoning_cat2": "It is a covenant within the representations article and uses the Material Adverse Effect definition consistently.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (m) Notice of Default and Material Adverse Effect"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "The proviso excluding \"an arms length sale or disposal of its assets or properties\" appears to swallow the whole restriction, which is a self-defeating exception a court would have to construe.",
+      "reasoning_cat2": "Read with Section 2.01's guarantee and Article III(e) solvency, a covenant that permits any arm's-length disposal of all assets is hard to reconcile with the Lenders' evident protection.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (n) No disposal of assets"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "It refers to \"either Guarantor,\" \"either Guarantee Agreement\" and \"the Parent,\" none of which are defined in this document, so the persons covered are uncertain.",
+      "reasoning_cat2": "This Agreement names only EGL as Guarantor in the preamble, so the \"either Guarantor\" and \"Parent\" references cannot be squared with the parties as identified here without resort to the Credit Agreement.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article III (o) No commission payments"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Standard non-waiver and cumulative-remedies language, definite in operation.",
+      "reasoning_cat2": "It excepts written instruments \"pursuant to Section 4.12,\" but Section 4.12 is Notices, not amendments — a mis-cross-reference within the instrument.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.01 No Waiver by Course of Conduct; Cumulative Remedies"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "\"Reasonable costs and expenses\" is a familiar and workable standard; the scope is limited to collection and enforcement.",
+      "reasoning_cat2": "Consistent with the Borrower Obligations definition's inclusion of counsel fees and with Section 4.02(c) survival.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.02(a) Enforcement Expenses"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "\"Stamp, excise, sales or other taxes\" ends in a catch-all after specifics, raising a mild ejusdem generis question about which taxes are covered.",
+      "reasoning_cat2": "Article III(c) represents there is no requirement to pay stamp duty except amounts already paid, which sits in slight tension with indemnifying against such taxes.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.02(b) Taxes indemnity"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "A one-line survival provision; \"this Section\" is clearly Section 4.02.",
+      "reasoning_cat2": "Consistent with Sections 2.06 and 2.01(d) on post-payment continuation.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.02(c) Survival"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Clear anti-assignment proviso requiring the Facility Agent's consent.",
+      "reasoning_cat2": "Section 4.15 states the same restriction but requires consent of \"the Facility Agent and the Lenders,\" a direct inconsistency about whose consent is needed.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.55,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.03 Successors and Assigns"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Detailed and definite set-off authority conditioned on a continuing Event of Default, with exhaustive enumeration of deposit types.",
+      "reasoning_cat2": "\"Event of Default\" is undefined here but drawn from the Credit Agreement per Section 1.01; the notice-failure saver is consistent with Section 4.12.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.04 Set-Off"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "Routine counterparts clause with no ambiguous term.",
+      "reasoning_cat2": "The signature pages are partly unexecuted, but that is an execution fact rather than a textual conflict with this clause.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.05 Counterparts"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "Standard severability wording, definite in operation.",
+      "reasoning_cat2": "Consistent with Section 2.01(b)(ii)'s savings cap and the enforceability representation.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.06 Severability"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "A clear interpretive instruction limited to headings.",
+      "reasoning_cat2": "Consistent with Section 1.02's rules of interpretation.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.07 Section Headings"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "Ordinary integration language covering this Agreement and the other Loan Documents.",
+      "reasoning_cat2": "Section 4.14 states the entire agreement is \"this Agreement\" alone, while 4.08 includes the other Loan Documents, and both sit against Section 1.03's override — a genuine reconciliation problem.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.08 Integration"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "An unqualified New York governing-law clause in capitals; nothing to construe in the words.",
+      "reasoning_cat2": "Sits comfortably with Section 4.10's New York forum submission; the Cayman incorporation and Banking Regulation Act of India references do not displace it.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.09 GOVERNING LAW"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The bracketed \"[New York]\" is an unresolved drafting placeholder, \"shall irrevocably designate\" is future-tense for something meant to be effective at signing, and \"Each of the Guarantor\" is ungrammatical.",
+      "reasoning_cat2": "Its final sentence preserving the Lenders' right to sue in any venue where the Guarantor's assets are found pulls against the New York submission in Section 4.10(a).",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.10(b) Process Agent"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "Emphatic, definite jury waiver; the reference to \"THE COMPANY\" instead of the Borrower is a stray label but harmless.",
+      "reasoning_cat2": "\"The Company\" appears nowhere else in this Agreement, a small mismatch with the defined \"Borrower,\" but nothing operative turns on it.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.11 WAIVER OF JURY TRIAL"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "\"Effective when received\" with enumerated permitted delivery methods is definite; the reference to the address \"set forth below its signature below\" is clear.",
+      "reasoning_cat2": "One executed signature page leaves the address blank while another supplies a Mauritius address, and Section 4.01's cross-reference to Section 4.12 for written waivers is misdirected.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.12 Notices"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "The parenthetical \"(for itself and not on behalf of any Lender)\" contradicts the opening \"Each Lender and the Facility Agent,\" a mechanical slip in who is giving the notice.",
+      "reasoning_cat2": "Article III(h) opens \"In addition to the requirements of Section 4.13,\" which fits this clause consistently.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.13 Patriot Act"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The wording is definite but confines the entire agreement to \"this Agreement\" alone.",
+      "reasoning_cat2": "That directly conflicts with Section 4.08, which treats this Agreement and the other Loan Documents together as the parties' agreement, and with Section 1.03's contemplation of other Loan Documents.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.14 Entire Agreement"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "\"The Guarantor shall not the right to assign\" is missing a verb, an outright mechanical error in the operative restriction.",
+      "reasoning_cat2": "It requires consent of \"the Facility Agent and the Lenders\" whereas Section 4.03 requires only the Facility Agent's consent, a direct inconsistency between two operative provisions.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.56,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "SECTION 4.15 Benefit of Agreement"
+    }
+  ]
+}

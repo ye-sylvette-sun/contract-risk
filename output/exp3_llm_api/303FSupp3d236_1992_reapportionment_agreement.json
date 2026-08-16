@@ -1,0 +1,834 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The extension is date-definite, but the qualifier \"to the extent such Collective Bargaining Agreement is not modified by, or inconsistent with, the terms and conditions set forth herein\" leaves the reach of the surviving CBA terms open to argument. \"Inconsistent with\" is the kind of phrase parties dispute when a CBA term and a Memorandum term overlap.",
+      "reasoning_cat2": "The Memorandum repeatedly leans on the underlying CBA (e.g. §8.A wages, Appendix A.E pay entitlement, §7.C boards), so the boundary drawn here matters throughout; Appendix A.B.2's reference to \"the current Collective Bargaining Agreement\" expiring is in some tension with this extension to 2000.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble — Extension of Collective Bargaining Agreement"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"Except as otherwise provided herein\" plus \"any new or rebuilt facility\" is broad language whose application depends on what counts as \"rebuilt,\" an undefined term.",
+      "reasoning_cat2": "The side letter (neg64) expressly excludes 43rd Street and the staging facility from all \"new and rebuilt facilities\" references, so this general grant must be read subject to a carve-out outside the four corners of the Memorandum.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.A. Contract applicable at new or rebuilt facilities"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The provision lists broad categories (\"technological innovations, methods of operation, scheduling practices and/or working conditions\") followed by \"e.g.\" examples, raising a classic ejusdem generis question about how far beyond palletization, tractor-trailer delivery and card readers the permission extends.",
+      "reasoning_cat2": "It dovetails with §1.C (further innovations go to interest arbitration) and §1.A, and the neg64 side letter limits the facilities covered; no direct contradiction appears.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.B. Edison innovations may be employed elsewhere"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Different from and/or in addition to those employed at Edison\" and the 120-day negotiation trigger are workable, though the boundary between §1.B practices (permitted outright) and §1.C practices (arbitrable) is not sharply drawn.",
+      "reasoning_cat2": "It sits against §2, which gives the Merits Arbitrator jurisdiction over interpretation and application grievances, and here adds interest arbitration to that same neutral; the fit is awkward but not contradictory.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.C. Further innovations; interest arbitration"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The mechanics of termination and effectiveness are stated with dates and a cross-reference, though \"pursuant to the procedure set forth below\" and \"except as otherwise provided herein\" leave the exceptions unenumerated.",
+      "reasoning_cat2": "The grant of jurisdiction over \"all grievances\" coexists uneasily with §7.C's reference to the Joint Standing Committee, Adjustment Board and Appeal Board as issuing tribunals, and with the Status Quo Arbitrator referenced later.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. The Contract Arbitrator — termination and duties of Merits Arbitrator"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "A short, definite default mechanism: failure to agree sends selection to the AAA Voluntary Labor Arbitration Rules.",
+      "reasoning_cat2": "Consistent with the preceding termination paragraph and with §1.C's use of the Merits Arbitrator; nothing else in the instrument contradicts it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Selection of replacement Merits Arbitrator"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "It cross-refers to \"the procedure described in paragraph B above,\" but no paragraph is labelled B in the reproduced section, and the \"Status Quo Arbitrator\" is nowhere defined in this Memorandum — a mechanical cross-reference defect.",
+      "reasoning_cat2": "The Status Quo Arbitrator appears nowhere else in the Memorandum, so its role must be imported from the underlying CBA, sitting oddly with §2's statement that the Merits Arbitrator hears all grievances.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Termination of Status Quo Arbitrator"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"Necessary manning reductions\" and \"most fair and equitable manner\" are aspirational and vague, and the clause says the list only \"summarizes\" the offer while the Attachments contain the real terms.",
+      "reasoning_cat2": "The summary/Attachment relationship invites conflict: Attachment B's eligibility date (date of ratification) differs from the 3.A.2) definition (on the list at signing and still at ratification).",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A. Buyout offer"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "A single figure and a single election between lump sum and annuity; nothing to construe.",
+      "reasoning_cat2": "Matches Attachment A II.1) and II.2) exactly; consistent with the whole.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.1) $70,000 to RSHs"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The amount is definite and the definition of \"Eligible Group I Employees\" is expressly given, though it fixes two reference dates (signing and ratification) that could diverge.",
+      "reasoning_cat2": "Attachment B I.1) describes eligibility only as being on the list \"effective the date of ratification,\" a narrower/different test than this definition, creating a discrepancy between the Memorandum and its attachment.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.2) $35,000 to Eligible Group I Employees"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The 450 FTE minimum, the 260-shift definition and the \"in lieu of and not in addition to\" language are specific, though \"highest straight time scale applicable\" leaves some room.",
+      "reasoning_cat2": "Three side letters modify this same paragraph — neg69 increases the minimum by reference to a 370 FTE baseline, neg66 draws shortfall funding from it, and neg74 reduces it for 1996 contributions spread back over 1992-1995 — making the resulting obligation hard to reconcile.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.3) Health and welfare contributions 1992-1995"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Two arithmetic formulas keyed to defined populations and a defined trigger; the wording is definite.",
+      "reasoning_cat2": "Consistent with 3.A.1)-2) and with Attachment A III.1)'s cross-reference; no conflicting provision found.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.4) One-time health and welfare contributions"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"To age 65 or for a period of five (5) years, whichever comes first\" is a definite duration rule with a stated contribution base.",
+      "reasoning_cat2": "Attachment A III.1) cross-references this paragraph accurately; the pension shortfall side letter addresses a different population (Group I non-buyouts).",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.5) Pension contributions for RSHs accepting buyout"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Short and definite; the only softness is that \"The Times life insurance\" is not further specified as to level of coverage.",
+      "reasoning_cat2": "Duplicated verbatim in Attachment A III.2) with no variance; consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.6) Life insurance continuation"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "A fixed 45-day window; \"commencing promptly after ratification\" adds slight imprecision to the start date.",
+      "reasoning_cat2": "Matches Attachment A III.4) and Attachment B II.5), and the 45-day period is the trigger used in §§5 and 6.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A.7) Buyout offer open 45 days"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The target figure (370 regular situations) and the source pool (non-accepting Eligible Group I Employees) are stated definitely.",
+      "reasoning_cat2": "Paragraph 4.B's floor of \"270 RSHS\" and 4.D's reference to \"attrition below 370\" cannot easily be squared with this 370 build-up figure.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.A. Additions to RSH list"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"There shall be no less than 270 RSHS\" appears to be a mechanical error for 370, and \"up to a maximum of 370\" sits oddly against a one-for-one replacement duty; the floor figure is the crux.",
+      "reasoning_cat2": "It contradicts 4.A (build to 370) and 4.D (\"as attrition below 370 RSHs occurs\"), so the manning floor cannot be determined from the instrument read as a whole.",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.57,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.B. Replacement procedure for Eligible Group I Employees"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The relief from daily replacement turns on \"specific manning requirements,\" a term used repeatedly but never defined anywhere in the Memorandum.",
+      "reasoning_cat2": "The same undefined term governs 4.D and interacts with the Appendix A guarantee of five straight-time shifts per week, so its content is left to be supplied from outside.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.C. No daily replacement of absent RSHs"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "It combines the undefined \"specific manning requirements\" with \"following discussion with the Union\" (consultation, not consent) and a broad discretion to fill or eliminate — language whose limits parties would contest.",
+      "reasoning_cat2": "It presupposes attrition below 370 while 4.B sets a floor of 270 and 4.A builds to 370, and the discretion here must be read against the Appendix A employment guarantees.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.D. Vacated situations; consolidation of segments"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "The clause states both a percentage cap (50%) and absolute outcomes (13 daily routes, 13 chauffeurs, 16 tailmen), and the arithmetic relationship among them is not self-evident, which is a latent numeric ambiguity.",
+      "reasoning_cat2": "It is keyed to the 45-day buyout window in 3.A.7) and mirrors the structure of §6; no contradicting provision was found.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. West Side Direct Reorganization"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"Subject only to the limitation\" plus \"used based on the needs of the operation\" grants broad discretion, and the stated 40 routes/40 chauffeurs/48 tailmen figures leave the tailmen ratio unexplained.",
+      "reasoning_cat2": "The neg65 side letter fixes forty existing finishing times to the forty remaining routes, and neg22 caps start times, both constraining the \"subject only to\" language.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Bulldog Reorganization — SNBD route consolidation"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "A single, definite cap on starting times tied to a defined event (commencement of Edison operations).",
+      "reasoning_cat2": "The neg65 side letter freezes SNBD finishing times for the contract's duration, which together with a fixed latest start time constrains shift length in a way the two documents do not reconcile expressly.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. SNBD starting times after Edison"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Numeric minimums for two categories of nights; the wording is definite.",
+      "reasoning_cat2": "Consistent with the SNBD paragraph above and with §4's manning provisions; no conflict identified.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Daily Bulldog route reorganization"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Clear elimination plus a carve-out, though \"recovery routes\" and \"alternate billing system\" are undefined.",
+      "reasoning_cat2": "Nothing else in the Memorandum addresses cash collections; consistent with the whole.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Elimination of cash collections"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "The catch-all \"or any other acts that interfere with the Publisher's operations or the production or sale of its products or services\" sits after an enumerated list of struck activities, raising a genuine ejusdem generis/scope question; \"Publisher\" is also used where the defined party is \"The Times.\"",
+      "reasoning_cat2": "It must be read with §7.C's conditional release and Appendix A.E's termination-of-guarantees remedy, which qualify but do not contradict it.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.A. No strikes"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "One short definite obligation; the only slip is the undefined label \"Publisher\" instead of \"The Times.\"",
+      "reasoning_cat2": "Consistent with §7.A and §7.C; no conflicting provision found.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.B. No lockouts"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The release turns on \"no substantial compliance,\" a standard whose application is contestable, and the double proviso structure makes the sequence of the five-day period and the determination unclear.",
+      "reasoning_cat2": "It names the Joint Standing Committee, Adjustment Board and Appeal Board as the issuing tribunals, while §2 vests all grievance resolution in the Merits Arbitrator, leaving the identity of the \"issuing neutral tribunal\" unsettled.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.C. Release from no strike-no lockout provision"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A definite holdover of existing rates to a stated date.",
+      "reasoning_cat2": "Dovetails with §8.B's increases effective March 31, 1993; consistent with the preamble's extension mechanism.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.A. Existing wages through March 30, 1993"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Stated increase and resulting scale are both given, making the figure self-checking and definite.",
+      "reasoning_cat2": "Consistent with §8.A and the following two increases; the me-too side letter (neg62) supplements rather than contradicts it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.B. Wage increase effective March 31, 1993"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Increase and resulting scale both stated and arithmetically consistent with the prior year.",
+      "reasoning_cat2": "Consistent with the wage schedule and the COLA paragraph; no conflict found.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.B. Wage increase effective March 31, 1994"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Definite figure consistent with the preceding step; nothing to construe.",
+      "reasoning_cat2": "Consistent with §8's reopener for the post-1996 period; no conflict identified.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.B. Wage increase effective March 31, 1995"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "The timetable and arbitration trigger are definite; \"wage givebacks below the then current scale\" is the only phrase with any give.",
+      "reasoning_cat2": "It fills the gap left by §8.B's schedule ending in 1995 and is consistent with the preamble's extension to March 30, 2000.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Wage reopener for 1996-2000"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The core sentence is grammatically broken — \"reapportion the contributions due on those increases between its pension plan and its health and welfare plan the total pension (8%) and health and welfare (7.68%) plan contributions made by The Times\" — so it is unclear whether reapportionment reaches only contributions on the increases or the total 15.68%; \"less then\" also appears for \"less than\".",
+      "reasoning_cat2": "Read against 3.A.(3) (H&W contributions on a 450 FTE minimum) and the pension/welfare shortfall side letters, the base on which the 8%/7.68% percentages operate and the effect of reapportionment on those fixed obligations cannot be settled from the instrument.",
+      "prob_cat1": 0.74,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Reapportionment of pension and welfare contributions"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The enumerated adjustment dates omit 1996 while the proviso speaks of \"all such adjustments beginning on March 31, 1992\" — a date earlier than any listed and before execution, which is an internal mismatch in the provision itself.",
+      "reasoning_cat2": "It also depends on \"the relevant provisions of the Contract\" carried forward by the preamble, and the omitted 1996 year sits against the 1996-2000 wage reopener in the same section.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Cost of living adjustments"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A one-sentence ratification condition; nothing ambiguous.",
+      "reasoning_cat2": "Consistent with the many provisions keyed to \"ratification\" as a trigger.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Ratification"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"Currently holding positions at The Times\" fixes no date, and \"active\" is undefined, so the eligible population is not precisely bounded.",
+      "reasoning_cat2": "The Memorandum's 3.A defines eligibility for RSHs simply as \"all active NMDU RSHs ... including foremen,\" so the Attachment's \"Steady Situation list\" and \"currently\" gloss adds a variable not in the body.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, I.1) Eligibility"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "A single figure; nothing to construe.",
+      "reasoning_cat2": "Matches 3.A.1) exactly; consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, II.1) Buyout payment amount"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The election mechanism is clear; \"a major insurance carrier\" and \"prevailing market interest rates\" are the only soft terms.",
+      "reasoning_cat2": "Consistent with 3.A.1) and with Attachment B II.2); no conflict found.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, II.2) Lump sum or annuity"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"The unpaid balance\" presupposes instalments, which fits an annuity but not the lump sum default, and the second sentence then defers wholly to the annuity terms — a mild internal awkwardness.",
+      "reasoning_cat2": "It is consistent with II.2)'s lump-sum/annuity structure and with Attachment B II.3); nothing else contradicts it.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, II.3) Death before full payment"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "A single negative undertaking, definite in scope.",
+      "reasoning_cat2": "Mirrored in Attachment B II.4); consistent with the voluntary characterisation of the buyout.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, II.4) Unemployment compensation claims"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Pure cross-reference to specified paragraphs; no ambiguous term of its own.",
+      "reasoning_cat2": "The cited paragraphs 3-A-(3) and 3-A-(5) do indeed cover welfare and pension contributions, but the side letters (neg66, neg69, neg74) alter 3-A(3), so the incorporated obligation shifts.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, III.1) Pension and welfare contributions"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Short and definite duration rule.",
+      "reasoning_cat2": "Duplicates 3.A.6) without variance; consistent with the whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, III.2) Life insurance continuation"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "The requirement is definite: written notice on the attached form surrendering the contractual employment guarantee.",
+      "reasoning_cat2": "The attached Notice of Termination form is dated \"December ___, 1991\" while the Memorandum is dated May 16, 1992, a mismatch between the operative clause and the incorporated form.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, III.3) Notice of Termination requirement"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "A fixed period with a stated commencement trigger.",
+      "reasoning_cat2": "Identical to 3.A.7) and Attachment B II.5); consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment A, III.4) Buyout offer period"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "\"On said list effective the date of ratification\" is a single-date test, and the label \"Eligible Group I List Employees\" differs from the defined \"Eligible Group I Employees\".",
+      "reasoning_cat2": "The Memorandum's 3.A.2) requires presence on the Group I list both at signing and at ratification, so this attachment states a broader eligibility test than the body it implements.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment B, I.1) Eligibility"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "A single figure; nothing to construe.",
+      "reasoning_cat2": "Matches 3.A.2); consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment B, II.1) Buyout payment amount"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Clear election mechanism; \"annucy\" is an obvious typo for annuity that does not change meaning, and \"prevailing market interest rates\" is mildly open.",
+      "reasoning_cat2": "Parallel to Attachment A II.2) and consistent with 3.A.2)'s lump sum or annuity language.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment B, II.2) Lump sum or annuity"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "As in Attachment A, \"unpaid balance\" fits annuity payment rather than the lump-sum default, a small internal tension.",
+      "reasoning_cat2": "Consistent with II.2) of the same attachment and its Attachment A counterpart.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment B, II.3) Death before full payment"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "A single definite undertaking.",
+      "reasoning_cat2": "Mirrors Attachment A II.4); consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment B, II.4) Unemployment compensation claims"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Fixed 45-day period; definite.",
+      "reasoning_cat2": "Matches 3.A.7) and Attachment A III.4).",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Attachment B, II.5) Buyout offer period"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "The class is defined only by reference to persons \"to be identified\" on Attachments 1 and 2, so the provision is incomplete on its face until those lists exist.",
+      "reasoning_cat2": "Appendix A.B, D and the 4.B guarantee reference all depend on these unappended lists, so the guarantee population cannot be determined from the instrument as produced.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, A. Guaranteed Employees"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "\"The opportunity to work five straight time shifts per week\" is reasonably concrete, but \"opportunity\" and \"for the duration of their guarantee period\" push the content onto other paragraphs.",
+      "reasoning_cat2": "It must be reconciled with 4.C (no obligation to replace absent RSHs) and Appendix A.C's inverse-seniority utilisation, which qualify how the five shifts are supplied.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, B. Guarantees"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "\"Upon completion of the process described in paragraph 4B\" is the crux: paragraph 4.B's replacement process runs \"during the term of this Agreement,\" so a single completion date is hard to fix.",
+      "reasoning_cat2": "Paragraph 4.B itself speaks of the replacement procedure both as ongoing through the term and as something that can be \"completed,\" so the effectiveness trigger for the guarantees is uncertain against the body.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, B. Effectiveness of guarantees"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "\"For as long as any named employee is employed\" uses \"any\" where \"such\" is evidently meant, and \"within the scope of the present NMDU bargaining unit\" invites dispute about unit changes.",
+      "reasoning_cat2": "The express survival of this guarantee beyond expiration sits against the preamble's fixed term to March 30, 2000 and against B.2's contrary cut-off for Attachment 2 employees.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, B.1. Guarantees for Attachment \"1\" employees"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "\"Until the expiration date of the current Collective Bargaining Agreement\" is genuinely ambiguous — the CBA is said to expire March 30, 1993 yet is extended to March 30, 2000 — and \"as long as any named employee remains a member of the bargaining unit\" repeats the \"any/such\" slip.",
+      "reasoning_cat2": "The preamble expressly extends \"the current Collective Bargaining Agreement\" to 2000, so this cut-off either terminates in 1993 or in 2000 depending on which reading of the same phrase prevails; that is a direct clash with the preamble and with B.1's survival clause.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, B.2. Guarantees for Attachment \"2\" employees"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "\"Utilize fully the services of Guaranteed Employees before employing any additional employees\" combined with \"in inverse seniority order\" is difficult to apply, since inverse seniority ordering cuts against a full-utilisation duty.",
+      "reasoning_cat2": "It interacts with the neg76-78 side letter, which also assigns work on an inverse-seniority basis to the most junior qualified holder, and with B's five-shift guarantee.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, C. Utilization"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "A clear non-transferability rule with one identified exception; the terms are definite.",
+      "reasoning_cat2": "The exception tracks paragraph 4.B's grant of guarantees to promoted Eligible Group I Employees, so the two fit together.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, D. General"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "The suspension trigger is defined by reference to circumstances \"under which RSH's are not entitled to be paid under the Collective Bargaining Agreement,\" so the test is objective though externally sourced.",
+      "reasoning_cat2": "It depends on CBA pay provisions carried forward by the preamble \"to the extent not modified by, or inconsistent with\" the Memorandum, which adds a layer of uncertainty.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, E. Duration — suspension of operations"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "\"Permanent suspension of the Newspaper\" is undefined and could be argued over (permanent versus prolonged, whole paper versus a facility), but the consequence is stated flatly.",
+      "reasoning_cat2": "Consistent with the preceding temporary-suspension sentence and with the no-lockout provision; no contradiction found.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, E. Permanent suspension of the Newspaper"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "The catch-all \"for any reason, including but not limited to\" followed by five specifics is broad but plainly intended to be exhaustive of causes; the drafting error \"Geath\" does not change meaning.",
+      "reasoning_cat2": "Parallel to 4.B and 4.D's identical \"for any reason, e.g.\" formulations; consistent with the whole.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, E. Terminated employees"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The trigger is layered — a violation that \"continues notwithstanding the issuance of a temporary restraining order by a court after a hearing\" — and \"may be terminated at the option of The Times\" leaves the scope of termination (all guarantees, or only the violators') unstated.",
+      "reasoning_cat2": "It has to be reconciled with §7.C, which lawfully releases the Union from the no-strike clause in defined circumstances; whether guarantees can then be terminated is not addressed.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Appendix A, E. No-Strike consideration; termination of guarantees"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "The me-too right turns on a \"wage package which is additional to or different from that contained herein\" and on provisos about wages \"granted in exchange for productivity improvements or attrition exceeding that which is contained in\" the Memorandum or \"diverted from an existing or subsequently negotiated wage package\" — all comparative judgments with no metric, and the parenthetical union list raises an expressio unius question.",
+      "reasoning_cat2": "It supplements §8's wage schedule and reopener and routes disputes to the contract's grievance and arbitration procedure, consistent with §2; no direct conflict.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Me-too wage package option"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "A single definite undertaking with a clear trigger (notification of ratification).",
+      "reasoning_cat2": "Consistent with §9's ratification condition; the letter appears twice in the package but identically.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Vacating the Preliminary Injunction"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "\"The staging facility\" is not identified anywhere, and the blanket exclusion of \"all references to 'new and rebuilt facilities'\" leaves it unclear whether §1.B/1.C rights are also lost at those sites.",
+      "reasoning_cat2": "It carves out of §1.A, which by its terms applies the modified contract at \"any new or rebuilt facility,\" so the operative section and the side letter pull in different directions on facility coverage.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — New and rebuilt facilities exclusion"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "The undertaking is specific — forty existing finishing times assigned to the forty remaining routes, unchanged for the contract's duration — with little verbal give.",
+      "reasoning_cat2": "It constrains §6's statement that reorganisation is \"subject only to\" the forty-route minimum and interacts with the 4:00 p.m. start-time cap, so the three together fix shift length in a way none states expressly.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Saturday Night Bulldog finishing times"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "\"Shortfalls that may exist between shift contributions needed to maintain benefits status\" and \"necessary to maintain benefit status\" depend on plan rules not stated here, leaving the amount open.",
+      "reasoning_cat2": "It directs 3.A.(3) contributions to a use that paragraph describes as a minimum \"in lieu of and not in addition to\" other contributions, and neg74 simultaneously reduces those same contributions, making the net obligation hard to reconcile.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Welfare Fund shortfalls for Eligible Group I Employees"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "\"Separate contributions\" to fund shortfalls is a definite obligation in structure, though the shortfall measure again depends on external benefit-status rules.",
+      "reasoning_cat2": "It parallels the welfare paragraph and is conditioned by neg68; consistent with 3.A.(5)'s pension provision for buyout takers, which covers a different group.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Pension Fund shortfalls"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "\"Willingness of the individuals involved to avail themselves of all work opportunities that may exist\" is a vague and unmeasurable condition, and it is unclear whether one refusal defeats funding for the whole group.",
+      "reasoning_cat2": "It qualifies the two preceding shortfall paragraphs; nothing in §4's replacement procedure defines what work opportunities Group I employees must accept.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Condition on funding shortfalls"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "The mechanism is arithmetic but keyed to a 370 baseline while the obligation it increases is expressed as a 450 FTE minimum, so the starting point for the increase is not self-evident.",
+      "reasoning_cat2": "Read with 3.A.(3) (minimum 450 FTEs) and neg74 (reduction of the same 450-based contributions), the H&W contribution level during the pre-Edison period cannot be computed with confidence.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Increase in minimum FTE contributions"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "\"Dedicated school and college routes may be added as needed\" and suspension or abolition \"at the discretion of The Times\" are open-ended, and \"e.g., during summer and school holidays\" is an illustrative rather than limiting list.",
+      "reasoning_cat2": "The 2:30 a.m. shift and reversion to 11:30 p.m. and the no-tailman rule cut across §4's manning and bidding structure, but no specific provision is contradicted.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Schools and Colleges program"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "\"Will make every effort within its control to insure\" is a classic best-efforts formula whose content is indeterminate, and \"bootlegging\" is nowhere defined.",
+      "reasoning_cat2": "It refers jurisdiction back to the Collective Bargaining Agreement carried forward by the preamble, and disputes would go to the Merits Arbitrator under §2; no conflict identified.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Bootlegging operations"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "Composition, timing and purpose are all specified; nothing ambiguous.",
+      "reasoning_cat2": "Consistent with the ratification trigger in §9 and with the Edison start-up commitments in §1.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Carlstadt/Edison transition committee establishment"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "\"Specifically charged with administering the transfer process\" states a role without any standard, deadlock mechanism or criteria, so its operative content is thin.",
+      "reasoning_cat2": "No other provision governs Carlstadt transfers, so there is nothing to conflict with, though the committee's authority relative to §4 bidding is unaddressed.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Charge of transition committee"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "The clause makes 1996 contributions but directs that the offsetting reduction \"be evenly distributed throughout the calendar years 1992, 1993, 1994, and 1995\" — a backward-looking reduction for a later-year credit that is difficult to apply as written.",
+      "reasoning_cat2": "It reduces the very 450-FTE minimum fixed by 3.A.(3), which neg66 simultaneously relies on to fund Group I shortfalls and neg69 increases, leaving the contribution obligation for 1992-1996 internally unsettled.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — 1996 H&W contributions for buyout employees age 60 or below"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "An agreement to take \"the steps necessary\" to amend the plan is somewhat open but the object is identified by cross-reference.",
+      "reasoning_cat2": "Consistent with 3.A.(3) and the other H&W side letters; it presupposes rather than contradicts them.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Amendments to Health and Welfare Plan"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "\"On an inverse seniority basis, to assign the most junior qualified situation holder\" and \"pending final award\" are workable, though \"qualified\" is undefined and the reach beyond Edison is unstated.",
+      "reasoning_cat2": "It sits with Appendix A.C's inverse-seniority utilisation rule and with §4.D's bidding and consolidation rights, which govern the same vacancies from a different angle.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Filling vacant, newly created or temporary situations"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "The last sentence — \"They shall be permanently assigned to permanent or vacant positions in the event those situations are not filled by bid\" — is loosely drafted and sits awkwardly with the preceding promise of restoration to the former situation.",
+      "reasoning_cat2": "The same permanent-assignment rule appears again in the next paragraph together with the volunteer's return, so the two paragraphs overlap and must be sequenced by construction.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Notice to junior situation holders"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "The interlocking three-day, seven-day and \"not filled by bid\" steps do not state how the volunteer's temporary fill relates to the bidding timetable, leaving the sequence uncertain.",
+      "reasoning_cat2": "It duplicates and partly restates the assignment rule in the preceding paragraph and interacts with §4.D's bidding rights, so the procedures must be harmonised.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Chapel Chairman notification procedure"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "\"Foreseen to be of two (2) weeks or less duration\" leaves the forecaster and the consequence of a mistaken forecast unstated.",
+      "reasoning_cat2": "It carves out of the immediately preceding staffing procedures and is consistent with 4.C's relief from daily replacement.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Exclusion for short temporary vacancies"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "A short, definite option keyed to assignments made under the same letter.",
+      "reasoning_cat2": "Consistent with 4.D's discretion to fill or eliminate vacated situations; no conflict found.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Option to fill resulting vacancies"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "\"The NMDU may, within 72 hours, discuss the possibility of employment opportunities\" creates no obligation on The Times and no consequence, so its operative effect is genuinely uncertain.",
+      "reasoning_cat2": "Nothing else in the Memorandum addresses hiring from other papers, and §4.B channels RSH vacancies to Eligible Group I Employees, which limits any such opportunities.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — Closure of Daily News or Post"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "A specific award with named days off and a stated start time; nothing to construe.",
+      "reasoning_cat2": "It is an individual settlement and does not interact with the manning or bidding provisions in any contradictory way.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — M. Santor grievance settlement (position awarded)"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "\"Withdraw his grievance with prejudice\" is definite and its consideration is stated.",
+      "reasoning_cat2": "Consistent with the preceding paragraph and with the grievance machinery in §2.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Side letter — M. Santor withdrawal of grievance"
+    }
+  ]
+}

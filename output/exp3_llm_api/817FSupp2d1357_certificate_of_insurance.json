@@ -1,0 +1,114 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The sentence identifies a single insurer by name, and the only oddity is the OCR rendering of \"an\" as \"2\", which does not change meaning. Nothing here carries two reasonable readings.",
+      "reasoning_cat2": "It sits consistently with the header naming Zurich American Insurance Company and the policy number; no other provision names a different insurer.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Insuring Company Designation"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The phrase \"first be made and reported in writing to the Company during the 'Certificate Period' or any applicable Extended Reporting Period\" is the classic locus of dispute over what constitutes a claim and when it was \"made\" and \"reported,\" and \"any applicable\" leaves the trigger conditions unstated on the face of the certificate. The added sentence that \"Defense Costs are provided in addition to the Limits of Liability\" also invites argument about interaction with Item 4.",
+      "reasoning_cat2": "The notice depends on definitions and reporting mechanics found only in the Master Policy referred to in Items 7, 8 and the acceptance clause, so its meaning cannot be fixed from this document alone, though no direct contradiction appears within the certificate.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Claims Made and Reported Notice"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A bare identification of a named person and address; there is no operative term capable of two readings.",
+      "reasoning_cat2": "It is referenced by Item 5's \"address shown in Item 1\" and by the limits keyed to \"Each Named Certificate Holder,\" and is consistent with both.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 1. \"Named Certificate Holder\" and Address"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Empire General\" is an incomplete corporate name and \"the Registered Representatives of ProEquities, Inc.\" is an open class rather than a named entity, so who is an additional insured, and for what conduct, is uncertain on the face of the entry. The garbled \"tac,\" for \"Inc.\" is a transcription artifact rather than a substantive error.",
+      "reasoning_cat2": "The scope of additional-insured status must be read against the Master Policy and against Item 6's deductible split for \"products of Protective Life and ProEquities,\" which reinforces but does not contradict this entry.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 2. \"Additional Insured\""
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A producer name and mailing address with no operative content; the stray characters are OCR noise and change nothing.",
+      "reasoning_cat2": "No other provision assigns any function to the producer, so there is nothing to conflict with.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 3. Producer and Mailing Address"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The per-claim figure appears as \"$2,060,000,09\" against a \"$2,000,000.00\" aggregate, a numerical irregularity that on its face leaves the each-claim limit uncertain, though it reads as scanning noise. Otherwise the per-claim/aggregate structure is definite.",
+      "reasoning_cat2": "It must be read with the claims-made notice's statement that Defense Costs are payable in addition to the Limits of Liability, which is complementary rather than contradictory.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 4. Limits of Liability"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The dates are rendered \"2/45/2007\" and \"2/AS/2808,\" which as written are impossible dates and would leave the certificate period indeterminate, although this is plainly OCR corruption of 2/15/2007–2/15/2008. The \"local time at the address shown in Item 1\" mechanism is otherwise precise.",
+      "reasoning_cat2": "The period is the operative trigger for the claims-made notice, and the two provisions cross-reference each other coherently.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 5. \"Certificate Period\""
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The two-tier deductible turns on whether a claim \"involves products of Protective Life and ProEquities, Inc.\" versus \"all other covered products,\" and both \"involving\" and the residual catch-all leave borderline claims uncertain. The layout also places the $500 tier before the item label, blurring which figure attaches where.",
+      "reasoning_cat2": "It aligns with Item 2's naming of Protective Life and ProEquities, and the residual category depends on what the Master Policy treats as a covered product, but no contradiction appears.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 6. Deductible"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"Refer to Master Policy\" states no amount and no method, so the premium term is not ascertainable from this document, though the referral itself is unambiguous in direction.",
+      "reasoning_cat2": "It is consistent with the acceptance clause's statement that the certificate is issued in accordance with the Master Policy, but sits uneasily with that clause's assertion that this policy embodies all agreements.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 7. Premium"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The entry identifies no endorsements at all and merely points elsewhere, leaving which endorsements are effective at inception undetermined on the face of the certificate.",
+      "reasoning_cat2": "Like Item 7 it depends wholly on the Master Policy, which is in tension with the acceptance clause's integration language stating this policy embodies all agreements.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 8. Endorsements Effective at Inception"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The clause both incorporates the \"Master Policy\" and declares that \"this policy embodies all agreements existing between the Named Certificate Holder and the Company,\" and the sentence is truncated mid-phrase, leaving the reach of the integration language and of the incorporated representations uncertain. \"Statements in the Certificate of Insurance and the application and any attachments hereto\" is an open-ended list whose scope is not fixed.",
+      "reasoning_cat2": "Read against Items 7 and 8, which supply no terms and say only \"Refer to Master Policy,\" the integration statement that this document embodies all agreements is hard to reconcile with the certificate's dependence on an external policy.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Issuance and Acceptance Provision"
+    }
+  ]
+}

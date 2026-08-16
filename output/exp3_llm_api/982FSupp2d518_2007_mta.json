@@ -1,0 +1,134 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The definition sweeps in \"any progeny, portions, unmodified derivatives and any accompanying know-how or data,\" terms whose boundary is genuinely contestable — notably whether a lentiviral vector clone built from the construct is a \"derivative\" or \"progeny\" — and the OCR-garbled \"unmoditteci derivatives\" compounds the uncertainty. The no-license sentence's \"[e]xcept as provided in this Agreement\" also leaves the extent of any implied rights open.",
+      "reasoning_cat2": "Read against paragraph 3, which authorizes the Recipient to produce a vector clone \"incorporating Materials,\" and paragraph 5, which claims St. Jude ownership of \"any progeny,\" it is unclear whether the authorized product is itself \"Materials\" subject to the transfer and commercialization restrictions. That interaction is the sort of whole-instrument tension a court would have to resolve.",
+      "prob_cat1": 0.63,
+      "prob_cat2": 0.52,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"Sole purpose,\" \"may not be provided to a commercial entity,\" and \"research that is subject to consulting or licensing obligations to another party\" are each open-textured, and the exception for \"obligations imposed upon grantee institutions of the U.S. government\" is a specific carve-out that leaves the general bar's reach uncertain. Whether a downstream corporate collaboration constitutes provision to a commercial entity or subjecting the research to licensing obligations is precisely the kind of contest the words invite.",
+      "reasoning_cat2": "Paragraph 5 expressly contemplates that Recipient may file a patent application or \"commercialize a product\" derived from the Materials, which sits awkwardly with paragraph 3's prohibition on commercial provision and on use subject to licensing obligations. Harmonising the two requires construction, so the relational risk is substantial.",
+      "prob_cat1": 0.6,
+      "prob_cat2": 0.53,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The clause both asserts St. Jude's \"ownership of the Materials and any progeny\" and says \"[o]wnership shall follow inventorship according to US patent law,\" two different ownership rules, and the only obligation on commercialization is the vague duty to \"contact St. Jude to determine ownership interests, if any.\" A stray period after \"use of the Materials\" also fractures the conditional sentence, obscuring what triggers the duty.",
+      "reasoning_cat2": "It is in tension with paragraph 3's bar on commercial use and with paragraph 1's statement that no express or implied licenses are granted, since it presupposes Recipient may patent and commercialize; the 30-day pre-submission review also overlaps imperfectly with paragraph 4's simple copy-of-publication duty. Those cross-references make relational construction likely.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.5,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble is a simple statement of intent to supply \"materials developed at St. Jude\" and identifies the Recipient definitionally; \"materials developed at St. Jude\" is broader than the defined term but the preamble is not operative in itself. Little turns on its wording.",
+      "reasoning_cat2": "Paragraph 1 supplies the controlling specific definition of \"Materials,\" which readily governs over the preamble's general phrase. No conflict with the rest of the letter agreement.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble — Agreement to Provide Materials"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"[A]ll applicable Federal, State and local laws, rules, regulations and guidelines including, but not limited to\" human-subjects laws is a broad catch-all with an illustrative example, a mild general-versus-specific point but one with an express anti-limitation phrase. The allocation of \"sole responsibility\" is otherwise definite.",
+      "reasoning_cat2": "It sits comfortably with the indemnity in paragraph 7 and the use restrictions in paragraph 3. Nothing in the instrument contradicts it.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Compliance with Laws"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The duty to provide \"a copy of any publication that contains experimental results obtained from the use of the Materials\" is plain, though it does not state whether the copy comes before or after publication. The OCR garbling is noise rather than substantive ambiguity.",
+      "reasoning_cat2": "Paragraph 5 imposes a 30-day pre-submission review for publications of results using the Materials, so the two publication provisions overlap and a reader must work out whether paragraph 4 adds a post-publication duty only. The tension is reconcilable but real enough to note.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Publications and Acknowledgment"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A conventional all-caps disclaimer of warranties, non-infringement and consequential damages, with no contested term; \"experimental in nature\" is descriptive. The wording is definite.",
+      "reasoning_cat2": "It complements paragraph 7's indemnity and conflicts with nothing else; note only that the survival list in paragraph 10 cites \"Sections 5, 5 and 7,\" leaving unclear whether this misnumbered paragraph survives. That numbering problem belongs mainly to the survival clause.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "\"[A]ny and all claims, demands or legal causes of action of any nature whatsoever (including without limitation legal expenses), arising out of or related to\" is broad but standard, and the long enumerated list of indemnitees is exhaustive rather than open-ended. There is no carve-out for St. Jude's own fault, which is one-sided but not ambiguous.",
+      "reasoning_cat2": "It fits with paragraphs 2, 6 and 8 (insurance backing the indemnity) and is expressly preserved by the survival sentence in paragraph 10. No inconsistency identified.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Indemnification"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The aggregate figure is written as \"Three Million ($1,000,000)\" — the words and the numeral contradict each other, a mechanical error that changes the amount required, and \"claims made including tail coverage\" is garbled. That is a nameable defect on the face of the provision.",
+      "reasoning_cat2": "Paragraph 9 cross-references \"section 8\" coherently and nothing else in the MTA sets an insurance amount. The relational fit is sound.",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Liability Insurance"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The obligation is triggered \"upon request\" and the two required contents are enumerated clearly; the only oddity is that the insurer, not the Recipient, must promise notice. Wording is essentially definite.",
+      "reasoning_cat2": "It accurately cross-refers to the insurance obligation in section 8 and conflicts with no other term. Consistent with the whole.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Certificate of Insurance"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The survival sentence reads \"Sections 5, 5 and 7 shall survive,\" a duplicated numeral that leaves genuinely uncertain which provisions survive, and the return obligation covers \"all Materials and progeny\" without addressing derivatives already incorporated into a vector. The numbering slip is a mechanical error affecting meaning.",
+      "reasoning_cat2": "The document itself contains two paragraphs numbered 5 (ownership and the warranty disclaimer), so the survival list cannot be applied without reconciling the mis-numbering; it also leaves unclear how the return duty interacts with paragraph 3's authorized production of vector clones. That is a specific internal incoherence.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Termination and Survival"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "Standard modification-in-writing, non-waiver and severability language with no contested term. The wording is definite.",
+      "reasoning_cat2": "No amendment or entire-agreement provision elsewhere competes with it, and it does not touch the use or ownership terms. Consistent with the instrument.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Modification, Waiver and Severability"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Procedural instructions for returning a signed copy and a statement that Materials will be forwarded upon receipt; the language is administrative and plain. Nothing to construe.",
+      "reasoning_cat2": "It aligns with the preamble's conditioning of delivery on agreement to the terms and with the signature blocks. No conflict found.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Acceptance and Return of Signed Copy"
+    }
+  ]
+}

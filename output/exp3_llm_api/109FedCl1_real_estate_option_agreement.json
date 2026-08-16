@@ -1,0 +1,434 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "\"shall continue in effect for a period of not less than one (1) year\" sets a floor but no ceiling, leaving the option's outer expiration date genuinely uncertain, and it then speaks of exercise \"on or before its expiration inclusive of any extension period\" without fixing that expiration. The clause also ties effectiveness to \"the date of the receipt of notice,\" a phrase that can mean actual or deemed receipt.",
+      "reasoning_cat2": "Section 20 deems notices received on the second business day after mailing, which does not sit comfortably with this clause's \"effective on the date of the receipt of notice,\" and Paragraph 14's termination on failure to exercise \"within the time ... provided herein\" depends on the very term this clause leaves open-ended. Paragraph 21 (time of the essence) further presses against an indefinite \"not less than one year\" term.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.46,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 2 — Term of Option (exercise by written notice)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"If Optionee elects not to exercise\" makes termination turn on an election, yet the clause also refers to failing \"to complete the purchase within the time and in the manner provided herein,\" so it is unclear whether mere lapse of time or an affirmative election is required. The listed objects (\"rights, option, or fee simple interests granted herein\") are loosely assembled.",
+      "reasoning_cat2": "The \"time ... provided herein\" cross-refers to Paragraph 2's open-ended \"not less than one (1) year\" term, so this clause cannot be applied without resolving that ambiguity, and Paragraph 9's 90-day post-exercise closing window adds a second candidate deadline. That interdependence is a real, nameable relational tension.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.44,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 14 — Failure to Exercise Option"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The deeming rule covers mail and overnight courier but omits personal delivery, which is one of the permitted methods listed, leaving when a hand-delivered notice is \"received\" unaddressed; the punctuation (\"addressed as follows;\") is also garbled. Whether the deemed-receipt rule is a floor or a conclusive substitute for actual receipt is not stated.",
+      "reasoning_cat2": "Paragraph 2 makes exercise effective \"on the date of the receipt of notice ... as provided in Section 20,\" so the deeming rule here and actual receipt there can diverge, which is a specific conflict about the date exercise takes effect. The named Contracting Officer in Paragraph 19 matches the addressee here, so no further inconsistency appears.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.45,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Paragraph 20 — Notices"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The recitals are descriptive and the consideration clause is standard; \"approximately 266,200 square feet\" and \"most advantageous site\" are soft but are not operative promises. Nothing here needs to be applied to conduct.",
+      "reasoning_cat2": "The recital that Optionee \"requires a no-cost assignable option\" sits a little oddly with the $10 recited consideration and with the Optionor cost obligations in Paragraphs 5, 6 and 12, but that is a background/operative mismatch of low practical bite. No direct contradiction was found.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble and Recitals"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"approximately 10.89 acres\" is imprecise but the Property is pinned by the Exhibit 1 description; \"exclusive and irrevocable\" is definite. The assignment sentence names only \"Optionee's developer\" as assignee.",
+      "reasoning_cat2": "Paragraph 13 permits assignment by Optionee without consent generally, while this clause frames assignability as running to the Developer, and the Memorandum recites \"10.89 acres\" without \"approximately\" — mild inconsistencies rather than a squarely conflicting term.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Grant of Option"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The payment mechanic depends on TIF reimbursement \"received by Developer,\" a non-party at signing, and the illustrative figures ($2,000,000/$200,000/$1,000,000) may not reconcile with the stated $9,000,000 less $8,000,000 if deductions apply; \"standard deductions and prorations\" is also undefined. The interest sentence (\"to the same extent, if any\") is loosely drafted.",
+      "reasoning_cat2": "Paragraph 8's $500,000 Limitation of Liability and Paragraph 12's reduction for under-approved Eligible Activities both bite on the same Outstanding Balance, raising a real question of double deduction, and Paragraph 12's retention provision holds it back entirely. That cluster is a genuine harmonisation problem.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Purchase Price"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The conveyance covenant is definite as to deed type and title quality, though \"Upon payment of the Purchase Price, less the Outstanding Balance\" is an awkward condition given the balance is paid post-closing. \"Standard deductions, prorations and or adjustments\" is a soft catch-all.",
+      "reasoning_cat2": "Permitted Exceptions are here said to be \"set forth in Exhibit 1,\" whereas Paragraph 6 defines Permitted Exceptions as those title conditions Optionee did not object to — two different definitional sources for the same defined term. That is a specific, nameable inconsistency.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Conveyance"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The obligations are dated and technically specified by reference to the 2005 ALTA/ACSM standards; \"such Table A items as Optionee may elect\" is open but by design. The December 31, 2006 deadline is definite.",
+      "reasoning_cat2": "It dovetails with Paragraph 12's street-vacation obligations and Paragraph 6's title work; no contradiction found. The December 31, 2006 survey date depends on approvals whose deadline in Paragraph 12 can be extended, a minor sequencing friction.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Survey"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The second sentence switches to \"Seller\" and \"Purchaser,\" terms not defined anywhere in this Option, and repeats the thirty-day deadline in slightly different words (\"as soon as possible, but in no event later than\"). That is a mechanical drafting slip that muddies who owes what.",
+      "reasoning_cat2": "The undefined Seller/Purchaser labels are inconsistent with the Optionor/Optionee scheme used throughout, and the promise of a policy \"without standard exceptions\" sits against the Permitted Exceptions regime in the next paragraph and Paragraph 4. The tension is modest but identifiable.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Title Insurance"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Option (2) permits Optionee to \"allow Optionor to attempt to resolve\" defects \"during the term of the Option,\" which is uncertain given the open-ended term, and option (3) ends with an Optionor-elected surety bond that sits oddly inside an Optionee \"option.\" The three-way election is otherwise structured.",
+      "reasoning_cat2": "It defines \"Permitted Exceptions\" differently from Paragraph 4, which locates them in Exhibit 1, and its cure window depends on the Paragraph 2 term. Those are specific points of friction.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Title Defects (second paragraph)"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A short, standard representation of record ownership and authority with no ambiguous term. Its boundaries are clear.",
+      "reasoning_cat2": "Consistent with Paragraph 22's authority documentation requirement and with the Memorandum's notarised acknowledgement. No conflict found.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(a). Optionor's Representation - Ownership"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"No knowledge of any reason why the local governmental authorities would not allow\" is a knowledge-qualified representation whose scope is soft, and \"peaceable and undisturbed\" possession is boilerplate. Still, knowledge qualifiers are conventional and applied routinely.",
+      "reasoning_cat2": "It coexists with Paragraph 12's acknowledgement that numerous approvals are still needed, which slightly tempers but does not contradict a no-knowledge representation. Nothing squarely inconsistent.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(b). Optionor's Representation - Development and Title"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"Sufficient size, capacity\" and \"for its current use\" are vague qualifiers, and it is unclear whether sufficiency is measured against current use or the contemplated federal facility. That is a nameable ambiguity.",
+      "reasoning_cat2": "Paragraph 12 contemplates \"utility relocation\" as a needed approval, which pulls against a representation that utilities are available for immediate connection without special charge. The tension is mild but real.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(c). Optionor's Representation - Utilities"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The disclosure is specific, tied to a statutory definition of \"facility,\" and to identified environmental reports; \"all environmental information that it has\" is bounded by possession. Wording is definite.",
+      "reasoning_cat2": "It is expressly carved out of the 7(e) representations and coordinates with Paragraph 8's Due Care regime. No inconsistency.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(d). Optionor's Representation - Environmental Disclosure"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The \"to the best of Optionor's actual knowledge\" qualifier plus \"except as otherwise indicated on Schedule A\" makes the representation narrow and reasonably determinate. \"All federal, state and local laws, rules, regulations, ordinances, codes and orders\" is broad but exhaustive rather than a catch-all after specifics.",
+      "reasoning_cat2": "It expressly defers to Schedule A and paragraph 7(d), so it harmonises with the environmental disclosure. No conflict located.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(e)(1). Compliance with Environmental Laws"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"Toxic, dangerous or hazardous substances\" is undefined here, and \"dangerous\" in particular has no statutory anchor, but the list is short and knowledge-qualified. Modest vagueness.",
+      "reasoning_cat2": "Sits under the same Schedule A / 7(d) carve-out and does not contradict the \"facility\" disclosure. Consistent with the whole.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(e)(2). No Storage or Disposal of Hazardous Substances"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "The sentence is convoluted — the representation is conditioned on a subsequent purchaser \"avail[ing] itself of the available statutory exemptions\" — and the second sentence's \"The exemptions include\" list is an odd, incomplete gloss. Its operative reach is hard to pin down.",
+      "reasoning_cat2": "It interlocks with Paragraph 8's Due Care obligations and MCL 324.20107a without contradicting them. No specific conflict found.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(e)(3). No Activities Subjecting Owner to Liability"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The bring-down is clear in effect: representations continue \"until and including any exercise of this Option.\" The only softness is that it is silent as to the period between exercise and closing.",
+      "reasoning_cat2": "It overrides in part the knowledge qualifiers by saying representations \"are true and correct,\" a mild tension with 7(e)'s \"best of actual knowledge,\" and stops at exercise while Exhibit 1 governs to closing. Worth noting but not a clear contradiction.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Continuing Truth of Representations"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "\"Reasonably cooperate,\" \"most cost effective and appropriate,\" and \"best efforts to obtain the maximum allowable reimbursable costs\" are open-textured standards, and it is Optionee who must estimate costs it then submits for approval. The vagueness is nameable.",
+      "reasoning_cat2": "Paragraph 12 assigns Optionee the task of determining Eligible Activities \"with the assistance of the Optionor,\" while this paragraph says Optionee estimates costs — broadly consistent, though the allocation of drafting versus estimating is split across the two. Only mild friction.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Due Care Activities"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"All of the costs and activities necessary to achieve Due Care both during pre and post construction\" is imprecise, and it is unclear whether the $500,000 cap applies per event or in aggregate. The deduction mechanic itself is stated definitely.",
+      "reasoning_cat2": "Paragraph 12's provision deducting under-approved Eligible Activity amounts \"up to the Limitation of Liability\" from the same Outstanding Balance risks duplicating this deduction, and Paragraph 3's balance may be less than $500,000 in some scenarios. That overlap is a genuine harmonisation question.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Limitation of Liability for Unapproved Due Care Costs"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "A flat 90-day outside closing date measured from exercise, with venue by cross-reference; the wording is definite. \"By Optionee or its Developer\" is clear given the assignment scheme.",
+      "reasoning_cat2": "Because exercise may occur at the end of an open-ended term, closing can fall well after the nominal one-year period, but Paragraph 2 already contemplates that; no direct conflict. Consistent with Paragraph 13's assignment structure.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Closing Date"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The second sentence is grammatically broken (\"Optionee will have an opportunity to inspect the Property and that the Property will be conveyed\"), and \"as is\" is qualified by an open cross-reference to \"except as otherwise provided.\" The mechanical slip is visible but the sense survives.",
+      "reasoning_cat2": "An \"as is\" conveyance sits against the affirmative Paragraph 7 representations and the Paragraph 8 Due Care cost allocation, though the express carve-out is designed to accommodate them. Mild tension only.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Possession"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"Any other due diligence matters deemed reasonably prudent\" is a catch-all following an enumerated list of borings, plans, surveys and assessments, so its outer reach is uncertain; \"subject to the rights, interests, and uses made of the Property by the Optionor\" also qualifies the right without defining it. Both are nameable.",
+      "reasoning_cat2": "It fits with Paragraph 5's survey obligations and Paragraph 8's Phase II assessment; the entry right during \"the period of this Option\" again depends on Paragraph 2's term. No contradiction.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Optionee's Right to Enter and Inspect the Property"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The list of approvals is prefaced by \"may include, but not be limited to,\" yet Optionor's cost responsibility is confined to street vacations and \"any zoning variances\" — a classic general-list-versus-specific-obligation gap over who pays for rezoning, site plan approval and utility relocation. The term \"variances\" versus \"rezoning\" adds to the uncertainty.",
+      "reasoning_cat2": "Later paragraphs of Section 12 assign the Brownfield Plan drafting to Optionor and reimbursement risk to Optionee/Developer, leaving the unlisted approvals' costs unallocated across the section. That is an incompleteness rather than a flat conflict.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Government Approvals"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "\"As soon as practical\" and the termination trigger keyed to \"a final determination of those costs\" are indefinite — it is unclear who makes that determination or when it becomes final. The thirty-day application deadline is by contrast precise.",
+      "reasoning_cat2": "The termination right here supplements Paragraph 14's failure-to-exercise termination without conflicting with it, and the removal of title encumbrances tracks Paragraph 6. No inconsistency found.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Street Vacation Process"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"Optionee will use its best efforts to secure funds to reimburse\" is a soft, appropriations-flavoured obligation, and it is triggered by the Developer's failure to execute and purchase — an event the Optionor cannot verify easily. The $50,000 cap and attorney-fee exclusion are definite.",
+      "reasoning_cat2": "Paragraph 12's first paragraph makes Optionor bear the cost of vacation approvals, which this reimbursement carve-out partially reverses in a stated circumstance; the two read together coherently. No conflict.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Traffic Study"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"Provide its support and written consent when required\" leaves both the trigger and the content of \"support\" undefined, and it is unclear when Optionor is \"obtaining any governmental approvals on the Optionee's behalf.\" Both phrases are vague.",
+      "reasoning_cat2": "Consistent with Paragraph 12's allocation of vacation and Brownfield approval work and with the Paragraph 26 written-approval requirement for draft plans. No contradiction.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Optionor's Support and Consent for Approvals"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"Reasonable and necessary to affect Optionee's intended use\" is a soft standard, and the split whereby Optionor drafts but Optionee determines Eligible Activities \"with the assistance of the Optionor\" is circular. The circularity is a real drafting weakness.",
+      "reasoning_cat2": "Paragraph 8 says it is Optionee's responsibility to estimate Eligible Activity costs while this paragraph makes Optionor the drafter of the plan containing them; the two are reconcilable but overlapping. Mild friction only.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Drafting the Brownfield Plan"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "The sentence \"shall take all steps necessary to obtain approval of the Brownfield Plan for the project prior to Optionee by no later than December 1, 2006\" is garbled — \"prior to Optionee\" has no object — and the words apparently omitted change what the obligation requires. That is a plain mechanical error.",
+      "reasoning_cat2": "The four thirty-day extensions push approval past the survey deadline in Paragraph 5 and interact with Paragraph 12's retention of the Outstanding Balance if approval is not obtained before Closing; broadly reconcilable. Modest tension.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Approval of Brownfield Plans"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "\"That amount (up to the Limitation of Liability) shall be deducted\" is ambiguous as to whether the deduction is the shortfall or the approved amount, and \"due to the fault of either Optionee or its Developer\" imports a fault inquiry. The referent of \"that amount\" is the specific defect.",
+      "reasoning_cat2": "It draws on the $500,000 Limitation of Liability defined in Paragraph 8 for a different trigger, creating a risk the same cap is applied twice against the Paragraph 3 Outstanding Balance. That overlap is a nameable relational problem.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Reduced Eligible Activity Costs"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"Retained by Optionee\" is odd because the Outstanding Balance is payable out of TIF proceeds received by the Developer, not held by Optionee, and \"the necessary governmental approvals\" is unspecified. The mismatch of actor is a real uncertainty.",
+      "reasoning_cat2": "Paragraph 3 makes the balance payable at 10% of TIF reimbursement received by Developer, so a retention right in Optionee does not fit that payment mechanic. That is a specific incoherence between the two payment provisions.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Retention of Outstanding Balance Pending Approval"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The clause is definite on consent-free first assignment and consent-required further assignment; \"in it sole discretion\" is a typographical slip that does not alter meaning. The evaluation sentence is permissive rather than obligatory.",
+      "reasoning_cat2": "Paragraph 1 frames assignability as running to \"Optionee's developer,\" while this paragraph permits assignment generally without consent — a modest inconsistency about who may take the assignment. Otherwise consistent with Paragraphs 4 and 9.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Assignment; Disclosure"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "The text contains scanning/typing errors (\"ferninine\", \"particular portion I which such word is used\") but the intended construction rules remain legible. \"As the context may indicate\" is standard.",
+      "reasoning_cat2": "A no-partnership, no-agency statement sits slightly against Paragraph 12's contemplation that Optionor may obtain approvals \"on the Optionee's behalf,\" which is agency-like language. That is a nameable but low-stakes tension.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15. Parties"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "\"All acts as may be necessary\" and \"satisfactory to the parties and their respective counsel\" are open-ended, and the last sentence could be read to let either party's counsel veto a document the clause obliges them to execute. That internal pull is the specific weakness.",
+      "reasoning_cat2": "It supports the recording contemplated by the Exhibit 3 Memorandum and Paragraph 14's termination, with no contradiction. Consistent with the whole.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Additional Documents"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Standard counterparts language with no ambiguous term. Definite.",
+      "reasoning_cat2": "Nothing else in the instrument addresses execution formalities inconsistently. Consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. Counterparts"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The integration language is clear, though the sentence lists \"this Option, Exhibit 1, and a Memorandum of Option (Exhibit 3)\" and then narrows to \"this Option and Exhibit 1,\" omitting the Memorandum. That internal narrowing is a small inconsistency in the clause itself.",
+      "reasoning_cat2": "Exhibit 2 (Survey) and Schedule A are made part of the agreement by Paragraphs 5 and 7 but are not named in this integration list, a modest mismatch with the attachment schedule. Otherwise consistent.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18. Prior Agreements"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "\"Except as provided in the Act, all disputes ... shall be resolved under this Act\" is circular but its intent is plain, and the statutory citation is specific. Low ambiguity.",
+      "reasoning_cat2": "No other provision provides a competing forum or dispute mechanism, and the named Contracting Officer matches Paragraph 20. Consistent with the whole.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19. Disputes"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "The clause is a conventional time-is-of-the-essence provision with a clear weekend/holiday rule; \"every provision hereof in which time is an element\" is broad but determinate. Low ambiguity in itself.",
+      "reasoning_cat2": "Time being of the essence is hard to reconcile with Paragraph 2's open-ended \"not less than one (1) year\" term and with Paragraph 12's self-extending Brownfield deadline, so the provisions pull in different directions on deadlines. That is a specific, if modest, relational tension.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "21. Time of the Essence"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The clause demands a resolution or, \"if the Optionor is a general or limited partnership,\" partnership approvals — yet Optionor is identified as an LLC, so the enumerated entity forms omit the actual one. That specific-list mismatch leaves what must be delivered uncertain.",
+      "reasoning_cat2": "The preamble and the Memorandum's notarised acknowledgement identify Optionor as a Michigan limited liability company acting through a managing member, which does not match the partnership terminology used here. That is a nameable inconsistency with the rest of the instrument.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "22. Authority of Optionor"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "A recital of parties and date, definite in content apart from OCR artefacts. Nothing to construe.",
+      "reasoning_cat2": "It matches the main agreement's preamble as to parties, addresses and August 1, 2006 Effective Date. Consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit 3, Memorandum - Preamble"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The grant is described in past tense for recording purposes and is definite; the acreage is stated flatly as \"10.89 acres.\" No ambiguous term of consequence.",
+      "reasoning_cat2": "Paragraph 1 of the main Option says \"approximately 10.89 acres\" and describes the Property by reference to Exhibit 1, whereas this refers to Attachment A — a small discrepancy in the property description sources. Otherwise aligned.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit 3, 1. Grant of Option"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "It repeats verbatim the \"not less than one (1) year\" formulation, carrying the same open-ended-term ambiguity about when the option expires. The recorded nature of the document makes that indefiniteness more consequential.",
+      "reasoning_cat2": "It mirrors Paragraph 2 of the Option and cross-refers correctly to Section 20, so it does not conflict; but it publicly restates the same term problem and, being recorded, must be read with Paragraph 14. No independent contradiction found.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit 3, 2. Term of Option"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "A short purpose statement for recording, definite in wording. Nothing ambiguous.",
+      "reasoning_cat2": "It is consistent with Paragraph 13's assignment scheme and Paragraph 18's identification of the Memorandum as one of the parties' agreements. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit 3, 3. Purpose of Memorandum of Option Agreement"
+    }
+  ]
+}

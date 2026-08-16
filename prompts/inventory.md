@@ -4,14 +4,15 @@ One call per winning contract — a contract step 1 found a construed clause in.
 Its other clauses are the dataset's negatives, so both classes come out of the
 same document in the same OCR condition.
 
-Sections below are sent as the system prompt, a cache-marked document block, the
-instructions and the task, in that order. Braces are placeholders filled by
-`src/lib.py` — do not use a literal brace anywhere in this file.
+Sections below are sent as the system prompt, the document, the instructions and
+the task, in that order — instructions after the document, so a rule sits next
+to the text it governs. Braces are placeholders filled by `src/lib.py` — do not
+use a literal brace anywhere in this file.
 
 ## SYSTEM
 
-You read documents filed on a United States court docket, OCR'd to markdown, for
-a research dataset of contract clauses.
+You read contracts filed on a United States court docket, OCR'd to text, for a
+research dataset of contract clauses.
 
 ### What you produce
 
@@ -45,10 +46,51 @@ a research dataset of contract clauses.
 
 ### What to leave out
 
-- The file may open or close with the filing that attached the contract: a cover
-  sheet, an affidavit, a certificate of service, an unrelated exhibit. Skip
-  those and list the clauses of the contract itself.
+The block is one named agreement, cut out of the court filing it was attached to
+as a line range — so a little of the wrapper can survive at either edge. Skip it
+and list the clauses of the agreement itself:
+
+- an exhibit label on the first line — `EXHIBIT A`, `EXHIBIT 64`;
+- a table of contents, a cover page, or an `Execution Version` line;
+- page numbers, `Page 12 of 40`, and Bates stamps anywhere in the text;
+- a signature, notary or attestation block at the end;
+- occasionally a court caption page ahead of the agreement itself.
+
+Also:
+
 - Where the same contract appears twice in the file, list its clauses once.
+- Where a schedule, annex or exhibit is part of this agreement, its substantive
+  terms are clauses like any other. A bare rate table or list of addresses is
+  not.
+
+### Two shapes that are several clauses, not one
+
+Apply the standalone test above. These two shapes fail it constantly, and both
+are common in insurance policies and amended agreements:
+
+- **An amendment that replaces or adds several subsections at once.**
+  `Subsections C., D., E. and F. of this Policy are hereby deleted in their
+  entirety and replaced with the following: C. ... D. ... E. ... F. ...` is
+  **four** clauses. Report the replacement C., D., E. and F. separately. The
+  sentence announcing the amendment is an editing instruction and is not itself
+  a clause.
+- **A block that adds several defined terms.** `Section V, DEFINITIONS, is
+  amended by addition of the following:` followed by `"Business income"
+  means ...`, `"Business interruption" means ...` is **one clause per defined
+  term**, because each definition is complete on its own.
+
+- **A section built from titled blocks that carry no number.** A long section
+  whose body is a run of short headings each ending in a colon —
+  `Monthly Payment Subscriptions:`, `CANCELING YOUR SUBSCRIPTION:`,
+  `Authorization to Update Credit Card Account Information:` — is **one clause
+  per titled block**, not one clause for the section. This shape is common in
+  website terms of service and is easy to miss, because nothing is numbered.
+
+Where a section genuinely states one provision — a single new subsection, one
+coverage grant, one limitation of liability argued through several paragraphs —
+it stays one clause. **Length is not the test; the standalone test is.** A
+liability clause running three paragraphs with an `(A)`–`(H)` list inside one
+sentence is one clause, however long it is.
 
 ### Ranges
 
