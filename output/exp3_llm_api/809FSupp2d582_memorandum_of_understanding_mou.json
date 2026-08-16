@@ -1,0 +1,184 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause both recites that the MOU is \"sufficiently definite to allow the parties to sue for its enforcement\" and obliges the parties to \"execute tolling and other litigation resumption agreements\" — a self-serving definiteness recital sitting on top of obligations to execute future documents whose terms are unstated. Whether such a stipulation can make an agreement-to-agree enforceable, and what \"other litigation resumption agreements\" covers, are both genuinely open on the words.",
+      "reasoning_cat2": "It squarely rubs against Section IX, which says that if the parties cannot complete the required actions Lincoln General's remedy \"shall be to refile the lawsuit\" — one clause promises a suit for enforcement, the other confines the remedy to refiling. That is exactly the kind of internal contradiction a court must resolve.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.71,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section V — Dismissal Without Prejudice"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "The duration term reads \"for five (5) years of until all claims ... have been paid and settled,\" where \"of\" is plainly a typo for \"or\" and the disjunction leaves it uncertain whether tolling runs for five years, until all claims are settled, or the longer/shorter of the two. The extension language (\"shall extend to, but not be limited to\") is also open-ended as to which causes of action and defenses are captured.",
+      "reasoning_cat2": "It must be read with Section V (dismissal without prejudice and execution of tolling agreements) and Section IX (refiling as the remedy), and the interaction determines whether refiled claims are timely — a plausible but not certain source of internal tension. The provisions are broadly complementary rather than contradictory.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.42,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section VI — Tolling"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "\"Lincoln's remedy shall be to refile the lawsuit\" does not say \"sole and exclusive,\" and the illustrative list (\"such as ... including but not limited to\") leaves the triggering failures and the reach of the remedy uncertain; the heading also adds \"or Later Breach\" while the body speaks only of inability to complete actions. Whether this bars damages for breach of the MOU is the obvious battleground.",
+      "reasoning_cat2": "It cannot easily be harmonised with Section V's stipulation that the MOU is \"sufficiently definite to allow the parties to sue for its enforcement,\" nor with the definite payment obligation in Section IV, which would be unenforceable except by refiling. That is a named, concrete conflict.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.68,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section IX — In the Event of Failure to Complete the Required Actions (limitation of remedy)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The recital identifies the underlying agreements by name and effective date with an \"including, but not limited to\" list of addenda; the catch-all is minor since the defined term captures the whole relationship. Wording is essentially descriptive and definite.",
+      "reasoning_cat2": "It matches the operative references to the 2002/2003 GAA and Q/S in Sections I, III and VI without divergence. No conflict found.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital 1 (Reinsurance Relationship)"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"Funds owed\" and \"certain payments\" are unspecified, but as a recital of background it carries no operative content to construe. Vagueness here is unlikely to decide anything.",
+      "reasoning_cat2": "Consistent with the operative allocation of payment responsibility in Sections I, III and IV. Nothing points the other way.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital 2 (Dispute)"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A purely factual recital naming the parties sued and defining \"the Lawsuit\"; there is no operative term and no ambiguous word. Definite.",
+      "reasoning_cat2": "The defined term is used consistently in Sections V, VI and IX. No inconsistency.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital 3 (The Lawsuit)"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"A business solution\" and \"all fees and expenses and costs associated in any way\" are broad, and the May 4, 2009 start date is stated only here in recital form. The breadth is real but the clause is not operative.",
+      "reasoning_cat2": "It tracks the May 4, 2009 cut-off in Section I and the funding obligation in Section III, so recital and operative text point the same way. Only a modest risk of recital-versus-operative argument about scope of \"going forward\" payments.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital 4 (Business Solution)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The obligation is to \"enter into\" a future LPT whose terms are not set out — an agreement to agree — though the clause helpfully defines when a payment is \"completed.\" The undefined content of the LPT is the soft spot.",
+      "reasoning_cat2": "Section IX expressly contemplates failure to reach \"a mutually agreeable reinsurance agreement/LPT,\" which harmonises rather than conflicts, and Section VII subjects everything to regulatory approval. Fit is acceptable, with some residual tension against Section V's definiteness stipulation.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Santa Fe to Reinsure Lincoln General"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Dates, the reimbursement window and the prohibition on post-execution checks are all specific and mechanical. Little to construe.",
+      "reasoning_cat2": "The May 4, 2009 reimbursement start aligns with the Section I liability cut-off and Recital 4. Consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Claims Zero Balance Account"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"Other investments acceptable to Lincoln General\" and \"an A rated reinsurer\" (rated by whom, and does A- qualify?) are open terms, and the fallback collateral obligation is capped in a slightly awkward way. Some genuine construction hooks, though the structure is clear.",
+      "reasoning_cat2": "It is consistent with Section I's LPT obligation and is expressly listed in Section IX as an action whose non-completion triggers refiling. No contradiction found.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Security For The LPT Between Lincoln General and Santa Fe"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"Those funds may be released if the market value ... is greater than\" does not say how much may be released or by whom the decision is made, and \"may\" sits oddly with \"this release shall be performed annually.\" That permissive/mandatory mismatch is a nameable defect.",
+      "reasoning_cat2": "It coexists with the withdrawal-only-with-consent term in Section II(a), which arguably restricts the very release this paragraph mandates — a modest internal tension. Otherwise coherent.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Annual Release of Trust Account Funds"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"All activities in connection with\" plus \"including, but not limited to\" and \"any other expenses related to\" is a broad catch-all after enumerated specifics. The reach of the funding duty could be argued, though the sweep is deliberately wide.",
+      "reasoning_cat2": "The final sentence expressly preserves other defendants' obligations, which harmonises with the tolling of claims in Section VI and the releases contemplated in Section X. No conflict located.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Funding of Claims Handling"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Amount, instalment size, start date and recurrence are all fixed, and the promissory note is to be \"substantially similar to Exhibit A.\" Very definite.",
+      "reasoning_cat2": "Its enforceability interacts with the Section IX remedy limitation, but the payment terms themselves do not contradict anything. Low.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Santa Fe to Pay Lincoln General $1.5 Million"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Subject to regulatory approval\" names no regulator, no deadline, and no consequence of refusal — a condition of indeterminate scope covering the whole MOU. That is a real, nameable indeterminacy.",
+      "reasoning_cat2": "It sits uneasily with Section V's declaration that the MOU is sufficiently definite to be sued upon and with Section IX's list of failures, which does not mention regulatory disapproval. Some tension, not a flat contradiction.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Regulatory Approval"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "A short, standard neutral-construction clause with no operative uncertainty of its own. Definite.",
+      "reasoning_cat2": "It merely disables contra proferentem elsewhere and does not conflict with any other section. Consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII. Review and Construction of Documents"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The parties only \"agree to draft\" a settlement agreement whose \"particulars of the releases\" and \"other terms\" are left to later — a classic open-terms provision. Whether it binds anyone to anything is arguable.",
+      "reasoning_cat2": "Section IX anticipates failure to reach this settlement agreement and supplies the refiling remedy, which harmonises it, but it strains Section V's \"sufficiently definite\" stipulation. Moderate.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "X. Settlement Agreement"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Boilerplate counterparts and telecopy language; the only defects are typographical (\"may by executed\") that do not change meaning. Definite.",
+      "reasoning_cat2": "Nothing elsewhere addresses execution formalities differently. Consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "XI. Counterparts"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "\"Such other and further documents and/or pleadings as may be reasonably necessary\" is a standard, mildly open further-assurances formula. Its boundary is soft but conventional.",
+      "reasoning_cat2": "It supports Sections I, V and X, which all contemplate later documents, and does not contradict them. Consistent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "XI. Further Documents"
+    }
+  ]
+}

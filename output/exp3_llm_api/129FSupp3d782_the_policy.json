@@ -1,0 +1,1544 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The phrase \"exclusive jurisdiction of the State of New York\" is ambiguous as to whether it designates a sovereign (permitting federal courts sitting in New York) or only New York state courts, and \"such court\" has no antecedent since no court was named — a clear mechanical/lexical defect. The second sentence preserving removal rights compounds the uncertainty about whether federal forums are available.",
+      "reasoning_cat2": "This clause sits directly against the Service of Suit Endorsement (No. 15), which promises submission to \"any court of competent jurisdiction\" at the insured's request, and against the endorsement's non-variation clause, creating an evident conflict over exclusivity of the New York forum.",
+      "prob_cat1": 0.78,
+      "prob_cat2": 0.83,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Section IX.I — Jurisdiction and Venue (forum-selection clause)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"Any court of competent jurisdiction\" is broad and its interaction with \"if the insured requests\" leaves genuinely disputable whether this confers a forum choice on the insured or merely waives personal-jurisdiction objections. The provision does not say whether it displaces any other forum agreement.",
+      "reasoning_cat2": "It cannot be readily reconciled with Section IX.I's exclusive New York jurisdiction clause, and the endorsement's own non-variation sentence deepens rather than resolves that tension.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.8,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Service of Suit Endorsement (No. 15) — submission to jurisdiction of any competent court"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The carve-out \"OTHER THAN AS ABOVE STATED\" is the pivot: it leaves undetermined how much of the endorsement's service-of-suit and submission language is intended to vary the policy's own terms. That self-referential qualifier is genuinely uncertain in scope.",
+      "reasoning_cat2": "Read with Section IX.I (exclusive New York jurisdiction) and IX.K (Changes and Assignment), this sentence is the fulcrum of the argument over whether the endorsement overrides the forum-selection clause.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.72,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Service of Suit Endorsement (No. 15) — non-variation provision"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The notice is a plainly worded summary of the claims-made trigger with no ambiguous operative term; it is descriptive rather than granting or restricting rights in its own words.",
+      "reasoning_cat2": "It tracks the Insuring Agreements in Section I and Section III.D on defense expense erosion, though the flat statement that claims must be reported \"during the policy period\" sits slightly loosely against the extended reporting period provisions in Section VIII.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Declarations — Claims-Made Notice"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A standard integration statement naming four constituent documents; nothing in the enumeration is open-ended or ambiguous.",
+      "reasoning_cat2": "Consistent with Section IX.F (Representations) and IX.K, which likewise rely on the Application and endorsements as part of the policy.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Declarations — Entire Contract"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The parenthetical is garbled (\"litem, 3.a., above.,\") and \"and/or ... whichever is earlier\" is awkward, but the 100% minimum-earned figure is definite.",
+      "reasoning_cat2": "It sits in tension with Section IX.A.3, which contemplates unearned premium refunded pro rata on cancellation — hard to reconcile with premium deemed 100% earned at inception.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Item 5. Premium (minimum-earned)"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "Identical descriptive notice with only OCR-level typos (\"WHAT 1S\") that do not change meaning; no term requiring construction.",
+      "reasoning_cat2": "Consistent with Section I and Section III.D; only the same mild looseness against the extended reporting period exists.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble — Claims-Made Notice"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A definitional signpost with a clear referent to Section V; nothing vague.",
+      "reasoning_cat2": "Consistent with the whole, though several endorsements add defined terms outside Section V — a trivial mismatch.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble — Defined Terms"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Standard consideration and reliance recital; no ambiguous operative term.",
+      "reasoning_cat2": "Aligns with Exclusion VI.G and Condition IX.F on reliance upon Application statements.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble — Consideration"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "A short lead-in conditioning coverage on identification in the Declarations; the wording is definite.",
+      "reasoning_cat2": "Consistent with the Declarations Items 2 and 3, which check-box whether each coverage is provided.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. INSURING AGREEMENTS — lead-in"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"First commence, in their entirety, during the policy period\" is a known point of contention for gradual pollution, but the wording itself is explicit.",
+      "reasoning_cat2": "This subsection is deleted and replaced twice (Endorsement 5.II and Endorsement 10.I), so which version governs a given location invites a coherence argument.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I.A. New Pollution Conditions (Coverage A.)"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The wording is plain but contains an OCR artifact (\"nolicy period\"); the trigger \"commenced, in whole or part, prior to the policy period\" is definite.",
+      "reasoning_cat2": "It dovetails with Coverage A's \"in their entirety during\" test, though the Known Conditions exclusion (VI.K) narrows Coverage B substantially, a recognised interaction.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I.B. Pre-Existing Pollution Conditions (Coverage B.)"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"Satisfactory evidence\" imports a judgment standard but the retention mechanics are stated with unusual precision.",
+      "reasoning_cat2": "Consistent with Section V.AA and Declarations Items 2.d/3.d, and with Endorsement 4's separate catastrophe retention.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.A. Self-Insured Retention Attachment"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "A precise cross-referenced limit statement; \"same, continuous, repeated, or related\" is a term of art but conventionally applied.",
+      "reasoning_cat2": "This subsection is expressly deleted and replaced by Endorsement 6.I.C, so the original text is superseded — a mismatch of texts rather than substance.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.C. Coverage A. Per-Condition Limit"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Definite cross-reference to Item 2.c.; no ambiguous term.",
+      "reasoning_cat2": "Superseded by Endorsement 6.I.D, and note the Declarations show a Total Policy Aggregate ($7,000,000) lower than the sum of the coverage aggregates, which is a genuine numerical oddity.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.D. Coverage A. Aggregate Limit"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Mirror image of the Coverage A per-condition limit; the wording is definite.",
+      "reasoning_cat2": "Superseded by Endorsement 6.I.E, which adds \"resulting from covered operations\" — a term nowhere defined in this policy.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.E. Coverage B. Per-Condition Limit"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Definite cross-reference; no vague term.",
+      "reasoning_cat2": "Superseded by Endorsement 6.I.F, again introducing the undefined \"covered operations\".",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.F. Coverage B. Aggregate Limit"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Clear statement of a total aggregate cap covering both coverages and supplemental coverages.",
+      "reasoning_cat2": "The stated $7,000,000 total is less than the $9,000,000 plus $5,000,000 coverage aggregates in the Declarations, an internal arithmetic incoherence worth noting.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.G. Total Policy Aggregate Limit"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Long but mechanically drafted deeming provision; \"continuous, repeated, or related\" is the only elastic phrase and it is used consistently.",
+      "reasoning_cat2": "Consistent with the claims-made notice and Section VIII.B's deeming rule for extended reporting period claims.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II.H. Multiple Policy Periods"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "States duty, its limits, and two termination triggers explicitly; no ambiguous term.",
+      "reasoning_cat2": "Deleted and replaced by Endorsement 6.II.A, which adds a third trigger, so the original text no longer governs.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III.A. Duty to Defend"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"Suitable errors and omissions insurance\" and \"reasonable proximity\" are vague, and the enumerated list of counsel requirements is closed rather than catch-all.",
+      "reasoning_cat2": "Consistent with Section IX.M (consent not unreasonably withheld) and with Endorsement 6.IV.F's parallel counsel provisions.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III.B. Selection of Counsel"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"Qualified environmental consultant\" is undefined but the consent mechanics are clear.",
+      "reasoning_cat2": "Deleted and replaced in full by Endorsement 4.III.C, which adds catastrophe management firms.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III.C. Environmental Consultant"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "A single short sentence with definite effect on limits and retention.",
+      "reasoning_cat2": "Replaced by Endorsement 6.II.D, which redirects erosion to the dedicated defense sublimit — the original and replacement differ materially.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III.D. Legal Defense Expenses Erode Limits"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"Additional unreasonable burdens on the insured\" is a vague qualifier that could be fought over in a hammer-clause dispute.",
+      "reasoning_cat2": "Consistent with Section III.A's cross-reference to Subsection E. and with Endorsement 6.IV.F's parallel settlement language.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III.E. Settlement Offers / Consent"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Short and definite geographic limitation; \"located\" and \"made\" are plain.",
+      "reasoning_cat2": "Consistent with Section V.T's US-centric natural resource damage definition and Endorsement 8's US-only disposal sites.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. COVERAGE TERRITORY"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Self-referential but definite: status depends on being endorsed and rights limited to those specified.",
+      "reasoning_cat2": "Matches Endorsement 2, which endorses Hoffman Rettig with vicarious-liability-only rights.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.A. “Additional insured”"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Broad but enumerated definition; \"prospective medical monitoring costs\" is qualified by purpose, leaving little play.",
+      "reasoning_cat2": "Consistent with Exclusion VI.D (Employers Liability) and the Claim definition.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.B. “Bodily injury”"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"Ordinary ambient indoor air ecology for similar indoor environments\" is genuinely vague, though the term is largely inert here.",
+      "reasoning_cat2": "Endorsement 12 excludes fungi and legionella entirely, so this definition and its role in the remediation cost definition are left with no operative field.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.C. “Certified industrial hygienist”"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"Including, but not limited to\" against enumerated specifics creates a mild catch-all scope question about what counts as a written assertion of legal right.",
+      "reasoning_cat2": "This definition is replaced twice (Endorsements 8.II.D and 11.II.D) for particular location types, layering the definition.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.D. “Claim”"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Detailed and closed enumeration ending in \"or other conveyance\", a modest ejusdem generis catch-all.",
+      "reasoning_cat2": "Endorsement 10 deletes this definition entirely and replaces it with \"Transportation\", yet Exclusion VI.Q's original carve-out still refers to \"contingent transportation\" in the base text.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.E. “Contingent transportation”"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A three-item list, the third of which is an open \"any other location scheduled by endorsement\" catch-all; the numbering is mangled (missing \"1.\").",
+      "reasoning_cat2": "This definition is deleted and replaced by both Endorsement 8.I.F and Endorsement 11.I.F, and the two replacements differ from each other on non-owned disposal sites.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.F. “Covered location”"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The seventy-two hour window is precise; \"imminent and substantial threat\" is a standard regulatory formula.",
+      "reasoning_cat2": "Consistent with the emergency-response carve-outs in Sections III.C and VII.C and their endorsement replacements.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.G. “Emergency response”"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Definite, conditioned on a specific schedule endorsement.",
+      "reasoning_cat2": "No Schedule of Insured Contracts Endorsement is attached, so the Contractual Liability exclusion's carve-out for these obligations is empty — a hollow reference rather than a conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.H. “Environmental indemnity obligations”"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Very broad, sweeping in \"guidance document\" and \"rule\", which could be argued about, but the list is deliberately expansive rather than ambiguous.",
+      "reasoning_cat2": "Consistent with the remediation cost definition and Government Action definition that rely on it.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.I. “Environmental law”"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Short definition; \"during or subsequent to the end of the policy period\" is oddly broad for a reporting-tail definition but plainly stated.",
+      "reasoning_cat2": "Section VIII and Endorsement 7 set the actual durations, and the 60-day/90-day mismatch is resolved by the endorsement's express replacement.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.J. “Extended reporting period”"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Detailed allocation of responsibilities with a closing \"unless otherwise designated by endorsement\" escape; definite.",
+      "reasoning_cat2": "Consistent with Sections II.A, VIII, and IX.A on first-named-insured responsibilities.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.K. “First named insured”"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Circular in that \"fungi\" is defined partly by reference to \"fungi\", but the meaning is not obscured; \"scents\" is broad.",
+      "reasoning_cat2": "Endorsement 12 removes fungi from the pollution condition definition and excludes it, leaving this definition without operative effect.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.L. “Fungi”"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Short and definite; keyed to the defined environmental law.",
+      "reasoning_cat2": "Consistent with the Claim definition's inclusion of government action.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.M. “Government action”"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "Long enumerated list of substances with \"including\" language and a three-part actor test; the enumeration is expansive but the actor test is precise.",
+      "reasoning_cat2": "Retained as prong 1 of the replaced pollution condition definition in Endorsement 12, so it remains coherent.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.N. “Illicit abandonment”"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The definition is partly self-referential (\"of any 'insured'\") and the trailing \"while acting within the scope of his or her duties\" may or may not modify all antecedents — a real syntactic ambiguity.",
+      "reasoning_cat2": "It interacts with Exclusion VI.I (Insured vs. Insured) and Endorsement 11.II.D's exclusion of claims by owners/operators of non-owned locations, but no direct contradiction appears.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.O. “Insured”"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "\"Reasonable\" is the only soft term in an otherwise definite cost definition.",
+      "reasoning_cat2": "Consistent with Sections III.B, III.D and Endorsement 6's dedicated defense sublimit.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.P. “Legal defense expense”"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"Greater than specified quantities\" specifies no source for the quantities, a small but real indeterminacy.",
+      "reasoning_cat2": "Used only within the pollution condition definition; nothing else turns on it.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.Q. “Low-level radioactive waste”"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Tied to named federal statutes, making it definite.",
+      "reasoning_cat2": "Consistent with the pollution condition definition that invokes it.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.R. “Mixed waste”"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Clear cross-reference to Subsection K. for reserved rights; no vague term.",
+      "reasoning_cat2": "Consistent with Endorsement 1 (Farm Nutrients LLC) and with Section IX.G's separation of insureds.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.S. “Named insured”"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "\"Other such resources\" following a long enumeration is a classic ejusdem generis catch-all, though bounded by the trusteeship qualifiers.",
+      "reasoning_cat2": "Endorsement 12.III caps natural resource damage claims at $500,000, which fits rather than conflicts.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.T. “Natural resource damage”"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "Short and broad, but the terms \"disposal site or recycling facility\" and the ownership test are workable.",
+      "reasoning_cat2": "Deleted and replaced by Endorsement 8.II.U with a much more restrictive definition, so the base text is superseded.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.U. “Non-owned disposal site”"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Item 2 is syntactically tangled (\"the period of time following the closing date ... or, as applicable, through the applicable expiration date\"), leaving the intended period genuinely unclear.",
+      "reasoning_cat2": "No Automatic Acquisition and Due Diligence Endorsement is attached, so limb 2 is inoperative; otherwise consistent with the Declarations dates.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.V. “Policy period”"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "The third limb's expansive substance list is standard pollution wording; the terms \"irritant\" and \"contaminant\" are broad but conventional.",
+      "reasoning_cat2": "Deleted in its entirety and replaced by Endorsement 12.I.W, which removes fungi and expressly excludes odor — the base text conflicts with the replacement.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.W. “Pollution condition”"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Four enumerated limbs, all closed; \"diminished value of tangible property owned by a third-party\" is precise.",
+      "reasoning_cat2": "Consistent with Exclusion VI.F (first-party property) and the natural resource damage sublimit.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.X. “Property damage”"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "\"To the extent required by 'environmental law'\" is the operative limiter and is frequently contested, and \"reasonable expenses\" adds vagueness.",
+      "reasoning_cat2": "The fungi/legionella fallback sentence is stranded because Endorsement 12 excludes those exposures altogether, leaving an inoperative branch.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.Y. “Remediation costs”"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "\"Any employee ... responsible for environmental affairs, control, or compliance\" is a genuinely fuzzy class whose boundary drives the knowledge-based exclusions.",
+      "reasoning_cat2": "It feeds Exclusions VI.G, VI.J, VI.K and VI.P, all knowledge-triggered, so its breadth matters but produces no contradiction.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.Z. “Responsible person”"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "Pure cross-reference to Declarations amounts; definite.",
+      "reasoning_cat2": "Endorsement 4 sets a separate catastrophe management retention, which the base definition accommodates via \"or as otherwise designated by endorsement\".",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.AA. “Self-insured retention”"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "\"Commission or threat of a dangerous act\" and the intent-based limbs are broad, but the structure is the standard TRIA-style formula.",
+      "reasoning_cat2": "Used only in Exclusion VI.R; consistent with the whole.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.BB. “Terrorism”"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "A numerical ten percent test with an express carve-out; unusually definite.",
+      "reasoning_cat2": "Feeds Exclusion VI.P, which references a Schedule of Insured Underground Storage Tanks Endorsement that is not attached — a hollow reference.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.CC. “Underground storage tank”"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "\"Any use of military force\" and \"usurped power\" are broad, and the trailing \"nationalization or damage of property by any government\" sweeps beyond war-like acts.",
+      "reasoning_cat2": "Used only in Exclusion VI.R; no contradiction elsewhere.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V.DD. “War”"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "\"Arising out of or related to\" is broad, and the carve-back for soil or groundwater discovery gives a clear boundary.",
+      "reasoning_cat2": "Consistent with the remediation cost definition and the coverage structure.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.A. Exclusion — Asbestos"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "The \"except if the liability would have attached ... in the absence of such contract\" carve-out is standard but its application is often contested.",
+      "reasoning_cat2": "The exception for environmental indemnity obligations depends on a Schedule of Insured Contracts Endorsement that was not attached, leaving the carve-back empty.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.B. Exclusion — Contractual Liability"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "\"Sold, abandoned, or given away\" is a closed list and the commencement test is temporally definite.",
+      "reasoning_cat2": "The final sentence expressly reconciles it with Coverage B in Section I.B.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.C. Exclusion — Divested Property"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "Detailed and enumerated; the misnumbered \"4.\" for \"1.\" in the closing list is a trivial OCR artifact.",
+      "reasoning_cat2": "Consistent with the bodily injury definition and the Insured definition's inclusion of employees.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.D. Exclusion — Employers Liability"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "\"Or any associated claims seeking exclusively injunctive relief in addition to such fines\" is syntactically confused, and the carve-back for insurable punitive damages partly contradicts the lead-in.",
+      "reasoning_cat2": "Consistent with the New York choice of law in Section IX.J, which supplies the insurability standard.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.E. Exclusion — Fines and Penalties"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "Broad first-party exclusion with a clean carve-back for remediation costs; wording is definite.",
+      "reasoning_cat2": "Fits with the property damage definition's third-party limitation and with Endorsement 3's business interruption coverage.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.F. Exclusion — First-Party Property Damage"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "\"Material misrepresentations\" is a familiar legal standard; the two-limb structure is clear.",
+      "reasoning_cat2": "Consistent with Section IX.A.2.b (cancellation for fraud) and IX.F (Representations), including the separation-of-insureds carve-out in IX.G.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.G. Exclusion — Fraud or Misrepresentation"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "\"Salaried staff and any employees\" is broad and the carve-back turns on the Insurer's \"sole discretion\", a one-sided term but clearly stated.",
+      "reasoning_cat2": "Sits against Section IX.M, which says consent shall not be unreasonably withheld — a mild tension with \"sole discretion\" here.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.H. Exclusion — Insured’s Internal Expenses"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "A single-line exclusion whose reach depends entirely on the very broad Insured definition, but its own words are unambiguous.",
+      "reasoning_cat2": "Because Section V.O sweeps in employees and officers, and Endorsement 11 covers third-party contract farms, the exclusion's interaction with claims among those parties could be argued.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.I. Exclusion — Insured vs. Insured"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "\"Intentional disregard\" and \"knowing, willful, or deliberate non-compliance\" are scienter standards, familiar but fact-sensitive; the list of instruments is expansive.",
+      "reasoning_cat2": "Consistent with the responsible person definition and the separation-of-insureds carve-out.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.J. Exclusion — Intentional Non-Compliance"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "\"In existence and reported to a 'responsible person'\" and the actionability carve-back are dense and the two exceptions are conditioned on schedules; \"reported\" is doing heavy work.",
+      "reasoning_cat2": "Exception 1 depends on a Schedule of Known Conditions Endorsement that is not attached, and the exclusion materially narrows the Coverage B grant in Section I.B.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.K. Exclusion — Known Conditions"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "Parallel to the asbestos exclusion, with a clear soil/groundwater carve-back; the missing opening quote mark is inconsequential.",
+      "reasoning_cat2": "Consistent with the remediation cost definition and the coverage structure.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.L. Exclusion — Lead-Based Paint"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "\"Materially increases the likelihood or severity\" measured against \"intended uses or operations identified\" in the Application is a genuinely elastic standard.",
+      "reasoning_cat2": "Depends on the Application, which the Declarations incorporate, and on an Automatic Acquisition Endorsement not attached; otherwise consistent.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.M. Exclusion — Material Change in Risk"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "\"Naturally occurring materials\" and the carve-back for materials present \"as a result of human activities or human processes\" invite dispute over agricultural nutrients and manure.",
+      "reasoning_cat2": "Notable against Endorsement 12, a confined animal feed operation endorsement, where whether manure constituents are naturally occurring is squarely in play.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.N. Exclusion — Naturally Occurring Materials"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "Clear exclusion with a schedule-conditioned carve-back; the wording is definite.",
+      "reasoning_cat2": "Deleted and replaced by Endorsement 8.III.O, and the carve-back references a Schedule of Non-Owned Disposal Sites Endorsement that is not attached even though Endorsement 11.I.F still cross-refers to it.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.O. Exclusion — Non-Owned Disposal Sites"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "The structure \"when ... known ... ; and 1. ... or 2. ...\" mixes conjunction and disjunction confusingly, making the exclusion's trigger genuinely uncertain.",
+      "reasoning_cat2": "Both referenced schedules (Insured Underground Storage Tanks and Known Conditions) are absent from the endorsement list, so the conditions cannot be applied as written.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.P. Exclusion — Underground Storage Tanks"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "Broad vehicle exclusion ending in \"or other conveyance\"; the carve-back is conditioned on an endorsement.",
+      "reasoning_cat2": "Deleted and replaced by Endorsement 10.III.Q, whose carve-back is for \"transportation\" rather than \"contingent transportation\" — the base text is superseded.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.Q. Exclusion — Vehicles"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Broad concurrent-causation language with \"attributable, whether directly or indirectly\" and \"involve preparation for\"; broad but standard and clearly aimed.",
+      "reasoning_cat2": "Consistent with the war and terrorism definitions and the TRIA disclosure notice.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.R. Exclusion — War or Terrorism"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "\"As soon as practicable\" is a familiar elastic standard, and \"Notice should include\" (permissive) sits oddly against \"must see to it\" (mandatory) — an ambiguity about whether the content items are conditions.",
+      "reasoning_cat2": "Consistent with Declarations Item 7.a. addresses and with the claims-made reporting requirements in Section I.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII.A. Notice of Claim or Pollution Condition"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "An enumerated duties list with garbled numbering (items 3 and 4 lost their numerals) and a final catch-all \"such information and cooperation as it may reasonably require\".",
+      "reasoning_cat2": "Consistent with Section IX.E (Subrogation) and IX.C.2's compliance condition.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII.B. Insured’s Cooperation Duties"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "Definite consent requirement with one express exception; \"prior express written consent\" is unambiguous.",
+      "reasoning_cat2": "Deleted and replaced by Endorsement 4.V.C — which misdescribes the section as \"IV.\" — and it must be read with Section IX.M's reasonableness overlay.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII.C. No Voluntary Admissions or Costs"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "\"Every attempt to mitigate\" and \"in the sole judgment of the insurer\" are soft, and the deeming of insurer-incurred costs as insured-incurred is one-sided but clearly stated.",
+      "reasoning_cat2": "The \"sole judgment\" language sits in tension with Section IX.M's general reasonableness requirement for insurer determinations.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII.D. Mitigation"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "The cross-reference is garbled (\"Subsection A., Paragraph 1. of Section IX.\") and it points only to cancellation by the first named insured, which oddly excludes insurer cancellation.",
+      "reasoning_cat2": "Read against Section IX.A.2 and Endorsement 9, an ERP appears unavailable after insurer cancellation, which is difficult to reconcile with Section VIII's general entitlement.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.A. Entitlement to Extended Reporting Period"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "Three definite sentences on non-reinstatement and the deeming of report dates; no ambiguous term.",
+      "reasoning_cat2": "Consistent with Section II.H and the claims-made notice, though the notice's flat \"reported during the policy period\" needs this provision to make sense.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.B. Extended Reporting Periods Do Not Increase Limits"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "A single definite duration with one condition; unambiguous.",
+      "reasoning_cat2": "Expressly deleted and replaced by Endorsement 7.C with ninety days, so the sixty-day figure no longer applies.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.C. Basic Extended Reporting Period"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "Numerically precise (34 months, 200%) with clear procedural conditions.",
+      "reasoning_cat2": "Deleted and replaced by Endorsement 7.D with 33 months; the base text conflicts on its face with the endorsement.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.D. Supplemental Extended Reporting Period"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "Detailed cancellation mechanics; the sentence \"The effective date and hour of cancellation ... shall be the end of the 'policy period'\" is a deeming device that reads awkwardly but is intelligible.",
+      "reasoning_cat2": "Paragraph 2 is deleted and replaced by Endorsement 9 (90 days), and paragraph 3's pro rata refund sits against the Declarations' 100% minimum-earned premium statement.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.A. Cancellation"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "\"To the extent of the insured's ability to provide such access\" and \"reasonable notice\" are soft but the rights conferred are clear.",
+      "reasoning_cat2": "Consistent with Section IX.F and the audit-type provisions elsewhere; no conflict found.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.B. Inspection and Audit"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "\"Unless all of the Policy terms have been fully complied with\" is a stringent and potentially contestable condition precedent to suit, but its words are plain.",
+      "reasoning_cat2": "It interacts with Section IX.I's forum clause and the Service of Suit Endorsement's submission promise, which together create the live forum dispute; this provision itself is neutral.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.C. Legal Action Against the Insurer"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "Three definite sentences; the reference to \"any underlying insurer\" is odd for a primary policy but does not create ambiguity in the operative text.",
+      "reasoning_cat2": "Section IX.H makes this policy excess over other insurance, so the \"policy to which this Policy is excess\" reference is intelligible but slightly discordant with the primary structure.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.D. Bankruptcy"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "The waterfall wording is precise and the apportionment formula is mechanical; \"the limit of coverage\" is the only loose phrase.",
+      "reasoning_cat2": "Consistent with Section VII.B.4's duty to assist in enforcing rights of recovery.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.E. Subrogation"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "Characterises statements as warranties in three definite limbs; \"accurate and complete\" is a firm standard.",
+      "reasoning_cat2": "Consistent with the Declarations' integration statement, the consideration preamble and Exclusion VI.G, though the warranty characterisation is harsher than the exclusion's materiality test.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.F. Representations"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "A long list of carve-outs from severability with a closing \"any obligations specifically assigned to the first named insured\" catch-all, which is expansive against the enumerated specifics.",
+      "reasoning_cat2": "It expressly excepts Cancellation condition 2.a., but Endorsement 9 replaced paragraph 2 in full, so the cross-reference now points to superseded text.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.G. Separation of Insureds"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "\"Other valid and collectible insurance\" is a standard term; the excess-only, non-contribution rule is definite.",
+      "reasoning_cat2": "Sits alongside Section VIII.C/D's condition that no replacement insurance has been purchased and Section IX.D's non-drop-down language; consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.H. Other Insurance"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "\"Law and practices of the State of New York\" is broad but unambiguous as a choice of law.",
+      "reasoning_cat2": "Consistent with Section IX.I's New York forum designation; the tension in this policy is over forum, not governing law.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.J. Choice of Law"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "\"Except as provided by endorsement and attached to this Policy\" is slightly garbled but the anti-waiver rule is clear.",
+      "reasoning_cat2": "This is the provision the Service of Suit Endorsement's non-variation clause interacts with, so it is implicated in the forum-clause dispute, though it does not itself contradict anything.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.K. Changes and Assignment"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "A one-sentence boilerplate headings clause; nothing to construe.",
+      "reasoning_cat2": "Consistent with the whole; if anything it helps resolve label mismatches in endorsement cross-references.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.L. Headings"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "\"Unreasonably withheld, delayed, conditioned, or denied\" is a familiar standard applied globally; the sweep of \"where the consent ... is required pursuant to this Policy\" is broad but clear.",
+      "reasoning_cat2": "It sits against provisions granting the Insurer \"sole discretion\" or \"sole judgment\" (Exclusion VI.H and Section VII.D), a genuine internal pull in opposite directions.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX.M. Consent"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "A bare schedule naming one entity; no interpretive room.",
+      "reasoning_cat2": "Matches Section V.S and the separation of insureds provision.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 1 — Schedule of Named Insureds"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "\"Solely with respect to their vicarious liability arising out of any named insured's direct liability\" is a narrow but conceptually slippery formula, and the sentence lacks a closing period.",
+      "reasoning_cat2": "Consistent with Section V.A, which limits additional insureds to endorsement-specified rights.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 2 — Schedule of Additional Insureds"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "\"Directly attributable to\" a covered pollution condition and \"as soon as practicable\" are the soft points; the sublimit and deductible period are precise.",
+      "reasoning_cat2": "The $5,000,000 business interruption sublimit is subject to the Declarations limits, but the Total Policy Aggregate is only $7,000,000, so the sublimit interacts awkwardly with Section II.G.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3.I — Supplemental Coverage — Business Interruption"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "Limb 1's \"net profit or loss ... that would have been realized\" is a counterfactual measure and \"continuing operating and payroll expense\" with parenthetical exclusions is workable but calculation-sensitive.",
+      "reasoning_cat2": "Consistent with the business interruption loss and rental income definitions in the same endorsement.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Business income”"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "\"Necessary partial or complete suspension\" leaves the threshold of partial suspension undefined, a real vagueness.",
+      "reasoning_cat2": "Consistent with the period of interruption and suspension definitions in the same endorsement.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Business interruption”"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "A three-item definitional list with a stray unclosed quotation mark; substance is definite.",
+      "reasoning_cat2": "All three components are defined in the same endorsement; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Business interruption loss”"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "Dense and doubly negative in the second sentence, and the restriction to remediation costs \"resulting from the first-party discovery\" is an unusual limiter whose reach is not obvious.",
+      "reasoning_cat2": "It narrows business interruption to first-party discovery situations, which sits in tension with the broad grant in Endorsement 3.I referring simply to covered pollution conditions.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Covered pollution condition”"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "The lead-in is grammatically mangled (\"means for a 'covered location' under development, where ... any of the following expenses incurred shall be afforded coverage\") and item 3 lost its numeral.",
+      "reasoning_cat2": "Consistent with the business interruption loss definition; no conflict with other provisions found.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Delay expense”"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "\"Necessary to avoid or mitigate\" plus the requirement that costs \"actually minimize\" foregone business income is a demanding and somewhat circular test.",
+      "reasoning_cat2": "Consistent with the business income definition it cross-references.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Extra expense”"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "The definition gives only a start point and no end, leaving the period open on its face.",
+      "reasoning_cat2": "The gap is filled by Endorsement 3.IV.B, which supplies the end date, so the incompleteness is cured within the instrument.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Period of interruption”"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "Short and definite once \"suspension\" is read as defined; the OCR \"fost\" for \"lost\" is trivial.",
+      "reasoning_cat2": "Consistent with the suspension and business income definitions.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Rental income”"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "\"Untenantable for the purposes identified to the Insurer at the inception of the Policy\" ties the test to extrinsic underwriting material, making its content indeterminate from the document.",
+      "reasoning_cat2": "Consistent with the rental income definition; the reliance on inception-date representations echoes Exclusion VI.M.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3 — Definition “Suspension”"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "A single counterfactual start-date rule; clearly expressed.",
+      "reasoning_cat2": "Consistent with the period of interruption definition it supplements.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3.IV.A. Start of Period of Interruption"
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "\"Remedied to the point at which the insured's normal operations could reasonably be restored\" is elastic, and the second sentence's exclusion of loss from \"unfavorable business conditions caused by the impact of the covered pollution condition\" is genuinely obscure.",
+      "reasoning_cat2": "That second sentence arguably cuts back the very business income coverage granted in Endorsement 3.I, a tension worth noting.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3.IV.B. End of Period of Interruption"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "Detailed appraisal mechanics with one garbled connector (\"A decision agreed to by the appraisers, of the umpire\"); the scope phrase \"or any other amount that is or may be covered\" is broad.",
+      "reasoning_cat2": "The binding appraisal mechanism sits alongside the reservation of coverage-denial rights in the same subsection and against Section IX.I's litigation forum clause, but they are reconcilable.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3.IV.C. Appraisal"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "\"Any of the individually excluded exposures identified above\" has no clear antecedent in the endorsement, which lists no exclusions above — a real referential defect.",
+      "reasoning_cat2": "It must be read as importing Section VI's exclusions, which requires supplying words the endorsement does not contain.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 3.V. Added Exclusion"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "Two dollar figures stated plainly; nothing to construe.",
+      "reasoning_cat2": "The separate $100,000 catastrophe retention fits Section V.AA's \"or as otherwise designated by endorsement\" clause.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Catastrophe Management Sublimit and Retention"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "Clear grant with a definite sublimit and a commencement test keyed to the inception date; \"first commence, in their entirety\" mirrors Coverage A.",
+      "reasoning_cat2": "Consistent with Section II.G, which expressly brings supplemental coverages within the total policy aggregate.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4.I — Supplemental Coverage — Catastrophe Management"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "Mirrors the replaced Section III.C with the addition of catastrophe firms; the wording is definite.",
+      "reasoning_cat2": "Consistent with Endorsement 4's other amendments and with Section IX.M, though it duplicates ground also covered by Endorsement 4.V.C.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4.III.C. Consultant or Catastrophe Management Firm"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "\"National or regional news exposure ... reasonably likely to have a negative impact\" on \"reputation, community relations, public confidence or good will\" is markedly vague at the boundary.",
+      "reasoning_cat2": "It feeds the catastrophe management event definition; consistent with the endorsement as a whole.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Definition “Adverse media coverage”"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "Trigger rests on \"the good faith opinion of a key executive\" that costs \"will exceed\" the retention and that services are needed — a subjective and prospective standard.",
+      "reasoning_cat2": "Consistent with the key executive and adverse media coverage definitions in the same endorsement.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Definition “Catastrophe management event”"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "Definite: approval in writing by the Insurer is the sole criterion.",
+      "reasoning_cat2": "Consistent with Endorsement 4.III.C and 4.V.C consent requirements, moderated by Section IX.M.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Definition “Catastrophe management firm”"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "\"Advising ... with respect to minimizing potential harm\" and \"maintaining and restoring public confidence\" describe a soft service scope.",
+      "reasoning_cat2": "Consistent with the catastrophe management costs definition that funds it.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Definition “Catastrophe management services”"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "Item 5 ends with \"or other necessary response costs\", an open catch-all after a list of specific third-party payments, which is a classic ejusdem generis question; item 2's \"mailing of materials of public relations materials\" is garbled.",
+      "reasoning_cat2": "The exclusion of legal defense expense keeps it distinct from Section V.P and Endorsement 6's defense sublimit; otherwise consistent.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Definition “Catastrophe management costs”"
+    },
+    {
+      "clause_id": "neg115",
+      "reasoning_cat1": "An enumerated list of named offices with an endorsement-based extension; definite.",
+      "reasoning_cat2": "Consistent with the catastrophe management event definition; the extension mechanism requires an endorsement that is not present, which is harmless.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4 — Definition “Key executive”"
+    },
+    {
+      "clause_id": "neg116",
+      "reasoning_cat1": "The wording of the substituted condition is clear, but the introduction misidentifies the section as \"IV.\" rather than VII., a citation error.",
+      "reasoning_cat2": "It replaces the same Subsection C. of the reporting section as the base text, and Section IX.L (Headings) plus context resolve the misnumbering; no substantive conflict.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4.V.C. No Voluntary Admissions or Costs"
+    },
+    {
+      "clause_id": "neg117",
+      "reasoning_cat1": "\"Any of the individually excluded exposures identified above\" again lacks an antecedent within the endorsement, which sets out no exclusions above it.",
+      "reasoning_cat2": "Same referential problem as Endorsement 3.V; it can only work by importing Section VI, which the words do not say.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 4.VI. Added Exclusion"
+    },
+    {
+      "clause_id": "neg118",
+      "reasoning_cat1": "A schedule of addresses with coverage designations; the OCR shows a corrupted date (\"11/01/2074\") and a garbled header, but the intent is recoverable.",
+      "reasoning_cat2": "Declarations Item 8 points here and to Endorsement 11, and the retroactive dates key into Endorsement 5.II; consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 5.I — Schedule of Covered Locations"
+    },
+    {
+      "clause_id": "neg119",
+      "reasoning_cat1": "The replacement grant is clear, and the retroactive-date limb resolves the \"in their entirety\" problem for scheduled locations.",
+      "reasoning_cat2": "Endorsement 10.I also deletes and replaces this same Subsection A. with different text (transportation), so two competing replacements of the same provision exist without a priority rule.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 5.II.A. New Pollution Conditions (Retroactive Date)"
+    },
+    {
+      "clause_id": "neg120",
+      "reasoning_cat1": "The introductory sentence is truncated — \"replaced with the\" with the word \"following\" missing — a mechanical break in the amending language itself.",
+      "reasoning_cat2": "The replacement drops \"legal defense expense\" from the per-condition limit, which is the deliberate point of Endorsement 6, but it must be read with the base claims-made notice saying defense erodes limits.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.I.C. Coverage A. Per-Condition Limit (replaced)"
+    },
+    {
+      "clause_id": "neg121",
+      "reasoning_cat1": "Precise cross-reference to Item 2.c. with defense expense removed; wording definite.",
+      "reasoning_cat2": "Consistent with Endorsement 6.III's dedicated defense sublimit, though the Declarations' Total Policy Aggregate of $7,000,000 is smaller than the summed aggregates.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.I.D. Coverage A. Aggregate Limit (replaced)"
+    },
+    {
+      "clause_id": "neg122",
+      "reasoning_cat1": "\"Resulting from 'covered operations'\" uses a quoted defined term that is nowhere defined in this policy — a clear textual defect.",
+      "reasoning_cat2": "Section V contains no definition of covered operations and no endorsement supplies one, so this limitation on the Coverage B limit cannot be applied as written.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.I.E. Coverage B. Per-Condition Limit (replaced)"
+    },
+    {
+      "clause_id": "neg123",
+      "reasoning_cat1": "Same problem: the aggregate is limited to pollution conditions \"resulting from 'covered operations'\", an undefined quoted term.",
+      "reasoning_cat2": "Nothing elsewhere in the policy defines covered operations, so this provision is orphaned relative to Section V and to the Coverage B grant in Section I.B.",
+      "prob_cat1": 0.54,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.I.F. Coverage B. Aggregate Limit (replaced)"
+    },
+    {
+      "clause_id": "neg124",
+      "reasoning_cat1": "Three enumerated exhaustion triggers stated clearly; the mixed \"will\"/\"shall\" is stylistic only.",
+      "reasoning_cat2": "Consistent with Endorsement 6.III and 6.IV.F; it displaces the base Section III.A cleanly.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.II.A. Duty to Defend (replaced)"
+    },
+    {
+      "clause_id": "neg125",
+      "reasoning_cat1": "States erosion of both the dedicated sublimit and the Item 4 aggregate, and application to the retention; definite.",
+      "reasoning_cat2": "It omits the per-condition and coverage aggregates that the base text included, but that omission is deliberate given Endorsement 6.I; no unresolved conflict.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.II.D. Legal Defense Expenses Erode Sublimit (replaced)"
+    },
+    {
+      "clause_id": "neg126",
+      "reasoning_cat1": "A single figure subject to the total aggregate; unambiguous.",
+      "reasoning_cat2": "Consistent with Endorsement 6.II.D and IV.F and with Section II.G's total aggregate cap.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.III. Dedicated Aggregate Sublimit of Liability"
+    },
+    {
+      "clause_id": "neg127",
+      "reasoning_cat1": "The settlement sentence is visibly corrupted — \"for which it is not which is acceptable to a claimant\" — leaving the condition for the hammer clause garbled, and \"covered 'loss'\" uses an undefined quoted term.",
+      "reasoning_cat2": "It parallels Section III.E but shifts counsel selection to the first named insured after exhaustion; the undefined \"loss\" appears nowhere in Section V.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 6.IV.F. Rights After Exhaustion of Defense Sublimit"
+    },
+    {
+      "clause_id": "neg128",
+      "reasoning_cat1": "One definite duration with a single condition; nothing to construe.",
+      "reasoning_cat2": "It expressly replaces Section VIII.C's sixty days, resolving rather than creating the discrepancy.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 7.C. Basic Extended Reporting Period (90 Days)"
+    },
+    {
+      "clause_id": "neg129",
+      "reasoning_cat1": "Precise numbers (33 months, 200%) and clear procedural conditions; the OCR \"4.\" for \"1.\" is trivial.",
+      "reasoning_cat2": "Replaces Section VIII.D's 34 months so the two dovetail; the ERP entitlement still depends on Section VIII.A's odd cancellation cross-reference.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 7.D. Supplemental Extended Reporting Period (replaced)"
+    },
+    {
+      "clause_id": "neg130",
+      "reasoning_cat1": "The OCR interleaves stray fragments (\"F. H. Solely with respect to...\") into the definition, and limb 1 lost its numeral; the cross-reference to \"Subsection D., above\" points forward rather than above.",
+      "reasoning_cat2": "Endorsement 11.I.F also deletes and replaces the same Subsection F. with different content (non-owned disposal sites limited to those on a schedule that does not exist), so two competing replacements coexist.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 8.I.F. “Covered location” (replaced)"
+    },
+    {
+      "clause_id": "neg131",
+      "reasoning_cat1": "The nested conditions on generation and receipt of waste are intricate but precisely dated; the OCR corruption is superficial.",
+      "reasoning_cat2": "Endorsement 11.II.D also replaces Subsection D. \"in its entirety\" for a different purpose, leaving two overlapping replacements of the same definition.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 8.II.D. “Claim” (replaced)"
+    },
+    {
+      "clause_id": "neg132",
+      "reasoning_cat1": "Four cumulative provisos, each with a factual test tied to a moment of disposal; demanding but definite.",
+      "reasoning_cat2": "Limb 2 references a Schedule of Disposal Sites Endorsement that is not attached, and Endorsement 11.I.F refers to a Schedule of Non-Owned Disposal Sites Endorsement that likewise does not exist.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 8.II.U. “Non-owned disposal site” (replaced)"
+    },
+    {
+      "clause_id": "neg133",
+      "reasoning_cat1": "The two limbs are clear, though the cross-reference to a Retroactive Date \"identified in Section V., DEFINITIONS, Subsection D.\" points to text inserted by endorsement rather than the base policy.",
+      "reasoning_cat2": "That cross-reference works only if Endorsement 8's replacement of Subsection D. survives Endorsement 11's own replacement of the same subsection — an unresolved layering.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 8.III.O. Exclusion — Disposal Sites (replaced)"
+    },
+    {
+      "clause_id": "neg134",
+      "reasoning_cat1": "Definite ninety/fifteen day notice mechanics with the same deeming sentence as the base text.",
+      "reasoning_cat2": "It supersedes Section IX.A.2, but Section IX.G still carves out \"Cancellation condition 2.a., above\", now a reference to replaced text.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 9 — Cancellation by Insurer (90 Days)"
+    },
+    {
+      "clause_id": "neg135",
+      "reasoning_cat1": "The grant is clear, though the section is misnumbered \"Il.\" for I. and \"folowing\" is misspelled; it drops the retroactive-date limb entirely.",
+      "reasoning_cat2": "This is the second full replacement of Section I.A, competing with Endorsement 5.II.A; a court would have to decide which governs scheduled retroactive-date locations, since this version deletes the retroactive limb.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 10.I.A. New Pollution Conditions (Transportation)"
+    },
+    {
+      "clause_id": "neg136",
+      "reasoning_cat1": "The definition is clear on its face; the substitution of \"Transportation\" for the \"Contingent transportation\" label at Subsection E. is the only oddity.",
+      "reasoning_cat2": "Base Exclusion VI.Q's carve-back still speaks of \"contingent transportation\", a term now deleted, though Endorsement 10.III replaces that exclusion too.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 10.II.E. “Transportation” (replaced)"
+    },
+    {
+      "clause_id": "neg137",
+      "reasoning_cat1": "Standard vehicle exclusion with an unconditional carve-back for transportation; wording definite.",
+      "reasoning_cat2": "Consistent with Endorsement 10.II's transportation definition and with the replaced Coverage A grant.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 10.III.Q. Exclusion — Vehicles (replaced)"
+    },
+    {
+      "clause_id": "neg138",
+      "reasoning_cat1": "The schedule is badly scrambled — a bare numeral column with names listed out of sequence and an interposed heading — so pairing names to numbers is uncertain on the face of the document.",
+      "reasoning_cat2": "Declarations Item 8 relies on this schedule to define covered locations, so the scrambling matters for what Endorsement 11 actually covers.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 11 — Schedule of Non-Owned Covered Locations"
+    },
+    {
+      "clause_id": "neg139",
+      "reasoning_cat1": "Limb 3 refers to a \"Schedule of Non-Owned Disposal Sites Endorsement attached to this Policy\" and to \"Subsection D., above\", both of which are problematic references.",
+      "reasoning_cat2": "No Schedule of Non-Owned Disposal Sites Endorsement is attached (Endorsement 8 is a blanket endorsement), and this replacement of Subsection F. competes with Endorsement 8.I.F's replacement of the same definition.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 11.I.F. “Covered location” (replaced)"
+    },
+    {
+      "clause_id": "neg140",
+      "reasoning_cat1": "The final carve-out — no claim \"from or made in relation to the owner, operator, contractor of the non-owned covered location; or those of their employees\" — is grammatically broken and \"in relation to\" is very vague.",
+      "reasoning_cat2": "It is the second replacement of Subsection D. (Endorsement 8.II.D being the first), and the limitation to claims \"first made during the policy period\" omits the extended reporting period preserved in Section VIII.B.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 11.II.D. “Claim” (replaced)"
+    },
+    {
+      "clause_id": "neg141",
+      "reasoning_cat1": "\"Produce certain egg related products on behalf of the insured\" is indefinite (\"certain\") and the relative clause construction is awkward.",
+      "reasoning_cat2": "It depends on the scrambled Schedule above and on Endorsement 11.I.F limb 4's reference to non-owned covered locations; broadly coherent but resting on defective referents.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 11.III. “Non-owned covered locations”"
+    },
+    {
+      "clause_id": "neg142",
+      "reasoning_cat1": "The carve-out that pollution condition \"does not include any odor\" is a sharp, litigable boundary for a poultry operation, since odor often accompanies covered discharges — where a release causes both odor and other harm is unresolved.",
+      "reasoning_cat2": "It removes fungi and legionella from the definition while Section V.C, V.L and the fungi fallback in V.Y remain in the policy, leaving stranded provisions.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 12.I.W. “Pollution condition” (replaced)"
+    },
+    {
+      "clause_id": "neg143",
+      "reasoning_cat1": "Broadly drafted anti-concurrent-causation exclusion sweeping in \"odor\" alongside fungi; \"or odor\" appended to a fungi/legionella exclusion is an odd fit and its independent reach is arguable.",
+      "reasoning_cat2": "It reinforces Endorsement 12.I.W's odor carve-out but leaves Section V.C (certified industrial hygienist) and the fungi fallback in Section V.Y with nothing to operate on.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 12.II. Exclusion — Fungi and Legionella"
+    },
+    {
+      "clause_id": "neg144",
+      "reasoning_cat1": "A single sublimit figure with clear scope; \"Therefore\" is a non sequitur connector but harmless.",
+      "reasoning_cat2": "Consistent with the natural resource damage definition in Section V.T and its inclusion within property damage in V.X.4.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 12.III. Natural Resource Damage Sublimit"
+    },
+    {
+      "clause_id": "neg145",
+      "reasoning_cat1": "Three figures and a date stated baldly with no operative verb; meaning supplied by the following sections.",
+      "reasoning_cat2": "Consistent with Endorsement 13.I and II, which use these sublimits and retroactive date.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 13 — Products Pollution Sublimits"
+    },
+    {
+      "clause_id": "neg146",
+      "reasoning_cat1": "The text contains a duplicated phrase (\"on or after the on or after the Retroactive Date\") and grants only claims and defense expense while the limits section also speaks of remediation costs.",
+      "reasoning_cat2": "Endorsement 13.II caps \"claims, remediation costs and associated legal defense expense\" for product pollution, yet this grant omits remediation costs — an internal mismatch within the same endorsement.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 13.I — Supplemental Coverage — Products Pollution"
+    },
+    {
+      "clause_id": "neg147",
+      "reasoning_cat1": "The wording is clear that sublimits are included in and not in addition to the policy limits.",
+      "reasoning_cat2": "It refers to remediation costs for product pollution although Endorsement 13.I grants only claims and legal defense expense, and the per-occurrence and aggregate sublimits are identical ($1,000,000 each), which is odd but not incoherent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 13.II. Limits of Liability"
+    },
+    {
+      "clause_id": "neg148",
+      "reasoning_cat1": "A broad products exclusion with a carve-back for product pollution; the section label is misspelled \"EXLCUSIONS\" but the substance is definite.",
+      "reasoning_cat2": "Consistent with the product pollution definition and sublimits in the same endorsement.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 13.III. Exclusion — Products Liability"
+    },
+    {
+      "clause_id": "neg149",
+      "reasoning_cat1": "\"Arises out of the use of a product\" after relinquishment of possession is workable, but the exclusion of \"waste products\" collides conceptually with the pollution condition definition's inclusion of waste materials.",
+      "reasoning_cat2": "The waste-products carve-out sits against Endorsement 10's transportation coverage for the insured's \"waste or products\" and Endorsement 8's waste disposal coverage, requiring careful harmonisation.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 13.IV. Definition “Product Pollution”"
+    },
+    {
+      "clause_id": "neg150",
+      "reasoning_cat1": "\"To the extent that trade or economic sanctions or other laws or regulations prohibit\" is broad, with \"other laws or regulations\" a wide catch-all beyond the sanctions specifics.",
+      "reasoning_cat2": "Consistent with Section IV's US-only coverage territory and the OFAC advisory notice.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 14 — Trade or Economic Sanctions"
+    },
+    {
+      "clause_id": "neg151",
+      "reasoning_cat1": "The statement is definite; the stray OCR characters and the signature block naming two companies are artifacts rather than textual ambiguity.",
+      "reasoning_cat2": "The Declarations name Illinois Union as the issuing company, so the reference to \"the company named on the first page of the Declarations\" resolves the two-company signature block.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement 16 — Signatures Applicable"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The acknowledgment ends with an open catch-all, \"other material provided by NOLS describing or related to my program,\" whose reach is undefined, and \"has been available to more fully explain\" is a vague representation rather than a definite obligation. That general-vs-specific structure after the enumerated Catalog, Admission Policies, Risk Management statement and Enrollment Packet leaves genuine scope uncertainty.",
+      "reasoning_cat2": "Read against the \"Activities and Risks\" bullets and the Assumption of Risks paragraph, this clause functions as a purported incorporation of extrinsic documents that are nowhere else identified or attached, which could put it in tension with the integration-style closing statement that the agreement comprises four pages and may be modified only in writing. That tension is real but modest.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.24,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Activities and Risks — Acknowledgment of Reading NOLS Materials"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"[A]ny mediation or suit shall occur or be filed only in the State of Wyoming\" is the classic ambiguity between a geographic designation (any court sitting in Wyoming, including federal) and a sovereign designation (Wyoming state courts only); the stray asterisk and the garbled parenthetical about \"the laws which might apply the laws of another jurisdiction\" add mechanical defects. A court would have something concrete to construe in the words \"in the State of Wyoming.\"",
+      "reasoning_cat2": "Nothing else in the document addresses venue or dispute resolution, so there is no competing forum provision; the severability clause coexists with it without conflict. The only mild friction is that the release contemplates suits by third parties who never signed, but that is not a direct contradiction.",
+      "prob_cat1": 0.67,
+      "prob_cat2": 0.17,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Other Provisions — Governing Law and Forum Selection"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The recital that the signers \"HAVE READ THIS PAGE AND THE PREVIOUS 3 PAGES\" is a page-count reference that can misdescribe the actual document, and \"BINDING UPON THEM, THEIR HEIRS, ESTATE, EXECUTORS AND ADMINISTRATORS\" raises a scope question about whether non-signing heirs' independent claims are captured. The enumerated list of successors with no catch-all also invites an expressio unius argument.",
+      "reasoning_cat2": "It must be squared with the release and indemnity paragraph, which separately addresses claims by \"a member of my family, a rescuer, another student, or any other person,\" and with the preamble's conditional parent-signature requirement; the binding-on-heirs language overlaps rather than plainly conflicts. Some tension exists over whether a parent can bind a minor's own claims, but the provisions can be harmonised.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.24,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Final Provision — Binding on Heirs, Estate, Executors and Administrators"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "\"[U]nder 18 years of age in most states\" and the instruction that \"Student and parent must determine the age of legal competency\" are hedged and shift a legal determination to the signers, leaving the definitional boundary of \"minor\" soft. The definitional caveat \"unless indicated otherwise\" is also unspecific, though the operative signature requirement itself is clear.",
+      "reasoning_cat2": "It is consistent with the later paragraphs that repeatedly condition obligations on \"if I am an adult student, or the parent of a minor student,\" and with the signature block calling for a parent signature only for minors. No contradicting provision was found.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble – Signature Requirements"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The list of activities is expressly non-exhaustive (\"include, among others\"), and \"inherent risks\" is given a definition, so the drafting anticipates and defuses the usual scope objection. \"Unique character of the activities\" is somewhat vague but is a stated definitional device rather than an operative trigger.",
+      "reasoning_cat2": "It dovetails with the Acknowledgment and Assumption paragraph, which repeats that the description \"is not complete,\" so the two are coherent. No conflicting provision identified.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Activities and Risks – Introduction"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A one-line, purely descriptive statement of risk; \"strenuous\" is imprecise but nothing operative turns on its boundary. There is no list or catch-all to construe.",
+      "reasoning_cat2": "It sits comfortably within the enumerated inherent risks and is echoed by the instructional-nature bullet. No inconsistency with the release or assumption clauses.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Strenuous Activities"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "Descriptive and hedged (\"usually,\" \"may be many days\"), but it imposes no duty, so the vagueness has no operative bite. Nothing here needs construing.",
+      "reasoning_cat2": "Consistent with the medical-care authorization paragraph, which anticipates that third-party care may be unavailable and that evacuation costs fall on the student. No conflict found.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Remote Locations"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A four-word factual statement with no ambiguous operative term and no enumeration. Definite on its face.",
+      "reasoning_cat2": "It supports the assumption of risk and the equipment-damage provision without contradicting either. Coherent with the whole.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Equipment Failure"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "\"Camping risks include\" is an open list, and \"offending food types\" is loose, but as a descriptive risk disclosure nothing operative hinges on the list's outer edge. Low textual risk.",
+      "reasoning_cat2": "It coheres with the medical-disclosure paragraph requiring disclosure of conditions such as allergies. No competing provision.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Camping and Food"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "It uses two catch-alls — \"by other means\" and \"other risks usually associated with such travel\" — which is precisely the general-following-specifics structure, though it is descriptive rather than operative. The embedded footer text is scanning noise rather than a drafting error.",
+      "reasoning_cat2": "It is consistent with the assumption-of-risk paragraph's express extension to risks \"whether or not described above.\" No conflicting provision.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Travel"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"[F]orces of nature\" and \"other mild or serious conditions\" are catch-alls appended to specific hazards, but again the sentence only illustrates rather than allocates. Modest scope softness only.",
+      "reasoning_cat2": "Fits the surrounding risk bullets and the express statement that the description is incomplete. No inconsistency detected.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Environmental Risks"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"[E]rrors in judgment\" and \"misjudgments\" describe staff fault in a way that could be read as pre-disclosing negligence, and \"among other things\" is an open list; still, the wording itself is clear as description. Some latent significance but little to construe.",
+      "reasoning_cat2": "It interacts with the release, which covers \"claims of negligence of a Released Party, but not of gross negligence,\" and with the contractor disclaimer; the line between misjudgment and gross negligence is left to the release rather than contradicted here. Mild tension only.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Judgment of Instructors"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"On most NOLS courses\" and \"at times\" are hedges in a descriptive sentence with no operative consequence. Nothing ambiguous is being applied.",
+      "reasoning_cat2": "It is reinforced by the free-time bullet's statement that NOLS cannot continually monitor students. Consistent with the whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Travel Without Instructors"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"[F]ree\" time is put in scare quotes and never defined, and the disclaimer covers free time \"before and after\" the course while the next sentence addresses staff acting \"as private individuals\" during it — the boundary between course time and free time is genuinely fuzzy. That named term is a plausible litigation point.",
+      "reasoning_cat2": "It sits against the release's definition of \"Released Parties\" as including staff and volunteers: here staff are said to act as private individuals for whom NOLS is not responsible, which could be read either to narrow or to duplicate the release's coverage. That is a real but not flatly contradictory tension.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Free Time and Supervision"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "\"[G]enerally consistent with customs and standards used in the United States\" is a vague standard that could be read as a representation about field practices, and \"other criminal conduct\" is a catch-all. The vagueness is nameable but the sentence is framed as disclosure.",
+      "reasoning_cat2": "It could be argued to sit oddly with the disclaimer of responsibility for contractors and the general assumption of all risks, but no direct conflict emerges. Largely coherent.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Foreign Countries"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A short aspirational sentence with no operative term to apply; \"challenged to expand their skills\" carries no legal boundary. Definite enough.",
+      "reasoning_cat2": "Nothing in the document contradicts it. Consistent with the whole.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Instructional Nature"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "\"[C]ertain tasks, including, for example, transportation\" is an illustrative catch-all with no limiting principle, so the range of contractor activities disclaimed is uncertain. That is a genuine, nameable scope softness in an operative disclaimer.",
+      "reasoning_cat2": "The release defines \"Released Parties\" as officers, trustees, agents and staff, and does not list contractors, so this disclaimer's relationship to the release's enumerated list raises a real coherence question. Worth flagging above baseline.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Bullet – Private Contractors"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "It is carefully layered, but \"lands whose rules or regulations prohibit my doing so as a matter of law\" is an unusual and imprecise carve-out whose application to a given site is uncertain. \"ALL risks... inherent or otherwise\" is broad but plainly expressed.",
+      "reasoning_cat2": "The same carve-out is repeated in the release and indemnity paragraph, so the two are aligned rather than conflicting; the risk bullets support rather than undercut it. Coherent with the instrument.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Acknowledgment and Assumption of Inherent and Other Risks"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The dividing line between \"negligence,\" which is released, and \"gross negligence or intentionally wrongful conduct,\" which is not, is a recognised battleground, and \"intended to be enforced to the fullest extent permitted by law\" plus the lands-based carve-out add indeterminacy; there is also a typographical defect (\"(7indemnify\"). Named terms make this above-average textual risk.",
+      "reasoning_cat2": "It must be read with the assumption-of-risks paragraph, the contractor disclaimer, and the heirs-binding closing statement; the indemnity's reach to claims by \"any other person\" overlaps but does not squarely contradict them. Some strain, not a clear conflict.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Agreements of Release and Indemnity"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"[O]r otherwise satisfied NOLS,\" \"any medical condition that might affect\" participation, and removal \"for any reason it deems in the best interests\" are all elastic standards in an operative representation. The vagueness is nameable though unlikely to be the fought-over point.",
+      "reasoning_cat2": "It coexists with the medical-care authorization paragraph and with the statement that suitability is the student's responsibility, which reinforce rather than contradict it. No conflicting provision located.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Other Provisions – Medical Fitness and Disclosure"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"[C]osts reasonably associated with medical services, including evacuation\" leaves the reasonableness boundary open, and \"more advanced procedures\" is undefined. Otherwise the authorization is clearly expressed.",
+      "reasoning_cat2": "It fits the remote-locations bullet and the medical-disclosure paragraph, and does not clash with the release. Consistent with the whole.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Authorization for Medical Care"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"[S]trategic partners in which NOLS graduates may be interested\" is loose and \"promotional materials and press releases\" is a bounded pair, but the grant of permission is plainly worded. Little to construe.",
+      "reasoning_cat2": "Nothing elsewhere in the agreement addresses privacy or publicity, so there is no competing provision. Coherent.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Use of Contact Information and Images"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"[A]ny damage I may cause\" is broad with no fault standard stated, and the two sentences pair a student liability with a NOLS disclaimer limited to belongings \"stored at NOLS facilities.\" The wording is definite enough on its face.",
+      "reasoning_cat2": "It is consistent with the assumption-of-risk paragraph's reference to property loss and with the equipment-failure bullet. No conflict identified.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Responsibility for Damage to Facilities or Gear"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "A standard severability sentence; \"any part\" and \"other appropriate authority\" are broad but conventional and readily applied. Nothing to construe.",
+      "reasoning_cat2": "It works with the lands-based carve-outs in the assumption and release paragraphs, which already contemplate partial unenforceability, so it is harmonious. Consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Severability"
+    }
+  ]
+}

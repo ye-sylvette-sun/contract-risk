@@ -3,10 +3,12 @@ __pycache__/
 *.pyc
 .vscode
 
-# bulk inputs, provided separately
+# Bulk inputs, provided separately. Both are reachable inside the repo (as a
+# copy or a junction) so no path in src/ escapes ROOT, but neither is committed.
+# A comment has to sit on its own line — git reads a trailing `#` as part of the
+# pattern, so `data/ # note` ignores nothing.
+#
+#   data/           Westlaw headnotes, opinion text, the docket linking sheet
+#   contract_risk/  the Contract-Risk repo's new_approach/ — OCR'd contract text
 data/
-bloomberg/
-bloomberg_datalab/
-
-# an archived run, kept only to score the locator against its logs offline
-_github_repo_bak/
+contract_risk/

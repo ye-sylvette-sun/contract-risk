@@ -1,9 +1,11 @@
-"""Step 2 — locate every clause of a winning contract (one call per contract).
+"""Step 2 — locate every clause of a contract (one call per contract).
 
-A winning contract is one step 1 found a construed clause in. Its other clauses
-are the dataset's negatives, so this step must run on *every* contract that
-produced a positive: a positive is never left without negatives cut from its own
-document, in its own OCR condition.
+It runs on every contract step 1 was shown, for every case step 1 processed.
+That is two groups. The contracts a positive came out of must be here, because a
+positive is never left without negatives cut from its own document, in its own
+OCR condition. The contracts that produced no positive are here because their
+clauses are negatives in their own right: the agreement was filed in the case,
+was before the court, and the court did not construe it.
 
 The model returns a line range and two anchors per clause and writes no text.
 What it cannot be checked on is a range that starts and ends in the right place
@@ -24,7 +26,29 @@ import statistics
 import lib
 
 OUT = lib.OUT / "inventory.json"
-WIDE = 6          # a clause this many times the contract's median is flagged
+
+# A clause this many times the contract's median length is flagged for review.
+# Reporting only: nothing is rejected on it, here or anywhere downstream.
+#
+# Raised from 6 after reading, line by line, ten flagged clauses across two
+# contracts. Only two were genuinely several clauses merged; the rest were
+# single provisions that simply run long, which is ordinary in a terms-of-service
+# agreement or a policy. Measured on that truth set:
+#
+#     WIDE     flags   true   false   missed   precision   recall
+#        6        10      2       8        0        0.20     100%
+#       10         6      2       4        0        0.33     100%
+#       11         3      1       2        1        0.33      50%
+#       18         1      1       0        1        1.00      50%
+#
+# 10 is the ceiling of what length alone can do. Above it recall breaks
+# immediately, and precision does not improve: a genuinely merged clause and a
+# perfectly good one both sit at 10.8x the median, so NO threshold separates
+# them. Going higher trades a real defect for nothing.
+#
+# The truth set is ten clauses in two contracts. Treat 10 as the best current
+# estimate, not a settled constant, and re-derive it when more have been read.
+WIDE = 10
 
 
 def flags(kept):
@@ -59,14 +83,32 @@ def main():
 
     clauses = lib.read_json(lib.OUT / "clauses.json", {})
     registry = lib.read_json(lib.OUT / "contracts.json", {})
+    layout = lib.read_json(lib.OUT / "layout.json", {})
     done = lib.read_json(OUT, {})
 
-    winners = {}
+    # EVERY contract step 1 was shown, for every case it processed — not only
+    # the ones a positive came out of.
+    #
+    # The winners have to be here: a positive is never left without negatives cut
+    # from its own document. The rest are here because their clauses are
+    # negatives too. A case often files several agreements and the court reaches
+    # only some of them; the others were before the court, were not construed,
+    # and that is exactly what a negative is. Dropping them threw away about a
+    # fifth of the corpus for no reason beyond how the pipeline happened to be
+    # wired, and it also removed every contract in which the right answer is
+    # "nothing here" — the case that most sharply tests over-flagging.
+    #
+    # A two-column contract is still excluded: step 1 never saw it either.
+    targets = {}
     for citation, case in clauses.items():
         for c in case["clauses"]:
-            winners.setdefault(c["contract_id"], citation)
+            targets.setdefault(c["contract_id"], citation)
+    for cid, entry in registry.items():
+        if entry["citation"] in clauses and \
+                not layout.get(cid, {}).get("two_column"):
+            targets.setdefault(cid, entry["citation"])
 
-    for cid, citation in sorted(winners.items()):
+    for cid, citation in sorted(targets.items()):
         if (args.case and citation != args.case) or \
            (args.contract and cid != args.contract) or cid in done:
             continue

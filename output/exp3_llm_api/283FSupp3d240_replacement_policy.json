@@ -1,0 +1,734 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The suicide clause is badly fragmented but its operative content — no death proceeds where suicide occurs within 2 years of amounts having been \"in effect\" — turns on the vague phrase identifying which two-year period runs (from issue, from an increase, or from a replaced policy's date), and on \"amounts of\" insurance in effect less than 2 years. That is a nameable ambiguity that determines whether a suicide is covered at all, and it is the classic litigated term in a replacement-policy setting.",
+      "reasoning_cat2": "Read against the Incontestability provision (2 years after date of issue or 2 years after any increase) and against the Right to Return Policy pages that expressly contemplate this contract replacing an existing policy, the start date of the suicide period is genuinely unsettled across the instrument. Whether the replacement character of the policy shortens or restarts the contestable/suicide window is precisely the kind of whole-instrument tension a court would resolve.",
+      "prob_cat1": 0.74,
+      "prob_cat2": 0.56,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Claims — Suicide (suicide exclusion), Replacement Policy"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The insuring agreement is a standard promise to pay death proceeds on due proof of death while the contract was in force; the only softness is \"subject to its terms,\" which is ordinary incorporation language. OCR damage obscures words but the meaning is conventional and definite.",
+      "reasoning_cat2": "It is expressly made subject to the contract's other terms, so the suicide, grace-period and incontestability provisions harmonise with it rather than conflict. No specific inconsistency found.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Insuring Agreement (Death Proceeds)"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A 20-day free-look with refund of premiums is a definite, mechanical term; the text is garbled but the operative period and remedy are clear. Nothing here requires a choice between two readings.",
+      "reasoning_cat2": "It sits directly against the Notice to Policyholder pages giving 30 days (and 45 in PA) to return a policy that replaces an existing policy, so a reader must decide which period governs this replacement policy. That is a real, though probably reconcilable, tension worth some weight.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Right to Cancel (20 Day)"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "This is only a truncated list of state abbreviations with the operative sentence lost to OCR; as it stands it states no rule at all. The fragment cannot be construed, though a list of specified states raises an expressio unius question about unlisted states.",
+      "reasoning_cat2": "Its relationship to the 20-day right-to-cancel page and to the other state-specific return blocks is the only live issue, and this jurisdiction's policy would have to be slotted into one block. Some tension, but nothing squarely contradictory.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Right to Return Policy - AR, CT, DC, DE, FL etc."
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The rule is definite: if the policy replaces an existing policy, a 30-day return for full refund. \"Replaces an existing policy\" is a term that could be argued over, but it is a defined industry concept and the clause is otherwise plain.",
+      "reasoning_cat2": "It differs from the 20-day general right to cancel elsewhere in the contract, and the state lists across the several blocks do not obviously cover every jurisdiction. That leaves a modest reconciliation question rather than a flat conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Right to Return Policy - AL, AZ, CO, IA, KY, VA, UT, VT, WV"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The California block states a 30-day return right for a replacement policy in capitals; the wording is a straightforward conditional. No named term is genuinely two-sided.",
+      "reasoning_cat2": "Same relationship to the 20-day cancellation page as the other state blocks, and it applies only to CA-issued policies, so it is unlikely to bite here. Low relational risk.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Right to Return Policy - CA"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The PA block is the most heavily damaged, leaving \"than v US,. or W\" and a 45-day period conditioned on an unreadable clause; what triggers the 45 days cannot be read off the text. That is a genuine mechanical/vagueness defect on the face of the fragment.",
+      "reasoning_cat2": "It sets a different period from both the 20-day cancellation page and the 30-day replacement blocks, so a PA-issued replacement policy would require choosing among them. Moderate relational tension.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Right to Return Policy - PA"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "A footnote saying premiums and charges are affected by risk class and that no one may represent future changes; scrambled but substantively boilerplate disclaimer language. Nothing to construe.",
+      "reasoning_cat2": "Consistent with the Risk Class definition and the Table of Guaranteed Maximum Renewal Premiums. No conflict identified.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Class Footnote (Page 3 Specifications)"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Identical disclaimer footnote repeated on the continued specifications page; definite boilerplate. No ambiguous term.",
+      "reasoning_cat2": "Duplicates neg7 and matches the Risk Class provision; harmless repetition rather than inconsistency.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Class Footnote (Page 3 Continued Specifications)"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "A simple statement that table installments are monthly per $1,000 of proceeds. Mechanically clear.",
+      "reasoning_cat2": "Consistent with the Description of Options and the settlement option provisions that reference the page 5 tables. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Settlement Option Tables - Basis of Installments"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A definitional note that age means age nearest birthday; the OCR renders \"age\" as \"oe\" but the intent is plain. Definite once read.",
+      "reasoning_cat2": "Aligns with the life income options being based on the payee's sex and age. No inconsistency.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Settlement Option Tables - Meaning of Age"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "A note that other ages are available on request and Option 5 is available for two males or two females; straightforward administrative statement. No ambiguous term.",
+      "reasoning_cat2": "Matches the Option 5 table note and the Alternate Life Income provision. Consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Settlement Option Tables - Other Ages Available"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Duplicate of the same availability note for Option 5; definite and mechanical. Nothing to construe.",
+      "reasoning_cat2": "Consistent with the Option 5 provision on page 11 and the settlement tables. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 5 Table Note - Other Ages Available"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The actuarial basis note names a mortality table, projection scale and 3% interest; \"27003\" is an OCR corruption of a year but the rate and basis are stated. Little interpretive room.",
+      "reasoning_cat2": "It should be checked against the Death of Payee commutation rate of 4.5% and the Option 1 minimum interest rate, but different rates for different purposes are normal and not contradictory. Low relational risk.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Rate for Death Proceeds Options / Actuarial Basis"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Same risk-class disclaimer footnote on the renewal premium page; boilerplate with no ambiguous operative term. Definite.",
+      "reasoning_cat2": "It sits with the Table of Guaranteed Maximum Renewal Premiums and the Renewal provision and is consistent with both.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Class Footnote (Page 6 Renewal Premiums)"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The provision is cut off mid-sentence — \"takes effect on the contract date sh Way the contract date. The first day of the contrackye\" — so the rule for measuring contract months and years is not readable. The loss is mechanical rather than a genuine choice of meanings.",
+      "reasoning_cat2": "Contract dating matters for the suicide and incontestability two-year periods and for renewal dates, so a defective dating rule could ripple; but the specifications state a contract date of 8/10/07 clearly. Modest relational exposure.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contract Months and Years"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Notice must be in written form acceptable to the insurer and takes effect when signed, subject to prior action; \"acceptable to us\" is a discretionary standard but a common and narrow one. Slight vagueness only.",
+      "reasoning_cat2": "It squares with the Reinstatement, Beneficiary and Assignment provisions requiring written notice. No conflict located.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notice"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "A one-line definition of \"Option\" as payment of proceeds other than in one sum; truncated but conventional. Nothing genuinely two-sided.",
+      "reasoning_cat2": "Consistent with Payment of Proceeds and the Proceeds Payment Options section. No inconsistency.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Defines payee as the person to whom payments are made and, for life income, the person on whose life the option is based. Clear as far as it survives.",
+      "reasoning_cat2": "Fits the Choice of Options requirement that the payee be the beneficiary and the Death of Payee provision. Consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payee"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The pronoun definition distinguishes owner from insured, but the OCR scrambling leaves the mapping of \"you\" partly unreadable. As drafted the concept is standard and definite.",
+      "reasoning_cat2": "It must be read with the rider's own \"You, Your, or Yours\" definition, which defines the same words for the rider; the rider expressly controls where it differs, so the overlap is managed. Low relational risk.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pronouns"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "Requires proof of insurability \"acceptable to us\" and provides no new benefit takes effect until approval; \"acceptable to us\" is a discretionary standard courts sometimes qualify by good faith. Mild vagueness only.",
+      "reasoning_cat2": "Consistent with the Reinstatement and Conversion provisions, the latter of which waives evidence of insurability. No conflict found.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Proof You Can Be Insured"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "Only the fragment \"Unless we adopt other rules, your risk\" survives, so no rule is stated; the defect is missing text rather than competing meanings. Very little to construe as written.",
+      "reasoning_cat2": "It relates to the risk-class footnotes on pages 3 and 6, which are consistent with a unilateral rule-setting power. No specific conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Risk Class"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "The payment provision survives only as a fragment stating premiums after the first are payable in advance of the period they cover. The rule is conventional and not two-sided.",
+      "reasoning_cat2": "Consistent with the Grace Period, Renewal and Table of Guaranteed Maximum Renewal Premiums. No inconsistency.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Premiums - Payment"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "A 31-day grace period with the contract ending as of the premium due date and any due premium deducted from death proceeds; the terms are specific and dated. The only oddity is termination relating back to the due date, which is standard.",
+      "reasoning_cat2": "It interacts with the Reinstatement provision and with the insuring agreement's \"while the contract was in force,\" and the retroactive termination date could matter for a death during grace — but the clause itself resolves that. Low but not negligible.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Grace Period"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Renewal each year on payment of the premium then due, with no renewal past the final term date on page 3; definite and cross-referenced. No ambiguous term.",
+      "reasoning_cat2": "The referenced page 3 specifications do not legibly show a final term date, and the renewal table runs to 2049; that is a minor cross-reference gap rather than a contradiction. Low relational risk.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Renewal"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "A three-condition reinstatement list (apply, we approve, pay past-due premiums) truncated by OCR; the structure is enumerated and definite. Nothing genuinely ambiguous.",
+      "reasoning_cat2": "Consistent with the Grace Period and Proof You Can Be Insured provisions. No conflict identified.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Reinstatement"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "Only a fragment referring to revocable beneficiary and contingent owner survives; no operative rule is legible. Little to construe as written.",
+      "reasoning_cat2": "It cross-refers to the Beneficiary and Proceeds Payment Options sections, which are compatible with owner control. No inconsistency found.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Ownership"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The surviving text says the insurer is not bound by an assignment unless it receives notice and the assignee has a first claim; conventional and definite. No named ambiguity.",
+      "reasoning_cat2": "Squares with the Notice provision and the Beneficiary provision's ordering of claims. Consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Assignment"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "The clause addresses survival of the beneficiary, equal rights within a class, and default payment if none survives, but the OCR loses the default payee. Standard concepts, no genuine competing reading in what remains.",
+      "reasoning_cat2": "It fits the Ownership and Payment of Proceeds provisions and the requirement that a death-proceeds payee be the beneficiary. No conflict.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Beneficiary"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The entire-contract/representations clause says statements are representations not warranties and no claim may be denied on a statement unless attached to the contract; that is a clear, standard rule. The \"as far as you know and believe\" and \"good faith\" language is qualitative but conventional.",
+      "reasoning_cat2": "It interlocks with Incontestability and with the suicide clause, and in a replacement-policy dispute the attached-application requirement can matter; still no direct contradiction appears. Modest relational weight.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Contract"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Proceeds payable within 30 days after proof of death; a single definite time limit. No ambiguous term.",
+      "reasoning_cat2": "Consistent with the insuring agreement's \"due proof\" requirement and the death proceeds interest provision. No conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Claims"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Only \"one sum unless an option is chosen. We may\" survives; the default lump-sum rule is clear even truncated. Nothing genuinely two-sided.",
+      "reasoning_cat2": "Consistent with the Option definition and the Proceeds Payment Options section. No inconsistency.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payment of Proceeds"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "The stated rate is lost to OCR (\"at the rate of at Ik per year, but not less than that required by law\"), so the interest floor cannot be read from the text alone. The statutory backstop makes the practical result determinate, limiting the ambiguity.",
+      "reasoning_cat2": "It works with the Claims 30-day payment rule and the Grace Period deduction of unpaid premiums from proceeds; no contradiction, only sequencing. Low relational risk.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Death Proceeds Interest and Adjustments"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The incontestability text is broken but conveys a two-year contestable period from date of issue or from any increase, with an exception for nonpayment of premiums; the start date for a replacement policy is the arguable point. That is a nameable but only moderately live ambiguity.",
+      "reasoning_cat2": "It runs in parallel with the suicide clause's two-year period and with the Contract/representations provision, and in a replacement-policy case whether the period restarts is exactly the harmonisation question. Real but secondary to the suicide clause.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incontestability"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Requires written notice for choice or change of option, permits the owner to choose while the insured lives, and requires the death-proceeds payee to be the beneficiary. Definite mechanical rules.",
+      "reasoning_cat2": "Consistent with the Beneficiary, Payee and Ownership provisions. No conflict identified.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Proceeds Payment Options - Choice of Options By Owner"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A specific enumeration (options 2 or 4; corporation, insured, spouse or child as payee) followed by \"anyone else related to the insured by blood or marriage\" if the insurer agrees — a catch-all that is nonetheless gated by insurer consent. The general-vs-specific tension is present but neutralised by the consent condition.",
+      "reasoning_cat2": "It fits the Choice of Options and Payee provisions and the general default of lump-sum payment. No inconsistency.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Proceeds Payable to a Corporation"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The fragment covers issuing a supplementary contract showing option terms and that life income options are based on the payee's sex and age. Nothing genuinely ambiguous survives.",
+      "reasoning_cat2": "Consistent with the settlement option tables and the Alternate Life Income provision. No conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Description of Options / Basis of Life Income Options"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Option 1's guaranteed interest rate is lost to OCR, leaving only that the insurer may announce a higher rate and payment frequencies; the missing rate is a mechanical gap. The illustrated $45.00/$3.67 figures anchor the meaning.",
+      "reasoning_cat2": "It coordinates with the Death of Payee provision's treatment of option 1 balances and with the actuarial basis note. No contradiction found.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 1 - Proceeds at Interest"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Almost nothing survives beyond a reference to withdrawing the proceeds; there is no operative language to construe. The defect is missing text, not competing meanings.",
+      "reasoning_cat2": "Consistent with the Death of Payee commutation rule for option 2 and the settlement tables. No conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 2 - Payments for a Certain Period"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "Only the first-payment-due date and the life contingency survive; the surviving language is definite. No ambiguous term to name.",
+      "reasoning_cat2": "Consistent with the Option 3 table, the Alternate Life Income provision and the Death of Payee commutation rule. No inconsistency.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 3 - Life Income"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "The installment refund feature is stated clearly: equal monthly payments until the sum equals the proceeds applied, then continuing for life. Definite.",
+      "reasoning_cat2": "Matches the installment refund column in the settlement option tables. Consistent with the whole.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 3 - Installment Refund"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Only the final-payment-equals-unpaid-balance rule and a withdrawal right survive; both are conventional. Nothing genuinely two-sided.",
+      "reasoning_cat2": "Consistent with the Death of Payee provision treating option 4 as a balance held. No conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 4 - Payments of a Certain Amount"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "States the option is for two payees and refers to the page 5 table; the operative payment language is largely lost. No competing reading arises from what remains.",
+      "reasoning_cat2": "Consistent with the Option 5 table and its availability note for two males or two females. No inconsistency.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 5 - Joint and Survivor Life Income"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "The joint-and-two-thirds feature is described intelligibly despite OCR damage: full payment while both live, reduced payment for the survivor. Definite in structure.",
+      "reasoning_cat2": "Fits the Option 5 tables which contain separate joint-and-survivor variants. Consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 5 - Joint and 2/3"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "\"Rates at least as liberal as\" those charged for a comparable single premium immediate annuity is a comparative standard that could be argued over, but it is a familiar benchmark. Mild vagueness only.",
+      "reasoning_cat2": "It expressly interacts with the Death of Payee provision, which says the insurer will specify the commutation rate when an alternate life income is chosen; the two are drafted to fit. No conflict.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Alternate Life Income"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "The provision specifies a final payment to the last surviving payee's estate and gives distinct commutation rules for options 1/4 versus 2/3/5 at 4.5%. Specific and numeric.",
+      "reasoning_cat2": "The 4.5% commutation rate sits alongside the tables' 3% actuarial basis and the Alternate Life Income provision's rate-setting; the clause itself explains the override. Low relational risk.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Death of Payee"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Only the promise that no proof of insurability is needed on conversion survives; the conditions are lost to OCR. Nothing genuinely ambiguous in the remainder.",
+      "reasoning_cat2": "Consistent with Proof You Can Be Insured and the other conversion subheadings. No conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Terms of Conversion"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "The permitted window for the conversion date is missing from the text, leaving only that the new contract dates from the later of the conversion date and something else. A mechanical gap rather than a dual meaning.",
+      "reasoning_cat2": "It should be read with Conversion - Notice (ask within 31 days before the conversion date) and Conversion - If Disabled (last day allowed to convert), which presuppose a stated deadline not legible here. Some internal reliance on missing text.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Conversion Date"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "Only \"may be any whole life plan that we\" survives — presumably then offer — which is a conventional insurer-selection term. Little to construe.",
+      "reasoning_cat2": "Consistent with Conversion - Premium referring to then-published rates and with Conversion - If Disabled. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Plan"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "The amount cannot exceed the converted part and must meet the minimum whole life issue limit; both are definite bounds. \"Converted part\" is a defined-by-context term with little play.",
+      "reasoning_cat2": "It coordinates with Conversion - If Disabled, which addresses amounts below the minimum whole life issue limit, so the two work together. Consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Amount"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Premium at then-published rates for the plan and the insured's age, with the risk class carried over; a clear pricing mechanic. No ambiguous term.",
+      "reasoning_cat2": "Consistent with the risk-class footnotes and the Risk Class definition. No inconsistency found.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Premium"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Requires the request within 31 days before the conversion date and the insured to be alive both when asked and on the conversion date; specific and dated. Definite.",
+      "reasoning_cat2": "It depends on the conversion window in Conversion - Conversion Date, which is not legible, but no contradiction appears. Low relational risk.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Notice"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "The rider provisions mix specific bars (waiver of premium, accidental death, issue age limits, larger accidental death amount) with the catch-all \"You may only have other riders if we agree,\" and the OCR loss makes the boundary of the specific bars hard to trace. The specific-then-general structure gives some ejusdem generis play.",
+      "reasoning_cat2": "It must be read with Conversion - If Disabled and with the Accelerated Benefit Rider's own termination provision, but nothing contradicts it. Low relational risk.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Riders"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "The disability conversion rule survives only in pieces, mentioning conversion to a whole life plan chosen by the insurer where the amount is below the minimum issue limit and a rider's terms. The gap is textual loss rather than dual meaning.",
+      "reasoning_cat2": "It cross-refers to Conversion - Amount's minimum issue limit and to Conversion - Riders' waiver of premium restriction, and the three are broadly compatible. Low.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - If Disabled"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "Only the heading and the word \"contract\" survive, so no rule is stated at all; there is nothing to construe on its face. As a heading it signals carry-over of contestable and suicide periods to the converted contract.",
+      "reasoning_cat2": "That carry-over question is precisely the tension the suicide and incontestability clauses raise, and the missing text would have governed it. Some relational exposure despite the blank.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Conversion - Incontestability and Suicide"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "States plainly that rider benefits reduce death proceeds and premiums, with a cross-reference to Contract Values. Definite.",
+      "reasoning_cat2": "Consistent with the rider's Premium Reduction and Contract Values sections. No conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Reduction of Proceeds and Premium"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "A short priority rule that where rider and contract differ, the rider controls; the leading words are lost but the rule is unmistakable. Definite.",
+      "reasoning_cat2": "This is the instrument's own conflict-resolution mechanism, and it resolves rather than creates tension with, for example, the contract's Pronouns definition versus the rider's. Consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Rider Controls"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The effective date rule is truncated (\"the later of the contract ffect\") so the second limb is unreadable. A textual gap, not a genuine ambiguity of meaning.",
+      "reasoning_cat2": "It relates to the rider's Qualifying Requirements that the rider be in effect when acceleration is requested; no contradiction. Low.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Effective Date"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "The rider's pronoun definition is scrambled but conveys that these words mean the insured, or the owner for contract rights. Conventional.",
+      "reasoning_cat2": "It parallels and may differ slightly from the contract's Pronouns provision, but the rider-controls clause resolves any divergence. Low relational risk.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - You, Your, or Yours"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "Physician is defined by licensure and by exclusion of specified relatives and household members; a closed, checkable definition. No catch-all.",
+      "reasoning_cat2": "Consistent with the Medical Referee and Additional Proof provisions requiring a disinterested third physician. No conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Physician"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "The benefit sentence is largely destroyed, leaving only that payment goes to the owner on a terminal condition and something about having more than one contract. The aggregate-limit rule cannot be read.",
+      "reasoning_cat2": "It ties to Qualifying Requirements and Contract Values, which supply the mechanics; nothing contradicts. Low.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Benefits"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The list of qualifying conditions is scrambled so that individual requirements run together, but each is a discrete objective condition and the opening says all must be met. No catch-all and no competing reading of a named term.",
+      "reasoning_cat2": "It coordinates with Terminal Condition, Request for Payment and Contract Values' minimum issue limit. Consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Qualifying Requirements"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "The definition of terminal condition is cut precisely where the survival period would be stated, leaving \"will, with reasonable medical certainty, result in\" with no time limit; that missing period is the operative trigger. Even complete, \"reasonable medical certainty\" is a judgment standard.",
+      "reasoning_cat2": "It underpins Qualifying Requirements and Request for Payment, both of which presuppose the definition; the gap is internal to the definition rather than a clash. Modest.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Terminal Condition"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "Defines a request for payment as the owner's written request plus a physician's statement of terminal condition; the text is damaged but the concept is clear. Little to construe.",
+      "reasoning_cat2": "Consistent with Additional Proof and Examination and with Medical Referee. No conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Request for Payment"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "States the insurer may require additional proof and an examination by its own physician at its expense; a plain reservation of right. No ambiguous term.",
+      "reasoning_cat2": "Dovetails with Medical Referee and Cost of Physicians. Consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Additional Proof and Examination"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Only a fragment recommending consultation with a tax advisor survives; it is advisory, not operative. Nothing to construe.",
+      "reasoning_cat2": "No other provision addresses tax treatment, so there is nothing to conflict with. Consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Tax Advisor"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "The referee mechanism is described with specificity — appointment by the two physicians, mutual acceptability, binding decision — and only the final words are lost. \"Disinterested\" is a familiar standard with limited play.",
+      "reasoning_cat2": "It fits Additional Proof and Examination and Cost of Physicians, which allocate the referee's expense. Consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Medical Referee"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "Cost allocation between the insurer's physician, the referee and the insured's physician is stated, though the OCR blurs the conditional. The rule is conventional.",
+      "reasoning_cat2": "Directly continues the Medical Referee provision and is consistent with it. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Cost of Physicians"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "Payment is in a lump sum or, at the owner's choice, under any proceeds payment option except those contingent on the insured's life — a specific carve-out that is easy to apply against options 3 and 5. Clear.",
+      "reasoning_cat2": "Consistent with the Proceeds Payment Options section, where options 3 and 5 are the life-contingent ones. No inconsistency.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Payment"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "The Contract Values formula is almost entirely lost — \"A is: the benefit paid under this rider $100; and state where this rider is issued\" — so the reduction calculation cannot be derived from the text. That is a substantial mechanical defect on the face of the excerpt.",
+      "reasoning_cat2": "It is cross-referenced by the Reduction of Proceeds and Premium clause and the Interest Rate clause, both of which depend on this formula; the missing terms undercut those references. Some relational strain.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Contract Values"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "The interest cap is defined by a named external benchmark with a fallback to a substantially similar average acceptable to the commissioner; the fallback is discretionary but bounded and standard. Some vagueness in \"substantially similar\" only.",
+      "reasoning_cat2": "It feeds the Contract Values reduction formula, which is itself partly illegible, but there is no contradiction between them. Low.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Interest Rate"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Premiums reduce to the level required for the reduced death proceeds; a single definite consequence. No ambiguous term.",
+      "reasoning_cat2": "Duplicates the promise in the rider's opening Reduction of Proceeds and Premium clause; repetition, not conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Premium Reduction"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "A short list of termination triggers (owner request, contract termination) introduced by \"earliest of\"; at least one further trigger appears lost to OCR. The enumerated structure leaves little interpretive room.",
+      "reasoning_cat2": "Consistent with the Grace Period rule that the contract ends on the premium due date and with the rider's Effective Date. No conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Accelerated Benefit Rider - Termination of Rider"
+    }
+  ]
+}

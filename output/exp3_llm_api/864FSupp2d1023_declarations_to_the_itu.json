@@ -1,0 +1,514 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The commitment turns on \"reasonable terms and conditions\" and a \"non-discriminatory basis,\" both of which are classically vague standards whose boundary cannot be fixed from the words alone, and the text is further garbled (\"will jrant\", \"7.1. ufactarc\") so that even the operative verbs are uncertain. The tension between a firm promise (\"will grant\") and the sentence leaving negotiations to the parties makes it arguable whether a binding obligation or only an agreement to negotiate is created.",
+      "reasoning_cat2": "Read against the form's own header that \"This declaration does not represent an implied licence grant\" and the closing sentence that negotiations occur outside the ITU/ISO/IEC, the promissory reading of Option 2 is in genuine tension with the rest of the instrument. The later 2007 and 2010 declarations covering the same recommendation also restate the commitment in different words (\"is prepared to grant\"), raising a question of which text governs.",
+      "prob_cat1": 0.74,
+      "prob_cat2": 0.44,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Option 2 (ITU Patent Statement and Licensing Declaration, 15 June 2002 form) — RAND licensing commitment"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"Reasonable terms and conditions\" and \"non-discriminatory basis\" are undefined standards, and \"is prepared to grant\" is genuinely capable of being read either as a binding undertaking or as a mere statement of willingness. That double reading, plus the reciprocity condition marked by a checkbox, is exactly the sort of textual uncertainty a court must resolve.",
+      "reasoning_cat2": "It sits directly against the form's caption \"This declaration does not represent an actual grant of a license\" and the sentence leaving negotiations to the parties, which pull against treating the option as an enforceable licensing obligation. There is also a relationship question with the earlier H264-30 declaration it purports to update.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.41,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Option 2 (ITU Patent Statement and Licensing Declaration, 1 March 2007 form, Motorola Inc.) — RAND licensing commitment"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble is a belief statement (\"believes that it holds\") and an instruction to check one box; the qualified \"believes\" is hedged but does not itself create an operative obligation. Little turns on any single term here.",
+      "reasoning_cat2": "It is consistent with the Option boxes that follow and with the later 2007 form preamble. No conflict identified.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration preamble (2003 form)"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The unchecked royalty-free option contains vague language (\"non-discriminatory basis\") and OCR damage, but it was not selected and so has no operative effect on this declaration. Its terms would only matter if the box had been marked.",
+      "reasoning_cat2": "It is an alternative to Option 2, which was the box actually marked; the mutually exclusive structure (\"check one box only\") avoids conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 1 — Royalty-free license (2003 form)"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "An unchecked option with a definite enumerated list of required information; no term stands out as ambiguous. It imposes no obligation because it was not selected.",
+      "reasoning_cat2": "It is coherent with the check-one-box structure and with Option 2 having been marked instead.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 3 — Unwilling to license (2003 form)"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The footnote defines \"reciprocity\" with reasonable precision by reference to options 1 or 2, though the scope of \"required in the use or implementation\" carries some vagueness. Overall the definition is workable.",
+      "reasoning_cat2": "It qualifies the checked Option 2 consistently, and the later 2007/2010 forms define reciprocity in similar terms; no conflict found.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Reciprocity definition (2003 form)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "This database restatement uses \"will grant\" and \"reasonable terms and conditions,\" repeating the same vague RAND standard as the signed declaration. The definiteness of the promise and the meaning of \"reasonable\" remain open.",
+      "reasoning_cat2": "It is a secretariat summary that differs verbally from the signed 2002 form it records, and the disclaimer says the database is not certified accurate, which raises a mild question of which text controls.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-30 (database entry)"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "A tabular database row restating the standard Option 2 wording; \"reasonable terms and conditions\" is again undefined but the entry is descriptive rather than operative. The garbled table formatting does not change meaning.",
+      "reasoning_cat2": "It is consistent with the underlying H264-91 signed form and with the other database rows.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91 (2007 form, database entry)"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Standard Option 2 database row tied to a specific patent number; the only soft term is \"reasonable terms and conditions,\" restated verbatim from the form. Nothing distinctive is ambiguous in this row.",
+      "reasoning_cat2": "It matches the signed 2010 Motorola Mobility declaration and the other 101-series rows; no inconsistency identified.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-01"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Identical boilerplate Option 2 language attached to patent 7421025; the recurring \"reasonable terms and conditions\" is vague but not distinctive to this row. No other term invites construction.",
+      "reasoning_cat2": "Consistent with the 2010 signed form's patent list and the sibling rows.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-02"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7310375 with the usual undefined RAND standard. Nothing else here is uncertain.",
+      "reasoning_cat2": "Matches the accompanying patent information table in the 2010 form; no conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-03"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7310374; only the standing \"reasonable terms and conditions\" phrase is soft. The row itself is definite.",
+      "reasoning_cat2": "Consistent with the 2010 declaration and its patent schedule.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-04"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7310376 with the same undefined RAND wording. No distinctive ambiguity.",
+      "reasoning_cat2": "Consistent with the rest of the 101-series entries and the signed form.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-05"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7310377; OCR splices in a header line but the substance is the standard RAND sentence. Only \"reasonable\" is soft.",
+      "reasoning_cat2": "Fits the 2010 form and its listed patents without contradiction.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-06"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7477690 restating the RAND commitment; nothing beyond the usual vagueness of \"reasonable.\" The entry is otherwise definite.",
+      "reasoning_cat2": "Consistent with the signed 2010 declaration.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-07"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7817718 with the standard undefined RAND terms. No unique construction problem.",
+      "reasoning_cat2": "Consistent with the 2010 form's patent list and sibling rows.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-08"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7769087; only the recurring \"reasonable terms and conditions\" is vague. Otherwise definite.",
+      "reasoning_cat2": "Aligned with the 2010 declaration and its schedule of patents.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-09"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7660353 restating the standard commitment. No distinctive ambiguous term.",
+      "reasoning_cat2": "Consistent with the rest of the H264-101 entries.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-10"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7162094; the same RAND phrasing, with the number appearing elsewhere as 7182094 in the form table. The wording itself is standard.",
+      "reasoning_cat2": "The patent number discrepancy between the database row (7162094) and the 2010 form's table (7182094) is a minor mismatch within the instrument.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101-11"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Boilerplate Option 2 row for a Motorola Inc. patent; the standard RAND vagueness only. Nothing else invites construction.",
+      "reasoning_cat2": "Consistent with the H264-81 signed form and its patent table.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-81-01"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 6980596 with the usual undefined RAND standard. Otherwise definite.",
+      "reasoning_cat2": "Matches the H264-81 form's patent information table.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-81-02"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 5235419; only the standard \"reasonable terms\" phrase is soft. No other ambiguity.",
+      "reasoning_cat2": "Consistent with the H264-81 patent schedule and sibling rows.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-81-03"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 7162094 under H264-91 with the standard RAND wording. Nothing distinctive.",
+      "reasoning_cat2": "Consistent with the signed 2008 Motorola form and its patent list.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91-01"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Boilerplate Option 2 row for RE38564; only the recurring vague RAND standard appears. The entry is otherwise definite.",
+      "reasoning_cat2": "Matches the H264-91 form's patent information table.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91-02"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 5376968 restating the standard commitment. No unique ambiguity.",
+      "reasoning_cat2": "Consistent with the H264-91 signed declaration.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91-03"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 6807317 with the same RAND phrasing. Definite apart from the standing vagueness of \"reasonable.\"",
+      "reasoning_cat2": "Consistent with the second H264-91 form's patent table.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91-04"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Boilerplate Option 2 row for patent 6836514; standard RAND wording only. No distinctive construction issue.",
+      "reasoning_cat2": "Consistent with the H264-91 declaration and its listed patents.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91-05"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "A database restatement of the Option 2 commitment using \"is prepared to grant\" and \"reasonable terms and conditions,\" both of which are open-textured. It repeats the operative RAND language rather than adding anything definite.",
+      "reasoning_cat2": "It restates the signed H264-81 form and is consistent with it; the disclaimer about the database's accuracy adds only slight uncertainty about which text controls.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-81 (database entry)"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "A purely descriptive secretariat remark saying the statement supplements H264-30; \"complementary information\" is loose but imposes no obligation. Nothing operative to construe.",
+      "reasoning_cat2": "It raises the relationship between H264-81 and H264-30 but describes supplementation rather than replacement, which is consistent with the H264-91 and H264-101 remarks.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Statement remarks H264-81"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "The single sentence is short and plain, but \"does not represent an actual grant of a license\" leaves open whether it negates only the grant or also any binding obligation to grant. That is a real, nameable ambiguity in a one-line caption.",
+      "reasoning_cat2": "It stands against the checked Option 2 commitment, which reads as an undertaking to license; whether the disclaimer merely postpones the licence or defeats enforceability is a whole-instrument question.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.35,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Declaration is not a grant of license (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Administrative checkbox and filing instructions with definite content. No term requires construction.",
+      "reasoning_cat2": "Consistent with the header addresses and the parallel instructions in the 2010 form.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Document type / return instructions (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "A hedged belief statement introducing the option boxes; \"believes that it holds\" is qualified but creates no obligation. The check-one-box direction is definite.",
+      "reasoning_cat2": "It parallels the 2003 preamble and precedes the Option 2 box actually marked; no conflict.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration preamble (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Unchecked free-of-charge option; it contains \"other reasonable terms and conditions\" and a reservation sub-box, but neither operates here. The wording is otherwise structured and clear.",
+      "reasoning_cat2": "Mutually exclusive with the marked Option 2 under the \"check one box only\" instruction, so no inconsistency.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 1 — Free of charge license (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Unchecked refusal option listing three specific items of required information; the list is enumerated and definite. Nothing was selected here.",
+      "reasoning_cat2": "Coherent with the check-one-box structure and the Patent Information NOTE that cross-references it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 3 — Unwilling to license (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "A definitional paragraph that expressly explains what \"free of charge\" does and does not mean, and then gestures at \"other reasonable terms and conditions such as\" an open-ended list. The catch-all \"such as\" list creates some scope uncertainty, though the definition itself is careful.",
+      "reasoning_cat2": "It relates to Option 1, which was not selected, so it has no operative bearing on the checked Option 2 commitment.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Free of charge definition (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The reciprocity definition is fairly tight, keying to essential patents for the same document, though \"essential patent claim(s)\" is itself undefined. Overall it is workable.",
+      "reasoning_cat2": "It qualifies the marked Option 2 and matches the 2003 footnote definition; no inconsistency found.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Reciprocity definition (2007 form, H264-91)"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A one-line cross-reference note; entirely definite. Nothing to construe.",
+      "reasoning_cat2": "Points accurately to the Option 3 box in the same form; consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Patent Information NOTE (H264-91 form)"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "Identical cross-reference note in the second copy of the form; definite in terms. No ambiguity.",
+      "reasoning_cat2": "Consistent with the Option 3 box it references and with the duplicate note.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Patent Information NOTE (second H264-91 form)"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Database restatement of the Option 2 RAND commitment; it repeats \"reasonable terms and conditions\" and \"is prepared to grant,\" both open-textured. It is a summary rather than an executed undertaking.",
+      "reasoning_cat2": "It tracks the signed October 2008 Motorola form closely and is consistent with it.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-91 (database entry)"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "A descriptive remark that the statement \"provides updated information\" relative to H264-30; \"updated information\" is loose about whether it supersedes. Little else is uncertain.",
+      "reasoning_cat2": "It bears on how H264-30, H264-91 and H264-101 relate, and the phrase does not say whether the earlier commitment is replaced or supplemented.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Statement remarks H264-91"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "Same short disclaimer sentence; \"does not represent an actual grant of a license\" is capable of meaning either no immediate licence or no binding obligation. The brevity leaves the boundary unclear.",
+      "reasoning_cat2": "It sits against the Option 2 commitment in the same 2010 form, creating the same disclaimer-versus-undertaking tension.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Declaration is not a grant of license (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Administrative checkbox and filing instructions; the content is definite despite OCR noise. Nothing operative.",
+      "reasoning_cat2": "Consistent with the 2007 form's identical instructions and the addressee list.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Document type / return instructions (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "A belief preamble so badly garbled by OCR that a clause is unreadable, but its intended content is the standard hedged introduction. The hedge \"believes\" is qualified rather than ambiguous.",
+      "reasoning_cat2": "It matches the identical preambles in the 2003 and 2007 forms; no conflict.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration preamble (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Unchecked free-of-charge option; \"other reasonable terms and conditions\" is vague but the box was not marked. No operative effect.",
+      "reasoning_cat2": "Mutually exclusive with Option 2 under the check-one-box direction; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 1 — Free of charge license (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "This is the operative RAND option on the 2010 form, carrying the same undefined \"reasonable terms and conditions\" and the \"is prepared to grant\" formulation that may be read as a promise or a mere statement of willingness. The reciprocity sub-box appears unmarked in this text, leaving the condition's status uncertain.",
+      "reasoning_cat2": "The database entry for H264-101 records the willingness as conditioned on reciprocity while the reciprocity box on this form does not appear marked, a mismatch within the same instrument; it also sits against the \"not an actual grant of a license\" caption.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 2 — RAND license (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Unchecked refusal option with three enumerated disclosure requirements; the terms are definite. No selection was made.",
+      "reasoning_cat2": "Coherent with the check-one-box structure and the cross-referencing NOTE.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Option 3 — Unwilling to license (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "Definitional paragraph explaining \"free of charge\"; careful, but the closing \"such as those relating to ... etc.\" is an open-ended catch-all of permitted other terms. That list scope is mildly uncertain.",
+      "reasoning_cat2": "It pertains to Option 1, which was not selected, and duplicates the 2007 form's definition; no conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Free of charge definition (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Reciprocity is defined by reference to essential patents for the same document on free or reasonable terms; the definition is reasonably closed. \"Essential patent claim(s)\" remains undefined but the sense is clear.",
+      "reasoning_cat2": "Consistent with the identical 2007 definition and with the Option 2 reciprocity checkbox.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Reciprocity definition (2010 form, H264-101)"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "A single definite cross-reference sentence. Nothing to construe.",
+      "reasoning_cat2": "Correctly points to the Option 3 box in the same form; consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Patent Information NOTE (H264-101 form)"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "Database restatement of the 2010 Option 2 commitment, repeating the vague \"reasonable terms and conditions\" and the \"prepared to grant\" formulation. It also asserts the reciprocity condition affirmatively.",
+      "reasoning_cat2": "It states the willingness is conditioned on reciprocity whereas the corresponding checkbox on the signed 2010 form does not appear marked, a discrepancy between the two records of the same declaration.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Licensing declaration H264-101 (database entry)"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "A descriptive remark with a typo in the date (\"2008-1 1-3\") and the loose phrase \"updated information\"; neither creates an operative obligation. The sense is plain.",
+      "reasoning_cat2": "It leaves open whether H264-101 supersedes or merely supplements H264-30 and H264-91, which matters to which commitment text governs.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Statement remarks H264-101"
+    }
+  ]
+}

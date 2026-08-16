@@ -1,0 +1,1904 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The definition turns on open-textured standards — \"in good faith,\" \"necessary to compensate the non-defaulting party fairly,\" the amount a \"Dealer\" of \"recognized standing\" \"would be willing to pay,\" and the \"economic equivalent\" of the parties' rights — none of which has a determinate boundary. Each of those phrases is a term a court could be asked to construe in fixing a close-out figure.",
+      "reasoning_cat2": "It expressly carves out \"any amounts payable by either party to the other under the provisions of Paragraph 11 of the Agreement,\" so its reach must be reconciled with the incorporated Master Repurchase Agreement's own default-damages measure and with the \"Payments Upon Event of Default\" and \"Buyer's Margin Amount\" items that consume it. A genuine double-counting/precedence question sits between this definition and Paragraph 11 as preserved by the incorporation clause.",
+      "prob_cat1": 0.61,
+      "prob_cat2": 0.47,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Confirmation — \"Termination Value\" definition"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "The mechanics are stated with some precision (who owes what, when payable, interest rate), but \"in addition to any other amounts owing ... pursuant to the provisions of Paragraph 11\" and \"deemed exercised\" leave the relation of this payment to the Agreement's own damages measure arguable. The wording is definite as to timing but not as to whether the amount is cumulative or overlapping.",
+      "reasoning_cat2": "Read with the Termination Value definition (which excludes Paragraph 11 amounts) and with the incorporation clause making the Confirmation govern any inconsistency, there is a real question whether this stacks an extra recovery on top of the Master Agreement's Paragraph 11 close-out. That interaction is the most likely site of dispute in the instrument.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.52,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Confirmation — \"Payments Upon Event of Default\""
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The clause splits the Calculation Agent role three ways, and the second sentence — \"the Calculation Agent will be the non-defaulting party\" — presupposes an agreed identification of who is non-defaulting, which is precisely what will be contested on a default. The short allocation is definite in form but indeterminate in application.",
+      "reasoning_cat2": "It sits against \"Buyer's Margin Amount,\" which directs the Termination Value be computed \"as if Buyer were the non-defaulting party,\" and against the Termination Value definition, so the same figure may be produced by different agents to different results. That overlap is a specific internal tension.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.41,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Confirmation — \"Calculation Agent\""
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "A plain statement of the document's purpose with no operative obligation and no term of uncertain scope. Nothing here to construe.",
+      "reasoning_cat2": "Consistent with the incorporation clause that follows and with the transaction terms set out below. No conflict identified.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The wording is a standard supplement-and-govern clause; \"any inconsistency\" is broad but its operation is mechanical. Little intrinsic uncertainty.",
+      "reasoning_cat2": "This is the precedence rule that would resolve any clash between the Confirmation's Termination Value/Payments provisions and Paragraph 11 of the Master Agreement, so it is implicated in any such dispute without itself being incoherent. Modest relational exposure.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "An all-caps risk disclosure using descriptive language (\"may be volatile,\" \"could experience significant losses\") rather than operative promises. Its status as a warning rather than a term is clear enough.",
+      "reasoning_cat2": "It anticipates the Termination Value and margin provisions below and matches them; the only tension is the disclosure-versus-operative-term framing, which is minor here. Largely consistent with the whole.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A dated, mechanical definition of Purchase Date for the initial and each subsequent transaction. Definite.",
+      "reasoning_cat2": "Dovetails with the Repurchase Date and Subsequent Transactions items without contradiction.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Dates, a monthly rolling convention and a defined Business Day; the phrase \"the 14th day of the next succeeding month following the Subsequent Transaction\" is slightly loose but workable. Low intrinsic risk.",
+      "reasoning_cat2": "Consistent with Final Repurchase Date and Subsequent Transactions, which cross-refer to this convention.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "\"Fixed, adjusted\" is an odd, unexplained qualifier and \"the remainder of the Transactions\" is imprecise, though the Libor fallback mechanics are carefully drawn. Some nameable looseness.",
+      "reasoning_cat2": "The two-tier rate sits uneasily with Subsequent Transactions being on terms \"identical to the Initial Transaction,\" but the parties plainly intended the step-up. Mild tension only.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "A one-sided but precisely specified option: named date, monthly recurrence, notice deadline, and an avoidance-of-doubt sentence. Definite.",
+      "reasoning_cat2": "Expressly qualified by and reflected in the Subsequent Transactions item; no conflict found.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A pure labelling definition. Nothing ambiguous.",
+      "reasoning_cat2": "Matches the Purchase Date and Subsequent Transactions definitions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The deeming and set-off mechanics are spelled out; \"identical to the Initial Transaction\" is the only phrase with reach beyond its obvious sense. Modest.",
+      "reasoning_cat2": "\"Identical\" terms sits against the Pricing Rate item, which changes the rate after twelve/twenty-four months, so full harmonisation requires reading the carve-out generously. A real if small internal tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A single date subject to a stated business-day convention. Definite.",
+      "reasoning_cat2": "Cross-refers correctly to the Repurchase Date convention and to the Termination Value's use of the Final Repurchase Date.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Downgraded below AAA\" applied to securities already described as AAA is workable, but \"Securities acceptable to Buyer, in Buyer's discretion\" is an open standard. Some nameable vagueness.",
+      "reasoning_cat2": "Sits alongside the Substitutions item, which imposes objective quality tests; the two discretion standards can be read together but are not identical. Low-moderate.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Identical in substance to the litigated definition: \"good faith,\" \"fairly,\" \"would be willing to pay,\" \"recognized standing\" and \"economic equivalent\" are all open-ended valuation standards. The same construable terms are present.",
+      "reasoning_cat2": "It carves out Paragraph 11 amounts of the incorporated Master Agreement and feeds Buyer's Margin Amount, so the same overlap question arises here. Moderate relational exposure.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Same close-out payment mechanics; \"in addition to any other amounts owing ... pursuant to Paragraph 11\" is the only phrase whose reach is arguable. Otherwise definite.",
+      "reasoning_cat2": "The cumulative-recovery question against Paragraph 11 of the Master Agreement, preserved by the incorporation clause, is a genuine internal tension. Moderate.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "A formula with two stated components; \"as determined as if Buyer were the non-defaulting party\" is a clear deeming device. Low intrinsic risk.",
+      "reasoning_cat2": "It assumes Buyer's non-default status for valuation while the Calculation Agent item gives that role to the actual non-defaulting party, producing a possible divergence. Moderate.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "A bifurcation rule for margin calculations, stated in mechanical terms. Definite enough.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and the Master Agreement's Paragraph 4, which it expressly supplements.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The three-way allocation is short and clear on its face but leaves the default-scenario agent turning on who is \"the non-defaulting party,\" the very matter in issue on a default. Nameable indeterminacy.",
+      "reasoning_cat2": "It pulls against Buyer's Margin Amount, which deems Buyer the non-defaulting party for valuation, so the same input may be calculated by different agents. Moderate.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "A detailed acknowledgment with an express definition of \"Principal Payment\" and cross-references to numbered Master Agreement paragraphs. Carefully drawn.",
+      "reasoning_cat2": "Cross-refers coherently to Paragraph 5 and Paragraph 9 and to the Substitutions item that follows. No conflict identified.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"Equal or better quality\" and \"similar characteristics\" are undefined comparative standards, and \"Buyer's sole and absolute discretion\" sits oddly next to those objective tests. Nameable vagueness.",
+      "reasoning_cat2": "Consistent with the Credit Rating item's substitution obligation and with the Call/Redemption item that incorporates it. Low.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "A bare introductory phrase to the representations. Nothing to construe.",
+      "reasoning_cat2": "Consistent with the representations that follow.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "Standard non-reliance boilerplate; \"such advisers as it has deem necessary\" is a typographical slip that does not change meaning. Low.",
+      "reasoning_cat2": "Consistent with the Status of Parties representation and the risk disclosure.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "Short, conventional capability representation with no operative uncertainty.",
+      "reasoning_cat2": "Aligns with the non-reliance and status representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "A single negative statement of status; definite.",
+      "reasoning_cat2": "Coheres with the non-reliance representation; no other provision creates an advisory role.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Mechanical response instructions; the statement that failure to respond does not affect validity is clear. Low.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses treating the Confirmation as the sole documentation.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "An informational notice about affiliate information sharing; not an operative term of the repo. Definite.",
+      "reasoning_cat2": "Unconnected to the transaction mechanics; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (Feb 22, 2007)"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Plain purpose statement, no operative content or uncertain term.",
+      "reasoning_cat2": "Consistent with the incorporation clause and the terms that follow.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "Standard supplement-and-govern language; mechanical in operation.",
+      "reasoning_cat2": "It is the precedence rule that would resolve clashes with Paragraph 11 of the Master Agreement, so implicated but not itself incoherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Descriptive risk warning in capitals rather than an operative promise; wording is clear.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items below without contradicting them.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A dated, mechanical Purchase Date definition. Definite.",
+      "reasoning_cat2": "Matches the Repurchase Date and Subsequent Transactions items.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Dates plus a stated Business Day convention; loose only in the rolling-month phrasing.",
+      "reasoning_cat2": "Consistent with Final Repurchase Date, which adopts this convention.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "\"1.6875 p.a., fixed, adjusted\" and \"all following Subsequent Transactions\" are imprecise, though the Libor fallback is carefully specified. Some looseness.",
+      "reasoning_cat2": "The step-up rate sits against Subsequent Transactions being on \"identical\" terms; a mild but real tension.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "A precisely dated buyer option with notice mechanics and an avoidance-of-doubt sentence. Definite.",
+      "reasoning_cat2": "Expressly cross-referenced in Subsequent Transactions; no conflict.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "A definitional label only.",
+      "reasoning_cat2": "Coheres with Purchase Date and Repurchase Date.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Detailed deeming and set-off mechanics; \"identical to the Initial Transaction\" is the only expansive phrase.",
+      "reasoning_cat2": "Sits against the Pricing Rate's twenty-four-month step-up, which is not literally identical; a small internal tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "A single date with a stated adjustment convention. Definite.",
+      "reasoning_cat2": "Cross-refers correctly to the Repurchase Date item.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Enumerates rating agencies and thresholds precisely but ends with \"acceptable to Buyer, in Buyer's discretion,\" an open standard. Some vagueness.",
+      "reasoning_cat2": "Runs alongside the Substitutions item's objective quality tests without direct contradiction.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The same open valuation standards — \"good faith,\" \"fairly,\" \"would be willing to pay,\" \"recognized standing,\" \"economic equivalent\" — appear here. Genuinely construable terms.",
+      "reasoning_cat2": "Its Paragraph 11 carve-out and its feed into Buyer's Margin Amount raise the same overlap question with the Master Agreement.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Definite mechanics apart from the cumulative \"in addition to any other amounts owing ... pursuant to Paragraph 11\" phrase.",
+      "reasoning_cat2": "The stacking of this payment on Paragraph 11 close-out amounts is the live relational question.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "A two-component formula with a clear deeming device. Low intrinsic risk.",
+      "reasoning_cat2": "Its \"as if Buyer were the non-defaulting party\" assumption diverges from the Calculation Agent item's allocation on default.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "Mechanical bifurcation of margin groups; clearly expressed.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4 of the Master Agreement.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Short allocation of roles, but the default-scenario agent depends on identifying \"the non-defaulting party,\" the contested issue itself.",
+      "reasoning_cat2": "Pulls against Buyer's Margin Amount's deeming of Buyer as non-defaulting party.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Carefully drafted with an express definition of Principal Payment and numbered cross-references.",
+      "reasoning_cat2": "Coheres with Paragraph 5 and Paragraph 9 references and with the Substitutions item.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "\"Equal or better quality\" and \"similar characteristics\" are undefined comparatives sitting next to \"sole and absolute discretion.\" Nameable vagueness.",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty and the Call/Redemption item.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "A bare introductory phrase; nothing to construe.",
+      "reasoning_cat2": "Consistent with the representations that follow.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Conventional non-reliance wording with only typographical slips.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "Short capability representation; definite.",
+      "reasoning_cat2": "Consistent with the other two representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "A single clear negative statement of status.",
+      "reasoning_cat2": "No other provision creates a fiduciary or advisory role.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Administrative response instructions; the non-response saving clause is clearly stated.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "An informational notice, not an operative term.",
+      "reasoning_cat2": "Unrelated to the transaction mechanics; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (Mar 6, 2007)"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "Plain purpose statement with no uncertain term.",
+      "reasoning_cat2": "Consistent with the incorporation clause and the terms below.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Standard supplement-and-govern language, mechanical in operation.",
+      "reasoning_cat2": "Serves as the precedence rule for any clash with Paragraph 11; implicated but coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Capitalised risk warning in descriptive terms; clear as a disclosure.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items without contradiction.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "Dated, mechanical definition. Definite.",
+      "reasoning_cat2": "Matches the Repurchase Date and Subsequent Transactions provisions.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "Dates plus a defined Business Day convention; clearly drafted.",
+      "reasoning_cat2": "Cross-referenced by the Final Repurchase Date item without conflict.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "\"3.54% p.a. fixed, adjusted\" leaves \"adjusted\" unexplained, and \"the remainder of the Transactions\" is loose. Some nameable imprecision.",
+      "reasoning_cat2": "Tension with the \"identical terms\" language of Subsequent Transactions, though the intended step-up is evident.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "A precisely dated option with notice mechanics and an avoidance-of-doubt sentence.",
+      "reasoning_cat2": "Cross-referenced in Subsequent Transactions; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "A labelling definition only.",
+      "reasoning_cat2": "Coheres with Purchase Date and Repurchase Date.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "Deeming and set-off mechanics fully spelled out; \"identical\" is the only expansive word.",
+      "reasoning_cat2": "Sits against the two-tier Pricing Rate; a small internal tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "A single date with a stated convention. Definite.",
+      "reasoning_cat2": "Cross-refers correctly to the Repurchase Date convention.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "Precise rating thresholds but an open \"acceptable to Buyer, in Buyer's discretion\" standard for replacements.",
+      "reasoning_cat2": "Runs in parallel with the Substitutions item's objective tests; no direct conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "A clear two-part formula with an express deeming assumption.",
+      "reasoning_cat2": "Its deeming of Buyer as non-defaulting party diverges from the Calculation Agent allocation on default.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "Mechanical grouping rule for margin calculations; clearly expressed.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4 of the Master Agreement.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "Detailed, with an express definition of Principal Payment and numbered cross-references.",
+      "reasoning_cat2": "Coheres with the Substitutions item and Paragraphs 5 and 9.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "\"Equal or better quality\" and \"similar characteristics\" are undefined comparatives; \"at lease equal\" is a typo not affecting sense. Nameable vagueness.",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "An introductory phrase only.",
+      "reasoning_cat2": "Consistent with the representations following.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Conventional non-reliance language, definite in effect.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "Short capability representation; nothing uncertain.",
+      "reasoning_cat2": "Consistent with the other representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "A clear negative statement of status.",
+      "reasoning_cat2": "No other provision creates an advisory role.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "Administrative instructions with a clear non-response saving clause.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation provisions.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "An informational notice rather than an operative term.",
+      "reasoning_cat2": "Unrelated to the repo mechanics; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (June 7, 2007)"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Plain statement of purpose; nothing to construe.",
+      "reasoning_cat2": "Consistent with the incorporation clause following.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Standard supplement-and-govern wording, mechanical in operation.",
+      "reasoning_cat2": "The precedence rule for clashes with the Master Agreement's Paragraph 11; implicated but coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "A capitalised descriptive warning, not an operative promise.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items below.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "Dated mechanical definition; definite.",
+      "reasoning_cat2": "Matches the Repurchase Date and Subsequent Transactions items.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "Dates with a defined Business Day convention; clearly drafted.",
+      "reasoning_cat2": "Cross-referenced by the Final Repurchase Date item.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "\"3.48% p.a. fixed, adjusted\" leaves \"adjusted\" unexplained; the Libor fallback is otherwise careful.",
+      "reasoning_cat2": "Mild tension with the \"identical terms\" language of Subsequent Transactions.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "A precisely dated buyer option with notice mechanics; definite.",
+      "reasoning_cat2": "Cross-referenced in Subsequent Transactions; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "A definitional label only.",
+      "reasoning_cat2": "Coheres with the Purchase and Repurchase Date items.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "Deeming and set-off mechanics stated in full; \"identical\" is the only broad word.",
+      "reasoning_cat2": "Sits against the two-tier Pricing Rate; a small tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "A single date with a stated adjustment convention.",
+      "reasoning_cat2": "Cross-refers correctly to the Repurchase Date item.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "Precise thresholds but an open \"acceptable to Buyer, in Buyer's discretion\" standard.",
+      "reasoning_cat2": "Parallel to the Substitutions item; no direct conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "Contains the same open valuation standards — good faith, \"fairly,\" \"would be willing to pay,\" \"recognized standing,\" \"economic equivalent.\" Genuinely construable.",
+      "reasoning_cat2": "Its Paragraph 11 carve-out and feed into Buyer's Margin Amount raise the same overlap question.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "Definite mechanics save for the cumulative \"in addition to any other amounts owing ... pursuant to Paragraph 11\" phrase.",
+      "reasoning_cat2": "The stacking question against Paragraph 11 close-out is the live relational issue.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "A clear formula with an express deeming assumption.",
+      "reasoning_cat2": "Diverges from the Calculation Agent item's default-scenario allocation.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "Mechanical grouping rule; clearly stated.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "Short allocation whose default limb turns on identifying \"the non-defaulting party.\" Nameable indeterminacy.",
+      "reasoning_cat2": "Pulls against Buyer's Margin Amount's contrary deeming.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "Detailed with an express definition and numbered cross-references.",
+      "reasoning_cat2": "Coheres with Paragraphs 5 and 9 and the Substitutions item.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "\"Equal or better quality\" and \"similar characteristics\" remain undefined comparatives.",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "An introductory phrase only.",
+      "reasoning_cat2": "Consistent with the representations following.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "Conventional non-reliance boilerplate.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "Short capability representation; definite.",
+      "reasoning_cat2": "Consistent with the other representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "A clear negative statement of status.",
+      "reasoning_cat2": "No contrary provision creates a fiduciary role.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "Administrative instructions with a clear saving clause.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "Informational notice, not an operative term.",
+      "reasoning_cat2": "Unrelated to the transaction terms.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (June 18, 2007)"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "Plain purpose statement; nothing to construe.",
+      "reasoning_cat2": "Consistent with the incorporation clause.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "Standard supplement-and-govern language.",
+      "reasoning_cat2": "The precedence rule for clashes with Paragraph 11; coherent in itself.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "Capitalised descriptive warning; clear as a disclosure.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "Dated mechanical definition; definite.",
+      "reasoning_cat2": "Matches the Repurchase Date item.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "Dates with a defined Business Day convention.",
+      "reasoning_cat2": "Consistent with the Final Repurchase Date item.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "\"4.50375 p.a., fixed, adjusted\" leaves \"adjusted\" unexplained and \"the remainder of the Transactions\" is loose.",
+      "reasoning_cat2": "Mild tension with the \"identical terms\" language of Subsequent Transactions.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "A dated option with precise notice mechanics.",
+      "reasoning_cat2": "Cross-referenced in Subsequent Transactions; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "A labelling definition only.",
+      "reasoning_cat2": "Coheres with the date provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "Full deeming and set-off mechanics; \"identical\" is the only broad term.",
+      "reasoning_cat2": "Sits against the stepped Pricing Rate; small tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "A single date with an adjustment convention.",
+      "reasoning_cat2": "Cross-refers to the Repurchase Date item.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "Precise thresholds but an open replacement-acceptability standard.",
+      "reasoning_cat2": "Parallel to the Substitutions item; no direct conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "Same open valuation standards — good faith, fairly, willing-to-pay dealer, economic equivalent. Genuinely construable.",
+      "reasoning_cat2": "Paragraph 11 carve-out and margin feed raise the same overlap question.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "Definite mechanics apart from the cumulative Paragraph 11 phrase.",
+      "reasoning_cat2": "The stacking question against Paragraph 11 is a real relational issue.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "A clear formula with an express deeming assumption.",
+      "reasoning_cat2": "Diverges from the Calculation Agent allocation on default.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "Mechanical grouping rule; clearly stated.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "Role allocation whose default limb depends on who is the non-defaulting party.",
+      "reasoning_cat2": "Pulls against Buyer's Margin Amount's deeming provision.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "\"Equal or better quality\" and \"similar characteristics\" are undefined comparatives beside absolute discretion.",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "Conventional non-reliance wording; typographical slips only.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "Short capability representation; definite.",
+      "reasoning_cat2": "Consistent with the other representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "A clear negative statement of status.",
+      "reasoning_cat2": "No contrary provision.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "Administrative instructions with a clear saving clause.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg115",
+      "reasoning_cat1": "Informational notice, not operative.",
+      "reasoning_cat2": "Unrelated to the transaction terms.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (Feb 22, 2007 second)"
+    },
+    {
+      "clause_id": "neg116",
+      "reasoning_cat1": "Purpose statement, garbled in transcription but plainly a recital of function.",
+      "reasoning_cat2": "Consistent with the incorporation clause and terms below.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg117",
+      "reasoning_cat1": "Standard supplement-and-govern language.",
+      "reasoning_cat2": "The precedence rule for any clash with Paragraph 11; coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg118",
+      "reasoning_cat1": "Capitalised descriptive risk warning.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg119",
+      "reasoning_cat1": "Dated mechanical definition; definite.",
+      "reasoning_cat2": "Matches the Repurchase Date item.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg120",
+      "reasoning_cat1": "Dates with a defined Business Day convention.",
+      "reasoning_cat2": "Consistent with the Final Repurchase Date item.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg121",
+      "reasoning_cat1": "\"4.500% p.a., fixed, adjusted\" leaves \"adjusted\" unexplained; otherwise careful.",
+      "reasoning_cat2": "Mild tension with the \"identical terms\" language of Subsequent Transactions.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg122",
+      "reasoning_cat1": "A dated buyer option with precise notice mechanics.",
+      "reasoning_cat2": "Cross-referenced in Subsequent Transactions; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg123",
+      "reasoning_cat1": "A labelling definition only.",
+      "reasoning_cat2": "Coheres with the date provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg124",
+      "reasoning_cat1": "Full deeming and set-off mechanics; \"identical\" is the only broad term.",
+      "reasoning_cat2": "Sits against the stepped Pricing Rate; small tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg125",
+      "reasoning_cat1": "A single date with an adjustment convention.",
+      "reasoning_cat2": "Cross-refers to the Repurchase Date item.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg126",
+      "reasoning_cat1": "Precise thresholds with an open replacement-acceptability standard.",
+      "reasoning_cat2": "Parallel to the Substitutions item; no direct conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg127",
+      "reasoning_cat1": "Same open valuation standards as the litigated definition; genuinely construable.",
+      "reasoning_cat2": "Paragraph 11 carve-out and margin feed raise the same overlap question.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg128",
+      "reasoning_cat1": "Definite mechanics apart from the cumulative Paragraph 11 phrase.",
+      "reasoning_cat2": "Stacking against Paragraph 11 close-out is the live relational issue.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg129",
+      "reasoning_cat1": "A clear formula with an express deeming assumption.",
+      "reasoning_cat2": "Diverges from the Calculation Agent allocation on default.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg130",
+      "reasoning_cat1": "Mechanical grouping rule; clearly stated.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg131",
+      "reasoning_cat1": "Role allocation whose default limb depends on identifying the non-defaulting party.",
+      "reasoning_cat2": "Pulls against Buyer's Margin Amount's deeming provision.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg132",
+      "reasoning_cat1": "Detailed with an express definition and numbered cross-references.",
+      "reasoning_cat2": "Coheres with Paragraphs 5 and 9 and the Substitutions item.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg133",
+      "reasoning_cat1": "Undefined comparatives \"equal or better quality\" and \"similar characteristics.\"",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg134",
+      "reasoning_cat1": "An introductory phrase only.",
+      "reasoning_cat2": "Consistent with the representations following.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg135",
+      "reasoning_cat1": "Conventional non-reliance boilerplate.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg136",
+      "reasoning_cat1": "Short capability representation; definite.",
+      "reasoning_cat2": "Consistent with the other representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg137",
+      "reasoning_cat1": "A clear negative statement of status.",
+      "reasoning_cat2": "No contrary provision.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg138",
+      "reasoning_cat1": "Administrative instructions with a clear saving clause.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg139",
+      "reasoning_cat1": "Informational notice, not operative.",
+      "reasoning_cat2": "Unrelated to the transaction terms.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (Feb 23, 2007)"
+    },
+    {
+      "clause_id": "neg140",
+      "reasoning_cat1": "Plain purpose statement; nothing to construe.",
+      "reasoning_cat2": "Consistent with the incorporation clause.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg141",
+      "reasoning_cat1": "Standard supplement-and-govern language.",
+      "reasoning_cat2": "Precedence rule for clashes with Paragraph 11; coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg142",
+      "reasoning_cat1": "Capitalised descriptive risk warning.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg143",
+      "reasoning_cat1": "Dated mechanical definition; definite.",
+      "reasoning_cat2": "Matches the Repurchase Date item.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg144",
+      "reasoning_cat1": "Dates with a defined Business Day convention.",
+      "reasoning_cat2": "Consistent with the Final Repurchase Date item.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg145",
+      "reasoning_cat1": "\"1.6725 p.a., fixed, adjusted\" leaves \"adjusted\" unexplained; the Libor fallback is otherwise careful.",
+      "reasoning_cat2": "Mild tension with the \"identical terms\" language of Subsequent Transactions.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg146",
+      "reasoning_cat1": "A dated option with precise notice mechanics.",
+      "reasoning_cat2": "Cross-referenced in Subsequent Transactions; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg147",
+      "reasoning_cat1": "A labelling definition only.",
+      "reasoning_cat2": "Coheres with the date provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg148",
+      "reasoning_cat1": "Full deeming and set-off mechanics; \"identical\" is the only broad term.",
+      "reasoning_cat2": "Sits against the stepped Pricing Rate; small tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg149",
+      "reasoning_cat1": "A single date with an adjustment convention.",
+      "reasoning_cat2": "Cross-refers to the Repurchase Date item.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg150",
+      "reasoning_cat1": "Precise thresholds with an open replacement-acceptability standard.",
+      "reasoning_cat2": "Parallel to the Substitutions item; no direct conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg151",
+      "reasoning_cat1": "Same open valuation standards as the litigated definition; genuinely construable.",
+      "reasoning_cat2": "Paragraph 11 carve-out and margin feed raise the same overlap question.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg152",
+      "reasoning_cat1": "Definite mechanics apart from the cumulative Paragraph 11 phrase.",
+      "reasoning_cat2": "Stacking against Paragraph 11 close-out is the live relational issue.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg153",
+      "reasoning_cat1": "A clear formula with an express deeming assumption.",
+      "reasoning_cat2": "Diverges from the Calculation Agent allocation on default.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg154",
+      "reasoning_cat1": "Mechanical grouping rule; clearly stated.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg155",
+      "reasoning_cat1": "Role allocation whose default limb depends on identifying the non-defaulting party.",
+      "reasoning_cat2": "Pulls against Buyer's Margin Amount's deeming provision.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg156",
+      "reasoning_cat1": "Detailed with an express definition and numbered cross-references.",
+      "reasoning_cat2": "Coheres with Paragraphs 5 and 9 and the Substitutions item.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg157",
+      "reasoning_cat1": "Undefined comparatives \"equal or better quality\" and \"similar characteristics.\"",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg158",
+      "reasoning_cat1": "An introductory phrase only.",
+      "reasoning_cat2": "Consistent with the representations following.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg159",
+      "reasoning_cat1": "Conventional non-reliance boilerplate.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg160",
+      "reasoning_cat1": "Short capability representation; definite.",
+      "reasoning_cat2": "Consistent with the other representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg161",
+      "reasoning_cat1": "A clear negative statement of status.",
+      "reasoning_cat2": "No contrary provision.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg162",
+      "reasoning_cat1": "Administrative instructions with a clear saving clause.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg163",
+      "reasoning_cat1": "Informational notice, not operative.",
+      "reasoning_cat2": "Unrelated to the transaction terms.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (Mar 1, 2007)"
+    },
+    {
+      "clause_id": "neg164",
+      "reasoning_cat1": "Plain purpose statement; nothing to construe.",
+      "reasoning_cat2": "Consistent with the incorporation clause.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purpose of Confirmation (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg165",
+      "reasoning_cat1": "Standard supplement-and-govern language.",
+      "reasoning_cat2": "Precedence rule for clashes with Paragraph 11; coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Incorporation of Master Repurchase Agreement (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg166",
+      "reasoning_cat1": "Capitalised descriptive risk warning.",
+      "reasoning_cat2": "Tracks the Termination Value and margin items.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value Risk Disclosure (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg167",
+      "reasoning_cat1": "Dated mechanical definition; definite.",
+      "reasoning_cat2": "Matches the Repurchase Date item.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Purchase Date (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg168",
+      "reasoning_cat1": "Dates with a defined Business Day convention.",
+      "reasoning_cat2": "Consistent with the Final Repurchase Date item.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Repurchase Date (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg169",
+      "reasoning_cat1": "\"3.825% p.a., fixed, adjusted\" leaves \"adjusted\" unexplained and the twenty-month split is unusual but stated.",
+      "reasoning_cat2": "The twenty-month step-up matches the January 30, 2009 early termination date, so it fits the rest; only the \"identical terms\" phrase in Subsequent Transactions creates mild tension.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pricing Rate (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg170",
+      "reasoning_cat1": "A dated option with precise notice mechanics; definite on its face.",
+      "reasoning_cat2": "The January 30, 2009 date is twenty months from the May 30, 2007 Purchase Date and matches the Pricing Rate step, so it coheres, though it departs from the two-year pattern of the sibling confirmations.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Early Termination Right (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg171",
+      "reasoning_cat1": "A labelling definition only.",
+      "reasoning_cat2": "Coheres with the date provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Initial Transaction (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg172",
+      "reasoning_cat1": "Full deeming and set-off mechanics; \"identical\" is the only broad term.",
+      "reasoning_cat2": "Sits against the stepped Pricing Rate; small tension.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Subsequent Transactions (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg173",
+      "reasoning_cat1": "A single date with an adjustment convention.",
+      "reasoning_cat2": "Cross-refers to the Repurchase Date item.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Final Repurchase Date (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg174",
+      "reasoning_cat1": "Precise thresholds with an open replacement-acceptability standard.",
+      "reasoning_cat2": "Parallel to the Substitutions item; no direct conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Credit Rating (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg175",
+      "reasoning_cat1": "Same open valuation standards as the litigated definition; genuinely construable.",
+      "reasoning_cat2": "Paragraph 11 carve-out and margin feed raise the same overlap question.",
+      "prob_cat1": 0.45,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Termination Value (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg176",
+      "reasoning_cat1": "Definite mechanics apart from the cumulative Paragraph 11 phrase.",
+      "reasoning_cat2": "Stacking against Paragraph 11 close-out is the live relational issue.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Payments Upon Event of Default (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg177",
+      "reasoning_cat1": "A clear formula with an express deeming assumption.",
+      "reasoning_cat2": "Diverges from the Calculation Agent allocation on default.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Buyer's Margin Amount (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg178",
+      "reasoning_cat1": "Mechanical grouping rule; clearly stated.",
+      "reasoning_cat2": "Consistent with Buyer's Margin Amount and Paragraph 4.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Margin Maintenance Calculations (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg179",
+      "reasoning_cat1": "Role allocation whose default limb depends on identifying the non-defaulting party.",
+      "reasoning_cat2": "Pulls against Buyer's Margin Amount's deeming provision.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Calculation Agent (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg180",
+      "reasoning_cat1": "Detailed with an express definition and numbered cross-references.",
+      "reasoning_cat2": "Coheres with Paragraphs 5 and 9 and the Substitutions item.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Call, Redemption or other Payment of Principal of Purchased Securities (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg181",
+      "reasoning_cat1": "Undefined comparatives \"equal or better quality\" and \"similar characteristics.\"",
+      "reasoning_cat2": "Consistent with the Credit Rating substitution duty.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Substitutions; Eligible Securities for Substitution (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg182",
+      "reasoning_cat1": "An introductory phrase only.",
+      "reasoning_cat2": "Consistent with the representations following.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg183",
+      "reasoning_cat1": "Conventional non-reliance boilerplate.",
+      "reasoning_cat2": "Aligns with the Status of Parties representation.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (i) Non-Reliance (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg184",
+      "reasoning_cat1": "Short capability representation; definite.",
+      "reasoning_cat2": "Consistent with the other representations.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (ii) Assessment and Understanding (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg185",
+      "reasoning_cat1": "A clear negative statement of status.",
+      "reasoning_cat2": "No contrary provision.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Representations (iii) Status of Parties (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg186",
+      "reasoning_cat1": "Administrative instructions with a clear saving clause.",
+      "reasoning_cat2": "Consistent with the purpose and incorporation clauses.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confirmation Response Instructions (June 5, 2007)"
+    },
+    {
+      "clause_id": "neg187",
+      "reasoning_cat1": "Informational notice, not operative.",
+      "reasoning_cat2": "Unrelated to the transaction terms.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Information Sharing Notice (June 5, 2007)"
+    }
+  ]
+}

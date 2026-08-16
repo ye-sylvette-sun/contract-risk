@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["finding", "evidence", "two_column"],
+  "properties": {
+    "finding": {
+      "type": "string",
+      "description": "One or two sentences: what you looked at, what it showed, and if interleaved, roughly where in the document and how much."
+    },
+    "evidence": {
+      "type": "string",
+      "description": "Two or three consecutive lines copied EXACTLY from the block, line numbers and spacing included, showing the interleave. Empty string if there is none."
+    },
+    "two_column": {
+      "type": "boolean",
+      "description": "True only if the body of the contract is an interleaved two-column scan."
+    }
+  }
+}

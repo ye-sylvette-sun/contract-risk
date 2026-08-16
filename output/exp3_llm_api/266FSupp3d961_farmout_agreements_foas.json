@@ -1,0 +1,654 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause turns on \"gross proceeds received from the sale of oil and/or gas ... without deductions of any kind,\" which invites dispute over whether post-production/marketing costs may be netted, and it contains a garbled passage (\"if Farmor's interest in the acreage is less than one hundred percent (100%) or the working interest\") plus an undefined unilateral \"right to escalate\" royalty rates upon Payout. Multiple named terms (\"gross proceeds,\" \"without deductions,\" \"reduced proportionately\") each carry more than one reasonable reading.",
+      "reasoning_cat2": "Exhibit D's reserved-royalty paragraph pays the same override on \"gross proceeds received by Assignee ... without deductions of any kind, except that Assignor shall bear its proportionate part of any severance tax,\" an express deduction that contradicts Section 4.A's \"without deductions of any kind\"; the escalation mechanism also has no counterpart in the Exhibit D form the parties must execute under 3(D)(1). That mismatch between the operative reservation and the mandated assignment form is a genuine internal inconsistency.",
+      "prob_cat1": 0.83,
+      "prob_cat2": 0.56,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 4.A — Reserved Overriding Royalty Interest"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "Standard party-identification language with definite names and addresses; the only loose phrase is \"effective as hereinafter provided,\" which merely defers to another provision.",
+      "reasoning_cat2": "Section 17 fixes effectiveness \"as of the date first above written,\" which supplies the deferred term rather than contradicting it, so the fit is coherent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble / Parties"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A short, precise money obligation ($2,000 payable concurrent with execution) with no vague or multi-meaning term.",
+      "reasoning_cat2": "The initial fee appears only in a recital while subsequent-well fees are in operative Section 3(B)(2), creating a modest recital-versus-operative question about enforceability, though the amounts harmonise.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Initial Location Fee"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The reservation is described with specific tract numbers and a 2,000' radius, and \"may acquire an interest\" is qualified by \"subject to the terms and conditions set forth herein.\"",
+      "reasoning_cat2": "It matches Section 2(D)'s exclusion of the same tracts within the same radius around Well KF-1053 and the Exhibit A footnote, so it is consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Farmout Lands and Reservation"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A simple incorporation list; the descriptions are labels and nothing in the wording is ambiguous.",
+      "reasoning_cat2": "Exhibit \"C\" is called a \"Geological Requirement Letter\" here but is headed \"GEOLOGICAL REQUIREMENTS\" in the attachment — a trivial label mismatch that does not change any obligation.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Exhibits"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Defining a \"completed well\" to include a plugged and abandoned dry hole is counter-intuitive but expressly stated, and the equipment benchmarks (tanks, christmas tree) are concrete.",
+      "reasoning_cat2": "The defined term drives the Completion/Plugging Deadlines in 3(A)(3) and 3(B)(4) and does not clash with them; the contract elsewhere speaks of wells \"capable of production in paying quantities,\" a separate standard.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(A). Definition of completed well"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Definition keyed to regulatory field rules is objectively determinable; the \"e.g.\" list is illustrative and mildly open-ended.",
+      "reasoning_cat2": "It supports the location provisions in 3(A)(1) and 3(B)(1) and the pooling references in 7(A) without contradiction.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(B). Definition of drilling unit"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Somewhat circular (an earning well is one that earns an assignment) but no term carries two competing meanings.",
+      "reasoning_cat2": "The term is scarcely used in the operative text, so it neither conflicts with nor is undercut by 3(D); it is a largely inert definition.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(C). Definition of earning well"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The acreage circles are precise and \"that portion and only that portion\" is emphatic, though \"capable of producing in paying quantities\" is a standard but judgment-laden phrase.",
+      "reasoning_cat2": "It is expressly cross-referenced by 3(D)(1) and echoed in the recital and Exhibit A footnote; however, it sits uneasily with Section 13(B)'s notion that \"all Farmout Lands\" could be earned when only circles can be.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(D). Operating Rights Earned"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"[O]ther similar burdens on production\" is a catch-all following enumerated specifics, leaving its reach open to ejusdem generis argument.",
+      "reasoning_cat2": "The defined term \"lease burdens\" is not actually deployed anywhere in the operative provisions, making it an orphan definition rather than a source of conflict.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(E). Definition of lease burdens"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A fixed numeric depth interval; the only oddity is defining a \"Depth\" as a range rather than a point.",
+      "reasoning_cat2": "It is used in 3(C) and tracks the 4,000' cap in 3(E), so the instrument is internally consistent on depth.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(F). Contract Depth"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Short, single-meaning definition of the initial well; nothing ambiguous.",
+      "reasoning_cat2": "Consistent with 3(A) and Section 16's reference to \"the test well.\"",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(G). Definition of test well"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "\"[S]till capable of producing in commercial quantities\" introduces a standard (\"commercial\") used nowhere else, which a party could argue differs from \"paying quantities.\"",
+      "reasoning_cat2": "Section 7(A) imposes shut-in royalties on any well \"capable of production (whether or not such well has already produced),\" which is broader than this definition's requirement of prior production, a real tension.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(H). Definition of shut-in well"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Apart from an OCR-level misspelling of the headword, the definition is plain: any well drilled after drilling and completion of the initial test well.",
+      "reasoning_cat2": "Section 3(B) allows subsequent wells even where the test well was \"plugged and abandoned,\" which the 2(A) definition of completion accommodates, so no genuine clash.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(I). Definition of subsequent well"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Purely referential definition with no vague operative term.",
+      "reasoning_cat2": "Dovetails with 2(D), 3(B)(1) and 5(B)'s treatment of Unearned Farmout Lands.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(J). Unearned Farmout Land"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "\"[G]ross proceeds attributable to the sale or production from a well\" against \"the cost of drilling, completing and equipping\" leaves open whose costs, whether operating costs count, and whether gross or net of burdens is meant.",
+      "reasoning_cat2": "Payout triggers the royalty escalations in Section 4.A, so ambiguity here feeds that provision, but the two are not contradictory.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2(K). Payout"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Dates and the 45-day window are definite; \"Farmee's choice\" of location is discretionary but expressly so.",
+      "reasoning_cat2": "Section 13(A) cites \"3(A)(2)\" as a provision under which the Agreement \"terminates,\" yet 3(A)(2) contains no termination language — termination is only in 3(F) — a cross-reference mismatch.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(A). Test Well Specifications"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The provision simultaneously says Farmee \"shall have the option\" and that Farmee \"must commence\" two wells by December 31, 1996, and then that \"at Farmee's further option, it shall continuously develop\" — an optional-versus-mandatory tension in the same sentence.",
+      "reasoning_cat2": "Section 13(A) treats failure under 3(B)(3) as a \"failure to meet the drilling commitments,\" which presupposes a binding obligation that 3(B) casts as an option; the two cannot be fully harmonised.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(B). Subsequent Wells"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"[I]mpractical or impossible\" and \"lost for any reason\" are somewhat elastic, but the 30-day window and same-depth requirement are concrete.",
+      "reasoning_cat2": "Fits with 2(F) Contract Depth and the default regime in 3(F); no conflict identified.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(C). Substitute Well"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"[A]fter Farmor is satisfied that Farmee has complied with all its obligations\" gives Farmor an open-ended subjective gate, and (2)'s forfeiture runs from completion rather than from Farmor's satisfaction.",
+      "reasoning_cat2": "The forfeiture-and-plug remedy sits alongside 3(F)'s termination scheme and Section 5's plugging notice regime; workable, but the interplay of the 60-day request and 5(A) notice could be argued.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(D). Assignment of Operating Rights - Produce to Earn"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "A precise formula (100' below total depth, capped at 4,000') with no ambiguous term.",
+      "reasoning_cat2": "Consistent with 2(F) Contract Depth and with Exhibit D's reservation of strata below a named formation, subject only to the blank in that form.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(E). Depths Earned"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"If Farmee defaults, other than above\" is an imprecise carve-out, and automatic termination in the first paragraph coexists awkwardly with the notice-and-cure right in the second.",
+      "reasoning_cat2": "It permits Farmor to \"take over operation of (subject to the terms of Section 6 below)\" a well, but Section 6 by its terms operates only where Farmor elects to take over \"under the terms and conditions of Section 5,\" leaving the takeover machinery for default unsupported.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3(F). Default By Farmee"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Notice mechanics, the 30-day period and the 48-hour rig-on-location variant are all specified; \"such additional operations as it desires\" is broad but plainly discretionary.",
+      "reasoning_cat2": "It meshes with Section 6's takeover mechanics and 5(B)'s sanction for bypassing it; no contradiction found.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(A). Notice of Abandonment / Farmor's Right to Take Over"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"[F]ails to give Farmor a reasonable opportunity to consider its options\" adds a vague standard on top of the specific notice rules of 5(A), and \"Farmor's approval\" appears though 5(A) requires only notice and an election window.",
+      "reasoning_cat2": "The approval requirement here is hard to square with 5(A), under which Farmor's silence is deemed an election not to take over and the well \"shall be plugged and abandoned by Farmee.\"",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(B). Plugging Without Approval"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"[E]stimated salvage value ... less estimated plugging costs\" does not say who estimates, and the phrase \"any Operating Rights Earned by Farmor and earned by Farmee\" is garbled.",
+      "reasoning_cat2": "Section 6 is keyed only to elections \"under the terms and conditions of Section 5,\" yet 3(F) purports to invoke it for default takeovers \"subject to the terms of Section 6,\" a cross-reference gap.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Takeover By Farmor"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"[A] Shut-in Royalty of Five Hundred Dollars ($500.00) per well per year, prorated on a monthly basis\" then \"due and payable by the last day of each month\" mixes annual and monthly measures, and the 45-day trigger's interaction with monthly payment is unclear.",
+      "reasoning_cat2": "It applies to wells \"capable of production (whether or not such well has already produced),\" broader than the 2(H) definition of \"shut-in well,\" which requires prior production.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(A). Shut-in Royalty"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"When possible\" is an inherently soft qualifier that makes the ten-day notice duty effectively unmeasurable.",
+      "reasoning_cat2": "Consistent with 7(A) and the notice provisions of Section 10; no conflict.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(B). Advance Notice of Shut-in"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "A long enumerated indemnity closed by \"of any kind or character\" and \"including but not limited to,\" the classic general-after-specific structure, though the coverage trigger (\"arising out of, in connection with, or resulting from\") is conventional.",
+      "reasoning_cat2": "Harmonises with Section 9's no-warranty term and Exhibit D's indemnity; no contradictory provision located.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(A). Liability and Indemnity"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A one-line absolute covenant to keep the lands \"free and clear from all liens\"; the wording is definite, if strict.",
+      "reasoning_cat2": "Section 15(D) contemplates that Farmee may subject the Agreement to liens with Farmor's prior written consent, which sits awkwardly with an unqualified no-liens covenant here.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(B). Liens"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "A flat disclaimer of title warranty, express or implied; there is nothing to construe.",
+      "reasoning_cat2": "Reinforced by Exhibit D's identical disclaimer; fully consistent with the instrument.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Warranty of Title"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Concrete one-year confidentiality period tied to well completion, with delivery mechanics delegated to Exhibit C.",
+      "reasoning_cat2": "Exhibit C sets the reporting channel, so the delegation works; the only wrinkle is that Exhibit C directs data to a different addressee than Section 10(B).",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10(A). Well Information"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Pure address and contact block; nothing capable of two meanings.",
+      "reasoning_cat2": "Exhibit C, D.1 requires reports be delivered to a different address and attention (Mike Stamper), a minor divergence from this general notice provision.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10(B). General Notices"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "The insurance obligation names coverage types but no limits, deductibles or duration, and \"acquire and/or maintain\" leaves the standard indefinite.",
+      "reasoning_cat2": "Supports the risk allocation of 8(A) and 15(C); no contrary provision found.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Insurance"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "The heading \"MODIFICATIONS AND AMENDMENTS\" does not match the content, which is a wash-out/after-acquired-interest clause, and \"any subsequently acquired interest in such lands ... whether obtained directly or indirectly\" is broad and open-ended.",
+      "reasoning_cat2": "The Agreement contains no actual amendment or integration clause, so a reader looking for one is directed to a provision that does not supply it; the substantive reach also overlays Section 4.A's royalty reservation.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Modifications and Amendments"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The list of triggering sections is presented as exhaustive, yet it labels 3(A)(2) and 3(B)(3) as termination provisions when neither contains termination language; and (B) leaves \"all Farmout Lands have been earned\" undefined in operation.",
+      "reasoning_cat2": "Section 2(D) permits earning only within 80- and 40-acre circles, so \"all Farmout Lands ... earned\" under 13(B) may be unattainable, and the term clause omits 5(B), which also terminates rights — a harmonisation problem across the instrument.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Term of Farmout Agreement"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Audit right with a stated 30-day notice; the parenthetical \"including but not limited to\" is mild but the scope (payments associated with wells) is clear.",
+      "reasoning_cat2": "Complements Section 4.A royalties and Exhibit D's monthly statements; no inconsistency.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "14. Audits"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"[A]ll obligations, burdens and requirements set forth hereunder or otherwise associated with the lands covered hereby\" is an unbounded catch-all whose reach beyond the Agreement cannot be delimited.",
+      "reasoning_cat2": "It overlaps rather than conflicts with the specific duties in Sections 8, 11 and 15(B); the breadth could be argued to expand them but no direct contradiction exists.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(A). Compliance with Obligations"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "\"[A]s nearly as possible to its original condition\" and \"settle surface damages\" are open-textured restoration standards.",
+      "reasoning_cat2": "Consistent with 5(B)'s allocation of restoration and reclamation costs to Farmee and with 8(A)'s indemnity.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(B). Permission to Enter and Surface Restoration"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Short access right with a clear risk allocation; nothing ambiguous.",
+      "reasoning_cat2": "Matches Exhibit C's witnessing rights during coring, testing and logging.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(C). Access to Derrick Floor"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "A closed enumeration of prohibited dispositions plus a consent requirement; the terms are ordinary and specific.",
+      "reasoning_cat2": "Exhibit D expressly allows Assignee to assign well interests on notice so long as it retains a 25% working interest, which is hard to reconcile with a flat consent requirement here, and 8(B) bars all liens outright.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(D). No Assignment"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Fixed date and defined content; no ambiguity.",
+      "reasoning_cat2": "Complements the audit right in Section 14 and Exhibit D's monthly statements without conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15(E). Annual Report"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Labelled a \"Right of First Refusal\" but operates as a right of first offer, and the condition \"drills and completes the test well on or before August 31, 1996\" is a demanding trigger whose meaning of \"completes\" is contestable given 2(A).",
+      "reasoning_cat2": "Section 3(A) requires only that drilling commence by August 31, 1996, with completion up to 45 days after total depth, so this condition is arguably impossible to satisfy as written — a direct tension with 3(A)(2)-(3).",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Right of First Refusal"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Standard successors clause; \"shall run with said Farmout Lands\" is a covenant-running assertion but is stated definitely.",
+      "reasoning_cat2": "Binding successors and assigns sits in mild tension with 15(D)'s prohibition on assignment without consent, though the two are commonly read together.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. Execution"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "A closed numbered list of four documents in duplicate; nothing vague.",
+      "reasoning_cat2": "Consistent with Section 10(A)'s delegation of well-information mechanics to Exhibit C.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - A. Pre-Drilling Requirements"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "\"[T]horoughly and timely examine,\" \"properly and timely analyzed\" and \"qualified wellsite geologist\" are all standards without measurable content, and \"EREX\" appears as an undefined actor.",
+      "reasoning_cat2": "The reference to \"EREX\" having free access has no counterpart in the defined terms (the Farmor is Equitable Resources Energy Company), a small drafting disconnect with the body of the Agreement.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.1. Samples"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "\"Significant indications of reservoir quality porosity\" and \"adequately tested in accordance with good oilfield practices\" are quintessentially vague trade standards.",
+      "reasoning_cat2": "Compliance with Exhibit C is a condition of earning under 3(D), so vagueness matters, but nothing in the Agreement contradicts it.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.2. Testing"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "The mechanics (daily, weekdays, 9:00 a.m. Eastern, written confirmation) are precise; \"prepaid\" is an odd surviving word but harmless.",
+      "reasoning_cat2": "Fits Section 10(A) and the rest of Exhibit C's reporting scheme.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.3(a). Routine daily report"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "\"Non-routine occurrences such as\" is an open-ended general category illustrated by specifics, leaving the class of reportable events uncertain.",
+      "reasoning_cat2": "It duplicates in part the notice duty in Exhibit C, B.5 but does not contradict it.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.3(b). Non-routine occurrences"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "Broad but ordinary sweep of documents \"pertaining to the subject well,\" delivered \"when received by the Operator\"; the scope is wide rather than ambiguous.",
+      "reasoning_cat2": "Exhibit C, C.1 says Farmor gets \"one copy\" of post-drilling items while this requires two copies of all reports, and C.1 then demands three copies of some — a copy-count inconsistency within the exhibit.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.3(c). Copies of reports"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "The survey list is a checkbox form with stray marks and a blank \"Other\" line, so which logs are actually required cannot be determined from the text.",
+      "reasoning_cat2": "Because Exhibit C compliance conditions earning under 3(D), an unfilled requirement list creates uncertainty, but no other provision contradicts it.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.4. Logs"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "\"Timely notice\" is an unquantified standard, especially against the immediate-notice duty stated elsewhere.",
+      "reasoning_cat2": "It overlaps B.3(b), which requires immediate telephone notice of intent to core, test or log; the two set different urgency standards for the same event.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - B.5. Notification"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "The clause promises \"one copy of the following (unless otherwise specified)\" and then specifies \"Two final prints\" and a \"THREE COPIES\" heading, and closes with the catch-all \"[a]ny other data pertinent to the drilling, testing and surveying of the well.\"",
+      "reasoning_cat2": "The copy counts diverge from B.3(c)'s two-copies-of-everything rule, an internal inconsistency within Exhibit C.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - C.1. Post Drilling"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "\"[F]ull information on the completion progress\" is open-ended, though the enumerated items that follow give it content.",
+      "reasoning_cat2": "Consistent with the reporting architecture of Section 10(A) and the rest of Exhibit C.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - C.2. Completion Phase"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "A delivery address with an \"other similar data\" tail; nothing genuinely uncertain.",
+      "reasoning_cat2": "The address and attention line differ from Section 10(B)'s notice block (Two Executive Park Place, Attn: Lester Zitkus), a small divergence over where reports must go.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit C - D.1. Delivery of Reports"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "Form preamble with blanks for date; parties and addresses are otherwise definite.",
+      "reasoning_cat2": "Matches the Farmor/Farmee identities in the Agreement's preamble; no inconsistency.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Assignment Preamble"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "The granting language depends entirely on unfilled blanks for the well number and the acreage of the circle, so the extent of the grant is not fixed on the face of the form.",
+      "reasoning_cat2": "The blanks are to be completed from Section 2(D)'s 80/40-acre rule and 3(E)'s depth cap, but this form grants \"the right to operate, maintain and rework\" without stating a depth limit, which 3(E) supplies.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Granting Clause"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "A habendum keyed to production in paying quantities or shut-in status; standard, with blanks for the well number.",
+      "reasoning_cat2": "Section 4.A says the reserved override \"shall survive termination of this Agreement,\" and 3(F) preserves Operating Rights Earned, so tying the assignment's life to the Farmout Agreement's shut-in terms after that Agreement ends invites a harmonisation question.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Term of Assignment"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "A comprehensive disclaimer and indemnity with an enumerated list closed by \"or otherwise\" and \"of every kind and character\"; broad but conventionally drafted.",
+      "reasoning_cat2": "Consistent with Section 9's no-title-warranty and Section 8(A)'s indemnity in the body of the Agreement.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - No Warranty and Indemnity"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "\"[N]ecessary or convenient for the operation, maintenance, reworking and production\" is somewhat elastic but the grant is expressly limited by the underlying deeds and leases.",
+      "reasoning_cat2": "Squares with Section 9 (no title warranty) and the reservation of title in the following Exhibit D paragraph.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Assignment of Rights of Way"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "The royalty percentage and the substance sold are left blank, and the phrase \"without deductions of any kind, except that Assignor shall bear its proportionate part of any severance tax\" is internally self-qualifying in a way that invites argument about what else may be deducted.",
+      "reasoning_cat2": "It directly qualifies Section 4.A's \"without deductions of any kind\" by carving out severance tax and omits Section 4.A's escalation rights, so the mandated assignment form and the reservation clause do not match.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Reserved Overriding Royalty"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "A plain reservation of title with rights conveyed \"only to the extent set forth herein\"; definite.",
+      "reasoning_cat2": "Reinforces Section 2(D)'s limitation of Operating Rights Earned and the recital's reservation; consistent throughout.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Reservation of Title"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The 25% floor is expressed as a \"working interest\" though what is assigned are operating rights, so the measure of the retained interest is uncertain; the blanks for well numbers add indefiniteness.",
+      "reasoning_cat2": "Section 15(D) forbids any assignment by Farmee without Farmor's prior written consent, while this paragraph permits assignments on notice provided a 25% interest is retained (consent required only for operator rights) — the two regimes conflict.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Restrictions on Further Assignment"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "The formation name below which deeper rights are reserved is left blank, so the vertical boundary of the reservation is undetermined on the face of the instrument.",
+      "reasoning_cat2": "Section 3(E) fixes earned depths at 100' below total depth not exceeding 4,000', a numeric limit that this formation-based reservation does not track and may not match.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Reservation of Deeper Strata"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "Boilerplate successors-and-assigns sentence; nothing to construe.",
+      "reasoning_cat2": "Parallel to Section 17 of the Agreement; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Binding Effect"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "A simple subordination of the assignment to the Farmout Agreement, with only the date left blank.",
+      "reasoning_cat2": "It makes the Farmout Agreement controlling, which helps resolve rather than create conflicts, though it also means Exhibit D's severance-tax carve-out and assignment rules must yield to Sections 4.A and 15(D).",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit D - Subject to Farmout Agreement"
+    }
+  ]
+}

@@ -1,0 +1,1194 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause makes a delinquent Employer liable for \"any expenses incurred in effectuating such payment,\" with a non-exhaustive list ending in \"interest at a rate of 18 percent per annum\" — the general phrase plus the odd inclusion of interest as an \"expense\" invites argument about whether 18% is a fixed rate, a ceiling, or displaced by ERISA's statutory interest. The catch-all \"including, but not limited to\" against enumerated specifics leaves the reach of recoverable amounts genuinely uncertain.",
+      "reasoning_cat2": "Section 9.4(a) refers to interest \"at a rate calculated in accordance with Section 9.5\" and 9.7(b)-(c) computes both interest and the 20% liquidated damages \"in accordance with the method set forth in Section 9.5,\" yet 9.5(b) states a flat rate rather than a method, and Amendment No. 2 later adds \"or such other interest rate that the Trustees deem appropriate,\" creating tension over which rate governs a given delinquency. The interaction of 9.5(b), 9.4(b), 9.7 and Amendment No. 2 is a live source of internal inconsistency.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.63,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 9.5(b) — Default in Payment (18 percent interest)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The Preamble identifies the parties and named Trustees in definite terms; the only oddities are typographical (\"tnion,\" \"as of the September 1, 1993\") which do not change meaning. It equates \"Fund\" and \"Plan\" as labels, a loose usage but one clarified by Article 1 definitions.",
+      "reasoning_cat2": "Section 1.20 defines \"Plan\" as the rules and regulations while 1.22 defines \"Fund\" as the corpus, so the Preamble's \"(the 'Fund' or 'Plan')\" is slightly loose, but the definitions article expressly governs. Amendment No. 4 replaces the Preamble, keeping it current and consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A plain recital of fact with a defined term; no vague operative language. Nothing to construe on its face.",
+      "reasoning_cat2": "Consistent with Section 1.8's definition and Article 9's contribution mechanics; no operative provision points the other way.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Collective Bargaining Agreements"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "Simple background recital; the typo \"contenplate\" is immaterial to meaning. No ambiguous term.",
+      "reasoning_cat2": "Consistent with Article 3's appointment scheme by Association and Union.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Trust Agreement contemplated"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Exclusive purpose of providing pension and retirement benefits\" is a standard formulation; \"certain employees\" is qualified by the defined term Covered Employees. Wording is definite enough.",
+      "reasoning_cat2": "Section 4.1(a) permits \"such other related benefits as the Board may from time to time determine,\" which is broader than the recital's \"pension and retirement benefits\" — a mild recital-versus-operative divergence, though Section 2.2 harmonises with \"related benefits.\"",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Purpose of Fund"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Purely historical recital with definite dates; nothing to construe.",
+      "reasoning_cat2": "Consistent with Section 1.2 and Article 10's amendment power.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Desire to amend and restate"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "A definite recital of an amendment power, though it cites \"Paragraph 18\" of a superseded instrument. The cross-reference is to the prior document, not this one, so no internal defect.",
+      "reasoning_cat2": "The restated Agreement's amendment power sits in Section 10.1, not Paragraph 18, so a reader could question whether the recited authority matches — but the recital plainly refers to the pre-restatement trust agreement.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital - Authority to amend"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Boilerplate consideration language; \"promises\" is rendered \"prom-ises\" only by hyphenation. Nothing ambiguous.",
+      "reasoning_cat2": "Consistent with the whole instrument.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consideration / Agreement"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Standard definitional preamble with the usual \"unless the context otherwise requires\" carve-out, which is common and rarely litigated here. No specific ambiguous term.",
+      "reasoning_cat2": "Section 12.7 imports Plan definitions \"except as otherwise expressly provided herein,\" which sits comfortably with this introduction.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Article 1 - Definitions introduction"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "Defines Administrator as the Board or a duly authorized delegate; definite and self-contained.",
+      "reasoning_cat2": "Section 7.1's text is garbled (\"Where the Administrator is a Trust Fund\") but that defect lies in 7.1, not in this definition; 1.6 also names the Board as ERISA \"administrator,\" which coheres.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.1 \"Administrator\""
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "A precise definition tied to a named instrument and date; no vague term.",
+      "reasoning_cat2": "Consistent with the Preamble and Section 10.1.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.2 \"Agreement\" or \"Trust Agreement\""
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Names the entity as \"Publishers' Association of New York\" while the Preamble and signature block say \"of New York City\" — a small naming discrepancy in the definition itself.",
+      "reasoning_cat2": "The Preamble, Section 10.3(a)(2) and Section 12.8(d) all use \"Publishers' Association of New York City,\" so the definition is marginally off, though no one could seriously doubt the referent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.3 \"Association\""
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The phrase \"both the Chairman and Secretary of the Board\" could mean jointly or each individually, a genuine but minor ambiguity; the rest is layered but definite.",
+      "reasoning_cat2": "Section 5.15 requires Chairman and Secretary jointly to execute documents and Section 12.6 makes the Chairman's certificate alone conclusive, so the joint/several question recurs across provisions.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.4 \"Authorized Person\""
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"such other person or entity who, as a result of his relationship to the Covered Employee, is entitled under the terms of the Plan\" defers to the Plan, so the boundary is set elsewhere; the wording itself is workable.",
+      "reasoning_cat2": "Consistent with Section 4.5's assignment restrictions and Section 12.7's incorporation of Plan definitions.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.5 \"Beneficiary\""
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Definite, tied to ERISA statutory definitions with citations. Nothing ambiguous.",
+      "reasoning_cat2": "Consistent with Sections 7.2 and 5.14 allocating overall control to the Board.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.6 \"Board\""
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The definition says \"Internal Revenue Code of 1936,\" plainly a typographical error for 1986 — a mechanical mistake in a defined term that is relied on throughout.",
+      "reasoning_cat2": "Sections 2.3, 4.4, 10.1(b) and 10.2 all turn on \"the Code,\" so the erroneous year propagates, though any court would correct it as an obvious scrivener's error.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.7 \"Code\""
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "\"or other written agreement between an Employer and the Union, which is in force and effect and is acceptable to the Board\" is a catch-all after enumerated types, and \"acceptable to the Board\" is an undefined standard of approval. That combination leaves the class of qualifying agreements uncertain.",
+      "reasoning_cat2": "Section 2.4(a) requires a Collective Bargaining Agreement \"approved by the Board,\" while Section 9.1 makes contribution rates governed by the CBAs, so the Board-acceptance filter could be read differently across these provisions.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.8 \"Collective Bargaining Agreement\""
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "Definite in its main operation, with an express reconciliation clause (\"to the extent that the provisions thereof are not inconsistent with the terms of this Agreement\"). That proviso itself anticipates and resolves conflict.",
+      "reasoning_cat2": "Section 5.5(h) authorises pooling into Collective Trusts and Section 5.7 imposes prudence duties; the exculpation here for Collective Trust trustees fits that framework.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.9 \"Collective Trust\""
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Clear definition with a minimum composition requirement of one Trustee from each side.",
+      "reasoning_cat2": "Section 5.6(b) requires \"an equal number of Employer Trustees and Union Trustees,\" which is stricter than 1.10's \"at least one\" of each — a genuine, if small, mismatch between the definition and the operative committee provision.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.10 \"Committee\""
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Tied to the CBA and contribution obligation; definite boundary.",
+      "reasoning_cat2": "Consistent with Sections 1.13 and 9.1.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.11 \"Covered Employee\""
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "Cross-references \"Corporate Trustee\" as defined in Section 3.12, but 3.12 does not actually define the term — it merely authorises appointment of one. The definitional cross-reference is therefore imprecise.",
+      "reasoning_cat2": "Section 3.12 speaks of appointing a bank or trust company as Corporate Trustee but excludes broker-dealers, whereas 1.12 includes broker-dealers as potential Corporate Trustees — a small inconsistency between the two.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.12 \"Custodian\""
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "Definite: employers required to contribute pursuant to a CBA. No ambiguous term.",
+      "reasoning_cat2": "Consistent with the Preamble's broader \"such other employers which from time to time become contributing employers,\" and with Sections 2.4 and 9.1.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.13 \"Employer\""
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Simple cross-referencing definition; \"successors and assigns\" applied to individual trustees is loose but conventional.",
+      "reasoning_cat2": "Consistent with Sections 3.3(a), 3.7 and 3.9; Amendment No. 4 updates 3.3 without disturbing this.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.14 \"Employer Trustee\""
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Standard statutory definition; typographical noise only.",
+      "reasoning_cat2": "Consistent throughout.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.15 \"ERISA\""
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Defined by reference to a specific ERISA section and regulation; definite.",
+      "reasoning_cat2": "Consistent with Section 5.5(p)'s ancillary trustee requirements.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.16 \"Foreign Securities\""
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Requires \"written communications signed by an Authorized Person\" yet the parenthetical extends to telex and similar systems where signature is inferred from verification — a small tension between \"signed\" and the electronic carve-out.",
+      "reasoning_cat2": "Section 8.2(a) requires specimen signatures for those giving Instructions, which coheres with the signature requirement.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.17 \"Instruct\" or \"Instructions\""
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "A layered but precise definition keyed to ERISA and the Advisers Act; the requirements are enumerated conjunctively and clearly.",
+      "reasoning_cat2": "Consistent with Sections 8.1-8.3 and the Board's power under 1.12 to appoint the Custodian in dual roles.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.18 \"Investment Manager\""
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Definite and mechanical.",
+      "reasoning_cat2": "Consistent with Section 8.1(b)'s segregation requirement.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.19 \"Investment Manager Account\""
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Definite; identifies the Plan as the detailed rules adopted by the Board.",
+      "reasoning_cat2": "The Preamble uses \"Fund\" and \"Plan\" interchangeably, which is looser than this definition, but Article 1 governs and Sections 4.2 and 5.2 use \"Plan\" consistently.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.20 \"Plan\""
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "A long enumerated list introduced by \"including, but not limited to\" and closed by catch-all subsection (k) — the classic general-versus-specific structure, though the opening words \"all Trust Fund securities of any and every kind\" make the breadth express.",
+      "reasoning_cat2": "Consistent with Section 5.5's investment powers and Section 11.2's valuation provision.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.21 \"Securities\" or \"Security\""
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Definite and comprehensive as to the corpus.",
+      "reasoning_cat2": "Consistent with Sections 5.1, 5.12 and 1.9.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.22 \"Trust,\" \"Trust Fund,\" or \"Fund\""
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The parenthetical \"(if such Successor Trustees have been appointed...)\" is awkwardly attached and could be read to condition the whole definition. Minor drafting looseness.",
+      "reasoning_cat2": "Consistent with Sections 3.9, 3.10 and 3.11.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.23 \"Trustee(s)\""
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Definite; \"and any affiliates thereof\" is broad but the referent entity is named.",
+      "reasoning_cat2": "Consistent with the Preamble's identical formulation.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.24 \"Union\""
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Simple cross-referencing definition; definite.",
+      "reasoning_cat2": "Consistent with Sections 3.3(b), 3.8 and 3.10, as amended by Amendment No. 4.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.25 \"Union Trustee\""
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "A naming provision; nothing to construe.",
+      "reasoning_cat2": "Consistent with the Preamble and Section 9.3's payee designation.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1 Name"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "\"certain pension and related benefits\" uses \"related benefits\" without definition, an open-ended category whose boundary is not fixed by the text.",
+      "reasoning_cat2": "Section 4.1(a) similarly permits \"such other related benefits as the Board may from time to time determine\" while the Preamble recital speaks only of \"pension and retirement benefits\" — a possible recital-versus-operative gap.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2 Purpose"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The deemed-amendment device (\"this Agreement shall be deemed amended in such fashion as will implement the purposes of this Trust\") is inherently open-ended: who determines the fashion, and what amendment results, is not specified. That is a genuine indeterminacy in the clause's own terms.",
+      "reasoning_cat2": "Section 10.1 requires amendments by unanimous Board vote subject to conditions, and Section 10.2 forbids certain amendments, so an automatic deemed amendment sits uneasily with the prescribed amendment machinery.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3 Operation"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "\"Any contributing Employer acceptable to the Trustees may participate\" uses an unstated acceptance standard, but the three-step mechanism is otherwise definite.",
+      "reasoning_cat2": "Section 1.13 defines Employer as any employer required to contribute under a CBA, without a Board-acceptance filter, while 2.4 and 1.8 add acceptability — a modest tension over when participation attaches.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4 Participation by Contributing Employers"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The deeming language binds an Employer \"unconditionally\" to all Trustee decisions and future amendments; the breadth of \"all of the decisions of the Trustees\" is expansive but expressly stated. The provision's one-sidedness against Employers could invite contra proferentem argument.",
+      "reasoning_cat2": "Section 9.1 says nothing in the Trust Agreement shall change the terms of any CBA, which sits in some tension with an unconditional agreement to be bound to all amendments and Trustee decisions affecting contribution costs.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.5 Obligations of Contributing Employers"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "Numbered \"3.2\" in the OCR though it is Section 3.1; the substance — two Employer and three Union Trustees — is definite. The cross-reference to Section 3.4 for appointments is accurate.",
+      "reasoning_cat2": "An unequal 2-3 composition sits awkwardly with Section 6.3's quorum of two from each side and Section 10.1(c)'s bar on unequal voting power, though 6.4's unit-voting scheme reconciles them; Amendment No. 4 changes this to 2-2.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1 Composition of Trustees"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Straightforward acceptance language; definite.",
+      "reasoning_cat2": "Consistent with Section 3.4's written-acceptance requirement and the signature page.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.2 Acceptance of Trust and Trusteeship"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "A list of names; nothing to construe beyond identification.",
+      "reasoning_cat2": "Names three Union Trustees consistent with Section 3.1 as originally drafted; superseded by Amendment No. 4.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.3 Selection of Trustees"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "\"as soon as practicable\" is a soft timing standard, but it governs only the delivery of copies and carries no consequence for delay.",
+      "reasoning_cat2": "Consistent with Sections 3.9, 3.10 and 3.11's designation mechanics.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.4 Written Appointments and Acceptances"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "Definite: service until death, incapacity, resignation or removal.",
+      "reasoning_cat2": "Section 3.6's deemed resignation when a designating Contributing Employer ceases adds a further terminating event not listed here, and Section 3.8 ties Union Trustee tenure to union office — mild incompleteness in 3.5's list.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.5 Term of Office"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "The final sentence — a Trustee \"shall be deemed to have resigned and shall not be replaced\" if the designating Contributing Employer ceases — is odd, since \"shall not be replaced\" would shrink the Board, and it assumes Employers designate Trustees.",
+      "reasoning_cat2": "Section 3.1 and 3.3(a) provide that Employer Trustees are selected by the Association, not by individual Contributing Employers, and 3.9 provides for successors on any vacancy, so 3.6's deemed-resignation/no-replacement rule conflicts with both.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.6 Resignations"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "Definite removal mechanic with immediate effect on filing.",
+      "reasoning_cat2": "Consistent with Section 3.9's successor procedure; contrasts deliberately with 3.8's treatment of Union Trustees.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.7 Removal of Employer Trustees"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Titled \"Removal of Union Trustees\" but the text mostly prescribes who the Union Trustees are and addresses removal only \"by operation of law\" — a mismatch between heading and content, and no mechanism for removal by the Union itself.",
+      "reasoning_cat2": "Section 3.10 speaks of a Union Trustee who is \"removed\" and lets the principal officer designate a successor, yet 3.8 requires election from full-time officers — the two successor mechanisms are not easily harmonised.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.8 Removal of Union Trustees"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Definite mechanism keyed to a written certificate from the Association.",
+      "reasoning_cat2": "Consistent with Sections 3.1 and 3.7.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.9 Successor Employer Trustees"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "Internally awkward: the principal officer \"shall designate a successor\" yet the same sentence says the successor \"shall be elected from the full-time officers of the Union\" — designation and election are different acts.",
+      "reasoning_cat2": "Section 3.8 provides that Union Trustees are automatically the incumbent president, vice president and secretary-treasurer, which makes both designation and election redundant or inconsistent.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.10 Successor Union Trustees"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "Definite vesting provision; no ambiguous term.",
+      "reasoning_cat2": "Consistent with Sections 3.4, 3.9 and 3.10.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.11 Powers of Successor Trustees"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Broad delegation language with \"such other duties and powers as the Board may deem advisable\" and a sweeping release of the Trustees on transfer; the release's scope against ERISA duties is open-ended. The OCR omission mid-paragraph (\"Notwithstanding such transfer, the Board ... functions under the Plan\") leaves a gap.",
+      "reasoning_cat2": "Section 5.7's prudence and diversification duty and Section 7.2(5)'s retained fiduciary functions sit in tension with the Trustees being \"forever released and discharged\" as to transferred assets; Section 1.12's Corporate Trustee definition also includes broker-dealers not permitted here.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.12 Use of Corporate Trustee"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "\"such other related benefits as the Board may from time to time determine\" is a catch-all following the specifics \"pension, retirement\" — the ejusdem generis boundary of \"related benefits\" is not fixed. The rest of the clause is carefully drafted protection language.",
+      "reasoning_cat2": "The Preamble recital limits the Fund to \"pension and retirement benefits\" and Section 10.2 bars diversion to any purpose other than \"pension or related benefits,\" so the reach of 4.1(a)'s catch-all interacts with those limits.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.1 Benefits"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "Definite: eligibility and benefit terms live in the Plan, which the Board may amend or terminate.",
+      "reasoning_cat2": "Consistent with Sections 5.2, 7.2(2) and 10.1; the unlimited power to terminate the Plan \"at any time\" sits against Section 10.3's termination formalities for the Trust, but those are distinct instruments.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.2 Written Plan of Benefits"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "Permissive and clear.",
+      "reasoning_cat2": "Consistent with Sections 4.1(b) and 5.4.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.3 Insurance Contracts"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "The OCR text is badly scrambled — the clause (c) conditioned-on-deductibility language appears after the closing sentence, and the (b) branch reads \"the Plan status receives an adverse determination.\" As reproduced, the enumerated conditions and their time limits are hard to match up.",
+      "reasoning_cat2": "Section 10.2 forbids any return or diversion of Fund assets to Contributing Employers \"except as otherwise provided in Section 10.3\" — it does not except Section 4.4, yet 4.4 expressly authorises returning contributions to an Employer.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.4 Exclusive Benefit"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "The reproduced text is garbled and the final sentence is startling: it permits the Board to \"terminate or postpone any such benefit payments ... to the spouse, children and relatives of the person to whom any such benefits are payable,\" which does not follow from the anti-alienation premise. The mechanical disorder obscures the operative rule.",
+      "reasoning_cat2": "Section 12.15 conditions any entitlement on the Board's determination and Section 5.14 gives the Board absolute construction authority, but 4.5's discretion to cut off payments to a spouse sits uneasily with Section 1.5's definition of Beneficiary and ERISA's QDRO carve-out recited in the same clause.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4.5 No Assignment of Benefits"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "Definite; vests receipt and title in the Board and permits deposit with Custodians.",
+      "reasoning_cat2": "Consistent with Sections 5.12 and 1.22.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.1 Receipt of Payments"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "Definite and short; cross-reference to Section 4.2 is accurate.",
+      "reasoning_cat2": "Consistent with Sections 4.1(b) and 4.2.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.2 Payment of Benefits"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "\"all reasonable and necessary expenses\" followed by \"including, but not limited to\" a list is the classic general-plus-specific structure, and \"reasonable and necessary\" is a standard-of-degree term. Still, this formulation is conventional and the list is illustrative by its terms.",
+      "reasoning_cat2": "Section 7.2(8) requires the Board to review, approve and pay expenses \"of the type set forth in Sections 5.3 and 5.5(n),\" which coheres; Section 5.3(d) bars Trustee compensation consistent with 5.3(a)(vii)'s reimbursement.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.3 Expenses"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "Long but carefully drafted; the insurance-company protections are stated in definite terms.",
+      "reasoning_cat2": "Consistent with Sections 4.1(b), 4.3 and 5.3(b).",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.4 Insurance Contracts"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "Subsection (y) is an express catch-all — \"perform all acts (whether or not expressly authorized herein)\" — sitting after twenty-four enumerated powers, precisely the general-versus-specific tension that invites ejusdem generis argument. Several sub-powers (e.g. \"free from any limitations imposed by state law\") also push against outer boundaries.",
+      "reasoning_cat2": "Section 5.7's prudence and diversification standard and Section 2.2's exclusive-purpose limit constrain the \"sole and absolute discretion\" language, and Section 8.4(a) carves subsections (j) through (y) out of an Investment Manager's authority — cross-references that must be harmonised.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.5 General Powers of Trustees"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "\"including but not limited to\" precedes two illustrative delegable responsibilities, leaving the outer scope of delegable fiduciary responsibilities open. The wording is otherwise definite.",
+      "reasoning_cat2": "Section 1.10 requires only \"at least one Employer Trustee and one Union Trustee\" while 5.6(b) requires an equal number of each — a direct mismatch between the definition and this operative provision.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.6 Committees"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "Tracks the ERISA prudent-person standard verbatim; \"clearly prudent not to do so\" is a statutory formulation. Definite as drafted.",
+      "reasoning_cat2": "Sits against the many \"sole and absolute discretion\" and exculpation clauses (5.5, 5.9(b), 8.5), but each is qualified by \"except as may otherwise be provided by ERISA,\" which harmonises them.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.7 Standard of Care"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "\"may accept the same as conclusive evidence of the truth and accuracy\" is strong but definite protective language.",
+      "reasoning_cat2": "Section 5.7's prudence standard and 5.9's ERISA carve-out limit this reliance protection, but the tension is the ordinary one addressed by the opening words of 5.9.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.8 Reliance on Written Instruments and Advice of Professionals"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "Opens with \"Except as may otherwise be provided by ERISA, the Code, or other applicable law,\" which qualifies the sweeping exculpation in (b); the closing words \"except as may otherwise reimbursed by insurance\" are grammatically defective (missing \"be\"). The typo is minor but the (b) exculpation for \"any error of judgment or ... any act or omission\" is very broad.",
+      "reasoning_cat2": "Section 5.7 imposes a prudent-person duty and Section 5.11 provides fiduciary insurance for breaches, so (b)'s blanket personal-liability exclusion must be read down by the ERISA carve-out — a harmonisation the clause itself supplies.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.9 Indemnification"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Definite, with the bond amount tied to ERISA Section 412.",
+      "reasoning_cat2": "Consistent with Section 5.3's expense provisions.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10 Bonding"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "Definite mandatory purchase obligation, qualified only by \"to the extent not precluded by ERISA.\"",
+      "reasoning_cat2": "Cross-references Section 5.9's indemnification obligations coherently.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.11 Fiduciary Insurance"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "Definite deposit and signature-authority mechanics.",
+      "reasoning_cat2": "Consistent with Section 5.15's authorisation of employees to sign checks on designated accounts and Section 5.1's deposit power.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.12 Deposit and Withdrawal of Funds"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "\"ministerial powers or duties\" is the operative limit and is not defined — the line between ministerial and fiduciary delegation is a classic soft boundary.",
+      "reasoning_cat2": "Section 5.6(a) permits delegation of \"fiduciary responsibilities\" to Committees and Section 5.5(r) permits delegation of operational duties \"other than Trustee duties,\" so three differently worded delegation powers coexist.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.13 Delegation of Power"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "A standard Firestone discretionary-authority clause, definite in granting complete construction authority and finality. The opening carve-out \"Except as may be provided ... in any other document between the Board and an Employer\" is unusually open-ended.",
+      "reasoning_cat2": "Section 6.6's arbitration of Board deadlocks and Section 9.10's arbitration of withdrawal-liability disputes carve out matters from the Board's final say, but they address different subject matter.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.14 Discretionary Authority"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Definite as to who may execute and the effect of signature; the reliance protection for third parties is clear.",
+      "reasoning_cat2": "Section 12.6 makes a certificate executed by the Chairman alone conclusive, whereas 5.15 authorises the Chairman and Secretary — a mismatch on single-signature authority.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.15 Execution of Documents"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Definite: Chairman must be a Union Trustee, Secretary an Employer Trustee, with terms running until successors are elected.",
+      "reasoning_cat2": "Section 6.2(b) lets \"the Chairman or Secretary\" call special meetings and 6.6 gives the Chairman the arbitration-submission role, all consistent with this allocation.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.1 Officers"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "Subsection (b) allows special meetings called \"by any four Trustees,\" a definite but arithmetically strained requirement; the rest is clear.",
+      "reasoning_cat2": "Under Section 3.1 there are only five Trustees, and under Amendment No. 4's amended 3.1 only four, so \"any four Trustees\" becomes nearly or exactly unanimous — an incoherence with the composition provisions as amended.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.2 Calling of Meetings"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "Definite numeric quorum: two Union and two Employer Trustees.",
+      "reasoning_cat2": "Under original Section 3.1 there are only two Employer Trustees, so quorum requires both; under Amendment No. 4's 2-2 board it requires all four, which sits oddly with Section 6.4(b)'s reference to \"a majority of all the Union Trustees.\"",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.3 Quorum"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "Definite unanimity-by-units mechanism with proxy rules and a deadlock trigger; \"deadlock\" is expressly defined parenthetically. Clear drafting.",
+      "reasoning_cat2": "Section 6.3's quorum and Section 6.6's arbitration procedure dovetail with 6.4(d); Section 3.1's uneven 2-3 composition is neutralised by unit voting.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.4 Vote of Trustees"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "Definite; \"need not be verbatim\" is a clear limitation.",
+      "reasoning_cat2": "Consistent with Section 11.1's recordkeeping duties.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.5 Minutes of Meetings"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "Detailed and definite arbitration machinery; the OCR truncates the sentence about petitioning the Southern District, but the mechanism and forum are clear. \"Unable to decide ... for lack of a unanimous vote\" is expressly extended to quorum failures.",
+      "reasoning_cat2": "Section 6.4(d) refers deadlocks to \"arbitration (as provided by Section 6.6),\" and 6.6(e) fixes hearings in New York City consistent with 9.10 and 12.2 — coherent across the instrument.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.6 Arbitration"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "The opening sentence is mangled — numbered \"9.2\" and reading \"Where the Administrator is a Trust Fund, subject to the terms of this Agreement\" with no predicate — so the provision's operative scope is grammatically incomplete. That is a mechanical defect affecting meaning.",
+      "reasoning_cat2": "Section 1.1 defines Administrator as the Board or a person authorised by the Board, and Section 7.2 allocates overall authority to the Board, so the garbled opening leaves the Administrator/Board allocation less certain than intended.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.1 The Administrator"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "A long enumerated list closed by item (18)'s general \"exercise of those functions and responsibilities which the Board deems necessary and appropriate\" — a catch-all after specifics. The list is otherwise concrete.",
+      "reasoning_cat2": "Item (5) preserves functions except those delegated to a Committee, Administrator, Investment Manager or Custodian, harmonising with Sections 5.6, 5.13 and 8.1; cross-references to 5.3, 5.5(n) and 8.8 are accurate.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.2 The Board"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "Definite appointment and segregation mechanics; a typographical \"Securities of other property\" for \"or other property\" does not obscure meaning.",
+      "reasoning_cat2": "Consistent with Sections 1.19, 8.4(b) and 5.5.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.1 Appointment of Investment Managers"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "Definite; \"periodically\" in (c) is a soft frequency term but of little operative bite.",
+      "reasoning_cat2": "Consistent with Sections 8.8 and 7.2(13)'s monitoring duty.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.2 Authorization"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "Permissive (\"may require\") whereas Section 1.18 makes written acknowledgment a definitional precondition to being an Investment Manager. The permissive framing creates a small internal oddity within the clause's own terms.",
+      "reasoning_cat2": "Section 1.18 requires that the appointee \"has acknowledged in writing to the Board\" its fiduciary status, which conflicts with 8.3 treating the certificate as optional.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.3 Acknowledgments"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "The carve-out \"except subsections (3) through (y)\" plainly means subsections (j) through (y) — an OCR/typographical slip in a cross-reference that defines the Investment Manager's powers. As written the exclusion's starting point is uncertain.",
+      "reasoning_cat2": "Section 5.5's subsections are lettered, not numbered, so the reference must be to (j); Section 8.5's exculpation and 8.1(c)'s reservation to the Board are otherwise consistent.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.4 Direction by Investment Manager"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "Broad exculpation qualified by \"except those assets over which it has specifically assumed investment management duties\" — the meaning of \"specifically assumed\" is somewhat open but the structure is clear.",
+      "reasoning_cat2": "Section 7.2(13) requires the Board to monitor and evaluate Investment Managers and Section 5.7 imposes a prudence duty, so a blanket non-responsibility clause must be read alongside those retained duties.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.5 Review by Board"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "Definite; grants order-placement authority subject to the management agreement and ERISA.",
+      "reasoning_cat2": "Consistent with Sections 8.4 and 8.8.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.6 Issuance of Orders"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "One sentence saying the Investment Manager's authority and terms \"shall be the sole responsibility of the Board\" — \"responsibility\" here could mean the Board sets them or that the Board bears liability for them, a genuine two-reading ambiguity.",
+      "reasoning_cat2": "Section 8.5 says the Board is not responsible or liable for an Investment Manager's acts, which pulls against the liability reading of 8.7; Section 8.2(b) supports the setting-terms reading.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.7 Authority of Investment Manager"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "Definite and self-limiting; the notwithstanding sentence expressly negates any implication of assumed management powers.",
+      "reasoning_cat2": "Consistent with Sections 8.2(c), 8.5 and 7.2(10).",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8.8 Investment Guidelines"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "Definite: contribution rate and amount are governed entirely by the CBAs, and the Trust Agreement is declared not to alter them.",
+      "reasoning_cat2": "Section 2.5(b)-(d) binds Employers \"unconditionally\" to Plan amendments and Trustee decisions including contribution costs, which sits in some tension with 9.1's disclaimer that nothing here changes the CBAs.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.1 Rate of Contributions"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "Definite timing rule keyed to the CBA.",
+      "reasoning_cat2": "Consistent with Sections 9.1 and 2.4(b), though 2.4(b) lets the Employer designate the participation effective date — a small overlap rather than a conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.2 Effective Date of Contributions"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "Definite payee and delegation of form to the Board.",
+      "reasoning_cat2": "Consistent with Sections 2.1 and 9.9.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.3 Mode of Payment"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "Subsection (b)'s \"liquidated damage penalty equal to the greater of interest on, or twenty percent of, the unpaid contributions\" is elliptical (interest over what period?), and \"penalty\" alongside \"liquidated damage\" is internally awkward. The cross-reference to Section 9.5 for the interest rate is clear enough.",
+      "reasoning_cat2": "Section 9.4(a) says collection costs \"shall be paid from the Fund\" and then, notwithstanding, allows recovery from the Employer, while 9.5(b) and 9.7(d) make the Employer liable for those costs — an allocation that requires harmonising.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.4 Failure to Make Employer Contributions"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "Definite; defines \"unpaid contributions\" and identifies the ERISA enforcement sections. The OCR renders 502(g)(2) as \"502(g) 2)\" without changing meaning.",
+      "reasoning_cat2": "Consistent with Sections 9.5, 9.7 and 9.8.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.6 Enforcement Actions"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "Item (e) \"such other legal or equitable relief as the court deems appropriate\" is a catch-all after four specifics, but it merely tracks ERISA Section 502(g)(2) and defers to the court. Otherwise mechanical and definite.",
+      "reasoning_cat2": "It computes interest \"in accordance with the method set forth in Section 9.5,\" yet 9.5(b) states a flat 18% rate rather than a method, and Amendment No. 2 makes the rate discretionary — a cross-reference that no longer fits cleanly.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.7 Payments Required by Court Award"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "Definite anti-waiver saving clause; the Article is called \"Article IX\" here and \"Article 9\" elsewhere in the same sentence, a trivial inconsistency.",
+      "reasoning_cat2": "Consistent with Sections 9.5(a) and 9.6's \"in addition to any other remedies\" framing.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.8 No Waiver of Other Rights"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "\"all records deemed necessary by such persons\" gives the auditor's own judgment the boundary, and \"The Board may charge an Employer for the cost of conducting an audit\" states no condition or limit. Both are open-ended but plainly worded.",
+      "reasoning_cat2": "Section 9.4(a) says collection costs are paid from the Fund, while 9.9 allows charging audit costs to the Employer — related but not squarely conflicting.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.9 Remittance Reports and Audits"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "Sweeping mandatory arbitration for \"any and all claims by third parties (including Employers) ... concerning the assessment ... of withdrawal liability,\" with a definite forum and rules; the final sentence preserves the Fund's court action. \"Third parties (including Employers)\" is slightly odd since Employers are parties to the Trust arrangement.",
+      "reasoning_cat2": "Section 12.2 chooses New York law subject to ERISA preemption and this clause says arbitrations are governed by New York law \"to the extent not superceded by ERISA,\" which is consistent; Section 9.6's court-action right is expressly preserved.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9.10 Arbitration of Withdrawal Liability Disputes"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "Condition (a) — the amendment must not be \"inconsistent with the purposes for which the Fund was established\" — imports Section 2.2's open \"related benefits\" purpose as a limit on amendment power, an inherently contestable standard. The rest is definite.",
+      "reasoning_cat2": "Condition (c) barring \"unequal voting power\" between Employer and Union Trustees interacts with Section 3.1's 2-3 composition, reconciled only through Section 6.4's unit-voting; Section 10.2 adds a further limit.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10.1 Amendment"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "Definite prohibition with a single express exception cross-referenced to Section 10.3.",
+      "reasoning_cat2": "Section 4.4 permits returning mistaken or non-deductible contributions to an Employer, yet 10.2 excepts only Section 10.3 — a direct textual conflict between the two return-of-contribution provisions.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.48,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10.2 Limitation of Amendments"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "Three termination triggers stated definitely, with a clear exclusive-benefit constraint on distribution of surplus; \"distribute or apply any remaining surplus in a manner consistent, in their opinion, with this Agreement\" leaves the method to Board opinion but the constraint is express.",
+      "reasoning_cat2": "Section 10.2 excepts Section 10.3 from the no-diversion rule, yet 10.3(b) itself says no part of the corpus shall revert to any Employer — so the excepted provision creates no actual exception, an internal oddity.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10.3 Termination"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "Definite recordkeeping duties with a clear inspection right and annual audit requirement.",
+      "reasoning_cat2": "Consistent with Sections 7.1(g) and 11.2.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.1 Board to Maintain Trust Accounts"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "\"such commercially acceptable valuation method or methods determined by the Board\" leaves the method to Board choice, a soft but conventional standard bounded by prudence and good faith.",
+      "reasoning_cat2": "Consistent with Sections 5.7 and 11.1(c).",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.2 Valuation"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "\"the New York City metropolitan area\" is a geographically imprecise boundary, and the clause then deems the Board \"located at that address\" though no address is stated in the section. Both are genuine looseness in short compass.",
+      "reasoning_cat2": "Section 12.8 supplies actual addresses in Long Island City and Section 12.5 designates the Board as process agent, so the practical location is fixed elsewhere.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.1 Situs"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "Standard New York choice-of-law clause with an express ERISA-preemption qualifier; definite.",
+      "reasoning_cat2": "Consistent with Section 9.10's New York law and venue provisions.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.2 Choice of Law"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "Boilerplate counterparts clause; definite.",
+      "reasoning_cat2": "Consistent with Section 3.2's reference to signing \"any counterpart or copy hereof.\"",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.3 Counterparts"
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "Definite interpretive rules on headings, number and gender.",
+      "reasoning_cat2": "Useful in reading Section 3.8's heading against its content, and otherwise consistent with the whole.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.4 Titles; Plurals; and Gender"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "One sentence designating the Board as process agent; definite though it gives no address.",
+      "reasoning_cat2": "Section 12.1 deems the Board located at the principal office and 12.8 gives the address, filling the gap.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.5 Service of Process"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "Definite third-party protection; the conclusive effect attaches specifically to instruments \"executed by the Chairman of the Trustees.\"",
+      "reasoning_cat2": "Section 5.15 requires both Chairman and Secretary (or a resolution-authorised equal group) to execute documents on the Board's behalf, so 12.6's single-Chairman conclusiveness is in tension with the execution requirement.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.6 Validity of Trustees' Accounts and Instruments"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "Definite incorporation of Plan definitions with an express carve-out.",
+      "reasoning_cat2": "Potentially circular with Section 1.20's definition of Plan by reference to this Agreement, but Article 1's own definitions expressly govern where provided.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.7 Definitions"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "Mechanical notice provision listing addresses; the excerpt is cut off mid-sentence on the deemed-receipt rule, and deeming notice given \"when deposited by first-class mail\" is definite if harsh. Nothing genuinely ambiguous.",
+      "reasoning_cat2": "Superseded in part by Amendment No. 1 and Amendment No. 3, which update addresses and rename the Fund Administrator as Fund Director — a naming drift against Section 1.1's \"Administrator.\"",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.8 Notices"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "The excerpt begins mid-sentence (\"uhé Board) or any person claiming by or through them\"), so the class of persons denied any interest is not visible in the quoted text. The substance — no entitlement until the Board determines eligibility — is otherwise clear.",
+      "reasoning_cat2": "Section 4.1(a) and Section 5.2 obligate the Board to pay benefits per the Plan, and Section 5.14 makes Board determinations final, which together support rather than contradict this clause.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.15 No Interest in Fund Property"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "Definite no-employment-right and no-equity clause, with an express \"except as set forth in the Plan\" carve-out.",
+      "reasoning_cat2": "Consistent with Section 12.15 and with Section 4.5's anti-alienation rule.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.16 Trust Grants No Interest to Employees"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "Definite perpetual duration subject to the amendment and termination provisions.",
+      "reasoning_cat2": "Accurately cross-references Article 10, which contains Sections 10.1-10.3.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12.17 Duration of Agreement"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "A short substitution amendment; it retitles 12.8(b) from \"Fund Administrator\" to \"Fund Director\" without explanation, and recites that \"the Plan is hereby amended\" when it in fact amends the Trust Agreement. That recital/operation mismatch is a mechanical slip.",
+      "reasoning_cat2": "Section 1.1 defines \"Administrator\" and Section 7.1 assigns duties to the Administrator, so introducing \"Fund Director\" creates a small terminological disconnect with the defined term.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 1 - Section 12.8(b) replacement"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "The amended text adds \"or such other interest rate that the Trustees deem appropriate given [the] circumstance,\" replacing a fixed rate with an unbounded discretionary alternative — the outer limit of that discretion is undefined. The OCR is also badly degraded at the operative words.",
+      "reasoning_cat2": "Sections 9.4(a) and 9.7(b)-(c) both compute amounts \"in accordance with the method set forth in Section 9.5,\" which now yields either 18% or whatever the Trustees choose — leaving those cross-references indeterminate.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 2 - Section 9.5(b) replacement"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "A definite address substitution; the Association's address is truncated in the OCR but the operation is mechanical. It again uses \"Fund Director\" rather than the defined \"Administrator.\"",
+      "reasoning_cat2": "Consistent with Amendment No. 1 which it supersedes; the Director/Administrator label mismatch with Section 1.1 persists but is immaterial to notice.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 3 - Section 12.8(a)-(d) replacement"
+    },
+    {
+      "clause_id": "neg115",
+      "reasoning_cat1": "A full replacement of the Preamble naming four current Trustees; definite, though the stray \"2. the following:\" line before the quoted text is an artifact.",
+      "reasoning_cat2": "Coordinates with amended Sections 3.1 and 3.3 naming the same four individuals, so it is internally consistent as amended.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 4, 1. Preamble amended"
+    },
+    {
+      "clause_id": "neg116",
+      "reasoning_cat1": "The final sentence reads \"The appointment of Trustees shall be selected by the provisions of Section 3.4\" — \"selected\" is plainly an error for \"governed,\" a grammatical mistake in the operative sentence.",
+      "reasoning_cat2": "Moving to a 2-2 board makes Section 6.3's quorum of two from each side require all four Trustees and makes Section 6.2(b)'s \"any four Trustees\" a unanimity requirement for calling special meetings — an incoherence introduced by this amendment.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 4, 2. Section 3.1 Composition of Trustees"
+    },
+    {
+      "clause_id": "neg117",
+      "reasoning_cat1": "A list of four named Trustees; nothing to construe beyond identification.",
+      "reasoning_cat2": "Consistent with amended Sections 3.1 and the amended Preamble.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 4, 3. Section 3.3 Selection of Trustees"
+    },
+    {
+      "clause_id": "neg118",
+      "reasoning_cat1": "Still titled \"Removal of Union Trustees\" while the text prescribes who holds the office and addresses removal only by operation of law; the automatic-office rule leaves no route for the Union to remove a Trustee who remains in union office.",
+      "reasoning_cat2": "Section 3.10 gives the principal officer power to designate a successor \"in which case a Successor Union Trustee shall be elected from the full-time officers of the Union,\" which does not sit easily with the amended 3.8's automatic incumbency rule.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Amendment No. 4, 4. Section 3.8 Removal of Union Trustees"
+    }
+  ]
+}

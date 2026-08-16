@@ -1,0 +1,424 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause is odd in that it makes the \"entire agreement\" consist not only of this instrument but of \"the other agreements and instruments executed and delivered in connection with the issuance of the Series 2004 Auction Bonds,\" an open-ended set, and limits everything to matters \"relating to the subject matter hereof\" — both phrases have contestable boundaries. A party could argue offering documents or oral representations fall inside or outside that undefined universe, which is exactly the kind of scope fight courts resolve.",
+      "reasoning_cat2": "Read against Section 5.10 (no implied duties) and Section 2.1(b) (wholesale incorporation of the Auction and Settlement Procedures from the Indenture), the clause both absorbs external documents and disclaims outside understandings, and against Section 5.5's third-party-beneficiary structure it is unclear whose representations are excluded. That creates a real, though not flagrant, tension across the instrument.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.33,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 5.4 — Entire Agreement"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"[T]he United States District Court in the County of New York\" names a court that does not exist as such (the federal district court sitting in New York County is the Southern District), a mechanical designation error, and the clause never says whether \"shall be brought\" is exclusive or merely consensual as to venue. The added \"or any of the transactions contemplated hereby\" further blurs how far the forum and jury waiver reach.",
+      "reasoning_cat2": "Nothing else in the agreement addresses forum, though the clause's reach to \"transactions contemplated hereby\" sits awkwardly with Section 5.5, which limits enforcement rights to the Auction Agent, Bond Insurer and BD; no direct contradiction appears.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.14,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 5.9 — Governing Law; Jurisdiction; Waiver of Trial by Jury"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The recital states precise dollar amounts and series labels, and the four figures total the $147,485,000 shown on the cover, so the wording is definite. The only slack is the phrase \"being sometimes referred to together herein as the 'Series 2004 Auction Bonds,'\" which loosely equates two labels.",
+      "reasoning_cat2": "Section 1.3(f) treats \"Series 2004 Bonds\" and \"Series 2004 Auction Bonds\" as distinct but interchangeable references, which is consistent with rather than contrary to this recital's loose equation.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (Series 2004 Bonds)"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "\"[C]ertain duties set forth herein\" is vague on its face, but as a recital it does nothing more than point to the operative sections that actually specify duties.",
+      "reasoning_cat2": "Sections 2.3 and 2.4 spell out BD's duties concretely, so the recital adds nothing that could contradict the operative text.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (BD duties)"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The recital is doubly qualified (\"except as provided therein\" / \"except as otherwise provided therein\") but merely reports what the Indenture says about the Auction Rate; no term needs construing here.",
+      "reasoning_cat2": "It aligns with Section 2.1(a), which makes the Auction Procedures the mechanism for determining Auction Rates, so recital and operative text point the same way.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (Indenture Auction Rate)"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The wording is a definite factual statement of appointment and direction, with only an OCR-level typographical slip (\"bas\") that changes nothing.",
+      "reasoning_cat2": "It cross-refers to Section 2.6(a) of the separate Auction Agreement, which is not before us; within this instrument it is consistent with the preamble's description of the Auction Agent's authority.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (Appointment of Auction Agent)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A one-line recital that the Auction Procedures require one or more Broker-Dealers; the language is plain and imposes nothing.",
+      "reasoning_cat2": "It matches Section 2.1(c), which contemplates that other Persons may also execute Broker-Dealer Agreements, so there is no friction.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital (Broker-Dealers required)"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The escape hatch \"unless the context clearly requires otherwise\" is inherently elastic, and equating \"purchase,\" \"sale\" and \"holding\" with beneficial ownership interests could matter where record versus beneficial ownership diverges. Still, this is boilerplate interpretive drafting rather than a live ambiguity.",
+      "reasoning_cat2": "Checked against Section 2.6(a)'s references to Agent Members delivering Bonds, which presupposes book-entry beneficial interests; the definitional gloss fits the settlement mechanics.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.3(e) References to purchase, sale or holding"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The sentence deems any reference to \"Bonds or Auction Bonds\" to cover each series of both defined sets, which is circular but functional; the second sentence's \"apply separately to each series\" is clear.",
+      "reasoning_cat2": "It slightly collides with the first recital, which says the four series are \"sometimes referred to together\" as the Series 2004 Auction Bonds, leaving whether the two defined terms are identical or nested unresolved.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.3(f) References to Bonds"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A standard due-authorization and enforceability warranty in fixed, well-worn language with no elastic term.",
+      "reasoning_cat2": "Nothing elsewhere qualifies BD's capacity representation; it is consistent with the instrument as a whole.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.4 Warranties of BD"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The provision defines \"Auction\" mechanically and ties the procedures to periods after the Initial Periods; the terms are drawn from the Indenture and definite in use.",
+      "reasoning_cat2": "It is coherent with Section 2.3(a)'s schedule and the incorporation in Section 2.1(b).",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1(a) Purpose of Auction Procedures"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Blanket incorporation \"in their entirety\" is unambiguous in intent, though it imports an external document whose content is not reproduced here.",
+      "reasoning_cat2": "Because the imported Auction and Settlement Procedures govern much of Sections 2.3–2.6, there is some latent risk of conflict between imported text and the express schedule, but no specific contradiction is visible in this instrument.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1(b) Incorporation by reference"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"[A]ssumes the obligations of, and limitations and restrictions placed upon, a Broker-Dealer\" is somewhat open-ended, and \"handle customer orders in accordance with its respective duties under applicable securities laws and rules\" imports an undefined external standard. These are general formulations but conventional ones.",
+      "reasoning_cat2": "It relies on the \"Broker-Dealer\" definition \"contained in the Indenture,\" which Section 2.5(b) later mislocates as contained \"in the Series 2004 Auction Bonds\" — a small internal inconsistency of reference.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1(c) BD agrees to act as Broker-Dealer"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The permission, the Company's power to prohibit own-account Bids, and the affiliate carve-out are each stated in definite terms with the Hold/Sell Order proviso preserved throughout.",
+      "reasoning_cat2": "Read with Section 2.3(b)'s stated purpose of \"achieving the lowest possible interest rate,\" own-account bidding by BD sits in some tension with that objective, though the agreement expressly sanctions it.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.1(d) Participation for own accounts"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A fixed deadline and a defined deliverable; \"other electronic communication acceptable to the parties\" is the only soft phrase and is minor.",
+      "reasoning_cat2": "It is mirrored exactly in the Section 2.3(a) timetable's 9:30 a.m. line, so it is consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(a) Advice of All Hold Rate"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "\"[C]ustomers that it believes are Existing Owners\" softens the obligation, and the confidentiality carve-outs are enumerated rather than open-ended, so the reach is reasonably clear. \"[A]s otherwise required by law\" plus a broader reservation of right to disclose creates mild overlap.",
+      "reasoning_cat2": "Nothing else in the agreement addresses confidentiality of owner lists; the disclosure permissions align with the Auction Agent's general immunities in Section 3.1(d)(ii).",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(b) List of Existing Owners"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The sentence is awkwardly punctuated — \"as of the opening of business on such date\" could attach to the change or to the notice — but the operative deadline is definite.",
+      "reasoning_cat2": "No other provision addresses notice of principal-amount changes, so it stands alone without conflict.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.2(c) Notice of change in principal amount"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The BMA sentence shifts the Submission Deadline to 11:30 a.m. \"instead of 1:00 p.m.\" while the table separately sets an 11:00 a.m. deadline for daily Auction Periods and an 11:30 a.m. determination time, so the interaction of the holiday rule with daily periods is not spelled out. \"[T]hen currently accepted market practices for similar auctions\" and \"unless the Auction Agent is instructed otherwise\" are also elastic.",
+      "reasoning_cat2": "Read with Section 2.4(b)'s notice duty and Section 2.3(d)'s 3:00 p.m. cut-off, a shortened BMA day leaves the sequencing of deadlines partly unreconciled within the instrument.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3(a) Auction schedule"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The parenthetical \"and thereby achieving the lowest possible interest rate on the Series 2004 Auction Bonds\" states a purpose that a party could press as a substantive standard, and \"other relevant documents\" is an undefined catch-all. Both are namable soft terms in an otherwise procedural clause.",
+      "reasoning_cat2": "That purpose language sits uneasily with Section 2.1(d), which permits BD to bid in Auctions for its own account, and with Section 3.1(a)'s disclaimer of duties owed to owners.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3(b) BD to contact Potential Owners"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The no-netting requirement and the form requirement are stated definitely; \"in such other form as may be reasonably acceptable to the Auction Agent\" is a minor discretionary standard.",
+      "reasoning_cat2": "It is consistent with the Exhibit B form reference and with the Auction Procedures incorporated by Section 2.1(b).",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3(c) Separate Orders"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "\"[S]ubstantially in the form\" and the discretionary refusal of late notices are conventional; the two categories of notice are precisely delimited.",
+      "reasoning_cat2": "Section 2.6(a) expressly hinges the effect of any departure from Auction results on notice \"in accordance with the terms of Section 2.3(d),\" and the two dovetail.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.3(d) Notices of transfers and failures"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"As soon as reasonably practicable\" and \"if so requested\" are soft but ordinary timing qualifiers in a notice obligation.",
+      "reasoning_cat2": "Consistent with the Section 2.3(a) timetable, which cross-refers to this subsection for notice of results.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(a) Notice of Auction results"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "A one-sentence notice duty; it omits any deadline, but Section 2.3(a) supplies one, so the wording is not itself uncertain.",
+      "reasoning_cat2": "It duplicates the notice requirement already stated in Section 2.3(a) without contradicting it.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(b) Notice of change in Auction schedule"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "\"[T]ake such other action as is required of BD pursuant to the Settlement Procedures\" is an open-ended catch-all, though its content is fixed by an incorporated external document.",
+      "reasoning_cat2": "Its reach depends entirely on the Settlement Procedures imported by Section 2.1(b), which are not reproduced here; no visible conflict within this instrument.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(c) BD notices to Owners"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "The duty is defined wholly by reference to Section 2 of the Auction Agreement, which makes it definite as to this instrument even if content lies elsewhere.",
+      "reasoning_cat2": "Consistent with Section 3.1(b), which limits the Auction Agent to duties expressly set forth or incorporated.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.4(d) Delivery of notices and certificates"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\".25 of 1% per annum as calculated below\" is precise, but the adjustment sentence — \"may be adjusted from time to time with the approval of the Company upon a written request of the Broker-Dealer\" — leaves unclear whether the Company may withhold approval at will or must act reasonably, and whether adjustment can be downward.",
+      "reasoning_cat2": "Read with Section 5.6(a), which requires a signed written amendment consented to by the Issuer and Bond Insurer, a fee-rate change by mere Company approval is arguably inconsistent with the amendment mechanism.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.5(a) Broker-Dealer Fee Rate"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "The formula is long but arithmetically specified; the notable slip is \"the definition of 'Broker-Dealer' contained in the Series 2004 Auction Bonds,\" which should read \"contained in the Indenture,\" and \"conclusive absent manifest error\" leaves \"manifest error\" undefined.",
+      "reasoning_cat2": "That mislocated definition contradicts Section 2.1(c), which places the \"Broker-Dealer\" definition in the Indenture, a small but real internal inconsistency.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "A single permissive sentence granting the Bond Insurer a right to pay; \"right\" not obligation is clear, though the consequences of such payment (subrogation, reimbursement) are unstated.",
+      "reasoning_cat2": "\"Bond Insurer\" is nowhere defined in this instrument even though Sections 5.5 and 5.6(a) give it substantive rights, which leaves a gap when the document is read as a whole.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.5 Bond Insurer right to pay fee"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "BD's obligation to \"promptly deliver such funds\" when a customer fails to pay is a definite, if onerous, undertaking, and the non-release and notification sentences are clear.",
+      "reasoning_cat2": "It expressly harmonises with Section 2.3(d) on notice and with Section 2.6(b)'s allocation of non-responsibility to the Auction Agent, Trustee, Company and Issuer.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.6(a) Settlement failures"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A flat disclaimer naming four parties and two failure scenarios; the trailing \"or otherwise\" is a mild catch-all on an already broad exclusion.",
+      "reasoning_cat2": "It complements Section 2.6(a)'s placement of settlement risk on BD and Section 3.1's immunities, with no contradiction.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.6(b) No responsibility for delivery failures"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The disclaimer that the Auction Agent is \"solely as agent of the Trustee\" and owes no duties to any other Person is categorical and unambiguous.",
+      "reasoning_cat2": "There is friction of degree with Section 2.5(b), where the Auction Agent holds the Broker-Dealer Fee \"on behalf of the Broker-Dealer\" — a custodial role sitting against a no-duties-to-others disclaimer.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1(a) Auction Agent solely agent of Trustee"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "A conventional express-duties-only clause, cross-referenced to Section 2.1(b); the wording admits little play.",
+      "reasoning_cat2": "It is consistent with Sections 3.1(a) and 5.10, which similarly bar implied obligations.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1(b) Only express duties"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "\"[N]egligence or misconduct\" and \"error of judgment made in good faith\" are standard but overlapping standards, and the clause refers to \"Section 3.2(d)\" for acting through agents when the agency-related provision appearing here is 3.1(d). That mis-citation is a mechanical defect.",
+      "reasoning_cat2": "The cross-reference cannot be matched to any Section 3.2(d) in the instrument as presented, which leaves an unreconciled internal pointer.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1(c) Liability standard"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Three enumerated immunities, each closed-ended, with \"indemnity satisfactory to the Auction Agent\" as the only discretionary term — a familiar and workable standard.",
+      "reasoning_cat2": "It coheres with Sections 3.1(b), (c) and 2.2(b)(c), which also condition action on satisfactory indemnity.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1(d) Auction Agent shall not be"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "\"[C]ircumstances beyond its reasonable control, including without limitation\" followed by an enumerated list of physical and civil events raises the classic question whether the catch-all reaches dissimilar events (e.g., market-wide auction failures), and the list is truncated mid-sentence in the text.",
+      "reasoning_cat2": "It fits the Auction Agent's other exculpations in Section 3.1(c) and (d) rather than contradicting them.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.1(e) Force majeure"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "The effectiveness rules are precise (telecopy on transmission; otherwise on delivery), though \"notice to the other party\" is singular in a three-party agreement and the BD and Auction Agent notice blocks are missing from the text as reproduced.",
+      "reasoning_cat2": "The Issuer's notice address names \"Hospital Services Corporation,\" whereas the recitals define the \"Issuer\" as the New Mexico Hospital Equipment Loan Council — a direct naming inconsistency within the instrument.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.35,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.3 Notices (addresses and effectiveness)"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "The clause is internally awkward: it lists only BD, the Bond Insurer and the Auction Agent as beneficiaries and successors, then excepts \"the rights expressly granted to the Issuer herein,\" leaving the Company — a signatory — outside the class able to enforce.",
+      "reasoning_cat2": "That collides with Section 2.5, which imposes payment obligations on the Company and gives it approval rights, and with Section 2.1(d)'s Company prohibition power; the Company's enforcement standing is left unreconciled.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.5 Benefits; Successors and Assigns"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "The amendment formality is stated in absolute terms with a defined list of required signatures and consents; no elastic language.",
+      "reasoning_cat2": "It sits against Section 2.5(a), which lets the Broker-Dealer Fee Rate be adjusted on Company approval alone without Issuer or Bond Insurer consent — a potential inconsistency in required formalities.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.6(a) Amendment"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "A standard non-waiver sentence limited to \"subsequent breach,\" precise in scope.",
+      "reasoning_cat2": "Nothing elsewhere addresses waiver except Section 5.6(a)'s writing requirement, with which it is consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.6(b) Waiver"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Ordinary severability wording; \"clause, provision or section\" is inclusive and the effect is definite.",
+      "reasoning_cat2": "No other provision addresses invalidity, so there is nothing to reconcile.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.7 Severability"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "A counterparts clause with no operative uncertainty.",
+      "reasoning_cat2": "Consistent with the single execution page and the rest of the instrument.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.8 Execution in Counterparts"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "The clause is definite in barring implied duties on the Company, though it reaches beyond this agreement to the Indenture and Auction Agreement, which the Company did not sign in this document.",
+      "reasoning_cat2": "Read with Section 2.5(b), which expressly requires the Company to pay the Broker-Dealer Fee, the disclaimer is compatible because those duties are expressly set forth.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.10 No Implied Duties"
+    }
+  ]
+}

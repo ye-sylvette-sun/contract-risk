@@ -1,0 +1,244 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The identifying language is definite as to parties and capacities, but the execution date is left as \"July KX, 2005\" — a blank/garbled date that matters because the Restricted Period runs from \"the date of this Agreement.\" That mechanical gap is the only construable feature.",
+      "reasoning_cat2": "It fits the rest of the instrument, though the missing date interacts with Section 1(D)'s three-year Restricted Period and the six/twelve-month look-backs in 1(C); no contradiction is created, only an evidentiary gap.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The recital is an ungrammatical fragment — \"Pursuant to the terms and conditions of the Stock Purchase Agreement ... among Buyer and the Sellers.\" followed by a separate sentence — and the date is again blank (\"July ¥ _\"); it also says Buyer purchases all outstanding shares yet only those \"owned by the Shareholder.\"",
+      "reasoning_cat2": "Read against Background C and Section 5(A)'s entire-agreement clause, the recital's reliance on the Stock Purchase Agreement is coherent, but the \"all of the issued and outstanding shares\" versus \"owned by the Shareholder\" wobble is a minor recital-level inconsistency.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Background A"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A simple statement of inducement with no ambiguous term; \"unwilling to consummate\" is plain.",
+      "reasoning_cat2": "It aligns with Section 2(A)'s \"To induce the Buyer\" language and with the Buyer's third-party beneficiary status in 5(A); nothing conflicts.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Background B"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The clause is mechanically clear but imports an external document's definitions, so terms like \"Acquired Companies\" used in 1(C) have no meaning within these four corners.",
+      "reasoning_cat2": "It sits in some tension with Section 5(A), which declares this Agreement the entire agreement superseding all prior agreements, raising the question whether SPA definitions are truly incorporated.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Background C"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The long enumerated list of services ends with \"data conversion of health insurance claims for hospitals and physicians in the United States,\" leaving it uncertain whether the U.S. qualifier and the \"health insurance claims\" object attach to every listed activity or only the last ones; \"consulting\" and \"audits\" are also unbounded.",
+      "reasoning_cat2": "Its geographic tail must be reconciled with the separate \"Restricted Area\" definition in 1(E) and with Section 2(A)(1), which forbids competing \"in the Restricted Area\" — a claimed overlap or redundancy a court could have to sort out.",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.A. Definition of “Business”"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The definition is circular — \"Company\" is defined to include any \"subsidiary or affiliate of the Company\" — and sweeps in any future successor by asset purchase, so the identity of the protected entity is not fixed by the text.",
+      "reasoning_cat2": "It pulls against Section 5(F), which bars assignment without consent except to an affiliate, raising whether an asset-purchase successor automatically becomes the \"Company\" entitled to enforce Section 2; that is a genuine internal tension.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.B. Definition of “Company”"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "It turns on \"actively sought,\" \"material contact\" and the undefined \"Acquired Companies,\" and clause (a) has no time limit at all while (b) and (c) do — vague and internally uneven.",
+      "reasoning_cat2": "The undefined \"Acquired Companies\" depends on Background C's incorporation of Stock Purchase Agreement definitions, which Section 5(A)'s entire-agreement clause arguably displaces.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.C. Definition of “Customer”"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A single fixed three-year period measured from the Agreement's date; the only softness is the blank execution date in the preamble, not the definition itself.",
+      "reasoning_cat2": "Consistent with Section 2(A) and with Section 3(A), which deliberately extends confidentiality beyond the Restricted Period; no conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.D. Definition of “Restricted Period”"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"United States, its territories and protectorates\" is definite as a place, but Section 2(A)(1)'s \"in the Restricted Area\" leaves open whether conduct performed abroad for U.S. customers is caught — a live question given the Shareholder's Indian address.",
+      "reasoning_cat2": "Read with 1(A)'s reference to hospitals and physicians \"in the United States,\" the two geographic limits may be read as duplicative or as pointing in different directions on offshore activity.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1.E. Definition of “Restricted Area”"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The covenant hinges on \"directly or indirectly,\" \"any activity which is in competition with the Business,\" and an \"or otherwise\" catch-all following an enumerated list of capacities — a textbook general-versus-specific scope problem.",
+      "reasoning_cat2": "Its reach depends entirely on the \"Business,\" \"Customer,\" \"Company\" and \"Restricted Area\" definitions in Section 1, and the extension of protection to \"Buyer or any of their affiliates\" sits alongside 5(A)'s limited third-party beneficiary grant.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The reformation/blue-pencil language is verbose but standard; it contains stray OCR/pagination text and a doubled period, which do not change meaning.",
+      "reasoning_cat2": "Section 5(H) expressly makes itself \"Subject to the provisions of Section 2(B),\" so the two severability regimes are harmonised rather than in conflict.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.B. Reasonableness and severability of restrictions"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Definite remedy language; \"the foregoing covenant\" is a mild antecedent question (Section 2(A) as a whole versus the noncompete alone), but the meaning is plain enough.",
+      "reasoning_cat2": "It parallels Section 3(B) for confidentiality and does not contradict any other remedy or forum provision; the \"notwithstanding any other provision\" opener is not deployed against anything specific.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2.C. Injunctive relief for breach of covenant"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"Confidential Information\" is defined by an open-ended \"shall include ... including, but not limited to ... and the like\" list, and the boundary term \"not generally known in the business community\" is vague — both classic construction hooks.",
+      "reasoning_cat2": "The perpetual duration (\"at any time, either during or subsequent to the Restricted Period\") coexists with 1(D)'s fixed three-year period and 3(B)'s survival clause, which is deliberate rather than contradictory.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.A. Confidentiality"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Plain remedy and survival language with no ambiguous operative term.",
+      "reasoning_cat2": "It speaks of surviving \"the termination of this Agreement\" although the instrument contains no term or termination provision at all — a small whole-instrument gap rather than a squarely conflicting clause.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3.B. Equitable remedies; survival"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "\"Disparage, criticize or make statements to the detriment of\" is broad and vague, and \"While this Agreement is in effect and indefinitely thereafter\" leaves the duration measured against a period the document never fixes.",
+      "reasoning_cat2": "There is no term or termination clause anywhere to give \"while this Agreement is in effect\" content, and the exception for \"any dispute resolution proceeding\" points to procedures this Agreement does not create.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. No Disparagement"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The wording is standard and the third-party beneficiary carve-out for Buyer is explicit; no term is genuinely two-sided on its face.",
+      "reasoning_cat2": "It is in tension with Background C, which imports definitions from the Stock Purchase Agreement, and with Section 2's protection of \"affiliates\" who are given no rights here — a plausible whole-instrument friction.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.A. Entire Agreement; Third Party Beneficiaries"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "A conventional anti-waiver clause with definite scope and no catch-all requiring construction.",
+      "reasoning_cat2": "Nothing elsewhere in the Agreement creates a waiver mechanism that this would contradict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.B. No Waiver"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "One-sentence written-amendment requirement; unambiguous.",
+      "reasoning_cat2": "Consistent with 5(A)'s entire-agreement clause and with the rest of the instrument.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.C. Amendment"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "A bare acknowledgment of opportunity to consult counsel; nothing to construe.",
+      "reasoning_cat2": "It does not interact operatively with any other provision, though it would bear on any contra proferentem argument about Section 2.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.D. Representation"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"May be brought\" against a designated forum leaves the familiar permissive-versus-exclusive question, the same mandatory/permissive split courts have had to resolve elsewhere.",
+      "reasoning_cat2": "No other clause designates a different forum or dispute mechanism, so the provision stands alone; only Section 4's reference to \"dispute resolution proceeding\" glances at it.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.E. Governing Law; Jurisdiction"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The clause both binds \"successors and assigns\" and bars assignment without consent except to an \"affiliate,\" an undefined term here, leaving uncertain who may enforce after a corporate reorganisation.",
+      "reasoning_cat2": "It pulls against the definition of \"Company\" in 1(B), which automatically includes any successor by purchase of substantially all assets, merger or consolidation without any consent requirement — a specific, identifiable conflict about who holds the covenant.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.F. Successors and Assigns"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Routine counterparts and effectiveness language; definite.",
+      "reasoning_cat2": "Consistent with the signature pages and with 5(C); no friction found.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.G. Counterparts"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "The closing proviso — deletion excused if it would \"cause completion of the transactions contemplated hereby to be unreasonable\" — is opaque, since this Agreement contemplates no transactions of its own; \"Wlegality\" is an obvious typo.",
+      "reasoning_cat2": "It is expressly subordinated to Section 2(B), yet the two prescribe different consequences (deletion versus jurisdiction-limited narrowing), and its reference to \"transactions contemplated hereby\" only makes sense as a reference to the Stock Purchase Agreement.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.H. Partial Invalidity"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "The mechanics are detailed and the deemed-delivery rules are stated, though telephone and facsimile lines for the Company are left blank and the section is mislettered relative to the preceding subsections.",
+      "reasoning_cat2": "No other clause prescribes a different notice method, and the Agreement contains no termination notice requirement that this would have to serve.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5.J. Notices"
+    }
+  ]
+}

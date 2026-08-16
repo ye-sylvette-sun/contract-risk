@@ -1,0 +1,334 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The definition piles a sweeping catch-all — \"the actions of you, us, Lender, or third parties\" and disputes \"arising from or relating to\" any current or prior agreement — on top of enumerated categories, leaving the outer reach of \"Claim\" (e.g., tort or statutory claims by non-signatory third parties, or conduct like submitting criminal complaints) genuinely uncertain. The carve-outs for opt-out loans and small claims court add further scope questions, so a named general-vs-specific tension is present.",
+      "reasoning_cat2": "Read against the \"Waiver of Right to Trial by Jury\" clause, which contemplates \"litigation arising out of or related to this Agreement,\" and against the Opting Out clause limiting exclusion to \"disputes ... arising under this Agreement,\" the breadth of \"Claim\" (including prior agreements and third-party actions) sits awkwardly with the rest of the instrument. That mismatch in scope language gives a real, though not certain, whole-instrument argument.",
+      "prob_cat1": 0.64,
+      "prob_cat2": 0.44,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Definition of Claim — Arbitration Agreement and Limitation on Class Participation"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "The right to demand arbitration \"at any time, even if the other party has begun a lawsuit,\" bounded only by entry of judgment, invites argument about whether the right can be lost by conduct, and \"reasonably satisfactory to us\" for arbitrator selection is an undefined discretionary standard. Those are namable soft terms in an otherwise mechanical clause.",
+      "reasoning_cat2": "Checked against the Pre-Suit Notice provision and the No Jury Trial and Opting Out clauses; the unlimited-time election sits uneasily with a scheme that assumes an early choice between court and arbitration, but nothing squarely contradicts it. The tension is arguable rather than a clear conflict.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.38,
+      "gold": "risky_cat2",
+      "gold_subtype": "2.2",
+      "clause_name": "Starting an Arbitration/Costs — election to arbitrate any Claim"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "Straight definitional text identifying the customer, the CAB and the named lender; no term carries competing meanings. Wording is definite.",
+      "reasoning_cat2": "Consistent with the arbitration section's expanded \"we\"/\"us\" (adding officers, agents, affiliates), which is expressly stated to apply only \"for purposes of this arbitration agreement.\" No conflict found.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definitions of Parties"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The services list is enumerated and hedged with \"attempt to\" and \"where available,\" and \"estimated period ... shall be one day\" mixes estimate with mandatory language, but each item is reasonably concrete. Mild vagueness only.",
+      "reasoning_cat2": "Compared with the Cost and Payment Terms and LOC provisions, which assume the same fee-for-services structure; the disclaimer \"we are not a lender or fiduciary\" coexists with the LOC obligations without contradiction. Consistent with the whole.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Description of Our Services"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A one-sentence disclosure stating the CAB fee is not interest but is included in the finance charge; the terms are statutory and definite. Little to construe.",
+      "reasoning_cat2": "Checked against Cost and Payment Terms, which likewise treats the CAB fee as a component of the Finance Charge; the characterisations align. No inconsistency.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Disclosure of Fee as Finance Charge"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The text is riddled with unfilled blanks and OCR-level errors (\"°%\", \"Joan payments\", \"ofS\"), and the rebate language shifts between \"partial rebate,\" \"refund of part ... on a prorated daily basis for the final period,\" and \"finance charge may be reduced,\" which could be read differently. The fee-earned-in-advance versus prepayment-rebate pairing is a namable tension.",
+      "reasoning_cat2": "Against the Disclosure of Fee as Finance Charge and the Notice of Cancellation (return of all payments within 10 days), the payment-application and rebate mechanics broadly cohere. No specific contradiction identified.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Cost and Payment Terms"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Amounts, triggers and percentages are stated with specificity (greater of 5% or $7.50; $30 or state-allowed fee), though \"costs of collection\" is a mild catch-all after enumerated fees. Largely definite.",
+      "reasoning_cat2": "Overlaps with Collection Expenses (reasonable attorneys' fees) and the Compliance clause capping charges at lawful amounts; these operate cumulatively rather than in conflict. Consistent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Other Fees and Charges"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The final sentences are visibly corrupted (\"unlgyuful excess,\" \"maximug peepee law,\" a sentence that breaks off at \"amortiz\"), so part of the provision literally does not read as English. That is a mechanical defect affecting meaning, even if the intended sense is guessable from the parallel Compliance clause.",
+      "reasoning_cat2": "The revocation-on-cancellation sentence tracks the Notice of Cancellation forms, and the reimbursement duty matches Other Fees and Charges; the truncated compliance sentence duplicates the Compliance section. No substantive conflict beyond the garbling.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "LOC and Obligation to Reimburse"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"[F]ail to perform your other promises to us\" and the catch-all remedy \"any other right or remedy allowed by law\" are broad, but default triggers and consequences are otherwise stated plainly. Modest general-vs-specific tension.",
+      "reasoning_cat2": "The right to \"seek collection of any check or similar security\" sits alongside Collection Expenses' statement that criminal charges may not be threatened over such a check; read together they are reconcilable but the pairing invites argument. Mostly consistent.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Default"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A conventional enumerated waiver list qualified by \"to the extent permitted by law\"; each waived item is a defined commercial-law concept. Definite enough.",
+      "reasoning_cat2": "The phrase \"we are not required to file suit or arbitrate\" harmonises with the permissive election in the arbitration section rather than contradicting it. No conflict located.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notices and Waivers"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The waiver is expressed clearly and expressly disclaims any modification of the arbitration agreement; \"to the extent permitted by law\" is boilerplate rather than ambiguous. Wording is definite.",
+      "reasoning_cat2": "It presupposes litigation may occur, which coexists with the arbitration provision only because of the opt-out and small-claims carve-outs in the Definition of Claim; the drafting anticipates this and says so. Low residual tension.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Waiver of Right to Trial by Jury"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Standard savings/usury language with a clear reduction-to-lawful-maximum mechanic; \"amortizing, prorating, allocating and spreading\" is a term of art. Little to construe.",
+      "reasoning_cat2": "Duplicates the truncated savings language in the LOC provision, but the duplication is consistent rather than contradictory. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Compliance"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"[A]ny claim that this agreement or related matter, or any action or inaction by us or Lender, or by any other person, is legally non-compliant\" is a sweeping catch-all whose reach over ordinary statutory claims is uncertain, and \"reasonable opportunity of not less than 60 days\" mixes standards. Namable breadth problem.",
+      "reasoning_cat2": "Checked against the arbitration section, which lets either side commence proceedings on any Claim without mentioning a 60-day precondition; whether the notice requirement is a condition precedent to arbitration as well as suit is unaddressed. That gap creates a moderate relational question.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Pre-Suit Notice Regarding Legal Compliance"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The attorneys'-fee sentence is clear, but \"reasonable\" fees plus \"all costs and disbursements\" is mildly open-ended, and the second sentence is a statutory recitation phrased as a general prohibition on \"a person\" rather than an obligation of a party. That mismatch in drafting register is a real, if small, defect.",
+      "reasoning_cat2": "Read with the Default clause's right to \"seek collection of any check or similar security,\" the no-criminal-charges sentence limits how that right may be exercised; the two are reconcilable but the interface is where a dispute would sit. Modest relational risk.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Collection Expenses"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A single stipulation with no operative discretion; \"for all purposes\" is broad but the sentence does nothing more than support FAA coverage. Definite.",
+      "reasoning_cat2": "Aligns with the Governing Law clause's designation of the FAA for the arbitration agreement. Consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Interstate Commerce"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Two short, plainly asymmetrical sentences; the asymmetry is intentional and unambiguous rather than uncertain in meaning. Little to construe.",
+      "reasoning_cat2": "No other provision addresses transfer or assignment, so nothing to reconcile. Consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Assignment"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Purely informational addresses and phone number; no operative term. Definite.",
+      "reasoning_cat2": "The notice addresses in Pre-Suit Notice, Opting Out (PLS Financial Services) and the Cancellation forms differ slightly in addressee names, but this clause only states the principal place of business. Minor, low-grade inconsistency at most.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Miscellaneous"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "An introductory sentence saying \"You and we agree to arbitrate Claims instead of having them decided in court,\" with \"Claims\" defined immediately below; standing alone it overstates a right that is elective. Slight tension with the operative election language.",
+      "reasoning_cat2": "Compared with Starting an Arbitration (\"Upon the election by either you, us, or Lender\") and the Opting Out clause, the flat \"instead of having them decided in court\" is a simplification rather than a contradiction. Low-moderate relational risk.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Agreement to Arbitrate (introduction)"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "Venue, applicable law, hearing format and cost allocation are each specified; \"such other location as we or Lender may agree\" is loose but subordinate. Mostly definite.",
+      "reasoning_cat2": "The cost-bearing sentence coordinates with the $1000 fee-advance provision earlier in the arbitration section without contradicting it. Consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Arbitration Procedure"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "A short, mechanical provision on confirming an award and deeming its place of rendition; terms are concrete. Definite.",
+      "reasoning_cat2": "Fits the arbitration scheme and the Governing Law clause designating the FAA. No conflict identified.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Entry of Judgment on Award"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The opt-out mechanics (30 days, in writing, identified agreement) are precise, though \"Only those disputes ... arising under this Agreement will be excluded\" narrows the effect in a way that could be read against the broader \"Claim\" definition. Mild scope ambiguity.",
+      "reasoning_cat2": "The Definition of Claim excludes disputes \"arising out of a loan or agreement ... in connection with which you properly exercised an opt-out right,\" and this clause limits exclusion to claims \"arising under this Agreement\"; the two descriptions are not identical in scope. That is a specific, if narrow, mismatch.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Opting Out of Arbitration"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "A plain explanatory statement of the consequence of arbitration; nothing ambiguous. Definite.",
+      "reasoning_cat2": "Sits alongside the separate Waiver of Right to Trial by Jury clause, which waives jury trial even in litigation; the two are cumulative rather than conflicting. Low risk.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "No Jury Trial"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The waiver is stated repeatedly and emphatically with no undefined term; its enforceability is a legal question, not a construction question. Definite wording.",
+      "reasoning_cat2": "Coheres with the Definition of Claim and the requirement that no arbitration organization permitting class actions be selected. No internal inconsistency.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Class Action Limitation"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Standard severability plus a precedence rule over the arbitration organization's code; both are stated crisply. Definite.",
+      "reasoning_cat2": "Checked against the general Entire Agreement severability/reformation clause, which speaks of reforming invalid provisions rather than simply severing; the two savings clauses differ slightly in mechanism. Minor, unlikely to be disputed.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Severability of Arbitration Agreement"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "A short choice-of-law sentence with a clear carve-out; the only oddity is a stray apostrophe in \"(FAA')\". Definite in substance.",
+      "reasoning_cat2": "Consistent with the Interstate Commerce stipulation and the Arbitration Procedure clause's FAA reference. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Governing Law"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "A statutorily mandated cautionary notice with no operative obligation; \"long-term\" and \"short-term\" are impressionistic but nothing turns on them. Low risk.",
+      "reasoning_cat2": "Consistent with the Description of Our Services' statement that the LOC is not open-ended and maturity cannot be extended without refinancing. No inconsistency.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Caution"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Pure contact information for the regulator; no operative content to construe. Definite.",
+      "reasoning_cat2": "Does not interact with the Pre-Suit Notice or arbitration provisions in any operative way. Consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Complaints Notice"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"[R]elating to the subject matter of this Agreement\" is a familiar boundary phrase, and the reformation-if-practicable severability is standard. Little genuine ambiguity.",
+      "reasoning_cat2": "The integration clause coexists with the separate Credit Services Disclosure Statement and Notices of Cancellation referenced in the signature acknowledgments, raising a mild question whether those documents are part of the agreement. That is a real but low-grade whole-instrument point.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Entire Agreement"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "An enumerated set of acknowledgments and warranties, each concrete; \"all necessary spaces completed\" is an odd certification given the blank form but is itself clear in meaning. Low ambiguity.",
+      "reasoning_cat2": "The certification that all spaces are completed sits against a Cost and Payment Terms section left entirely blank in this exemplar, and the \"binding Arbitration Agreement\" language sits against the 30-day opt-out right. Both are noticeable frictions, though the blanks are a form artifact.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Acknowledgments and Certifications by Signing"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"[B]efore midnight of the third day after the date of the transaction\" is a precise deadline. Definite.",
+      "reasoning_cat2": "The attached Notice of Cancellation says \"within three days after the date the contract is signed,\" measuring from signing rather than the transaction date; the two are almost certainly the same event but the wording differs. Small relational point.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notice of Right to Cancel"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "A clear statement of a three-day cancellation right without penalty. Definite.",
+      "reasoning_cat2": "Differs marginally from the main NOTICE clause's \"third day after the date of the transaction\" and from the blank \"not later than midnight on ___\" line, but all point to the same statutory right. Low risk.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notice of Cancellation — Right to Cancel"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "A single obligation with a fixed 10-day period keyed to receipt of the notice; no ambiguous term. Definite.",
+      "reasoning_cat2": "Read with Cost and Payment Terms (CAB fee earned in advance) and the LOC clause (LOC revoked on timely cancellation), the refund duty is coherent. No conflict found.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notice of Cancellation — Return of Payments"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "The instructions and address are specific, but the deadline sentence ends with a blank date (\"not later than midnight on\"), leaving the operative cut-off unstated on the face of the form. That incompleteness is a mechanical defect in the writing.",
+      "reasoning_cat2": "The blank can be filled by reference to the main NOTICE clause's third-day rule, so the instrument as a whole supplies the answer. Low relational risk.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notice of Cancellation — How to Cancel"
+    }
+  ]
+}

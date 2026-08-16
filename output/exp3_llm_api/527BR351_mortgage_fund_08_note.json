@@ -1,0 +1,1864 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "Standard confidentiality legend; the OCR typo \"THE MORTGAGE FUND LEC\" is a scrivener's slip but the entity is obvious from the rest of the document. No genuinely ambiguous operative term.",
+      "reasoning_cat2": "Consistent with the separate CONFIDENTIAL/TRADE SECRET legend, which restates the same prohibition with an advisor carve-out; the two are cumulative rather than contradictory.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confidentiality Legend — Reproduction Prohibited"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "Boilerplate non-reliance and no-recommendation language with definite content; nothing to construe.",
+      "reasoning_cat2": "It sits comfortably with the memorandum's other disclaimers and the statement that investors may ask management questions; no conflict identified.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Investors Must Rely on Own Examination"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "Purely descriptive statement of exemptions relied upon; terms are statutory and definite.",
+      "reasoning_cat2": "Matches the parallel \"Certain Other Regulatory Considerations\" section citing Section 4(2)/Rule 506 and Section 3(c)(5); consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Notes Not Registered; No Investment Company Act Protection"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Except as provided in the Note Purchase Agreement\" delegates the operative restriction elsewhere, and \"indefinite period of time\" is loose, but the restriction itself is plain.",
+      "reasoning_cat2": "The Summary of Principal Terms permits transfers to family trusts, wholly-owned affiliates and by operation of law with Manager consent, so this legend's flat prohibition is qualified rather than contradicted, though a reader could see tension.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Restrictions on Transferability and Resale"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "Reservation of the right to reject subscriptions is definite; the risk language is exhortatory rather than operative.",
+      "reasoning_cat2": "Consistent with the Noteholders and Suitable Investors provisions giving the Manager sole discretion to accept or reject subscriptions.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Offered Subject to Prior Sale; Right to Reject"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "Short, plain non-advice disclaimer; no term capable of two readings.",
+      "reasoning_cat2": "Aligns with the Company Counsel provision that counsel does not represent investors; consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "No Legal, Tax or Investment Advice"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"Without unreasonable effort or expense\" is a soft standard, but it is conventional and the rest is disclaimer language.",
+      "reasoning_cat2": "Repeats almost verbatim the Section IX access-to-information provision; consistent rather than conflicting.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Estimates and Projections; Opportunity to Ask Questions"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Attribution and non-verification disclaimer; the OCR-injected docket text is noise rather than a substantive drafting error, and the meaning is plain.",
+      "reasoning_cat2": "Fits the general pattern of disclaimers about projections and third-party data; no other provision contradicts it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Third Party Information Not Verified"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The reservation of a right to \"modify any of the terms of the offering\" before final closing is broad and undefined, which could be read as unilateral power over the Offering Documents.",
+      "reasoning_cat2": "That reservation sits awkwardly with the Amendments/Waivers provision requiring a Majority in Interest of Noteholders to modify the Note Purchase Agreement, Notes or Security Agreement, creating a plausible temporal-scope tension.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Memorandum Qualified by Offering Documents; No Other Representations"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Two sentences, one truncated by a comma, but the right to terminate the offering before a closing is unambiguous.",
+      "reasoning_cat2": "Consistent with the Closing provision stating no assurance any closing will occur; no conflict.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Right to Terminate Offering"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Trade secret\" characterisation and the advisor carve-out are somewhat conclusory, but the prohibition and its exception are stated clearly.",
+      "reasoning_cat2": "Overlaps the earlier confidentiality legend, which contains no advisor exception; the later, more specific clause harmonises easily but a reader could note the difference.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Confidential/Trade Secret"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "\"Superior returns with a conservative risk profile\" and \"targeting to return approximately 8.00% or more\" are promotional and vague; whether the 8% is a target or a commitment is precisely the kind of phrase parties fight over.",
+      "reasoning_cat2": "It states flatly that \"The Notes will be secured by the assets of the Company\" while the Company Borrowings and Failure of Security provisions permit senior liens ahead of Noteholders, an executive-summary-versus-terms tension.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Overview of the Offering"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Describes the purpose and collateral in definite terms; \"other real estate related purposes\" is a catch-all after enumerated specifics but is plainly illustrative.",
+      "reasoning_cat2": "Consistent with the Section V Purpose clause and Section IV lending criteria, though the summary says \"commercial real estate\" while Section IV contemplates residential loans too.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Formation and Purpose"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Factual/biographical description; \"expects to hire Bar-K\" is expressly tentative and thus not ambiguous.",
+      "reasoning_cat2": "Consistent with Section III and Section V naming Bar-K as initial Servicer subject to the Manager's power to substitute.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Management and Servicer"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Dates and mechanics are stated concretely, with express caveats that no closing is assured.",
+      "reasoning_cat2": "The summary says closings \"through May 1, 2009\" while Section V fixes the final closing at the end of the sixth full quarter after Initial Closing (estimated June 30, 2009), a datable discrepancy.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Subscription and Closings"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "\"Subject to a minimum average rate of eight percent (8%) annualized\" is imprecise — average over what period, and how it relates to a quarterly-set rate — which is a nameable ambiguity.",
+      "reasoning_cat2": "Section V instead says the Floating Rate \"will not be less than 8% on an annualized basis for a calendar year,\" a floor rather than an average, so the two formulations do not match.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Interest, Term and Payment"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The prepayment-request mechanics and the one-year holding period are stated definitely; \"very limited circumstances\" is vague but immediately qualified by Manager discretion.",
+      "reasoning_cat2": "Section V adds a sixty-day notice requirement and a fiscal-quarter effective date absent here, so the summary is incomplete rather than contradictory.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Illiquidity of the Notes"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "\"Secured creditors\" is a definite legal characterisation, and the disclaimer of equity is plain.",
+      "reasoning_cat2": "The tax section warns the IRS or a court could recharacterise the Notes as equity and the risk factors warn the security may be subordinated, so the flat statement sits in some tension with those qualifications.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Noteholders as Secured Creditors"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Explicitly permits senior liens ahead of the Notes in unambiguous words; nothing lexically uncertain.",
+      "reasoning_cat2": "This is the provision that qualifies the Executive Summary's unqualified \"secured by the assets of the Company\"; harmonisation is possible but the pairing is exactly where a dispute would arise.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I. Executive Summary — Use of Capital and Company Borrowings"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"Conservatively underwritten\" and \"quality real estate\" are vague, and \"will not source loans for the purpose of resale\" is an absolute statement.",
+      "reasoning_cat2": "The Sale of Loans Generally and Transactions with Sponsored Funds provisions expressly allow the Company to sell loans and to purchase loans for resale-like purposes, creating tension with the flat \"will not source loans for the purpose of resale.\"",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Private Mortgage Lending — Lending Approach"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "A statement of market belief, not an operative term; \"substantial demand\" is vague but nothing turns on it contractually.",
+      "reasoning_cat2": "Nothing else in the document contradicts this marketing observation.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Lending Market Opportunities"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "\"Proven lending record,\" \"solid returns\" and \"no investor has experienced a loss\" are promotional characterisations, disclaimed in the same paragraph.",
+      "reasoning_cat2": "The immediately following no-operating-history legend and the Risk Factors disclaim reliance on past performance, so this is qualified rather than inconsistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Investor Opportunities"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Numerical, factual statements about R.E. Loans; definite on their face.",
+      "reasoning_cat2": "Consistent with Section III's description of R.E. Loans and B-4 Partners; the ownership attribution differs slightly across sections but not materially.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. R.E. Loans"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Historical factual recital with specific figures; nothing to construe.",
+      "reasoning_cat2": "Consistent with Section III's account of the nine predecessor partnerships.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Prior Limited Partnerships"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"100% collection record\" is an absolute factual claim but is descriptive, not an operative obligation.",
+      "reasoning_cat2": "The no-operating-history legend that follows disclaims predictive weight; consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Mortgage Servicing and Administration: Bar-K, Inc."
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "An all-caps disclaimer in definite terms; no ambiguous operative word.",
+      "reasoning_cat2": "It expressly qualifies the preceding track-record statements, which is a harmonising function rather than a conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. No Operating History Disclaimer"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Descriptive allocation of roles among named individuals; definite.",
+      "reasoning_cat2": "Consistent with Section V Manager and Servicer entries.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Management — Management of the Company"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Biographical and corporate-history description; nothing operative to construe.",
+      "reasoning_cat2": "Consistent with the other descriptions of B-4 Partners and R.E. Loans elsewhere in the memorandum.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. The Mortgage Fund LLC, the Manager"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Pure biography with dates and figures; definite.",
+      "reasoning_cat2": "No other provision is inconsistent with it.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Walter Ng, Managing Director"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Pure biography; the stated \"33 years\" of experience for a 51-year-old is odd but not an operative term.",
+      "reasoning_cat2": "Consistent with Section V naming Kelly Ng a Managing Director and Bar-K owner.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Kelly Ng, Managing Director"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Descriptive of the Servicer's identity, ownership and licensing; definite.",
+      "reasoning_cat2": "Consistent with the Section V Servicer entry, which also allows delegation to other qualified servicing entities.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Bar-K, Inc., the Servicer"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "\"The Servicer will originate or arrange all loans acquired by the Company\" is an absolute using \"all,\" which is definite but strong.",
+      "reasoning_cat2": "Section IV says the Company may also purchase loans from unrelated third parties and Section III allows the Manager to retain other firms in lieu of the Servicer, so \"all\" cannot be taken literally.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Servicer's Role"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "A cross-reference line naming an officer; nothing to construe.",
+      "reasoning_cat2": "Consistent with the rest of the management section.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Principal Executive Officers — Walter Ng, Chairman"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Biographical description; definite.",
+      "reasoning_cat2": "Consistent with Section V's statement that Barney Ng manages the Servicer as President.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Barney Ng, President"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A one-line cross-reference; nothing capable of two meanings.",
+      "reasoning_cat2": "Consistent with other references to Kelly Ng's roles.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Kelly Ng, Vice President"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "\"Terminate all or any portion of their business relationship with the Company at any time\" is a broad unilateral right with no notice or standard, which is one-sidedly drafted.",
+      "reasoning_cat2": "It sits against the Restricted Actions bullet forbidding the Manager to \"withdraw as the sole manager\" without Majority in Interest approval — a direct tension between an at-will termination right and a consent requirement.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Right to Terminate Business Relationship"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The payment-routing mechanics are stated conditionally but clearly; \"None of the following compensation was determined by arm's-length negotiations\" is a plain disclosure.",
+      "reasoning_cat2": "Consistent with the parallel Section V Servicer Compensation entry describing the same alternative payment routes.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Compensation to Management"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The management fee formula (1% annually, 0.0833% monthly, in advance, on prior month-end balances) is arithmetically precise; the OCR has jumbled the table headings but the figure is clear.",
+      "reasoning_cat2": "Matches the Section V Manager Compensation entry word for word; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Portfolio Management Fees (Manager)"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"Payable only from Portfolio Loan interest that is received by the Company\" is a definite limitation; the merged table text is OCR noise rather than drafting error.",
+      "reasoning_cat2": "Matches the Section V Servicer Compensation entry, subject to footnote 1's market-rate cap; consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Loan Servicing Fees (Servicer)"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "\"10% of late charges on delinquent Portfolio Loan payments received by the Company\" is a definite formula.",
+      "reasoning_cat2": "Matches the Section V bullet \"Ten percent (10%) of late charges on delinquent payments\"; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Late Fees"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "The default-interest retention is defined by reference to the excess over the regular stated rate, which is a measurable line.",
+      "reasoning_cat2": "Identical in substance to the Section V bullet on default interest; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Default Interest"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "\"Anticipated to average between three percent (3%) and six percent (6%)\" is an estimate, not a cap, so it fixes no enforceable limit.",
+      "reasoning_cat2": "Section III's conflicts discussion confirms the fees \"may be higher or lower depending upon market conditions\"; consistent though it means the range binds nothing.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Loan Brokerage Commissions, Renewal and Forbearance Fees"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "An estimate of roughly $1,000 per loan that \"may vary\"; the figure constrains nothing.",
+      "reasoning_cat2": "Section V states these fees are anticipated to aggregate \"approximately $1,000-$2,000 per Portfolio Loan,\" a different figure from the same document.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Loan Processing and Documentation Fees"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Defines Manager Expenses residually as everything \"other than those borne by the Company or Servicer,\" which is circular but workable once the other two categories are read.",
+      "reasoning_cat2": "It interlocks with the Company Expenses and Loan Service Expenses definitions; the residual definition depends on those and any gap would be exposed there.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Manager Expenses"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "Enumerates categories then adds \"allocable rent,\" an undefined allocation concept; otherwise definite, but this version omits the cap.",
+      "reasoning_cat2": "The Section V version caps organizational fees at the greater of $500,000 or 1% of aggregate Principal, a limit absent here — a direct discrepancy between two statements of the same term.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Company Expenses and Reimbursements"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "One sentence allocating Loan Service Expenses to the Servicer; definite.",
+      "reasoning_cat2": "Matches the Section V Portfolio Service Expenses entry exactly; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Portfolio Service Expenses"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "\"Will not exceed amounts generally charged for similar loans in the private [mortgage lending industry]\" is a vague benchmark, and the sentence is cut off mid-phrase.",
+      "reasoning_cat2": "It qualifies the fixed 1% servicing fee stated in the table and in Section V, which does not itself contemplate variation, so the footnote and the flat 1% sit uneasily.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Footnote 1 — Loan Servicing Fee Limit"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "The assertion that the Manager owes no fiduciary duty to Noteholders is stated flatly, and \"good faith and integrity\" on which Noteholders must rely is a soft standard; the interplay of the two is nameable.",
+      "reasoning_cat2": "It coexists with the contractual covenants described in the Note Purchase Agreement and the Restricted Actions consent rights, so the no-duty statement is bounded rather than absolute, but the tension is real.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. No Fiduciary Responsibility of Manager to Noteholders"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "\"Except as may arise in the normal course of the relationship, there are no transactions presently contemplated ... other than those listed below\" combines an enumerated list with a vague catch-all exception.",
+      "reasoning_cat2": "The listed conflicts are elaborated consistently in the following subsections and in Section IV; the catch-all exception is the only loose end.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts of Interest — General"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "\"Generally prevailing in the geographical areas ... for loans to comparable borrowers of similar size, duration and security\" is a soft market standard capable of dispute.",
+      "reasoning_cat2": "Consistent with the Compensation to Management table and with Section IV's affiliated-transaction criteria; no contradiction identified.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Loan Brokerage Commissions, Renewal and Forbearance Fees"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "The definition of Related Party Loans by reference to affiliation and \"family members\" is broad but intelligible.",
+      "reasoning_cat2": "Consistent with Section IV's Loans to Related Parties summary and with the carve-out for affiliate purchase-money financing.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Loans to Related Parties"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "\"At any time shall not exceed 20% of total Company assets at such time\" is a continuous test, stated with precision.",
+      "reasoning_cat2": "Section IV states the same limit tested only \"upon the closing of the Related Party Loan in question,\" a materially different measurement point — a direct inconsistency.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Related Party Loans — (a) Aggregate Limit"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "\"Consistent with the lending standards and policies set forth above\" and \"typically offered\" are soft comparators, but standard for affiliate-transaction covenants.",
+      "reasoning_cat2": "Section IV renders the same covenant as \"must not be on terms more favorable to the borrower than similar loans negotiated at arm's-length,\" a differently worded test for the same obligation.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Related Party Loans — (b) Terms and Conditions"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "\"Any material event of default ... continuing for ninety (90) consecutive days\" turns on \"material,\" which is undefined, but the mechanic is otherwise precise.",
+      "reasoning_cat2": "Section IV restates the obligation as triggered where \"the Loan is in default more than 90 days\" without the materiality qualifier, a narrower-versus-broader trigger.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Related Party Loans — (c) Purchase on Default"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "The allocation standard is \"after consideration of all relevant factors, including\" an enumerated list — a classic open-ended catch-all with no binding rule.",
+      "reasoning_cat2": "Consistent with the Other Activities of the Principals and Manager entry in Section V, which likewise reserves complete freedom; no conflict, only breadth.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Other Funds or Businesses; Allocations of Portfolio Loan Opportunities"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "\"Only so much time to the business of the Company as is reasonably required\" is a vague effort standard that a court could be asked to apply.",
+      "reasoning_cat2": "Section V's Other Activities entry uses \"such of its business time ... as may be necessary,\" a slightly different formulation of the same duty but reconcilable.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Allocation of Management Time"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "Plain disclosure that no independent counsel was engaged; nothing to construe.",
+      "reasoning_cat2": "Consistent with the Company Counsel entry naming Greenberg Traurig for the Company and Manager only.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Lack of Independent Legal Representation"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "The price floor is \"not less than any of the following: (i) appraised value, if any; (ii) any third party offer, if any; or (iii) the total amount of the Company's investment\" — \"not less than any of\" read with \"or\" is genuinely ambiguous as between the highest and any one of the three.",
+      "reasoning_cat2": "The carve-out that affiliate seller financing \"will not be deemed a Related Party Loan\" interacts with the Related Party Loan definition and 20% cap, potentially removing affiliate financing from those protections.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Sale of Defaulted Loans or Real Estate Owned to Affiliates"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "Refers compliance to \"lending criteria for such loans established by the Note Purchase Agreement\" without stating them; the operative standard is outside the text.",
+      "reasoning_cat2": "Section IV sets out those criteria in summary (fair market value, arm's-length terms, fully performing), so the two are complementary rather than conflicting.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Conflicts — Transactions between the Company and Other Sponsored Funds, Private Investors"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "\"Primarily in the United States,\" \"occasional loans\" and \"a strict set of guidelines\" are all imprecise, and the loans described are broader than the summary's commercial focus.",
+      "reasoning_cat2": "The Executive Summary describes lending for \"commercial real estate or other real estate related purposes,\" while this permits residential construction and loans collateralized by other loans — a scope discrepancy.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. General Standards for Mortgage Loans"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "A two-line ratio table; the figures are definite but the table does not state whether the ratio is combined or Company-only.",
+      "reasoning_cat2": "The accompanying Loan-to-Value Ratios narrative supplies the combined-debt measurement and the word \"generally,\" softening the table's apparent hard caps.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Loan to Value Ratio Table"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "\"Most Company loans are expected to be secured by a first deed of trust\" is aspirational, while the 20% junior-lien cap is definite.",
+      "reasoning_cat2": "Consistent with the loan-to-value discussion referring to senior deeds of trust; no direct conflict, though the various 20% baskets (junior liens, non-U.S., related party, single loan) are not stated to be cumulative.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Priority of Mortgages"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "\"Primarily\" combined with a hard 20% non-U.S. cap is workable, but \"total Company Capital\" is undefined and differs from \"total Company assets\" used elsewhere.",
+      "reasoning_cat2": "The related-party cap uses \"total Company assets\" and the diversification limit uses \"capital of the Company,\" so three different denominators appear across the lending limits.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Geographic Area of Lending Activity"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "\"Generally will not exceed the percentages stated above,\" valuation \"as determined by either the Manager or an independent written appraisal,\" and \"any reasonable financing terms ... in its sole discretion\" are all elastic, and \"based a valuation\" is a dropped word.",
+      "reasoning_cat2": "The word \"generally\" and the Manager-determined valuation substantially undercut the fixed 70%/50% table, and the carve-out declaring affiliate purchase-money financing not a Related Party Loan removes it from the related-party protections.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Loan-to-Value Ratios"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "\"Will vary at the discretion of the Manager\" and \"generally have a term of between one (1) and six (6) years\" set no binding limit.",
+      "reasoning_cat2": "A six-year loan term against Notes maturing December 31, 2014 with only a six-month extension is a maturity mismatch a reader could press, though the Term entry allows two years past maturity to wind up.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Terms of Loans"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "States plainly that creditworthiness is subordinate to loan-to-value; definite in effect.",
+      "reasoning_cat2": "It sits in tension with Section II's promise of \"conservatively underwritten\" loans to \"borrowers who are experienced in real estate operations and finance,\" since it expressly contemplates lending to defaulting borrowers.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Credit Evaluations"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "An introductory sentence to an enumerated list; definite.",
+      "reasoning_cat2": "Consistent with the four escrow conditions that follow, one of which (c) is not actually a condition.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Escrow Conditions"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "\"Satisfactory title insurance coverage\" leaves the standard of satisfaction unstated, and \"etc.\" closes the list of non-covered causes.",
+      "reasoning_cat2": "Consistent with the other escrow conditions and with the Risk Factors on collateral; no contradiction.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Escrow Conditions — (a) Title Insurance"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "\"Satisfactory\" again lacks a measuring standard, and the alternative for unimproved land (\"only casualty insurance\") is oddly phrased.",
+      "reasoning_cat2": "Cross-references the Uninsured Losses risk factor, which is not actually captioned that way in Section VII; a minor cross-reference misfire.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Escrow Conditions — (b) Fire and Casualty Insurance"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Item (c) states an intention not to obtain insurance and so is not a condition at all, which is a mechanical mismatch with the introductory \"conditions are met\" framing.",
+      "reasoning_cat2": "It contradicts the framing of the Escrow Conditions provision, which instructs the escrow agent not to disburse until \"the following conditions are met\"; (c) can never be \"met.\"",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Escrow Conditions — (c) No Mortgage Insurance"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "\"All loan documents (notes, deeds of trust, etc.)\" uses an open catch-all, but the naming requirement is otherwise definite.",
+      "reasoning_cat2": "The final sentence barring nominee holding is consistent with the Collateral Agent arrangement, which represents Noteholders rather than holding loans; no conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Escrow Conditions — (d) Loan Documents Name Company"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "\"It is anticipated that all Company loans will be serviced\" is hedged; the payment-routing instruction is definite.",
+      "reasoning_cat2": "Consistent with the Servicer entries in Sections III and V, including the Manager's right to use other firms.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Loan Servicing"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "Compresses three covenants into one sentence with a typo (\"rf the Loan\"), and the 20% test is expressed as measured only at closing.",
+      "reasoning_cat2": "It conflicts with Section III(a), which imposes the 20% cap \"at any time,\" and drops the \"material\" qualifier from the 90-day default repurchase obligation in Section III(c).",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.53,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Loans to Related Parties"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "\"Generally, the purchase price ... will not exceed par or fair market value, whichever is lower\" is qualified by \"generally\" and then by an express premium exception, leaving the limit soft.",
+      "reasoning_cat2": "The premium exception is limited to \"unaffiliated parties,\" which harmonises with the affiliated-transaction criteria in Section IV and the Note Purchase Agreement references; consistent.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Purchase of Loans from Servicer"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "Contains an incomplete phrase — \"to achieve comparable with Sponsored Investment Funds\" — where a word is plainly missing, and \"fair market value or better\" is undefined.",
+      "reasoning_cat2": "It uses \"Sponsored Investment Funds\" while Section III defines \"Other Sponsored Investment Funds,\" and it requires purchased loans to be \"fully performing\" while Sale of Loans Generally allows sales of non-performing loans to affiliates.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Transactions between the Company and Sponsored Investment Funds, Private Clients"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "A double-negative permission (\"None ... is precluded from\") with a proviso; the meaning is recoverable but the drafting is convoluted.",
+      "reasoning_cat2": "Consistent with the Related Party Loan and Sponsored Fund criteria it cross-references; no contradiction found.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Transactions with Noteholders"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "\"After the second year of the Company's term\" is ambiguous as to when the term begins, and the limit applies only to \"new commitment[s],\" leaving pre-existing concentrations untouched.",
+      "reasoning_cat2": "The Term entry measures the Company's term from an undefined start and terminates two years after the Notes' Maturity Date, so \"the second year of the Company's term\" has no fixed anchor in the document.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Loan Diversification"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "Entirely permissive and discretionary (\"may be retained,\" \"if any,\" \"from any source\"), with an open-ended list ending in \"other liquid assets.\"",
+      "reasoning_cat2": "Funding a reserve from Note sale proceeds is consistent with the Executive Summary's statement that capital may be raised for expenses; no conflict.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Reserve Fund"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "\"Does not presently intend\" and \"may occasionally sell\" are non-binding, and the permission to sell non-performing loans to affiliates is stated without price constraints here.",
+      "reasoning_cat2": "It contradicts Section II's statement that the Company \"will not source loans for the purpose of resale\" only loosely, but its affiliate-sale permission must be read with the pricing floor in the Sale of Defaulted Loans conflicts provision, which it does not cross-reference.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Sale of Loans Generally"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "Explanatory and predictive; the operative permission to borrow is plain.",
+      "reasoning_cat2": "Consistent with the Company Borrowings entry in Section V and the Failure of Security risk factor; the cross-reference to \"Risks and Other Important Factors - Risks of Leverage\" points to a heading that does not exist in Section VII.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Leveraging the Portfolio"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "Refers to acceptance \"in the discretion of the Managing Member,\" a term used nowhere else — the document elsewhere says Manager or Members — which is a definitional slip.",
+      "reasoning_cat2": "The Noteholders entry says subscriptions are accepted by \"the Manager, in its sole discretion,\" while this says the \"Managing Member,\" and Section III also refers to a \"Fiduciary Responsibility of the Managing Member\" heading that does not exist.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Summary of Principal Terms — Qualification"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "A bare identification of the Company as a Delaware LLC; definite.",
+      "reasoning_cat2": "Consistent with the Executive Summary's identification of the Company; the surrounding OCR-merged headings are artefacts.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. The Company"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "\"Such other directly related activities ... as the Manager deems reasonably necessary or appropriate\" is a catch-all after enumerated specifics, whose reach is left to the Manager.",
+      "reasoning_cat2": "Broader than the Executive Summary's statement of purpose (commercial real estate lending), but Section IV's description of permitted loan types supports the wider reading.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Purpose"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "\"The Company may admit additional or substitute managers\" is stated without conditions or Noteholder protection, which is broad but not ambiguous.",
+      "reasoning_cat2": "It sits against the Restricted Actions bullet requiring Majority in Interest consent before the Manager may \"withdraw as the sole manager,\" so unrestricted substitution and that consent right pull in different directions.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Manager"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "Definite: names Bar-K as initial Servicer and permits delegation to \"one or more qualified servicing entities,\" with \"qualified\" undefined.",
+      "reasoning_cat2": "Consistent with Section III's Servicer description and the Manager's right to retain other firms.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Servicer"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "Defines Investor Capital and the Program clearly; \"no minimum or maximum\" is unambiguous.",
+      "reasoning_cat2": "Matches the Executive Summary's statement that no minimum or maximum has been targeted; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Investor Capital"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "\"A minimum investment is 20,000 Units, in the discretion of the Manager\" is internally awkward — a minimum that the Manager may waive is stated as if fixed, and the sentence is grammatically incomplete.",
+      "reasoning_cat2": "Nothing else in the document sets a minimum investment, so this is the sole statement; no conflict, but no support either.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Notes"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "Uses the defined statutory concept \"accredited investors\" and sole Manager discretion; definite.",
+      "reasoning_cat2": "Consistent with Section VIII's detailed accredited-investor representations and the Manager's discretion to reject.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Noteholders"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "\"The Floating Rate will not be less than 8% on an annualized basis for a calendar year\" is a floor whose reference period is unclear when the rate resets quarterly, and \"Maturity Date\" is defined twice in the same entry.",
+      "reasoning_cat2": "The Executive Summary describes the same rate as a \"minimum average rate of eight percent (8%) annualized,\" an average rather than a floor — the sort of discrepancy over which a noteholder would litigate the promised return.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Note Terms and Payment"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "Payment mechanics and the definition of Principal are stated concretely.",
+      "reasoning_cat2": "Consistent with the Funding of Capital Obligations entry describing the Closing Account and transfer authorisation.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Payment for Notes"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "\"Qualified investor\" is used without definition (the document elsewhere uses \"accredited investor\"), and the Note is not reissued though Principal increases.",
+      "reasoning_cat2": "Section VIII requires suitability standards to be met at the time of any increase, which fills the gap, but the undefined \"qualified investor\" label recurs inconsistently.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Noteholders’ Voluntary Subscription for Additional Units"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "Same undefined \"qualified investor\" term, and the paragraph reads as an offer/acceptance mechanic while making acceptance subject to the Manager's approval, which is circular.",
+      "reasoning_cat2": "Overlaps and largely repeats the Noteholders' Voluntary Subscription entry, and the two are reconcilable; the repetition itself is not a conflict.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Company Request for Voluntary Subscriptions"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "Describes segregated Closing and Pre-Investment Accounts in definite terms; the retention of interest by the Company is expressly stated.",
+      "reasoning_cat2": "Consistent with the Payment for Notes entry and the Note Purchase Agreement references; no contradiction.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Funding of Capital Obligations"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "The Minimum Holding Period, sixty-day notice and fiscal-quarter effective date are precise, though the Company may waive \"either of such conditions\" — arguably only two of three.",
+      "reasoning_cat2": "The Executive Summary describes the prepayment request without the sixty-day notice or quarter-end requirement, so the summary and this entry state the same right differently.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Return of Investment; Early Payment of Note"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "\"Actions of the Collateral Agent shall be binding on the Noteholders\" combined with powers \"as may be granted in the Noteholder Agreements, in addition to those granted by the Company\" leaves the agent's authority open-ended.",
+      "reasoning_cat2": "The proviso that the agent may consent to subordination \"only to the extent that such terms or actions are not prohibited under the Noteholder Agreements\" must be read with Company Borrowings, where Noteholders already agree to senior liens; the boundary is unclear.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Collateral Agent"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "The acceleration on bankruptcy or dissolution is definite, but the exception where obligations \"have been assumed by an affiliate of or successor in interest to the Company\" is broad and has no consent or creditworthiness condition.",
+      "reasoning_cat2": "That assumption exception lets the Manager's affiliate displace the obligor without Noteholder approval, which sits uneasily with the Restricted Actions requirement of Majority in Interest consent for any merger, consolidation or dissolution.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Acceleration of Note Due Date"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "\"With the requisite approval of members\" refers to an approval threshold not stated anywhere in the memorandum; otherwise definite.",
+      "reasoning_cat2": "Consistent with the No Fiduciary Responsibility section noting the Manager is currently the sole member; the undefined member-approval requirement points outside to the Company Agreement.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Company Members"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "A $25,000 minimum capital investment and the permission to purchase Notes are stated with precision.",
+      "reasoning_cat2": "Consistent with the Executive Summary statement that the Manager and affiliates may purchase Notes on the same terms as other investors.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Manager’s and Affiliate Member’s Investment"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "\"The last day of the end of the sixth full quarter after the Initial Closing\" is redundantly worded, and the parenthetical estimate (June 30, 2009) does not obviously follow from a December 1, 2007 initial closing.",
+      "reasoning_cat2": "The Executive Summary says closings are expected \"through May 1, 2009\" and gives an initial closing \"on or before December 3, 2007,\" against December 1, 2007 and June 30, 2009 here — three date discrepancies.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Closing"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "The 1% management fee formula is arithmetically explicit and payable in advance on a stated measuring date.",
+      "reasoning_cat2": "Identical to the Section III Portfolio Management Fees entry; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Manager Compensation"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "\"Not to exceed a maximum of $500,000 or 1% of aggregate Principal of outstanding Notes, whichever amount is greater\" is a cap defined by the greater of two figures, which is an unusual and elastic ceiling; \"allocable rent\" is also undefined.",
+      "reasoning_cat2": "Section III's Company Expenses entry states the same obligation with no cap at all, so the two versions of the expense provision differ materially.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Company and Manager Expenses"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "The fee components are enumerated with figures, but \"Loan Process and Documentation Fees ... approximately $1,000-$2,000\" differs from the earlier table's \"approximately $1,000.\"",
+      "reasoning_cat2": "That $1,000 versus $1,000-$2,000 divergence against the Section III table, and the routing of fees to the Manager where it contracts directly, create a discrepancy between the two compensation statements.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Servicer Compensation, Compensation from Portfolio Borrowers"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "The final allocation sentence is definite; the preceding merged text is OCR carry-over.",
+      "reasoning_cat2": "Matches the Section III Portfolio Service Expenses entry; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Portfolio Service Expenses"
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "An enumerated list of fee types closed by \"or other fees,\" and \"subject to restrictions with respect to Affiliated Transactions\" uses a capitalised term defined nowhere in the memorandum.",
+      "reasoning_cat2": "The undefined \"Affiliated Transactions\" must be pieced together from the Related Party Loans and Sponsored Fund criteria in Sections III and IV, which use different labels — a genuine referential gap.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Non-Company Fees Payable to the Manager, Members, Servicer or their Affiliates"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "\"The Company will be subject to restrictions in the amount of compensation it may receive\" is almost certainly a slip for the Manager or Servicer, since the Company pays rather than receives compensation.",
+      "reasoning_cat2": "The cross-referenced Sections III and IV restrict compensation payable to the Manager and Servicer, not received by the Company, confirming the mismatch.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Restricted Transactions"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "\"Will terminate at the Manager's election upon the first to occur of\" is internally contradictory: a term that ends automatically on the first of two events cannot also depend on an election.",
+      "reasoning_cat2": "The Loan Diversification provision measures time from \"the second year of the Company's term\" and Terms of Loans allows six-year loans, so this indeterminate term interacts awkwardly with both.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Term"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "\"Certain transfers to family trusts, to wholly-owned affiliates or by operation of law\" leaves \"certain\" undefined, so the scope of the exception is uncertain.",
+      "reasoning_cat2": "The cover legend says Notes may not be transferred \"except as provided in the Note Purchase Agreement,\" and the Risk Factors say transferability is \"severely restricted\"; this entry's exceptions are consistent in kind but vaguer.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Transfers of Notes"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "Advance blanket consent to subordination \"as to either or both its payment or exercise\" on terms \"as required by the Manager\" is broad but expressed unambiguously.",
+      "reasoning_cat2": "It qualifies the Executive Summary's flat statement that Notes are \"secured by the assets of the Company\" and interacts with the Collateral Agent's proviso limiting consent to what is \"not prohibited under the Noteholder Agreements\" — a circularity worth construing.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.39,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Company Borrowings"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "\"Any of the following, among other restrictions\" is an enumerated list expressly opened by an unstated catch-all, so the true set of protected actions cannot be determined from the text.",
+      "reasoning_cat2": "The bullet barring the Manager from withdrawing as sole manager conflicts with the Manager's right to terminate its relationship at any time (Section III) and with the Company's right to substitute managers (Section V Manager).",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Restricted Actions"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "\"Such of its business time ... as may be necessary\" is a vague effort standard, and \"similar enterprises to the Company\" is awkwardly phrased.",
+      "reasoning_cat2": "Consistent with the Allocation of Management Time conflicts disclosure, though that uses \"reasonably required\" rather than \"necessary.\"",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Other Activities of the Principals and Manager"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "Reports beyond tax information are left wholly to the Manager's discretion, and \"timely\" is undefined — a thin but nameable vagueness.",
+      "reasoning_cat2": "Consistent with the Tax Allocations entry promising Forms 1099 and with the passive-investment risk factor; no conflict.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Reports"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "Allocation of all tax items to Members and none to Noteholders is stated definitely, consistent with debt treatment.",
+      "reasoning_cat2": "The tax section acknowledges the IRS could recharacterise the Notes as equity, in which case this allocation could not hold; that is a disclosed contingency rather than an internal conflict.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Tax Allocations"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "The sentence is grammatically broken — a missing \"if any amendment\" or \"where such amendment\" — so it is unclear whether Noteholder approval is always required or only for amendments that violate obligations or change purpose.",
+      "reasoning_cat2": "It also invokes \"Investor Documents,\" a capitalised term defined nowhere (the document uses \"Offering Documents\" and \"Noteholder Agreements\"), compounding the referential problem.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Amendment of Company Agreement"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "The general rule (Majority in Interest approval) and the individual carve-out are each clear, though allowing one Noteholder plus the Manager to modify \"any provision\" as to his own Note is broad.",
+      "reasoning_cat2": "The individual waiver right could be used to undercut the collective Majority in Interest protection in the same paragraph and in Restricted Actions, an internal pull worth noting.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Amendments, Waivers of Noteholder Agreements"
+    },
+    {
+      "clause_id": "neg115",
+      "reasoning_cat1": "Indemnity is carved back for \"willful misconduct or gross negligence,\" a definite two-part standard.",
+      "reasoning_cat2": "Section III describes the Operating Agreement's carve-out as \"fraud, bad faith or willful misconduct\" — a different exclusion set for what appears to be the same protection, a real inconsistency between two statements of the indemnity.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.48,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Exculpation and Indemnification"
+    },
+    {
+      "clause_id": "neg116",
+      "reasoning_cat1": "Limits Noteholder liability to their purchase commitment in plain terms.",
+      "reasoning_cat2": "Consistent with the Noteholders-as-creditors characterisation and the Company Members entry excluding Noteholders from membership.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Noteholder Liability"
+    },
+    {
+      "clause_id": "neg117",
+      "reasoning_cat1": "The power of attorney is granted for documents \"that the Members have expressly agreed to execute\" — but the grantors are Noteholders, not Members, which is an apparent drafting error in the operative scope.",
+      "reasoning_cat2": "The Company Members entry states expressly that Noteholders are not admitted as members, so a Noteholder power of attorney keyed to Members' agreements has no referent.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Noteholders’ Powers of Attorney"
+    },
+    {
+      "clause_id": "neg118",
+      "reasoning_cat1": "Names counsel and disclaims representation of investors; definite (the firm name is misspelled but immaterial).",
+      "reasoning_cat2": "Consistent with the Lack of Independent Legal Representation conflicts disclosure.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Company Counsel"
+    },
+    {
+      "clause_id": "neg119",
+      "reasoning_cat1": "A scope-limiting tax summary with an enumerated list of excluded investor types introduced by \"e.g.\"; standard and clear in function.",
+      "reasoning_cat2": "Consistent with the Circular 230 notice and the consult-your-advisor refrains throughout.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Certain United States Federal Income Tax Considerations — Scope of Summary"
+    },
+    {
+      "clause_id": "neg120",
+      "reasoning_cat1": "A statutory definition tracking the Code; precise.",
+      "reasoning_cat2": "Used consistently in the tax discussion that follows.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Definition of U.S. Holder"
+    },
+    {
+      "clause_id": "neg121",
+      "reasoning_cat1": "Descriptive tax guidance with a consult-advisors recommendation; nothing operative.",
+      "reasoning_cat2": "Consistent with the surrounding tax provisions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Partnerships as Beneficial Owners"
+    },
+    {
+      "clause_id": "neg122",
+      "reasoning_cat1": "Standard regulatory legend in fixed statutory form.",
+      "reasoning_cat2": "Consistent with the rest of the tax section.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Circular 230 Notice"
+    },
+    {
+      "clause_id": "neg123",
+      "reasoning_cat1": "States an intention to treat Notes as debt and expressly concedes the characterisation is not binding; the hedging is explicit rather than ambiguous.",
+      "reasoning_cat2": "It coexists uneasily with the Executive Summary's flat assertion that Noteholders \"will be secured creditors,\" though the risk factors disclose the recharacterisation possibility.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Tax Treatment of Notes"
+    },
+    {
+      "clause_id": "neg124",
+      "reasoning_cat1": "Technical tax explanation of the non-contingent bond method with a stated 8% Comparable Yield; \"Comparative Yield\" appears once as a slip for \"Comparable Yield.\"",
+      "reasoning_cat2": "The 8% Comparable Yield aligns with the 8% Floating Rate floor in the Note Terms entry; consistent.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Ownership of Notes — Original Issue Discount"
+    },
+    {
+      "clause_id": "neg125",
+      "reasoning_cat1": "Standard basis-and-character tax discussion; definite terms.",
+      "reasoning_cat2": "Consistent with the contingent-debt-instrument treatment described immediately above.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Gain or Loss on Disposition"
+    },
+    {
+      "clause_id": "neg126",
+      "reasoning_cat1": "Long UBTI discussion; the reference to \"the Fund's revenues\" uses a label not defined in this document, but the analysis is otherwise clear.",
+      "reasoning_cat2": "The observation that affiliates have historically sold defaulting loans to the Servicer matches the Sale of Defaulted Loans provision; consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Tax-Exempt Entities"
+    },
+    {
+      "clause_id": "neg127",
+      "reasoning_cat1": "Cites a specific 28% backup withholding rate and the conditions triggering it; precise.",
+      "reasoning_cat2": "Consistent with the Form 1099 statements in the Executive Summary and Tax Allocations.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Information Reporting and Backup Withholding"
+    },
+    {
+      "clause_id": "neg128",
+      "reasoning_cat1": "An introductory ERISA caveat labelled as a summary only; nothing operative.",
+      "reasoning_cat2": "Consistent with the ERISA risk factor and the advisor-consultation refrain.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. ERISA Considerations"
+    },
+    {
+      "clause_id": "neg129",
+      "reasoning_cat1": "Describes fiduciary duties and prohibited transactions in statutory terms; the stray \"a\" is OCR noise.",
+      "reasoning_cat2": "The instruction that Plan Investors must not rely on the Manager for investment advice matches the non-reliance legends elsewhere.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Fiduciary Considerations"
+    },
+    {
+      "clause_id": "neg130",
+      "reasoning_cat1": "\"Structured so as not to subject the Fund\" followed by \"in the alternative, the Company expects to rely\" on Section 3(c)(5) is slightly muddled, and \"the Fund\" is an undefined label.",
+      "reasoning_cat2": "The cover legend flatly states the Company \"will not be registered as an investment company,\" while the Company Not Registered risk factor concedes no assurance; the three statements differ in confidence.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Certain Other Regulatory Considerations"
+    },
+    {
+      "clause_id": "neg131",
+      "reasoning_cat1": "General descriptive statement about lender regulation; hedged but not operative.",
+      "reasoning_cat2": "Consistent with the Usury, Lending Laws and Lender Liability discussions that follow.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Considerations Relating to Status of Noteholders and Company as Lenders"
+    },
+    {
+      "clause_id": "neg132",
+      "reasoning_cat1": "Discloses that the rates payable to Noteholders \"may exceed the applicable statutorily-defined usury rates\" — an unusual admission but stated plainly.",
+      "reasoning_cat2": "It sits against the 8% minimum rate in the Note Terms entry and the California 10% threshold cited here; the disclosure is coherent with those figures rather than in conflict.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Usury"
+    },
+    {
+      "clause_id": "neg133",
+      "reasoning_cat1": "\"Commercially reasonable efforts\" is a standard effort term and \"statues\" is a typo for statutes; the substance is clear disclosure.",
+      "reasoning_cat2": "Consistent with the Laws Regulating Lenders risk factor and Section III's description of Bar-K's licences.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Lending Laws"
+    },
+    {
+      "clause_id": "neg134",
+      "reasoning_cat1": "Descriptive discussion of an admittedly \"developing and uncertain area of the law\"; the uncertainty is legal, not textual.",
+      "reasoning_cat2": "The equitable-subordination discussion is consistent with the Failure of Security risk factor and the debt-characterisation caveats.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI. Lender Liability"
+    },
+    {
+      "clause_id": "neg135",
+      "reasoning_cat1": "An introduction expressly stating the risk summary is incomplete; no operative term.",
+      "reasoning_cat2": "Consistent with the risk-factor bullets that follow.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Risk Factors — Introduction"
+    },
+    {
+      "clause_id": "neg136",
+      "reasoning_cat1": "Descriptive of typical Portfolio Borrower structure; \"Typically\" is hedged but this is disclosure, not obligation.",
+      "reasoning_cat2": "Consistent with the Portfolio Loan criteria describing single-purpose borrowers and project collateral.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Risk Inherent in Relying on Management by Portfolio Borrower"
+    },
+    {
+      "clause_id": "neg137",
+      "reasoning_cat1": "Contains an apparent slip — \"the inability of the Portfolio Manager to repay such Loan\" where Portfolio Borrower is meant — but the sense is recoverable.",
+      "reasoning_cat2": "Consistent with the Passive Investment risk factor and the Company's limited control described in the lending criteria.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. No Voice in Portfolio Borrower Management"
+    },
+    {
+      "clause_id": "neg138",
+      "reasoning_cat1": "Plain disclosure that past success does not assure future results.",
+      "reasoning_cat2": "Consistent with the no-operating-history legend in Section II and the No Operating History risk factor.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. No Prior History"
+    },
+    {
+      "clause_id": "neg139",
+      "reasoning_cat1": "An introductory risk sentence closing with \"such risks include, among others,\" an express non-exhaustive list.",
+      "reasoning_cat2": "Consistent with the bulleted risks that follow.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Risk Inherent in the Portfolio Borrower’s Investment in Real Property"
+    },
+    {
+      "clause_id": "neg140",
+      "reasoning_cat1": "Generic economic-risk description; no operative term to construe.",
+      "reasoning_cat2": "Consistent with the other real property risk bullets.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Changes in Economic Conditions"
+    },
+    {
+      "clause_id": "neg141",
+      "reasoning_cat1": "Two-line risk description; definite.",
+      "reasoning_cat2": "Consistent with the construction-loan permission in Section IV.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Increased Costs of Development or Operations"
+    },
+    {
+      "clause_id": "neg142",
+      "reasoning_cat1": "Statement of environmental liability law; descriptive and clear.",
+      "reasoning_cat2": "Consistent with the Subordinated Loan with Equity Position risk about becoming an owner and with the foreclosure discussions.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Environmental Concerns"
+    },
+    {
+      "clause_id": "neg143",
+      "reasoning_cat1": "Explanatory leverage risk; nothing operative.",
+      "reasoning_cat2": "Consistent with the Leveraging the Portfolio discussion in Section IV.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Terms of Senior Financing"
+    },
+    {
+      "clause_id": "neg144",
+      "reasoning_cat1": "Descriptive foreclosure risk; \"Project Owner\" appears once where Portfolio Borrower is meant, a minor slip.",
+      "reasoning_cat2": "Consistent with the Priority of Mortgages and junior-lien cap provisions.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Foreclosure by Senior Lender"
+    },
+    {
+      "clause_id": "neg145",
+      "reasoning_cat1": "Descriptive mechanic's lien risk; definite.",
+      "reasoning_cat2": "Consistent with the title insurance escrow condition, which insures priority only.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Mechanics Liens"
+    },
+    {
+      "clause_id": "neg146",
+      "reasoning_cat1": "Descriptive eminent domain risk; definite.",
+      "reasoning_cat2": "Consistent with the other collateral-impairment risk bullets.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Eminent Domain"
+    },
+    {
+      "clause_id": "neg147",
+      "reasoning_cat1": "The sentence \"may be limited by law or by the terms of its loan agreement, including without limitation with respect to the following\" is garbled and does not fit the bullets it introduces.",
+      "reasoning_cat2": "The bullets that follow describe risks rather than limits, so the introduction misdescribes its own list; a minor internal mismatch.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Risks Inherent in the Company’s Investment in Debt Instruments"
+    },
+    {
+      "clause_id": "neg148",
+      "reasoning_cat1": "Descriptive diversification risk; no operative standard.",
+      "reasoning_cat2": "Consistent with the Loan Diversification limit and the Concentration of Loan Investments risk factor.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Effect on Risk of Portfolio Diversification"
+    },
+    {
+      "clause_id": "neg149",
+      "reasoning_cat1": "Detailed description of foreclosure and fraudulent-conveyance risk; clear.",
+      "reasoning_cat2": "Consistent with the lending criteria and the Lender Liability discussion.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Lender Remedies"
+    },
+    {
+      "clause_id": "neg150",
+      "reasoning_cat1": "Describes cross-collateralisation and release mechanics in general terms; \"A Project will be released as collateral as it is sold\" is stated as fact without a governing term elsewhere.",
+      "reasoning_cat2": "No other provision addresses collateral release on cross-collateralized loans, so this stands alone rather than conflicting.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Cross-Collateralization of Loans"
+    },
+    {
+      "clause_id": "neg151",
+      "reasoning_cat1": "\"The Company intends to require ... adequate insurance coverage\" uses the soft word \"adequate,\" but this is a risk disclosure.",
+      "reasoning_cat2": "It says the Company \"intends to require\" insurance while the Escrow Conditions make satisfactory fire and casualty insurance a hard condition to disbursement — a difference in force.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Inadequate Preservation of Collateral"
+    },
+    {
+      "clause_id": "neg152",
+      "reasoning_cat1": "Long technical description of mezzanine and subordinate positions; expressed conditionally but clearly.",
+      "reasoning_cat2": "Consistent with the junior-lien 20% cap and the Company Borrowings provision permitting senior financing.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Subordinated Loan Positions"
+    },
+    {
+      "clause_id": "neg153",
+      "reasoning_cat1": "Describes equity-pledge collateral risk in definite conditional terms.",
+      "reasoning_cat2": "The prospect of the Company owning a Portfolio Borrower fits Section IV's permission to invest indirectly through entity ownership; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Subordinated Loan with Equity Position Collateral"
+    },
+    {
+      "clause_id": "neg154",
+      "reasoning_cat1": "\"Commercially reasonable efforts in reliance on qualified advisors\" is a soft standard, but it is presented as a risk disclosure rather than a covenant.",
+      "reasoning_cat2": "Mirrors the Lending Laws discussion in Section VI; consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Laws Regulating Lenders"
+    },
+    {
+      "clause_id": "neg155",
+      "reasoning_cat1": "Usury risk stated conditionally with a cross-reference; nothing lexically uncertain.",
+      "reasoning_cat2": "Consistent with the Section VI Usury discussion, which covers both directions of the lending chain.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Usury"
+    },
+    {
+      "clause_id": "neg156",
+      "reasoning_cat1": "Introductory conflicts risk with the express non-exhaustive phrase \"include, but are not limited to.\"",
+      "reasoning_cat2": "Consistent with the Section III Conflicts of Interest catalogue it cross-references.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Risks Resulting from Conflicts of Interest"
+    },
+    {
+      "clause_id": "neg157",
+      "reasoning_cat1": "Descriptive time-allocation risk; definite as disclosure.",
+      "reasoning_cat2": "Consistent with the Allocation of Management Time conflict and the Other Activities entry.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Time Demands"
+    },
+    {
+      "clause_id": "neg158",
+      "reasoning_cat1": "The heading \"Proportionally Disproportionate\" is clumsy, and \"Company gains and certain other income\" is vague about what the Manager's members actually receive.",
+      "reasoning_cat2": "It refers to Manager members receiving Company gains, while the Tax Allocations entry allocates all profits to Members and the Manager's only stated capital is $25,000; the economics are not fully specified anywhere.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Proportionally Disproportionate Interest of Manager"
+    },
+    {
+      "clause_id": "neg159",
+      "reasoning_cat1": "Descriptive conflicts risk with an express non-exhaustive list and a closing exhortation; nothing operative to construe.",
+      "reasoning_cat2": "Consistent with the Section III conflicts catalogue it directs investors to read.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Potential Conflicts of Interest"
+    },
+    {
+      "clause_id": "neg160",
+      "reasoning_cat1": "An introduction describing risks \"typical of investments in private equity funds,\" an odd characterisation for a debt instrument but not an operative term.",
+      "reasoning_cat2": "Calling this a private equity investment sits against the repeated insistence that Noteholders are creditors and not equity holders, a framing inconsistency rather than a term conflict.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Risks Inherent in Private Equity Investments"
+    },
+    {
+      "clause_id": "neg161",
+      "reasoning_cat1": "Plain disclosure that the Company has no operating history; definite.",
+      "reasoning_cat2": "Consistent with the Section II no-operating-history legend.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. No Operating History"
+    },
+    {
+      "clause_id": "neg162",
+      "reasoning_cat1": "Descriptive concentration risk; no measurable term to construe.",
+      "reasoning_cat2": "Consistent with the Loan Diversification 20% commitment limit, which applies only after year two.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Concentration of Loan Investments"
+    },
+    {
+      "clause_id": "neg163",
+      "reasoning_cat1": "Descriptive blind-pool risk; definite.",
+      "reasoning_cat2": "Consistent with the Manager's discretion over loan selection described in Sections III and IV.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Unspecified Investments"
+    },
+    {
+      "clause_id": "neg164",
+      "reasoning_cat1": "Frankly discloses that the security interest may be subordinated and may not be perfected in seniority; the wording is clear.",
+      "reasoning_cat2": "It flatly undercuts the Executive Summary's unqualified \"The Notes will be secured by the assets of the Company,\" which is precisely the kind of recital-versus-terms divergence a court construes.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Failure of Security"
+    },
+    {
+      "clause_id": "neg165",
+      "reasoning_cat1": "\"Severely restricted\" is a characterisation rather than a rule, but the operative restriction lives in the Note Purchase Agreement.",
+      "reasoning_cat2": "Consistent with the Transfers of Notes entry and the cover legend, though those allow specified family-trust and affiliate transfers.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Restrictions on Transferability"
+    },
+    {
+      "clause_id": "neg166",
+      "reasoning_cat1": "Illiquidity disclosure with a representation requirement; definite.",
+      "reasoning_cat2": "Consistent with the Executive Summary's illiquidity paragraph and Section VIII's own-account representation.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. No Market; Illiquidity of Notes"
+    },
+    {
+      "clause_id": "neg167",
+      "reasoning_cat1": "States that Noteholders are precluded from voting on Company operating matters, in plain terms.",
+      "reasoning_cat2": "That flat statement is hard to square with the Restricted Actions provision giving a Majority in Interest of Noteholders approval rights over mergers, liens, salaries and Manager withdrawal, and with the Amendments provision.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Passive Investment"
+    },
+    {
+      "clause_id": "neg168",
+      "reasoning_cat1": "Key-person risk described in definite terms.",
+      "reasoning_cat2": "Consistent with the Manager's right to admit additional principals and the absence of any Noteholder consent right over management composition.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Dependence on Management Team"
+    },
+    {
+      "clause_id": "neg169",
+      "reasoning_cat1": "A general pointer to tax, ERISA and lending-law risks with a consult-advisors instruction; nothing operative.",
+      "reasoning_cat2": "Consistent with Section VI, to which it expressly cross-refers.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Tax, ERISA and Other Legal Matters"
+    },
+    {
+      "clause_id": "neg170",
+      "reasoning_cat1": "Introduces \"Company Act\" as the abbreviation for the Investment Company Act, which collides with the defined \"Investment Company Act\" used in the cover legend and \"Companies Act\" in Section VIII.",
+      "reasoning_cat2": "Three different labels for the 1940 Act appear across the memorandum (Investment Company Act, Company Act, Companies Act), a definitional inconsistency running through the instrument.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Company Not Registered"
+    },
+    {
+      "clause_id": "neg171",
+      "reasoning_cat1": "Concluding no-assurance statement in plain terms.",
+      "reasoning_cat2": "Consistent with the no-operating-history legend and the Executive Summary's disclaimed targets.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Conclusion — No Assurance of Performance"
+    },
+    {
+      "clause_id": "neg172",
+      "reasoning_cat1": "\"Certain eligibility and suitability standards\" is generic, but the following enumerated representations supply the content; \"Interest Roll-over Request\" is capitalised without prior definition in this section.",
+      "reasoning_cat2": "Consistent with the Note Terms Roll-over Interest mechanic and the Noteholders entry requiring accredited status.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII. Suitable Investors — Eligibility and Suitability Standards"
+    },
+    {
+      "clause_id": "neg173",
+      "reasoning_cat1": "An introduction tying the representation to Rule 501 and requiring at least one of the listed grounds; precise.",
+      "reasoning_cat2": "Consistent with the Noteholders entry limiting purchasers to accredited investors.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1 Accredited Investor Representation"
+    },
+    {
+      "clause_id": "neg174",
+      "reasoning_cat1": "Tracks the Rule 501 thresholds with specific dollar figures; definite.",
+      "reasoning_cat2": "Consistent with the accredited-investor requirement stated elsewhere.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1(i) Individual"
+    },
+    {
+      "clause_id": "neg175",
+      "reasoning_cat1": "Limits the trust category to irrevocable trusts over $5,000,000 with a sophisticated purchase director; definite, though narrower than Rule 501 in one respect.",
+      "reasoning_cat2": "Clause (vi) separately admits living or other revocable trusts whose grantors and trustees qualify, so the two trust routes coexist without contradiction.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1(ii) Irrevocable Trust"
+    },
+    {
+      "clause_id": "neg176",
+      "reasoning_cat1": "An enumerated institutional list; it misnames the 1940 Act as \"the United States Companies Act of 1940,\" a defined-term error.",
+      "reasoning_cat2": "That label conflicts with \"Investment Company Act\" on the cover and \"Company Act\" in the risk factors — the same statute given three names.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1(iii) Bank, Insurance Company, Investment Company"
+    },
+    {
+      "clause_id": "neg177",
+      "reasoning_cat1": "Tracks Rule 501(a)(1) for plans with an either/or structure; the OCR \"gither\" is a typo not affecting meaning.",
+      "reasoning_cat2": "Consistent with the ERISA discussion in Section VI.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1(iv) Employee Benefit Plan"
+    },
+    {
+      "clause_id": "neg178",
+      "reasoning_cat1": "Enumerated entity types with a $5,000,000 asset test; definite, though the phrase \"not formed for the purpose of acquiring the Note\" is qualified later by paragraph 2.",
+      "reasoning_cat2": "Paragraph 2 supplies the look-through rule for entities formed to purchase a Note, so the two operate together rather than clashing.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1(v) Corporation, Partnership, LLC or Business Trust"
+    },
+    {
+      "clause_id": "neg179",
+      "reasoning_cat1": "A look-through clause whose self-reference (\"or this clause (vi)\") is standard in Rule 501 drafting; the OCR renders (i) as (1) and (iii) as \"Gii)\" but the referents are clear.",
+      "reasoning_cat2": "Consistent with paragraph 2's beneficial-owner requirement.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.1(vi) Entity Owned by Accredited Investors"
+    },
+    {
+      "clause_id": "neg180",
+      "reasoning_cat1": "A short look-through requirement referencing clauses (i)-(vi); definite.",
+      "reasoning_cat2": "Consistent with clause 1(v)'s \"not formed for the purpose of acquiring the Note\" exclusion and clause (vi)'s look-through.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.2 Entity Formed to Purchase a Note"
+    },
+    {
+      "clause_id": "neg181",
+      "reasoning_cat1": "Standard investment-intent representation with a no-arrangement covenant; definite.",
+      "reasoning_cat2": "Consistent with the transfer restrictions in the cover legend and Section V.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.3 Acquiring for Own Account"
+    },
+    {
+      "clause_id": "neg182",
+      "reasoning_cat1": "Sophistication and economic-risk representation in conventional terms.",
+      "reasoning_cat2": "Consistent with the risk-factor exhortation that investors must be able to bear a total loss.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII.4 Knowledge and Experience"
+    },
+    {
+      "clause_id": "neg183",
+      "reasoning_cat1": "\"Sole and absolute discretion\" to accept or reject in whole or part is unambiguous.",
+      "reasoning_cat2": "Matches the cover legend's reservation of the right to reject any subscription and the Noteholders entry; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII. Manager’s Discretion to Accept or Reject"
+    },
+    {
+      "clause_id": "neg184",
+      "reasoning_cat1": "\"Without unreasonable effort or expense\" is a soft limit on the information obligation, but conventional in offering documents.",
+      "reasoning_cat2": "Duplicates the cover-page access-to-information paragraph almost verbatim; consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX. Additional Information — Access to Information"
+    },
+    {
+      "clause_id": "neg185",
+      "reasoning_cat1": "States that the Summary of Principal Terms is \"necessarily incomplete and is qualified in its entirety by reference to the Note Purchase Agreement\"; definite in effect.",
+      "reasoning_cat2": "This is the provision that would resolve the numerous discrepancies between the Executive Summary and Section V by deferring to a document not in evidence — a live construction question, though the qualification itself is clear.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX. Memorandum Qualified by Note Purchase Agreement"
+    },
+    {
+      "clause_id": "neg186",
+      "reasoning_cat1": "Contact details and addressees; nothing to construe.",
+      "reasoning_cat2": "Consistent with the Principals identified throughout the memorandum.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX. Inquiries"
+    }
+  ]
+}

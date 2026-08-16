@@ -1,0 +1,564 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The clause pairs a fixed $300,000 salary with a discretionary annual review, and then adds the stray-marked sentence \"The next salary adjustment is scheduled for <— April 1, 2015,\" which can be read either as a binding commitment to raise pay or as a mere scheduling note within Board discretion; the editing artifact \"<—\" reinforces the uncertainty about whether \"adjustment\" means increase. That is a nameable ambiguity in \"scheduled for\" / \"adjustment\" against \"at the discretion of the Board.\"",
+      "reasoning_cat2": "Read with Section 9(d)(iii) (\"Good Reason\" where the Corporation \"significantly reduced Executive's Base Salary\") and the Board's unilateral adjustment power, the two provisions pull against each other on whether salary can be reduced at all. There is also friction with Section 4's opening promise that Executive \"shall receive the following.\"",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.34,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 4(a) — Base Salary (annual review at Board discretion)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"Eligible to participate in the Stock Option Plan (subject to approval by the Board and the Corporation's policies)\" gives no ascertainable entitlement, and the catch-all \"such other pension, life insurance ... and other employee benefits plans, if any\" leaves the reach of the enumerated list uncertain; \"eligible\" versus \"entitled\" (used for vacation in the next sentence) is a nameable tension. The final sentence's power to amend or terminate programs further clouds what was promised.",
+      "reasoning_cat2": "Section 4's preamble says Executive \"shall receive the following,\" while this subsection makes the option grant only an eligibility subject to Board approval, and Section 14's merger clause disclaims outside understandings about any option plan documents. That combination is a genuine candidate for whole-instrument argument about whether equity was promised.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.38,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 4(d) — Other Benefits (Stock Option Plan eligibility)"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The clause declares at-will employment and \"no ... contract of employment for any particular period of time\" yet simultaneously guarantees ninety days' prior notice on a without-Cause termination, so the interaction of \"at-will\" with the mandatory notice proviso is directly contestable. It also twice miscites \"this Section 4\" when the provision is Section 5, a mechanical cross-reference error affecting which termination-date mechanism governs.",
+      "reasoning_cat2": "It sits against Section 9(d) (\"Good Reason,\" a defined term with no operative consequence anywhere) and Section 5(b)'s cut-off of all post-termination compensation, raising the question whether the ninety-day notice can be bought out or ignored. The automatic termination on Disability also interacts awkwardly with Section 9(c)'s Board-determination process.",
+      "prob_cat1": 0.57,
+      "prob_cat2": 0.51,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 5(a) — Termination / at-will and ninety days' notice"
+    },
+    {
+      "clause_id": "pos4",
+      "reasoning_cat1": "The integration language is limited to \"the matters addressed herein,\" a qualifier whose boundary is arguable, and the verb error \"supersede\" for \"supersedes\" is harmless. The headings-disclaimer and counterpart mechanics are otherwise definite.",
+      "reasoning_cat2": "It must be reconciled with the simultaneously executed NDA referenced in Section 6, the Stock Option Plan and 401(k) Plan documents in Section 4, and Exhibit B (referenced in the invention-assignment paragraph but never attached), so the scope of the exclusivity claim is a live whole-instrument question. Section 11's writing requirement for modifications is consistent, but the external-document references are not fully harmonised.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.41,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 14 — Execution; Complete Agreement (merger clause)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble identifies the parties and date definitely, but it states that capitalized terms \"are defined in Section 8\" when the definitions sit in Section 9 (Section 8 is Legal Matters), a mechanical cross-reference error. The error is minor but it is a genuine misdirection in the text.",
+      "reasoning_cat2": "Checked against Section 9 (\"Definitions\") and Section 8 (\"Legal Matters\"): the internal reference is wrong, though the correct location is obvious from the whole. That makes the mismatch a curable inconsistency rather than a substantive conflict.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "This is a consideration recital in definite terms; no term in it needs boundary-drawing. Nothing operative turns on \"receipt of compensation\" or \"agreement to provide Executive with its Confidential Information.\"",
+      "reasoning_cat2": "The recited consideration of providing Confidential Information matches Section 6's confidentiality covenant, so it points the same way as the operative text. No conflict identified.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Background / Consideration"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A purpose statement expressing mutual desire; it creates no obligation and contains no term with contestable edges. Wording is plain.",
+      "reasoning_cat2": "\"The Corporation desires to assure itself of Executive's employment\" could be pressed against the at-will disclaimer in Section 5(a), but as a scope recital it is weak and easily harmonised. Low risk.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Scope and Purpose"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "A single fixed date, August 15, 2014; the typo \"start date for of\" does not change meaning. Definite.",
+      "reasoning_cat2": "Consistent with Section 17 (employment effective on the Effective Date) and the July 9 execution date in the preamble. No inconsistency found.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Start Date (Effective Date)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The phrase \"or in another management position assigned to Executive by the ... Board\" is open-ended, and \"expansion of the Corporation's business in worldwide\" is garbled; the duty statement is otherwise an illustrative \"in particular\" list against Exhibit A. The reassignment language is a nameable point of contestable breadth.",
+      "reasoning_cat2": "It sits directly against Section 9(d)(ii), which makes a material reduction in duties, responsibilities \"or title\" a Good Reason, so unilateral reassignment power and that definition pull in different directions. That is a specific, identifiable tension.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Employment and Duties"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "A short lead-in; \"shall receive the following\" is definite in form. Nothing to construe standing alone.",
+      "reasoning_cat2": "The mandatory \"shall receive\" is in tension with subsection (d)'s merely \"eligible to participate\" and (b)'s conditional bonus, so it may be invoked to argue entitlement. That is a modest whole-instrument point.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Compensation and Benefits (introduction)"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"The Executive shall have the right to receive an annual bonus in the amount of $140,000\" is stated as an entitlement but is then conditioned on remaining \"an employee ... in good standing on the date of payment\" and on unspecified KPIs \"established by the Corporation\"; \"good standing\" and the KPI mechanism are nameable vague terms. The annual/semi-annual payment mismatch adds to the uncertainty.",
+      "reasoning_cat2": "Checked against Section 5(b), which terminates rights to bonuses that would accrue after termination, and Section 18, which purports to make Section 4 survive termination; the two cannot be comfortably reconciled for a bonus earned but unpaid. That is a specific relational tension.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(b) Annual Bonus"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"Commencing at such time when the Company is able to make such matching contribution\" is an indefinite trigger wholly within the employer's assessment, and \"in an amount commensurate with Executive's position\" has no ascertainable measure. Those are nameable vagueness points.",
+      "reasoning_cat2": "The subsection uses \"the Company\" where the defined party is \"the Corporation,\" and its year-end Additional Bonus interacts with Section 5(b)'s post-termination cut-off. The inconsistency is minor and harmonisable.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(c) 401(k) Plan Participation"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"All reasonable out-of-pocket business expenses\" imports a reasonableness standard, but that is a familiar and workable limit tied to stated Corporation policies. Little to construe.",
+      "reasoning_cat2": "Consistent with Section 5(b)'s carve-out for amounts owing under standard policies. No conflict identified.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4(e) Expenses"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The lengthy parenthetical carve-out (\"vested retirement benefits ... accrued insurance benefits or other amounts owing under the Corporation's standard, Board-approved policies\") is a general phrase after specifics, leaving the reach of \"other amounts owing\" uncertain. That is a modest list-scope point.",
+      "reasoning_cat2": "It must be squared with Section 18, which makes Sections 4 through 18 survive termination, and with the Annual Bonus in 4(b); the survival clause and this cut-off are not easily reconciled. That is a named tension.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(b) No Other Compensation After Termination"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Bona fide amounts not in dispute\" is a self-limiting but somewhat circular formula; its boundary is nameable but narrow. Otherwise the offset right is plainly stated.",
+      "reasoning_cat2": "It coexists with the Remedies paragraph's broader excuse from \"paying or performing any liability or obligation owed to the Executive,\" which is a wider set-off right than this one. Mild tension only.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5(c) Offset"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The definition of \"the Business\" is an enumerated list of software and IT services with no catch-all, so its edges are reasonably fixed; the rest is acknowledgment language. Some risk attaches to how far \"the Business\" reaches for non-compete purposes.",
+      "reasoning_cat2": "Consistent with the Conflict of Interest paragraph, which uses \"Business\" as defined, and with the Judicial Modification clause. No conflict found.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Restrictive Covenants — Scope and Purpose"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "A one-sentence representation in definite terms about the absence of restrictive covenants. Nothing to construe.",
+      "reasoning_cat2": "It duplicates Section 7(ii) without contradicting it. Consistent with the whole.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Other Restrictions"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "The paragraph is a general prohibition on \"any new transactions, deals or relations of any kind including but not limited to the following\" followed by specifics, the classic general-versus-specific problem, and it is internally garbled (\"any third party, inconsistent, or incompatible with interests or obligations\"; a lone \"(1)\" with no \"(2)\"). \"Inconsistent, or incompatible with interests\" has no ascertainable boundary.",
+      "reasoning_cat2": "It runs for twenty-four months after \"the Term of this Agreement,\" but \"Term\" is nowhere defined in this at-will contract, and Section 6's Judicial Modification paragraph presupposes the restrictions may be overbroad. That undefined \"Term\" is a specific relational gap.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Conflict of Interest"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The covenant is drafted with defined terms (\"Solicit,\" \"Client,\" \"Competitive Enterprise\") and reasonably clear prohibited acts, though \"interfere with or damage ... any relationship\" is broad. Moderate but not acute vagueness.",
+      "reasoning_cat2": "Like the Conflict of Interest paragraph, it runs from \"the Term of this Agreement,\" a term never defined given at-will employment under Section 5(a). That gap invites a whole-instrument argument.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Non-Solicitation of Clients"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "\"Any direct or indirect communication of any kind whatsoever, regardless of by whom initiated\" is deliberately unbounded, so whether receiving an unsolicited approach counts is genuinely arguable. That breadth is nameable.",
+      "reasoning_cat2": "It is used consistently in both non-solicitation paragraphs and does not clash with any other provision. Consistent with the whole.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Definition of “Solicit”"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"Prospective client ... whose identity became known to the Executive in connection with the Executive's relationship to the Corporation\" has no temporal or materiality limit, and \"Client\" is defined circularly using \"Client.\" Both are nameable defects.",
+      "reasoning_cat2": "The defined term is used in the non-solicitation paragraph and also in Section 9(b)'s \"Cause\" definition, where the same breadth is imported; that is consistent use rather than conflict. No specific inconsistency.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Definition of “Client”"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The definition adds \"members of the Family of such Person,\" a capitalized term never defined, and mixes a 10% ownership test with a control test. That is a nameable gap.",
+      "reasoning_cat2": "Section 9(a) defines \"Affiliate\" for the Agreement as control-only, with no 10% ownership limb, so two different definitions of the same capitalized term coexist; the \"for purposes of this Section\" preface mitigates but does not eliminate the clash. That is a specific identified conflict.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.45,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Definition of “Affiliate”"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "A conventional entity-list definition ending with \"or other legal entity,\" a catch-all after specifics but of little practical bite here. Wording is otherwise plain.",
+      "reasoning_cat2": "Section 12(e) separately defines \"person\" with a different (broader) list, so two definitions of the same word coexist in the instrument. The overlap is unlikely to matter substantively.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Definition of “Person”"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"The abovementioned provision\" does not identify which covenant it refers to, and \"any and all damages that may be sustained\" is unbounded. The antecedent problem is a nameable defect.",
+      "reasoning_cat2": "It sits between the Client non-solicitation and employee non-solicitation paragraphs and duplicates the later Remedies paragraph, raising a question of which damages regime applies. Mild tension with the $50,000 fixed-damages clause.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Damages for Breach"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The exception \"unless prior written consent is given by the Executive\" is plainly a drafting error for the Corporation's consent, which as written renders the prohibition self-cancelling. That is a mechanical error that changes meaning.",
+      "reasoning_cat2": "The stipulated $50,000 per employee \"as fixed damages\" sits against the Remedies paragraph's entitlement to actual damages and all profits, and against the preceding \"any and all damages\" clause, so the measure of recovery is not harmonised. That is a specific relational tension.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Non-Solicitation of Employees"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "\"Includes all information and materials belonging to, used by, or in the possession of the Corporation relating to\" a long list is a broad inclusive definition, and the flat bar on any use \"at any time following the execution of this Agreement\" has no carve-out for use in performing the job. Those are nameable points.",
+      "reasoning_cat2": "It is reinforced by the simultaneously executed NDA referenced later in Section 6 and by the Background recital, so the direction is consistent; the only friction is the absent carve-out for on-the-job use. No clear conflict.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Confidentiality and Ownership"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "The sentence is a run-on with unbalanced parentheses, and the Assigned/Retained Invention carve-out (\"outside of his capacity as an employee\") is a boundary that will be contested in fact but is at least articulated. The drafting mechanics are genuinely defective.",
+      "reasoning_cat2": "It excepts \"the materials listed on Exhibit B attached hereto,\" but only Exhibit A is attached to this instrument, so a referenced constituent document is missing. That is a specific whole-instrument gap.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Assignment of Inventions / Work for Hire"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"Adequate and current written records of all inventions\" is vague as to adequacy, and the phrase \"Assigned Inventions other than Retained Inventions\" is redundant since Retained Inventions are excluded from Assigned by definition. Minor but nameable.",
+      "reasoning_cat2": "The redundancy recurs in the Assistance paragraph, so it is a consistent (if clumsy) usage rather than a conflict. Low relational risk.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Maintenance of Records"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "The power-of-attorney sentence says the appointment applies \"if the Corporation is unable because of the Corporation's mental or physical incapacity ... to secure the Corporation's signature,\" which is nonsensical: it should refer to the Executive throughout. That mechanical error goes to when the attorney-in-fact power arises.",
+      "reasoning_cat2": "The obligation to assist \"at the Corporation's expense\" and to continue post-termination fits Section 18's survival provision. Aside from the internal misnaming, no conflict with other provisions.",
+      "prob_cat1": 0.53,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Assistance"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "A one-sentence acknowledgment of a separately executed NDA; definite on its face. Its content is unknowable from this text but the sentence itself is clear.",
+      "reasoning_cat2": "Section 14's exclusive-integration language and Section 9(b)(v)'s reference to breach of \"the NDA\" mean the NDA's status alongside this Agreement is a live question. That gives a modest relational risk.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Non-Disclosure Agreement"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Acknowledgment and stipulation language; the tolling sentence (\"extended by any period during which the Executive is in breach\") is definite in intent even if enforceability is a legal question. Little to construe.",
+      "reasoning_cat2": "Consistent with the Judicial Modification and Remedies paragraphs, which similarly bolster the covenants. No conflict identified.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Executive’s Acknowledgments"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"Intentionally disparage\" and \"any public statement reflecting negatively\" are somewhat elastic, but the clause is short and its target is clear. Moderate-low vagueness.",
+      "reasoning_cat2": "Its exception for statements \"required by applicable law or compelled by process of law\" fits the litigation-related provisions in Section 8. No inconsistency found.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Non-Disparagement"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The blue-pencil mechanism is clearly expressed, though the reference to \"any other provision of this letter\" is a mechanical error (this is an Agreement, not a letter), and the final acknowledgment about \"any further geographic restriction within the Territory\" is convoluted. The error does not change substance much.",
+      "reasoning_cat2": "It overlaps with Section 11's severability language without contradicting it, and it presupposes the Territory defined in the Conflict of Interest paragraph. Consistent overall.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Judicial Modification"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "\"If it breaches\" uses the wrong pronoun for the Executive, and being \"excused from paying or performing any liability or obligation owed to the Executive (including compensation)\" for a breach of \"any of the covenants of this Agreement\" is a sweeping general phrase whose reach is uncertain. Those are nameable defects.",
+      "reasoning_cat2": "It is in tension with Section 4's compensation promises and Section 5(c)'s narrow offset right limited to \"bona fide amounts not in dispute,\" and it presupposes a \"Third Party Beneficiary\" that Section 10 does not actually create. Those are specific relational problems.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Remedies"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Three enumerated representations in standard, definite terms; no elastic phrase requiring construction. Plain wording.",
+      "reasoning_cat2": "It duplicates the Other Restrictions paragraph in Section 6 consistently. No conflict identified.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Representations of the Executive"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Governing law and venue are specified with precision, including the conflicts-of-law exclusion. Nothing ambiguous.",
+      "reasoning_cat2": "Consistent with Section 8(b)'s jury waiver and 8(c)'s costs clause; no arbitration or other dispute forum appears elsewhere to conflict. Coherent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(a) Jurisdiction and Venue"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "A comprehensive, plainly drafted jury waiver in capitals; scope is expressly stated. Nothing to construe.",
+      "reasoning_cat2": "Fits Section 8(a)'s selection of New York courts. No inconsistency.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(b) Waiver of Trial By Jury"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "\"Losing party\" and \"prevailing party\" are undefined for mixed outcomes, a familiar but real boundary question; \"costs\" is at least defined in Section 12(f). Modest risk.",
+      "reasoning_cat2": "It applies mutually, whereas the Remedies paragraph gives the Corporation one-way cost recovery for covenant breaches; the two can be read together but not seamlessly. Mild tension.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(c) Costs"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "A short control-based definition; clear on its own terms. \"Control\" is undefined here but the Section 6 definition supplies a gloss.",
+      "reasoning_cat2": "It contradicts the Section 6 definition of \"Affiliate,\" which adds a 10% ownership test and \"members of the Family,\" so the same capitalized term carries two meanings in one instrument. That is a specific identified conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9(a) Definition of “Affiliate”"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "Limb (v) cites \"the Restrictive Covenants set forth in Section 5,\" but the restrictive covenants are in Section 6, a mechanical cross-reference error; limb (iii)'s \"misconduct\" with \"substantial adverse affect,\" illustrated by \"persistent negative feedback from Clients,\" is also elastic and drafted with a general \"including without limitation.\" Both are nameable.",
+      "reasoning_cat2": "The miscitation to Section 5 rather than Section 6, plus the catch-all \"breached this Agreement ... or any material Corporation policy,\" makes Cause nearly co-extensive with any breach, which undercuts the ninety-day without-Cause notice in Section 5(a). That is a specific relational problem.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9(b) Definition of “Cause”"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The definition supplies a two-tier test with a fallback and expressly commits determination to the Board's good-faith judgment; \"essential duties ... even with reasonable accommodations\" is a recognisable standard. Moderate-low ambiguity.",
+      "reasoning_cat2": "Section 5(a) makes employment terminate \"automatically and immediately upon ... Disability,\" which sits awkwardly with a definition requiring a Board determination after a cooperative examination process. That is a modest sequencing tension.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9(c) Definition of “Disability”"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The definition is internally garbled, with the cure-and-diligent-pursuit clause repeated twice in each limb, and limb (iii) uses \"significantly reduced Executive's Base Salary\" with no threshold. \"Materially reduced Executive's overall level of duties and responsibilities or title\" is likewise a nameable vague standard.",
+      "reasoning_cat2": "\"Good Reason\" is defined but never used in any operative provision — no severance, notice or payment attaches to a Good Reason resignation anywhere in Sections 4, 5 or 18 — leaving an orphan definition that cannot be reconciled with the instrument read as a whole. It also collides with Section 3's reassignment power and Section 4(a)'s discretionary salary adjustment.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.54,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9(d) Definition of “Good Reason”"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The assignment mechanics and the assignor-release condition are stated clearly; the heading promises \"Third Party Enforcement\" but the body only addresses assignees and successors. That heading/body mismatch is a nameable oddity, softened by Section 14's disclaimer of headings.",
+      "reasoning_cat2": "The Remedies paragraph defines \"Third Party Beneficiary\" by cross-reference to this Section, yet this Section creates no third-party beneficiary rights, so the two cannot be fully reconciled. That is a specific identified incoherence.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Third Party Enforcement; Assignment; Successors"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Conventional waiver-and-severability language, expressed in definite terms with a signed-writing requirement. Little to construe.",
+      "reasoning_cat2": "It overlaps with the Judicial Modification paragraph in Section 6, which has its own reformation regime for restrictive covenants; the two are duplicative rather than contradictory. Low relational risk.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Waiver; Modification; Severability"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "An interpretive-conventions clause; each limb is a definitional expansion and the enumerations are inclusive by design. Nothing genuinely uncertain.",
+      "reasoning_cat2": "Its \"person\" definition differs from the one in Section 6, and its \"days means calendar days\" rule coexists with \"business days\" in Section 9(d); both are minor and harmonisable. No real conflict.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Recurring Words"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Delivery methods and effectiveness rules are set out precisely, including a deemed-receipt date. Wording is definite.",
+      "reasoning_cat2": "It directs notices to \"the addresses for the parties listed below,\" but the Executive's address line on the signature page is blank, so the mechanism is incomplete as executed; that matters for the ninety-day notices in Section 5(a). That is a specific gap.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Notices"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "A discretionary key-man insurance right with a cooperation duty, stated plainly; \"reasonably necessary\" is a mild qualifier. Low risk.",
+      "reasoning_cat2": "It coexists with Section 9(c)'s reference to the Corporation's long-term disability plans without contradiction. Consistent with the whole.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15. Insurance"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "A short anti-contra-proferentem clause; \"no rule of strict construction\" is well understood, and the \"tule\" typo is obvious. Little to construe.",
+      "reasoning_cat2": "It sits alongside the heavily employer-favouring covenants in Section 6 but does not contradict any provision. No conflict identified.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. No Strict Construction"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "One sentence tying employment to the defined Effective Date; definite. Nothing ambiguous.",
+      "reasoning_cat2": "Section 14 makes the Agreement effective on execution while this makes employment effective on the August 15 Effective Date, a distinction that is coherent though it must be read together. Low tension.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. Effectiveness of Agreement"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "\"Sections 4 through 18, inclusive\" is stated numerically but sweeps in Section 4 (compensation), Section 5 (termination) and Section 18 itself, which makes the range implausible as written. That is a nameable scope/mechanical problem.",
+      "reasoning_cat2": "Making Section 4 survive termination cannot be reconciled with Section 5(b), which extinguishes all post-termination salary, bonus and benefit rights, and with Section 4's own \"while Executive is employed\" limitation. That is a specific conflict.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.53,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18. Survival"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "A technical 409A delay mechanism with defined triggers, statutory cross-references and a clear Delay Period. Detailed and definite.",
+      "reasoning_cat2": "Its \"notwithstanding anything in this Agreement to the contrary\" language expressly subordinates other payment timing, including Section 4(b), so it harmonises rather than conflicts. Coherent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(a) Section 409A Compliance"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "An agreement to \"work in good faith to amend\" is by nature an unenforceable-ish agreement to agree, and \"preserves as nearly as possible the original intent and economic effect\" is imprecise. Those are nameable soft standards.",
+      "reasoning_cat2": "It fits Section 19(a) and Section 11's written-modification requirement without contradiction. No specific conflict.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19(b) Section 409A Amendment"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "A boilerplate acknowledgment of reading and voluntariness; nothing operative to construe. Plain.",
+      "reasoning_cat2": "It matches the counsel representation in Section 7 and the no-strict-construction clause in Section 16. Consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Executive Acknowledgment"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "\"Responsibilities shall include, without limitation, the following\" is an open-ended list, and \"strategic client accounts\" is undefined; the duties are aspirational rather than measurable. Modest general-versus-specific risk.",
+      "reasoning_cat2": "Exhibit A is expressly incorporated by Section 3 and elaborates rather than contradicts the duties there. Consistent with the whole.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A — Managing Director Responsibilities"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Bulleted aspirational objectives (\"Ensure proper knowledge management,\" \"ensure excellent client relations and satisfaction\") are unmeasurable, though as a job description that is normal. Some vagueness could matter if performance were the issue.",
+      "reasoning_cat2": "It elaborates Section 3's business-development accountability and Exhibit A's introduction; no provision points the other way. Consistent.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A — 1. Business development"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "Similar bulleted duties, including \"reliable forecasting\" and \"as required,\" which are unmeasurable standards. Vague but ordinary for a role description.",
+      "reasoning_cat2": "Fits Section 3's line-management accountability and the Exhibit A introduction; it would only matter if Cause under Section 9(b)(iii) were invoked. Broadly consistent.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A — 2. Delivery and Operations"
+    }
+  ]
+}

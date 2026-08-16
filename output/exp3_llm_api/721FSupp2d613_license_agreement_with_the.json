@@ -1,0 +1,224 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble simply identifies the two parties and recites mutual consideration; no term in it carries competing meanings and there is no general-vs-specific tension.",
+      "reasoning_cat2": "It is consistent with the operative provisions that follow, including clause 12's definition of \"City\" and \"Hardrives\"; nothing in the instrument points the other way.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble / Consideration"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The grant is expressly open-ended — \"including, but not limited io [to], fixtures, existing improvements, and appurtenant structures\" — so the catch-all's reach beyond the enumerated items is uncertain, and the scanned typo compounds it.",
+      "reasoning_cat2": "It defines the Premises by reference to Exhibit A, which itself says the Premises \"shall include, but is not limited to\" the described parcel, leaving the licensed area indeterminate when read with clause 6.C's easement rights.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Grant of License"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "\"Other similar products\" after \"paving materials\" is a classic ejusdem generis catch-all, and \"economic development purposes\" is a vague boundary for permitted use.",
+      "reasoning_cat2": "It sits reasonably with clause 5's contemplated Development Agreement and with 7.D's environmental covenants; no direct contradiction surfaced.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Use"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The rental obligation is a definite sum, $1.00 per year, with no term open to more than one reading.",
+      "reasoning_cat2": "Clause 4 keys default to \"the date payment is due\" for \"annual payments,\" but this clause never fixes a due date, leaving the default trigger dependent on a fact the contract omits.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Rental"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "\"[W]ithin thirty (80) days\" is a plain mechanical error where the numeral contradicts the written word, and the consequence clause (\"shall surrender all rights\") is otherwise definite.",
+      "reasoning_cat2": "It presupposes a payment due date that clause 3 never supplies, and its self-executing forfeiture sits somewhat awkwardly with clause 5's termination structure.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Event of Default"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The disjunctive \"(1) for a term of one (1) year ... or (2) until the date that title ... is conveyed\" leaves it genuinely unclear whether the license expires after one year, continues until conveyance, or ends on whichever occurs first or last.",
+      "reasoning_cat2": "It references a Development Agreement to be entered by December 31, 1999, which the integration clause 9 says is not part of this instrument, and the survival clause 11 gives no guidance on post-term status.",
+      "prob_cat1": 0.54,
+      "prob_cat2": 0.39,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Terms"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The authorization warranty is a definite factual representation about Board of Control and City Council approval, with no term needing construction on its face.",
+      "reasoning_cat2": "It is consistent with the signature block executed by the Board of Control and with clause 7.A's mirror warranty; no conflicting provision found.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.A. City Warranty - Authorization"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "The exceptions to clear title include \"any and all unrecorded easements identified by the City prior to the execution,\" an unbounded and unlisted category, and \"threatened\" claims is a vague boundary.",
+      "reasoning_cat2": "The absolute assurance of no proceedings \"which may affect the Premises\" sits uneasily with the Exhibit B environmental report disclosing RCRA/CERCLA listing of the larger complex.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.B. City Warranty - Authority and Clear Title"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "\"[A]ll easements and right of ways, as may be necessary\" is vague as to which easements are included and who judges necessity.",
+      "reasoning_cat2": "It overlaps with clause 6.B's carve-out of easements and access rights appurtenant to the Center Street Bridge, creating a mild tension between rights granted and rights reserved.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.C. City Warranty - Easements and Rights of Way"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The syntax is defective: the qualifier \"in violation of any applicable environmental laws\" trails the exception clause, so it is unclear whether the warranty denies all contamination or only unlawful contamination, and \"except as set forth in\" the ESA report is an undefined carve-out.",
+      "reasoning_cat2": "Exhibit B's report describes a 5.44-acre \"Parcel No. 3\" within a 123.07-acre site, while Exhibit A's Parcel No. 3 is 58.086 acres, so the carve-out cannot be cleanly mapped onto the Premises, and clause 8's \"as is\" acceptance pulls against the warranty.",
+      "prob_cat1": 0.49,
+      "prob_cat2": 0.48,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6.D. City Warranty - Environmental"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Apart from the mis-scanned section letter \"f.\" for \"7.\", the authorization warranty is definite and admits of one reading.",
+      "reasoning_cat2": "It mirrors clause 6.A and is consistent with the signature block; no conflicting provision identified.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.A. Hardrives Warranty - Authorization"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "\"[L]ay no waste\" and \"in as good a condition as received\" are elastic standards, and \"normal wear and tear\" gives an uncertain boundary for an industrial paving operation.",
+      "reasoning_cat2": "\"[A]s good a condition as received\" interacts awkwardly with clause 6.D's environmental warranty and Exhibit B's baseline, since the received condition is itself contested by those documents.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.B. Hardrives Warranty - No Waste / Surrender"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The insurance obligation states a definite amount, coverage type, and additional-insured requirement; nothing needs construing.",
+      "reasoning_cat2": "It coordinates naturally with the indemnity in 7.E and conflicts with no other provision.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.C. Hardrives Warranty - Insurance"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "\"[A]ll precautions necessary\" is a vague standard, and \"Environmental Protection Agency laws or regulations\" is an imprecise designation of the applicable body of law.",
+      "reasoning_cat2": "It coexists with clause 6.D's City warranty about pre-existing contamination, and the two together leave allocation of responsibility for legacy conditions unsettled.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.D. Hardrives Warranty - Hazardous Materials"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "\"[A]ny and all claims, liabilities, damages, and losses ... resulting from injury on or about the Premises\" is broad but ambiguous as to whether it reaches the City's own first-party claims and environmental liabilities as opposed to third-party injury claims.",
+      "reasoning_cat2": "Read against clause 6.D's City environmental warranty and clause 8's \"as is\" carve-out, the indemnity's reach to pre-existing contamination is genuinely uncertain.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.E. Hardrives Warranty - Indemnification"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The compliance covenant is broad but its meaning is plain; \"all work performed on the Premises\" has an evident scope.",
+      "reasoning_cat2": "It duplicates and reinforces 7.D without contradicting any other term of the instrument.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7.F. Hardrives Warranty - Compliance of Work"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The \"as is\" disclaimer is immediately qualified by \"apart from warranties and representations made by the City,\" so the extent to which the disclaimer actually operates is uncertain on its own words.",
+      "reasoning_cat2": "It stands in direct tension with clause 6.D's affirmative environmental warranty and clause 11's survival provision, a combination that would have to be harmonised.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. As Is Condition"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The integration and amendment language is standard and definite, marred only by a stray duplicated period that changes nothing.",
+      "reasoning_cat2": "It declares this the entire agreement while clause 5 makes the term depend on a separate Development Agreement, and its anti-assignment rule sits against clause 12's inclusion of \"successors and assigns.\"",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Entire Agreement / Amendment / Assignment"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "A one-line Ohio choice-of-law provision with no ambiguous term.",
+      "reasoning_cat2": "Nothing else in the instrument selects a different law or forum.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Governing Law"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "The survival clause is broad but its wording is clear, though \"survive the execution and delivery\" says nothing about survival beyond termination.",
+      "reasoning_cat2": "Its interaction with clause 8's \"as is\" acceptance and clause 5's one-year term leaves the post-term life of the City's warranties somewhat open.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Survival"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The definitional sweep to \"heirs, executors, administrators, successors, and assigns\" is boilerplate with a clear meaning.",
+      "reasoning_cat2": "It arguably pulls against clause 9's prohibition on assignment without written consent, a recurring source of construction disputes in short agreements like this.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Successors and Assigns"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "The exhibit opens with \"shall include, but is not limited to,\" which undercuts the precision of the metes-and-bounds description that follows and leaves the outer boundary of the Premises indeterminate.",
+      "reasoning_cat2": "Its 58.086-acre \"Parcel No. 3\" does not match the 5.44-acre \"Parcel No. 3\" described in the Exhibit B environmental report incorporated by clause 6.D, a mismatch that cannot be harmonised on the face of the documents.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Exhibit A - Description of Premises"
+    }
+  ]
+}

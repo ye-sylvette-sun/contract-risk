@@ -1,11 +1,16 @@
 """Step 1 — locate the clauses the parties disputed (one LLM call per case).
 
-The core judgment step. The model is given the opinion and every document
+The core judgment step. The model is given the opinion and every contract
 registered for the case, and it says which clauses the parties disputed and
 where they sit: a line range plus a short verbatim anchor at each end. A clause
 is positive because the opinion shows the two sides fought over it and the court
 discussed it — whatever the court decided. Reaching litigation at all is what
 makes a clause risky, so one the court examined and upheld counts just as much.
+
+Every block it sees is a contract now — which one is a contract was settled
+upstream, in step 0 (docs/DESIGN.md §4). What it still has to judge is which
+CLAUSE was disputed, and it may legitimately answer "none": the opinion can turn
+on an agreement that was never filed.
 
 The model does not write the clause text and it does not choose the label: the
 taxonomy codes come from the Westlaw keys the case was selected under and are
@@ -14,8 +19,11 @@ of the opinion that shows the dispute, which is what keeps clause selection tied
 to the court's own words rather than to what looks risky to a model of the same
 family as the ones under evaluation.
 
+Contracts step 0b rejected as two-column scans are dropped before the call. A
+case whose every contract was rejected is recorded as skipped and costs nothing.
+
 Input : output/cases.json, output/contracts.json, output/contracts/*.md,
-        output/opinions/<id>.txt
+        output/opinions/<id>.txt, output/layout.json
 Output: output/clauses.json  (resumable — re-runs only what is missing)
 
 Usage:
@@ -29,7 +37,7 @@ OUT = lib.OUT / "clauses.json"
 
 
 def blocks(ids, texts):
-    """The registered documents for one case, numbered and delimited.
+    """The registered contracts for one case, numbered and delimited.
 
     The marker names the contract_id at both ends, so the id the model must
     quote back is never more than a screen away from the lines it is reading.
@@ -39,6 +47,32 @@ def blocks(ids, texts):
         f"{lib.numbered(texts[cid])}\n"
         f"---------- CONTRACT {cid} END ----------"
         for cid in ids)
+
+
+def taxonomy_of(value):
+    """The code the model meant. A key label maps to its code; brackets go.
+
+    `prompts/extract.schema.json` now enumerates the six codes, so a wrong
+    spelling cannot come back at all. This exists because it did: before the
+    enum, one run answered with the Westlaw KEY LABEL — `k152`, `k143(2)` —
+    instead of the code that label maps to, and once with `[1.1]`. All twelve
+    named the right risk type in the wrong vocabulary, and two whole cases lost
+    every clause they had to it.
+
+    It concedes nothing on provenance. The result still has to be one of the
+    codes the CASE was filed under, which is the check that matters: the label
+    comes from the Westlaw keys, never from the model.
+
+    The label is tried BEFORE the brackets are stripped: `k143(2)` is a key
+    label whose own name ends in a bracket, and stripping first turns it into
+    `k143(2` — which would have thrown away the six clauses this was written to
+    recover.
+    """
+    s = str(value).strip()
+    for candidate in (s, s.strip("[]() ")):
+        if candidate in lib.KEY_BY_LABEL:
+            return lib.KEY_BY_LABEL[candidate][1]
+    return s.strip("[]() ")
 
 
 def check(clause, case, texts, opinion_lines):
@@ -53,7 +87,8 @@ def check(clause, case, texts, opinion_lines):
     # a clause was disputed: a clause the court examined and upheld is still a
     # positive, so nothing here may turn on how the case came out.
     codes = lib.codes_of(case)
-    if clause["taxonomy"] not in codes:
+    code = taxonomy_of(clause["taxonomy"])
+    if code not in codes:
         return None, f"taxonomy {clause['taxonomy']!r} is not one of {codes}"
 
     found, why = lib.locate(texts[cid], clause["start_line"], clause["end_line"],
@@ -71,10 +106,10 @@ def check(clause, case, texts, opinion_lines):
     # to the code the clause carries, so a row can always be traced back to the
     # headnotes it was selected under.
     keys = sorted(k for k in case["keys"]
-                  if lib.KEY_BY_LABEL[k][1] == clause["taxonomy"])
+                  if lib.KEY_BY_LABEL[k][1] == code)
     return {
         "clause_name": clause["clause_name"],
-        "taxonomy": clause["taxonomy"],
+        "taxonomy": code,
         "key": ",".join(keys),
         "contract_id": cid,
         "claimed_lines": [clause["start_line"], clause["end_line"]],
@@ -96,6 +131,7 @@ def main():
 
     cases = lib.read_json(lib.OUT / "cases.json", {})
     registry = lib.read_json(lib.OUT / "contracts.json", {})
+    layout = lib.read_json(lib.OUT / "layout.json", {})
     done = lib.read_json(OUT, {})
 
     by_case = {}
@@ -106,6 +142,22 @@ def main():
         if (args.case and citation != args.case) or citation in done:
             continue
         case = cases[citation]
+
+        # A two-column scan is dropped here rather than in step 0, so the
+        # registry stays a record of what was extracted and only this step's
+        # view of a case narrows. An unscreened contract is used: the screen is
+        # a filter on known-bad documents, not a gate that everything must pass.
+        dropped = [c for c in ids if layout.get(c, {}).get("two_column")]
+        ids = [c for c in ids if c not in dropped]
+        for cid in dropped:
+            print(f"  drop {cid}: two-column scan (step 0b)")
+        if not ids:
+            print(f"skip   {citation}: every contract is a two-column scan")
+            done[citation] = {"case_desc": "skipped: every contract of this case "
+                                           "is a two-column scan",
+                              "clauses": [], "rejected": []}
+            lib.write_json(OUT, done)
+            continue
         opinion = (lib.OPINIONS / f"{case['id']}.txt").read_text(encoding="utf-8")
         opinion_lines = opinion.split("\n")
         texts = {cid: (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")

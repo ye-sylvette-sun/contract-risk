@@ -1,0 +1,1354 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The grant turns on \"Forgery or alteration of a Financial Instrument\" and then lists three specific check/draft scenarios introduced by \"including,\" leaving open whether the enumerated items limit the general grant and whether an electronic communication can be a forged Financial Instrument. Both the general-vs-specific tension and the reach of \"Forgery\" make this genuinely contestable.",
+      "reasoning_cat2": "Read with the Forgery definition and the Financial Instrument definition in Subsection 11, and with Exclusion 16, the clause's scope depends on those interlocking terms rather than conflicting with them, though the boundary against Insuring Clause 5 is not sharply drawn.",
+      "prob_cat1": 0.63,
+      "prob_cat2": 0.24,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Insuring Clause 4 — Forgery Coverage (Subsection 4)"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "Everything turns on \"direct loss\" and \"resulting from Computer Fraud committed by a Third Party\" — whether a loss set in motion by a spoofed communication but executed by the insured's own employees is \"direct\" is a classic point of construction. The single sentence carries several defined terms whose combined reach is not evident from the wording.",
+      "reasoning_cat2": "Checked against Exclusion 12(g) (indirect or consequential loss) and the Computer Fraud/Computer Violation definitions, which pull the grant in narrower directions without squarely contradicting it; the data-breach endorsement's carve-out only for Insuring Clause 6 also colours its scope.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.28,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Insuring Clause 5 — Computer Fraud Coverage (Subsection 5)"
+    },
+    {
+      "clause_id": "pos3",
+      "reasoning_cat1": "The grant is short but wholly dependent on the defined term \"Funds Transfer Fraud,\" and \"direct loss\" again invites argument about causal remoteness. The words themselves give a court real work in the fraudulent-instruction context.",
+      "reasoning_cat2": "Compared with Insuring Clause 5 and with the privacy endorsement's proviso preserving coverage under Insuring Clause 6, the clause fits the structure but its overlap with Computer Fraud coverage leaves allocation questions.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.26,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Insuring Clause 6 — Funds Transfer Fraud Coverage (Subsection 6)"
+    },
+    {
+      "clause_id": "pos4",
+      "reasoning_cat1": "\"Unlawful taking or the fraudulently induced transfer ... resulting from a Computer Violation\" packs two distinct concepts and a causation link into one line; whether an employee-executed wire is a \"fraudulently induced transfer\" resulting from a Computer Violation is genuinely arguable. The phrase \"resulting from\" carries the whole dispute.",
+      "reasoning_cat2": "Read with the Computer Violation and Computer System definitions and Insuring Clause 5, it is structurally consistent, but its reach depends entirely on those companion definitions.",
+      "prob_cat1": 0.68,
+      "prob_cat2": 0.24,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition of \"Computer Fraud\" (Subsection 11)"
+    },
+    {
+      "clause_id": "pos5",
+      "reasoning_cat1": "The proviso \"owned and operated or leased and operated by an Organization\" is the pinch point: whether a hosted or cloud email service used by the insured qualifies is not answerable from the words, and \"communication facilities which are connected to such computer\" is elastic.",
+      "reasoning_cat2": "Checked against the Computer Violation definition and Insuring Clause 5, which depend on this boundary; there is no contradiction, only dependence.",
+      "prob_cat1": 0.61,
+      "prob_cat2": 0.21,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition of \"Computer System\" (Subsection 11)"
+    },
+    {
+      "clause_id": "pos6",
+      "reasoning_cat1": "\"Fraudulent ... entry of Data into ... a Computer System\" and \"change to Data elements\" are the terms courts have had to construe against spoofed message headers; whether manipulated address data is an \"entry\" or \"change\" is squarely ambiguous. The concluding \"directed against an Organization\" adds a further undefined qualifier.",
+      "reasoning_cat2": "Read alongside the Data definition and Insuring Clause 5, it is internally coherent; the exclusion for data-reconstitution fees in 12(h) does not conflict with it.",
+      "prob_cat1": 0.73,
+      "prob_cat2": 0.23,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition of \"Computer Violation\" (Subsection 11)"
+    },
+    {
+      "clause_id": "pos7",
+      "reasoning_cat1": "\"Similar written promise, order or direction to pay a sum certain in Money\" is a general catch-all following the specifics \"check, draft,\" raising an ejusdem generis question about whether emails or electronic payment instructions qualify.",
+      "reasoning_cat2": "Compared with Insuring Clause 4 and the Legal Expenses Extension in Subsection 22, which both hinge on this term; consistent but scope-determinative.",
+      "prob_cat1": 0.54,
+      "prob_cat2": 0.2,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition of \"Financial Instrument\" (Subsection 11)"
+    },
+    {
+      "clause_id": "pos8",
+      "reasoning_cat1": "\"Signing of the name of another natural person or organization\" plus the carve-out for signatures including one's own name creates a contestable boundary, and the sentence treating electronic signatures the same raises whether a spoofed sender name is a \"signing.\" The term is definitionally narrow yet its application is disputable.",
+      "reasoning_cat2": "Checked against Insuring Clauses 1, 4 and 9 and Exclusion 12(n), all of which use Forgery; no contradiction, but the definition's narrowness shapes several grants at once.",
+      "prob_cat1": 0.57,
+      "prob_cat2": 0.19,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition of \"Forgery\" (Subsection 11)"
+    },
+    {
+      "clause_id": "pos9",
+      "reasoning_cat1": "The qualifiers \"purportedly issued by an Organization\" and \"without such Organization's knowledge or consent\" are the operative battleground where employees knowingly authorised a transfer induced by fraud; \"other than Forgery\" adds a further exclusionary edge.",
+      "reasoning_cat2": "Read with Insuring Clause 6 and the privacy endorsement's proviso preserving Funds Transfer Fraud coverage, the definition is consistent with the instrument, though it interacts closely with the Computer Fraud grant.",
+      "prob_cat1": 0.66,
+      "prob_cat2": 0.24,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Definition of \"Funds Transfer Fraud\" (Subsection 11)"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The definition of terrorism is copied from the statute and is precise about certification, actors and effects, leaving little to construe.",
+      "reasoning_cat2": "It is a disclosure notice rather than an operative grant and does not contradict any coverage section, though the policy contains no terrorism-specific term to test it against.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policyholder Disclosure Notice of Terrorism Insurance Coverage — availability of terrorism coverage"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "A plain statement of the federal reimbursement formula with a fixed percentage; nothing ambiguous.",
+      "reasoning_cat2": "Purely informational and consistent with the rest of the notice and the policy.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policyholder Disclosure Notice — federal share of losses"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "Definite numeric cap and program year; the only defect is an OCR-run-together word that does not change meaning.",
+      "reasoning_cat2": "Consistent with the following paragraph on the insurer's cap and with the policy generally.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policyholder Disclosure Notice — $100 billion Treasury cap"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The pro rata allocation language is statutory and specific as to trigger and consequence.",
+      "reasoning_cat2": "Sits coherently with the preceding Treasury cap paragraph; no operative provision contradicts it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policyholder Disclosure Notice — insurer's $100 billion cap and pro rata allocation"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A single figure stated as $-0-; unambiguous on its face.",
+      "reasoning_cat2": "There is mild tension with the notice's statement that terrorism coverage is made available while no premium is attributed to it, but neither is an operative grant.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Policyholder Disclosure Notice — terrorism premium"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "An informational statement about producer compensation with no obligation created; nothing to construe.",
+      "reasoning_cat2": "Unrelated to any operative term of the policy and inconsistent with nothing.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Important Notice to Policyholders — producer compensation"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The sentence plainly identifies three coverage sections as claims-made; the wording is definite.",
+      "reasoning_cat2": "None of the named coverage sections appears in Item 3 of the Declarations, which lists only General Terms, Crime and Special Coverage, so the notice describes coverage the policy does not contain.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New York Notice — claims-made basis notice"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Conditional and clear: if a retroactive date exists, no coverage before it.",
+      "reasoning_cat2": "It presupposes claims-made sections that this policy does not include, a mismatch with the Declarations, though it is framed as a notice to prospective insureds.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New York Notice — PRIOR ACTS"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "States the claims-made trigger and cessation of coverage in definite terms.",
+      "reasoning_cat2": "The Crime Coverage Section is loss-sustained/discovery based, so this notice does not describe the coverage actually purchased; it is a notice rather than an operative clause.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New York Notice — CLAIMS MADE DURING POLICY PERIOD"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Specific periods (sixty days automatic, one year optional) are stated with precision; the closing sentences about gaps are explanatory.",
+      "reasoning_cat2": "It asserts the policy provides an automatic extended reporting period for coverage sections not purchased here, which does not match the Declarations or the Crime section's sixty-day discovery mechanics.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New York Notice — EXTENDED REPORTING PERIOD"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "A rate-behaviour statement with no operative content; \"substantial\" is vague but creates no obligation.",
+      "reasoning_cat2": "Informational and not contradicted by any operative term.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "New York Notice — CLAIMS-MADE POLICY MATURITY"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The all-caps warning is qualified by \"whichever are purchased\" and states the defence-costs erosion rule plainly.",
+      "reasoning_cat2": "Because none of the listed claims-made sections was purchased, the warning is inoperative here, but its own qualifier prevents a genuine conflict with Item 3.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Terms and Conditions Declarations — claims made coverage warning"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Standard consideration recital with no operative uncertainty.",
+      "reasoning_cat2": "Consistent with the Declarations and the coverage sections it introduces.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "General Terms and Conditions — preamble/consideration"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "\"Coverage shall extend anywhere in the world\" is short but categorical; there is no term to contest.",
+      "reasoning_cat2": "Checked against the trade-sanctions endorsement, which cuts back worldwide coverage where sanctions prohibit it, but that endorsement expressly overrides rather than contradicts.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Territory"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The priority rule is stated clearly: coverage section terms control over the General Terms in case of inconsistency.",
+      "reasoning_cat2": "This is the very provision that resolves inter-section conflicts, and it functions coherently with the Crime section's own definitions of Insured and Claim.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Terms and Conditions"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The definition is purely referential and definite on its face.",
+      "reasoning_cat2": "The Crime Coverage Section contains no definition of Claim, so the notice provisions and the late-notice endorsement that turn on \"Claim\" have no anchor for this section — a genuine gap in the instrument.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Definitions — Claim"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "Referential definition with no ambiguity in its own words.",
+      "reasoning_cat2": "The Crime section does define Insured in Subsection 11, so the cross-reference resolves cleanly.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Definitions — Insured"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Identifies the Parent Organization by reference to Item 1; entirely determinate.",
+      "reasoning_cat2": "Item 1 names Medidata Solutions Inc., matching Item 4's Organization entry; consistent.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Definitions — Parent Organization"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Fixes the period by reference to Item 2 and addresses non-annual periods explicitly.",
+      "reasoning_cat2": "Cross-reference to Subsection 11 is accurate, and it fits the Crime section's Limits of Liability provision as amended by Endorsement 3.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Definitions — Policy Period"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "States separateness of limits and retentions with an express \"unless stated to the contrary\" qualifier; definite.",
+      "reasoning_cat2": "Consistent with Crime Subsection 25 and the Declarations' per-clause limits and single retention.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Limits of Liability and Retentions"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "Addresses, designation requirement and effectiveness on receipt are all specific; the final excuse sentence uses \"reasonably possible,\" a familiar but workable standard.",
+      "reasoning_cat2": "Crime Subsection 27 imposes its own ninety-day notice condition precedent and Endorsement 1 adds a prejudice rule, but Subsection 2 makes the coverage section control, so the layers are reconcilable.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Notice"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Specifies currency, source of exchange rate and the triggering date for each scenario.",
+      "reasoning_cat2": "Crime Subsection 28 has its own valuation rule using the same publication, and the General Terms yield to it; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Valuation and Foreign Currency"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Conventional subrogation wording; \"everything necessary\" is broad but standard and not genuinely ambiguous.",
+      "reasoning_cat2": "Read with Subsection 29 Recoveries, the two allocate recoveries coherently.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Subrogation"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"Full compliance with all the terms\" as a condition precedent is broad, but the clause then specifies the judgment-based direct action route with precision.",
+      "reasoning_cat2": "Endorsement 1 paragraph (4) permits an injured person to sue the Company directly \"notwithstanding any other provision,\" which sits against this clause's bar on third-party actions; the endorsement's override language largely resolves it.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8. Action Against the Company"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "Enumerates the agency matters exhaustively with an express carve-out for Extended Reporting Period notice; definite.",
+      "reasoning_cat2": "Consistent with Subsection 5 Notice and with Crime Subsection 27, which places notice duties on the Parent Organization.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Parent Organization Rights and Obligations"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "Requires signed written endorsement for any change; unambiguous formality rule.",
+      "reasoning_cat2": "The endorsements in the policy follow this form, though two of them amend Exclusion 19 inconsistently — a problem with those endorsements, not this clause.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Alteration and Assignment"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Fixed twenty-day period and a defined trigger; nothing to construe.",
+      "reasoning_cat2": "Fits the graduated termination scheme in the rest of Subsection 11.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Termination of Policy or Coverage Section — (a) termination in first sixty days"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "A closed statutory list of cause grounds; item (iv)'s \"substantially and materially increases the hazard\" is evaluative but standard.",
+      "reasoning_cat2": "Coherent with the surrounding termination paragraphs and with the notice requirements in (h) and (i).",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(b) Termination for cause after sixty days"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Simple mechanism for insured-initiated termination with a written notice proviso.",
+      "reasoning_cat2": "Consistent with the short-rate refund rule in paragraph (f).",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(c) Termination by Parent Organization"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Termination by mutual agreement stated in one line; definite though open-ended as to time.",
+      "reasoning_cat2": "Sits alongside the other termination routes without contradiction.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(d) Termination by agreement"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Ties termination to expiration and cross-refers accurately to paragraph (g) for nonrenewal notice.",
+      "reasoning_cat2": "Consistent with the extension mechanics in (g)(ii) and (iii).",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(e) Expiration of Policy Period / nonrenewal"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "\"Customary short rates\" is an industry term of art that could require evidence, but the pro rata default is clear.",
+      "reasoning_cat2": "Consistent with the termination routes in (a)–(e).",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(f) Refund of unearned premium"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Long but highly specified: day ranges, rate consequences and two dated alternatives are set out with precision.",
+      "reasoning_cat2": "The extension-of-limits rule in (iii) meshes with the Policy Period definition's proration sentence; no conflict found.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(g) Notice of nonrenewal or conditional renewal"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "A one-sentence administrative duty with a definite addressee.",
+      "reasoning_cat2": "Consistent with paragraphs (g) and (i).",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(h) Copy of notice to agent or broker"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Requires specific reasons and an effective date; determinate.",
+      "reasoning_cat2": "Matches the content requirements in (b) and (g)(i).",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11.(i) Contents of notice of nonrenewal or termination"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "Terminates identified prior bonds as of inception; the reference to Item 4 makes it concrete.",
+      "reasoning_cat2": "Crime Subsection 24 Liability for Prior Losses addressed the same prior-policy interface but was deleted by Endorsement 3, which leaves prior-loss treatment resting on this clause alone.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Termination of Prior Bonds or Policies"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Simple, symmetrical statement about bankruptcy's non-effect on rights and duties.",
+      "reasoning_cat2": "Nothing elsewhere in the policy contradicts it.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Bankruptcy"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Declares headings non-operative; a standard rule with no ambiguity.",
+      "reasoning_cat2": "Repeated in each endorsement, consistently.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "14. Headings"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The prejudice requirement is stated clearly, though \"prejudiced the Company\" is an evaluative standard that must be applied case by case.",
+      "reasoning_cat2": "It softens the notice conditions in General Terms Subsection 5 and Crime Subsection 27(a); since it applies only to notice of a \"Claim,\" which the Crime section does not define, its reach here is uncertain.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 1 — (1) Late notice requires prejudice"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "\"Not reasonably possible\" and \"as soon as reasonably possible\" are standards rather than ambiguities, and the sentence is otherwise plain.",
+      "reasoning_cat2": "It duplicates the final paragraph of General Terms Subsection 5 without contradicting it.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 1 — (2) Notice not reasonably possible"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "Allocates the burden by a bright two-year line and lists two irrebuttable-presumption triggers; definite.",
+      "reasoning_cat2": "Consistent with paragraphs (1) and (2) of the same endorsement.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 1 — (3) Burden of proving prejudice"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "A savings clause limiting the endorsement's effect; its terms are clear.",
+      "reasoning_cat2": "It preserves the claims-made trigger language, which is inapplicable to the Crime section actually purchased, but that produces no operative conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 1 — construction limits"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "The direct-action right is precisely delimited to death or personal injury Claims and to the sole question of the notice-based disclaimer.",
+      "reasoning_cat2": "It cuts across General Terms Subsection 8, which bars persons from proceeding against the Company, though the \"notwithstanding any other provision\" language is designed to prevail; in a crime-only policy the trigger is unlikely to arise.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 1 — (4) Direct action for death or personal injury"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Pure boilerplate on headings and unchanged terms; nothing to construe.",
+      "reasoning_cat2": "Its \"all other terms remain unchanged\" formula is repeated across endorsements, one pair of which conflicts, but this sentence itself creates no inconsistency.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 1 — headings and unchanged terms"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "\"Trade or economic sanctions or other similar laws or regulations\" is a general catch-all after specifics, and \"to the extent\" leaves the boundary of curtailment undefined.",
+      "reasoning_cat2": "It qualifies the worldwide Territory clause in Subsection 1, which it is plainly intended to override rather than contradict.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 2 — Compliance With Applicable Trade Sanction Laws"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "Boilerplate with no operative content.",
+      "reasoning_cat2": "Consistent with the rest of the instrument.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Endorsement/Rider No. 2 — headings and unchanged terms"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "Consideration recital subordinating the section to the Declarations and General Terms; definite.",
+      "reasoning_cat2": "Aligns with General Terms Subsection 2's priority rule.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Coverage Section — preamble/consideration"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "\"Direct loss\" and \"in collusion with others\" are the only soft edges; the grant is otherwise tightly tied to defined Theft and Forgery.",
+      "reasoning_cat2": "Read with Subsection 21, which rewrites this clause for ERISA Plan losses, and with Exclusion 13; the layering is coherent.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 1. Employee Theft Coverage Insuring Clause 1"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "The grant is detailed and enumerated, with each sub-item tied to defined terms like Robbery and Safe Burglary; \"disappearance\" is somewhat open but conventional.",
+      "reasoning_cat2": "Exclusion 14 removes Forgery and electronic frauds from this clause, which delimits rather than contradicts it.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 2. Premises Coverage Insuring Clause 2"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "\"Temporarily within the home of an Employee\" is mildly vague, but In Transit is separately defined and the structure is enumerated.",
+      "reasoning_cat2": "Consistent with the In Transit definition and Exclusion 14(b) on mail and carriers for hire.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 3. In Transit Coverage Insuring Clause 3"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "A one-line grant wholly dependent on a closely drafted definition; nothing ambiguous in itself.",
+      "reasoning_cat2": "Exclusion 12(k) expressly preserves coverage under this clause, showing deliberate coordination.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 7. Money Orders And Counterfeit Currency Fraud Coverage Insuring Clause 7"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "The grant itself is plain and refers to a defined term.",
+      "reasoning_cat2": "Exclusion 18 removes loss caused by \"any forgery or alteration of, on or in any written instrument\" — essentially the whole of Credit Card Fraud — unless two conditions are met, creating a coverage-swallowing tension worth checking.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 8. Credit Card Fraud Coverage Insuring Clause 8"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "\"Not in collusion with such Client's employees\" is a clear condition, and Theft and Forgery are defined; the wording is definite.",
+      "reasoning_cat2": "Coordinated with the Ownership provision's second paragraph and Exclusion 12(c); consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 9. Client Coverage Insuring Clause 9"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "Ties expense coverage to specified Insuring Clauses and states the retention rule expressly.",
+      "reasoning_cat2": "The no-retention sentence sits with Subsection 25's general retention rule and Exclusion 12(g)'s carve-out; harmonised.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 10. Expense Coverage Insuring Clause 10"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "\"Similar financial institution\" is a catch-all after bank and trust company, but the class is narrow and readily applied.",
+      "reasoning_cat2": "Used in Insuring Clause 2 and Exclusion 12(m) consistently.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Banking Premises"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "Defines Client by written contract or fee; determinate.",
+      "reasoning_cat2": "Consistent with Insuring Clause 9 and the Ownership provision.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Client"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "\"Reasonable expenses\" and \"substantially the same level or operational capability\" are evaluative, but the definition is otherwise carefully bounded by the consent requirement.",
+      "reasoning_cat2": "Fits Insuring Clause 10(b) and the Exclusion 12(g) carve-out.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Computer Violation Expenses"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "Defines Credit Card Fraud entirely by reference to Forgery or alteration of a written instrument; internally clear.",
+      "reasoning_cat2": "Exclusion 18 excludes precisely that conduct under Insuring Clause 8 subject to provisos, so the definition and exclusion must be read together carefully.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Credit Card Fraud"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "A broad but conventional definition; \"representation of information, knowledge, facts, concepts or instructions\" is capacious yet its breadth favours clarity of application.",
+      "reasoning_cat2": "It feeds the Computer Violation definition, whose application to message-header information is the contested point; the definition itself does not conflict with anything.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Data"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "The reasonable-person awareness standard is evaluative but well-worn, and the inclusions and exclusions are enumerated.",
+      "reasoning_cat2": "Interacts with Exclusion 19, which two endorsements amend inconsistently, and with Subsection 27's ninety-day notice trigger; the definition itself is stable.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Discovery or Discovered"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The compensation-plus-direction-and-control test is specific and lists part-time, seasonal, leased and temporary workers expressly.",
+      "reasoning_cat2": "Read against Exclusion 13(a), which excludes independent contractors and \"other similar representative,\" the two mark the same boundary from opposite sides without contradiction.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Employee"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "Defined by statutory reference and by the operating relationship; determinate.",
+      "reasoning_cat2": "Consistent with the Insured definition and Subsection 21's ERISA provisions.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — ERISA Plan"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "An enumerated list of offices with an \"equivalent positions\" catch-all for foreign entities; the catch-all is mildly open but constrained by the listed roles.",
+      "reasoning_cat2": "Crime Endorsement No. 1 amends subparagraph (a) to add \"trustee,\" so the printed text is superseded and must be read with the endorsement.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Executive"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "\"Designated to represent an Insured for the purpose of effecting and maintaining insurance\" leaves the manner of designation unstated, a modest vagueness.",
+      "reasoning_cat2": "Used in the Discovery definition and Exclusion 13(b); consistent throughout.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Insurance Representative"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Short and definite, with an express clause-specific extension to ERISA and Non-ERISA Plans.",
+      "reasoning_cat2": "Consistent with Insuring Clause 1, Subsection 21 and Exclusion 12(l).",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Insured"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "Defines the start and end of conveyance with precision; \"designated recipient or its agent\" is clear enough.",
+      "reasoning_cat2": "Coordinated with Insuring Clause 3 and Exclusion 14(b) regarding carriers for hire.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — In Transit"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "\"Reasonable expenses\" is evaluative but the consent requirement and the internal-costs carve-out bound it.",
+      "reasoning_cat2": "Matches Insuring Clause 10(a) and Exclusion 12(g)'s proviso.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Investigative Expenses"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "A closed list of four items; no room for argument.",
+      "reasoning_cat2": "Used consistently across the insuring clauses and the valuation provision.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Money"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "\"Good faith acceptance\" is evaluative, but the two enumerated circumstances are specific as to instrument and currency.",
+      "reasoning_cat2": "Consistent with Insuring Clause 7 and the proviso in Exclusion 12(k).",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Money Orders And Counterfeit Currency Fraud"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Defined as the negative of ERISA Plan with the same operating criteria; determinate.",
+      "reasoning_cat2": "Referenced in the Insured definition; Subsection 21's special rules speak only to ERISA Plans, leaving Non-ERISA Plans on the general terms, which is coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Non-ERISA Plan"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Pure cross-reference to Item 4; unambiguous.",
+      "reasoning_cat2": "Item 4 reads \"Medidate Solutions, Inc., and its subsidiaries\" — a misspelling of the named insured — but the Declarations and Item 1 identify the entity clearly enough.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Organization"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "\"Interior portion of a building occupied by an Organization in conducting its business\" is concrete.",
+      "reasoning_cat2": "Used consistently in Insuring Clause 2, Safe Burglary and the Ownership proviso.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Premises"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "Defined by exclusion of Money and Securities and limited to tangible property; a clear boundary.",
+      "reasoning_cat2": "Consistent with the Securities definition and the insuring clauses that pair the three terms.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Property"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "Requires violence or threat in the presence and cognizance of the custodian, with a specific carve-out for watchmen, porters and janitors; tightly drawn.",
+      "reasoning_cat2": "Coordinates with Insuring Clauses 2 and 3 and with Exclusions 12(n) and 15.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Robbery"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "Requires forcible or violent entry \"evidenced by visible marks\" — an objective, testable requirement.",
+      "reasoning_cat2": "Consistent with Insuring Clause 2(ii) and the fire exclusion's carve-out at 12(j)(ii).",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Safe Burglary"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "Enumerates the components of compensation without a general catch-all; definite.",
+      "reasoning_cat2": "Used in the Employee definition and in Exclusion 12(a)'s proviso consistently.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Salary"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "\"Instruments or contracts representing either Money or Property\" is broad, and the OCR typo \"nor-negotiable\" does not obscure the intended \"non-negotiable.\"",
+      "reasoning_cat2": "Consistent with the Money and Property definitions and the valuation provision.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Securities"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "A percentage-based control test stated with precision.",
+      "reasoning_cat2": "Works with Subsection 23 as amended by Endorsement 3 and with Item 4's \"and its subsidiaries\"; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Subsidiary"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "\"Unlawful taking\" is the only open term and it is confined to two clause-specific deprivations.",
+      "reasoning_cat2": "Aligned with Insuring Clauses 1 and 9 and the Ownership provision.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Theft"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "Defined negatively and limited to natural persons, which is a clear if consequential boundary.",
+      "reasoning_cat2": "It shapes Insuring Clauses 2–8, including the computer and funds transfer grants, but does not contradict them.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 11. Definitions — Third Party"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "\"Resulting directly or indirectly from any authorized or unauthorized trading\" is sweeping, and the improper-financial-gain proviso adds a measurement question.",
+      "reasoning_cat2": "The proviso ties back to Insuring Clause 1 and the Salary definition coherently.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (a) trading losses"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "\"Other confidential information of any kind\" is an unbounded catch-all following trade secret and processing method — a classic general-vs-specific problem.",
+      "reasoning_cat2": "Endorsement/Rider No. 2 deletes this exclusion outright and replaces it with a longer privacy exclusion, so the printed text is superseded.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (b) trade secrets"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "The excess-of-ownership formula is arithmetically specified and the trigger is defined by \"partner of an Organization.\"",
+      "reasoning_cat2": "Consistent with the Executive definition's paragraph (d) and Insuring Clauses 1 and 9.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (c) partner theft or forgery"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "The list ends with \"any act or condition incident to any of the foregoing,\" a catch-all whose reach beyond the enumerated hostilities is uncertain, and \"governmental intervention\" is itself broad.",
+      "reasoning_cat2": "No other provision addresses war risk; nothing to conflict with.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (d) war"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "Same trailing \"incident to any of the foregoing\" catch-all, but the enumerated nuclear perils are narrow and well understood.",
+      "reasoning_cat2": "Unconnected to any other operative term; no inconsistency.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (e) nuclear"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "\"Loss of income not realized as the result of a covered loss\" is terse and its double negative construction could be read two ways, though the intended meaning is conventional.",
+      "reasoning_cat2": "Sits with Exclusion 12(g) on consequential loss; consistent.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (f) loss of income"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "\"Indirect or consequential loss or damage of any kind\" is broad and the direct/indirect line is inherently contestable, though the proviso is specific.",
+      "reasoning_cat2": "It reinforces the \"direct loss\" requirement in the insuring clauses rather than conflicting with them, and expressly preserves Insuring Clause 10 expenses.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (g) indirect or consequential loss"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "Four specifically described categories of data expense with no general catch-all; definite.",
+      "reasoning_cat2": "Read against the Computer Violation Expenses definition and Insuring Clause 10(b), the carve-outs are consistent.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (h) data reconstitution fees"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "Plain exclusion of litigation costs with an express proviso for the Legal Expenses Extension.",
+      "reasoning_cat2": "The cross-reference to Subsection 22 is accurate and reciprocal.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (i) legal proceeding fees"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "Fire exclusion with two clearly stated carve-outs; the wording is definite.",
+      "reasoning_cat2": "The safe/vault carve-out dovetails with the Safe Burglary definition.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (j) fire"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "\"Knowingly having given or surrendered\" in \"any exchange or purchase\" is broad and its application to fraudulently induced voluntary transfers is arguable.",
+      "reasoning_cat2": "It bears on Insuring Clauses 5 and 6 where an employee voluntarily transmits funds, and the proviso preserves only Clause 7 and Property under Clause 5 — a scope interaction worth noting.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (k) exchange or purchase"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "\"To the advantage of any other Insured\" is undefined and could sweep broadly where multiple Organizations are insured.",
+      "reasoning_cat2": "Read with the Insured definition covering all Organizations and ERISA Plans, the exclusion's breadth is notable but not contradictory.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (l) loss to advantage of another Insured"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "\"Similar recognized place of safe deposit\" and \"any person who is duly authorized ... to have custody\" are catch-alls following specific institutions, leaving the class uncertain.",
+      "reasoning_cat2": "The excess proviso interacts with Subsection 30 Other Insurance in a coherent way.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (m) custody of bank or armored car"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "\"Any authorized representative of an Insured\" is undefined and, coupled with \"or other fraudulent, dishonest or criminal act\" following a specific list, presents a genuine general-vs-specific problem.",
+      "reasoning_cat2": "It overlaps with Exclusion 13(a)'s list of agents and representatives and with the Employee definition, requiring careful harmonisation across three provisions.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 12. Exclusions — (n) authorized representative"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "Paragraph (a) ends with \"or other similar representative\" after a list of agents and contractors — an ejusdem generis question — and (b)(iii)'s sixty-day post-termination cut-off is precise.",
+      "reasoning_cat2": "Its representative list sits alongside Exclusion 12(n)'s \"authorized representative\" and the Employee definition; the three must be read together but do not contradict.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 13. Exclusions applicable to Insuring Clause 1 or 9"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "Both limbs are stated by reference to defined terms and a specific carrier carve-out; definite.",
+      "reasoning_cat2": "It preserves the boundary between Insuring Clauses 2/3 and Clauses 4–8, consistent with Exclusion 12(m).",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 14. Exclusions applicable to Insuring Clause 2 or 3"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "The parenthetical \"(as distinct from Robbery)\" marks the line clearly, and the threat categories are specified.",
+      "reasoning_cat2": "Consistent with the Robbery definition and with the separate Kidnap/Ransom coverage section listed in the Schedule of Forms.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 15. Exclusion — kidnap, ransom or extortion payments"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "Confined to registered or coupon obligations issued by an Insured; a narrow, determinate exclusion.",
+      "reasoning_cat2": "Fits the Financial Instrument definition and Insuring Clause 4 without conflict.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 16. Exclusion — registered or coupon obligations"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "The sixty-day awareness trigger is objective, though \"an Organization becomes aware\" leaves the relevant knowledge-holder unspecified compared with the Discovery definition's Executive/Insurance Representative test.",
+      "reasoning_cat2": "Crime Endorsement No. 4 deletes Exclusion 17 in its entirety, so this printed text is inoperative — a reader confronting the policy as issued must reconcile the two.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 17. Exclusion — Computer Fraud after awareness"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "The exclusion of \"any forgery or alteration of, on or in any written instrument\" is drafted in terms that mirror the very definition of Credit Card Fraud, an internal oddity, though the two provisos rescue coverage.",
+      "reasoning_cat2": "Read against Insuring Clause 8 and the Credit Card Fraud definition, the exclusion nearly consumes the grant unless the provisos are given work — a whole-instrument tension.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 18. Exclusion — credit card written instrument forgery"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "The three limbs are repetitive but each states sustained-before-termination plus discovery and notice within sixty days in definite terms.",
+      "reasoning_cat2": "Endorsement No. 3(1) rewrites Exclusion 19 to a sustained-and-discovered-before-termination test with no sixty-day tail, while Endorsement No. 5 rewrites it with the sixty-day tail; both bear the same effective date and both purport to replace it in its entirety.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.51,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 19. Exclusion — loss sustained and discovered before termination"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "\"Held by the Organization in any capacity whether or not the Organization is liable\" is broad but standard bailment language, and the provisos are specific.",
+      "reasoning_cat2": "It covers Insuring Clauses 1 through 8 and separately Clause 9, leaving Clause 10 unaddressed, but Clause 10 concerns expenses rather than property; coherent.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 20. Ownership"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "The amendment to Insuring Clause 1 and the word-substitution instruction are stated with precision.",
+      "reasoning_cat2": "It directs deletion of \"sixty (60) days\" from Exclusion 19, but Endorsement No. 3's version of Exclusion 19 contains no such words, so the substitution has nothing to operate on under one of the two competing endorsements.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 21. ERISA Plan"
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "\"Reasonable court costs and attorneys' fees\" with a prior-consent requirement and two identified proceedings; definite.",
+      "reasoning_cat2": "Cross-referenced by Exclusion 12(i) and by Subsection 27's suit-limitation provision, both consistently.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 22. Legal Expenses Extension"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "The ten percent revenue test, sixty-day notice window and null-and-void consequence are all specific; \"sole discretion\" is broad but expressly conferred.",
+      "reasoning_cat2": "Endorsement No. 3(2) replaces the first paragraph of this subsection with a discovery-based trigger, so the printed opening no longer governs.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 23. Changes in Exposure"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "The four lettered conditions and the maximum-liability rule are set out with care and no obvious ambiguity.",
+      "reasoning_cat2": "Endorsement No. 3(3) deletes this subsection in its entirety and all references to it, yet Subsection 25 still opens \"Subject to Subsection 24\" in the printed text — the deletion clause purports to cure that.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 24. Liability For Prior Losses"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "The clause-by-clause single-loss aggregation rules are repetitive but precise, though \"series of related acts\" and \"concerned or implicated\" are terms that can require construction.",
+      "reasoning_cat2": "The opening words \"Subject to Subsection 24\" refer to a subsection deleted by Endorsement No. 3(3), and the first paragraph is itself replaced by Endorsement No. 3(4) with a discovery-based trigger that differs from the printed sustained-during-Policy-Period rule.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 25. Limits of Liability and Retention"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "Two clear anti-stacking rules with no soft terms.",
+      "reasoning_cat2": "Consistent with Subsection 25's single-limit rules and the General Terms' separate-limits provision.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 26. Non-Accumulation of Liability"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "\"Earliest practicable moment\" alongside hard ninety-day and six-month outer limits is a familiar formulation; the inventory-comparison restriction is specific.",
+      "reasoning_cat2": "The condition-precedent notice duty is softened by Endorsement/Rider No. 1's prejudice rule and by General Terms Subsection 5's excuse clause, but the endorsement speaks only of a \"Claim,\" leaving the interaction with this loss-notice duty unsettled.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 27. Proof of Loss and Legal Proceedings"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "Each measure of recovery is specified with a dated valuation source; \"Lost Instrument Bond\" is capitalised but undefined, a minor drafting slip.",
+      "reasoning_cat2": "Consistent with the General Terms valuation provision, which yields to the coverage section, and with the Discovery definition's timing.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 28. Valuation and Foreign Currency"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "A four-step waterfall stated in fixed order with a reinsurance carve-out; determinate.",
+      "reasoning_cat2": "Coheres with the subrogation provision in the General Terms and with the retention structure.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 29. Recoveries"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "\"Null and void to the extent of the amount recoverable or received\" is awkward phrasing for an excess clause, and \"recoverable\" versus \"received\" could be read differently.",
+      "reasoning_cat2": "Exclusion 12(m)'s proviso uses the same excess concept, and the two are consistent in effect.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime 30. Other Insurance"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "A precise amendment adding \"trustee\" to a lettered subparagraph; nothing to construe.",
+      "reasoning_cat2": "It cleanly supersedes the printed Executive definition in Subsection 11.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 1 — Amend Definition of Executive"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "Boilerplate about headings and unchanged terms.",
+      "reasoning_cat2": "Consistent with the identical formula elsewhere in the policy.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 1 — headings and unchanged terms"
+    },
+    {
+      "clause_id": "neg115",
+      "reasoning_cat1": "A one-line deletion instruction identifying the exclusion precisely.",
+      "reasoning_cat2": "It removes Exclusion 12(b) while the printed policy text still displays it, and the replacement privacy exclusion in the same endorsement is broader; the interaction is deliberate.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement/Rider No. 2 — deletion of Exclusion 12.(b)"
+    },
+    {
+      "clause_id": "neg116",
+      "reasoning_cat1": "\"Loss involving the disclosure ... or the use of another entity or person's confidential or personal information\" plus \"any similar type of nonpublic information\" is a sweeping catch-all after a specific list, and \"involving\" is notably elastic.",
+      "reasoning_cat2": "The proviso preserves only Insuring Clause 6, which raises the question whether the exclusion bites on losses otherwise covered by the Computer Fraud grant in Insuring Clause 5 — a live interaction with the coverage grants.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement/Rider No. 2 — 2. Privacy and data breach exclusions"
+    },
+    {
+      "clause_id": "neg117",
+      "reasoning_cat1": "Standard heading and savings boilerplate.",
+      "reasoning_cat2": "Consistent with the rest of the endorsements.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement/Rider No. 2 — headings and unchanged terms"
+    },
+    {
+      "clause_id": "neg118",
+      "reasoning_cat1": "The replacement text is short and definite: loss must be both sustained and Discovered before termination, with no post-termination discovery window.",
+      "reasoning_cat2": "Endorsement No. 5, effective the same date, also amends Exclusion 19 \"in its entirety\" and grants a sixty-day post-termination discovery and notice window — the two replacements cannot both be the operative Exclusion 19.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.56,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 3 — (1) Amended Exclusion 19"
+    },
+    {
+      "clause_id": "neg119",
+      "reasoning_cat1": "The amended paragraph states a clear discovery-based trigger for newly acquired subsidiaries.",
+      "reasoning_cat2": "It replaces the first paragraph of Subsection 23, whose remaining paragraphs still speak of coverage being \"null and void from the date of such acquisition,\" which fits the amended trigger adequately.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 3 — (2) Amended first paragraph of Subsection 23"
+    },
+    {
+      "clause_id": "neg120",
+      "reasoning_cat1": "An unambiguous deletion instruction extending to all cross-references.",
+      "reasoning_cat2": "It removes Subsection 24 and by its terms cures the dangling \"Subject to Subsection 24\" opening of Subsection 25, which Endorsement 3(4) also rewrites — coherent as a package.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 3 — (3) Deletion of Subsection 24"
+    },
+    {
+      "clause_id": "neg121",
+      "reasoning_cat1": "One sentence with two clear conditions: sustained before termination and Discovered during the Policy Period.",
+      "reasoning_cat2": "This discovery-based trigger sits with Endorsement 3(1)'s version of Exclusion 19 but is in tension with Endorsement No. 5's sixty-day post-termination discovery window, which would allow coverage for loss discovered after the Policy Period.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.45,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 3 — (4) Amended first paragraph of Subsection 25"
+    },
+    {
+      "clause_id": "neg122",
+      "reasoning_cat1": "Boilerplate with no operative content.",
+      "reasoning_cat2": "The \"all other terms remain unchanged\" formula does not resolve which of the two competing Exclusion 19 amendments prevails.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 3 — headings and unchanged terms"
+    },
+    {
+      "clause_id": "neg123",
+      "reasoning_cat1": "A single sentence deleting an identified exclusion; entirely definite.",
+      "reasoning_cat2": "Exclusion 17 remains printed in the coverage section, so the policy as issued must be read with this deletion in mind, but the instruction is unambiguous.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 4 — Delete Exclusion 17"
+    },
+    {
+      "clause_id": "neg124",
+      "reasoning_cat1": "Standard boilerplate.",
+      "reasoning_cat2": "Consistent with the other endorsements' closing language.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 4 — headings and unchanged terms"
+    },
+    {
+      "clause_id": "neg125",
+      "reasoning_cat1": "The replacement text restates the sixty-day discovery-and-notice tail with three parallel limbs; the wording itself is definite.",
+      "reasoning_cat2": "It purports to replace Exclusion 19 in its entirety, as does Endorsement No. 3(1) with materially different content and the same effective date, and it also sits against Endorsement 3(4)'s requirement that loss be Discovered during the Policy Period.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.57,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 5 — Amend Exclusion 19"
+    },
+    {
+      "clause_id": "neg126",
+      "reasoning_cat1": "Boilerplate heading and savings language.",
+      "reasoning_cat2": "Its \"all other terms remain unchanged\" statement leaves unresolved the clash between this endorsement and Endorsement No. 3 over Exclusion 19.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Crime Endorsement No. 5 — headings and unchanged terms"
+    }
+  ]
+}

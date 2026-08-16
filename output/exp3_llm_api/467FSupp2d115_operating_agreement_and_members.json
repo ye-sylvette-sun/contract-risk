@@ -1,0 +1,1164 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The phrase \"has contributed or is deemed to have contributed\" leaves it uncertain whether any actual payment was made, and the whole operative content is delegated to Schedule A, which carries the plainly erroneous figure \"$00,001.00\" for LSB. That is both a lexical ambiguity (\"deemed\") and a mechanical error in the incorporated amount.",
+      "reasoning_cat2": "Schedule A's contribution figures sit awkwardly against Section 6.8(iii), which contemplates reimbursing DMSA for \"initial capital contributions,\" and against Section 4.3(i)'s pro-rata return rule; the 49%/51% Percentage Interests do not track the stated dollar amounts. A dispute over what LSB actually contributed would require reconciling these provisions.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.52,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 4.1(i) — Capital Contributions"
+    },
+    {
+      "clause_id": "pos2",
+      "reasoning_cat1": "\"This Agreement and the rights of the parties hereunder shall be interpreted in accordance with the laws of the State of Maine\" is limited to interpretation and \"rights hereunder,\" leaving open whether it reaches non-contractual (tort, fiduciary, statutory) claims between the members. That scope question is a recognised source of argument over the same words.",
+      "reasoning_cat2": "Section 7.7 imports the Maine Business Corporation Act standard, consistent with Maine law, but the Company's principal place of business is in Massachusetts (Section 2.5) and LSB is a Massachusetts resident, so a party could argue the clause does not displace Massachusetts law for extra-contractual claims. No square contradiction, but there is friction.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.24,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 17.9 — Governing Law"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The date is left blank (\"June __, 2004\"), a mechanical incompleteness that could matter to when obligations attached, though the parties and their capacities are identified precisely.",
+      "reasoning_cat2": "It matches Schedule A and Section 2.1(ii)'s admission mechanism; nothing in the operative text contradicts the identification of LSB and DMSA as the members.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The recital garbles the statute's name (\"the Maine Lunited Liability Company, as amended\"), omitting \"Act,\" a mechanical defect in the very term it purports to define.",
+      "reasoning_cat2": "The Article I definition of \"Maine Act\" (31 M.R.S.A. Chapter 13) supplies the correct citation, so the recital and operative text point the same way once harmonised.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recital"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "Standard consideration recital with no operative content and no term capable of two readings.",
+      "reasoning_cat2": "Nothing elsewhere in the Agreement contradicts the acknowledgment of consideration.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consideration"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "\"Unless the context otherwise requires\" is a familiar formula; it is elastic but courts routinely apply it without difficulty.",
+      "reasoning_cat2": "It is the standard gateway to Article I and is consistent with Section 1.2 and Section 17.5 on interpretation.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.1 Definitions"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "A pure cross-reference to Section 13.1, definite in wording.",
+      "reasoning_cat2": "Section 13.1 does in fact define Additional Members, so the reference is accurate.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Additional Members"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "\"Control\" is defined by the usual \"power to direct or cause the direction of the management and policies\" formula, which is inherently fact-sensitive but conventional; the OCR \"direction.of\" is trivial.",
+      "reasoning_cat2": "It feeds Sections 12.7 and 1.1 \"Covered Person\" without conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Affiliate"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "Self-referential and definite.",
+      "reasoning_cat2": "Consistent with Section 17.10 on amendments.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Agreement"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Definite and tied to a public filing.",
+      "reasoning_cat2": "Section 10.1 refers instead to \"the Certificate,\" an undefined term, but that inconsistency lies in 10.1 rather than here.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Articles"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "One-line, unambiguous definition.",
+      "reasoning_cat2": "Used consistently throughout Article VI.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Board"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "Cross-reference definition with no ambiguous term.",
+      "reasoning_cat2": "Section 4.4 does establish Capital Accounts, so the reference holds.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Capital Account"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "\"Fair market value of any property\" is valuation-dependent but the definition itself is clear.",
+      "reasoning_cat2": "It points to Section 4.1 and Schedule A, whose \"$00,001.00\" figure is itself doubtful, giving a slight relational exposure.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Capital Contribution"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "Conventional Code definition with an express successor-provision rule; definite.",
+      "reasoning_cat2": "Consistent with Articles VIII and XI.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Code"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "Names the entity; \"formed and continued\" is boilerplate.",
+      "reasoning_cat2": "Consistent with Sections 2.1 and 2.2.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Company"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "A very long enumerated list ending in \"or any employee or agent of the Company or its Affiliates,\" whose overlapping categories make the outer boundary of \"Covered Person\" arguable.",
+      "reasoning_cat2": "Section 17.11 confines rights under the Agreement to \"the Members and Managers,\" which sits uneasily with indemnity rights conferred on non-member Covered Persons under Section 12.4.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Covered Person"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "Single-line and definite.",
+      "reasoning_cat2": "Consistent with Section 6.1's designation of Directors as Managers.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Director"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "Clause numbering is mistyped (\"(11)\" for (ii)) but the periods described are unmistakable.",
+      "reasoning_cat2": "Consistent with Articles VIII and X.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Fiscal Year"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"such Member's interest of the profits and losses\" is grammatically wrong (\"of\" for \"in\") and the definition folds voting, economic and distribution rights into one term, which later provisions then use loosely (\"Interest Profits\").",
+      "reasoning_cat2": "Sections 8.2(ii), 15.3 and 4.5 all use the garbled phrase \"Interest Profits and Losses,\" so the drafting error propagates through the allocation and liquidation provisions.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Interest"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "Clause (iii) extends \"Laws\" to \"all policies, practices and guidelines of any governmental body,\" a catch-all far broader than the enumerated binding instruments, making the term's reach genuinely uncertain.",
+      "reasoning_cat2": "It is used in Sections 2.2, 2.6, 6.6 and 9.3 without any provision cutting it back, so the breadth is not resolved elsewhere.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Laws"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "Precise statutory citation.",
+      "reasoning_cat2": "Corrects the garbled recital; otherwise consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Maine Act"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "Clear arithmetic standard, though it duplicates the separate definition of \"Majority.\"",
+      "reasoning_cat2": "Section 5.5(vii) uses \"a Majority present\" for quorum while 5.5(viii) uses \"Majority Vote\" for decisions; the two near-identical definitions invite mild confusion but can be harmonised.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Majority Vote"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "\"Majority\" is defined as a quantity of votes yet used in Section 5.5(vii) as a body of persons \"present in person or by proxy,\" a category mismatch.",
+      "reasoning_cat2": "The overlap with \"Majority Vote\" and the use in 5.5(vii)/(xi) creates a small but real harmonisation problem.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Majority"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Definite: designation by Members plus automatic inclusion of Directors.",
+      "reasoning_cat2": "Consistent with Section 6.1's deeming of Directors as Managers and with Section 12.1.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Manager"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "Defining \"Members\" as \"two (2) or more of such Persons\" is odd and would fail if only one member remained, a drafting slip rather than a live ambiguity.",
+      "reasoning_cat2": "Section 15.2(ii) contemplates \"remaining Members\" after a member's departure, which the two-or-more formulation does not comfortably accommodate.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Member"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "Definite, though wholly dependent on Schedule A.",
+      "reasoning_cat2": "Schedule A allocates 49/51 votes consistently; Section 16.6's stray reference to \"LLC Votes\" is the only friction.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Member Votes"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "\"any amounts determined by the Members to be necessary to provide a reasonable reserve for working-capital needs or any other contingencies\" is a vague, discretion-laden catch-all that can swallow the whole distributable amount.",
+      "reasoning_cat2": "The definition mandates the cash receipts and disbursements method, while Section 10.2 requires the books to be kept on the accrual method, and the reserve discretion is given to \"the Members\" whereas Section 9.2 gives distribution decisions to the Board.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Net Cash Flow"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "One-line and definite.",
+      "reasoning_cat2": "Consistent with Article VII.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Officer"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "\"as shown on Schedule A ... as determined by the unanimous written consent of the Members as adjusted from time to time\" is internally muddled about whether Schedule A or unanimous consent is controlling and what may be adjusted.",
+      "reasoning_cat2": "Section 2.1(iii) lets the Secretary unilaterally update Schedule A without that being an amendment, while Section 17.10 requires unanimous execution for amendments; the interaction over Percentage Interests is unresolved.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.32,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Percentage Interest"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Standard inclusive list; the use of \"Company\" (capitalised, a defined term meaning Dialogo) inside the list of entity types is a mechanical slip.",
+      "reasoning_cat2": "Used throughout without contradiction, and the slip is self-evidently meant to read \"corporation.\"",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Person"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Ties Profits and Losses to taxable income under §703(a); definite apart from the OCR brace.",
+      "reasoning_cat2": "Section 10.2 says the accrual method governs the determination of Profits and Losses, which is compatible with a tax-based definition.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Profits and Losses"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Cross-reference definition, definite.",
+      "reasoning_cat2": "Section 7.4 does describe the Secretary's duties; Section 2.6 also assigns filing duties to the Secretary, consistently.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Secretary"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Pure cross-reference.",
+      "reasoning_cat2": "Section 11.1 designates DMSA; the reference holds.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Tax Matters Partner"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "Conventional and definite.",
+      "reasoning_cat2": "Consistent with Articles VIII and XIII.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Definition: Treasury Regulations"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "A standard headings-only clause with definite effect.",
+      "reasoning_cat2": "Consistent with Section 17.5; the duplicate \"Section 6.6\" headings are a numbering problem this clause partly neutralises.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.2 Headings"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Clause (iii) says Schedule A revisions \"shall not be deemed an amendment to this Agreement,\" and gives the Secretary a duty to update it, which is a broad and undefined power over economic terms.",
+      "reasoning_cat2": "That sits in tension with Section 17.10 (unanimous written amendment) and with the definition of Percentage Interest requiring unanimous member consent, since Schedule A fixes contributions, Percentage Interests and Member Votes.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.1 Formation"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Definite; assumed-name use is expressly conditioned on compliance with Laws.",
+      "reasoning_cat2": "Consistent with Section 2.6 on fictitious-name registration.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.2 Name"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "Clear commencement and perpetual duration, with dissolution carved out.",
+      "reasoning_cat2": "Consistent with Sections 15.2 and 15.4.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.3 Term"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "Names a specific agent and address; definite.",
+      "reasoning_cat2": "Power to change is given to the Members here, whereas Section 2.5 gives the analogous power over the principal office to the Board — a minor allocation oddity only.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.4 Registered Agent and Office"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Specific address and a clear power to relocate.",
+      "reasoning_cat2": "Section 17.1(i) keys notices to this address, and Sections 5.5(x)/6.4 deem telephonic meetings held there; all consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.5 Principal Place of Business"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The first sentence requires qualification wherever the Company \"transacts business\" while the second speaks of jurisdictions where it \"may wish to conduct business\" — a slight mismatch of triggers.",
+      "reasoning_cat2": "Consistent with Section 2.2 and the Secretary's role under Section 7.4.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.6 Qualification in Other Jurisdictions"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "\"developing Spanish language newspaper(s) and media\" is a loose description of the venture's scope, and the following \"any lawful act or activity\" catch-all makes the boundary of the Company's business indeterminate.",
+      "reasoning_cat2": "Section 12.7 turns on what \"the business\" is for LSB's exclusivity and DMSA's freedom to compete, so the vagueness of the purpose clause has direct relational consequences.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.1 Purpose"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "A long \"including, but not limited to\" enumeration of powers; because it is permissive and expressly non-exhaustive, the catch-all creates little practical uncertainty.",
+      "reasoning_cat2": "Section 6.8 subjects many of these acts to unanimous Board approval, which qualifies rather than contradicts the grant of corporate power.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.2(i) Powers of the Company"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "Single definite requirement of unanimous member approval.",
+      "reasoning_cat2": "Consistent with Sections 6.8 and 17.10's unanimity pattern.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.2(ii) Merger"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "Two short, categorical statements with settled legal meaning.",
+      "reasoning_cat2": "Consistent with Sections 5.3 (partition waiver) and 15.5.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.2 Member's Interest"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "Subsection (ii)(a) is ungrammatical (\"the respective invoices of each of DMSA\" ... \"payment form such customer\") and (ii)(b) uses \"Membership Interests,\" a term the Agreement never defines.",
+      "reasoning_cat2": "The profit-payment right in (ii)(b) sits against Section 6.8(iii), which bars any distribution to Members except reimbursement of DMSA's initial capital, and against Section 9.2's Board discretion.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.3 Status of Capital Contributions"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "Short and definite, keyed to a specific Treasury Regulation.",
+      "reasoning_cat2": "Consistent with Sections 4.5, 8.2(iv) and 15.3(ii).",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.4 Capital Accounts"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "\"subject to such terms and conditions acceptable to the Company and each Member\" leaves the terms of an advance wholly open, but the clause's operative effect (debt, no Capital Account credit) is clear.",
+      "reasoning_cat2": "Consistent with Sections 12.1 and 15.3(i) treating member-creditors as creditors.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.5 Advances"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "The third sentence gives Members \"any and all other rights or powers of the Company\" not required to be done by the Board, an open-ended residual grant whose boundary against Board authority is not drawn.",
+      "reasoning_cat2": "Section 6.1 makes Board management \"Subject to Section 5.1,\" and Section 5.1 in turn defers to the Board, producing a circular allocation of managerial power that a court would have to untangle.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.1 Powers of Members"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "\"all ordinary and necessary out-of pocket expenses incurred ... on behalf of the Company\" is a familiar but genuinely elastic standard, and reimbursement is mandatory with no approval mechanism.",
+      "reasoning_cat2": "Section 4.3(ii) bars any payment to a Member for services save in stated cases, and Section 6.8(x) requires unanimity for contracts with Members, so a broad reimbursement right could be used to circumvent both.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.2 Reimbursements"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "One-sentence categorical waiver.",
+      "reasoning_cat2": "Consistent with Section 4.2's statement that a Member has no interest in specific Company property.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.3 Partition"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Flatly worded prohibition with no ambiguous term.",
+      "reasoning_cat2": "Section 15.2(ii) expressly treats \"resignation\" of a Member as an event causing dissolution, which presupposes a resignation the present section forbids — a genuine internal inconsistency.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.43,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.4 Resignation"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Mostly conventional meeting mechanics, though \"A Majority present in person or by proxy shall constitute a quorum\" mixes the vote-based definition of Majority with attendance, and (i) omits any timing rule for the annual meeting.",
+      "reasoning_cat2": "Written consent by a bare Majority under (xi) can accomplish actions elsewhere requiring unanimity (Sections 3.2(ii), 13.1, 17.10) unless the \"unless otherwise provided\" proviso is read to defer to them.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.5 Meetings of Members"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "\"Subject to Section 5.1\" qualifies the Board's management authority without saying how, and \"for purposes of the Act\" uses an undefined short form for the Maine Act.",
+      "reasoning_cat2": "The cross-reference to Section 5.1, which itself grants Members residual powers over anything not required to be done by the Board, makes the division of authority circular.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.1 Board of Directors"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "Detailed and definite notice and place provisions for Board meetings.",
+      "reasoning_cat2": "Consistent with Sections 6.3, 6.4 and 7.2.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.2 Meetings of the Board of Directors"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "It excepts actions \"otherwise provided in Section 6.9 of this Agreement,\" but there is no Section 6.9; the unanimous-approval provision is numbered 6.8, so the cross-reference is a mechanical error.",
+      "reasoning_cat2": "The tie-break rule referring matters to the Members also collides with Section 6.8's requirement of unanimous Board authorisation for the listed actions, since a tie there would be resolved by DMSA's 51 Member Votes.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.3 Quorum and Acts of the Board"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "Clear and conventional; duplicates Section 5.5(x) for the Board.",
+      "reasoning_cat2": "Consistent with Sections 5.5(x) and 2.5.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.4 Electronic Communications"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "The committee-power carve-out refers to \"the actions described in Section 6.9,\" a section that does not exist, leaving the scope of the carve-out to be inferred.",
+      "reasoning_cat2": "The evident intended reference is Section 6.8; the same broken cross-reference appears in Section 6.3, so the error is systemic within Article VI.",
+      "prob_cat1": 0.39,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.5 Committees of Directors"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "The substance is clear, but the section is numbered 6.6 and its heading is embedded in the middle of the preceding paragraph, a formatting/numbering defect.",
+      "reasoning_cat2": "A second, different \"Section 6.6\" (Removal of Directors) follows, so any cross-reference to 6.6 is ambiguous; Section 1.2 on headings only partly cures this.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.6 Compensation of Directors"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "The removal right is stated definitely by reference to the electing Member; the duplicate section number is the flaw.",
+      "reasoning_cat2": "It shares the number 6.6 with the compensation provision, and it dovetails correctly with Sections 5.5(ii) and 6.1 on class-based election and vacancy filling.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.6 Removal of Directors"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "Short agency statement limited to powers set forth in the Agreement.",
+      "reasoning_cat2": "Consistent with Sections 7.6 and 6.8's restrictions.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.7 Directors as Agents"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "Items such as \"any material capital expenditure\" and \"any material liability or obligation\" turn on undefined materiality, and item (i) excepts \"sales in the ordinary course of business,\" a classic boundary question.",
+      "reasoning_cat2": "Item (iii) bars any distribution to Members except reimbursement of DMSA's initial capital contributions, which cannot be squared with Sections 9.1, 9.2 and 4.3(ii)(b) entitling Members to Net Cash Flow and profits pro rata.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.8 Actions Requiring Unanimous Approval of the Board"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "Conventional officer provisions; \"shall hold office until their successors are chosen and qualify\" is settled language.",
+      "reasoning_cat2": "Consistent with Sections 7.2–7.6 and 6.8(x).",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.1 Officers"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "\"general and active management of the business\" is broad, but the clause is standard and its execution authority is expressly qualified.",
+      "reasoning_cat2": "The grant sits under Section 6.1's Board management and Section 6.8's unanimity list; those qualify rather than contradict it.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.2 The President"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "Definite succession mechanics with an express default ordering.",
+      "reasoning_cat2": "Consistent with Sections 7.1 and 7.2.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.3 The Vice President"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "Duties are enumerated clearly; \"such other duties as may be prescribed by the Board or President\" is a conventional residual.",
+      "reasoning_cat2": "Consistent with the definition of Secretary and with Sections 2.1(iii) and 2.6 assigning filing duties.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.4 The Secretary and Assistant Secretary"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "Standard treasurer duties, definite.",
+      "reasoning_cat2": "Consistent with Sections 10.1 and 6.8(xi).",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.5 The Treasurer and Assistant Treasurer"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "Short agency statement, definite.",
+      "reasoning_cat2": "Consistent with Sections 6.7 and 7.1.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.6 Officers as Agents"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "\"similar to those of directors and officers of business corporations organized under the Maine Business Corporation Act\" imports a standard by analogy, and \"Except to the extent provided herein\" leaves the extent of derogation open.",
+      "reasoning_cat2": "Section 12.7 expressly relieves DMSA of fiduciary duties as a Director and Section 12.3 replaces common-law duties, so the reach of this fiduciary standard depends entirely on reconciling those provisions.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.7 Duties of Board and Officers"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "Simple pro-rata allocation by Percentage Interests; definite.",
+      "reasoning_cat2": "Consistent with Sections 8.2, 9.1 and 15.3, subject only to the Percentage Interest definition's own looseness.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.1 Profits and Losses"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "Subsection (ii) refers to how Members \"shared Interest Profits and Losses,\" a garbled phrase, and (iv) is doubly worded (\"intend that ... are intended\").",
+      "reasoning_cat2": "Consistent with Sections 8.1, 8.3 and 4.4(ii) on Code compliance.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.2 Allocation Rules"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "Standard §704(c) language, definite in operation.",
+      "reasoning_cat2": "Consistent with Sections 4.1, 4.4 and 8.1.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.3 Tax Allocations; Section 704(c) of the Code"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "Clear pro-rata rule keyed to Percentage Interests, with an express carve-out for Article XV.",
+      "reasoning_cat2": "Section 6.8(iii) forbids the making of any distribution to Members other than reimbursing DMSA's initial capital contributions absent unanimous Board approval, which cuts directly across this entitlement.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.1 Net Cash Flow"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "One sentence giving the Board timing and amount discretion; definite.",
+      "reasoning_cat2": "It gives discretion to the Board while the Net Cash Flow definition gives the reserve decision to \"the Members\" and Section 6.8(iii) requires unanimity for distributions.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.2 Distribution Rules"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "A clear legal-compliance override.",
+      "reasoning_cat2": "Duplicates the similar proviso in Section 4.3(i) without conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.3 Limitations on Distribution"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "Detailed withholding mechanics; the self-reference \"pursuant to this 9.4\" is a trivial slip.",
+      "reasoning_cat2": "Consistent with Articles VIII and XI.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.4 Amounts Withheld"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "\"open to inspection ... at reasonable times ... for any purpose reasonably related to such Member's interest\" imports two reasonableness standards, and the clause refers to \"the Certificate,\" a term the Agreement never defines.",
+      "reasoning_cat2": "The undefined \"Certificate\" should be the \"Articles\" as defined in Article I, and the GAAP-versus-Agreement priority sentence must be read with Section 10.2's accrual mandate.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.1 Books, Records and Financial Statements"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "Mandates accrual accounting in clear terms; \"appropriate and adequate for the Company's business\" is vague but only supplementary.",
+      "reasoning_cat2": "The definition of Net Cash Flow requires determination \"in accordance with the cash receipts and disbursements method of accounting,\" which pulls against this accrual mandate for the same books.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.2 Accounting Method"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "Designation and a specific ten-day notice duty; definite.",
+      "reasoning_cat2": "Consistent with Section 11.2 and Article X.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 11.1 Tax Matters Partner"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "One-line tax classification statement.",
+      "reasoning_cat2": "Consistent with Article VIII and Section 11.1.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 11.2 Taxation as Partnership"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "Standard statutory limited-liability shield with a clear \"solely by reason of\" limitation.",
+      "reasoning_cat2": "Consistent with Sections 4.3(iii), 4.5 and 15.5.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.1 Liability"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "The provision as it appears is truncated: subsection (ii) has lost its opening words, so the sentence beginning \"professional or expert competence\" has no subject or operative verb.",
+      "reasoning_cat2": "The missing reliance-on-experts protection is meant to work with Sections 12.3 and 12.4, and its absence leaves the exculpation scheme incomplete rather than contradictory.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.2 Exculpation"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "\"good faith reliance on the provisions of this Agreement\" and the wholesale replacement of law-and-equity duties are broad but conventionally worded.",
+      "reasoning_cat2": "Section 7.7 imposes corporate-style fiduciary duties on Directors and Officers \"except to the extent provided herein,\" so this replacement clause and 7.7 must be reconciled, as must Section 12.7's release of DMSA.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.3 Fiduciary Duty"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "Carefully drafted with a good-faith/scope-of-authority condition and gross negligence and wilful misconduct carve-outs; the standards are familiar.",
+      "reasoning_cat2": "Consistent with Sections 12.2, 12.5 and 12.6, though Section 17.11 confines rights under the Agreement to Members and Managers, which could be read to exclude other Covered Persons.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.23,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.4 Indemnification"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "Clear advancement mechanism conditioned on an undertaking to repay.",
+      "reasoning_cat2": "Keyed expressly to Section 12.4 and consistent with it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.5 Expenses"
+    },
+    {
+      "clause_id": "neg84",
+      "reasoning_cat1": "The sentence is cut off mid-clause (\"against any liability that may be asserted\"), so the scope of the insurance authority is textually incomplete.",
+      "reasoning_cat2": "It is permissive and ancillary to Sections 12.4 and 3.2(i)(h), so the truncation creates no conflict with other provisions.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.6 Insurance"
+    },
+    {
+      "clause_id": "neg85",
+      "reasoning_cat1": "The second clause is garbled (\"and the Company the income or profits derived therefrom\"), and the operative asymmetry rests on undefined vague terms — \"diligent efforts,\" \"appropriate business,\" \"such services\" and \"the business\" — with LSB's restraint having no stated duration or geography.",
+      "reasoning_cat2": "It releases DMSA from the fiduciary duties Section 7.7 imposes and interacts with Section 3.1's loose statement of the Company's purpose, on which the meaning of \"the business\" for LSB's exclusivity depends.",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.7 DMSA's Outside Businesses; LSB's Exclusivity"
+    },
+    {
+      "clause_id": "neg86",
+      "reasoning_cat1": "Consent must be obtained from \"the LLC,\" a term never defined (the entity is \"the Company\"), and the confidentiality obligation covers \"all efforts and actions undertaken by them for the Company\" with no exceptions or time limit before narrowing to a defined list.",
+      "reasoning_cat2": "There is no carve-out reconciling this with DMSA's express freedom to pursue competing ventures under Section 12.7 or with the disclosure obligations implicit in Sections 10.1 and 16.6.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 12.8 Confidentiality"
+    },
+    {
+      "clause_id": "neg87",
+      "reasoning_cat1": "Definite two-step admission mechanism requiring unanimous approval.",
+      "reasoning_cat2": "Consistent with Sections 2.1(iii), 13.2 and 15.1; the Schedule A naming requirement dovetails with Section 16.1.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 13.1 Admission"
+    },
+    {
+      "clause_id": "neg88",
+      "reasoning_cat1": "Technical but internally coherent, keyed to §706(d); the phrase \"their respective Interest of the Company's income\" carries the same \"Interest\" slip found elsewhere.",
+      "reasoning_cat2": "Consistent with Article VIII and Section 13.1.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 13.2 Allocations"
+    },
+    {
+      "clause_id": "neg89",
+      "reasoning_cat1": "\"without complying with the terms of this Agreement\" is circular and does not itself identify the applicable restrictions.",
+      "reasoning_cat2": "The substantive restrictions sit in Article XVI, and Section 14.2 refers to violations \"of this Article XIV,\" so the assignment restrictions are split across two articles in a way that requires reconciling.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 14.1 Assignability of Interests"
+    },
+    {
+      "clause_id": "neg90",
+      "reasoning_cat1": "Clear consequence (invalidity and non-recognition) with a definite trigger.",
+      "reasoning_cat2": "It polices \"this Article XIV\" only, while the operative transfer restrictions are in Article XVI, and Section 16.8 lets the Board waive restrictions unilaterally.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 14.2 Recognition of Assignment by Company"
+    },
+    {
+      "clause_id": "neg91",
+      "reasoning_cat1": "Categorical prohibition subject to unanimous written consent; definite.",
+      "reasoning_cat2": "Section 16.8 permits the Board alone to waive \"any transfer restrictions contained in this Agreement,\" which would override the unanimous-consent requirement here.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 14.3 Pledge"
+    },
+    {
+      "clause_id": "neg92",
+      "reasoning_cat1": "One-sentence, definite.",
+      "reasoning_cat2": "Consistent with Sections 13.1 and 15.2.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 15.1 No Dissolution"
+    },
+    {
+      "clause_id": "neg93",
+      "reasoning_cat1": "The enumerated events are specific, though \"retirement\" and \"expulsion\" are undefined and the Agreement provides no expulsion mechanism.",
+      "reasoning_cat2": "It lists \"resignation\" of a Member as a dissolution trigger even though Section 5.4 forbids a Member from resigning before dissolution and winding up.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 15.2 Events Causing Dissolution"
+    },
+    {
+      "clause_id": "neg94",
+      "reasoning_cat1": "\"a reasonable time shall be allowed for the orderly liquidation\" is elastic, and \"continue to distribute Interest Profits and Losses\" is a garbled phrase mixing allocation with distribution.",
+      "reasoning_cat2": "Distribution here is by Capital Account balances, whereas Sections 8.1 and 9.1 use Percentage Interests, and the Schedule A contribution figures do not match those percentages.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 15.3 Liquidation"
+    },
+    {
+      "clause_id": "neg95",
+      "reasoning_cat1": "Definite conditions for termination.",
+      "reasoning_cat2": "Consistent with Sections 2.3 and 15.3.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 15.4 Termination"
+    },
+    {
+      "clause_id": "neg96",
+      "reasoning_cat1": "Clear exclusive-recourse statement.",
+      "reasoning_cat2": "Consistent with Sections 12.1, 4.3(iii) and 4.5.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 15.5 Claims of the Members"
+    },
+    {
+      "clause_id": "neg97",
+      "reasoning_cat1": "Treating Schedule A as the register of ownership is stated definitely.",
+      "reasoning_cat2": "Section 2.1(iii) lets the Secretary revise Schedule A without an amendment, which gives the ownership register a somewhat unstable status, but the two can be read together.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.1 Transfer Procedures"
+    },
+    {
+      "clause_id": "neg98",
+      "reasoning_cat1": "The definition of \"transfer\" is a broad list closing with \"or otherwise,\" and the section says restrictions are \"set forth below\" without identifying them; \"dividend\" is used for an LLC distribution.",
+      "reasoning_cat2": "Its sanction mechanism overlaps Section 14.2's invalidity rule and can be waived unilaterally under Section 16.8, and the referenced Sections 16.9–16.11 in Section 16.4 do not exist.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.2 Restrictions on Transfer"
+    },
+    {
+      "clause_id": "neg99",
+      "reasoning_cat1": "Two clear alternative conditions for a valid transfer.",
+      "reasoning_cat2": "Consistent with Sections 13.1 and 16.2, and with Section 17.4 on binding successors.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.3 Party to this Agreement"
+    },
+    {
+      "clause_id": "neg100",
+      "reasoning_cat1": "The provision is incomplete — the sentence breaks off after \"the Company and the other Members shall\" — and it invokes \"Sections 16.9, 16.10, and 16.11,\" none of which exist in the Agreement.",
+      "reasoning_cat2": "Because the cross-referenced sections are absent, the waiver mechanism cannot be reconciled with the transfer scheme in Sections 16.2, 16.6 and 16.8 at all.",
+      "prob_cat1": 0.61,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.4 Waiver"
+    },
+    {
+      "clause_id": "neg101",
+      "reasoning_cat1": "\"in form and substance Satisfactory to the Board or the President\" and waiver \"for good cause\" are both discretionary standards without criteria.",
+      "reasoning_cat2": "Consistent with Sections 16.2 and 16.8's waiver architecture, though the President's power here is unusual next to Section 16.8's requirement of a Board resolution for waivers.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.5 Securities Opinion"
+    },
+    {
+      "clause_id": "neg102",
+      "reasoning_cat1": "The mechanics are detailed and largely self-executing, but the notice must state \"the number of LLC Votes,\" a term the Agreement does not define, and the allocation and closing timing sentences run together without punctuation.",
+      "reasoning_cat2": "\"LLC Votes\" should be \"Member Votes\" as defined in Article I, and the right of first refusal must be read with Sections 16.2, 16.5 and 16.8's waiver power.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.21,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.6 Right of First Refusal"
+    },
+    {
+      "clause_id": "neg103",
+      "reasoning_cat1": "\"such additional rules and regulations as it deems expedient\" is broad but expressly bounded by consistency with the Agreement.",
+      "reasoning_cat2": "Consistent with Article XVI generally and with Section 6.1's Board authority.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.7 Other Rules Regarding Transfer, Etc."
+    },
+    {
+      "clause_id": "neg104",
+      "reasoning_cat1": "\"Notwithstanding anything to the contrary\" plus \"any transfer restrictions contained in this Agreement\" is a sweeping override whose reach against specific consent requirements is uncertain.",
+      "reasoning_cat2": "It would let the Board override Section 14.3's requirement of all Members' written consent to a pledge and Section 16.6's right of first refusal, which are member protections not Board matters.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.41,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 16.8 Waivers of Restrictions on Transfer"
+    },
+    {
+      "clause_id": "neg105",
+      "reasoning_cat1": "Delivery methods and the receipt rule are stated definitely, though the list of permitted methods is joined disjunctively without a clear requirement to use any one.",
+      "reasoning_cat2": "Consistent with Section 2.5 and Schedule A addresses; no other provision prescribes a different notice regime.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.1 Notices"
+    },
+    {
+      "clause_id": "neg106",
+      "reasoning_cat1": "The sentence is confusingly constructed (\"shall not prevent a subsequent act ... from having the effect of an original violation\"), but the anti-waiver intent is recoverable.",
+      "reasoning_cat2": "Consistent with Section 17.3 and with the express waiver powers in Sections 16.5 and 16.8.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.2 Failure to Pursue Remedies"
+    },
+    {
+      "clause_id": "neg107",
+      "reasoning_cat1": "Standard cumulative-remedies language, definite.",
+      "reasoning_cat2": "Consistent with Section 17.2.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.3 Cumulative Remedies"
+    },
+    {
+      "clause_id": "neg108",
+      "reasoning_cat1": "Short and conventional, with an express \"to the extent permitted by this Agreement\" qualifier on assigns.",
+      "reasoning_cat2": "Consistent with Articles XIV and XVI restricting assignment, and with Section 17.11.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.4 Binding Effect"
+    },
+    {
+      "clause_id": "neg109",
+      "reasoning_cat1": "Purely mechanical construction rule; definite.",
+      "reasoning_cat2": "Its statement that all references to Sections correspond to provisions of this Agreement is embarrassed by the non-existent Sections 6.9, 16.9, 16.10 and 16.11 cited elsewhere.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.5 Interpretation"
+    },
+    {
+      "clause_id": "neg110",
+      "reasoning_cat1": "Standard severability language; the stray period mid-sentence is immaterial.",
+      "reasoning_cat2": "Consistent with the Agreement as a whole.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.6 Severability"
+    },
+    {
+      "clause_id": "neg111",
+      "reasoning_cat1": "Boilerplate counterparts clause, definite.",
+      "reasoning_cat2": "Consistent with Sections 2.1(ii) and 13.1 referring to counterpart execution.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.7 Counterparts"
+    },
+    {
+      "clause_id": "neg112",
+      "reasoning_cat1": "\"pertaining to the subject matter hereof\" is the usual formulation; its outer edge is arguable but conventional.",
+      "reasoning_cat2": "No other provision preserves side agreements, and the Agreement contains no schedule of surviving arrangements, so it fits the whole.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.8 Integration"
+    },
+    {
+      "clause_id": "neg113",
+      "reasoning_cat1": "Requires unanimous vote plus a writing executed by all Members; definite.",
+      "reasoning_cat2": "Section 2.1(iii) says revisions to Schedule A — which fixes contributions, Percentage Interests and votes — are not amendments, carving a significant exception out of this unanimity requirement.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.10 Amendments"
+    },
+    {
+      "clause_id": "neg114",
+      "reasoning_cat1": "\"Nothing expressed or implied shall be construed to confer upon any Person, except the Members and Managers, any rights or remedies\" is clear in form, though it omits a subject and does not say under what instrument.",
+      "reasoning_cat2": "It excludes Officers, Affiliates, employees and agents, yet Sections 12.4 and 12.5 confer indemnification and advancement rights on all \"Covered Persons,\" a broader class — a real tension.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 17.11 No Implied Rights or Remedies"
+    }
+  ]
+}

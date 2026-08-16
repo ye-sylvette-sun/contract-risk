@@ -1,0 +1,324 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The direction to divide the trust estate into \"Two (2) equal parts, one of which shall be distributed to each of Grantor's children, Mark Andrew Scott and Paul Ethan Scott, and any later children born of Grantor's marriage\" cannot be applied literally if there are later children — two parts cannot serve more than two takers, and it is unclear whether later children share a named child's part or take per capita.",
+      "reasoning_cat2": "Read against VI.C, which speaks only of \"the other then surviving child\" in the singular and presupposes exactly two children, the class-gift language here is hard to harmonise with the rest of the dispositive scheme.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.46,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section VI B — Dispositive Provisions: distribution upon death of Grantor's wife"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "A conventional preamble identifying grantor and corporate trustee; only the date is partly illegible in the transcription, which does not change meaning.",
+      "reasoning_cat2": "Consistent with Article X and XII, which name the same bank as Trustee; nothing to reconcile.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble and Parties"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The figures are internally odd as transcribed — \"Seventy-five and no/100 Dollars (375.00)\" and \"$100.09\" — but these read as OCR artifacts of $75.00 and $100.00, and $75 buying a $100 face Series E bond is coherent.",
+      "reasoning_cat2": "Fits Article VI, which disposes of \"any other trust property then held\" alongside policy proceeds; no conflict found.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I.A. Trust Property — Initial Cash Contribution"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "The policies are identified with specificity, though the transcription says \"two (3) certificates\" and gives the same certificate number 819800 for both insurers, a possible mechanical slip in identifying the subject matter.",
+      "reasoning_cat2": "Consistent with Article II's absolute assignment and with the attached Metropolitan and John Hancock assignment forms; no contradiction.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I.B. Assignment of Policies of Insurance"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "As it stands the sentence is broken mid-clause (\"add to this trust from time [to time] ... life\"), so the scope of what may be added — further policies only, or other property — is not stated.",
+      "reasoning_cat2": "It sits alongside the irrevocability clause XIII and I.A's cash contribution; an unlimited power to add is not inconsistent, but the incomplete text leaves its interaction unresolved.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "I.B. Right to Add Policies to Trust"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The grant is broad and closes with \"all rights of absolute ownership,\" so the enumerated list (\"including, without limitation\") does not meaningfully constrain the general words.",
+      "reasoning_cat2": "Consistent with I.B's assignment and with the attached absolute assignment forms; no operative provision cuts back the Trustee's ownership.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "II. Rights in Policies of Insurance"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "The permissive/mandatory mix (\"may, but shall not be obliged\" versus \"except that it shall apply any dividends\") is clear, though the transcription is garbled where it treats acceptance of cash surrender value \"upon the forfeiture.\"",
+      "reasoning_cat2": "It dovetails with Article IV's limitation of duty and with VI's disposition of \"any other trust property\"; no conflict identified.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "III. Payment of Premiums"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "\"Under no obligation or duty whatever except with respect to the safekeeping\" is an absolute-sounding disclaimer whose reach is uncertain given the following sentence requiring the Trustee to carry out the Agreement.",
+      "reasoning_cat2": "It sits against VI.A's affirmative duty to hold, manage, invest and reinvest and to make quarterly payments, which the disclaimer read literally would negate.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IV. Collection of Policy Proceeds"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "\"Fair value\" and \"such terms and security as it shall deem proper\" are soft, but the clause expressly commits the ascertainment of fair value to the Trustee's sole fiduciary discretion, which resolves most of it.",
+      "reasoning_cat2": "Consistent with Article IX's statutory powers and XII's exoneration; no contrary provision found.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "V. Dealings with Estate of Insured"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "A definite life income interest to a named beneficiary payable quarterly; nothing ambiguous in the words themselves.",
+      "reasoning_cat2": "Harmonises with VI.B, which starts remainder distribution on the wife's death; no inconsistency.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.A. Income to Grantor's Wife for Life"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "\"Standard of living to which she has been accustomed during Grantor's life\" and \"any other income the Grantor's wife may have\" are classic soft support standards, though tempered by the express grant of discretion.",
+      "reasoning_cat2": "Encroachment on principal reduces the remainder given in VI.B, but that is the ordinary structure of a support trust rather than an internal contradiction.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.A. Discretionary Encroachment on Principal"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "Subparagraph (1) is cut off after \"lawful issue or adopted,\" and (3)(a) uses the intestate rules for \"real property\" to distribute what may be personalty, leaving the mechanism uncertain.",
+      "reasoning_cat2": "It presupposes exactly two children (\"the other then surviving child\"), which does not fit VI.B's reference to later-born children.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.C. Death of a Child Before Distribution"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The age of eighteen and the termination-on-majority trigger are stated definitely; \"as by the Trustee deemed necessary\" is discretionary but conventional.",
+      "reasoning_cat2": "It matches Article VII's definition of a minor as under eighteen, but potentially overlaps with VII's authority to pay a minor directly, a minor tension.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VI.D. Shares Passing to Persons Under Eighteen"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The provision as transcribed begins mid-sentence, and it authorises payment \"directly to such person being a minor\" while also permitting payment to a guardian, an internally loose set of alternatives.",
+      "reasoning_cat2": "It overlaps with VI.D, which directs that shares passing to persons under eighteen be retained in trust rather than paid over; the two are not obviously reconciled.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VII. Facility of Payment"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "Standard spendthrift wording, expressly qualified by \"to the extent that such power may be lawfully limited,\" which forecloses most argument about reach.",
+      "reasoning_cat2": "Consistent with the dispositive provisions and the Trustee's payment powers; nothing conflicts.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "VIII. Spendthrift Provisions"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "The incorporation excludes \"Subparagraphs 1 through [blank] inclusive,\" so the range of excluded statutory powers is not ascertainable from the text — a genuine gap in defining the Trustee's powers.",
+      "reasoning_cat2": "Because it grants powers \"in addition to powers elsewhere herein conferred,\" the unspecified exclusions could cut against powers expressly given in II, III and V.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "IX. Trust Powers"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The clause breaks off after \"then the,\" so no successor trustee or appointment mechanism is actually stated.",
+      "reasoning_cat2": "That leaves a gap against XII's acceptance of trust and the Agreement's assumption of a continuing corporate trustee, but the omission is likely a transcription truncation.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "X. Successor Trustee"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "A short, definite situs and governing-law designation; the missing \"in\" is an obvious transcription slip that does not alter meaning.",
+      "reasoning_cat2": "The attached and incorporated Metropolitan assignment states it shall be construed under New York law, which sits awkwardly with \"in all respects\" Tennessee law here.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "XI. Situs"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "The exculpation as transcribed is badly garbled but appears to exonerate for errors of judgment and loss \"except its own bad faith or negligence,\" a standard that is itself an odd combination and hard to read confidently.",
+      "reasoning_cat2": "It coexists with Article V's statement that the Trustee incurs \"no liability\" for estate purchases and IV's blanket disclaimer of duty, which are broader than the negligence carve-out here.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "XII. Acceptance of Trust and Exoneration of Trustee"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "A one-line waiver of bond; the wording is definite despite transcription noise.",
+      "reasoning_cat2": "Nothing elsewhere requires security; consistent with the whole.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "XII. No Bond Required"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"This trust is irrevocable\" with an express relinquishment of rights to alter, amend, revoke or terminate is about as definite as drafting gets.",
+      "reasoning_cat2": "It fits I.B's stated desire to establish an irrevocable trust, though it sits against the Grantor's reserved power to add property in I.B — an addition power is not, however, a power to amend.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "XIII. Irrevocability"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The grant is comprehensive and uses \"including specifically but not by way of limitation upon the generality of the foregoing,\" which neutralises any ejusdem generis argument about the enumerated rights.",
+      "reasoning_cat2": "Consistent with Article II of the trust, which contemplates exactly this absolute assignment; no conflict.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Absolute Assignment — Grant of Ownership Rights"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "The condition (binding only on execution of the waivers and consents, then relating back to the assignor's signature date) is stated with precision.",
+      "reasoning_cat2": "The attached Waivers and Consents were executed, and the trust's Article II recites the same sequence; consistent.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Absolute Assignment — Effectiveness Upon Waivers and Consents"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "A short disclaimer of responsibility for validity and sufficiency; the terms are conventional and unambiguous.",
+      "reasoning_cat2": "Mirrored by the assignee's release in the Consent and Release; consistent with the whole.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Absolute Assignment — No Responsibility for Validity"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "The insurer's non-responsibility for the trustee's application of proceeds and the discharge-on-receipt rule are standard and definite as transcribed.",
+      "reasoning_cat2": "Parallels Article II's provision that the Trustee's receipts are binding on all persons interested in the trust; consistent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Absolute Assignment — Payments to Trustee Assignee"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "A one-line choice of New York law; the wording itself is definite.",
+      "reasoning_cat2": "It points the other way from Article XI, which says the trust shall \"in all respects\" be governed by Tennessee law, while Article II incorporates these assignment documents into the Agreement.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Absolute Assignment — Governing Law"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "As transcribed the operative designation is mutilated — it appears to designate the Trustee itself as beneficiary — so what was designated cannot be read off the words.",
+      "reasoning_cat2": "Article II contemplates the Trustee as absolute owner and beneficiary, so the intended effect is inferable from the trust even though the form text is garbled.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Assignee's Designation of Beneficiary"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "The waiver of anti-assignment provisions and consent to the assignee's exercise of ownership rights is conventional; the transcription is broken but the substance is plain.",
+      "reasoning_cat2": "Consistent with the assignment's condition in the effectiveness clause and with Article II; no conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Waivers and Consents"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "The undertaking to communicate \"in the same manner and to the extent only that they communicate generally to Eastman employees as insureds\" is a soft benchmark, though the assignee's acceptance of no other communication is clear.",
+      "reasoning_cat2": "Consistent with the release and the premium-billing paragraph in the same instrument; nothing contradicts it.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consent and Release by Assignee — Acceptance of Limited Communications"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "A brief, plainly worded release of responsibility for sufficiency, validity or effect of the assignment.",
+      "reasoning_cat2": "Duplicates the insurer's disclaimer earlier in the same form; consistent.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consent and Release by Assignee — Release"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Detailed and specific on billing, withholding and revocation, though \"in the sole discretion of Eastman be changed from time to time\" leaves the schedule open by design.",
+      "reasoning_cat2": "It sits with Article III of the trust, which makes premium payment permissive for the Trustee; the assignee's acknowledgment that lapse follows non-payment is compatible with that.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consent and Release by Assignee — Contributory Premium Payments and Billing"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "A short acknowledgment reserving the insurer's and policyholder's rights to amend or terminate; definite in effect.",
+      "reasoning_cat2": "It qualifies the absolute-ownership language in the assignment and in Article II, but as a reservation of the insurer's rights it is readily harmonised.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Consent and Release by Assignee — Rights to Amend or Terminate Policies"
+    }
+  ]
+}

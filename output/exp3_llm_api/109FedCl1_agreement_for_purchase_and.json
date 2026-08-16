@@ -1,0 +1,394 @@
+{
+  "judgments": [
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The conveyance language is standard, though \"approximately 10.89 acres\" and the catch-all \"rights, privileges, easements and appurtenances, if any\" leave some soft edges; the OCR typos (\"parcel!\", \"ail\", \"apart hereof\") do not change meaning. Nothing here carries two genuinely competing readings on its face.",
+      "reasoning_cat2": "It fits Section 3 (Deed) and Section 4 (Title), both of which contemplate fee simple subject to Permitted Exceptions, whereas this section says only \"subject to the terms and conditions hereof\" — a minor tension resolved by the express cross-references. No real conflict with the whole instrument.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "1. Purchase and Sale"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The deferred-payment mechanism is internally muddled: \"less any deductions identified below\" and \"or less dependent upon setoffs as described below\" refer to deductions/setoffs that are never actually described below, and it is unclear whether the $1,000,000 balance is ever payable if TIF is never received. \"10% of the annual tax incremental financing reimbursement\" against an illustrative example creates a genuine dispute about whether the Seller is entitled to a fixed $1,000,000 or only a contingent share.",
+      "reasoning_cat2": "Section 28 repeats the Outstanding Balance concept with \"less any setoff\" while this section says \"less any deductions,\" and neither anywhere defines the setoffs; Section 8(a)(i) also says the \"Purchase Price\" is paid at Closing, though only $8,000,000 is due then. That mismatch between Section 2 and Section 8(a)(i) is a real, nameable inconsistency.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.55,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "2. Purchase Price"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "It promises title \"free from any and all liens or encumbrances, subject only to those items identified in the Real Estate Option Agreement dated ___\" — the blank date and the reference to exceptions in another document leave the Permitted Exceptions genuinely indeterminate. \"Necessary to affect the Buyer's desired street closures\" (for \"effect\") is also loose about a condition that may never occur.",
+      "reasoning_cat2": "Section 4 defines Permitted Exceptions as \"those Permitted Exceptions attached hereto,\" and the attachment list includes \"Exhibit B — Permitted Exceptions,\" contradicting this section's definition by reference to the Option Agreement. That is a specific inconsistency in the source of the Permitted Exceptions.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.44,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "3. Deed"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "The mechanics are largely conventional, but \"shall have ten (10) business days prior to the date of Closing\" is grammatically incomplete about when the cure period runs, and blanks remain for the Title Company office. The typo \"expanse\" for \"expense\" does not itself change meaning.",
+      "reasoning_cat2": "It defines Permitted Exceptions as those \"attached hereto,\" whereas Section 3 defines them by reference to the GSA Option Agreement — a nameable divergence. Otherwise it harmonises with Section 8(a)(iv) and 8(b).",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "4. Title"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The obligation is definite as to content but has no deadline, and it is conditioned on a City of Detroit approval of vacation that may never issue; \"as a prepared\" is a garbled phrase but not meaning-changing. The absence of any time for delivery leaves modest room for argument.",
+      "reasoning_cat2": "It matches Section 3's reference to the vacation of Sixth and Abbott Streets and Section 8's ninety-day closing deadline, though a survey dependent on municipal approval could strain that deadline. No direct contradiction.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "5. Survey"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "An as-is acknowledgement with the carve-out \"except as expressly set forth elsewhere in the Agreement\" — the scope of that carve-out against the sweeping acceptance of \"all faults of every kind and nature\" is the classic point of contest. The phrase \"whether now or hereafter existing\" is also broad.",
+      "reasoning_cat2": "It sits directly against Section 7(d)-(e) environmental representations and Section 11's risk-of-loss allocation to Seller, so the interplay of as-is acceptance with surviving warranties (Section 23 No Merger) is a plausible source of argument. The express carve-out mitigates but does not eliminate that tension.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "6. Condition of Property"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "This is a bare introductory lead-in with no operative content of its own beyond the words \"covenants and represents.\" There is nothing to construe.",
+      "reasoning_cat2": "It merely introduces subparagraphs (a)-(e) and is consistent with the closing warranty sentence and Section 23. No conflict found.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7. Seller's Representations — introduction and closing warranty"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "A short, definite representation of record ownership and authority with no vague term. Nothing to construe.",
+      "reasoning_cat2": "Consistent with Section 1 and Section 3, which assume Seller can convey fee simple title. No inconsistency.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(a) Record owner and authority"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "It is knowledge-qualified in an uneven way — \"no knowledge of any reason\" and \"to its knowledge\" attached to some limbs but not to the flat assertion that \"possession of the land has been peaceable and undisturbed.\" \"The Federal Office facilities contemplated herein\" is also undefined in this Agreement.",
+      "reasoning_cat2": "The unqualified continuing-truth sentence at the end of Section 7 makes a knowledge-qualified statement into a daily warranty, which is awkward but not directly contradictory. Section 13 refers to a leasehold for Federal facilities, giving some content to \"Federal Office facilities.\"",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(b) No knowledge of title or development impediments"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The representation is factual and specific, though \"of sufficient size, capacity\" and \"for its current use\" are vague standards given the contemplated redevelopment. The qualifier \"for its current use\" narrows an otherwise sweeping utility assurance.",
+      "reasoning_cat2": "Section 26 repeats the same utility language but adds gas and omits \"for its current use,\" and then makes all relocations Buyer's cost — a discernible mismatch between the two utility provisions. That divergence is specific enough to be arguable.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.36,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(c) Utilities"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "The disclosure that the property is a statutory \"facility\" is definite, but \"all environmental information that it has\" is an unbounded and unverifiable category. The wording is otherwise clear.",
+      "reasoning_cat2": "It is expressly carved out of 7(e) and interacts with Section 6's as-is acceptance, but the carve-outs are stated, so the provisions can be harmonised. No direct conflict.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(d) Environmental disclosure"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "It refers to exceptions \"indicated on Schedule A attached,\" but the attachment list names only Exhibit A (Legal Description) and Exhibit B (Permitted Exceptions) — a missing schedule leaves the scope of the exceptions indeterminate. Subparagraph (3)'s conditional framing (\"in the event that any subsequent purchaser ... avails itself\") is also convoluted.",
+      "reasoning_cat2": "The missing Schedule A conflicts with the attachment list at the end of the Agreement, and the \"to the best of Seller's actual knowledge\" qualifier sits uneasily with the unqualified continuing-truth sentence immediately following. Those are specific, nameable frictions.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7(e) Environmental representations to best of knowledge"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "\"Will continue to be true and correct on each day hereafter\" is unqualified and perpetual, which is odd against representations expressly limited to Seller's knowledge and to a point in time. The open-ended temporal reach is a real ambiguity.",
+      "reasoning_cat2": "It converts the knowledge-qualified statements of 7(b) and 7(e) into perpetual warranties and interacts with Section 23 (No Merger), which caps survival at acceptance of occupancy — a discernible tension over duration. That gives a court something to reconcile.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "7 Continuing truth of representations"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "The text as transcribed contains stray roman numerals \"(i) (ii) (iii) (iv)\" before a single obligation, so the numbering is plainly mangled; the closing deadline itself is definite. \"On a mutually agreeable date\" without a fallback could also be argued.",
+      "reasoning_cat2": "It says Buyer shall cause \"the Purchase Price\" to be paid at Closing, but Section 2 provides only $8,000,000 is payable at Closing with the balance deferred — a specific contradiction. Numbering also collides with 8(a)(iv)'s self-reference to \"Section 8(a)(v).\"",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(a) Closing and Obligations at Closing"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "A short, definite deed-delivery obligation cross-referenced to Section 3; \"any exceptions created or suffered by Buyer\" is a familiar and reasonably bounded phrase. Little to construe.",
+      "reasoning_cat2": "It depends on Section 3's Permitted Exceptions definition, which itself diverges from Section 4's, so the exception set carried into the deed is uncertain. That derivative tension is modest.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(a)(ii) Warranty Deed"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "A standard FIRPTA certification with defined statutory terms and no vague language. Nothing to construe.",
+      "reasoning_cat2": "Consistent with the rest of the closing mechanics in Section 8. No conflict identified.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(a)(iii) Transferor's certification"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "\"Such other documentation as is reasonably required\" against the enumerated \"ALTA statements and GAP undertakings\" is a general catch-all whose reach is uncertain, and \"extraordinary obligations\" is an undefined limit. The dropped word in \"if required the Title Company\" adds to the looseness.",
+      "reasoning_cat2": "It self-identifies as \"Section 8(a)(v)\" while appearing as item (iv), and the actual (v) is Possession — a plain internal numbering conflict within Section 8. It otherwise sits comfortably with Sections 4 and 16.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.31,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(a)(iv) Other documentation"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "A one-line, unqualified possession obligation with no ambiguous term. Nothing to construe.",
+      "reasoning_cat2": "Consistent with Section 8(a) closing mechanics; note Section 13's entry rights run only pre-closing. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.06,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(a)(v) Possession"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The escrow mechanics and the 50/50 fee split are definite; \"undertakings ... necessary for the Closing in escrow to occur\" is somewhat open but bounded by purpose. Little to construe.",
+      "reasoning_cat2": "Section 4 puts the title commitment cost at Seller's sole expense while this splits escrow and Title Company charges — the two can be read as covering different charges, but the boundary is not crisp. Otherwise consistent.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "8(b) Escrow closing"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "\"All real estate taxes, expenses and charges in connection with ownership and use of the Property\" is a broad, unenumerated category whose scope could be disputed. The mechanism itself is clear.",
+      "reasoning_cat2": "Section 2 also references \"standard deductions and prorations (customary closing expenses ... inclusive of utility and real estate tax prorations)\" — overlapping but not contradictory coverage. Section 26 assigns utility relocation costs to Buyer after closing, which fits.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "9. Prorations"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The liquidated damages sentence is grammatically broken — Seller is \"entitled to ... either a $50,000 letter of credit or cash equivalent ... which the Buyer is required to obtain or place in escrow ... within ten (10) business days of Award and Assignment of the Option\" — mixing a remedy with an obligation and referring to \"Award and Assignment\" nowhere defined. \"Any subsequent Buyer\" and the revocation scenario add further indeterminacy about who holds and forfeits the security.",
+      "reasoning_cat2": "It caps Seller's remedy at $50,000 liquidated damages but then adds \"the parties may seek any other remedy available at law or in equity,\" which is hard to reconcile with a liquidated-damages cap and with Section 21's fee-shifting. That internal and cross-provision friction is specific.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.46,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "10. Default"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "\"Injury beyond the ordinary wear and tear\" and \"an appropriate deduction from the purchase price\" are vague standards, and the choice between repair and deduction is not clearly allocated to either party. That leaves a real construction question.",
+      "reasoning_cat2": "It places risk on Seller until deed delivery, which sits against Section 6's as-is acceptance of the Property \"in the condition existing on the date of closing ... including all faults ... whether now or hereafter existing\" — a genuine tension over post-signing damage. That is a nameable conflict.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "11. Risk of Loss"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"Substantial portion\" is defined circularly by reference to whether it \"would impair or otherwise affect the intended use,\" and \"intended use\" is nowhere defined; the first sentence is also a fragment ending in a period before \"Buyer shall have the right.\" Both the vagueness and the punctuation error bear on meaning.",
+      "reasoning_cat2": "It fits the termination and closing framework of Sections 4 and 8, though the treatment of awards here can be compared with Section 1's assignment of street-award rights to Buyer. No direct contradiction found.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "12. Condemnation"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "The provision uses \"Optionee\" and \"Optionor\" and refers to \"the period of this Option including any extension periods\" — terms belonging to a different instrument and undefined here, so the identity of the obligor and the duration of the right are unclear. \"Any other due diligence matters deemed reasonably prudent\" is also an open catch-all after an enumerated list.",
+      "reasoning_cat2": "This is a purchase agreement, not an option, yet the clause is drafted in option terms; it also assumes a \"leasehold for Federal facilities\" while Section 1 conveys fee simple to Buyer. Those mismatches against Sections 1 and 24 are specific and hard to harmonise.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.52,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "13. Buyer's Right to Enter and Inspect the Property"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "The delivery methods and deemed-receipt timing are definite, but no deemed-receipt rule is given for personal delivery and the Buyer's address block is blank. Those gaps are real but narrow.",
+      "reasoning_cat2": "The blank Buyer notice address matters for Sections 10, 12 and 4, all of which turn on written notice, so the omission has operative reach. Still, no provision contradicts this one.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "14. Notices"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "A short mutual no-broker representation; \"any other person or entity\" is odd phrasing after \"each party ... to the other\" but the sense is plain. Little to construe.",
+      "reasoning_cat2": "Nothing elsewhere in the Agreement addresses brokerage. Consistent with the whole.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "15. Brokerage"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "\"Such other acts ... as may be reasonably necessary\" is a standard further-assurances catch-all, vague by design but conventionally construed narrowly. Modest risk only.",
+      "reasoning_cat2": "It overlaps Section 8(a)(iv) and Section 1's promise of further conveyancing instruments without contradicting either. Consistent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "16. Other Acts"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "Time-of-the-essence language with a weekend/holiday extension rule; the terms are standard and definite. Nothing genuinely ambiguous.",
+      "reasoning_cat2": "It bears on Section 8's ninety-day closing deadline and Section 5's undated survey obligation, where a strict time clause has nothing to attach to — a mild strain rather than a conflict. Otherwise consistent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "17. Time is of the Essence"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "Boilerplate headings clause with definite effect. Nothing to construe.",
+      "reasoning_cat2": "Consistent with the whole instrument. No conflict.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "18. Paragraph or Section Headings"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "Standard number-and-gender interpretation clause; wholly definite. Nothing to construe.",
+      "reasoning_cat2": "No other provision is affected adversely. Consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.03,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "19. Interpretation"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "Choice of law by reference to \"the state in which the Property is located\" is determinate (Michigan), and the successors language is standard. Nothing ambiguous.",
+      "reasoning_cat2": "The Agreement contemplates assignment from GSA to Buyer (Sections 10 and 24) yet \"permitted assigns\" is not defined by any assignment clause — a small gap rather than a contradiction. Otherwise consistent.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "20. Applicable Law and Parties Bound"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "\"Prevailing party, as determined by the court\" is expressly delegated, which removes most of the usual ambiguity. Wording is definite.",
+      "reasoning_cat2": "It coexists with Section 10's liquidated damages cap of $50,000, raising a question whether fees fall outside that cap, but the two can be read as separate. Low tension.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "21. Attorney's Fees"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "Requires written amendments executed by \"each party hereto\" — clear on its face. Nothing vague.",
+      "reasoning_cat2": "Section 24's final sentence requires amendments executed by Buyer, Seller AND the Government acting by GSA, adding a third signatory this clause omits — a direct conflict between Sections 22 and 24. That is a specific, nameable inconsistency.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.58,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "22. Amendments"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Survival \"until fulfilled, up to and including the time of completion of any improvements to be built thereon and the written acceptance of occupancy\" ties duration to events this Agreement never obliges anyone to perform, so the endpoint is indeterminate. \"Until fulfilled\" against a fixed occupancy endpoint pulls in two directions.",
+      "reasoning_cat2": "It conflicts with the Section 7 closing sentence making representations true \"on each day hereafter\" without limit, and it presupposes a construction/lease transaction not otherwise provided for in this sale agreement. Those tensions are identifiable.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "23. No Merger"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "It declares the Agreement \"cancels and supersedes all prior agreements\" and \"is entire in itself\" yet simultaneously preserves the August 2006 Option as one of \"the only agreements between parties hereto\" — an internal contradiction within a single sentence, aggravated by the blank date and the unclosed quotation mark. That is a genuine ambiguity about the Option's continued force.",
+      "reasoning_cat2": "Section 3 makes the Permitted Exceptions depend on that same Option Agreement, and Section 22 states amendments need only the parties' signatures whereas this clause requires GSA's as well — two specific conflicts. The Agreement's status vis-à-vis the Option is not resolvable from the text alone.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.61,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "24. Prior Agreements"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "A one-line prohibition with no ambiguous term. Nothing to construe.",
+      "reasoning_cat2": "Nothing elsewhere permits recording; consistent with the whole. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "25. No Recording"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "\"All public and quasi-public and private utilities terminations, and relocations\" is broad and the stray comma is confusing, and \"of sufficient size, capacity\" is a vague standard. The reach of Buyer's cost assumption \"after closing\" is arguable.",
+      "reasoning_cat2": "Section 7(c) makes essentially the same utility statement but omits gas and adds the limiter \"for its current use,\" so the two representations differ in scope on the same subject. That divergence between Sections 7(c) and 26 is a specific inconsistency.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.4,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "26. Utilities/Utilities Relocations and Costs"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "Standard counterparts clause; wholly definite. Nothing to construe.",
+      "reasoning_cat2": "It duplicates the counterparts sentence in Section 22 but does not contradict it. Consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "27. Counterparts"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "\"The Seller will cooperate\" to secure \"all necessary government approvals\" and \"any other applicable grant and/or loan programs\" is an open-ended and unmeasured obligation. \"Less any setoff\" refers to setoffs nowhere defined.",
+      "reasoning_cat2": "It repeats Section 2's final sentence but substitutes \"setoff\" for \"deductions,\" and neither section identifies what those setoffs or deductions are — a direct verbal mismatch on the amount actually owed. That reinforces the Section 2 problem.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "28. Tax Incentive Financing"
+    }
+  ]
+}

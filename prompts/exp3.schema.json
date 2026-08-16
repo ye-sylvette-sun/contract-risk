@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["judgments"],
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "description": "One judgment per provision id listed in the document, in the order given.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["clause_id", "reasoning_cat1", "reasoning_cat2",
+                     "prob_cat1", "prob_cat2"],
+        "properties": {
+          "clause_id": {
+            "type": "string",
+            "description": "The provision id, copied exactly from the square brackets."
+          },
+          "reasoning_cat1": {
+            "type": "string",
+            "description": "Two sentences on the provision's own wording. Name the ambiguous term or the general-vs-specific tension, or say why the wording is definite."
+          },
+          "reasoning_cat2": {
+            "type": "string",
+            "description": "Two sentences on its fit with the rest of the contract. Name the specific other provision you checked, or say it is consistent with the whole."
+          },
+          "prob_cat1": {
+            "type": "number",
+            "description": "Probability of a Category 1 risk (intrinsic textual defect). Between 0 and 1, to two decimal places, on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1. The range is stated here and not as minimum/maximum, which structured output rejects on a number; the reader clamps it."
+          },
+          "prob_cat2": {
+            "type": "number",
+            "description": "Probability of a Category 2 risk (relational defect). Between 0 and 1, to two decimal places, on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1. The range is stated here and not as minimum/maximum, which structured output rejects on a number; the reader clamps it."
+          }
+        }
+      }
+    }
+  }
+}

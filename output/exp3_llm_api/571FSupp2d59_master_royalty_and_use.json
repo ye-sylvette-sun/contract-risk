@@ -1,0 +1,844 @@
+{
+  "judgments": [
+    {
+      "clause_id": "pos1",
+      "reasoning_cat1": "The Option is priced only at an FMV \"to be negotiated in good faith\" subject to a $0.15/MHz POP cap, and turns on the undefined trigger of Spectrum that is or becomes \"Available\" — both are classic sources of a construe-it dispute (agreement-to-agree vs binding option). The good-faith negotiation duty and Clearwire's right to walk away mid-period leave the reach of the Option genuinely uncertain.",
+      "reasoning_cat2": "Its interaction with Section 1.04's ROFR (which applies unless the Option Notice was complied with and pricing is not more favorable), with Section 2.02's refund of the Prepaid Royalties Balance, and with Section 9.01's Term/extension mechanics creates a web where the Option's survival and effect can be read inconsistently. Section 1.02(d)'s automatic lapse of Options at Term expiration sits awkwardly against Section 9.03's survival language.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.48,
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Section 1.02(b) — Option for Future Spectrum Capacity"
+    },
+    {
+      "clause_id": "neg1",
+      "reasoning_cat1": "The preamble simply names the two parties, the date and the definitional exhibit; the wording is definite and nothing in it is capable of two readings.",
+      "reasoning_cat2": "It names only Licensee and Clearwire as Parties, yet Article V runs representations to \"Clearwire and Clearwire Parent\" and Section 4.02(c)(iii)(2) refers to \"each Clearwire Affiliate that is a Party hereto,\" a modest whole-instrument mismatch.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Preamble"
+    },
+    {
+      "clause_id": "neg2",
+      "reasoning_cat1": "The recitals are descriptive and hedged (\"Clearwire believes\", \"central to Licensee's efforts\"), with no operative term whose boundary must be applied, though \"Total Consideration\" is defined only here.",
+      "reasoning_cat2": "The recital that the agreement \"would not have been executed but for all of the elements of the Total Consideration\" and that Licensee is \"a shareholder of Clearwire Corporation\" could be pressed against the operative Articles II–III and the entire-agreement clause in Section 10.03.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Recitals"
+    },
+    {
+      "clause_id": "neg3",
+      "reasoning_cat1": "A purely descriptive overview that defines \"EBS Spectrum Capacity\" as Initial plus Future Spectrum Capacity when under an IUA; the wording is definite.",
+      "reasoning_cat2": "It is consistent with Section 1.02 and Article IV, which supply the operative mechanics for both Initial and Future Spectrum Capacity.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.01(a) Overview"
+    },
+    {
+      "clause_id": "neg4",
+      "reasoning_cat1": "It asserts the initial payment \"exceeds the value of the Initial Spectrum Capacity\" without quantifying the excess or allocating it among the Option, ROFR and advance payment, which is a soft but real vagueness.",
+      "reasoning_cat2": "Read with Section 2.01's $23,000,000 Prepaid Royalties and Section 2.02's full refund obligation, the characterisation of part of the payment as consideration for the Option and ROFR is hard to square with a complete cash refund on termination.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.01(b)"
+    },
+    {
+      "clause_id": "neg5",
+      "reasoning_cat1": "The list of Access Right Royalties is introduced by \"among other items\" and closes with \"technology, facilities, equipment and other functionality,\" a general catch-all against four enumerated specifics.",
+      "reasoning_cat2": "It largely tracks Article III, but the catch-all could be argued to add obligations beyond the enumerated Sections 3.02–3.09.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.01(c)"
+    },
+    {
+      "clause_id": "neg6",
+      "reasoning_cat1": "It is a definitional bridge identifying the IUA form and labelling the Article III bundle as the \"Access Right Royalties\"; the wording is straightforward despite OCR noise.",
+      "reasoning_cat2": "Consistent with Article III and Article IV's closing procedure; no conflicting provision found.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.02(a) IUAs for Initial Spectrum Capacity"
+    },
+    {
+      "clause_id": "neg7",
+      "reasoning_cat1": "The paragraph contains a garbled definition (\"a GSA the covers the same metropolitan are in Puerto Rico\") and layers a $0.15 ceiling against a $0.10 floor plus an MFN adjustment, so both the definition of \"Substantially Similar\" and the price mechanics are contestable.",
+      "reasoning_cat2": "It must be reconciled with Section 1.02(b)'s flat $0.15 cap and with Section 9.01's Term carve-out \"except as it pertains to Puerto Rico,\" and the twelve-month post-Term survival also has to be squared with Section 1.02(d)'s automatic lapse.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.35,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.02(c) Puerto Rico Option"
+    },
+    {
+      "clause_id": "neg8",
+      "reasoning_cat1": "Within the same subsection the Option is said to remain available for not less than twelve months after the Term for PR Spectrum, and then \"[a]ny outstanding Options shall lapse automatically upon the expiration of the Term\" — an internal tension only partly cured by the notification exception.",
+      "reasoning_cat2": "It duplicates the second sentence of Section 1.02(b) and pulls against Section 9.03's survival of Options and Section 2.02's refund trigger, leaving post-Term option rights uncertain.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.37,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.02(d)"
+    },
+    {
+      "clause_id": "neg9",
+      "reasoning_cat1": "The covenant to cause Service Affiliates to assume obligations and be jointly and severally liable is clear, and the final sentence forecloses the obvious argument that it limits Clearwire's primary obligation.",
+      "reasoning_cat2": "The table of contents labels Section 1.03 \"Scope and Nature of Clearwire Group,\" a heading mismatch, but Section 10.05 makes headings non-operative, so the fit with Article III is otherwise sound.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.03 Service Affiliates"
+    },
+    {
+      "clause_id": "neg10",
+      "reasoning_cat1": "The mechanics are detailed but rest on \"fairly equivalent to the then fair market value\" of non-cash consideration and the garbled phrase \"shall again apply for such timing remaining in the ROFR Period.\"",
+      "reasoning_cat2": "Its opening carve-out expressly keys off Section 1.02(b)'s Option Notice and pricing, and it commits FMV disputes to \"arbitration under this Agreement\" although Section 10.11 as reproduced does not clearly establish binding arbitration.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.33,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 1.04 Right of First Refusal on IUAs"
+    },
+    {
+      "clause_id": "neg11",
+      "reasoning_cat1": "A fixed sum payable on execution, expressed in words and figures; the wording is definite.",
+      "reasoning_cat2": "It cross-refers to Section 1.02(b) for application and dovetails with Section 2.02's refund of the unapplied balance; no conflict found beyond a heading variance with the table of contents.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.01 EBS Spectrum Capacity Economic Royalties"
+    },
+    {
+      "clause_id": "neg12",
+      "reasoning_cat1": "The refund duty and the Prepaid Royalties Balance are defined precisely, but the closing sentence's mechanism — Clearwire unilaterally extending the refund date and thereby extending the Term — is a striking one-sided device whose reach is uncertain.",
+      "reasoning_cat2": "That extension mechanism has to be reconciled with Section 9.01, which fixes the Term as the earliest of three events and permits extension only before expiration under clause (1), and with the proviso that the Term is not deemed expired while Option periods run.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 2.02 Refunding of Prepaid Royalties"
+    },
+    {
+      "clause_id": "neg13",
+      "reasoning_cat1": "The Puerto Rico sentence obliges Clearwire only to \"(in good faith) consider and use its commercially reasonable best efforts\" to enter a joint venture, and conditions it on pricing \"greater than Clearwire's lowest wholesale price\" — a soft, boundary-less obligation.",
+      "reasoning_cat2": "The benchmark of how Access Right Royalties are provided \"to third parties\" sits alongside Section 3.05(a)'s lowest-wholesale-rate promise without evident conflict.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.01 Access Right Royalties"
+    },
+    {
+      "clause_id": "neg14",
+      "reasoning_cat1": "A one-sentence pointer to Sections 3.02–3.04; nothing to construe.",
+      "reasoning_cat2": "Consistent with the sections it cross-references.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.02(a) Cost-Free Educational Accounts"
+    },
+    {
+      "clause_id": "neg15",
+      "reasoning_cat1": "\"[T]he highest level of premium mass market retail service\" and \"fully portable ... to the extent that Clearwire offers such portability to any customer\" are benchmarks whose content can shift and be disputed.",
+      "reasoning_cat2": "The subordination to Clearwire's \"then generally applicable Acceptable Use Policy\" is expressly limited to terms not inconsistent with this Agreement and the IUA, which harmonises it with Article III.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.02(b)"
+    },
+    {
+      "clause_id": "neg16",
+      "reasoning_cat1": "The grant of full-time use of the 5% Educational Reservation and the bar on Clearwire's use are stated definitely, with \"currently required by the FCC Rules\" anchoring the quantum.",
+      "reasoning_cat2": "It routes disagreements to the Dispute Resolution Procedure of Section 10.11, which is truncated in the instrument, but is otherwise consistent with Sections 3.03(b) and 3.04.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.03(a) Educational Reservation"
+    },
+    {
+      "clause_id": "neg17",
+      "reasoning_cat1": "The upward adjustment \"proportionate to the growth of the overall data capacity\" measured by \"average throughput\" in a manner \"as shall be agreed\" is an unresolved measurement standard falling back on arbitration.",
+      "reasoning_cat2": "It measures Basic accounts per Cell Site while Section 3.04(a) measures Additional accounts per Sector, and Section 3.04's recalculation is annual rather than five-yearly — reconcilable but a place where the scheme grates.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.03(b)"
+    },
+    {
+      "clause_id": "neg18",
+      "reasoning_cat1": "A short introductory obligation with \"in addition to, and not in lieu of\" language; the wording is definite.",
+      "reasoning_cat2": "It describes the Section 3.03 accounts as provided \"pursuant to the Educational Reservation,\" whereas Section 3.03(b)'s Basic accounts are network accounts rather than reservation capacity — a minor characterisation mismatch.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.04 Additional Cost-Free Educational Accounts"
+    },
+    {
+      "clause_id": "neg19",
+      "reasoning_cat1": "The \"greater of\" formula is mechanical, but \"Sector\" and \"Market Area\" carry the work and the annual recalculation date is fixed; little to construe on its own terms.",
+      "reasoning_cat2": "The per-Sector measure sits against Section 3.03(b)'s per-Cell-Site measure and the five-year adjustment cycle, so the total account entitlement requires harmonising.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.2,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.04(a) Number and Periodic Adjustment"
+    },
+    {
+      "clause_id": "neg20",
+      "reasoning_cat1": "The formula is arithmetically definite, though the subsection is mislabelled \"(3)\" instead of \"(i)\" and \"rounded up or down to the nearest whole number\" leaves the .5 case unresolved.",
+      "reasoning_cat2": "Section 3.08(b) cross-refers to \"Sections 3.04(a)(ii)\", so the misnumbering here creates a small cross-reference hazard, but the substance fits Section 3.04(a).",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.04(a)(i) Formula Quantity"
+    },
+    {
+      "clause_id": "neg21",
+      "reasoning_cat1": "The operative sentence forbids \"resale, assignment or transfer\" outside the Educational End User environment, yet the parenthetical example says a university \"may resell the service to its students\" — an internal tension over what resale is barred.",
+      "reasoning_cat2": "Section 3.05 separately authorises resale via MVNO Educational Accounts and Section 3.08(b) cross-refers to this clause as an exception, so the boundary between permitted and prohibited resale must be reconciled.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.04(a)(ii) Educational End Users"
+    },
+    {
+      "clause_id": "neg22",
+      "reasoning_cat1": "Timing is keyed to commercial launch or the later Commencement Date; definite, apart from the self-referential \"pursuant to this Section 3.04(b)\".",
+      "reasoning_cat2": "Consistent with Section 3.01's Commencement Date trigger.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.04(b) Time of Delivery"
+    },
+    {
+      "clause_id": "neg23",
+      "reasoning_cat1": "\"[T]he lowest wholesale rate provided by Clearwire to an arms-length third party in such Market Area or other comparable market\" leaves both the comparator market and the qualifying agreement open to argument.",
+      "reasoning_cat2": "The cap of twice the Cost-Free account number links to Sections 3.03–3.04, and Section 3.01's Puerto Rico wholesale-price reference is compatible.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.05(a) Licensee MVNO"
+    },
+    {
+      "clause_id": "neg24",
+      "reasoning_cat1": "\"[A]ny Licensee requesting the right to resell\" is odd in a two-party contract, and the thirty-day deadline runs from the vague \"availability of such services.\"",
+      "reasoning_cat2": "The standard wholesale form is required to be \"consistent with the terms of this Agreement and the applicable IUA,\" which harmonises it with Section 3.05(a).",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.05(b) Mechanics"
+    },
+    {
+      "clause_id": "neg25",
+      "reasoning_cat1": "A definite price formula (10% above cost) and a clear use restriction; only \"Clearwire's cost to acquire\" invites minor accounting argument.",
+      "reasoning_cat2": "The no-resale restriction is consistent with Sections 3.04(a)(ii) and 3.08(b).",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.06 Access to Educational End User Devices"
+    },
+    {
+      "clause_id": "neg26",
+      "reasoning_cat1": "\"[R]easonably necessary support ... made available to Clearwire's commercial customers generally\" and \"as contemplated by their agreement\" are vague, and \"their agreement\" has no clear referent.",
+      "reasoning_cat2": "The six-month lag for new features and the Commencement Date floor align with Sections 3.01 and 3.08(a).",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.07 Sharing of Features and Service Sets"
+    },
+    {
+      "clause_id": "neg27",
+      "reasoning_cat1": "Parity is measured against what is provided to \"premium third party content providers,\" an undefined comparator class whose membership can be disputed.",
+      "reasoning_cat2": "It is qualified by Section 3.08(c)'s capacity-constraint reservation, which the drafters expressly linked, so the fit is coherent.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.08(a) Preferred Content Provider - Scope"
+    },
+    {
+      "clause_id": "neg28",
+      "reasoning_cat1": "\"Clearwire's most favored program suppliers\" is an undefined comparator and \"educational in nature\" is a vague content standard.",
+      "reasoning_cat2": "The no-resale covenant expressly excepts Sections 3.04(a)(ii) and 3.05, which is consistent, though 3.04(a)(ii)'s own example permits university resale.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.08(b) Service Sets and Features"
+    },
+    {
+      "clause_id": "neg29",
+      "reasoning_cat1": "The trigger — use \"no longer commercially and technically feasible due to limitations in network capabilities\" — is a broad discretionary standard entirely within Clearwire's assessment.",
+      "reasoning_cat2": "The second sentence directs Clearwire to \"comply with the provisions of ARTICLE III\" for capacity-usage information, but Article III contains no such information-access provision, leaving a dangling cross-reference.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.34,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.08(c) Capacity Constraints"
+    },
+    {
+      "clause_id": "neg30",
+      "reasoning_cat1": "\"[C]ommercially reasonable best efforts\" to \"secure\" a third party's carriage of \"one ordinary unpaid channel\" on a \"basic tier\" is a soft obligation with several undefined terms.",
+      "reasoning_cat2": "It is consistent with Section 1.01(c)'s listing of Limited Reciprocity rights as part of the Access Right Royalties.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.12,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 3.09 Limited Reciprocity Access"
+    },
+    {
+      "clause_id": "neg31",
+      "reasoning_cat1": "A one-line pointer to subsections (a) through (c); nothing to construe.",
+      "reasoning_cat2": "Consistent with Section 4.01(a)–(c).",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.01 Deliveries at Execution of this Agreement"
+    },
+    {
+      "clause_id": "neg32",
+      "reasoning_cat1": "The delivery list is enumerated and closed; \"each a Wire Account\" is slightly odd for a single account but does not change meaning.",
+      "reasoning_cat2": "It refers to \"Schedule 4.01,\" which does not appear in the contract's list of schedules, and to the Stock Pledge Agreement as Exhibit III while the exhibit list is differently numbered.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.01(a) Licensee"
+    },
+    {
+      "clause_id": "neg33",
+      "reasoning_cat1": "A closed list of three deliverables; the wording is definite.",
+      "reasoning_cat2": "It requires delivery of \"the Upfront Royalty provided for in the applicable EBS Spectrum Capacity IUA as reflected on Schedule A,\" a payment label not used in Section 2.01's $23,000,000 Prepaid Royalties, which requires reconciling.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.01(b) Clearwire"
+    },
+    {
+      "clause_id": "neg34",
+      "reasoning_cat1": "Standard, specific certificate requirements; nothing ambiguous.",
+      "reasoning_cat2": "Matches the closing conditions in Section 4.02(c)(ii)(2) and (iii)(2).",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.01(c) Officers Certificates"
+    },
+    {
+      "clause_id": "neg35",
+      "reasoning_cat1": "Defines Initial Closing and its date by reference to the Effective Date; definite.",
+      "reasoning_cat2": "Consistent with Section 4.01 and the preamble's Effective Date, though the section number differs from the table of contents listing.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.11,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.02(a) Initial Closing"
+    },
+    {
+      "clause_id": "neg36",
+      "reasoning_cat1": "Timing depends on \"when the Parties reach agreement on the pricing,\" which imports the open-price problem, but the definitional content is clear.",
+      "reasoning_cat2": "It dovetails with Section 1.02(b)'s negotiation mechanics and the deemed Effective Date of each IUA.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.02(b) Subsequent Closings"
+    },
+    {
+      "clause_id": "neg37",
+      "reasoning_cat1": "The condition is a sentence fragment with no verb (\"No temporary restraining order ... preventing the consummation\"), so whether the condition is the absence of such an order must be supplied by construction.",
+      "reasoning_cat2": "It is consistent with the parallel closing conditions in Sections 4.02(c)(ii) and (iii).",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.02(c)(i) Conditions to Each Party's Obligations at a Closing"
+    },
+    {
+      "clause_id": "neg38",
+      "reasoning_cat1": "The conditions are enumerated and waivable \"solely in writing\"; the wording is definite.",
+      "reasoning_cat2": "It parallels Section 4.02(c)(iii) and the certificates required by Section 4.01(c); no conflict identified.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.02(c)(ii) Conditions to the Obligations of Clearwire"
+    },
+    {
+      "clause_id": "neg39",
+      "reasoning_cat1": "The subsection is misnumbered \"(ii)\" though it follows another \"(ii)\", and it requires resolutions of \"each Clearwire Affiliate that is a Party hereto\" when no affiliate is a party.",
+      "reasoning_cat2": "That reference to Clearwire Affiliates as Parties cannot be reconciled with the preamble, which names only Licensee and Clearwire as Parties.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.3,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.02(c)(iii) Conditions to Obligations of Licensee"
+    },
+    {
+      "clause_id": "neg40",
+      "reasoning_cat1": "Electronic closing with a named location for the Initial Closing; definite.",
+      "reasoning_cat2": "Consistent with Section 4.02's closing structure.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.03 Closing Site/Mechanics"
+    },
+    {
+      "clause_id": "neg41",
+      "reasoning_cat1": "\"[R]easonable best efforts\" and \"necessary, proper or advisable\" are standard further-assurances vagueness with no independent obligation created.",
+      "reasoning_cat2": "Consistent with Sections 7.01 and 7.07's cooperation covenants.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 4.04 Further Assurances"
+    },
+    {
+      "clause_id": "neg42",
+      "reasoning_cat1": "A standard organisation and good-standing representation with a materiality carve-out and schedule exception; boilerplate and definite.",
+      "reasoning_cat2": "Consistent with Section 10.02's one-year survival and Section 8.01(a)(i)'s indemnity; \"as proposed to be conducted\" is unusual but not conflicting.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.01 Organization and Good Standing"
+    },
+    {
+      "clause_id": "neg43",
+      "reasoning_cat1": "Standard authority and enforceability representation with customary equitable and bankruptcy qualifications; nothing to construe.",
+      "reasoning_cat2": "It defines \"Licensee Documents\" consistently with Section 8.01(a) and 10.02.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.02 Authorization of Agreement"
+    },
+    {
+      "clause_id": "neg44",
+      "reasoning_cat1": "A conventional no-conflict representation with enumerated categories and a materiality exception; the list is closed by \"or other obligation,\" a mild catch-all.",
+      "reasoning_cat2": "Mirrors Section 6.03(a) and is consistent with Schedule 5.03's exception mechanism.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.03(a) No Conflict"
+    },
+    {
+      "clause_id": "neg45",
+      "reasoning_cat1": "The exception \"except as contemplated herein or therein\" is open-ended and leaves the scope of the no-consents representation uncertain.",
+      "reasoning_cat2": "Section 6.03(b) expressly carves out the FCC spectrum lease applications while this clause relies on a generic carve-out, a small asymmetry given that FCC approval is plainly required.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.03(b)"
+    },
+    {
+      "clause_id": "neg46",
+      "reasoning_cat1": "\"[N]or ... does there exist any basis therefore\" is an open-textured addition, and the exclusion of \"immaterial claims ... in the ordinary course\" has an uncertain boundary.",
+      "reasoning_cat2": "The FCC Proceedings carve-out fits the regulatory framework of Sections 7.03–7.05; no conflict found.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.04 Litigation"
+    },
+    {
+      "clause_id": "neg47",
+      "reasoning_cat1": "The clause simultaneously says \"complied in all respects\" and qualifies by Material Adverse Effect and \"only to the best knowledge,\" and its long assumption about third-party compliance is syntactically tangled.",
+      "reasoning_cat2": "Section 8.02 strips knowledge and materiality qualifiers for damages purposes, which cuts against the heavily qualified drafting here, and Section 5.07 defines the knowledge standard.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.19,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.05 Compliance with Laws; Permits"
+    },
+    {
+      "clause_id": "neg48",
+      "reasoning_cat1": "A flat, single-fact representation about brokers; nothing ambiguous.",
+      "reasoning_cat2": "Mirrors Section 6.06 and is consistent with the indemnity structure.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.06 Brokers"
+    },
+    {
+      "clause_id": "neg49",
+      "reasoning_cat1": "It defines best knowledge to include what Licensee \"should have known\" after \"commercially reasonable investigation,\" a standard whose diligence threshold is inherently contestable.",
+      "reasoning_cat2": "It interacts with Section 8.02's disregard of knowledge qualifiers when measuring Damages, but that is a deliberate allocation rather than a contradiction.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.15,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 5.07 Knowledge"
+    },
+    {
+      "clause_id": "neg50",
+      "reasoning_cat1": "Standard good-standing language, definite as to jurisdictions of organisation.",
+      "reasoning_cat2": "It makes representations about Clearwire Parent, which the preamble does not include as a Party, so the enforceability of Parent-level representations is unclear.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.01 Organization and Good Standing"
+    },
+    {
+      "clause_id": "neg51",
+      "reasoning_cat1": "Conventional authority and enforceability wording; the operative promise is definite.",
+      "reasoning_cat2": "It states that \"Each of Clearwire Parent and Clearwire\" has authority but the enforceability sentence binds only Clearwire, and Clearwire Parent is not a signatory Party under the preamble.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.02 Authorization of Agreement"
+    },
+    {
+      "clause_id": "neg52",
+      "reasoning_cat1": "A standard no-conflict representation with enumerated clauses and a materiality qualifier; nothing genuinely ambiguous.",
+      "reasoning_cat2": "Parallel to Section 5.03(a); consistent with the whole.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.03(a) No Conflict"
+    },
+    {
+      "clause_id": "neg53",
+      "reasoning_cat1": "Definite, with an express and specific carve-out for FCC spectrum lease applications.",
+      "reasoning_cat2": "Consistent with Sections 6.05 and 7.05's regulatory framework.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.03(b)"
+    },
+    {
+      "clause_id": "neg54",
+      "reasoning_cat1": "Standard litigation representation qualified by a closing-ability materiality standard; nothing to construe.",
+      "reasoning_cat2": "Consistent with Section 5.04's counterpart and with Schedule 6.04.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.04 Litigation"
+    },
+    {
+      "clause_id": "neg55",
+      "reasoning_cat1": "\"[C]omplied in all respects\" followed by a Material Adverse Effect qualifier is internally awkward, and the clause carries stray punctuation, but the meaning is recoverable.",
+      "reasoning_cat2": "The FCC filing carve-out matches Section 6.03(b); consistent with the instrument.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.05 Compliance with Laws; Permits"
+    },
+    {
+      "clause_id": "neg56",
+      "reasoning_cat1": "A single flat factual representation; definite.",
+      "reasoning_cat2": "Mirrors Section 5.06; no tension anywhere.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 6.06 Brokers"
+    },
+    {
+      "clause_id": "neg57",
+      "reasoning_cat1": "\"[C]ommercially reasonable efforts\" is standard soft-obligation language and the list of consents is broad but symmetrical.",
+      "reasoning_cat2": "Consistent with Section 6.03(b)'s FCC filing undertaking and Section 4.04's further assurances.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.01 Consents and Approvals"
+    },
+    {
+      "clause_id": "neg58",
+      "reasoning_cat1": "The trigger is subjective — a matter \"which Licensee determines is reasonably likely to constitute a breach\" — so the duty depends on the obligor's own determination.",
+      "reasoning_cat2": "It imposes a notice duty on Clearwire Parent, which is not a Party under the preamble, and the notice does not interact with the cure periods in Section 9.01.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.02 Notice of Breach"
+    },
+    {
+      "clause_id": "neg59",
+      "reasoning_cat1": "The covenant is layered with provisos that partly cancel each other (Licensee must maintain qualifications, yet it is no breach if loss results \"in whole or in part\" from Clearwire's act), and \"creates a material risk\" is a vague standard.",
+      "reasoning_cat2": "Its opening limit to \"spectrum that has not been subject to an IUA\" is hard to square with the internal reference to Clearwire's obligation to meet substantial service requirements on licensed spectrum, which arises under the IUAs.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.03 Maintenance of FCC Qualifications"
+    },
+    {
+      "clause_id": "neg60",
+      "reasoning_cat1": "Consent turns on an assignee being \"reasonably acceptable to Clearwire,\" and the closing sentence's broad freedom to \"sell, assign, sublease, delegate or transfer this Agreement\" to controlled affiliates sits against the consent regime in the same section.",
+      "reasoning_cat2": "Its limitation to spectrum not subject to an IUA, and the unrestricted affiliate transfer right, must be reconciled with Section 10.09's reference to \"permitted assigns\" and with the Section 1.04 ROFR that applies to Affiliates' Spectrum.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.27,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.04 Assignment of FCC Licenses"
+    },
+    {
+      "clause_id": "neg61",
+      "reasoning_cat1": "The promise to \"comply at all times with applicable laws\" is clear, but the agreement \"not to express any contrary view to regulatory agencies\" is an unusual restraint of uncertain reach.",
+      "reasoning_cat2": "It sits alongside Section 3.03(a)'s contemplation of jointly approaching the FCC for clarification, which is compatible rather than contradictory.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.05 Other FCC Requirements"
+    },
+    {
+      "clause_id": "neg62",
+      "reasoning_cat1": "\"[A]ll fees and taxes (now existing or hereafter arising) imposed on Licensee as a result of the licensing, regulation or use\" with an \"including, without limitation\" tail is a broad catch-all whose outer boundary (e.g. income or franchise taxes) is uncertain.",
+      "reasoning_cat2": "It overlaps Section 10.01's transfer-tax allocation and is expressed to run \"until the end of the term of the IUA that is the last to expire,\" which extends past the Term defined in Section 9.01.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.24,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.06 Fees and Taxes"
+    },
+    {
+      "clause_id": "neg63",
+      "reasoning_cat1": "The covenant to act \"in a cooperative manner to preserve the intent of the relationships\" and maintain \"mutual advantage in accordance with the initial intent of the Parties\" is aspirational and effectively unbounded.",
+      "reasoning_cat2": "It could be pressed as an overlay on specific provisions such as Section 1.02(b)'s pricing negotiation, but nothing in the instrument directly contradicts it.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 7.07 Best Efforts for Duration of Relationship"
+    },
+    {
+      "clause_id": "neg64",
+      "reasoning_cat1": "Clause (iii) is a very broad indemnity for anything \"otherwise related to the activities of Clearwire\" closing with \"including, without limitation, damage to health,\" a general-plus-specific structure of uncertain reach.",
+      "reasoning_cat2": "It fits Section 8.02's Damages definition and Section 8.03's deductible, though the deductible expressly reaches only subsection (b)(i).",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.14,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.01(b) Indemnification by Clearwire"
+    },
+    {
+      "clause_id": "neg65",
+      "reasoning_cat1": "The definition is deliberately expansive but enumerated and closed by \"of every kind and description,\" which is broad rather than ambiguous.",
+      "reasoning_cat2": "Its disregard of materiality and knowledge qualifiers cuts across the heavily qualified representations in Sections 5.05 and 6.05, but that is expressly stated and therefore coherent.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.02 Determination of Damages"
+    },
+    {
+      "clause_id": "neg66",
+      "reasoning_cat1": "The clause is limited by its terms to Sections 8.01(a)(i) and (b)(i) — representation and warranty breaches — yet its operative words also refer to \"the breach of any covenant,\" leaving the deductible's scope genuinely uncertain.",
+      "reasoning_cat2": "That mismatch bears directly on Section 8.01(a)(ii) and (b)(ii) covenant indemnities, which the heading purports not to cover, and on Section 8.04(a)'s \"regardless of the Deductible\" language.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.03 Limitations on Indemnification for Breaches of Representations and Warranties"
+    },
+    {
+      "clause_id": "neg67",
+      "reasoning_cat1": "A long but conventional defence-control procedure with specified time periods; \"reasonably and promptly\" and \"reasonable opinion of counsel\" are standard soft terms.",
+      "reasoning_cat2": "It coheres with Section 8.03's deductible (expressly disregarded for notice purposes) and Section 8.04(c)'s prejudice rule.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.04(a) Indemnification Procedures"
+    },
+    {
+      "clause_id": "neg68",
+      "reasoning_cat1": "A mechanical notice-of-sums-due provision; definite.",
+      "reasoning_cat2": "Consistent with Section 8.04(a) and the Section 10.06 notice mechanics.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.04(b)"
+    },
+    {
+      "clause_id": "neg69",
+      "reasoning_cat1": "\"[R]easonably prompt notice\" and \"actual loss and prejudice\" are soft standards, but the allocation of consequences is clear.",
+      "reasoning_cat2": "It qualifies Section 8.04(a)'s notice duty consistently rather than conflicting with it.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 8.04(c)"
+    },
+    {
+      "clause_id": "neg70",
+      "reasoning_cat1": "The Term is the earliest of three events, yet Clearwire may extend it \"at any time prior to its expiration under clause (1)\" with the trailing carve-out \"except as it pertains to Puerto Rico\" left undefined — a real ambiguity about how far and for what the Term can be extended.",
+      "reasoning_cat2": "Section 2.02 lets Clearwire extend the refund date and thereby extend the Term without the clause (1) limitation, and Section 1.02(d) gives PR Options twelve months past the Term, so the three provisions cannot be read together without construction.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.47,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.01 Term; Termination"
+    },
+    {
+      "clause_id": "neg71",
+      "reasoning_cat1": "\"Event of Default\" requires a material breach \"in circumstances where such failure results in the inability of the other party to exercise its full rights,\" a compound and undefined threshold; the second sentence about a \"Loss\" is defined only in the IUA.",
+      "reasoning_cat2": "It is the trigger for termination under Section 9.01(ii) and (iii) with asymmetric cure periods, and the narrow definition may leave breaches of Article III unremediable by termination.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.02 Defaults"
+    },
+    {
+      "clause_id": "neg72",
+      "reasoning_cat1": "Survival of obligations \"that by their nature would continue\" is an open-ended standard, and the Option-survival sentence contains a counterfactual (\"or would have occurred, if Licensee complied in full\") that is hard to apply.",
+      "reasoning_cat2": "It directly pulls against Section 1.02(d)'s statement that outstanding Options lapse automatically on Term expiration, and against Section 10.02's fixed one-year survival for representations.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.42,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 9.03 Survival"
+    },
+    {
+      "clause_id": "neg73",
+      "reasoning_cat1": "An enumerated list of transfer-type taxes closed by \"or similar fees or taxes or governmental charges,\" a modest ejusdem generis tail.",
+      "reasoning_cat2": "It overlaps Section 7.06's broader fees-and-taxes covenant, but the two are complementary rather than contradictory.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.18,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.01 Payment of Sales, Use or Similar Taxes"
+    },
+    {
+      "clause_id": "neg74",
+      "reasoning_cat1": "The one-year survival is definite, but the second sentence's \"survive indefinitely until, by their respective terms, they are no longer operative\" is circular.",
+      "reasoning_cat2": "It must be read with Section 9.03's nature-based survival rule, and the one-year cap on representations sits against Section 8.01's indemnity for representation failures.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.26,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.02 Survival of Representations and Warranties"
+    },
+    {
+      "clause_id": "neg75",
+      "reasoning_cat1": "Standard integration and anti-waiver drafting with a specific-reference requirement for amendments; definite in operation.",
+      "reasoning_cat2": "It says this Agreement plus schedules and exhibits is the entire understanding, which must be squared with the separately executed IUAs and Collateral Documents contemplated by Sections 1.02 and 1.03 and with the recitals' Total Consideration language.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.29,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.03 Entire Agreement; Amendments and Waivers"
+    },
+    {
+      "clause_id": "neg76",
+      "reasoning_cat1": "A single, clearly expressed New York choice-of-law clause excluding conflicts principles; nothing to construe.",
+      "reasoning_cat2": "Consistent with the arbitration/dispute resolution references, though Section 10.11 is truncated in the document.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.1,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.04 Governing Law"
+    },
+    {
+      "clause_id": "neg77",
+      "reasoning_cat1": "An explicit rule that headings have no interpretive effect; definite.",
+      "reasoning_cat2": "It usefully neutralises the several heading and numbering mismatches in the instrument, so it fits the whole.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.09,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.05 Table of Contents and Headings"
+    },
+    {
+      "clause_id": "neg78",
+      "reasoning_cat1": "The mechanics of deemed delivery are clear, but the addressee is written as \"Clearwire Spectrum Holdings I LLC\" rather than II, a mechanical slip in the notice address.",
+      "reasoning_cat2": "The preamble identifies Clearwire Spectrum Holdings II LLC, so the address block is inconsistent with the named Party, and Clearwire and Clearwire Parent share the same address.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.17,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.06 Notices"
+    },
+    {
+      "clause_id": "neg79",
+      "reasoning_cat1": "Mutual consent requirement with a legal-requirement carve-out and \"to the extent possible\" / \"reasonable time\" softeners; conventional and workable.",
+      "reasoning_cat2": "No other provision addresses publicity; consistent with Section 10.03's writing requirements.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.07,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.07 Publicity"
+    },
+    {
+      "clause_id": "neg80",
+      "reasoning_cat1": "The one-sentence severability clause says only that \"the balance of this Agreement shall remain in effect,\" with no reformation or essential-term qualification, leaving the effect of a struck core term open.",
+      "reasoning_cat2": "Given the recitals' statement that the agreement would not have been executed but for all elements of the Total Consideration, blanket severance is in some tension with the instrument's stated integrated bargain.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.22,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.08 Severability"
+    },
+    {
+      "clause_id": "neg81",
+      "reasoning_cat1": "A single short binding-effect sentence; \"permitted assigns\" is the only term requiring reference elsewhere.",
+      "reasoning_cat2": "The contract contains no general anti-assignment clause — only Section 7.04's licence-assignment consent regime — so what counts as a \"permitted\" assign is left to be pieced together.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.25,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.09 Binding Effect; Assignment"
+    },
+    {
+      "clause_id": "neg82",
+      "reasoning_cat1": "The stipulation that money damages are inadequate and remedies are cumulative is clearly expressed and definite.",
+      "reasoning_cat2": "Its \"[n]otwithstanding any other provision herein\" non-exclusivity sits against Section 10.11's stated intent to make the Dispute Resolution Procedures the parties' \"sole means\" of resolving disputes.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.28,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.10 Remedies"
+    },
+    {
+      "clause_id": "neg83",
+      "reasoning_cat1": "The provision breaks off mid-sentence at \"as their sole means of,\" so the crucial object of the exclusivity — and whether the procedure is a condition precedent or merely permissive, as in the worked mediation example — cannot be determined from the text.",
+      "reasoning_cat2": "\"[S]ole means\" collides with Section 10.10's cumulative-remedies and specific-performance language and with Sections 1.04 and 3.03(b)'s references to arbitration \"under this Agreement.\"",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.38,
+      "gold": "not_risky",
+      "gold_subtype": "none",
+      "clause_name": "Section 10.11(a) Dispute Resolution Procedure - General"
+    }
+  ]
+}

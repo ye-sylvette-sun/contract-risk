@@ -23,7 +23,8 @@
           },
           "taxonomy": {
             "type": "string",
-            "description": "Which of the risk type codes listed in the task this clause carries. One of those codes and no other."
+            "enum": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3"],
+            "description": "Which of the risk type codes listed in the task this clause carries. The CODE, e.g. \"1.1\" — not the Westlaw key label such as \"k152\", and no brackets. One of the codes the task lists for this case and no other."
           },
           "contract_id": {
             "type": "string",
