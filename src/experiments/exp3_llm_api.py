@@ -39,7 +39,7 @@ taught on is also scored.
 Input : output/dataset.csv, output/contracts/<cid>.md
 Output: output/exp3_llm_api_preds.csv      per-provision predictions (resumable)
         output/exp3_llm_api/<cid>.json     the model's judgments, gold injected
-        output/llm_logs/exp3/<cid>.json    full prompt, response and usage
+        output/llm_logs/exp3_llm_api/<cid>.json  full prompt, response and usage
 
 Usage:
     python src/experiments/exp3_llm_api.py [--limit N] [--dry-run]
@@ -215,13 +215,164 @@ def example_block(examples):
     return "\n".join(out)
 
 
-def clause_block(clauses):
+def anonymise(clauses):
+    """Present the provisions under opaque ids, in the order they appear.
+
+    The dataset's own `clause_id` is `pos1`/`neg14`, and rows arrive positives
+    first. Handing those to the model puts the gold label on the door of every
+    provision it is asked to judge, and groups the answers at the top of the
+    list. No result gathered that way can be defended, whether or not the model
+    took the hint.
+
+    So the model sees `c001`, `c002`, ... assigned in order of `source_span` —
+    the order the provisions occur in the contract. That order is also the
+    honest one: it is the sequence a reader meets them in, it carries no signal
+    about the labels, and it puts each provision next to its neighbours, which
+    is what a Category 2 judgement needs.
+
+    The mapping is returned rather than stored globally, written into the raw
+    answer alongside the judgments, and used to translate back before anything
+    reaches the predictions file. `clause_id` in the output is therefore still
+    the dataset's own id and joins to `dataset.csv` unchanged.
+
+    Returns (provisions in document order, real id -> opaque, opaque -> real).
+    """
+    order = sorted(clauses, key=lambda c: int(c["source_span"].split("-")[0]))
+    real_of = {f"c{i:03d}": c["clause_id"] for i, c in enumerate(order, 1)}
+    return order, {v: k for k, v in real_of.items()}, real_of
+
+
+def clause_block(clauses, opaque_of):
     return "\n".join(
-        f'\n[{c["clause_id"]}] "{c["clause_name"]}"\n"""\n'
+        f'\n[{opaque_of[c["clause_id"]]}] "{c["clause_name"]}"\n"""\n'
         f'{flat(c["clause_text"])}\n"""' for c in clauses)
 
 
 # ------------------------------------------------------------------- run ----
+TOP_UP_ROUNDS = 2
+
+
+def top_up(cid, judged, real_of, fields):
+    """Ask again, in the same conversation, for the provisions left out.
+
+    A model that returns 61 judgments when 359 were asked for has not answered
+    the question, and scoring the other 298 as "not risky" would measure this
+    harness rather than the model. It is asked to finish instead.
+
+    The follow-up carries its own previous answer as an assistant turn, so
+    "these ids are missing" is a claim it can check rather than one it has to
+    take on trust. Rounds stop as soon as one returns nothing new: a model that
+    has given up repeating itself will not be talked round by asking again.
+    """
+    for _ in range(TOP_UP_ROUNDS):
+        missing = [oid for oid in real_of if oid not in judged]
+        if not missing:
+            return judged
+        print(f"    ~ {len(missing)} provision(s) unanswered, asking again")
+        answer = lib.ask(
+            "exp3", f"{cid}__topup{len(judged)}", effort="high",
+            log_as="exp3_llm_api", more=[
+                {"role": "assistant",
+                 "content": json.dumps({"judgments": list(judged.values())},
+                                       ensure_ascii=False)},
+                {"role": "user", "content":
+                    "That answer left out the following provision ids, which "
+                    "were in the list you were asked to judge:\n\n"
+                    + ", ".join(missing)
+                    + "\n\nReturn judgments for EXACTLY these ids and no "
+                      "others, in the same format. Do not repeat the ones you "
+                      "already gave."},
+            ], **fields)
+        if not answer:
+            return judged
+        before = len(judged)
+        for j in answer["judgments"]:
+            oid = str(j["clause_id"])
+            if oid in real_of and oid not in judged:
+                judged[oid] = j
+        gained = len(judged) - before
+        print(f"      recovered {gained}, "
+              f"{len(real_of) - len(judged)} still missing")
+        if not gained:
+            break
+    return judged
+
+
+def fill_gaps(groups, registry, block):
+    """Finish contracts already scored, but with provisions left unanswered.
+
+    Runs before the main loop, every time, so a gap left by an earlier run is
+    closed rather than inherited. The stored answer supplies the assistant turn,
+    so the follow-up is the same continued conversation the inline top-up uses
+    rather than a fresh ask.
+
+    Rows are appended with `ok=1`; readers prefer a scored row over a blank one
+    for the same (contract_id, clause_id), so the earlier blanks are superseded
+    without editing anything and the predictions file stays append-only.
+    """
+    if not PREDS.exists():
+        return
+    scored, blank = set(), set()
+    for r in load_rows(PREDS):
+        (scored if r["ok"] == "1" else blank).add((r["contract_id"], r["clause_id"]))
+    gaps = defaultdict(set)
+    for cid, clause_id in blank - scored:
+        gaps[cid].add(clause_id)
+    if not gaps:
+        return
+    print(f"{sum(len(v) for v in gaps.values())} provision(s) left unanswered by "
+          f"an earlier run, in {len(gaps)} contract(s) — finishing those first")
+
+    fout = open(PREDS, "a", newline="", encoding="utf-8")
+    writer = csv.DictWriter(fout, fieldnames=FIELDS)
+    for cid, ids in sorted(gaps.items()):
+        clauses = groups[cid]
+        raw = json.loads((RAW / f"{cid}.json").read_text(encoding="utf-8"))
+        real_of = raw["_id_map"]
+        judged = {str(j["clause_id"]): j for j in raw["judgments"]
+                  if str(j.get("clause_id")) in real_of}
+        text = (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
+        shown, opaque_of, _ = anonymise(clauses)
+        fields = dict(citation=clauses[0]["citation"], contract_id=cid,
+                      examples=block, document=text,
+                      clauses=clause_block(shown, opaque_of))
+        print(f"[{cid}] {len(ids)} missing of {len(clauses)}")
+        judged = top_up(cid, judged, real_of, fields)
+
+        gold = {c["clause_id"]: c for c in clauses}
+        n = 0
+        for c in clauses:
+            j = judged.get(opaque_of[c["clause_id"]])
+            if not j or (cid, c["clause_id"]) in scored:
+                continue
+            n += 1
+            writer.writerow({
+                "contract_id": cid, "citation": c["citation"],
+                "clause_id": c["clause_id"], "clause_name": c["clause_name"],
+                "label": c["label"], "taxonomy": c["taxonomy"],
+                "gold": gold_of(c), "gold_subtype": gold_fine(c),
+                "pred": pred_from_probs(_f(j.get("prob_cat1")),
+                                        _f(j.get("prob_cat2"))),
+                "prob_cat1": _f(j.get("prob_cat1")),
+                "prob_cat2": _f(j.get("prob_cat2")),
+                "reasoning_cat1": j.get("reasoning_cat1", ""),
+                "reasoning_cat2": j.get("reasoning_cat2", ""),
+                "ok": "1"})
+        fout.flush()
+        for j in judged.values():
+            c = gold.get(real_of.get(str(j["clause_id"]), ""))
+            if c:
+                j["dataset_clause_id"] = c["clause_id"]
+                j["gold"] = gold_of(c)
+                j["gold_subtype"] = gold_fine(c)
+                j["clause_name"] = c["clause_name"]
+        (RAW / f"{cid}.json").write_text(json.dumps(
+            {"judgments": list(judged.values()), "_id_map": real_of},
+            ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"    appended {n} newly judged provision(s)")
+    fout.close()
+
+
 def load_rows(path):
     with open(path, newline="", encoding="utf-8") as fh:
         return list(csv.DictReader(fh))
@@ -235,10 +386,25 @@ def by_contract(rows):
     return OrderedDict(sorted(g.items(), key=lambda kv: -len(kv[1])))
 
 
-def done_contracts(path):
+def done_contracts(path, groups=None):
+    """Contracts that need no further call.
+
+    `groups` makes "done" mean COMPLETE. Without it, one scored provision marks
+    a whole contract finished, and a call that answered 1 of 85 is never revisited
+    — which is exactly what happened to `871FSupp2d671_2005_employment_agreement`,
+    whose other 84 provisions sat blank through a full re-run. A contract is done
+    when every provision of it has a scored row; anything short comes back.
+    """
     if not path.exists():
         return set()
-    return {r["contract_id"] for r in load_rows(path) if r["ok"] == "1"}
+    scored = defaultdict(set)
+    for r in load_rows(path):
+        if r["ok"] == "1":
+            scored[r["contract_id"]].add(r["clause_id"])
+    if groups is None:
+        return set(scored)
+    return {cid for cid, ids in scored.items()
+            if len(ids) >= len(groups.get(cid, ()))}
 
 
 def run(args):
@@ -255,7 +421,7 @@ def run(args):
     block = example_block(examples)
     registry = lib.read_json(lib.OUT / "contracts.json", {})
 
-    done = done_contracts(PREDS)
+    done = done_contracts(PREDS, groups)
     todo = [(cid, cl) for cid, cl in groups.items() if cid not in done]
 
     # `--sample` draws contracts at random; `--limit` takes the ones with the
@@ -304,11 +470,12 @@ def run(args):
     if args.dry_run:
         est(todo, registry, block)
         return
+    RAW.mkdir(parents=True, exist_ok=True)
+    fill_gaps(groups, registry, block)
     if not todo:
         metrics()
         return
 
-    RAW.mkdir(parents=True, exist_ok=True)
     new = not PREDS.exists()
     fout = open(PREDS, "a", newline="", encoding="utf-8")
     writer = csv.DictWriter(fout, fieldnames=FIELDS)
@@ -319,28 +486,33 @@ def run(args):
         text = (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
         print(f"[{i}/{len(todo)}] {cid}: {len(clauses)} provisions, "
               f"{len(text):,}-char contract")
-        answer = lib.ask(
-            "exp3", cid, effort="high",
-            citation=clauses[0]["citation"], contract_id=cid,
-            examples=block, document=text, clauses=clause_block(clauses))
+        shown, opaque_of, real_of = anonymise(clauses)
+        fields = dict(citation=clauses[0]["citation"], contract_id=cid,
+                      examples=block, document=text,
+                      clauses=clause_block(shown, opaque_of))
+        answer = lib.ask("exp3", cid, effort="high", log_as="exp3_llm_api",
+                         **fields)
 
         judged = {}
         if answer:
             judged = {str(j["clause_id"]): j for j in answer["judgments"]}
+            judged = top_up(cid, judged, real_of, fields)
             gold = {c["clause_id"]: c for c in clauses}
-            for j in answer["judgments"]:
-                c = gold.get(str(j["clause_id"]))
+            merged = list(judged.values())
+            for j in merged:
+                c = gold.get(real_of.get(str(j["clause_id"]), ""))
                 if c:
+                    j["dataset_clause_id"] = c["clause_id"]
                     j["gold"] = gold_of(c)
                     j["gold_subtype"] = gold_fine(c)
                     j["clause_name"] = c["clause_name"]
-            (RAW / f"{cid}.json").write_text(
-                json.dumps(answer, ensure_ascii=False, indent=2),
-                encoding="utf-8")
+            (RAW / f"{cid}.json").write_text(json.dumps(
+                {"judgments": merged, "_id_map": real_of},
+                ensure_ascii=False, indent=2), encoding="utf-8")
 
         n_ok = 0
         for c in clauses:
-            j = judged.get(str(c["clause_id"]))
+            j = judged.get(opaque_of[c["clause_id"]])
             ok = j is not None
             n_ok += ok
             p1 = _f(j.get("prob_cat1")) if ok else ""
@@ -386,9 +558,10 @@ def est(todo, registry, block):
     built = []
     for cid, cl in todo:
         text = (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
+        shown, opaque_of, _ = anonymise(cl)
         p = lib.prompt("exp3", citation=cl[0]["citation"], contract_id=cid,
                        examples=block, document=text,
-                       clauses=clause_block(cl))
+                       clauses=clause_block(shown, opaque_of))
         built.append((cid, sum(len(v) for v in p.values()), len(cl), p))
 
     big = max(built, key=lambda b: b[1])

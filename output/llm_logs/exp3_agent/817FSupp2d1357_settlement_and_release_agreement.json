@@ -1,0 +1,76 @@
+{
+  "contract_id": "817FSupp2d1357_settlement_and_release_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 15,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 9,
+  "duration_ms": 83834,
+  "total_cost_usd": 0.526847,
+  "usage": {
+    "input_tokens": 3073,
+    "cache_creation_input_tokens": 24675,
+    "cache_read_input_tokens": 207796,
+    "output_tokens": 6374,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 24675,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3,
+        "cache_read_input_tokens": 51393,
+        "cache_creation_input_tokens": 1711,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1711
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1414,
+      "outputTokens": 14,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0014839999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    },
+    "claude-opus-5": {
+      "inputTokens": 3073,
+      "outputTokens": 6374,
+      "cacheReadInputTokens": 207796,
+      "cacheCreationInputTokens": 24675,
+      "webSearchRequests": 0,
+      "costUSD": 0.525363,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "session_id": "93f7fc4c-140e-46d2-8e90-febb64649982",
+  "errors": null,
+  "result": "15",
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1786946400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

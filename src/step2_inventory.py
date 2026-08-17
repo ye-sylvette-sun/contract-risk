@@ -10,7 +10,7 @@ was before the court, and the court did not construe it.
 The model returns a line range and two anchors per clause and writes no text.
 What it cannot be checked on is a range that starts and ends in the right place
 but swallows an intervening clause — both anchors match and the extraction
-silently contains too much (docs/DESIGN.md §7). The three proposed detectors are
+silently contains too much (docs/DATASET.md §6). The three proposed detectors are
 implemented here as FLAGS, printed and stored: nothing is rejected on them, so
 they can be measured before anyone decides which earn their place.
 

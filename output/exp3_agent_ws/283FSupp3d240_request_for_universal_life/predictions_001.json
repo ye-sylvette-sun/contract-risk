@@ -1,0 +1,61 @@
+{"judgments": [
+  {"clause_id": "c001",
+   "reasoning_cat1": "This is a checkbox conversion block whose options ('Balance of term insurance — Retain / Cancel', 'Beneficiary on new policy: Same as original policy' vs 'Proceeds payable in accordance with designation of beneficiary (Form 3116) attached') are mutually exclusive alternatives with no marked election on the face of the form, so what was actually requested is genuinely indeterminate. The compressed 'Units / Years' and 'Change to Non-Smoker / Select Non-Smoker' entries sit inside the same block without a governing sentence, leaving their reach uncertain.",
+   "reasoning_cat2": "Beneficiary-on-new-policy here has to be reconciled with the loan block's 'Beneficiary — Same as original policy / Per Form 3116 attached' (c005) and with paragraph 2)'s rule that there can be no change in plan or benefits without written agreement (c019), and the form nowhere says which controls. That interaction is a plausible but not clearly demonstrated conflict.",
+   "prob_cat1": 0.44,
+   "prob_cat2": 0.28},
+
+  {"clause_id": "c002",
+   "reasoning_cat1": "A pure election of premium mode among annual, semi-annual, quarterly, ABC and 'Other', with the requirements expressly cross-referenced to CMAPP Section 03; the only softness is the open-ended 'Other (specify)'. Nothing in it carries two reasonable meanings once a box is checked.",
+   "reasoning_cat2": "It duplicates the 'Premium Payment Mode' line in the item 1 conversion block, but the two are alternative paths (conversion vs. change) rather than contradictory commands. No operative provision elsewhere contradicts it.",
+   "prob_cat1": 0.11,
+   "prob_cat2": 0.08},
+
+  {"clause_id": "c003",
+   "reasoning_cat1": "A yes/no question ('Is converted or changed policy to be assigned?') with a conditional instruction to submit new assignment forms; the terms are plain and the consequence of 'yes' is procedural only. It does not say what happens to an existing assignment if the box is left blank, which is a modest gap rather than an ambiguity.",
+   "reasoning_cat2": "It must be read against the loan block's automatic assignment of 'all right, title and interest' to Ohio National as security (c005) and against the Assignee's Consent line at the foot of the form, which together could make an assignment exist without this box being checked. That is a real but unlitigated tension.",
+   "prob_cat1": 0.15,
+   "prob_cat2": 0.22},
+
+  {"clause_id": "c004",
+   "reasoning_cat1": "A bare heading and checkbox with no operative words at all; its content is supplied entirely by the option table beneath it (Regular Option, Marriage, Birth or Adoption). There is almost nothing here to construe.",
+   "reasoning_cat2": "It depends on the guaranteed purchase option terms of the underlying policy, which are not reproduced in this instrument, but no provision of the form contradicts it. Low relational risk.",
+   "prob_cat1": 0.07,
+   "prob_cat2": 0.06},
+
+  {"clause_id": "c005",
+   "reasoning_cat1": "The sentence 'On full or gross loans, policy loan interest is deducted while loan interest is added to any net loan' turns on the undefined and easily confused trio 'full', 'gross' and 'net' loan, and 'Cash (Amount of Check)' versus 'Gross (Amount of Loan)' invites two readings of how much the owner receives. The interest rate is left to 'the manner set forth in the [policy]', so the operative figure is outside the text.",
+   "reasoning_cat2": "The automatic assignment of 'all right, title and Interest on the policy ... to Ohio National as sole security' sits awkwardly with the separate assignment question in c003 and with the Assignee's Consent line, and its closing 'subject to all terms of the policy' subordinates it to a document not before the reader. A conflict is arguable but not squarely established.",
+   "prob_cat1": 0.40,
+   "prob_cat2": 0.24},
+
+  {"clause_id": "c006",
+   "reasoning_cat1": "'Change basic amount from $252000 to $___' states the old face amount but leaves the new one blank, so the very operative number the clause exists to fix is missing — a mechanical defect that changes what the provision means. A dispute over the death benefit would turn directly on this blank.",
+   "reasoning_cat2": "It also runs into paragraph 2)'s statement that 'there can be no change [in] amount, age at issue, risk, plan or benefits unless I agree to it in writing' (c019) and into the Home Office Endorsement box, since an unfilled amount cannot be the amount agreed in writing. That is a specific, nameable relational problem.",
+   "prob_cat1": 0.52,
+   "prob_cat2": 0.36},
+
+  {"clause_id": "c007",
+   "reasoning_cat1": "'Change from type ___ to type ___' with both blanks empty and 'type' left undefined; on its face it accomplishes nothing and its scope cannot be determined. But an unchecked, unfilled election is more likely inert than ambiguous.",
+   "reasoning_cat2": "It overlaps with items 3 and 6 (change of amount, change to paid-up insurance) and with paragraph 2)'s bar on changes of 'plan or benefits' without written agreement, but no direct contradiction appears. Modest relational risk.",
+   "prob_cat1": 0.21,
+   "prob_cat2": 0.15},
+
+  {"clause_id": "c008",
+   "reasoning_cat1": "The replacement question asks whether insurance is 'intended to serve as a replacement, in whole or in part, of any existing [insurance] or annuities' — 'in part' and 'replacement' are notoriously elastic, but the question is regulatory boilerplate whose answer is factual rather than construed. The follow-on instruction to give company name and policy number is definite.",
+   "reasoning_cat2": "Nothing else in the form addresses replacement, so there is nothing for it to conflict with. Low.",
+   "prob_cat1": 0.16,
+   "prob_cat2": 0.06},
+
+  {"clause_id": "c009",
+   "reasoning_cat1": "A two-line election contrasting the net '{Amount of check}' with 'Gross (Amount of withdrawal including charges)'; the terms are opposed but each is defined in the parenthetical, so the distinction is spelled out rather than left open. The fragment carries no independent operative language.",
+   "reasoning_cat2": "It mirrors the identical cash/gross mechanic in the loan block (c005) and is consistent with it. No conflict located.",
+   "prob_cat1": 0.13,
+   "prob_cat2": 0.08},
+
+  {"clause_id": "c010",
+   "reasoning_cat1": "A procedural instruction telling the owner which of boxes A and B to check for federal income tax withholding; the operative choice is binary and the boxes are separately spelled out below. Nothing in it bears two meanings.",
+   "reasoning_cat2": "It must be read with the Box A and Box B elections (c014, c016) and the 20% default for a missing Social Security number (c017), and those are consistent with it rather than contrary. Low.",
+   "prob_cat1": 0.07,
+   "prob_cat2": 0.07}
+]}

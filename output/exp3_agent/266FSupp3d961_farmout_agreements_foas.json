@@ -1,0 +1,592 @@
+{
+  "contract_id": "266FSupp3d961_farmout_agreements_foas",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "neg17",
+    "c018": "neg18",
+    "c019": "neg19",
+    "c020": "neg20",
+    "c021": "neg21",
+    "c022": "pos1",
+    "c023": "neg22",
+    "c024": "neg23",
+    "c025": "neg24",
+    "c026": "neg25",
+    "c027": "neg26",
+    "c028": "neg27",
+    "c029": "neg28",
+    "c030": "neg29",
+    "c031": "neg30",
+    "c032": "neg31",
+    "c033": "neg32",
+    "c034": "neg33",
+    "c035": "neg34",
+    "c036": "neg35",
+    "c037": "neg36",
+    "c038": "neg37",
+    "c039": "neg38",
+    "c040": "neg39",
+    "c041": "neg40",
+    "c042": "neg41",
+    "c043": "neg42",
+    "c044": "neg43",
+    "c045": "neg44",
+    "c046": "neg45",
+    "c047": "neg46",
+    "c048": "neg47",
+    "c049": "neg48",
+    "c050": "neg49",
+    "c051": "neg50",
+    "c052": "neg51",
+    "c053": "neg52",
+    "c054": "neg53",
+    "c055": "neg54",
+    "c056": "neg55",
+    "c057": "neg56",
+    "c058": "neg57",
+    "c059": "neg58",
+    "c060": "neg59",
+    "c061": "neg60",
+    "c062": "neg61",
+    "c063": "neg62",
+    "c064": "neg63",
+    "c065": "neg64"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "A standard identification of parties and date; the only oddity is OCR run-together text and the trailing 'shall be effective as hereinafter provided', which defers effectiveness without naming a mechanism. Nothing in it carries two reasonable competing meanings.",
+      "reasoning_cat2": "The deferred-effectiveness phrase points to Section 17, which simply says the Agreement is effective 'as of the date first above written', so the two are reconcilable rather than conflicting. No other provision keys off a separate effective date.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "A single flat payment obligation with amount, payee and timing all fixed; nothing vague.",
+      "reasoning_cat2": "It is cast as a WHEREAS recital yet states an operative payment duty, and Section 3(B)(2) separately imposes a $2,000 location fee per Subsequent Well, raising a mild recital-versus-operative question about whether the initial fee also covers the test well location.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "The reservation is bounded by a stated radius around an identified well, and 'may acquire an interest' is deliberately conditional on the operative terms; tract numbers are only OCR-mangled.",
+      "reasoning_cat2": "It tracks Section 2(D), which excludes the same 2,000' circle around Well KF-1053, and Exhibit A's 'less and except' note; recital and operative text point the same way here.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "A simple incorporation list; the only wrinkle is that Exhibit 'C' is described as a 'Geological Requirement Letter' while the attached Exhibit C is headed 'GEOLOGICAL REQUIREMENTS' and is a form, not a letter.",
+      "reasoning_cat2": "Exhibit B-1 is invoked by Section 16 and Exhibit D by Section 3(D), so incorporation is consistent; the Exhibit D form's own internal 'Exhibit A' is a different document from the FOA's Exhibit A, a latent labelling overlap.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "Defining a 'completed well' to include a plugged and abandoned dry hole is counter-intuitive and could be read either as a purely mechanical definition or as satisfying a drilling obligation.",
+      "reasoning_cat2": "The defined term is never used again: the operative text (3(A)(3), 3(D), 16) speaks instead of a well 'completed as a well capable of production in paying quantities' and of 'drills and completes', so whether Section 16's 'completes' imports this definition is genuinely open.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "The definition delegates entirely to regulatory field rules and gives three illustrative equivalents, which is determinate in application.",
+      "reasoning_cat2": "It is used consistently in 3(A)(1) and 3(B)(1) for locating wells and in 4.A's proportionate-reduction sentence about 'total unit acreage'; no inconsistency found.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "Circular in form ('a well by which Farmee is entitled to receive an Assignment') but its content is fixed by Section 3(D), so it does not itself create two readings.",
+      "reasoning_cat2": "The term 'earning well' appears nowhere else in the instrument; Section 3(F) instead speaks of a well that has 'satisfied the earning requirements', leaving an unused definition floating against operative language.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.23,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "This is the heart of what is earned and it turns on 'capable of producing in paying quantities' and on geometric 80- and 40-acre circles 'centered around each gas well', with 'that portion and only that portion' cutting hard against the Farmee; both the paying-quantities standard and the treatment of a well producing both oil and gas are open to competing readings.",
+      "reasoning_cat2": "It must be read with 3(E) (depths earned), 3(D) (the Exhibit D assignment form with blanks for the acreage circle), 2(J) ('Unearned Farmout Land') and Section 13(B) ('all Farmout Lands have been earned'), and the circle-by-circle earning mechanism makes 'all Farmout Lands earned' effectively unattainable.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "The definition ends in an open catch-all, 'and other similar burdens on production', after three enumerated specifics — a textbook ejusdem generis question about how far the residue reaches.",
+      "reasoning_cat2": "The defined term 'lease burdens' is not used anywhere else in the Agreement or in Exhibit D, so it has no operative work to do and no clause to conflict with.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "A precise depth range expressed in feet from a fixed datum; there is nothing to construe on its face.",
+      "reasoning_cat2": "Section 3(E) grants rights to 100' below total depth 'not to exceed' 4,000', which sits comfortably with this, but Exhibit D's deeper-strata reservation is drawn by named formation rather than by depth, an unreconciled measuring stick.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "A short, closed definition tied to the first well drilled under the Agreement.",
+      "reasoning_cat2": "Consistent with 3(A), 3(B) and Section 16, all of which use 'test well' in the same sense; the only friction is Section 16's completion date, which belongs to that clause.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "It requires that the well 'has previously produced' and be capable of producing 'in commercial quantities' — a standard used nowhere else in the instrument, which elsewhere uses 'paying quantities'.",
+      "reasoning_cat2": "Section 7(A) imposes the shut-in royalty on any well 'capable of production (whether or not such well has already produced)', which is flatly wider than this definition's 'previously produced' requirement.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "Plain and closed apart from the OCR misspelling 'subseauent'; it defines subsequent wells by reference to the completed test well.",
+      "reasoning_cat2": "Section 3(B) makes Subsequent Wells available if the test well is completed as a producer 'or plugged and abandoned', while this definition speaks only of 'the drilling and completion of the initial test well' — a minor gap for a dry-hole test well.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "Defined purely by negation against Operating Rights earned; clear on its own terms.",
+      "reasoning_cat2": "Its content depends entirely on 2(D)'s circle mechanism and it drives 5(B)'s partial termination and 3(B)(1)'s location restriction, so any ambiguity in 2(D) is transmitted here rather than created here.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.23,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "'Payout' is measured by gross proceeds equalling only drilling, completing and equipping costs, with no mention of operating costs and no allocation of whose costs count — a definition two parties could apply very differently.",
+      "reasoning_cat2": "Section 4.A hangs the entire overriding-royalty escalation on Payout of 'the first two (2) wells' and then 'all other wells', and Farmor has no stated audit of drilling cost apart from Section 14's royalty-payment audit, leaving the trigger hard to verify.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.25,
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "It fixes a spudding date but sets the completion/plugging deadline only by reference to 'reaching total depth', with no deadline for reaching total depth at all, so the outer limit of Farmee's obligation is indeterminate.",
+      "reasoning_cat2": "Section 13(A) says the Agreement terminates 'pursuant to Section 3(A)(2)', yet 3(A)(2) contains no termination language whatever, and Section 16 conditions the ROFR on the test well being 'drilled and completed' by August 31, 1996 while 3(A)(2) requires only commencement by that date.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "Subsection (3) says Farmee 'must commence' two wells by December 31, 1996 and then, in the same sentence, that 'at Farmee's further option, it shall continuously develop' — 'option' and 'shall' cannot both be given their ordinary force, and 'fully developed' is left undefined.",
+      "reasoning_cat2": "Section 13(A) treats 3(B)(3) as a source of termination for 'Farmee's failure to meet the drilling commitments', which presupposes a binding commitment that 3(B)(3) itself frames as optional; 3(F) likewise terminates for failure to 'commence, continue drilling'.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.5,
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "'Lost for any reason' and a condition rendering drilling 'impractical or impossible' are elastic standards judged by the party invoking them, and there is no notice or verification requirement.",
+      "reasoning_cat2": "A substitute well commenced within thirty days sits awkwardly with the fixed spudding deadlines in 3(A)(2) and 3(B)(3) and with 3(F)'s time-of-the-essence termination, without any express statement that it tolls them.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c019",
+      "reasoning_cat1": "The assignment is due only 'after Farmor is satisfied' that Farmee has complied with all obligations — a purely subjective trigger in the grantor's hands — and subsection (2) then imposes forfeiture plus a plugging duty if Farmee's request is late.",
+      "reasoning_cat2": "The sixty-day forfeiture in (2) runs from completion while the sixty-day delivery period in (1) runs from Farmor's satisfaction, and 3(F) and Section 6 give Farmor takeover rights over the same well, so several clauses compete over an unassigned producing well.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c020",
+      "reasoning_cat1": "A precise vertical formula (surface to 100' below total depth, capped at 4,000'); little room for competing readings.",
+      "reasoning_cat2": "It fits 2(F)'s 'Contract Depth' cap, but Exhibit D reserves everything below a blank-named 'formation' rather than below a depth, and 2(D) says nothing about depth at all, so the earned interval is described three different ways.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c021",
+      "reasoning_cat1": "The first sentence makes termination automatic for any drilling failure while the second gives a thirty-day notice-and-cure right for defaults 'other than above', and the boundary between the two — plus the meaning of 'continue drilling' — is exactly the sort of line parties fight over.",
+      "reasoning_cat2": "Section 13(A) lists 3(F) among the termination routes, Section 5(B) terminates only as to Unearned Farmout Lands, and Section 6 governs the takeover this clause invokes, so the survival of earned rights and the plugging duty must be reconciled across four provisions.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.45,
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c022",
+      "reasoning_cat1": "The clause is riddled with defects that change meaning — 'Farmor reserved the right to escalate', 'less than one hundred percent (100%) or the working interest', '5gross proceeds' — and 'reserves the right to escalate' leaves it unclear whether escalation is automatic on Payout or requires an election.",
+      "reasoning_cat2": "Section 4.A promises gross proceeds 'without deductions of any kind', but the Exhibit D form that is supposed to carry the reservation says 'without deductions of any kind, except that Assignor shall bear its proportionate part of any severance tax' — a direct contradiction between the operative reservation and the prescribed assignment form.",
+      "prob_cat1": 0.51,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c023",
+      "reasoning_cat1": "The triggers include a well that merely 'ceases production', with no duration or paying-quantities qualifier, and the telephone/48-hour alternative sits against a thirty-day written-notice regime without saying which controls when a rig is on location after written notice.",
+      "reasoning_cat2": "Section 6 keys the takeover mechanics to an election 'under Section 5', while 3(F) gives Farmor a separate takeover right on default 'subject to the terms of Section 6', and 7(A) allows a capable well to be shut in rather than abandoned.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c024",
+      "reasoning_cat1": "'A reasonable opportunity to consider its options' is a soft standard layered on top of the specific notice periods in 5(A), and 'Farmor's approval' is not qualified by any reasonableness limit.",
+      "reasoning_cat2": "Section 13(A) cites 5(B) as terminating 'this Farmout Agreement', yet 5(B) by its terms terminates only 'as to the Unearned Farmout Lands' — the term clause and the termination clause describe different consequences.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.39,
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c025",
+      "reasoning_cat1": "The phrase 'any Operating Rights Earned by Farmor and earned by Farmee' is garbled in a way that changes what must be assigned, and 'estimated salvage value ... less estimated plugging costs' leaves the estimator unnamed.",
+      "reasoning_cat2": "3(F) says Farmee is in no event relieved of the plugging obligation, while this clause nets estimated plugging costs out of the reimbursement and then releases Farmee from further obligations as to the taken-over well.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c026",
+      "reasoning_cat1": "The text is corrupted at the trigger ('shut in for any reasontfor a period of Forty Five (45) days'), and a royalty stated 'per well per year, prorated on a monthly basis' but 'due and payable by the last day of each month' is internally unclear as to the amount actually owed each month.",
+      "reasoning_cat2": "Section 2(H) defines a 'shut-in well' as one that has previously produced and is capable of producing in commercial quantities, whereas this clause reaches wells 'whether or not such well has already produced' — the definition and the operative charge do not match.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c027",
+      "reasoning_cat1": "'When possible' is an unusually soft qualifier on a notice duty, effectively leaving compliance to Farmee's own assessment.",
+      "reasoning_cat2": "It sits alongside 7(A)'s payment obligation and 5(A)'s abandonment notice without conflict; nothing else in the instrument makes shut-in notice a condition of anything.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c028",
+      "reasoning_cat1": "A long, carefully enumerated indemnity closed off with 'of any kind or character' and 'including but not limited to'; the one genuine question is whether it covers losses caused by Farmor's own conduct, which it never addresses.",
+      "reasoning_cat2": "It runs in parallel with Exhibit D's assignee indemnity and with Section 11's insurance and additional-insured requirement, all pointing the same direction.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c029",
+      "reasoning_cat1": "An absolute one-sentence covenant to keep the lands 'free and clear from all liens', with no carve-out for contested or statutory liens.",
+      "reasoning_cat2": "Section 15(D) separately bars Farmee from subjecting the Agreement to liens, while Exhibit D expressly grants Assignor a lien on production for unpaid overriding royalty — a lien created by the very instrument the Farmee must sign.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c030",
+      "reasoning_cat1": "'Does not warrant title, either express or implied' is grammatically awkward but its disclaiming effect is plain.",
+      "reasoning_cat2": "Exhibit D repeats and broadens the disclaimer, and nothing elsewhere promises title, so the instrument is consistent on this point.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c031",
+      "reasoning_cat1": "Straightforward: delivery per Exhibit C plus a one-year confidentiality period measured from completion.",
+      "reasoning_cat2": "Exhibit C addresses its duties to 'Operator' and 'EREX', neither of which is a defined party in the Agreement, and directs delivery to a different addressee and address than Section 10(B) specifies.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.23,
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c032",
+      "reasoning_cat1": "It lists addresses, attention parties and fax numbers but never states the permitted method of delivery or when notice becomes effective, which matters given the many short deadlines elsewhere.",
+      "reasoning_cat2": "Exhibit C D.1 directs reports to a different address and a different attention party (Mike Stamper) than this clause's Lester Zitkus, and 5(A) permits telephone notice, so the notice regime is spread inconsistently.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c033",
+      "reasoning_cat1": "It names coverage types but specifies no limits, deductibles or duration, and 'acquire and/or maintain' is loose; still, the obligations it does impose are identifiable.",
+      "reasoning_cat2": "It complements Section 8(A)'s indemnity and nothing else in the instrument addresses insurance; no conflict located.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c034",
+      "reasoning_cat1": "The heading 'MODIFICATIONS AND AMENDMENTS' does not match the text, which is really an after-acquired-interest and extension-of-reservation clause — a labelling error that could mislead on what the section does.",
+      "reasoning_cat2": "The Agreement contains no integration clause and no mechanism for amending the Agreement itself, so a reader looking for one is directed by the heading to a provision that supplies none; substantively it reinforces Section 4.A's reservation.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c035",
+      "reasoning_cat1": "'Shall be in effect until such time as' followed by only two exits gives the Agreement no stated term at all, and (B) — 'all Farmout Lands have been earned' — is practically unreachable under the 80/40-acre circle earning method.",
+      "reasoning_cat2": "It cites Sections 3(A)(2) and 3(B)(3) as termination provisions although neither contains any termination language, and cites 5(B), which terminates only as to Unearned Farmout Lands rather than the whole Agreement — the cross-references do not match what they point to.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c036",
+      "reasoning_cat1": "The first sentence says the audit right arises 'upon written notice' and the second requires thirty days' prior written notice; the scope phrase 'all payments (including but not limited to...)' is an open catch-all but the subject matter is clear.",
+      "reasoning_cat2": "No look-back limit is stated, which sits loosely against Section 4.A's Payout-based escalation, but nothing in the instrument contradicts the audit right.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg35"
+    },
+    {
+      "clause_id": "c037",
+      "reasoning_cat1": "'All obligations, burdens and requirements set forth hereunder or otherwise associated with the lands covered hereby' is an unbounded catch-all whose reach beyond the Agreement itself cannot be fixed from the words.",
+      "reasoning_cat2": "It overlaps every specific duty in Sections 3, 5, 7, 8, 11 and Exhibit C without stating whether it adds anything; Section 9's no-title-warranty means Farmee cannot readily identify lease burdens it must observe.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg36"
+    },
+    {
+      "clause_id": "c038",
+      "reasoning_cat1": "'As nearly as possible to its original condition' is a classic elastic restoration standard, and 'settle surface damages' fixes no measure or timing.",
+      "reasoning_cat2": "Section 5(B) also makes Farmee responsible for 'restoration and reclamation of the surface acreage' and 8(A) indemnifies surface restoration operations, so three provisions address restoration with differing language.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg37"
+    },
+    {
+      "clause_id": "c039",
+      "reasoning_cat1": "A short access right limited to the derrick floor and expressly at Farmor's risk; nothing to construe.",
+      "reasoning_cat2": "Consistent with Exhibit C's witnessing rights (B.5) and with the Section 8(A) allocation of risk to Farmee for its own operations.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg38"
+    },
+    {
+      "clause_id": "c040",
+      "reasoning_cat1": "The enumerated list (assigned, sublet, mortgaged, pledged, encumbered or subjected to a lien) is broad but specific, and consent is unqualified by any reasonableness standard — a one-sided term, though a clear one.",
+      "reasoning_cat2": "Section 17 makes the Agreement binding on 'successors and assigns' and to run with the land, and Exhibit D expressly contemplates that Assignee may assign well interests subject to a 25% floor and notice, so the flat prohibition is hard to square with both.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg39"
+    },
+    {
+      "clause_id": "c041",
+      "reasoning_cat1": "A fixed date and a defined content for the report; no ambiguity of consequence.",
+      "reasoning_cat2": "It complements Exhibit D's monthly production statements and Section 14's audit right without duplication or conflict.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg40"
+    },
+    {
+      "clause_id": "c042",
+      "reasoning_cat1": "The clause is labelled a 'Right of First Refusal' but operates as a preferential right to receive an offer, and 'one time' is ambiguous as between one offer and one exercise; the fifteen-day silence-equals-rejection rule and automatic termination are stacked entirely against the Farmee.",
+      "reasoning_cat2": "Its condition precedent — that Farmee 'drills and completes the test well on or before August 31, 1996, as described in Section 3(A) herein' — misstates Section 3(A), which requires only commencement of drilling by that date and allows completion within forty-five days after total depth.",
+      "prob_cat1": 0.43,
+      "prob_cat2": 0.48,
+      "dataset_clause_id": "neg41"
+    },
+    {
+      "clause_id": "c043",
+      "reasoning_cat1": "'Shall run with said Farmout Lands' asserts a covenant running with land in two lines, without identifying the burdened estate or recording mechanics.",
+      "reasoning_cat2": "It binds 'successors and assigns' while Section 15(D) forbids any assignment by Farmee without consent, and Exhibit D recites that the Farmout Agreement is unrecorded, which cuts against a covenant binding third parties.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg42"
+    },
+    {
+      "clause_id": "c044",
+      "reasoning_cat1": "A closed, numbered list of four pre-drilling deliverables with a stated copy count; nothing vague.",
+      "reasoning_cat2": "It imposes duties on 'Operator', a term never defined in the Agreement, which uses 'Farmee' throughout — the exhibit's actor does not match the body's.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg43"
+    },
+    {
+      "clause_id": "c045",
+      "reasoning_cat1": "It contains a garbled word ('base of surface casinn'), an undefined actor 'EREX', and open standards — 'qualified wellsite geologist', 'thoroughly and timely', 'properly and timely analyzed'.",
+      "reasoning_cat2": "'EREX' and 'Operator' appear nowhere in the defined terms of Sections 1 and 2 or the Section 10(B) notice list, so the beneficiary of the 'free access' right must be inferred from outside the exhibit.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg44"
+    },
+    {
+      "clause_id": "c046",
+      "reasoning_cat1": "Everything material is elastic: 'significant indications of reservoir quality porosity', 'adequately tested', and 'good oilfield practices' — a duty whose boundary cannot be fixed from the text.",
+      "reasoning_cat2": "Section 3(D) conditions the assignment on compliance with 'all geologic requirements as set out in Exhibit C', which imports this vague testing duty into the earning condition, but no other provision contradicts it.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg45"
+    },
+    {
+      "clause_id": "c047",
+      "reasoning_cat1": "'Routine daily prepaid report' is a mechanical corruption (evidently 'prepared'), and the sentence requires a daily report Monday through Friday but confirmation 'daily in writing', which do not align.",
+      "reasoning_cat2": "It coexists with Section 10(A)'s general well-information provision and Section 10(B)'s notice addresses without conflict.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg46"
+    },
+    {
+      "clause_id": "c048",
+      "reasoning_cat1": "'Non-routine occurrences such as' introduces an illustrative rather than exhaustive list, leaving the class of reportable events undefined, and 'significant shows' is a matter of judgment.",
+      "reasoning_cat2": "It is addressed to 'Farmor's designated representative', which Section 10(B) and Exhibit C D.1 identify inconsistently, but no substantive conflict.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg47"
+    },
+    {
+      "clause_id": "c049",
+      "reasoning_cat1": "A clear delivery duty tied to receipt by the Operator, with a stated copy count.",
+      "reasoning_cat2": "Exhibit C C.1 says one copy 'unless otherwise specified' and then specifies two and three, so the copy counts across B.3(c), C.1 and C.2 do not form a coherent scheme.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg48"
+    },
+    {
+      "clause_id": "c050",
+      "reasoning_cat1": "The list of required surveys is a form checklist whose marks are unreadable ('i' beside Density, '_' beside Neutron) and ends in a blank 'Other', so which surveys are actually mandated cannot be determined from the text.",
+      "reasoning_cat2": "Section 3(D) makes compliance with Exhibit C a condition of earning the assignment, which gives the unresolved checklist real consequence, though no other clause contradicts it.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg49"
+    },
+    {
+      "clause_id": "c051",
+      "reasoning_cat1": "'Timely notice' is defined only by its purpose (so a representative 'may be present'), with no hours or days specified.",
+      "reasoning_cat2": "It overlaps B.3(b)'s immediate telephone notice of intent to core, test or log, creating duplicative and differently worded duties for the same events.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg50"
+    },
+    {
+      "clause_id": "c052",
+      "reasoning_cat1": "The lead-in promises 'one copy of the following (unless otherwise specified)' and then immediately demands 'Two final prints' and a floating 'THREE COPIES:' heading, and item (e) is an open catch-all — 'any other data pertinent'.",
+      "reasoning_cat2": "The copy counts conflict with B.3(c)'s 'two copies of all reports, charts, logs, analyses, surveys and forms', which on its face already covers the same documents.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg51"
+    },
+    {
+      "clause_id": "c053",
+      "reasoning_cat1": "'Full information on the completion progress' is broader than the itemised list that follows, leaving unclear whether the list exhausts the duty.",
+      "reasoning_cat2": "It sits with C.1 and B.3(c) on copy counts and with Section 10(A)'s confidentiality period; no substantive contradiction found.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg52"
+    },
+    {
+      "clause_id": "c054",
+      "reasoning_cat1": "A delivery address with a catch-all, 'other similar data', appended to a list of report types; otherwise plain.",
+      "reasoning_cat2": "It names a different addressee (Mike Stamper) and a different street address than Section 10(B)'s notice provision for Farmor (Lester Zitkus, Two Executive Park Place), so a Farmee following one may fail the other.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.25,
+      "dataset_clause_id": "neg53"
+    },
+    {
+      "clause_id": "c055",
+      "reasoning_cat1": "A form recital of parties and addresses with blanks for date; nothing to construe.",
+      "reasoning_cat2": "It matches the Farmor and Farmee identified in the Agreement's preamble; no inconsistency.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg54"
+    },
+    {
+      "clause_id": "c056",
+      "reasoning_cat1": "The operative grant depends on blanks — well number and the size of the 'acre circle' — so the instrument as printed conveys nothing determinate, and it grants a right to 'rework' that the Agreement never mentions.",
+      "reasoning_cat2": "The acreage must be supplied from Section 2(D)'s 80- and 40-acre circles, which distinguishes gas from oil wells while this form does not, and its internal 'Exhibit A' is a different document from the Farmout Agreement's Exhibit A.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg55"
+    },
+    {
+      "clause_id": "c057",
+      "reasoning_cat1": "A habendum tied to production 'in paying quantities' with no temporary-cessation or reworking savings language, so any interruption raises the question whether the assignment has ended.",
+      "reasoning_cat2": "It preserves the assignment while the well 'is shut-in pursuant to' the Farmout Agreement, but Section 7(A) imposes a shut-in royalty without any stated maximum shut-in period, and Section 4.A says the reserved royalty survives termination — the interaction is unresolved.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.32,
+      "dataset_clause_id": "neg56"
+    },
+    {
+      "clause_id": "c058",
+      "reasoning_cat1": "A comprehensive, conventional disclaimer and indemnity; the enumerations end in 'or otherwise' and 'of every kind and character' but the direction of the clause is unmistakable.",
+      "reasoning_cat2": "It parallels Section 9's no-title-warranty and Section 8(A)'s indemnity in the body, reinforcing rather than contradicting them.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg57"
+    },
+    {
+      "clause_id": "c059",
+      "reasoning_cat1": "'Necessary or convenient' is a loose measure of which rights of way pass, and the grant is limited by the underlying deeds and leases whose terms are not attached.",
+      "reasoning_cat2": "Section 15(B) separately requires Farmee to obtain surface entry permission from owner and tenant, which sits alongside rather than against this pass-through of easements.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg58"
+    },
+    {
+      "clause_id": "c060",
+      "reasoning_cat1": "The royalty rate and the substance produced are left blank, and the lien remedy on 'all future production and proceeds received on any well' is broader than the well to which the assignment relates.",
+      "reasoning_cat2": "Section 4.A reserves gross proceeds 'without deductions of any kind', while this form carves out 'its proportionate part of any severance tax' — a direct contradiction between the body's reservation and the form that is to embody it; it also conflicts with Section 8(B)'s lien-free covenant.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg59"
+    },
+    {
+      "clause_id": "c061",
+      "reasoning_cat1": "'Grants, conveys and assigns other such rights to Assignee only to the extent set forth herein' is garbled — 'other such rights' has no clear antecedent after the reservation of title.",
+      "reasoning_cat2": "It reinforces Section 2(D)'s 'that portion and only that portion' limitation, so it pulls in the same direction as the body, though it leaves the earlier easement grant's scope in tension.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg60"
+    },
+    {
+      "clause_id": "c062",
+      "reasoning_cat1": "The 25% floor is expressed as a 'working interest' although what is assigned are operating rights, not a working interest, and the sentence stacks a notice duty, a floor and a consent requirement without saying which governs a partial assignment.",
+      "reasoning_cat2": "Section 15(D) of the Agreement flatly bars Farmee from assigning anything without Farmor's prior written consent, whereas this clause contemplates assignments on mere written notification subject to a floor — the two cannot both be given full effect.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg61"
+    },
+    {
+      "clause_id": "c063",
+      "reasoning_cat1": "The reservation depends on a blank formation name, so as written it reserves everything below nothing; the boundary of what is conveyed is indeterminate on the face of the clause.",
+      "reasoning_cat2": "Section 3(E) and Section 2(F) measure the earned interval in feet (100' below total depth, capped at 4,000'), while this clause measures the reservation by geological formation, so the two descriptions of the same boundary may not coincide.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg62"
+    },
+    {
+      "clause_id": "c064",
+      "reasoning_cat1": "A standard successors-and-assigns clause; nothing ambiguous.",
+      "reasoning_cat2": "It benefits 'successors and assigns' while Section 15(D) prohibits assignment without consent and this same exhibit restricts further assignment, so the free transferability it implies is qualified elsewhere.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.23,
+      "dataset_clause_id": "neg63"
+    },
+    {
+      "clause_id": "c065",
+      "reasoning_cat1": "A one-sentence subordination of the assignment to the Farmout Agreement, with only a blank date; plain in effect.",
+      "reasoning_cat2": "Making the assignment 'subject to' the Farmout Agreement is hard to reconcile with Section 3(F) and Section 13, under which the Agreement terminates while Operating Rights Earned and the reserved royalty survive — what remains of the assignment after termination is left open, and the recital that the Farmout Agreement is unrecorded cuts against Section 17's covenant running with the land.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg64"
+    }
+  ]
+}

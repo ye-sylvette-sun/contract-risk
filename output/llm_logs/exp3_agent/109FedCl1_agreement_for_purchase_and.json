@@ -1,0 +1,76 @@
+{
+  "contract_id": "109FedCl1_agreement_for_purchase_and",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 39,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 10,
+  "duration_ms": 178278,
+  "total_cost_usd": 0.928569,
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 43985,
+    "cache_read_input_tokens": 283522,
+    "output_tokens": 13816,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 43985,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3,
+        "cache_read_input_tokens": 67745,
+        "cache_creation_input_tokens": 4673,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4673
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1408,
+      "outputTokens": 16,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001488,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    },
+    "claude-opus-5": {
+      "inputTokens": 14,
+      "outputTokens": 13816,
+      "cacheReadInputTokens": 283522,
+      "cacheCreationInputTokens": 43985,
+      "webSearchRequests": 0,
+      "costUSD": 0.927081,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "session_id": "8dcf5173-2f8e-4fe7-a074-2fe24664be46",
+  "errors": null,
+  "result": "39",
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1786946400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

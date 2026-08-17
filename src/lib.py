@@ -15,7 +15,7 @@ anchors against the file, snaps the boundary to where they actually are, and
 slices the text out of the file. Nothing the model writes is carried into the
 dataset — the anchors only say *where*.
 
-See docs/DESIGN.md.
+See docs/DATASET.md.
 """
 
 import bisect
@@ -67,7 +67,7 @@ DATA = ROOT / "data"                  # Westlaw headnotes, opinions, the linking
 # pipeline does. So the text is their OCR output unedited, which is what makes it
 # usable here: an LLM chose the boundaries, but no LLM wrote the words.
 # Independently checked — all 205 re-sliceable extractions are byte-identical to
-# their source at the recorded spans. See docs/DESIGN.md §5.
+# their source at the recorded spans. See docs/DATASET.md §3, step 0.
 SOURCE = ROOT / "contract_risk" / "generated" / "corpus" / "contracts"
 EXTRACTED = SOURCE / "extracted_contracts"    # <case>__<agreement>.txt
 EXTRACTION = SOURCE / "contract_extraction.csv"   # where each slice came from
@@ -351,7 +351,7 @@ def numbered(text):
 # on its own line is as likely to be a flattened table cell as a page number,
 # and dropping a figure the contract states is the one thing this pipeline must
 # never do. A stray page number left in the text is the cheaper mistake.
-# This is the ONLY thing dropped from an extracted span. docs/DESIGN.md §4.
+# This is the ONLY thing dropped from an extracted span. docs/DATASET.md §2.
 _STAMP = re.compile(
     r"p(?:age)?\.?\s*\d{1,4}(?:\s*of\s*\d{1,4})?"   # p. 3  /  Page 3 of 12
     r"|[A-Za-z][\w&.\-]{0,20}[ \-_]0\d{3,}",        # Bates: ROADLINK 00066
@@ -434,7 +434,7 @@ def normalise(text):
     """Dataset text from a raw span: drop furniture, de-hyphenate, collapse space.
 
     Nothing else. No substitution, no number correction, no label mending: what
-    the scan says is what the dataset carries. docs/DESIGN.md §4.
+    the scan says is what the dataset carries. docs/DATASET.md §2.
 
     Order matters. Whole-line stamps go first so a word the scanner split
     *across* one still rejoins; the inline footer goes last, because it can
@@ -506,7 +506,8 @@ def locate(text, start, end, head, tail):
     record carries the character span the anchors snapped to, the line range
     that span covers, the match score, and the extracted text.
 
-    The anchors do three jobs (docs/DESIGN.md §2). They prove the range is real:
+    The anchors do three jobs (docs/DATASET.md §2). They prove the range is
+    real:
     an anchor matching nothing near the claimed window means the model pointed
     at the wrong place. They repair the range: the window is widened by SLACK
     lines on each side and the boundary is snapped to where the anchor is, so a
@@ -545,7 +546,7 @@ def locate(text, start, end, head, tail):
     if want_tail:
         # The tail is searched from the head onward, so it can never land
         # before it, and the earliest best-scoring run wins — over-capture is
-        # the failure this design cannot otherwise see (docs/DESIGN.md §7).
+        # the failure this design cannot otherwise see (docs/DATASET.md §6).
         tail_at = max((i for i, n in enumerate(at) if n <= end),
                       default=len(toks) - 1)
         t_score, _t_i, t_j = _best(want_tail, toks[h_i:],
@@ -622,7 +623,7 @@ RETRIES = 4          # attempts after the first, on a transient server error
 BACKOFF = 20         # seconds before the first retry, doubling thereafter
 
 
-def _stream(name, model, effort, p):
+def _stream(name, model, effort, p, more=()):
     """One request, retried through transient server errors.
 
     The SDK retries a request that fails before the stream opens. It cannot
@@ -651,7 +652,7 @@ def _stream(name, model, effort, p):
             {"type": "text", "text": p["DOCUMENT"]},
             {"type": "text", "text": p["INSTRUCTIONS"]},
             {"type": "text", "text": p["TASK"]},
-        ]}],
+        ]}] + list(more),
         "output_config": {"effort": effort,
                           "format": {"type": "json_schema",
                                      "schema": schema(name)}},
@@ -696,8 +697,21 @@ def schema(name):
     return json.loads((PROMPTS / f"{name}.schema.json").read_text(encoding="utf-8"))
 
 
-def ask(name, call_id, effort="high", model=MODEL, **fields):
+def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(), **fields):
     """One stateless call. Returns the parsed answer, or None if it did not land.
+
+    `more` continues the conversation instead of starting a new one: the turns
+    given are appended after the first user message, so the model is asked its
+    follow-up question with its own earlier answer in view. The one caller that
+    needs this is the top-up, which asks for the provisions a first answer left
+    out — and asking "you missed these" only means anything if the model can see
+    what it already said.
+
+    `log_as` names the log directory when it should not be the prompt's name.
+    One prompt can serve two experiments — `prompts/exp3.md` holds the judging
+    criteria that both the one-shot and the agentic run are given, word for word
+    — but their logs are separate bodies of data and are named after the
+    experiment, not the template they share.
 
     The document goes first and the instructions after it, so a rule sits next
     to the text it governs rather than tens of thousands of tokens above it.
@@ -729,9 +743,9 @@ def ask(name, call_id, effort="high", model=MODEL, **fields):
     Do not restore it without a prefix two calls actually share.
     """
     p = prompt(name, **fields)
-    msg = _stream(name, model, effort, p)
+    msg = _stream(name, model, effort, p, more)
 
-    d = LOGS / name
+    d = LOGS / (log_as or name)
     d.mkdir(parents=True, exist_ok=True)
     (d / f"{call_id}.json").write_text(json.dumps({
         "system": p["SYSTEM"], "document": p["DOCUMENT"],

@@ -1,0 +1,2485 @@
+ DELAWARE RIVER BASIN
+     COMPACT
+
+
+
+
+        1961
+       (Reprinted 2009)
+
+
+
+
+         JA353
+                                  TABLE OF CONTENTS
+
+
+                                                                                                           Page
+                                             PART I
+                                            COMPACT
+
+
+PREAMBLE………………………………………………………………………………..1
+
+ARTICLE 1       SHORT TITLE, DEFINITIONS, PURPOSE AND LIMITATIONS....3
+  Section 1.1      Short title ................................................................................. 3
+  Section 1.2      Definitions ............................................................................... 3
+  Section 1.3      Purpose and Findings ................................................................ 4
+  Section 1.4     Powers of Congress; Withdrawal ............................................... 5
+  Section 1.5     Existing Agencies; Construction ................................................ 5
+  Section 1.6     Duration of Compact ................................................................ 6
+
+ARTICLE 2       ORGANIZATION AND AREA .......................................................6
+  Section 2.1     Commission Created ................................................................. 6
+  Section 2.2     Commission Membership.......................................................... 6
+  Section 2.3     Alternates ................................................................................ 6
+  Section 2.4     Compensation .......................................................................... 7
+  Section 2.5     Voting Power ........................................................................... 7
+  Section 2.6     Organization and Procedure ...................................................... 7
+  Section 2.7     Jurisdiction of the Commission.................................................. 7
+
+ARTICLE 3       POWERS AND DUTIES OF THE COMMISSION ...........................7
+  Section 3.1     Purpose and Policy ................................................................... 7
+  Section 3.2     Comprehensive Plan, Program and Budgets ............................... 7
+  Section 3.3     Allocations, Diversions and Releases ......................................... 8
+  Section 3.4     Supreme Court Decree; Waivers ................................................ 9
+  Section 3.5     Supreme Court Decree; Specific Limitations on Commission ...... 9
+  Section 3.6     General Powers ...................................................................... 10
+  Section 3.7     Rates and Charges .................................................................. 11
+  Section 3.8     Referral and Review ............................................................... 11
+
+                                                   i
+
+
+
+
+                                              JA354
+   Section 3.9         Coordination and Cooperation ................................................. 11
+  Section 3.10        Advisory Committees ............................................................. 12
+
+  ARTICLE 4      WATER SUPPLY ........................................................................ 12
+  Section 4.1      Generally ............................................................................... 12
+  Section 4.2      Storage and Release of Waters................................................. 12
+  Section 4.3      Assessable Improvements ....................................................... 12
+  Section 4.4      Coordination .......................................................................... 13
+  Section 4.5      Additional Powers .................................................................. 13
+
+  ARTICLE 5      POLLUTION CONTROL ............................................................. 13
+  Section 5.1       General Powers ...................................................................... 13
+  Section 5.2       Policy and Standards............................................................... 13
+  Section 5.3       Cooperative Legislation and Administration ............................. 14
+  Section 5.4       Enforcement........................................................................... 14
+  Section 5.5       Further Jurisdiction ................................................................. 14
+
+ARTICLE 6        FLOOD PROTECTION.................................................................15
+  Section 6.1       General Powers ...................................................................... 15
+  Section 6.2       Flood Plain Zoning ................................................................. 15
+  Section 6.3       Flood Lands Acquisition ......................................................... 15
+  Section 6.4       Flood and Stream Stage Warnings and Posting ......................... 16
+
+ARTICLE 7        WATERSHED MANAGEMENT...................................................16
+  Section 7.1      Watersheds Generally ............................................................. 16
+  Section 7.2      Soil Conservation and Forestry ................................................ 16
+  Section 7.3      Fish and Wildlife .................................................................... 16
+  Section 7.4      Cooperative Planning and Operation ........................................ 16
+
+ARTICLE 8        RECREATION .............................................................................16
+  Section 8.1       Development .......................................................................... 16
+  Section 8.2       Cooperative Planning and Operation ........................................ 17
+  Section 8.3       Operation and Maintenance ..................................................... 17
+  Section 8.4       Concessions ........................................................................... 17
+
+
+
+
+                                                   ii
+
+
+
+
+                                              JA355
+ ARTICLE 9             HYDROELECTRIC POWER ........................................................17
+  Section 9.1           Development .......................................................................... 17
+  Section 9.2           Power Generation ................................................................... 18
+  Section 9.3           Transmission .......................................................................... 18
+  Section 9.4           Development Contracts ........................................................... 18
+  Section 9.5           Rates and Charges .................................................................. 18
+
+ARTICLE 10            REGULATION OF WITHDRAWALS AND DIVERSIONS ...........18
+  Section 10.1           Power of Regulation ............................................................... 18
+  Section 10.2          Determination of Protected Areas ............................................ 18
+  Section 10.3           Withdrawal Permits ................................................................ 18
+  Section 10.4           Emergency ............................................................................. 19
+  Section 10.5           Standards ............................................................................... 19
+  Section 10.6           Judicial Review ...................................................................... 19
+  Section 10.7           Maintenance of Records .......................................................... 19
+  Section 10.8           Existing State Systems ............................................................ 19
+
+ARTICLE 11            INTERGOVERNMENTAL RELATIONS ......................................20
+  Section 11.1           Federal Agencies and Projects ................................................. 20
+  Section 11.2           State and Local Agencies and Projects ..................................... 20
+  Section 11.3           Reserved Taxing Powers of States ........................................... 20
+  Section 11.4           Project Costs and Evaluation Standards .................................... 21
+  Section 11.5           Cooperative Services .............................................................. 21
+
+ARTICLE 12      CAPITAL FINANCING ................................................................21
+  Section 12.1    Borrowing Power ................................................................... 21
+  Section 12.2    Funds and Expenses................................................................ 22
+  Section 12.3    Credit Excluded; Officers, State and Municipal ........................ 22
+  Section 12.4    Funding and Refunding........................................................... 22
+  Section 12.5    Bonds; Authorization Generally .............................................. 23
+  Section 12.6    Bonds; Resolutions and Indentures Generally ........................... 23
+  Section 12.7    Maximum Maturity................................................................. 24
+  Section 12.8    Tax Exemption ....................................................................... 24
+  Section 12.9    Interest................................................................................... 24
+  Section 12.10   Place of Payment .................................................................... 24
+  Section 12.11   Execution ............................................................................... 24
+
+                                                       iii
+
+
+
+
+                                                   JA356
+    Section 12.12           Holding Own Bonds ............................................................... 24
+   Section 12.13           Sale ....................................................................................... 24
+   Section 12.14           Negotiability .......................................................................... 25
+   Section 12.15           Legal Investments................................................................... 25
+   Section 12.16           Validation Proceedings ........................................................... 25
+   Section 12.17           Recording .............................................................................. 25
+   Section 12.18           Pledged Revenues................................................................... 25
+   Section 12.19           Remedies ............................................................................... 26
+   Section 12.20           Capital Financing by Signatory Parties; Guarantees .................. 26
+
+ARTICLE 13            PLAN, PROGRAM AND BUDGETS ............................................27
+  Section 13.1           Comprehensive Plan ............................................................... 27
+  Section 13.2           Water Resources Program ....................................................... 27
+  Section 13.3           Annual Current Expense and Capital Budgets........................... 28
+
+ARTICLE 14      GENERAL PROVISIONS .............................................................29
+  Section 14.1    Auxiliary Powers of Commission; Functions of Commissioners 29
+  Section 14.2    Regulations; Enforcement ....................................................... 30
+  Section 14.3    Tax Exemption ....................................................................... 30
+  Section 14.4    Meetings; Public Hearing; Records, Minutes ............................ 31
+  Section 14.5    Officers Generally .................................................................. 31
+  Section 14.6    Oath of Office ........................................................................ 31
+  Section 14.7    Bond...................................................................................... 31
+  Section 14.8    Prohibited Activities ............................................................... 32
+  Section 14.9    Purchasing ............................................................................. 32
+  Section 14.10   Insurance ............................................................................... 33
+  Section 14.11   Annual Independent Audit ...................................................... 33
+  Section 14.12   Reports .................................................................................. 34
+  Section 14.13   Grants, Loans or Payments by States or Political Subdivisions... 34
+  Section 14.14   Condemnation Proceedings ..................................................... 35
+  Section 14.15   Conveyance of Lands and Relocation of Public Facilities .......... 35
+  Section 14.16   Rights of Way ........................................................................ 36
+  Section 14.17   Penal Sanction........................................................................ 36
+  Section 14.18   Tort Liability .......................................................................... 36
+  Section 14.19   Effect on Riparian Rights ........................................................ 37
+  Section 14.20   Amendments and Supplements ................................................ 37
+
+                                                         iv
+
+
+
+
+                                                    JA357
+    Section 14.21            Construction and Severability .................................................. 37
+   Section 14.22            Effective Date; Execution ....................................................... 37
+
+                                               PART II
+                                            EFFECTUATION
+
+UNITED STATES: (from Public Law 87-328, 75 Stat. 688) ........................................39
+  § 15.1          Reservations........................................................................... 39
+  § 15.2          Effectuation ........................................................................... 43
+  § 15.3          Effect Date ............................................................................. 43
+
+DELAWARE: (from 53 Delaware Laws, Chapter 71).................................................44
+  ' 1011.        Repealer................................................................................. 44
+  ' 1012.        Effectuation by Chief Executive .............................................. 44
+  ' 1013.        Effective Date ........................................................................ 44
+
+NEW JERSEY: (from New Jersey Laws of 1961, Chapter 13) .....................................44
+  § 15.1          Repealer................................................................................. 44
+  § 15.2          Effectuation by Chief Executive .............................................. 44
+  § 15.3          Effective Date ........................................................................ 44
+
+NEW YORK: (from New York Laws of 1961, Chapter 148); with Sections of the
+  Conservation Law as renumbered by Laws of 1962, Chapter 73. .............................44
+  ' 631.           Commissioner and Alternate ................................................... 44
+  ' 632.           Advisors ................................................................................ 45
+  ' 633.           Consent to Alteration of Diversions ......................................... 45
+  ' 634.           Jurisdiction of Courts .............................................................. 45
+  ' 635.           Prior to Project Approval ........................................................ 46
+  ' 636.           Agreements with Municipalities .............................................. 46
+  ' 637.           Delegations of Power .............................................................. 46
+  ' 638.           Cooperative Services .............................................................. 46
+  ' 639.           Budget ................................................................................... 46
+  ' 640.           Audit ..................................................................................... 46
+  ' 641.           Inconsistent Laws ................................................................... 47
+  ' 2.             Effectuation ........................................................................... 47
+  ' 3.             Effective Date ........................................................................ 47
+
+                                                       v
+
+
+
+
+                                                  JA358
+ PENNSYLVANIA: (from Pennsylvania Acts of 1961, Act No. 268) .............................47
+  Section 2.    Repealer................................................................................. 47
+  Section 3.    Effectuation by Chief Executive .............................................. 47
+  Section 4.    Effective Date ........................................................................ 47
+
+ENDNOTE………………………………………………………………………………..48
+
+
+
+
+                                                    vi
+
+
+
+
+                                                JA359
+                 DELAWARE RIVER BASIN COMPACT
+                               United States: Public Law 87-328,
+                      Approved September 27, 1961, 75 Statutes at Large 688
+
+                           Delaware: 53 Delaware Laws, Chapter 71,
+                                   Approved May 26, 1961
+
+                             New Jersey: Laws of 1961, Chapter 13,
+                                    Approved May 1, 1961
+
+                             New York: Laws of 1961, Chapter 148,
+                                  Approved March 17, 1961
+
+                            Pennsylvania: Acts of 1961, Act No. 268,
+                                    Approved July 7, 1961
+
+
+
+                                          PART 1
+
+                                        COMPACT
+
+Whereas the signatory parties recognize the water and related resources of the Delaware
+  River Basin as regional assets vested with local, State, and National interests, for which
+  they have a joint responsibility; and
+
+Whereas the conservation, utilization, development, management, and control of the water
+  and related resources of the Delaware River Basin under a comprehensive multipurpose
+  plan will bring the greatest benefits and produce the most efficient service in the public
+  welfare; and
+
+Whereas such a comprehensive plan administered by a basin wide agency will provide
+  effective flood damage reduction; conservation and development of ground and surface
+  water supply for municipal, industrial, and agricultural uses; development of recreational
+  facilities in relation to reservoirs, lakes, and streams; propagation of fish and game;
+  promotion of related forestry, soil conservation, and watershed projects; protection and
+  aid to fisheries dependent upon water resources; development of hydroelectric power
+  potentialities; improved navigation; control of the movement of salt water; abatement and
+  control of stream pollution; and regulation of stream flows toward the attainment of these
+  goals; and
+
+
+
+                                               1
+
+
+
+
+                                          JA360
+ Whereas decisions of the United States Supreme Court relating to the waters of the basin
+  have confirmed the interstate regional character of the water resources of the Delaware
+  River Basin, and the United States Corps of Engineers has in a prior report on the
+  Delaware River Basin (House Document 179, Seventy-third Congress, second session)
+  officially recognized the need for an interstate agency and the economies that can result
+  from unified development and control of the water resources of the basin; and
+
+Whereas the water resources of the basin are presently subject to the duplicating,
+  overlapping, and uncoordinated administration of some forty-three State agencies,
+  fourteen interstate agencies, and nineteen Federal agencies which exercise a multiplicity
+  of powers and duties resulting in a splintering of authority and responsibilities; and
+
+Whereas the joint advisory body known as the Interstate Commission on the Delaware River
+  Basin (INCODEL), created by the respective commissions or Committee on Interstate
+  Cooperation of the States of Delaware, New Jersey, New York, and Pennsylvania, has on
+  the basis of its extensive investigations, surveys, and studies concluded that regional
+  development of the Delaware River Basin is feasible, advisable, and urgently needed; and
+  has recommended that an interstate compact with Federal participation be consummated
+  to this end; and
+
+Whereas the Congress of the United States and the executive branch of the Government have
+  recognized the national interest in the Delaware River Basin by authorizing and directing
+  the Corps of Engineers, Department of the Army, to make a comprehensive survey and
+  report on the water and related resources of the Delaware River Basin, enlisting the
+  technical aid and planning participation of many Federal, State, and municipal agencies
+  dealing with the waters of the basin, and in particular the Federal Departments of
+  Agriculture, Commerce, Health, Education, and Welfare, and Interior, and the Federal
+  Power Commission; and
+
+Whereas some twenty-two million people of the United States at present live and work in the
+  region of the Delaware River Basin and its environs, and the government, employment,
+  industry, and economic development of the entire region and the health, safety, and
+  general welfare of its population are and will continue to be vitally affected by the use,
+  conservation, management, and control of the water and related resources of the Delaware
+  River Basin; and
+
+Whereas demands upon the waters and related resources of the basin are expected to mount
+  rapidly because of the anticipated increase in the population of the region projected to
+
+
+                                             2
+
+
+
+
+                                         JA361
+    reach thirty million by 1980 and forty million by 2010, and because of the anticipated
+   increase in industrial growth projected to double by 1980; and
+
+Whereas water resources planning and development is technical, complex, and expensive,
+  and has often required fifteen to twenty years from the conception to the completion of a
+  large dam and reservoir; and
+
+Whereas the public interest requires that facilities must be ready and operative when needed,
+  to avoid the catastrophe of unexpected floods or prolonged drought, and for other
+  purposes; and
+
+Whereas the Delaware River Basin Advisory Committee, a temporary body constituted by
+  the Governors of the four basin States and the mayors of the cities of New York and
+  Philadelphia, has prepared a draft of an interstate-Federal compact for the creation of a
+  basin agency, and the signatory parties desire to effectuate the purposes thereof: Now
+  therefore
+
+   The states of Delaware, New Jersey and New York and the Commonwealth of
+Pennsylvania, and the United States of America hereby solemnly covenant and agree with
+each other, upon the enactment of concurrent legislation by the Congress of the United States
+and by the respective state legislatures, having the same effect as this Part, to the following
+Compact:
+
+                                        ARTICLE 1
+
+         SHORT TITLE, DEFINITIONS, PURPOSE AND LIMITATIONS
+
+  Section 1.1 Short title.. This Act shall be known and may be cited as the Delaware River
+Basin Compact.
+
+   1.2 Definitions. For the purposes of this compact, and of any supplemental or concurring
+legislation enacted pursuant thereto, except as may be otherwise required by the context:
+
+   (a) "Basin" shall mean the area of drainage into the Delaware River and its tributaries,
+including Delaware Bay;
+
+   (b) "Commission" shall mean the Delaware River Basin Commission created and
+constituted by this compact;
+
+
+                                              3
+
+
+
+
+                                          JA362
+    (c) "Compact" shall mean Part I of this act;
+
+   (d) "Cost" shall mean direct and indirect expenditures, commitment, and net induced
+adverse effects, whether or not compensated for, used or incurred in connection with the
+establishment, acquisition, construction, maintenance and operation of a project;
+
+   (e) "Facility" shall mean any real or personal property, within or without the basin, and
+improvements thereof or thereon, and any and all rights of way, water, water rights, plants,
+structures, machinery and equipment, acquired, constructed, operated or maintained for the
+beneficial use of water resources or related land uses including, without limiting the
+generality of the foregoing, any and all things and appurtenances necessary, useful or
+convenient for the control, collection, storage, withdrawal, diversion, release, treatment,
+transmission, sale or exchange of water; or for navigation thereon, or the development and
+use of hydroelectric energy and power, and public recreational facilities; or the propagation
+of fish and wildlife; or to conserve and protect the water resources of the basin or any
+existing or future water supply source, or to facilitate any other uses of any of them;
+
+   (f) "Federal government" shall mean the government of the United States of America, and
+any appropriate branch, department, bureau or division thereof, as the case may be;
+
+   (g) "Project" shall mean any work, service or activity which is separately planned,
+financed, or identified by the commission, or any separate facility undertaken or to be
+undertaken within a specified area, for the conservation, utilization, control, development or
+management of water resources which can be established and utilized independently or as an
+addition to an existing facility, and can be considered as a separate entity for purposes of
+evaluation;
+
+   (h) "Signatory party" shall mean a state or commonwealth party to this compact, and the
+federal government;
+
+   (i) "Water resources" shall include water and related natural resources in, on, under, or
+above the ground, including related uses of land, which are subject to beneficial use,
+ownership or control.
+
+   1.3 Purpose and Findings. The legislative bodies of the respective signatory parties
+hereby find and declare:
+
+   (a) The water resources of the basin are affected with a local, state, regional and national
+interest and their planning, conservation, utilization, development, management and control,
+
+                                              4
+
+
+
+
+                                          JA363
+ under appropriate arrangements for intergovernmental cooperation, are public purposes of
+the respective signatory parties.
+
+    (b) The water resources of the basin are subject to the sovereign right and responsibility
+of the signatory parties, and it is the purpose of this compact to provide for a joint exercise of
+such powers of sovereignty in the common interests of the people of the region.
+
+   (c) The water resources of the basin are functionally inter-related, and the uses of these
+resources are interdependent. A single administrative agency is therefore essential for
+effective and economical direction, supervision and coordination of efforts and programs of
+federal, state and local governments and of private enterprise.
+
+   (d) The water resources of the Delaware River Basin, if properly planned and utilized, are
+ample to meet all presently projected demands, including existing and added diversions in
+future years and ever increasing economies and efficiencies in the use and reuse of water
+resources can be brought about by comprehensive planning, programming and management.
+
+   (e) In general, the purposes of this compact are to promote interstate comity; to remove
+causes of present and future controversy; to make secure and protect present developments
+within the states; to encourage and provide for the planning, conservation, utilization,
+development, management and control of the water resources of the basin; to provide for
+cooperative planning and action by the signatory parties with respect to such water
+resources; and to apply the principle of equal and uniform treatment to all water users who
+are similarly situated and to all users of related facilities, without regard to established
+political boundaries.
+
+    1.4 Powers of Congress; Withdrawal. Nothing in this compact shall be construed to
+relinquish the functions, powers or duties of the Congress of the United States with respect to
+the control of any navigable waters within the basin, nor shall any provision hereof be
+construed in derogation of any of the constitutional powers of the Congress to regulate
+commerce among the states and with foreign nations. The power and right of the Congress to
+withdraw the federal government as a party to this compact or to revise or modify the terms,
+conditions and provisions under which it may remain a party by amendment, repeal or
+modification of any federal statute applicable thereto is recognized by the signatory parties.
+
+   1.5 Existing Agencies; Construction. It is the purpose of the signatory parties to
+preserve and utilize the functions, powers and duties of existing offices and agencies of
+government to the extent not inconsistent with the compact, and the commission is
+
+
+                                                5
+
+
+
+
+                                            JA364
+ authorized and directed to utilize and employ such offices and agencies for the purpose of
+this compact to the fullest extent it finds feasible and advantageous.
+
+      1.6 Duration of Compact.
+
+   (a) The duration of this compact shall be for an initial period of 100 years from its
+effective date, and it shall be continued for additional periods of 100 years if not later than
+20 years nor sooner than 25 years prior to the termination of the initial period or any
+succeeding period none of the signatory states, by authority of an act of its legislature,
+notifies the commission of intention to terminate the compact at the end of the then current
+100 year period.
+
+   (b) In the event that this compact should be terminated by operation of paragraph (a)
+above, the commission shall be dissolved, its assets and liabilities transferred, and its
+corporate affairs wound up, in such manner as may be provided by act of the Congress.
+
+                                                ARTICLE 2
+
+                                    ORGANIZATION AND AREA
+
+   Section 2.1 Commission Created. The Delaware River Basin Commission is hereby
+created as a body politic and corporate, with succession for the duration of this compact, as
+an agency and instrumentality of the governments of the respective signatory parties.
+
+   2.2 Commission Membership.1 The commission shall consist of the Governors of the
+signatory states, ex officio, and one commissioner to be appointed by the President of the
+United States to serve during the term of office of the President.
+
+    2.3 Alternates. Each member of the commission shall appoint an alternate to act in his
+place and stead, with authority to attend all meetings of the commission, and with power to
+vote in the absence of the member. Unless otherwise provided by law of the signatory party
+for which he is appointed, each alternate shall serve during the term of the member
+appointing him, subject to removal at the pleasure of the member. In the event of a vacancy
+in the office of alternate, it shall be filled in the same manner as an original appointment for
+the unexpired term only.
+
+
+1
+    Section 2.2 is as enacted in 1961. See Endnote regarding subsequent changes.
+
+
+                                                       6
+
+
+
+
+                                                  JA365
+    2.4 Compensation. Members of the commission and alternates shall serve without
+compensation but may be reimbursed for necessary expenses incurred in and incident to the
+performance of their duties.
+
+   2.5 Voting Power. Each member shall be entitled to one vote on all matters which may
+come before the commission. No action of the commission shall be taken at any meeting
+unless a majority of the membership shall vote in favor thereof.
+
+    2.6 Organization and Procedure. The commission shall provide for its own organization
+and procedure, and shall adopt rules and regulations governing its meetings and transactions.
+It shall organize annually by the election of a chairman and vice-chairman from among its
+members. It shall provide by its rules for the appointment by each member in his discretion
+of an advisor to serve without compensation, who may attend all meetings of the commission
+and its committees.
+
+    2.7 Jurisdiction of the Commission. The commission shall have, exercise and discharge
+its functions, powers and duties within the limits of the basin, except that it may in its
+discretion act outside the basin whenever such action may be necessary or convenient to
+effectuate its powers or duties within the basin, or to sell or dispose of water, hydroelectric
+power or other water resources within or without the basin. The commission shall exercise
+such power outside the basin only upon the consent of the state in which it proposes to act.
+
+                                        ARTICLE 3
+
+                  POWERS AND DUTIES OF THE COMMISSION
+
+   Section 3.1 Purpose and Policy. The commission shall develop and effectuate plans,
+policies and projects relating to the water resources of the basin. It shall adopt and promote
+uniform and coordinated policies for water conservation, control, use and management in the
+basin. It shall encourage the planning, development and financing of water resources projects
+according to such plans and policies.
+
+   3.2 Comprehensive Plan, Program and Budgets. The commission shall, in accordance
+with Article 13 of this compact, formulate and adopt:
+
+   (a) A comprehensive plan, after consultation with water users and interested public
+bodies, for the immediate and long range development and uses of the water resources of the
+basin;
+
+
+                                              7
+
+
+
+
+                                          JA366
+    (b) A water resources program, based upon the comprehensive plan, which shall include a
+systematic presentation of the quantity and quality of water resources needs of the area to be
+served for such reasonably foreseeable period as the commission may determine, balanced
+by existing and proposed projects required to satisfy such needs, including all public and
+private projects affecting the basin, together with a separate statement of the projects
+proposed to be undertaken by the commission during such period; and
+
+   (c) An annual current expense budget, and an annual capital budget consistent with the
+water resources program covering the commission's projects and facilities for the budget
+period.
+
+   3.3 Allocations, Diversions and Releases. The commission shall have the power from
+time to time as need appears, in accordance with the doctrine of equitable apportionment, to
+allocate the waters of the basin to and among the states signatory to this compact and to and
+among their respective political subdivisions, and to impose conditions, obligations and
+release requirements related thereto, subject to the following limitations:
+
+   (a) The commission, without the unanimous consent of the parties to the United States
+Supreme Court decree in New Jersey v. New York, 347 U. S. 995 (1954), shall not impair,
+diminish or otherwise adversely affect the diversions, compensating releases, rights,
+conditions, obligations, and provisions for the administration thereof as provided in said
+decree; provided, however, that after consultation with the river master under said decree the
+commission may find and declare a state of emergency resulting from a drought or
+catastrophe and it may thereupon by unanimous consent of its members authorize and direct
+an increase or decrease in any allocation or diversion permitted or releases required by the
+decree, in such manner and for such limited time as may be necessary to meet such an
+emergency condition.
+
+    (b) No allocation of waters hereafter made pursuant to this section shall constitute a prior
+appropriation of the waters of the basin or confer any superiority of right in respect to the use
+of those waters, nor shall any such action be deemed to constitute an apportionment of the
+waters of the basin among the parties hereto: Provided, That this paragraph shall not be
+deemed to limit or restrict the power of the commission to enter into covenants with respect
+to water supply, with a duration not exceeding the life of this compact, as it may deem
+necessary for a benefit or development of the water resources of the basin.
+
+   (c) Any proper party deeming itself aggrieved by action of the commission with respect to
+an out-of-basin diversion or compensating releases in connection therewith, notwithstanding
+the powers delegated to the commission by this compact may invoke the original jurisdiction
+
+                                               8
+
+
+
+
+                                           JA367
+ of the United States Supreme Court within one year after such action for an adjudication and
+determination thereof de novo. Any other action of the commission pursuant to this section
+shall be subject to judicial review in any court of competent jurisdiction.
+
+   3.4 Supreme Court Decree; Waivers. Each of the signatory states and their respective
+political subdivisions, in consideration of like action by the others, and in recognition of
+reciprocal benefits, hereby waives and relinquishes for the duration of this compact any
+right, privilege or power it may have to apply for any modification of the terms of the decree
+of the United States Supreme Court in New Jersey v. New York, 347 U. S., 995 (1954)
+which would increase or decrease the diversions authorized or increase or decrease the
+releases required thereunder, except that a proceeding to modify such decree to increase
+diversions or compensating releases in connection with such increased diversions may be
+prosecuted by a proper party to effectuate rights, powers, duties and obligations under
+Section 3.3 of this compact, and except as may be required to effectuate the provisions of
+paragraphs IIIB3 and VB of said decree.
+
+   3.5 Supreme Court Decree; Specific Limitations on Commission. Except as
+specifically provided in Sections 3.3 and 3.4 of this article, nothing in this compact shall be
+construed in any way to impair, diminish or otherwise adversely affect the rights, powers,
+privileges, conditions and obligations contained in the decree of the United States Supreme
+Court in New Jersey v. New York, 347 U. S. 995 (1954). To this end, and without limitation
+thereto, the commission shall not:
+
+   (a) Acquire, construct or operate any project or facility or make any order or take any
+action which would impede or interfere with the rights, powers, privileges, conditions or
+obligations contained in said decree;
+
+   (b) Impose or collect any fee, charge or assessment with respect to diversions of waters of
+the basin permitted by said decree;
+
+   (c) Exercise any jurisdiction, except upon consent of all the parties to said decree, over
+the planning, design, construction, operation or control of any projects, structures or facilities
+constructed or used in connection with withdrawals, diversions and releases of waters of the
+basin authorized by said decree or of the withdrawals, diversions or releases to be made
+thereunder; or
+
+   (d) Serve as river master under said decree, except upon consent of all the parties thereto.
+
+
+
+                                                9
+
+
+
+
+                                            JA368
+    3.6 General Powers. The commission may:
+
+   (a) Plan, design, acquire, construct, reconstruct, complete, own, improve, extend, develop,
+operate and maintain any and all projects, facilities, properties, activities and services,
+determined by the commission to be necessary, convenient or useful for the purposes of this
+compact;
+
+   (b) Establish standards of planning, design and operation of all projects and facilities in
+the basin which affect its water resources, including without limitation thereto water and
+waste treatment plants, stream and lake recreational facilities, trunk mains for water
+distribution, local flood protection works, small watershed management programs, and
+ground water recharging operations;
+
+    (c) Conduct and sponsor research on water resources, their planning, use, conservation,
+management, development, control and protection, and the capacity, adaptability and best
+utility of each facility thereof, and collect, compile, correlate, analyze, report and interpret
+data on water resources and uses in the basin, including without limitation thereto the
+relation of water to other resources, industrial water technology, ground water movement,
+relation between water price and water demand, and general hydrological conditions;
+
+   (d) Compile and coordinate systematic stream stage and ground water level forecasting
+data, and publicize such information when and as needed for water uses, flood warning,
+quality maintenance or other purposes;
+
+   (e) Conduct such special ground water investigations, tests, and operations and compile
+such data relating thereto as may be required to formulate and administer the comprehensive
+plan;
+
+   (f) Prepare, publish and disseminate information and reports with respect to the water
+problems of the basin and for the presentation of the needs, resources and policies of the
+basin to executive and legislative branches of the signatory parties;
+
+   (g) Negotiate for such loans, grants, services or other aids as may be lawfully available
+from public or private sources to finance or assist in effectuating any of the purposes of this
+compact; and to receive and accept such aid upon such terms and conditions, and subject to
+such provisions for repayment as may be required by federal or state law or as the
+commission may deem necessary or desirable;
+
+
+
+                                              10
+
+
+
+
+                                           JA369
+    (h) Exercise such other and different powers as may be delegated to it by this compact or
+otherwise pursuant to law, and have and exercise all powers necessary or convenient to carry
+out its express powers or which may be reasonably implied therefrom.
+
+   3.7 Rates and Charges. The commission may from time to time after public notice and
+hearing fix, alter and revise rates, rentals, charges and tolls and classifications thereof, for the
+use of facilities which it may own or operate and for products and services rendered thereby,
+without regulation or control by any department, office or agency of any signatory party.
+
+   3.8 Referral and Review. No project having a substantial effect on the water resources of
+the basin shall hereafter be undertaken by any person, corporation or governmental authority
+unless it shall have been first submitted to and approved by the commission, subject to the
+provisions of Sections 3.3 and 3.5. The commission shall approve a project whenever it finds
+and determines that such project would not substantially impair or conflict with the
+comprehensive plan and may modify and approve as modified, or may disapprove any such
+project whenever it finds and determines that the project would substantially impair or
+conflict with such plan. The commission shall provide by regulation for the procedure of
+submission, review and consideration of projects, and for its determinations pursuant to this
+section. Any determination of the commission hereunder shall be subject to judicial review
+in any court of competent jurisdiction.
+
+   3.9 Coordination and Cooperation. The commission shall promote and aid the
+coordination of the activities and programs of federal, state, municipal and private agencies
+concerned with water resources administration in the basin. To this end, but with limitation
+thereto, the commission may:
+
+   (a) Advise, consult, contract, financially assist, or otherwise cooperate with any and all
+such agencies;
+
+   (b) Employ any other agency or instrumentality of any of the signatory parties or of any
+political subdivision thereof, in the design, construction, operation and maintenance of
+structures, and the installation and management of river control systems, or for any other
+purpose;
+
+   (c) Develop and adopt plans and specifications for particular water resources projects and
+facilities which so far as consistent with the comprehensive plan incorporate any separate
+plans of other public and private organizations operating in the basin, and permit the
+decentralized administration thereof;
+
+
+                                                11
+
+
+
+
+                                            JA370
+    (d) Qualify as a sponsoring agency under any federal legislation heretofore or hereafter
+enacted to provide financial or other assistance for the planning, conservation, utilization,
+development, management or control of water resources.
+
+   3.10 Advisory Committees. The commission may constitute and empower advisory
+committees, which may be comprised of representatives of the public and of federal, state,
+county and municipal governments, water resources agencies, water-using industries,
+water-interest groups, labor and agriculture.
+
+                                        ARTICLE 4
+
+                                     WATER SUPPLY
+
+    Section 4.1 Generally. The commission shall have power to develop, implement and
+effectuate plans and projects for the use of the water of the basin for domestic, municipal,
+agricultural and industrial water supply. To this end, without limitation thereto, it may
+provide for, construct, acquire, operate and maintain dams, reservoirs and other facilities for
+utilization of surface and ground water resources, and all related structures, appurtenances
+and equipment on the river and its tributaries and at such off-river sites as it may find
+appropriate, and may regulate and control the use thereof.
+
+   4.2 Storage and Release of Waters.
+
+   (a) The commission shall have power to acquire, operate and control projects and
+facilities for the storage and release of waters, for the regulation of flows and supplies of
+surface and ground waters of the basin, for the protection of public health, stream quality
+control, economic development, improvement of fisheries, recreation, dilution and abatement
+of pollution, the prevention of undue salinity and other purposes.
+
+   (b) No signatory party shall permit any augmentation of flow to be diminished by the
+diversion of any water of the basin during any period in which waters are being released
+from storage under the direction of the commission for the purpose of augmenting such flow,
+except in cases where such diversion is duly authorized by this compact, or by the
+commission pursuant thereto, or by the judgment, order or decree of a court of competent
+jurisdiction.
+
+   4.3 Assessable Improvements. The commission may undertake to provide stream
+regulation in the main stream or any tributary in the basin and may assess on an annual basis
+or otherwise the cost thereof upon water users or any classification of them specially
+
+                                              12
+
+
+
+
+                                          JA371
+ benefited thereby to a measurable extent, provided that no such assessment shall exceed the
+actual benefit to any water user. Any such assessment shall follow the procedure prescribed
+by law for local improvement assessments and shall be subject to judicial review in any court
+of competent jurisdiction.
+
+    4.4 Coordination. Prior to entering upon the execution of any project authorized by this
+article, the commission shall review and consider all existing rights, plans and programs of
+the signatory parties, their political subdivisions, private parties, and water users which are
+pertinent to such project, and shall hold a public hearing on each proposed project.
+
+   4.5 Additional Powers. In connection with any project authorized by this article, the
+commission shall have power to provide storage, treatment, pumping and transmission
+facilities, but nothing herein shall be construed to authorize the commission to engage in the
+business of distributing water.
+
+                                        ARTICLE 5
+
+                                POLLUTION CONTROL
+
+   Section 5.1 General Powers. The commission may undertake investigations and
+surveys, and acquire, construct, operate and maintain projects and facilities to control
+potential pollution and abate or dilute existing pollution of the water resources of the basin.
+It may invoke as complainant the power and jurisdiction of water pollution abatement
+agencies of the signatory parties.
+
+   5.2 Policy and Standards. The commission may assume jurisdiction to control future
+pollution and abate existing pollution in the waters of the basin, whenever it determines after
+investigation and public hearing upon due notice that the effectuation of the comprehensive
+plan so requires. The standard of such control shall be that pollution by sewage or industrial
+or other waste originating within a signatory state shall not injuriously affect waters of the
+basin as contemplated by the comprehensive plan. The commission, after such public hearing
+may classify the waters of the basin and establish standards of treatment of sewage, industrial
+or other waste, according to such classes including allowance for the variable factors of
+surface and ground waters, such as size of the stream, flow, movement, location, character,
+self-purification, and usage of the waters affected. After such investigation, notice and
+hearing the commission may adopt and from time to time amend and repeal rules, regulations
+and standards to control such future pollution and abate existing pollution, and to require
+such treatment of sewage, industrial or other waste within a time reasonable for the
+
+
+                                              13
+
+
+
+
+                                          JA372
+ construction of the necessary works, as may be required to protect the public health or to
+preserve the waters of the basin for uses in accordance with the comprehensive plan.
+
+    5.3 Cooperative Legislation and Administration. Each of the signatory parties
+covenants and agrees to prohibit and control pollution of the waters of the basin according to
+the requirements of this compact and to cooperate faithfully in the control of future pollution
+in and abatement of existing pollution from the rivers, streams, and waters in the basin which
+flow through, under, into or border upon any of such signatory states, and in order to effect
+such object, agrees to enact any necessary legislation to enable each such party to place and
+maintain the waters of said basin in a satisfactory condition, available for safe and
+satisfactory use as public and industrial water supplies after reasonable treatment, suitable for
+recreational usage, capable of maintaining fish and other aquatic life, free from unsightly or
+malodorous nuisances due to floating solids or sludge deposits and adaptable to such other
+uses as may be provided by the comprehensive plan.
+
+    5.4 Enforcement. The commission may, after investigation and hearing, issue an order or
+orders upon any person or public or private corporation, or other entity, to cease the
+discharge of sewage, industrial or other waste into waters of the basin which it determines to
+be in violation of such rules and regulations as it shall have adopted for the prevention and
+abatement of pollution. Any such order or orders may prescribe the date, including a
+reasonable time for the construction of any necessary works, on or before which such
+discharge shall be wholly or partially discontinued, modified or treated, or otherwise
+conformed to the requirements of such rules and regulations. Such order shall be reviewable
+in any court of competent jurisdiction. The courts of the signatory parties shall have
+jurisdiction to enforce against any person, public or private corporation, or other entity, any
+and all provisions of this article or of any such order. The commission may bring an action in
+its own name in any such court of competent jurisdiction to compel compliance with any
+provision of this article, or any rule or regulation issued pursuant thereto or of any such
+order, according to the practice and procedure of the court.
+
+   5.5 Further Jurisdiction. Nothing in this compact shall be construed to repeal, modify or
+qualify the authority of any signatory party to enact any legislation or enforce any additional
+conditions and restrictions to lessen or prevent the pollution of waters within its jurisdiction.
+
+
+
+
+                                               14
+
+
+
+
+                                           JA373
+                                         ARTICLE 6
+
+                                 FLOOD PROTECTION
+
+   Section 6.1 General Powers. The commission may plan, design, construct and operate
+and maintain projects and facilities, as it may deem necessary or desirable for flood damage
+reduction. It shall have power to operate such facilities and to store and release waters on the
+Delaware River and its tributaries and elsewhere within the basin, in such manner, at such
+times, and under such regulations as the commission may deem appropriate to meet flood
+conditions as they may arise.
+
+   6.2 Flood Plain Zoning.
+
+    (a) The commission shall have power to adopt, amend and repeal recommended
+standards, in the manner provided by this section, relating to the nature and extent of the uses
+of land in areas subject to flooding by waters of the Delaware River and its tributaries. Such
+standards shall not be deemed to impair or restrict the power of the signatory parties or their
+political subdivisions to adopt zoning and other land use regulations not inconsistent
+therewith.
+
+    (b) The commission may study and determine the nature and extent of the flood plains of
+the Delaware River and its tributaries. Upon the basis of such studies, it may establish
+encroachment lines and delineate the areas subject to flood, including a classification of
+lands with reference to relative risk of flood and the establishment of standards for flood
+plain use which will safeguard the public health, safety and property. Prior to the adoption of
+any standards delineating such area or defining such use, the commission shall hold public
+hearings, in the manner provided by Article 14, with respect to the substance of such
+standards. At or before such public hearings the proposed standards shall be available, and
+all interested persons shall be given an opportunity to be heard thereon at the hearing. Upon
+the adoption and promulgation of such standards, the commission may enter into agreements
+to provide technical and financial aid to any municipal corporation for the administration and
+enforcement of any local land use ordinances or regulations giving effect to such standards.
+
+   6.3 Flood Lands Acquisition. The commission shall have power to acquire the fee or any
+lesser interest in lands and improvements thereon within the area of a flood plain for the
+purpose of restricting the use of such property so as to minimize the flood hazard, converting
+property to uses appropriate to flood plain conditions, or preventing unwarranted
+constrictions that reduce the ability of the river channel to carry flood water. Any such action
+shall be in accord with the standards adopted and promulgated pursuant to Section 6.2.
+
+                                              15
+
+
+
+
+                                           JA374
+    6.4 Flood and Stream Stage Warnings and Posting. The commission may cause lands
+particularly subject to flood to be posted with flood hazard warnings, and may from time to
+time cause flood advisory notices to be published and circulated as conditions may warrant.
+
+                                        ARTICLE 7
+
+                            WATERSHED MANAGEMENT
+
+  Section 7.1 Watersheds Generally. The commission shall promote sound practices of
+watershed management in the basin, including projects and facilities to retard runoff and
+waterflow and prevent soil erosion.
+
+   7.2 Soil Conservation and Forestry. The commission may acquire, sponsor or operate
+facilities and projects to encourage soil conservation, prevent and control erosion, and to
+promote land reclamation and sound forestry practices.
+
+   7.3 Fish and Wildlife. The commission may acquire, sponsor or operate projects and
+facilities for the maintenance and improvement of fish and wildlife habitats related to the
+water resources of the basin.
+
+   7.4 Cooperative Planning and Operation.
+
+   (a) The commission shall cooperate with the appropriate agencies of the signatory parties
+and with other public and private agencies in the planning and effectuation of a coordinated
+program of facilities and projects authorized by this article.
+
+   (b) The commission shall not operate any such project or facility unless it has first found
+and determined that no other suitable unit or agency of government is available to operate
+the same upon reasonable conditions, in accordance with the intent and purpose expressed in
+Section 1.5 of this compact.
+
+                                        ARTICLE 8
+
+                                      RECREATION
+
+   Section 8.1 Development. The commission shall provide for the development of water
+related public sports and recreational facilities. The commission on its own account or in
+cooperation with a signatory party, political subdivision or any agency thereof, may provide
+
+                                             16
+
+
+
+
+                                          JA375
+ for the construction, maintenance and administration of such facilities, subject to the
+provisions of Section 8.2 hereof.
+
+   8.2 Cooperative Planning and Operation.
+
+   (a) The commission shall cooperate with the appropriate agencies of the signatory parties
+and with other public and private agencies in the planning and effectuation of a coordinated
+program of facilities and projects authorized by this article.
+
+   (b) The commission shall not operate any such project or facility unless it has first found
+and determined that no other suitable unit or agency of government is available to operate
+the same upon reasonable conditions, in accordance with the intent and purpose expressed in
+Section 1.5 of this compact.
+
+    8.3 Operation and Maintenance. The commission, within limits prescribed by this
+article, shall:
+
+   (a) Encourage activities of other public agencies having water related recreational
+interests and assist in the coordination thereof;
+
+   (b) Recommend standards for the development and administration of water related
+recreational facilities;
+
+   (c) Provide for the administration, operation and maintenance of recreational facilities
+owned or controlled by the commission and for the letting and supervision of private
+concessions in accordance with this article.
+
+   8.4 Concessions. The commission shall after notice and public hearing provide by
+regulation for the award of contracts for private concessions in connection with recreational
+facilities, including any renewal or extension thereof, upon sealed competitive bids after
+public advertisement therefore.
+
+                                        ARTICLE 9
+
+                              HYDROELECTRIC POWER
+
+  Section 9.1 Development. The waters of the Delaware River and its tributaries may be
+impounded and used by or under authority of the commission for the generation of
+hydroelectric power and hydroelectric energy, in accordance with the comprehensive plan.
+
+                                             17
+
+
+
+
+                                          JA376
+    9.2 Power Generation. The commission may develop and operate, or authorize to be
+developed and operated, dams and related facilities and appurtenances for the purpose of
+generating hydroelectric power and hydroelectric energy.
+
+   9.3 Transmission. The commission may provide facilities for the transmission of
+hydroelectric power and hydroelectric energy produced by it where such facilities are not
+otherwise available upon reasonable terms, for the purpose of wholesale marketing of power
+and nothing herein shall be construed to authorize the commission to engage in the business
+of direct sale to consumers.
+
+   9.4 Development Contracts. The commission may after public notice and hearing enter
+into contracts on reasonable terms, consideration and duration under which public utilities or
+public agencies may develop hydroelectric power and hydroelectric energy through the use
+of dams, related facilities and appurtenances.
+
+   9.5 Rates and Charges. Rates and charges fixed by the commission for power which is
+produced by its facilities shall be reasonable, nondiscriminatory, and just.
+
+                                       ARTICLE 10
+
+             REGULATION OF WITHDRAWALS AND DIVERSIONS
+
+    Section 10.1 Power of Regulation. The commission may regulate and control
+withdrawals and diversions from surface waters and ground waters of the basin, as provided
+by this article. The commission may enter into agreements with the signatory parties relating
+to the exercise of such power or regulation or control and may delegate to any of them such
+powers of the commission as it may deem necessary or desirable.
+
+   10.2 Determination of Protected Areas. The commission may from time to time after
+public hearing upon due notice determine and delineate such areas within the basin wherein
+the demands upon supply made by water users have developed or threaten to develop to such
+a degree as to create a water shortage or to impair or conflict with the requirements or
+effectuation of the comprehensive plan, and any such areas may be designated as "protected
+areas." The commission, whenever it determines that such shortage no longer exists, shall
+terminate the protected status of such area and shall give public notice of such termination.
+
+   10.3 Withdrawal Permits. In any protected areas so determined and delineated, no
+person, firm, corporation or other entity shall divert or withdraw water for domestic,
+
+                                             18
+
+
+
+
+                                          JA377
+ municipal, agricultural or industrial uses in excess of such quantities as the commission may
+prescribe by general regulation, except (i) pursuant to a permit granted under this article, or
+(ii) pursuant to a permit or approval heretofore granted under the laws of any of the signatory
+states.
+
+   10.4 Emergency. In the event of a drought or other condition which may cause an actual
+and immediate shortage of available water supply within the basin, or within any part
+thereof, the commission may, after public hearing, determine and delineate the area of such
+shortage and declare a water supply emergency therein. For the duration of such emergency
+as determined by the commission no person, firm, corporation or other public or private
+entity shall divert or withdraw water for any purpose, in excess of such quantities as the
+commission may prescribe by general regulation or authorize by special permit granted
+hereunder.
+
+   10.5 Standards. Permits shall be granted, modified or denied as the case may be so as to
+avoid such depletion of the natural stream flows and ground waters in the protected area or in
+an emergency area as will adversely affect the comprehensive plan or the just and equitable
+interests and rights of other lawful users of the same source, giving due regard to the need to
+balance and reconcile alternative and conflicting uses in the event of an actual or threatened
+shortage of water of the quality required.
+
+   10.6 Judicial Review. The determinations and delineations of the commission pursuant
+to Section 10.2 and the granting, modification or denial of permits pursuant to Section 10.3
+through 10.5 shall be subject to judicial review in any court of competent jurisdiction.
+
+   10.7 Maintenance of Records. Each state shall provide for the maintenance and
+preservation of such records of authorized diversions and withdrawals and the annual volume
+thereof as the commission shall prescribe. Such records and supplementary reports shall be
+furnished to the commission at its request.
+
+   10.8 Existing State Systems. Whenever the commission finds it necessary or desirable to
+exercise the powers conferred by this article any diversion or withdrawal permits authorized
+or issued under the laws of any of the signatory states shall be superseded to the extent of
+any conflict with the control and regulation exercised by the commission.
+
+
+
+
+                                              19
+
+
+
+
+                                          JA378
+                                         ARTICLE 11
+
+                       INTERGOVERNMENTAL RELATIONS
+
+   Section 11.1 Federal Agencies and Projects. For the purposes of avoiding conflicts of
+jurisdiction and of giving full effect to the commission as a regional agency of the signatory
+parties, the following rules shall govern federal projects affecting the water resources of the
+basin, subject in each case to the provisions of Section 1.4 of this compact:
+
+  (a) The planning of all projects related to powers delegated to the commission by this
+compact shall be undertaken in consultation with the commission;
+
+   (b) No expenditure or commitment shall be made for or on account of the construction,
+acquisition or operation of any project or facility nor shall it be deemed authorized, unless it
+shall have first been included by the commission in the comprehensive plan;
+
+   (c) Each federal agency otherwise authorized by law to plan, design, construct, operate or
+maintain any project or facility in or for the basin shall continue to have, exercise and
+discharge such authority except as specifically provided by this section.
+
+   11.2 State and Local Agencies and Projects. For the purposes of avoiding conflicts of
+jurisdiction and of giving full effect to the commission as a regional agency of the signatory
+parties, the following rules shall govern projects of the signatory states, their political
+subdivisions and public corporations affecting water resources of the basin:
+
+  (a) The planning of all projects related to powers delegated to the commission by this
+compact shall be undertaken in consultation with the commission;
+
+   (b) No expenditure or commitment shall be made for or on account of the construction,
+acquisition or operation of any project or facility unless it shall have first been included by
+the commission in the comprehensive plan;
+
+   (c) Each state and local agency otherwise authorized by law to plan, design, construct,
+operate or maintain any project or facility in or for the basin shall continue to have, exercise
+and discharge such authority, except as specifically provided by this section.
+
+   11.3 Reserved Taxing Powers of States. Each of the signatory parties reserves the right
+to levy, assess and collect fees, charges and taxes on or measured by the withdrawal or
+
+
+                                              20
+
+
+
+
+                                           JA379
+ diversion of waters of the basin for use within the jurisdictions of the respective signatory
+parties.
+
+   11.4 Project Costs and Evaluation Standards. The commission shall establish uniform
+standards and procedures for the evaluation, determination of benefits, and cost allocations
+of projects affecting the basin, and for the determination of project priorities, pursuant to the
+requirements of the comprehensive plan and its water resources program. The commission
+shall develop equitable cost sharing and reimbursement formulas for the signatory parties
+including:
+
+   (a) Uniform and consistent procedures for the allocation of project costs among purposes
+included in multiple-purpose programs;
+
+   (b) Contracts and arrangements for sharing financial responsibility among and with
+signatory parties, public bodies, groups and private enterprise, and for the supervision of
+their performance;
+
+   (c) Establishment and supervision of a system of accounts for reimbursable purposes and
+directing the payments and charges to be made from such accounts;
+
+   (d) Determining the basis and apportioning amounts (i) of reimbursable revenues to be
+paid signatory parties or their political subdivisions, and (ii) of payments in lieu of taxes to
+any of them.
+
+   11.5 Cooperative Services. The commission shall furnish technical services, advice and
+consultation to authorized agencies of the signatory parties with respect to the water
+resources of the basin, and each of the signatory parties pledges itself to provide technical
+and administrative services to the commission upon request, within the limits of available
+appropriations and to cooperate generally with the commission for the purposes of this
+compact, and the cost of such services may be reimbursable whenever the parties deem
+appropriate.
+
+                                        ARTICLE 12
+
+                                  CAPITAL FINANCING
+
+   Section 12.1 Borrowing Power. The commission may borrow money for any of the
+purposes of this compact, and may issue its negotiable bonds and other evidences of
+indebtedness in respect thereto.
+
+                                               21
+
+
+
+
+                                           JA380
+    All such bonds and evidences of indebtedness shall be payable solely out of the properties
+and revenues of the commission without recourse to taxation. The bonds and other
+obligations of the commission, except as may be otherwise provided in the indenture under
+which they were issued, shall be direct and general obligations of the commission and the
+full faith and credit of the commission are hereby pledged for the prompt payment of the
+debt service thereon and for the fulfillment of all other undertakings of the commission
+assumed by it to or for the benefit of the holders thereof.
+
+   12.2 Funds and Expenses. The purpose of this compact shall include without limitation
+thereto all costs of any project or facility or any part thereof, including interest during a
+period of construction and a reasonable time thereafter and any incidental expenses (legal,
+engineering, fiscal, financial consultant and other expenses) connected with issuing and
+disposing of the bonds; all amounts required for the creation of an operating fund,
+construction fund, reserve fund, sinking fund, or other special fund; all other expenses
+connected with the planning, design, acquisition, construction, completion, improvement or
+reconstruction of any facility or any part thereof; and reimbursement of advances by the
+commission or by others for such purposes and for working capital.
+
+   12.3 Credit Excluded; Officers, State and Municipal. The commission shall have no
+power to pledge the credit of any signatory party, or of any county or municipality, or to
+impose any obligation for payment of the bonds upon any signatory party or any county or
+municipality. Neither the commissioners nor any person executing the bonds shall be liable
+personally on the bonds of the commission or be subject to any personal liability or
+accountability by reason of the issuance thereof.
+
+   12.4 Funding and Refunding. Whenever the commission deems it expedient, it may
+fund and refund its bonds and other obligations whether or not such bonds and obligations
+have matured. It may provide for the issuance, sale or exchange of refunding bonds for the
+purpose of redeeming or retiring any bonds (including the payment of any premium,
+duplicate interest or cash adjustment required in connection therewith) issued by the
+commission or issued by any other issuing body, the proceeds of the sale of which have been
+applied to any facility acquired by the commission or which are payable out of the revenues
+of any facility acquired by the commission. Bonds may be issued partly to refund bonds and
+other obligations then outstanding, and partly for any other purpose of the commission. All
+provisions of this compact applicable to the issuance of bonds are applicable to refunding
+bonds and to the issuance, sale or exchange thereof.
+
+
+
+                                             22
+
+
+
+
+                                         JA381
+    12.5 Bonds; Authorization Generally. Bonds and other indebtedness of the commission
+shall be authorized by resolution of the commission. The validity of the authorization and
+issuance of any bonds by the commission shall not be dependent upon nor affected in any
+way by: (i) the disposition of bond proceeds by the commission or by contract, commitment
+or action taken with respect to such proceeds; or (ii) the failure to complete any part of the
+project for which bonds are authorized to be issued. The commission may issue bonds in one
+or more series and may provide for one or more consolidated bond issues, in such principal
+amounts and with such terms and provisions as the commission may deem necessary. The
+bonds may be secured by a pledge of all or any part of the property, revenues and franchises
+under its control. Bonds may be issued by the commission in such amount, with such
+maturities and in such denominations and form or forms, whether coupon or registered, as to
+both principal and interest, as may be determined by the commission. The commission may
+provide for redemption of bonds prior to maturity on such notice and at such time or times
+and with such redemption provisions, including premiums, as the commission may
+determine.
+
+   12.6 Bonds; Resolutions and Indentures Generally. The commission may determine
+and enter into indentures providing for the principal amount, date or dates, maturities,
+interest rate, denominations, form, registration, transfer, interchange and other provisions of
+the bonds and coupons and the terms and conditions upon which the same shall be executed,
+issued, secured, sold, paid, redeemed, funded and refunded. The resolution of the
+commission authorizing any bond or any indenture so authorized under which the bonds are
+issued may include all such covenants and other provisions other than any restriction on the
+regulatory powers vested in the commission by this compact as the commission may deem
+necessary or desirable for the issue, payment, security, protection or marketing of the bonds,
+including without limitation covenants and other provisions as to the rates or amounts of
+fees, rents and other charges to be charged or made for use of the facilities; the use, pledge,
+custody, securing, application and disposition of such revenues, of the proceeds of the bonds,
+and of any other moneys of the commission; the operation, maintenance, repair and
+reconstruction of the facilities and the amounts which may be expended therefor; the sale,
+lease or other disposition of the facilities; the insuring of the facilities and of the revenues
+derived therefrom; the construction or other acquisition of other facilities; the issuance of
+additional bonds or other indebtedness; the rights of the bondholders and of any trustee for
+the bondholders upon default by the commission or otherwise; and the modification of the
+provisions of the indenture and of the bonds. Reference on the face of the bonds to such
+resolution or indenture by its date of adoption or the apparent date on the face thereof is
+sufficient to incorporate all of the provisions thereof and of this compact into the body of the
+bonds and their appurtenant coupons. Each taker and subsequent holder of the bonds or
+
+
+                                              23
+
+
+
+
+                                           JA382
+ coupons, whether the coupons are attached to or detached from the bonds, has recourse to all
+of the provisions of the indenture and of this compact and is bound thereby.
+
+   12.7 Maximum Maturity. No bond or its terms shall mature in more than fifty years
+from its own date and in the event any authorized issue is divided into two or more series or
+divisions, the maximum maturity date herein authorized shall be calculated from the date on
+the face of each bond separately, irrespective of the fact that different dates may be
+prescribed for the bonds of each separate series or division of any authorized issue.
+
+   12.8 Tax Exemption. All bonds issued by the commission under the provisions of this
+compact and the interest thereof shall at all times be free and exempt from all taxation by or
+under authority of any of the signatory parties, except for transfer, inheritance and estate
+taxes.
+
+   12.9 Interest.2 Bonds shall bear interest at a rate determined by the commission, payable
+annually or semi-annually.
+
+   12.10 Place of Payment. The commission may provide for the payment of the principal
+and interest of bonds at any place or places within or without the signatory states, and in any
+specified lawful coin or currency of the United States of America.
+
+   12.11 Execution. The commission may provide for the execution and authentication of
+bonds by the manual, lithographed or printed facsimile signature of officers of the
+commission, and by additional authentication by a trustee or fiscal agent appointed by the
+commission. If any of the officers whose signatures or counter signatures appear upon the
+bonds or coupons cease to be officers before the delivery of the bonds or coupons, their
+signatures or counter signatures are nevertheless valid and of the same force and effect as if
+the officers had remained in office until the delivery of the bonds and coupons.
+
+   12.12 Holding Own Bonds. The commission shall have power out of any funds available
+therefor to purchase its bonds and may hold, cancel or resell such bonds.
+
+   12.13 Sale. The commission may fix terms and conditions for the sale or other
+disposition of any authorized issue of bonds. The commission may sell bonds at less than
+their par or face value but no issue of bonds may be sold at an aggregate price below the par
+or face value thereof if such sale would result in a net interest cost to the commission
+
+2
+    Section 12.9 appears as amended on October 17, 1984.
+
+
+                                                    24
+
+
+
+
+                                                 JA383
+ calculated upon the entire issue so sold of more than six percent per annum payable
+semi-annually, according to standard tables of bond values. All bonds issued and sold for
+cash pursuant to this act shall be sold on sealed proposals to the highest bidder. Prior to such
+sale, the commission shall advertise for bids by publication of a notice of sale not less than
+ten days prior to the date of sale, at least once in a newspaper of general circulation printed
+and published in New York City carrying municipal bond notices and devoted primarily to
+financial news. The commission may reject any and all bids submitted and may thereafter
+sell the bonds so advertised for sale at private sale to any financially responsible bidder
+under such terms and conditions as it deems most advantageous to the public interest, but the
+bonds shall not be sold at a net interest cost calculated upon the entire issue so advertised,
+greater than the lowest bid which was rejected. In the event the commission desires to issue
+its bonds in exchange for an existing facility or portion thereof, or in exchange for bonds
+secured by the revenues of an existing facility, it may exchange such bonds for the existing
+facility or portion thereof or for the bonds so secured, plus an additional amount of cash,
+without advertising such bonds for sale.
+
+   12.14 Negotiability. All bonds issued under the provisions of this compact are negotiable
+instruments, except when registered in the name of a registered owner.
+
+   12.15 Legal Investments. Bonds of the commission shall be legal investments for
+savings banks, fiduciaries and public funds in each of the signatory states.
+
+   12.16 Validation Proceedings. Prior to the issuance of any bonds, the commission may
+institute a special proceeding to determine the legality of proceedings to issue the bonds and
+their validity under the laws of any of the signatory parties. Such proceeding shall be
+instituted and prosecuted in rem and the judgment rendered therein shall be conclusive
+against all persons whomsoever and against each of the signatory parties.
+
+   12.17 Recording. No indenture need be recorded or filed in any public office, other than
+the office of the commission. The pledge of revenues provided in any indenture shall take
+effect forthwith as provided therein and irrespective of the date of receipts of such revenues
+by the commission or the indenture trustee. Such pledge shall be effective as provided in the
+indenture without physical delivery of the revenues to the commission or to the indenture
+trustee.
+
+   12.18 Pledged Revenues. Bond redemption and interest payments shall, to the extent
+provided in the resolution or indenture, constitute a first, direct and exclusive charge and lien
+on all such rates, rents, tolls, fees and charges and other revenues and interest thereon
+received from the use and operation of the facility, and on any sinking or other funds created
+
+                                               25
+
+
+
+
+                                           JA384
+ therefrom. All such rates, rents, tolls, fees, charges and other revenues, together with interest
+thereon, shall constitute a trust fund for the security and payment of such bonds and except
+as and to the extent provided in the indenture with respect to the payment therefrom of
+expenses for other purposes including administration, operation, maintenance, improvements
+or extensions of the facilities or other purposes shall not be used or pledged for any other
+purpose so long as such bonds, or any of them, are outstanding and unpaid.
+
+   12.19 Remedies. The holder of any bond may for the equal benefit and protection of all
+holders of bonds similarly situated:
+
+    (a) by mandamus or other appropriate proceedings require and compel the performance of
+any of the duties imposed upon the commission or assumed by it, its officers, agents or
+employees under the provisions of any indenture, in connection with the acquisition,
+construction, operation, maintenance, repair, reconstruction or insurance of the facilities, or
+in connection with the collection, deposit, investment, application and disbursement of the
+rates, rents, tolls, fees, charges and other revenues derived from the operation and use of the
+facilities, or in connection with the deposit, investment and disbursement of the proceeds
+received from the sale of bonds; or (b) by action or suit in a court of competent jurisdiction
+of any signatory party require the commission to account as if it were the trustee of an
+express trust, or enjoin any acts or things which may be unlawful or in violation of the rights
+of the holders of the bonds. The enumeration of such rights and remedies does not, however,
+exclude the exercise or prosecution of any other rights or remedies available to the holders of
+bonds.
+
+   12.20 Capital Financing by Signatory Parties; Guarantees.
+
+   (a) The signatory parties will provide such capital funds required for projects of the
+commission as may be authorized by their respective statutes in accordance with a cost
+sharing plan prepared pursuant to Article 11 of this compact; but nothing in this section shall
+be deemed to impose any mandatory obligation on any of the signatory parties other than
+such obligations as may be assumed by a signatory party in connection with a specific
+project or facility.
+
+   (b) Bonds of the commission, notwithstanding any other provision of this compact, may
+be executed and delivered to any duly authorized agency of any of the signatory parties
+without public offering and may be sold and resold with or without the guaranty of such
+signatory party, subject to and in accordance with the constitutions of the respective
+signatory parties.
+
+
+                                               26
+
+
+
+
+                                           JA385
+    (c) The commission may receive and accept, and the signatory parties may make, loans,
+grants, appropriations, advances and payments of reimbursable or non-reimbursable funds or
+property in any form for the capital or operating purposes of the commission.
+
+                                       ARTICLE 13
+
+                          PLAN, PROGRAM AND BUDGETS
+
+    Section 13.1 Comprehensive Plan. The commission shall develop and adopt, and may
+from time to time review and revise, a comprehensive plan for the immediate and long range
+development and use of the water resources of the basin. The plan shall include all public
+and private projects and facilities which are required, in the judgment of the commission, for
+the optimum planning, development, conservation, utilization, management and control of
+the water resources of the basin to meet present and future needs; provided that the plan shall
+include any projects required to conform with any present or future decree or judgment of
+any court of competent jurisdiction. The commission may adopt a comprehensive plan or any
+revision thereof in such part or parts as it may deem appropriate, provided that before the
+adoption of the plan or any part or revision thereof the commission shall consult with water
+users and interested public bodies and public utilities and shall consider and give due regard
+to the findings and recommendations of the various agencies of the signatory parties and
+their political subdivisions. The commission shall conduct public hearings with respect to the
+comprehensive plan prior to the adoption of the plan or any part of the revision thereof.
+
+   13.2 Water Resources Program. The commission shall annually adopt a water resources
+program, based upon the comprehensive plan, consisting of the projects and facilities which
+the commission proposes to be undertaken by the commission and by other authorized
+governmental and private agencies, organizations and persons during the ensuing six years or
+such other reasonably foreseeable period as the commission may determine. The water
+resources program shall include a systematic presentation of:
+
+   1) the quantity and quality of water resources needs for such period;
+
+   2) the existing and proposed projects and facilities required to satisfy such needs,
+including all public and private projects to be anticipated;
+
+   3) a separate statement of the projects proposed to be undertaken by the commission
+during such period.
+
+
+
+                                              27
+
+
+
+
+                                          JA386
+       13.3 Annual Current Expense and Capital Budgets.
+
+   (a) The commission shall annually adopt a capital budget including all capital projects it
+proposes to undertake or continue during the budget period containing a statement of the
+estimated cost of each project and the method of financing thereof.
+
+   (b) The commission shall annually adopt a current expense budget for each fiscal year.
+Such budget shall include the commission's estimated expenses for administration, operation,
+maintenance and repairs, including a separate statement thereof for each project, together
+with its cost allocation. The total of such expenses shall be balanced by the commission's
+estimated revenues from all sources, including the cost allocations undertaken by any of the
+signatory parties in connection with any project. Following the adoption of the annual
+current expense budget by the commission, the executive director of the commission shall:
+
+       1) certify to the respective signatory parties the amounts due in accordance with
+existing cost sharing established for each project; and
+
+        2) transmit certified copies of such budget to the principal budget officer of the
+respective signatory parties at such time and in such manner as may be required under their
+respective budgetary procedures. The amount required to balance the current expense budget
+in addition to the aggregate amount of item (1) above and all other revenues available to the
+commission shall be apportioned equitably among the signatory parties by unanimous vote
+of the commission, and the amount of such apportionment to each signatory party shall be
+certified together with the budget.
+
+   (c) The respective signatory parties covenant and agree to include the amounts so
+apportioned for the support of the current expense budget in their respective budgets next to
+be adopted, subject to such review and approval as may be required by their respective
+budgetary processes.3 Such amounts shall be due and payable to the commission in quarterly
+installments during its fiscal year, provided that the commission may draw upon its working
+capital to finance its current expense budget pending remittances by the signatory parties.
+
+
+
+
+3
+    See Endnote regarding subsequent statutory directives.
+
+                                                      28
+
+
+
+
+                                                  JA387
+                                     ARTICLE 14
+
+                            GENERAL PROVISIONS
+
+Section 14.1 Auxiliary Powers of Commission; Functions of Commissioners.
+
+(a) The commission, for the purposes of this compact, may:
+
+    1) Adopt and use a corporate seal, enter intro contracts, sue and be sued in all courts
+    of competent jurisdiction;
+
+    2) Receive and accept such payments, appropriations, grants, gifts, loans, advances
+    and other funds, properties and services as may be transferred or made available to it
+    by any signatory party or by any other public or private corporation or individual,
+    and enter into agreements to make reimbursement for all or part thereof;
+
+    3) Provide for, acquire and adopt detailed engineering, administrative, financial and
+    operating plans and specifications to effectuate, maintain or develop any facility or
+    project;
+
+    4) Control and regulate the use of facilities owned or operated by the commission;
+
+    5) Acquire, own, operate, maintain, control, sell and convey real and personal
+    property and any interest therein by contract, purchase, lease, license, mortgage or
+    otherwise as it may deem necessary for any project or facility, including any and all
+    appurtenances thereto necessary, useful or convenient for such ownership, operation,
+    control, maintenance or conveyance;
+
+    6) Have and exercise all corporate powers essential to the declared objects and
+    purposes of the commission.
+
+(b) The commissioners, subject to the provisions of this compact, shall:
+
+    1) Serve as the governing body of the commission, and exercise and discharge its
+    powers and duties except as otherwise provided by or pursuant to this compact;
+
+    2) Determine the character of and the necessity for its obligations and expenditures
+    and the manner in which they shall be incurred, allowed, and paid subject to any
+
+
+                                          29
+
+
+
+
+                                      JA388
+        provisions of law specifically applicable to agencies or instrumentalities created by
+       compact;
+
+       3) Provide for the internal organization and administration of the commission;
+
+       4) Appoint the principal officers of the commission and delegate to and allocate
+       among them administrative functions, powers and duties;
+
+       5) Create and abolish offices, employments and positions as it deems necessary for
+       the purposes of the commission, and subject to the provisions of this article, fix and
+       provide for the qualification, appointment, removal, term, tenure, compensation,
+       pension and retirement rights of its officers and employees;
+
+       6) Let and execute contracts to carry out the powers of the commission.
+
+   14.2 Regulations; Enforcement. The commission may:
+
+    (a) Make and enforce reasonable rules and regulations for the effectuation, application
+and enforcement of this compact; and it may adopt and enforce practices and schedules for or
+in connection with the use, maintenance and administration of projects and facilities it may
+own or operate and any product or service rendered thereby; provided that any rule or
+regulation, other than one which deals solely with the internal management of the
+commission, shall be adopted only after public hearing and shall not be effective unless and
+until filed in accordance with the law of the respective signatory parties applicable to
+administrative rules and regulations generally; and
+
+  (b) Designate any officer, agent or employee of the commission to be an investigator or
+watchman and such person shall be vested with the powers of a peace officer of the state in
+which he is duly assigned to perform his duties.
+
+   14.3 Tax Exemption. The commission, its property, functions, and activities shall be
+exempt from taxation by or under the authority of any of the signatory parties or any political
+subdivision thereof; provided that in lieu of property taxes the commission shall, as to
+specific projects, make payments to local taxing districts in annual amounts which shall
+equal the taxes lawfully assessed upon property for the tax year next prior to its acquisition
+by the commission for a period of ten years. The nature and amount of such payments shall
+be reviewed by the commission at the end of ten years, and from time to time thereafter,
+upon reasonable notice and opportunity to be heard to the affected taxing district, and the
+payments may be thereupon terminated or continued in such reasonable amount as may be
+
+                                              30
+
+
+
+
+                                          JA389
+ necessary or desirable to take into account hardships incurred and benefits received by the
+taxing jurisdiction which are attributable to the project.
+
+   14.4 Meetings; Public Hearing; Records, Minutes.
+
+   (a) All meetings of the commission shall be open to the public.
+
+   (b) The commission shall conduct at least one public hearing prior to the adoption of the
+comprehensive plan, water resources program, annual capital and current expense budgets,
+the letting of any contract for the sale or other disposition by the commission of
+hydroelectric energy or water resources to any person, corporation or entity, and in all other
+cases wherein this compact requires a public hearing. Such hearing shall be held upon at
+least ten days public notice given by posting at the offices of the commission. The
+commission shall also provide forthwith for distribution of such notice to the press and by
+the mailing of a copy thereof to any person who shall request such notices.
+
+   (c) The minutes of the commission shall be a public record open to inspection at its
+offices during regular business hours.
+
+   14.5 Officers Generally.
+
+   (a) The officers of the commission shall consist of an executive director and such
+additional officers, deputies and assistants as the commission may determine. The executive
+director shall be appointed and may be removed by the affirmative vote of a majority of the
+full membership of the commission. All other officers and employees shall be appointed by
+the executive director under such rules of procedure as the commission may determine.
+
+   (b) In the appointment and promotion of officers and employees for the commission, no
+political, racial, religious or residence test or qualification shall be permitted or given
+consideration, but all such appointments and promotions shall be solely on the basis of merit
+and fitness. Any officer or employee of the commission who is found by the commission to
+be guilty of a violation of this section shall be removed from office by the commission.
+
+   14.6 Oath of Office. An oath of office in such form as the commission shall prescribe
+shall be taken, subscribed and filed with the commission by the executive director and by
+each officer appointed by him not later than fifteen days after the appointment.
+
+  14.7 Bond. Each officer shall give such bond and in such form and amount as the
+commission may require for which the commission may pay the premium.
+
+                                             31
+
+
+
+
+                                          JA390
+    14.8 Prohibited Activities.
+
+   (a) No commissioner, officer or employee shall:
+
+       1) be financially interested, either directly or indirectly, in any contract, sale,
+       purchase, lease or transfer of real or personal property to which the commission is a
+       party;
+
+       2) solicit or accept money or any other thing of value in addition to the compensation
+       or expenses paid him by the commission for services performed within the scope of
+       his official duties;
+
+       3) offer money or any thing of value for or in consideration of obtaining an
+       appointment, promotion or privilege in his employment with the commission.
+
+       (b) Any officer or employee who shall willfully violate any of the provisions of this
+       section shall forfeit his office or employment.
+
+   (c) Any contract or agreement knowingly made in contravention of this section is void.
+
+   (d) Officers and employees of the commission shall be subject in addition to the
+provisions of this section to such criminal and civil sanctions for misconduct in office as may
+be imposed by federal law and the law of the signatory state in which such misconduct
+occurs.
+
+   14.9 Purchasing. Contract for the construction, reconstruction or improvement of any
+facility when the expenditure required exceeds ten thousand dollars and contracts for the
+purchase of services, supplies, equipment and materials when the expenditure required
+exceeds two thousand five hundred dollars shall be advertised and let upon sealed bids to the
+lowest responsible bidder. Notice requesting such bids shall be published in a manner
+reasonably likely to attract prospective bidders, which publication shall be made at least ten
+days before bids are received and in at least two newspapers of general circulation in the
+basin. The commission may reject any and all bids and readvertise in its discretion. If after
+rejecting bids the commission determines and resolves that in its opinion the supplies,
+equipment and materials may be purchased at a lower price in the open market, the
+commission may give each responsible bidder an opportunity to negotiate a price and may
+proceed to purchase the supplies, equipment and materials in the open market at a negotiated
+price which is lower than the lowest rejected bid of a responsible bidder, without further
+
+                                              32
+
+
+
+
+                                          JA391
+ observance of the provisions requiring bids or notice. The commission shall adopt rules and
+regulations to provide for purchasing from the lowest responsible bidder when sealed bids,
+notice and publication are not required by this section. The commission may suspend and
+waive the provisions of this section requiring competitive bids whenever:
+
+       1) the purchase is to be made from or the contract to be made with the federal or any
+       state government or any agency or political subdivision thereof or pursuant to any
+       open end bulk purchase contract of any of them;
+
+       2) the public exigency requires the immediate delivery of the articles or performance
+       of the service;
+
+       3) only one source of supply is available;
+
+       4) the equipment to be purchased is of a technical nature and the procurement thereof
+       without advertising is necessary in order to assure standardization of equipment and
+       interchangeability of parts in the public interest; or
+
+       5) services are to be provided of a specialized or professional nature.
+
+   14.10 Insurance. The commission may self-insure or purchase insurance and pay the
+premiums therefore against loss or damage to any of its properties; against liability for injury
+to persons or property; and against loss of revenue from any cause whatsoever. Such
+insurance coverage shall be in such form and amount as the commission may determine,
+subject to the requirements of any agreement arising out of the issuance of bonds by the
+commission.
+
+   14.11 Annual Independent Audit.
+
+   (a) As soon as practical after the closing of the fiscal year, an audit shall be made of the
+financial accounts of the commission. The audit shall be made by qualified certified public
+accountants selected by the commission, who have no personal interest direct or indirect in
+the financial affairs of the commission or any of its officers or employees. The report of audit
+shall be prepared in accordance with accepted accounting practices and shall be filed with
+the chairman and such other officers as the commission shall direct. Copies of the report
+shall be distributed to each commissioner and shall be made available for public distribution.
+
+   (b) Each signatory party by its duly authorized officers shall be entitled to examine and
+audit at any time all of the books, documents, records, files and accounts and all other
+
+                                              33
+
+
+
+
+                                           JA392
+ papers, things or property of the commission. The representatives of the signatory parties
+shall have access to all books, documents, records, accounts, reports, files and all other
+papers, things or property belonging to or in use by the commission and necessary to
+facilitate the audit and they shall be afforded full facilities for verifying transactions with the
+balances or securities held by depositaries, fiscal agents and custodians.
+
+   (c) The financial transactions of the commission shall be subject to audit by the general
+accounting office in accordance with the principles and procedures applicable to commercial
+corporate transactions and under such rules and regulations as may be prescribed by the
+comptroller general of the United States. The audit shall be conducted at the place or places
+where the accounts of the commission are kept.
+
+   (d) Any officer or employee who shall refuse to give all require assistance and
+information to the accountants selected by the commission or to the authorized officers of
+any signatory party or who shall refuse to submit to them for examination such books,
+documents, records, files, accounts, papers, things or property as may be requested shall
+forfeit his office.
+
+   14.12 Reports. The commission shall make and publish an annual report to the legislative
+bodies of the signatory parties and to the public reporting on its programs, operations and
+finances. It may also prepare, publish and distribute such other public reports and
+informational materials as it may deem necessary or desirable.
+
+   14.13 Grants, Loans or Payments by States or Political Subdivisions.
+
+   (a) Any or all of the signatory parties or any political subdivision thereof may:
+
+       1) Appropriate to the commission such funds as may be necessary to pay preliminary
+       expenses such as the expenses incurred in the making of borings, and other studies of
+       subsurface conditions, in the preparation of contracts for the sale of water and in the
+       preparation of detailed plans and estimates required for the financing of a project;
+
+       2) Advance to the commission, either as grants or loans, such funds as may be
+       necessary or convenient to finance the operation and management of or construction
+       by the commission of any facility or project;
+
+       3) Make payments to the commission for benefits received or to be received from the
+       operation of any of the projects or facilities of the commission.
+
+
+                                                34
+
+
+
+
+                                            JA393
+    (b) Any funds which may be loaned to the commission either by a signatory party or a
+political subdivision thereof shall be repaid by the commission through the issuance of bonds
+or out of other income of the commission, such repayment to be made within such period and
+upon such terms as may be agreed upon between the commission and the signatory party or
+political subdivision making the loan.
+
+   14.14 Condemnation Proceedings.
+
+   (a) The commission shall have the power to acquire by condemnation the fee or any lesser
+interest in lands, lands lying under water, development rights in land, riparian rights, water
+rights, waters and other real or personal property within the basin for any project or facility
+authorized pursuant to this compact. This grant of power of eminent domain includes but is
+not limited to the power to condemn for the purposes of this compact any property already
+devoted to a public use, by whomsoever owned or held, other than property of a signatory
+party and any property held, constructed, operated or maintained in connection with a
+diversion authorized by a United States Supreme Court decree. Any condemnation of any
+property or franchises owned or used by a municipal or privately owned public utility, unless
+the affected public utility facility is to be relocated or replaced, shall be subject to the
+authority of such state board, commission or other body as may have regulatory jurisdiction
+over such public utility.
+
+   (b) Such power of condemnation shall be exercised in accordance with the provisions of
+any federal law applicable to the commission; provided that if there is no such applicable
+federal law, condemnation
+proceedings shall be in accordance with the provisions of such general state condemnation
+law as may be in force in the signatory state in which the property is located.
+
+   (c) Any award or compensation for the taking of property pursuant to this article shall be
+paid by the commission, and none of the signatory parties nor any other agency,
+instrumentality or political subdivision thereof shall be liable for such award or
+compensation.
+
+   14.15 Conveyance of Lands and Relocation of Public Facilities.
+
+   (a) The respective officers, agencies, departments, commissions or bodies having
+jurisdiction and control over real and personal property owned by the signatory parties are
+authorized and empowered to transfer and convey in accordance with the laws of the
+respective parties to the commission any such property as may be necessary or convenient to
+the effectuation of the authorized purposes of the commission.
+
+                                              35
+
+
+
+
+                                          JA394
+    (b) Each political subdivision of each of the signatory parties is authorized and
+empowered, notwithstanding any contrary provision of law, to grant and convey to the
+commission, upon the commission's request, any real property or any interest therein owned
+by such political subdivisions including lands lying under water and lands already devoted to
+public use which may be necessary or convenient to the effectuation of the authorized
+purposes of the commission.
+
+    (c) Any highway, public utility or other public facility which will be dislocated by reason
+of a project deemed necessary by the commission to effectuate the authorized purposes of
+this compact shall be relocated and the cost thereof shall be paid in accordance with the law
+of the state in which the facility is located; provided that the cost of such relocation payable
+by the commission shall not in any event exceed the expenditure required to serve the public
+convenience and necessity.
+
+   14.16 Rights of Way. Permission is hereby granted to the commission to locate, construct
+and maintain any aqueducts, lines, pipes, conduits and auxiliary facilities authorized to be
+acquired, constructed, owned, operated or maintained by the commission in, over, under or
+across any streets and highways now or hereafter owned, opened or dedicated to or for public
+use, subject to such reasonable conditions as the highway department of the signatory party
+may require.
+
+   14.17 Penal Sanction. Any person, association or corporation who violates or attempts or
+conspires to violate any provision of this compact or any rule, regulation or order of the
+commission duly made, promulgated or issued pursuant to the compact in addition to any
+other remedy, penalty or consequence provided by law shall be punishable as may be
+provided by statute of any of the signatory parties within which the offense is committed;
+provided that in the absence of such provision any such person, association or corporation
+shall be liable to a penalty of not less than $50 nor more than $1,000 for each such offense to
+be fixed by the court which the commission may recover in its own name in any court of
+competent jurisdiction, and in a summary proceeding where available under the practice and
+procedure of such court. For the purposes of this section in the event of a continuing offense
+each day of such violation, attempt or conspiracy shall constitute a separate offense.
+
+   14.18 Tort Liability. The commission shall be responsible for claims arising out of the
+negligent acts or omissions of its officers, agents and employees only to the extent and
+subject to the procedures prescribed by law generally with respect to officers, agents and
+employees of the government of the United States.
+
+
+                                              36
+
+
+
+
+                                           JA395
+    14.19 Effect on Riparian Rights. Nothing contained in this compact shall be construed
+as affecting or intending to affect or in any way to interfere with the law of the respective
+signatory parties relating to riparian rights.
+
+   14.20 Amendments and Supplements. Amendments and supplements to this compact to
+implement the purposes thereof may be adopted by legislative action of any of the signatory
+parties concurred in by all of the others.
+
+   14.21 Construction and Severability. The provisions of this Act and of agreements
+thereunder shall be severable and if any phrase, clause, sentence or provision of the
+Delaware River Basin Compact or such agreement is declared to be unconstitutional or the
+applicability thereof to any signatory party, agency or person is held invalid, the
+constitutionality of the remainder of such compact or such agreement and the applicability
+thereof to any other signatory party, agency, person or circumstance shall not be affected
+thereby. It is the legislative intent that the provisions of such compact be reasonably and
+liberally construed.
+
+    14.22 Effective Date; Execution. This compact shall become binding and effective
+thirty days after the enactment of concurring legislation by the federal government, the states
+of Delaware, New Jersey and New York, and the Commonwealth of Pennsylvania. The
+compact shall be signed and sealed in six duplicate original copies by the respective chief
+executives of the signatory parties. One such copy shall be filed with the Secretary of State
+of each of the signatory parties or in accordance with the laws of the state in which the filing
+is made, and one copy shall be filed and retained in the archives of the commission upon its
+organization.
+
+
+
+
+                                              37
+
+
+
+
+                                           JA396
+     IN WITNESS WHEREOF, and in evidence of the adoption and enactment into law of this
+compact by the Congress and legislatures, respectively, of the signatory parties, the President
+of the United States and the respective Governors do hereby, in accordance with authority
+conferred by law, sign this compact in six duplicate original copies, as attested by the
+respective secretaries of state, and have caused the seals of the United States and of the
+respective states to be hereunto affixed this 2nd day of November, 1961.
+
+
+                                               s/ JOHN F. KENNEDY
+                                               PRESIDENT OF THE UNITED STATES
+
+                                               Attest
+                                               s/ DEAN RUSK
+                                               SECRETARY OF STATE
+
+
+
+
+s/ ELBERT N. CARVEL                            s/ ROBERT B. MEYNER
+GOVERNOR OF                                    GOVERNOR OF
+THE STATE OF DELAWARE                          THE STATE OF NEW JERSEY
+
+
+
+Attest                                         Attest
+s/ ELISHA C. DUKES                             s/ EDWARD J. PATTEN
+SECRETARY OF STATE                             SECRETARY OF STATE
+
+
+
+
+s/ NELSON A. ROCKEFELLER                       s/ DAVID L. LAWRENCE
+GOVERNOR OF                                    GOVERNOR OF
+THE STATE OF NEW YORK                          THE COMMONWEALTH OF PENNSYLVANIA
+
+
+
+Attest                                         Attest
+s/ CAROLINE K. SIMON                           s/ E. JAMES TRIMARCHI, JR.
+SECRETARY OF STATE                             SECRETARY OFTHE COMMONWEALTH
+
+
+
+
+                                              38
+
+
+
+
+                                          JA397
+                                        PART II
+
+                                  EFFECTUATION
+
+UNITED STATES: (from Public Law 87-328, 75 Stat. 688)
+
+   15.1 Reservations. In the exercise of the powers reserved to the Congress, pursuant to
+Section 1.4 of the Compact, the consent to and participation in the Compact by the United
+States is subject to the following conditions and reservations:
+
+   (a) Notwithstanding any provision of the Delaware River Basin Compact the Delaware
+River Basin Commission shall not undertake any project (as defined in such compact), other
+than a project for which State supplied funds only will be used, beyond the planning stage
+untilC
+
+       (1) such commission has submitted to the Congress such complete plans and
+estimates for such project as may be necessary to make an engineering evaluation of such
+project, includingC
+
+          (A) where the project will serve more than one purpose, an allocation of costs
+among the purposes served and an estimate of the ratio of benefits to costs for each such
+purpose.
+
+           (B) an apportionment of costs among the beneficiaries of the project, including
+the portion of the costs to be borne by the Federal Government and by State and local
+governments, and
+
+           (C) a proposal for financing the project, including the terms of any proposed
+bonds or other evidences of indebtedness to be used for such purposes; and
+
+       (2) such project has been authorized by Act of Congress.
+
+   (b) No provision of Section 3.7 of the Compact shall be deemed to authorize the
+commission to impose any change for water withdrawals or diversions from the Basin if such
+withdrawals or diversions could lawfully have been made without charge on the effective
+date of the Compact; or to impose any charges with respect to commercial navigation within
+the Basin, jurisdiction over which is reserved to the Federal Government:
+
+
+
+                                           39
+
+
+
+
+                                        JA398
+ Provided, That this paragraph shall be applicable to the extent not inconsistent with Section
+1.4 of this Compact.
+
+   (c) Nothing contained in the Compact shall be deemed to restrict the executive powers of
+the President in the event of a national emergency.
+
+   (d) Notwithstanding the provisions of Article 2, Section 2.2 of the Compact, the member
+of the commission appointed by the President of the United States and his alternate shall
+serve at the pleasure of the President.4
+
+   (e) Nothing contained in the Compact shall be construed as impairing or in any manner
+affecting the applicability to all Federal funds budgeted and appropriated for use by the
+commission, or such authority over budgetary and appropriation matters as the President and
+Congress may have with respect to agencies in the Executive Branch of the Federal
+Government.
+
+    (f) Except to the same extent that state bonds are or may continued to be free or exempt
+from Federal taxation under the internal revenue laws of the United States, nothing contained
+in the Compact shall be construed as freeing or exempting from internal revenue taxation in
+any manner whatsoever any bonds issued by the commission, their transfer, or the income
+therefrom (including any profits made on the sale thereon).
+
+   (g) Nothing contained in the Compact shall be construed to obligate the United States
+legally or morally to pay the principal or interest on any bonds issued by the Delaware River
+Basin Commission.
+
+   (h) Notwithstanding the provisions of Section 11.5 or any other provision of the Compact,
+the furnishing of technical services to the commission by agencies of the Executive Branch
+of the Government of the United States is pledged only to the extent that the respective
+agencies shall from time to time agree thereto or to the extent that the President may from
+time to time direct such agencies to perform such services for the commission. Nothing in the
+Compact shall be deemed to require the United States to furnish administrative services or
+facilities for carrying out functions of the commission except to the extent that the President
+may direct.
+
+
+
+4
+ Section 15.1(d) is as enacted in 1961. This section was subsequently repealed by Public Law 105-18 in June of
+1997. Also see Endnote on this subject.
+
+
+                                                     40
+
+
+
+
+                                                 JA399
+     (i) All laborers and mechanics employed by contractors or subcontractors in the
+construction, alteration or repair, including painting and decorating, of projects, buildings
+and works which are undertaken by the commission or are financially assisted by it, shall be
+paid wages at rates not less than those prevailing on similar construction in the locality so
+determined by the Secretary of Labor in accordance with the Davis-Bacon Act, as amended
+(40 U. S. C. 276a-276a-5), and every such employee shall receive compensation at a rate not
+less than one and one-half times his basic rate of pay for all hours worked in any workweek
+in excess of eight hours in any workday or forty hours in any workweek, as the case may be.
+A provision stating the minimum wages thus determined and the requirement that overtime
+be paid as above provided shall be set out in each project advertisement for bids and in each
+bid proposal form and shall be made a part of the contract covering the project. The
+Secretary of Labor shall have, with respect to the administration and enforcement of labor
+standards specified in this provision, the supervisory, investigatory and other authority and
+functions set forth in Reorganization Plan Numbered 14 of 1950 (15 F. R. 3176, 64 Stat.
+1267, 5 U. S. C. 133z-15, and Section 2 of the Act of June 13, 1934, as amended (48 Stat.
+948, as amended; 40 U. S. C. 276( c)).
+
+   (j) Contracts for the manufacture or furnishing of materials, supplies, articles and
+equipment with the commission which are in excess of $10,000 shall be subject to the
+provisions of the Walsh-Healey Public Contracts Act (41 U. S. C. 35 et seq.).
+
+    (k) Notwithstanding any other provision of this Act, nothing contained in this Act or in
+the Compact shall be construed as superseding or limiting the functions, under any other law,
+of the Secretary of Health, Education, and Welfare or of any other officer or agency of the
+United States, relating to water pollution: Provided, That the exercise of such functions shall
+not limit the authority of the commission to control, prevent, or abate water pollution.
+
+   (l) The provisions of Section 8.4 of Article 8 of the Compact shall not be construed to
+apply to facilities operated pursuant to any other Federal law.
+
+   (m) For purposes of the Act of June 25, 1948, 62 Stat. 982, as amended (Title 28, U. S.
+Code, chapter 171, and Sections 1346( b) and 240 (b)) and the Act of March 3, 1887, 24 Stat.
+505, as amended (Title 28, U. S. Code, Section 1402, 1491, 1496, 1501, 1503, 2071, 2072,
+2411, 2412, 2501), and the Act of June 11, 1946, 60 Stat. 237, as amended (Title 5, U. S.
+Code, Sections 1001 and 1011, Title 50 App. U.S. Code, Section 1900), the commission
+shall not be considered a Federal agency.
+
+    (n) The officers and employees of the commission (other than the United States member,
+alternate United States member, and advisors, and personnel employed by the United States
+
+                                              41
+
+
+
+
+                                          JA400
+ member under direct Federal appropriation) shall not be deemed to be, for any purpose,
+officers or employees of the United States or to become entitled at any time by reason of
+employment by the commission to any compensation or benefit payable or made available by
+the United States solely and directly to its officers or employees.
+
+   (o) Neither the Compact nor this Act shall be deemed to enlarge the authority of any
+Federal agency other than the commission to participate in or to provide funds for projects or
+activities in the Delaware River Basin.
+
+    (p) The United States district courts shall have original jurisdiction of all cases or
+controversies arising under the Compact, and this Act and any case or controversy so arising
+initiated in a State Court shall be removable to the appropriate United States district court in
+the manner provided by ' 1446, Title 28 U. S. C. Nothing contained in the Compact or
+elsewhere in this Act shall be construed as a waiver by the United States of its immunity
+from suit.
+
+   (q) The right to alter, amend, or repeal this Act is hereby expressly reserved. The right is
+hereby reserved to the Congress or any of its standing committees to require the disclosure
+and furnishing of such information and data by the Delaware River Basin Compact
+Commission as is deemed appropriate by the Congress or any such committee.
+
+   (r) The provisions of Sections 2.4 and 2.6 of Article 2 of the Compact notwithstanding,
+the member and alternate member appointed by the President and advisor there referred to
+may be paid compensation by the United States, such compensation to be fixed by the
+President at the rates which he shall deem to prevail in respect to comparable officers in the
+executive branch.
+
+    (s) 1. Nothing contained in this Act or in the Compact shall impair or affect the
+constitutional authority of the United Sates or any of its powers, rights, functions, or
+jurisdiction under other existing or future legislation in and over the area or waters which are
+the subject of the Compact including projects of the commission: Provided, That whenever a
+comprehensive plan, or any part or revision thereof, has been adopted with the concurrence
+of the member appointed by the President, the exercise of any powers conferred by law on
+any officer, agency or instrumentality of the United States with regard to water and related
+land resources in the Delaware River Basin shall not substantially conflict with any such
+portion of such comprehensive plan and the provisions of Section 3.8 and Article 11 of the
+Compact shall be applicable to the extent necessary to avoid such substantial conflict:
+Provided further, That whenever the President shall find and determine that the national
+interest so requires, he may suspend, modify or delete any provision of the comprehensive
+
+                                              42
+
+
+
+
+                                           JA401
+ plan to the extent that it affects the exercise of any powers, rights, functions, or jurisdiction
+conferred by law on any officer, agency or instrumentality of the United States other than the
+commission. Such action shall be taken by executive order in which such finding and
+determination shall be set forth.
+
+   2. For the purposes of paragraph 1 hereof, concurrence by the member appointed by the
+President shall be presumed unless within 60 days after notice to him of adoption of the
+comprehensive plan, or any part or revision thereof, he shall file with the commission notice
+of his nonconcurrence. Each concurrence of the member appointed by the President in the
+adoption of the comprehensive plan or any part or revision thereof may be withdrawn by
+notice filed with the commission at any time between the first and sixtieth day of the sixth
+year after the initial adoption of the comprehensive plan and of every sixth year thereafter.
+
+   (t) In the event that any phrase, clause, sentence or provision of Section 1.4 of Article 1 of
+the Compact, is declared to be unconstitutional under the constitution of any of the signatory
+parties, or the applicability thereof to any signatory party, agency or person is held invalid by
+a court of last resort of competent jurisdiction, the United States shall cease to be a party to
+the Compact, except to the extent that the President deems remaining a party necessary and
+proper to protect the national interest, and shall cease to be bound by the terms thereof.
+
+  (u) All Acts or parts of Acts inconsistent with the provisions of this Act are hereby
+amended for the purpose of this Act to the extent necessary to carry out the provisions of this
+Act: Provided, however, That no act of the commission shall have the effect of repealing,
+modifying or amending any Federal law.
+
+   15.2 Effectuation. (a) The President is authorized to take such action as may be necessary
+and proper, in his discretion, to effectuate the Compact and the initial organization and
+operation of the Commission thereunder.
+
+   (b) Executive departments and other agencies of the executive branch of the Federal
+Government shall cooperate with and furnish appropriate assistance to the United States
+member. Such assistance shall include the furnishing of services and facilities and may
+include the detailing of personnel to the United States member. Appropriations are hereby
+authorized as necessary for the carrying out of the functions of the United States member,
+including appropriations for the employment of personnel by the United States member.
+
+   15.3 Effect Date. This Act shall take effect immediately.
+                                        ________
+
+
+                                               43
+
+
+
+
+                                           JA402
+ DELAWARE: (from 53 Delaware Laws, Chapter 71)
+
+    ' 1011. Repealer. All acts and parts of acts inconsistent with any provision of this act are
+to the extent of such inconsistency hereby repealed.
+
+    ' 1012. Effectuation by Chief Executive. The chief executive is authorized to take such
+action as may be necessary and proper, in his discretion, to effectuate the compact and the
+initial organization and operation of the commission thereunder.
+
+    ' 1013. Effective Date. This act shall take effect immediately.
+                                        ________
+
+NEW JERSEY: (from New Jersey Laws of 1961, Chapter 13)
+
+   15.1 Repealer. All acts and parts of acts inconsistent with any provision of this act are to
+the extent of such inconsistency hereby repealed.
+
+    15.2 Effectuation by Chief Executive. The chief executive is authorized to take such
+action as may be necessary and proper, in his discretion, to effectuate the compact and the
+initial organization and operation of the commission thereunder.
+
+    15.3 Effective Date. This act shall take effect immediately.
+                                          ________
+
+NEW YORK:5 (from New York Laws of 1961, Chapter 148); with Sections of the
+Conservation Law as renumbered by Laws of 1962, Chapter 73.
+
+   ' 631. Commissioner and Alternate. 1. As provided in the second subdivision of section
+two of article two of the compact, the governor shall be this state's member on the
+commission established thereby. The governor shall appoint a member of the water resources
+commission as his alternate pursuant to the third subdivision of said section two of article
+two of the compact. In the absence of the governor and such member of the water resources
+commission, the powers, duties and functions of this state's member of the Delaware River
+Basin Commission shall be performed by the alternate of said department head on the water
+resources commission.
+
+
+5
+ The Sections have been renumbered by Laws of 1962, Chapter 73 and now constitute Sections 802-812 of the
+Conservation Law.
+
+                                                   44
+
+
+
+
+                                               JA403
+    2. Any person serving on the Delaware River Basin Commission pursuant to this section
+shall be reimbursed for all necessary expenses incurred as an incident of such service, and
+such reimbursement shall be from the funds of said person's department or office.
+
+   ' 632. Advisors. 1. The member of the Delaware River Basin Commission from this state
+shall have an advisor as contemplated by subdivision six of section two of article two of the
+compact. Such advisor shall be the mayor of the city of New York or his designee, but no
+designee of the mayor shall be recognized as an advisor or accorded any privileges as such
+unless the mayor shall have notified the commission member from this state and the
+Delaware River Basin Commission in writing of the selection of such designee and of his
+identity.
+
+   2. The members of the water resources commission and the state commissioner of
+commerce shall constitute an advisory committee with whom the member of the Delaware
+River Basin Commission from this state shall consult with respect to the conduct of New
+York participation in the compact. Such member of the commission also shall consult from
+time to time with other officers of the state government or any subdivision thereof, as may be
+appropriate.
+
+   ' 633. Consent to Alteration of Diversions. 1. Consent of this state to the impairment,
+diminution or other adverse effect on diversions, compensating releases, rights, conditions,
+obligations, and provisions for the administration thereof as contemplated by subdivision
+three of section three of article three of the compact shall not be given, except with the prior
+approval of the water resources commission.
+
+    2. Except with respect to diversions governed by subdivision one of this section and the
+provision of the compact referred to therein, the provisions of section four hundred fifty-two
+of the conservation law shall not apply to any diversion or furnishing of water authorized by
+or made pursuant to the compact.
+
+    ' 634. Jurisdiction of Courts. Except as otherwise specifically provided herein, the
+phrase "court of competent jurisdiction" as used in the compact shall, with reference to this
+state, mean the supreme court, and said court is hereby given all necessary and appropriate
+jurisdiction to hear and determine any action or proceeding brought before it pursuant to
+appropriate provisions of the compact. As used in subdivision six of section ten of article ten
+of the compact, the phrase "court of competent jurisdiction" shall mean a court in which an
+appropriate proceeding under article seventy-eight of the civil practice act may be brought.
+As used in item one of paragraph (a) of subdivision one of section fourteen of article
+fourteen of the compact, the phrase "court of competent jurisdiction" shall mean any court of
+
+                                              45
+
+
+
+
+                                           JA404
+ this state in which an action or proceeding of the class brought by the Delaware River Basin
+Commission may be heard and determined.
+
+   ' 635. Prior to Project Approval. No project requiring a license, permit or other
+approval by any agency or officer of this state, or any subdivision thereof, shall be given any
+such license, permit, or approval, if such project requires approval of the Delaware River
+Basin Commission pursuant to the compact and such has not been given.
+
+    ' 636. Agreements with Municipalities. Any city, county, town or village within the
+"basin", as that term is defined in the compact, shall have power to make agreements to
+provide technical and financial aid as contemplated by paragraph (b) of subdivision two of
+section six of article six of the compact. Nothing herein contained shall be construed to
+relieve any such city, county, town or village from compliance with any general or special
+laws relating to the receipt of grants or other assistance from other governmental units and
+contracts in connection therewith.
+
+   ' 637. Delegations of Power. No agency or officer of this state or any subdivision
+thereof shall accept or exercise any delegation of power pursuant to subdivision one of
+section ten of article ten of the compact unless, in the absence of the compact, it would have
+the constitutional or statutory power to exercise such power on its own account.
+
+   ' 638. Cooperative Services. Departments, agencies and officers shall provide technical
+and administrative services to the Delaware River Basin Commission upon request, within
+the limits of available appropriations and shall cooperate generally with said commission for
+the purposes of the compact.
+
+   ' 639. Budget. The Delaware River Basin Commission shall submit annually to the
+director of the budget, in accordance with the rules and practice of the state, for study and
+consideration by such director, an estimate of moneys required to administer, manage and
+support the commission during the ensuring fiscal year. Such estimate shall include any
+request for appropriation of funds by New York and shall be accompanied by a tabulation of
+similar requests which the commission expects to make to each other member state and the
+formula or factors upon which such respective requests are based. The provisions of
+subdivision three of section thirteen of article thirteen of the compact shall apply to the
+budgetary and other fiscal matters related to the participation of this state in the compact.
+
+    ' 640. Audit. Pursuant to paragraph (b) of subdivision eleven of section fourteen of
+article fourteen of the compact, the state comptroller is hereby authorized and empowered
+from time to time to examine the accounts and books of the commission, including its
+
+                                              46
+
+
+
+
+                                          JA405
+ receipts, disbursements and such other items referring to its financial standing as such
+comptroller may deem proper and to report the results of such examination to the governor.
+
+   ' 641. Inconsistent Laws. No provision of the conservation law or of any other law,
+which is inconsistent with the provisions of the compact shall be applicable to the Delaware
+River Basin Commission or to any matter governed by the compact.
+
+   ' 2. Effectuation. The compact set forth in the conservation law as amended by section
+one of this act shall become binding and effective in accordance with the provisions of
+subdivision twenty-one of section fourteen of article fourteen thereof. The governor is
+hereby authorized and directed to sign and seal the compact as provided in said subdivision
+twenty-one and to cause copies thereof to be filed in accordance therewith.
+
+   ' 3. Effective Date. This act shall take effect immediately.
+                                         ________
+
+PENNSYLVANIA: (from Pennsylvania Acts of 1961, Act No. 268)
+
+   Section 2. Repealer. All acts and parts of acts inconsistent with any provision of this act
+are to the extent of such inconsistency hereby repealed.
+
+   Section 3. Effectuation by Chief Executive. The chief executive is authorized to take
+such action as may be necessary and proper in his discretion to effectuate the compact and
+the initial organization and operation of the commission thereunder.
+
+   Section 4. Effective Date. This act shall take effect immediately.
+
+
+
+
+                                             47
+
+
+
+
+                                          JA406
+                                        ENDNOTES
+1,4
+   In June of 1997, Congress enacted and President Clinton signed the 1997 Emergency
+Appropriations Act (“the Act”), which specified that beginning in fiscal year 1997 and
+thereafter, the United States members and alternate members appointed under the Delaware
+River Basin Compact “shall be officers of the U.S. Army Corps of Engineers, who hold
+Presidential appointments as Regular Army officers with Senate confirmation . . . .” P.L.
+105-18, Sec. 3001(a). The Act further provided that Section 15.1(d) of the Compact was
+repealed, and Section 2.2 was amended by striking the words “during the term of office of
+the President” and inserting the words “at the pleasure of the President”. Previously,
+Sections 2.2 and 15.1(d) were inconsistent as to the term of the federal representative’s
+appointment.
+
+The Water Resources Development Act of 2007 (“WRDA”) modified the 1997 act as
+follows:
+          (a) Ex-Officio Member. Notwithstanding Section 3001(a) of the 1997
+          Emergency Supplemental Appropriations Act … (Public Law 105-18; 111
+          Stat. 176) … and Section 2.2 of the Delaware River Basin Compact to
+          which consent was given by Public Law 87-328 (75 Stat. 691), beginning in
+          fiscal year 2002, and each fiscal year thereafter, the Division Engineer,
+          North Atlantic Division, Corps of Engineers:
+              (1) shall be:
+                  (A) the ex-officio United States member of the Susquehanna River
+                  Basin Compact and the Delaware River Basin Compact; and
+                                   *     *      *    *
+              (2) shall serve without additional compensation; and
+              (3) may designate an alternate member in accordance with the terms of
+              those compacts.
+
+WRDA (Public Law 110-114), sec. 5019.
+3
+    The 2007 WRDA directed as follows:
+          (b) Authorization to Allocate. The Secretary [of the Army] shall allocate
+          funds to the Susquehanna River Basin Commission, Delaware River Basin
+          Commission, and the Interstate Commission on the Potomac River Basin to
+          fulfill the equitable funding requirements of the respective interstate
+          compacts.
+
+                                             48
+
+
+
+
+                                          JA407
+ Water Resources Development Act of 2007 (Public Law 110-114), sec. 5019.
+
+The Water Resources Reform and Development Act of 2014 (Public Law 113-121) amended
+subsection (b) of the 2007 WRDA by striking subsection (b) and inserting the following:
+
+   (b) AUTHORIZATION TO ALLOCATE
+       (1) IN GENERAL.— The Secretary shall allocate funds to the
+       Susquehanna River Basin Commission, the Delaware River Basin
+       Commission, and the Interstate Commission on the Potomac River Basin to
+       fulfill the equitable funding requirements of the respective interstate
+       compacts.
+       (2) AMOUNTS.— For each fiscal year, the Secretary shall allocate to each
+       Commission described in paragraph (1) an amount equal to the amount
+       determined by the Commission in accordance with the respective interstate
+       compact approved by Congress.
+       (3) NOTIFICATION.— If the Secretary does not allocate funds for a given
+       fiscal year in accordance with paragraph (2), the Secretary, in conjunction
+       with the subsequent submission by the President of the budget to Congress
+       under section 1105(a) of title 31, United States Code, shall submit to the
+       Committee on Environment and Public Works of the Senate and the
+       Committee on Transportation and Infrastructure of the House of
+       Representatives a notice that describes—
+           (A) the reasons why the Secretary did not allocate funds in accordance
+           with paragraph (2) for that fiscal year; and
+           (B) the impact of that decision not to allocate funds on each area of
+           jurisdiction of each Commission described in paragraph (1), including
+           with respect to—
+                (i)    water supply allocation;
+                (ii) water quality protection;
+                (iii) regulatory review and permitting;
+                (iv) water conservation;
+                (v) watershed planning;
+                (vi) drought management;
+                (vii) flood loss reduction;
+                (viii) recreation; and
+                (ix) energy development.
+
+                                           49
+
+
+
+
+                                       JA408
+ Water Resources Reform and Development Act of 2014 (Public Law 113-121), sec.
+4001.
+
+
+
+
+                                        50
+
+
+
+
+                                     JA409

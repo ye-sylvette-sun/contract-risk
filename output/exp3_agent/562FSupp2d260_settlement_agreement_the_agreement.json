@@ -1,0 +1,79 @@
+{
+  "contract_id": "562FSupp2d260_settlement_agreement_the_agreement",
+  "_id_map": {
+    "c001": "pos1",
+    "c002": "pos2",
+    "c003": "pos3",
+    "c004": "neg1",
+    "c005": "neg2",
+    "c006": "pos4",
+    "c007": "neg3",
+    "c008": "neg4"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The amended identification is a long enumeration hung on open-ended catch-alls — \"related topics such as oil drilling, technology and infrastructure\" and \"Financial information services regarding the energy industry\" — whose reach against the carve-out for \"asset management and investment advice relating to stocks and bonds\" is exactly the kind of general-vs-specific boundary a court must draw. It also carries a visible mechanical gap: the first (electronic publications) paragraph ends without any class designation, while the second and third recite \"in Class 16\" and \"in Class 36,\" leaving Class 9 unaccounted for although the Background recites the application was published in Classes 9, 16 and 36.",
+      "reasoning_cat2": "Paragraph 2's covenant is expressly measured by \"the goods and services as set forth in that application as amended pursuant to paragraph 1,\" so any indeterminacy here propagates directly into the operative covenant, and the missing Class 9 designation sits against the Background recital naming Classes 9, 16 and 36. That mismatch between recital and operative amendment is a genuine, checkable inconsistency rather than a speculative one.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The covenant is limited to the mark \"PETROLEUM ARGUS ... for the goods and services as set forth in that application as amended,\" then closes with the wholly undefined catch-all \"or do any act or thing in derogation thereof\" appended to a list of specific prohibitions — the classic ejusdem generis problem, and the operative question of whether the covenant reaches uses of ARGUS standing alone or outside the listed goods is answerable only by construction.",
+      "reasoning_cat2": "Read against paragraph 3 (which covers only ENERGY ARGUS marks) and the Background recital (which describes only extensions of time to oppose one application), the naming of two specific marks invites an expressio unius argument that nothing was covenanted about ARGUS alone. The tie to paragraph 1's amended identification, which itself omits a class, compounds the fit problem.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "Same structure as paragraph 2: a covenant tethered to \"the mark ENERGY ARGUS as shown in the registrations for the goods and services as set forth in the registrations,\" ending in the vague catch-all \"do any act or thing in derogation thereof,\" whose outer limit cannot be fixed from the words. Whether \"as shown in the registrations\" restricts the covenant to the design form or reaches the words alone is a live textual question.",
+      "reasoning_cat2": "Together with paragraph 2 it enumerates PETROLEUM ARGUS and ENERGY ARGUS only, so the whole instrument leaves open whether the parties intended ARGUS simpliciter to be within or deliberately outside the peace, and the Background recital mentions only the PETROLEUM ARGUS opposition, not these registrations. That recital/operative mismatch is real but narrower than for paragraph 1.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "pos3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "\"This agreement and the performance of shall be governed\" is a plain mechanical error — a dangling \"the performance of\" with no object — and the trailing sentence \"This provision extends to the United States, its territories and possessions\" is genuinely ambiguous as to whether \"this provision\" means the choice of law or the agreement's territorial reach, which matters between a US and a UK party.",
+      "reasoning_cat2": "Nothing else in this two-page instrument states a geographic scope, so the second sentence has no anchor elsewhere; paragraph 1's \"reporting oil pricing worldwide\" pulls the other way and could be argued against a US-only reading. That is a modest but nameable whole-instrument tension.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "One short boilerplate line; the only soft spot is \"licensees,\" an unusual addition to successors and assigns, which leaves open whether a licensee or affiliate of Petroleum Argus can claim the benefit of the covenants without being a party. That is a nameable but slight ambiguity.",
+      "reasoning_cat2": "It coexists comfortably with paragraphs 2, 3 and 6; nothing in the agreement identifies licensees, restricts assignment, or otherwise contradicts this clause. Only if a non-signatory affiliate sought to enforce the covenants would the fit be tested.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "\"This is the entire agreement and may be modified only in writing signed by both parties\" is short but definite, with no term whose meaning is contestable on its face.",
+      "reasoning_cat2": "It sits consistently with the Background recital and with paragraphs 1-3; the only conceivable friction is that the merger clause would exclude extrinsic understandings about marks not named in paragraphs 2 and 3, which sharpens rather than contradicts those clauses.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "pos4"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "\"all their own costs in attorneys' fees\" is a mechanical error — \"in\" almost certainly stands for \"and\" — and the substitution changes meaning, since costs *in* attorneys' fees is narrower than costs *and* attorneys' fees.",
+      "reasoning_cat2": "No other provision addresses fee-shifting, enforcement costs or breach remedies, so there is nothing in the instrument for this clause to contradict; whether it also covers fees in a later enforcement action is unaddressed but not inconsistent.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "\"The parties will agree to keep the terms ... confidential\" is an agreement to agree rather than a present obligation, and the exception \"as required by Court order and/or state and federal rules of civil procedure\" is broad and imprecise about what a rule of civil procedure \"requires.\"",
+      "reasoning_cat2": "Nothing else in the agreement addresses disclosure, and paragraph 1 in fact contemplates a public USPTO amendment, so a party could argue the confidentiality promise cannot cover terms the parties agreed to put on a public register. That is a modest but identifiable tension with paragraph 1.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg4"
+    }
+  ]
+}
