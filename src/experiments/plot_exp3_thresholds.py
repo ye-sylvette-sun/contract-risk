@@ -54,10 +54,15 @@ OUT_DIR = os.path.join(ROOT, "output")
 FIG_DIR = os.path.join(OUT_DIR, "figures")
 
 # The two experiments write the same columns, so one figure script serves both.
+# Each entry is (predictions file, figure file, title, subtitle). The approach is
+# named in the TITLE, because the two figures are read side by side and a reader
+# should not have to work out which one they are looking at from the filename.
 RUNS = {
     "llm_api": ("exp3_llm_api_preds.csv", "exp3_llm_api_threshold_curves.png",
+                "LLM API call",
                 "few-shot with judicial reasoning, one call per contract"),
     "agent": ("exp3_agent_preds.csv", "exp3_agent_threshold_curves.png",
+              "Agentic approach",
               "few-shot with judicial reasoning, one agent session per contract"),
 }
 
@@ -124,7 +129,10 @@ def main():
     ap.add_argument("--run", choices=sorted(RUNS), default="llm_api",
                     help="which experiment's predictions to plot")
     args = ap.parse_args()
-    preds_name, fig_name, subtitle = RUNS[args.run]
+    # `run_title`, not `title` — the panel loops below bind `title` to each
+    # panel's own name, and a shared name would put the last panel's title on
+    # the whole figure.
+    preds_name, fig_name, run_title, subtitle = RUNS[args.run]
     preds = os.path.join(OUT_DIR, preds_name)
 
     rows = load(preds)
@@ -186,8 +194,8 @@ def main():
     axes[0][0].set_ylabel("Precision / Recall", fontsize=10)
     axes[1][0].set_ylabel("% of clauses flagged", fontsize=10)
 
-    fig.suptitle("Precision, recall, and flag rate across risk-flagging thresholds",
-                 fontsize=14, x=0.5, y=0.985)
+    fig.suptitle(f"{run_title} — precision, recall, and flag rate across "
+                 f"risk-flagging thresholds", fontsize=14, x=0.5, y=0.985)
     fig.text(0.5, 0.935,
              f"Exp 3 — {subtitle}  ·  "
              f"{len(rows)} clauses from {n_contracts} contracts  ·  "
