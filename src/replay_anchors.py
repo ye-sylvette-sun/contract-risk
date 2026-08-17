@@ -1,4 +1,4 @@
-"""Score the locator against stored logs, at zero API cost. See docs/DESIGN.md.
+"""Score the locator against stored logs, at zero API cost. See docs/DATASET.md.
 
 Two kinds of log can be scored, and the script picks per clause:
 
@@ -26,7 +26,7 @@ What it measures:
      of the span. What it catches is a span that lost real words.
 
 Two-column interleave has no cheap detector and is not attempted here. It has to
-be counted by hand, and docs/DESIGN.md §8 requires it be reported, not hidden.
+be counted by hand, and docs/DATASET.md requires it be reported, not hidden.
 
 Usage:
     python src/replay_anchors.py --logs output/llm_logs
@@ -166,7 +166,7 @@ def main():
              f"{max(lines_moved)} worst)" if lines_moved else ""))
     print(f"3. extraction == raw      {clean:5d} / {matched}  "
           f"({clean / matched * 100:.1f}%)" if matched else "")
-    print("4. two-column interleave  not detectable — count by hand (DESIGN.md §8)")
+    print("4. two-column interleave  not detectable — count by hand (docs/DATASET.md)")
 
     for label, rows in (("did not locate", misses[:args.show]),
                         ("differs from the raw window (check for lost words, not for markdown)",

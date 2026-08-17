@@ -1,0 +1,86 @@
+{"judgments": [
+  {
+    "clause_id": "c001",
+    "reasoning_cat1": "The parenthetical \"under 18 years of age in most states\" is itself hedged and indefinite, and the instruction that \"Student and parent must determine the age of legal competency to sign contracts\" shifts a legal question to the signers without stating a rule, leaving the signature requirement's operation uncertain. There is also an OCR/typographical defect (\"in thé state\"), though it does not change meaning.",
+    "reasoning_cat2": "It defines \"Student\" and \"Parent\" for the release (c017) and other provisions (c018, c024), and the definitions are used consistently there; the only friction is that the parent's signature line is left blank while the document says a minor's parent \"must also sign.\" No operative contradiction with another clause is apparent.",
+    "prob_cat1": 0.24,
+    "prob_cat2": 0.13
+  },
+  {
+    "clause_id": "c002",
+    "reasoning_cat1": "The definition of \"inherent risks\" as those \"which cannot be eliminated without destroying the unique character of the activities\" is a genuinely fuzzy standard, and the activity list is expressly open-ended (\"include, among others\"), which invites an ejusdem generis/expressio unius argument about what counts as a covered activity. The disclaimer that the list describes \"some, but not all\" of the risks compounds the boundary problem.",
+    "reasoning_cat2": "It is the predicate for the assumption-of-risk clause (c016), which itself says the description \"is not complete,\" so the two are consistent rather than conflicting; the phrase \"activity of NOLS\" in the release (c017) is nowhere defined against this list. That gap is a possible but unproven source of incoherence.",
+    "prob_cat1": 0.31,
+    "prob_cat2": 0.17
+  },
+  {
+    "clause_id": "c003",
+    "reasoning_cat1": "A one-line descriptive statement with no operative obligation; \"strenuous, physically and emotionally\" is imprecise but nothing turns on where its boundary lies. Nothing here a court would need to construe.",
+    "reasoning_cat2": "It merely feeds the risk list assumed in c016 and is fully consistent with it. No other provision points the other way.",
+    "prob_cat1": 0.04,
+    "prob_cat2": 0.02
+  },
+  {
+    "clause_id": "c004",
+    "reasoning_cat1": "Purely descriptive risk disclosure; \"usually occur in remote places\" and \"may be significantly delayed\" are hedged but impose and negate no duty. There is a minor punctuation error (comma for period after \"NOLS,\") that does not alter meaning.",
+    "reasoning_cat2": "Consistent with the assumption of risk in c016 and with c019's medical-care and evacuation-cost allocation. No conflict located.",
+    "prob_cat1": 0.05,
+    "prob_cat2": 0.03
+  },
+  {
+    "clause_id": "c005",
+    "reasoning_cat1": "Four words of pure risk description with no ambiguity worth litigating over. Nothing to name as an ambiguous term.",
+    "reasoning_cat2": "It supports the assumption of risk in c016; nothing in c017 or elsewhere contradicts it. No relational defect found.",
+    "prob_cat1": 0.03,
+    "prob_cat2": 0.02
+  },
+  {
+    "clause_id": "c006",
+    "reasoning_cat1": "Descriptive only; \"offending food 'types'\" carries a stray quotation mark but the sense is plain, and \"Camping risks include\" is expressly non-exhaustive without any operative consequence turning on the list. Low intrinsic construction risk.",
+    "reasoning_cat2": "Food-allergy disclosure interacts with the medical-disclosure warranty in c018, but the two are complementary rather than contradictory. No conflict identified.",
+    "prob_cat1": 0.07,
+    "prob_cat2": 0.05
+  },
+  {
+    "clause_id": "c007",
+    "reasoning_cat1": "The catch-alls \"and other means\" and \"other risks usually associated with such travel\" sit against long enumerated lists, which is the classic general-vs-specific setup, but since the clause is descriptive no right or duty depends on the catch-all's reach. Embedded page-footer OCR debris interrupts the sentence without changing meaning.",
+    "reasoning_cat2": "Consistent with c016's assumption of \"ALL risks\" and with c014's contractor disclaimer covering transportation. No contradiction found.",
+    "prob_cat1": 0.12,
+    "prob_cat2": 0.05
+  },
+  {
+    "clause_id": "c008",
+    "reasoning_cat1": "\"Forces of nature\" and \"other mild or serious conditions\" are open-ended catch-alls after enumerated specifics, but the provision is descriptive and no obligation hinges on the boundary. Nothing here a court would need to define.",
+    "reasoning_cat2": "It feeds directly into the assumed risks in c016 and is not in tension with the release in c017. No relational defect.",
+    "prob_cat1": 0.07,
+    "prob_cat2": 0.03
+  },
+  {
+    "clause_id": "c009",
+    "reasoning_cat1": "The statement that staff decisions are \"imprecise and subject to errors in judgment\" comes close to characterising staff negligence as an inherent risk, and \"errors in judgment\" is exactly the kind of phrase parties dispute when a release is tested. Still, it is drafted as description, not as a disclaimer.",
+    "reasoning_cat2": "It sits against c016 (assumption of \"inherent\" risks) and c017, which releases negligence \"but not gross negligence or intentionally wrongful conduct\"; whether instructor misjudgment is an assumed inherent risk or released negligence is a real seam between those provisions. That is a plausible, though not certain, incoherence.",
+    "prob_cat1": 0.26,
+    "prob_cat2": 0.28
+  },
+  {
+    "clause_id": "c010",
+    "reasoning_cat1": "\"On most NOLS courses\" and \"at times\" are hedged but the sentence is a factual disclosure with no operative effect. Nothing to construe.",
+    "reasoning_cat2": "It is consistent with c011's statement that NOLS cannot continually monitor students and with c016's assumption of risk. No conflict.",
+    "prob_cat1": 0.05,
+    "prob_cat2": 0.04
+  },
+  {
+    "clause_id": "c011",
+    "reasoning_cat1": "This is an operative disclaimer buried in a descriptive risk list, and it turns on the undefined boundary of \"free time before, during and after their course\" and the fiction that accompanying staff act \"as private individuals\"; \"free\" is even placed in scare quotes, signalling its own indeterminacy. The disclaimer covers free time \"before and after\" the course while the preceding sentence also mentions free time \"during\" it, an internal mismatch a court could be asked to resolve.",
+    "reasoning_cat2": "It must be read against c017, which releases claims \"arising in whole or part from enrollment or participation in an activity of NOLS,\" and the two draw the coverage line differently — c017 assumes NOLS-activity claims exist to be released while c011 asserts no responsibility at all. That mismatch, plus the tension with c018's reservation of authority over students, is a genuine relational risk.",
+    "prob_cat1": 0.42,
+    "prob_cat2": 0.34
+  },
+  {
+    "clause_id": "c012",
+    "reasoning_cat1": "The closing sentence that NOLS foreign field practices \"are generally consistent with customs and standards used in the United States\" is a hedged quasi-representation whose standard (\"generally consistent\") cannot readily be applied. The rest is descriptive listing with a catch-all (\"other criminal conduct\").",
+    "reasoning_cat2": "The quasi-representation sits uneasily with c018's statement that admission is \"not intended as a representation\" and with the disclaimers in c011 and c014, but nothing directly contradicts it. Modest relational risk.",
+    "prob_cat1": 0.19,
+    "prob_cat2": 0.14
+  }
+]}

@@ -1,0 +1,114 @@
+{"judgments": [
+  {
+    "clause_id": "c018",
+    "reasoning_cat1": "'Either you, we, or Lender may give written notice ... at any time, even if the other party has begun a lawsuit' invites argument about how far a party may litigate before electing, and 'any other arbitrator ... reasonably satisfactory to us' is an indeterminate, one-sided standard.",
+    "reasoning_cat2": "The at-any-time election is hard to reconcile with c008's reservation that the seller 'is not required to ... arbitrate' and with c016's flat statement that the parties agree to arbitrate rather than litigate; the judgment-entered cut-off also interacts with c011's pre-suit notice gate.",
+    "prob_cat1": 0.42,
+    "prob_cat2": 0.36
+  },
+  {
+    "clause_id": "c019",
+    "reasoning_cat1": "The venue options end in 'or such other location as we or Lender may agree', which omits the customer's agreement and is ambiguous about whose consent is needed; there is also a comma splice ('rules of civil procedure or evidence, Unless').",
+    "reasoning_cat2": "It fits the FAA choice in c025 and the fee-advance provisions above it, with no competing venue or procedure clause elsewhere in the instrument.",
+    "prob_cat1": 0.26,
+    "prob_cat2": 0.13
+  },
+  {
+    "clause_id": "c020",
+    "reasoning_cat1": "A short, mechanical confirmation clause; the deeming of the place of decision is artificial but determinate.",
+    "reasoning_cat2": "Consistent with c019's hearing-location rules and c025's FAA governing law; nothing else addresses entry of judgment.",
+    "prob_cat1": 0.10,
+    "prob_cat2": 0.09
+  },
+  {
+    "clause_id": "c021",
+    "reasoning_cat1": "The opt-out notice must be sent to 'PLS Financial Services', an entity different from the contracting 'PLS Loan Store of Texas, Inc.', and the sentence 'Only those disputes ... arising under this Agreement will be excluded from arbitration' is opaque about the effect of an opt-out on related transactions.",
+    "reasoning_cat2": "It conflicts with the Definition of Claim (c017), which sweeps in prior agreements and the actions of third parties, and with c009's reference to 'reject[ing]' the arbitration agreement, so the scope and vocabulary of opting out are not uniform across the instrument.",
+    "prob_cat1": 0.35,
+    "prob_cat2": 0.37
+  },
+  {
+    "clause_id": "c022",
+    "reasoning_cat1": "Plain explanatory language about the consequences of arbitration; 'neither you nor we' omits Lender, but the sentence is otherwise definite.",
+    "reasoning_cat2": "It overlaps with the separate jury waiver in c009, which operates in litigation and disclaims any effect on the arbitration agreement, so the two jury provisions must be read together.",
+    "prob_cat1": 0.15,
+    "prob_cat2": 0.19
+  },
+  {
+    "clause_id": "c023",
+    "reasoning_cat1": "Emphatic and repetitive but definite; the only friction is that the waiver is expressed as conditional ('If either you, we, or Lender ... choose arbitration') while the sentences that follow state an unconditional prohibition on class procedure.",
+    "reasoning_cat2": "The conditional opening sits against c016's unconditional agreement to arbitrate and against the opt-out right in c021, but the severability sentence in c024 largely absorbs the strain.",
+    "prob_cat1": 0.24,
+    "prob_cat2": 0.19
+  },
+  {
+    "clause_id": "c024",
+    "reasoning_cat1": "A standard severability and conflict-precedence sentence, definite in operation.",
+    "reasoning_cat2": "It overlaps with the general severability/reformation clause in c028, which requires reformation 'if practicable' rather than mere excision, so two different severance regimes apply to the arbitration text.",
+    "prob_cat1": 0.13,
+    "prob_cat2": 0.18
+  },
+  {
+    "clause_id": "c025",
+    "reasoning_cat1": "'Governed by ... the Federal Arbitration Act' as an exception to Texas law is imprecise, since the FAA supplies no rules of contract formation or unconscionability, leaving the applicable law for those questions unstated.",
+    "reasoning_cat2": "It must be read with c019 ('This arbitration agreement shall be governed by the Federal Arbitration Act') and c013's interstate-commerce stipulation; the residual role of Texas law in deciding whether an arbitration agreement was formed is the live gap.",
+    "prob_cat1": 0.24,
+    "prob_cat2": 0.24
+  },
+  {
+    "clause_id": "c026",
+    "reasoning_cat1": "A cautionary statutory-style notice with no operative obligations; its content is advisory rather than construable.",
+    "reasoning_cat2": "Its warning that the product meets only 'immediate short-term cash needs' points differently from the instalment structure and refinancing machinery in c002 and c004, a mild recital-versus-operative tension.",
+    "prob_cat1": 0.08,
+    "prob_cat2": 0.14
+  },
+  {
+    "clause_id": "c027",
+    "reasoning_cat1": "Pure regulatory contact information with no operative effect.",
+    "reasoning_cat2": "It sits alongside, and does not conflict with, the pre-suit notice requirement in c011 or the arbitration agreement.",
+    "prob_cat1": 0.05,
+    "prob_cat2": 0.09
+  },
+  {
+    "clause_id": "c028",
+    "reasoning_cat1": "'The entire agreement between you and us relating to the subject matter of this Agreement' is circular, and 'reformed if practicable so as to achieve its intended purpose(s)' is an indeterminate savings standard.",
+    "reasoning_cat2": "The merger claim is difficult to square with the separate Credit Services Disclosure Statement, the loan agreement with the Lender and the two Notices of Cancellation that c029 and c030 treat as part of the transaction, and its reformation rule differs from the arbitration severability rule in c024.",
+    "prob_cat1": 0.23,
+    "prob_cat2": 0.36
+  },
+  {
+    "clause_id": "c029",
+    "reasoning_cat1": "A string of acknowledgments and warranties in one sentence, including the vague warranty that the customer has 'no intention to file a petition' in bankruptcy and that the account is 'legitimate, open, and active'.",
+    "reasoning_cat2": "The certification that the form was received 'WITH ALL NECESSARY SPACES COMPLETED' cannot be reconciled with the wholly blank economic terms in c004, and the account warranty in (e) sits against c012's bar on pursuing criminal charges over a security check.",
+    "prob_cat1": 0.31,
+    "prob_cat2": 0.45
+  },
+  {
+    "clause_id": "c030",
+    "reasoning_cat1": "'BEFORE MIDNIGHT OF THE THIRD DAY AFTER THE DATE OF THE TRANSACTION' fixes the deadline by reference to 'the transaction', a term the Agreement never defines.",
+    "reasoning_cat2": "It conflicts with the attached Notices of Cancellation (c031), which measure the same right as 'within three days after the date the contract is signed', so two different triggers and two different formulations govern one cancellation right.",
+    "prob_cat1": 0.21,
+    "prob_cat2": 0.41
+  },
+  {
+    "clause_id": "c031",
+    "reasoning_cat1": "'Within three days after the date the contract is signed' is a clear enough period on its own, though it does not say whether the third day itself counts.",
+    "reasoning_cat2": "It states the deadline differently from the operative NOTICE in c030 ('before midnight of the third day after the date of the transaction'), an inconsistency in the same instrument about when the cancellation right lapses.",
+    "prob_cat1": 0.17,
+    "prob_cat2": 0.39
+  },
+  {
+    "clause_id": "c032",
+    "reasoning_cat1": "A short, definite promise to return 'any payment made by you under this contract' within 10 days of receipt of the cancellation notice.",
+    "reasoning_cat2": "It sits against c004's statement that the CAB fee 'is earned in advance at the inception of the loan' and against c006's automatic revocation of the LOC, leaving the interaction of cancellation, earned fees and the Lender's loan unresolved.",
+    "prob_cat1": 0.11,
+    "prob_cat2": 0.24
+  },
+  {
+    "clause_id": "c033",
+    "reasoning_cat1": "The deadline is left blank ('not later than midnight on') and the seller's address is stated twice in a single garbled run-on, so the operative cut-off date is missing from the form.",
+    "reasoning_cat2": "The blank date is at odds with c029's certification that all necessary spaces were completed and with the fixed three-day periods stated in c030 and c031.",
+    "prob_cat1": 0.30,
+    "prob_cat2": 0.27
+  }
+]}

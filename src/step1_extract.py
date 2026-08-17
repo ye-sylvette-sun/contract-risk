@@ -8,7 +8,7 @@ discussed it — whatever the court decided. Reaching litigation at all is what
 makes a clause risky, so one the court examined and upheld counts just as much.
 
 Every block it sees is a contract now — which one is a contract was settled
-upstream, in step 0 (docs/DESIGN.md §4). What it still has to judge is which
+upstream, in step 0 (docs/DATASET.md §3). What it still has to judge is which
 CLAUSE was disputed, and it may legitimately answer "none": the opinion can turn
 on an agreement that was never filed.
 

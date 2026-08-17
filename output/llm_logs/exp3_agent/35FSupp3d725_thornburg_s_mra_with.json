@@ -1,0 +1,76 @@
+{
+  "contract_id": "35FSupp3d725_thornburg_s_mra_with",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 94,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 10,
+  "duration_ms": 277551,
+  "total_cost_usd": 1.6051695000000001,
+  "usage": {
+    "input_tokens": 125,
+    "cache_creation_input_tokens": 82584,
+    "cache_read_input_tokens": 362991,
+    "output_tokens": 23829,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 82584,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 40,
+        "cache_read_input_tokens": 103376,
+        "cache_creation_input_tokens": 7639,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7639
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1414,
+      "outputTokens": 14,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.0014839999999999999,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    },
+    "claude-opus-5": {
+      "inputTokens": 125,
+      "outputTokens": 23829,
+      "cacheReadInputTokens": 362991,
+      "cacheCreationInputTokens": 82584,
+      "webSearchRequests": 0,
+      "costUSD": 1.6036855,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "session_id": "882e380e-f9dd-4e69-a8e6-20728aff5641",
+  "errors": null,
+  "result": "I wrote 94 judgments (50 in `predictions_001.json`, 44 in `predictions_002.json`).",
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1786946400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

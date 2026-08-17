@@ -1,0 +1,124 @@
+{
+  "contract_id": "982FSupp2d518_2007_mta",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "pos1",
+    "c003": "neg2",
+    "c004": "pos2",
+    "c005": "neg3",
+    "c006": "pos3",
+    "c007": "neg4",
+    "c008": "neg5",
+    "c009": "neg6",
+    "c010": "neg7",
+    "c011": "neg8",
+    "c012": "neg9",
+    "c013": "neg10"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The preamble bundles an individual scientist and an institution into a single collective defined term \"Recipient\", so it is not clear whose acts bind whom, and the OCR-garbled definition parenthetical compounds the uncertainty.",
+      "reasoning_cat2": "Read against the signature block (separate lines for \"Recipient Scientist\" and \"Institution Official\") and against paragraph 3's reference to \"the Recipient's clinical facilities\", the collective definition mostly holds together, though the dual-signatory structure hints the parties treated them as distinct.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "\"Materials\" is defined to include \"progeny, portions, unmodified derivatives and any accompanying know-how or data\" — \"unmodified derivatives\", \"portions\" and \"progeny\" are exactly the terms that carry more than one reasonable biological/legal meaning, and the closing reference to \"altered forms of the Materials made by St. Jude\" sits oddly with the exclusion of modified derivatives from the definition.",
+      "reasoning_cat2": "Paragraph 3 expressly authorises the Recipient to produce a lentiviral vector clone \"incorporating Materials\", and paragraph 5 asserts St. Jude ownership of \"the Materials and any progeny thereof\", so whether the resulting modified construct is itself \"Materials\" is a live whole-instrument question this definition does not resolve.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.49,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "A conventional compliance-with-laws undertaking whose \"including, but not limited to\" catch-all is expansive rather than restrictive, so the general-vs-specific tension is slight.",
+      "reasoning_cat2": "Nothing in paragraphs 1, 3, 7 or 8 pulls against sole responsibility for receipt, storage, handling and use; the indemnity in paragraph 7 runs in the same direction.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "\"Sole purpose\", \"quantities sufficient to complete a Phase I clinical trial\", \"provided to a commercial entity\" and \"research that is subject to consulting or licensing obligations to another party\" are all boundary terms a court would have to fix, and the carve-out for U.S. government grantee obligations is an expressio unius invitation.",
+      "reasoning_cat2": "It sits directly against paragraph 5, which contemplates that the Recipient may file a patent application or \"commercialize a product\" derived from the Materials — a use paragraph 3's prohibition on commercial-entity involvement and licensing-encumbered research appears to forbid.",
+      "prob_cat1": 0.65,
+      "prob_cat2": 0.56,
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "A short obligation to furnish a copy of any publication and acknowledge the source; the only softness is \"experimental results obtained from the use of the Materials\", plus severe OCR corruption in the middle of the sentence.",
+      "reasoning_cat2": "Paragraph 5 imposes a separate pre-submission 30-day review right, and this clause speaks only of providing a copy after publication, leaving a mild overlap rather than a genuine conflict.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "\"Recipient agrees to contact St. Jude to determine ownership interests, if any\" states no substantive rule, and the following sentence (\"Ownership shall [follow] inventorship according to US patent law\") contradicts the opening acknowledgment of St. Jude's ownership of Materials and progeny; \"could not have been produced but for the use of the Materials\" is an open-ended reach.",
+      "reasoning_cat2": "Against paragraph 1 (no express or implied licenses granted) and paragraph 3 (no commercialisation or commercial-entity involvement without consent), this clause's assumption that the Recipient may patent and commercialise derived products is difficult to harmonise.",
+      "prob_cat1": 0.56,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "pos3"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "A standard all-caps warranty disclaimer and consequential-damages exclusion; its terms are definite, and the only defects are OCR artefacts rather than drafting ones.",
+      "reasoning_cat2": "It is misnumbered as a second \"5\", and paragraph 10 provides that \"Sections 5, 5 and 7 shall survive\", so which paragraph 5 survives — and whether this one does — is genuinely uncertain from the instrument as a whole.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.32,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "The indemnity is broad and one-sided (\"claims ... of any nature whatsoever\", \"arising out of or related to\") and contains no carve-out for St. Jude's own negligence, which is the usual point of construction in such clauses.",
+      "reasoning_cat2": "It coheres with paragraph 2 (sole responsibility), the warranty disclaimer, and paragraph 10's survival list, which expressly names section 7.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "The words and numerals disagree on their face: \"Three Million ($1,000,000) dollars aggregate\" is a mechanical error that changes the amount required, and \"occurrence basis, or claims made including tail coverage\" leaves the choice and duration of tail coverage undefined.",
+      "reasoning_cat2": "Paragraph 9 cross-refers to \"the insurance coverage set forth in section 8\" without repeating any figure, so nothing elsewhere in the MTA resolves the words/numerals mismatch, but nor does anything contradict the obligation.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "A narrow, mechanical certificate-of-insurance obligation triggered \"upon request\"; the two limbs are definite and the only obscurity is OCR damage to the romanettes.",
+      "reasoning_cat2": "Its cross-reference to section 8 is accurate and consistent with the numbering, unlike the survival clause's reference to \"Sections 5, 5 and 7\".",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "\"Sections 5, 5 and 7 shall survive\" is a mechanical error on its face, and the clause also speaks of \"expiration\" of an MTA that nowhere states a term, so both the survival list and the duration are indeterminate.",
+      "reasoning_cat2": "The contract contains two paragraphs numbered 5 (ownership/publication review and the warranty disclaimer) and an unnumbered final paragraph, so the survival list cannot be reconciled with the numbering of the instrument as a whole, and the duty to return \"all Materials and progeny\" collides with paragraph 3's authorised incorporation of Materials into a clinical-grade vector.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "Ordinary modification, non-waiver and severability boilerplate whose terms are definite and self-contained.",
+      "reasoning_cat2": "It carries no paragraph number of its own, so it may read as part of paragraph 10, which matters only marginally given paragraph 10's survival list already misfires; otherwise it conflicts with nothing.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "A plain administrative instruction on returning the countersigned copy; nothing in it is capable of two readings.",
+      "reasoning_cat2": "It matches the dual signature block and the preamble's request that both the scientist and an authorised institutional official agree, so it fits the instrument.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg10"
+    }
+  ]
+}

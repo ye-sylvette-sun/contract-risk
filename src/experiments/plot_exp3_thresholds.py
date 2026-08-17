@@ -24,12 +24,21 @@ The bottom row is what stops the top one being read too kindly: at a prevalence
 near 2%, a threshold that flags a third of the contract can still post a
 respectable recall.
 
-Input : output/exp3_llm_api_preds.csv
-Output: output/figures/exp3_threshold_curves.png
+The two experiments are named in parallel throughout, so every artefact of one
+has a counterpart of the other under the same stem:
+
+    exp3_<run>_preds.csv                 one row per provision
+    exp3_<run>/                          the model's returned judgments
+    llm_logs/exp3_<run>/                 request, response and usage per call
+    figures/exp3_<run>_threshold_curves.png
+
+with <run> being `llm_api` or `agent`.
 
 Usage:
-    python src/experiments/plot_exp3_thresholds.py
+    python src/experiments/plot_exp3_thresholds.py --run llm_api
+    python src/experiments/plot_exp3_thresholds.py --run agent
 """
+import argparse
 import csv
 import os
 import sys
@@ -43,7 +52,14 @@ csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT_DIR = os.path.join(ROOT, "output")
 FIG_DIR = os.path.join(OUT_DIR, "figures")
-PREDS = os.path.join(OUT_DIR, "exp3_llm_api_preds.csv")
+
+# The two experiments write the same columns, so one figure script serves both.
+RUNS = {
+    "llm_api": ("exp3_llm_api_preds.csv", "exp3_llm_api_threshold_curves.png",
+                "few-shot with judicial reasoning, one call per contract"),
+    "agent": ("exp3_agent_preds.csv", "exp3_agent_threshold_curves.png",
+              "few-shot with judicial reasoning, one agent session per contract"),
+}
 
 # (panel title, how to score a row, what counts as a positive)
 TASKS = [
@@ -67,7 +83,7 @@ INK2 = "#52514e"
 FLAG_DEFAULT = 0.5
 
 
-def load():
+def load(preds):
     """Every attempted clause, deduped on (contract_id, clause_id).
 
     A clause the model never returned a judgment for (`ok=0`) is kept, with
@@ -77,7 +93,7 @@ def load():
     toward the flag rate.
     """
     rows = {}
-    with open(PREDS, newline="", encoding="utf-8") as f:
+    with open(preds, newline="", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             key = (r["contract_id"], r["clause_id"])
             prev = rows.get(key)
@@ -104,7 +120,14 @@ def sweep(scored, thresholds):
 
 
 def main():
-    rows = load()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--run", choices=sorted(RUNS), default="llm_api",
+                    help="which experiment's predictions to plot")
+    args = ap.parse_args()
+    preds_name, fig_name, subtitle = RUNS[args.run]
+    preds = os.path.join(OUT_DIR, preds_name)
+
+    rows = load(preds)
     n_contracts = len({r["contract_id"] for r in rows})
     print(f"{len(rows)} clauses scored over {n_contracts} contracts")
     blank = [r for r in rows if r["ok"] != "1"]
@@ -166,7 +189,7 @@ def main():
     fig.suptitle("Precision, recall, and flag rate across risk-flagging thresholds",
                  fontsize=14, x=0.5, y=0.985)
     fig.text(0.5, 0.935,
-             f"Exp 3 — few-shot with judicial reasoning, one call per contract  ·  "
+             f"Exp 3 — {subtitle}  ·  "
              f"{len(rows)} clauses from {n_contracts} contracts  ·  "
              f"the two type panels are one-vs-rest",
              ha="center", fontsize=9.5, color=INK2)
@@ -180,7 +203,7 @@ def main():
 
     fig.tight_layout(rect=(0, 0, 1, 0.925))
     os.makedirs(FIG_DIR, exist_ok=True)
-    out = os.path.join(FIG_DIR, "exp3_threshold_curves.png")
+    out = os.path.join(FIG_DIR, fig_name)
     fig.savefig(out, facecolor="white", bbox_inches="tight")
     print(f"-> {out}")
 

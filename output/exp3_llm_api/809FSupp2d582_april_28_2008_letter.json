@@ -1,64 +1,78 @@
 {
   "judgments": [
     {
-      "clause_id": "pos1",
-      "reasoning_cat1": "The reserved \"Other Causes of Action\" are defined solely by a closed enumeration (mishandling of claims, improper reserves other than IBNR, improper closing of files, cessation of writing policies), so whether a later-asserted claim falls inside that label or outside it entirely is left to construction; the parenthetical carve-out \"(other than concerning the exclusion or misapplication of IBNR)\" and the phrase \"during the pendency of the Lawsuit\" add further boundary questions about when a separate suit becomes permissible.",
-      "reasoning_cat2": "Read against the preceding limitation paragraph, which confines Lincoln General's claims in the Lawsuit to two enumerated categories, and against the Defendants' reciprocal tolling paragraph, there is a genuine gap: claims that are neither within the two permitted categories nor within the enumerated \"Other Causes of Action\" have no stated treatment, and the tolling benefit runs only to the defined list. That mismatch between the scope-limitation clause and the reservation/tolling clause is the kind of whole-instrument tension a court would have to resolve.",
-      "prob_cat1": 0.63,
-      "prob_cat2": 0.44,
-      "gold": "risky_cat1",
-      "gold_subtype": "1.1",
-      "clause_name": "Unnumbered paragraph — \"Other Causes of Action\" reservation (April 30, 2008 letter)"
-    },
-    {
-      "clause_id": "neg1",
-      "reasoning_cat1": "The preamble simply identifies the signatories and the subject matter; the only soft spot is that \"Defendants\" is defined to include \"proposed additional defendant[s]\" not yet parties, which is a definitional oddity rather than a real ambiguity.",
-      "reasoning_cat2": "It is consistent with the operative paragraphs, which use \"Defendants\" and \"Lawsuit\" in the same sense, including the reciprocal paragraph stating Defendants do not concede they are proper parties.",
-      "prob_cat1": 0.14,
-      "prob_cat2": 0.11,
+      "clause_id": "c001",
+      "reasoning_cat1": "The preamble is a straightforward identification of parties and purpose; the only oddities are OCR-garbled names, and the phrase \"original and proposed additional defendants\" is descriptive rather than operative. Nothing in it fixes rights, so there is little for a court to construe beyond who is bound.",
+      "reasoning_cat2": "It is consistent with the operative paragraphs, which treat \"Defendants\" collectively and reserve the point that they may not be proper parties (see the last sentence of c005). No conflict with the scope-limitation or tolling provisions.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg1",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Preamble — Parties and Purpose"
     },
     {
-      "clause_id": "neg2",
-      "reasoning_cat1": "The limitation is expressed as an exhaustive list (\"limit the scope of its claims ... to the following\") but each item is then expanded by \"includes, but is not limited to\" and \"among other things,\" creating a classic general-vs-specific tension about how far the permitted claims reach.",
-      "reasoning_cat2": "Its fit with the following paragraph matters: claims that are neither within these two categories nor within the enumerated \"Other Causes of Action\" fall into an unaddressed space, which can make the two paragraphs hard to harmonise as a complete allocation of claims.",
-      "prob_cat1": 0.43,
-      "prob_cat2": 0.33,
+      "clause_id": "c002",
+      "reasoning_cat1": "The provision purports to \"limit the scope\" to two categories but then uses open-ended language — \"claims related to,\" \"includes, but is not limited to,\" \"among other things\" — so the reach of the enumerated list against the catch-all is genuinely uncertain, a classic general-vs-specific problem. Terms like \"pursuant to the reinsurance arrangement\" and \"other persons or entities\" further blur the boundary of what is inside the limited scope.",
+      "reasoning_cat2": "Read against c003, which bars claims for \"improper reserves ... (other than concerning the exclusion or misapplication of IBNR),\" the boundary between permitted IBNR claims and excluded reserve/claims-handling causes of action is hard to draw, creating a real harmonisation problem. That interaction is the most likely thing a court would have to reconcile in this short instrument.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg2",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Limitation of Scope of Lincoln General's Claims in the Lawsuit"
     },
     {
-      "clause_id": "neg3",
-      "reasoning_cat1": "The Excess Funds Claim(s) are defined with reasonable precision by reference to the 2002 and 2003 Quota Share Reinsurance Agreements, though \"the maximum profit margin to which U.S. Auto contends Lincoln General is entitled\" is a contention-based rather than objective boundary and the definitional quotation mark is misplaced.",
-      "reasoning_cat2": "It mirrors the Defendants' reciprocal paragraph on Other Causes of Action and is consistent with the final reservation-of-defenses paragraph, subject only to the general tension between the express res judicata waiver and the later blanket reservation of \"any and all applicable defenses.\"",
-      "prob_cat1": 0.21,
-      "prob_cat2": 0.16,
+      "clause_id": "c003",
+      "reasoning_cat1": "The definition of \"Other Causes of Action\" lists four specifics with a carve-out parenthetical, and \"mishandling of insurance claims\" and \"improper reserves\" are broad enough that whether a given claim falls inside the waiver or inside the reserved IBNR category is arguable. The final sentence (\"may not be filed ... during the pendency of the Lawsuit\") is definite in itself but its interaction with the reservation of rights is where argument would arise.",
+      "reasoning_cat2": "Its exclusion of reserve-setting claims must be squared with c002's affirmative inclusion of IBNR miscalculation claims, and with c005's reciprocal tolling; a party could plausibly say a claim is both reserved and waived. That specific overlap supports a moderate relational risk.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "pos1",
+      "gold": "risky_cat1",
+      "gold_subtype": "1.1",
+      "clause_name": "Unnumbered paragraph — \"Other Causes of Action\" reservation (April 30, 2008 letter)"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "The Excess Funds Claim definition is anchored to specific documents (the 2002/2003 Quota Share Agreements) and the waiver/tolling language is fairly precise, though \"claims (including, but not limited to a breach of contract claim)\" and \"settled or otherwise finally resolved\" leave some open edges. The sentence preserving limitations defenses \"which may exist immediately before this agreement is executed\" is awkward but workable.",
+      "reasoning_cat2": "It sits in tension with c006, which reserves to Lincoln General \"any and all applicable defenses\" against a later-filed suit even though c004 expressly waives res judicata and collateral estoppel and concedes the claims arise from a different nucleus of facts. That is a nameable, if reconcilable, conflict.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg3",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Excess Funds Claim(s) — Separate Lawsuit, Waiver and Tolling"
     },
     {
-      "clause_id": "neg4",
-      "reasoning_cat1": "The reciprocal undertaking is definite in its operative terms — no same-nucleus argument, waiver of preclusion, tolling until final resolution — and the only vagueness is the borrowed defined term \"Other Causes of Action\" rather than any wording of its own.",
-      "reasoning_cat2": "It tracks the Excess Funds paragraph closely and depends on the definition supplied by the reservation paragraph; the blanket reservation of defenses in the last paragraph sits in mild tension with the express preclusion waiver here.",
-      "prob_cat1": 0.13,
-      "prob_cat2": 0.2,
+      "clause_id": "c005",
+      "reasoning_cat1": "The reciprocal undertaking mirrors c004 in definite terms — no same-nucleus, no res judicata/collateral estoppel, tolling until final resolution — and the only soft phrase is \"in general\" in the non-concession sentence. Little to construe on its own wording.",
+      "reasoning_cat2": "Its non-concession that Defendants are proper parties, and its reservation of pre-execution limitations defenses, sit alongside c006's broad reservation of all defenses; the fit is workable but the overlap with the express res judicata waiver could be argued. Otherwise it is consistent with c003's definition of Other Causes of Action.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg4",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Defendants' Reciprocal Agreement — Other Causes of Action, Waiver and Tolling"
     },
     {
-      "clause_id": "neg5",
-      "reasoning_cat1": "The language is a conventional no-admission and reservation clause; \"any and all applicable defenses or affirmative defenses\" is broad but self-limiting by the word \"applicable.\"",
-      "reasoning_cat2": "It sits against the express relinquishment of res judicata and collateral estoppel defenses and the limitations tolling in the two preceding paragraphs, so a party could argue the general reservation restores defenses those paragraphs waived — a specific, if resolvable, tension.",
-      "prob_cat1": 0.19,
-      "prob_cat2": 0.31,
+      "clause_id": "c006",
+      "reasoning_cat1": "\"May assert any and all applicable defenses or affirmative defenses\" is a broad catch-all whose reach — whether it swallows back the defenses expressly waived — is genuinely uncertain, and the sentence is grammatically damaged (a missing word before \"allegations\"). The word \"applicable\" is the pivot on which the two readings turn.",
+      "reasoning_cat2": "This directly rubs against c004 and c005, which expressly relinquish res judicata and collateral estoppel defenses and toll limitations; a party invoking \"any and all applicable defenses\" would be met by those waivers. Naming that specific conflict justifies a moderately elevated relational score.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.46,
+      "dataset_clause_id": "neg5",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "No Acknowledgment of Merit; Reservation of Defenses"
     }
-  ]
+  ],
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "pos1",
+    "c004": "neg3",
+    "c005": "neg4",
+    "c006": "neg5"
+  }
 }

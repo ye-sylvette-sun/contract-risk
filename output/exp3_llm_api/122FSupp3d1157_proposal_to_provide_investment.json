@@ -1,64 +1,78 @@
 {
   "judgments": [
     {
-      "clause_id": "neg1",
-      "reasoning_cat1": "The letter is aspirational sales language — \"broad based, high quality investment banking services,\" \"unparalleled auction rate performance,\" \"a sincere desire\" — none of which sets a definite obligation, so a court would likely treat it as puffery rather than construe it, though phrases like \"commitment and depth of services that we are prepared to provide\" are vague. There is no enumerated-list-versus-catch-all tension and no operative term whose boundary must be drawn.",
-      "reasoning_cat2": "Read against the substantive sections (firm overview, capital formation, CSM model), the letter is consistent introductory framing and does not contradict any service description. It functions like a recital to a proposal, and I found no operative provision it pulls against.",
-      "prob_cat1": 0.14,
-      "prob_cat2": 0.09,
+      "clause_id": "c001",
+      "reasoning_cat1": "The letter is built on evaluative, boundary-less terms — \"unparalleled auction rate performance,\" \"high quality,\" \"unique idea generation,\" \"a sincere desire\" — none of which has an applicable standard, so a court could be asked whether they are actionable undertakings or mere sales puffery. That named vagueness is precisely the kind of term a dispute would turn on in a suit over auction-rate services.",
+      "reasoning_cat2": "Read against the body of the proposal, which describes services and tools but nowhere states any binding obligation, disclaimer, or scope limit, the letter's promissory tone sits uneasily with a document that is only a response to an RFP. I found no directly contradicting operative clause, so the concern is a soft whole-instrument tension rather than a named conflict.",
+      "prob_cat1": 0.54,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg1",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Cover letter – proposal for underwriting services"
     },
     {
-      "clause_id": "neg2",
-      "reasoning_cat1": "This is a garbled OCR rendering of an RFP question with a bulleted list of service categories (\"Liquidity and credit support,\" \"Counter-party on derivative transactions\"), and the scrambled text makes it hard to tell which items belong to the question versus the list. It is a heading/list rather than an operative promise, so there is little for a court to construe beyond scope of the enumerated services.",
-      "reasoning_cat2": "The list corresponds to the service areas later described (capital formation, underwriting, remarketing, auction agent, derivatives) and matches the enumeration in the \"integrated approach\" passage. No inconsistency with the rest of the document appears.",
-      "prob_cat1": 0.16,
-      "prob_cat2": 0.07,
+      "clause_id": "c002",
+      "reasoning_cat1": "This is a garbled reproduction of the RFP's question and its bulleted service list; the OCR damage aside, the enumeration of specific services (remarketing, auction agent, derivatives counter-party, liquidity and credit support) alongside the open-ended \"capabilities and experience in the following key services\" leaves the list's closed or illustrative character unclear.",
+      "reasoning_cat2": "The list of services matches those recited later in the integrated-approach section, so it is broadly consistent with the rest of the document; no provision contradicts it.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg2",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "1. Key services and value created for health care clients"
     },
     {
-      "clause_id": "neg3",
-      "reasoning_cat1": "The statements \"Our clients' interests always come first\" and \"focusing on what is best for the client rather than what produces the next trade\" are exactly the kind of phrase a party could argue creates a duty while the drafter calls it puffery, and \"clients' interests always come first\" has no defined boundary. That gives a court a named term with two reasonable readings.",
-      "reasoning_cat2": "It incorporates Appendix A (Business Principles) and sits alongside the transactional underwriting descriptions elsewhere; a claim that these principles create fiduciary obligations would sit uneasily with an arm's-length underwriting proposal. I could not point to a specific contrary operative clause in the text supplied, so the relational risk is modest.",
-      "prob_cat1": 0.42,
-      "prob_cat2": 0.22,
+      "clause_id": "c003",
+      "reasoning_cat1": "The quoted Business Principle \"Our clients' interests always come first\" and the claim of \"focusing on what is best for the client rather than what produces the next trade\" are open to two readings — an aspirational marketing statement or an assumed duty of loyalty — and the phrase can be named precisely.",
+      "reasoning_cat2": "It incorporates Appendix A by reference into a document that otherwise creates no obligations and contains no standard-of-care or disclaimer clause, which leaves the principles' operative status unresolved; I could not point to a specific contradicting provision in the text supplied.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg3",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Firm overview and business principles"
     },
     {
-      "clause_id": "neg4",
-      "reasoning_cat1": "This is descriptive marketing prose listing past services (\"strategic capital planning, credit strategy, rating agency and investor relations...\"), with the hedge \"illustrative list of certain of our\" clients making it plainly non-exhaustive and non-binding. Nothing here fixes an obligation whose boundary would need construing.",
-      "reasoning_cat2": "It is consistent with the client table that follows and with the service enumeration in the RFP response; no other passage conflicts with it.",
-      "prob_cat1": 0.09,
-      "prob_cat2": 0.05,
+      "clause_id": "c004",
+      "reasoning_cat1": "The wording is descriptive history — client focus, an \"illustrative list,\" and a recital of services previously provided — and \"similar to those sought by Presbyterian\" is loose but carries no operative consequence.",
+      "reasoning_cat2": "The listed service categories track those in the following section on service areas, so it harmonises with the rest of the proposal.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg4",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Experience with integrated healthcare delivery systems"
     },
     {
-      "clause_id": "neg5",
-      "reasoning_cat1": "It enumerates \"the service areas desired by Presbyterian\" — capital formation, underwriting, remarketing, auction agent/broker-dealer, derivatives, strategic advisory, credit enhancement — as a closed list, and the claim to be \"a leader and innovator in each\" is unquantifiable puffery. The mild general-versus-specific question is whether this list defines the engagement's scope.",
-      "reasoning_cat2": "The list broadly tracks the bulleted services in the RFP question but is not identical in wording (e.g., merger/acquisition assistance and liquidity support), which is a minor mismatch rather than a genuine conflict. Otherwise it fits the document as a whole.",
-      "prob_cat1": 0.18,
+      "clause_id": "c005",
+      "reasoning_cat1": "\"[L]eader and innovator in each of the service areas desired by Presbyterian\" is a superlative claim with no measurable content, and it is followed by a semicolon-separated enumeration whose closed-list character is uncertain.",
+      "reasoning_cat2": "The enumerated areas correspond to the RFP service list reproduced earlier, so there is no inconsistency with the document as a whole.",
+      "prob_cat1": 0.25,
       "prob_cat2": 0.11,
+      "dataset_clause_id": "neg5",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Integrated approach across service areas"
     },
     {
-      "clause_id": "neg6",
-      "reasoning_cat1": "The description of the CSM model is factual and hedged (\"can assist,\" \"has the capability\"), and the visible defects (\"cost of capitat,\" \"struchlring,\" the truncated final sentence) are OCR artifacts rather than drafting errors that change meaning. There is no named term whose boundary a court would have to fix.",
-      "reasoning_cat2": "It elaborates the capital-formation service promised in the cover letter and service list and does not contradict any other passage. Consistent with the whole.",
-      "prob_cat1": 0.11,
-      "prob_cat2": 0.06,
+      "clause_id": "c006",
+      "reasoning_cat1": "The passage is a technical description of the CSM model in capability language (\"can assist,\" \"has the capability to\"), which is definite as description but promises no outcome; the sentence breaks off mid-clause at \"lend,\" a truncation rather than a meaning-changing error.",
+      "reasoning_cat2": "Nothing elsewhere in the proposal limits or contradicts the model description, and it fits the capital-formation service claims made in the preceding section.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg6",
       "gold": "not_risky",
       "gold_subtype": "none",
       "clause_name": "Capital formation strategies and Capital Structure Management Model"
     }
-  ]
+  ],
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6"
+  }
 }

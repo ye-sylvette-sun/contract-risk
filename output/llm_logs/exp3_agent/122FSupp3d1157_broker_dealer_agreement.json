@@ -1,0 +1,76 @@
+{
+  "contract_id": "122FSupp3d1157_broker_dealer_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 42,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 10,
+  "duration_ms": 186192,
+  "total_cost_usd": 1.0233500000000002,
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 50078,
+    "cache_read_input_tokens": 296556,
+    "output_tokens": 14909,
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 50078,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 72879,
+        "cache_creation_input_tokens": 5629,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5629
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-haiku-4-5-20251001": {
+      "inputTokens": 1412,
+      "outputTokens": 17,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.001497,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    },
+    "claude-opus-5": {
+      "inputTokens": 14,
+      "outputTokens": 14909,
+      "cacheReadInputTokens": 296556,
+      "cacheCreationInputTokens": 50078,
+      "webSearchRequests": 0,
+      "costUSD": 1.0218530000000001,
+      "contextWindow": 200000,
+      "maxOutputTokens": 32000
+    }
+  },
+  "session_id": "59e9c828-35b6-4ca4-a105-6d4a16e3de03",
+  "errors": null,
+  "result": "42 judgments written.",
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1786946400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

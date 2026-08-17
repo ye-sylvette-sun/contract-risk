@@ -6,8 +6,8 @@ column run together, from two passages that have nothing to do with each other.
 The text is not damaged in a way any later step can repair, and it is not
 detectably wrong to a step that reads one clause at a time — the anchors match,
 the line range is real, and the extracted "clause" is two unrelated halves of
-two clauses, alternating line by line. docs/DESIGN.md §8 named this the failure
-the design cannot see. This step is where it is caught: before step 1 spends a
+two clauses, alternating line by line — the failure the rest of the design
+cannot see (docs/DATASET.md §3, step 0b). This step is where it is caught: before step 1 spends a
 call on the document, and before anything cut from it reaches the dataset.
 
 It is a screen, not a judgement about the contract, so it does not run on MODEL.
@@ -20,8 +20,9 @@ measured first (a run of blank space at the same column position on consecutive
 lines). It separates cleanly at the top — the worst offender scores highest —
 but it cannot be made to catch a document whose left column is often empty
 without also flagging a quarter of the corpus, including contracts that have
-already been inventoried and read fine. The measurements are in docs/DESIGN.md
-§8. The model sees what the rule cannot: that the two halves of the line are
+already been inventoried and read fine. The thresholds both halves use are set
+from those measurements, and are the constants at the top of this file. The model
+sees what the rule cannot: that the two halves of the line are
 unrelated *text*, which is the actual definition of the fault.
 
 Nothing here is deleted. A rejected contract keeps its file and its registry
