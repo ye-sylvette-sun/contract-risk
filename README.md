@@ -13,6 +13,8 @@ model to predict the labels.
   built, the columns, the known limits.
 - **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** — the prediction experiment: two
   runs, what the model is given, how it is scored.
+- **[docs/REPORT.md](docs/REPORT.md)** — the findings: what the agentic harness
+  bought, how robust it is, and what the session logs do and do not explain.
 
 This README is the repo tour and how to run it.
 
