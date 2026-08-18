@@ -142,6 +142,8 @@ Named in parallel, with `<run>` being `llm_api` or `agent`:
 output/exp3_<run>_preds.csv                    one row per provision, both runs
 output/exp3_<run>/<cid>.json                   returned judgments + the id map
 output/llm_logs/exp3_<run>/<cid>.json          request, response, token usage
+output/llm_logs/exp3_agent/<cid>.trajectory.jsonl  every tool call and thinking
+                                               block of the session
 output/figures/exp3_<run>_threshold_curves.png the three panels
 output/exp3_agent_ws/<cid>/                    the agent's workspace, kept
 ```

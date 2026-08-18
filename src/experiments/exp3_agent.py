@@ -40,6 +40,7 @@ Output: output/exp3_agent_preds.csv      one row per provision, same schema
         output/exp3_agent/<cid>.json     the agent's returned judgments
         output/exp3_agent_ws/<cid>/      the workspace it worked in
         output/llm_logs/exp3_agent/<cid>.json   session cost, usage, turns
+        output/llm_logs/exp3_agent/<cid>.trajectory.jsonl  every tool call
 
 Usage:
     python src/experiments/exp3_agent.py --limit 1      # pilot, measure cost
@@ -447,6 +448,32 @@ async def top_up(cid, root, real_of, clauses, judged, system_prompt, limits,
     return judged, res
 
 
+def save_trajectory(cid, root, session_id):
+    """Copy the session's own transcript into the run's logs.
+
+    The SDK hands back a ResultMessage — turns, tokens, cost — and nothing about
+    what the agent actually did. The full trajectory (every tool call, every
+    thinking block, every file the agent read) is written by the Claude Code CLI
+    into its own store under ~/.claude/projects, keyed by the ABSOLUTE workspace
+    path and the session id. That is outside the repo, it is orphaned the moment
+    the repo moves, and it is the CLI's to rotate or clear.
+
+    Since it is the only record of HOW an answer was reached, it is copied in
+    beside the summary rather than left there. About 500 KB per contract.
+    """
+    if not session_id:
+        return
+    try:
+        from claude_agent_sdk import project_key_for_directory
+        src = (Path.home() / ".claude" / "projects"
+               / project_key_for_directory(str(Path(root).resolve()))
+               / f"{session_id}.jsonl")
+        if src.exists():
+            shutil.copyfile(src, LOGS / f"{cid}.trajectory.jsonl")
+    except Exception as e:                                       # noqa: BLE001
+        print(f"    ! could not save the trajectory: {type(e).__name__}: {e}")
+
+
 def stamp(unix):
     if not unix:
         return "?"
@@ -664,6 +691,7 @@ async def run(args):
             "n_provisions": len(clauses), **result,
             "rate_limits": {k: v.raw for k, v in limits.items()},
         }, ensure_ascii=False, indent=2, default=str), encoding="utf-8")
+        save_trajectory(cid, root, result.get("session_id"))
         (RAW / f"{cid}.json").write_text(json.dumps({
             "contract_id": cid, "_id_map": real_of,
             "judgments": [dict(j, dataset_clause_id=k) for k, j in judged.items()],
