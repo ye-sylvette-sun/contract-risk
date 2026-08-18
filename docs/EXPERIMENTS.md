@@ -159,43 +159,48 @@ Both runs cover all 6,461 clauses of all 64 contracts, with **no provision left
 unjudged on either side**, so this is a like-for-like comparison on identical
 clauses under identical ids.
 
-| | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged | best F1 | at t |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| `llm_api` | 0.869 | 0.311 | 0.21 | 0.46 | 4.6% | 0.35 | 0.57 |
-| `agent` | **0.914** | **0.451** | 0.27 | **0.66** | 5.0% | **0.48** | 0.56 |
+| | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
+|---|---:|---:|---:|---:|---:|
+| `llm_api` | 0.869 | 0.302 | 0.21 | 0.46 | 4.6% |
+| `agent` | **0.914** | **0.434** | **0.27** | **0.66** | 5.0% |
+
+PR-AUC is average precision with tied scores collapsed into one operating point.
+Both runs put many clauses on the same 0.01 grid value, and scoring tied rows
+individually inflates the figure.
 
 Per category, one-vs-rest:
 
 | | `llm_api` ROC / PR | `agent` ROC / PR | positives |
 |---|---|---|---:|
-| type 1 — intrinsic defect | 0.863 / 0.302 | 0.909 / 0.425 | 122 |
-| type 2 — relational defect | 0.958 / 0.140 | 0.960 / 0.240 | 12 |
+| type 1 — intrinsic defect | 0.863 / 0.294 | 0.909 / 0.410 | 122 |
+| type 2 — relational defect | 0.958 / 0.136 | 0.960 / 0.230 | 12 |
 
-**The agent run is better on every headline measure.** PR-AUC is ~45% higher, and
-at a nearly identical flag rate it finds two thirds of the litigated clauses
-against under a half. Both runs put their best operating point in the same place
-(t ≈ 0.56), so the gap is not an artefact of threshold choice. The margin held
-steady from the first 18 shared contracts to all 64.
+**The agent run is better on every headline measure**, and at a nearly identical
+flag rate it finds two thirds of the litigated clauses against under a half.
+Bootstrapping by contract — the honest unit, since clauses within a contract are
+not independent — the ROC gain is +0.046 (95% CI [+0.001, +0.092]) and the PR
+gain +0.132 (95% CI [+0.006, +0.258]). Both clear zero, but barely. Per contract
+the agent wins 23, loses 11 and ties 14 (sign test p = 0.058); per clause, 33
+positives cross 0.5 only in the agent run against 6 only in the API run
+(McNemar p = 0.00001). So the recall gain is solid and the ranking gain is real
+but wide.
 
-**Why**, from the session transcripts: it is not simply that the agent can search.
-On the contract where it wins most it made eight tool calls and never grepped —
-it read the same contract, the same examples and the same provision list the
-one-shot call was handed. What differs is that the work is split across 12.8 turns
-on average, each with its own reasoning budget and a narrow focus, and each batch
-of answers written just after the relevant part of the contract was re-read. The
-one-shot call must emit every judgment in a single generation after one pass; on a
-68-provision contract that is 247 output tokens per provision against the agent's
-376. Search does appear, but only on the largest documents — on the 418-provision
-credit agreement the agent ran 4 greps batch-checking defined terms.
-
-That shows up in the reasoning text. For one clause a court did construe, the
-one-shot answer named a single cross-reference and scored 0.27; the agent named
-four (`B.1.a of CP 10 30`, `Loss Payment E.4.b`, `Valuation E.7.b`,
-`Replacement Cost G.3.f`) and scored 0.63. Category 2 asks about relationships,
-and how many relationships get checked tracks the budget spent per provision.
+**Why is unresolved.** Search is not the answer — `Grep` was used 21 times across
+64 sessions and never in the median one, so the agent mostly reads the same
+material in the same order the one-shot call is handed. Extra compute is not
+enough either: 1.32× the output tokens overall, and on the largest contracts
+1.40× for a 3.4× PR-AUC difference. Degradation over a long single generation is
+not visible in the API's output — its reasoning text grows rather than shrinks
+through a document and does not become more repetitive. And no session property
+we can measure (turns, batches, tool calls, greps, tokens per clause) correlates
+with how much that session beat the API on its contract: every Spearman ρ is
+within ±0.08 of zero. The one surviving hypothesis is that batching lets the
+agent carry a cross-clause hypothesis, which is weakly supported — the advantage
+concentrates on contracts holding three or more positives. Full analysis in
+`REPORT.md`.
 
 **Shared weakness.** Both rank type 2 well (ROC ≈ 0.96) and calibrate it badly
-(PR 0.14 / 0.24 on 12 positives). Neither is usable as an absolute probability for
+(PR 0.14 / 0.23 on 12 positives). Neither is usable as an absolute probability for
 that category.
 
 ### Cost
