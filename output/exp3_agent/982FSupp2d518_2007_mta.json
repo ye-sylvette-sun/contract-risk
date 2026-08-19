@@ -1,0 +1,124 @@
+{
+  "contract_id": "982FSupp2d518_2007_mta",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "pos1",
+    "c003": "neg2",
+    "c004": "pos2",
+    "c005": "neg3",
+    "c006": "pos3",
+    "c007": "neg4",
+    "c008": "neg5",
+    "c009": "neg6",
+    "c010": "neg7",
+    "c011": "neg8",
+    "c012": "neg9",
+    "c013": "neg10"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The preamble defines \"Recipient\" collectively as Dr. June and the Trustees of the University of Pennsylvania, leaving open whether obligations bind the individual scientist, the Institute, or both jointly, and it describes the subject only as \"materials developed at St. Jude.\"",
+      "reasoning_cat2": "That loose description sits against paragraph 1's precise definition of \"Materials\" (the anti-CD19 construct plus progeny and unmodified derivatives), so a party could argue the introductory language sweeps more broadly than the operative definition, a recital-vs-operative tension.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The defined term stacks specifics (\"progeny, portions, unmodified derivatives\") with an open-ended add-on (\"any accompanying know-how or data\"), and \"unmodified derivatives\" and \"portions\" are exactly the boundary terms fought over when a recipient builds a new vector; the closing reference to \"altered forms of the Materials made by St. Jude\" is also opaque.",
+      "reasoning_cat2": "It must be read with paragraph 3 (use limited to producing a lentiviral vector clone \"incorporating Materials\") and paragraph 5 (St. Jude owns \"the Materials and any progeny thereof\"), which together make the reach of the definition determinative of ownership of downstream products.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "A conventional compliance covenant; the \"including, but not limited to\" human-subjects reference is illustrative rather than limiting and creates only faint general-vs-specific tension.",
+      "reasoning_cat2": "Nothing in paragraphs 3, 7 or 8 pulls against it; the indemnity in paragraph 7 reinforces rather than contradicts Recipient's sole responsibility.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "\"Sole purpose\" is tied to a long compound description (produce a GMP lentiviral vector clone for ex vivo autologous cell modification in quantities sufficient for a Phase I trial at Recipient's clinical facilities), and the sub-clauses add vague limits — \"provided to a commercial entity,\" \"used in research that is subject to consulting or licensing obligations\" — whose boundaries are the natural battleground.",
+      "reasoning_cat2": "It interacts directly with paragraph 1 (no implied licenses) and paragraph 5 (ownership/publication review): whether a corporate-sponsored trial or transfer of a derived vector breaches the \"sole purpose\" turns on how those provisions are harmonised.",
+      "prob_cat1": 0.71,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "A short, plain obligation to supply publications and give attribution; the only softness is what counts as a publication \"containing experimental results obtained from the use of the Materials\" (and the text is OCR-garbled).",
+      "reasoning_cat2": "It overlaps with paragraph 5's separate requirement of 30 days' pre-submission review, and the survival clause in paragraph 10 lists \"Sections 5, 5 and 7\" without clearly saying whether paragraph 4 or which paragraph 5 survives.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "The paragraph first asserts St. Jude's ownership of Materials and progeny, then says only that Recipient will \"contact St. Jude to determine ownership interests, if any,\" and finally that \"ownership shall follow inventorship according to US patent law\" — three different ownership rules whose interaction is genuinely uncertain, and \"could not have been produced but for the use of the Materials\" is an open-ended trigger.",
+      "reasoning_cat2": "Read against paragraph 1's broad definition of Materials and no-implied-licence sentence, and against paragraph 4's simple publication duty, the ownership and publication-review sentences are hard to reconcile into a single coherent scheme.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.48,
+      "dataset_clause_id": "pos3"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "The substance is a standard capitalised warranty disclaimer and consequential-damages exclusion, but it is misnumbered as a second \"5\" and the document skips 6 entirely — a mechanical numbering error carried into the operative text.",
+      "reasoning_cat2": "That numbering error matters because paragraph 10 purports to make \"Sections 5, 5 and 7\" survive, so which paragraph 5 (ownership or disclaimer) survives termination is ambiguous on the face of the instrument.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "Broad but conventional indemnity language; \"arising out of or related to Recipient's acceptance, use and disposal\" and \"claims of any nature whatsoever\" are wide, yet the enumerated list is expressly non-limiting rather than in tension with a catch-all.",
+      "reasoning_cat2": "It coheres with paragraphs 2, 6 (disclaimer) and 8 (insurance), and no other provision carves back or contradicts the indemnity.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "The words and figures do not match — \"Three Million ($1,000,000) dollars aggregate\" — a classic mechanical error that changes the obligation's amount, and \"claims made including tail coverage\" is left as an unexplained alternative.",
+      "reasoning_cat2": "Paragraph 9 requires a certificate confirming \"the insurance coverage set forth in section 8,\" so the internal figure mismatch propagates, but no other provision independently contradicts it.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "A simple, mechanical certificate-and-notice requirement with a correct cross-reference and definite 30-day period; nothing to construe.",
+      "reasoning_cat2": "Its cross-reference to section 8 is accurate, though it inherits whatever ambiguity the section 8 dollar mismatch creates.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "\"Sections 5, 5 and 7 shall survive\" is a facial mechanical error (duplicate numeral, no section 6), and the return obligation covers \"all Materials and progeny\" without addressing derivatives or clinical material already administered.",
+      "reasoning_cat2": "Because the contract contains two paragraphs numbered 5 (ownership; warranty disclaimer), the survival list cannot be applied without construing the numbering, and the return-of-progeny duty sits awkwardly with paragraph 3's authorisation to produce vector for a Phase I trial.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "Standard no-oral-modification, non-waiver and severability boilerplate with definite terms; the phrase \"to the extent permitted by law\" is routine.",
+      "reasoning_cat2": "It is unnumbered, but no other provision purports to allow informal amendment or waiver, so it fits the instrument without conflict.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "Administrative closing language; its only softness is that it conditions delivery on \"receipt of the signed letter\" signed by Dr. June and an authorised institutional official.",
+      "reasoning_cat2": "Read with the preamble's definition of \"Recipient\" and the partially completed signature block, a question could arise about who is bound and when the MTA took effect, but no operative provision contradicts it.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg10"
+    }
+  ]
+}

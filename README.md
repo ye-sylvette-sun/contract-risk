@@ -13,8 +13,8 @@ model to predict the labels.
   built, the columns, the known limits.
 - **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** — the prediction experiment: two
   runs, what the model is given, how it is scored.
-- **[docs/REPORT.md](docs/REPORT.md)** — the findings: what the agentic harness
-  bought, how robust it is, and what the session logs do and do not explain.
+- **[docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)** — what the agent run is
+  isolated from, and how that is checked.
 
 This README is the repo tour and how to run it.
 
@@ -80,6 +80,9 @@ src/replay_anchors.py        re-score the locator against stored logs (no LLM, n
 
 src/experiments/exp3_llm_api.py          one API call per contract
 src/experiments/exp3_agent.py            one agent session per contract
+src/experiments/manifest.py              what the machine was, per run
+src/experiments/preflight.py             one session, then audit it for leakage
+src/experiments/compare_exp3.py          ROC, precision, recall, flag rate
 src/experiments/plot_exp3_thresholds.py  --run {llm_api,agent}
 
 output/cases.json        cases in scope, with keys, headnotes and codes
@@ -91,6 +94,9 @@ output/inventory.json    step 2 — every clause of every contract, and the flag
 output/llm_logs/<step>/  full prompt, response and usage for every call
 output/dataset.csv       the dataset
 output/exp3_<run>_*      the experiment's predictions, raw answers and figures
+output/llm_logs/exp3_agent/run_manifest_<stamp>.json
+                         SDK, CLI, interpreter, platform, git commit, the
+                         environment sweep, the options, and the input hashes
 ```
 
 `data/` and `contract_risk/` are gitignored — they are large and provided

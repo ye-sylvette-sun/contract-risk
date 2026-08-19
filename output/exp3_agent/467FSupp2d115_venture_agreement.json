@@ -1,0 +1,61 @@
+{
+  "contract_id": "467FSupp2d115_venture_agreement",
+  "_id_map": {
+    "c001": "pos1",
+    "c002": "neg1",
+    "c003": "neg2",
+    "c004": "neg3",
+    "c005": "neg4",
+    "c006": "neg5"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The funding promise — DMSA \"shall contribute the initial capital to launch the LLC in an amount that DMSA deems appropriate (including through travel, promotional costs ... and the labor of management and staff of DMSA)\" — is both self-judging and vague as to what counts as capital, and \"all expenditures must be done with the concurrence of DMSA\" sits awkwardly against LSB's stated authority over \"day-to-day operations\" and hiring. The mandatory distribution of \"at least enough cash to cover the owners' U.S. tax liability\" is also open-ended as to computation.",
+      "reasoning_cat2": "Paragraph 4 makes distributions run first to out-of-pocket costs and second to repay DMSA's \"initial capital,\" which can swallow the paragraph 1 promise that profits and mandatory tax distributions go pro rata, and paragraph 4's \"approved budget\" limit on expenditures conflicts with paragraph 1's \"concurrence of DMSA\" standard. Paragraph 1 also contemplates further agreements (right of first refusal, operating agreement in paragraph 6) that are never supplied.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The clause is markedly one-sided and internally strained: the parties \"shall through the LLC jointly pursue the Business,\" yet DMSA and its principals may keep and originate competing media and advertising business, while DMSA only \"intends to use diligent efforts\" (a statement of intention, not a covenant) and LSB is bound by an absolute exclusivity covenant with an undefined reach (\"to the extent it relates to the Business\"). \"Diligent efforts\" and \"appropriate business\" are precisely the sort of terms a court is asked to construe, and the imbalance invites construction against the drafter.",
+      "reasoning_cat2": "The permission for DMSA to retain competing advertising clients is hard to reconcile with paragraph 1's statement that the LLC is formed \"for the purpose of jointly developing\" the Business and with paragraph 5's confidentiality of client lists and prospects. Paragraph 3's reliance on DMSA staff compounds the tension between DMSA's freedom to compete and the venture's dependence on it.",
+      "prob_cat1": 0.61,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "A single sentence — \"The LLC will initially rely on the staffs of DMSA and Dialogo\" — with no definition of \"rely on,\" no duration for \"initially,\" no allocation of cost, and no statement of any enforceable obligation; it is vague at the boundary in the way a short phrase like \"Free land\" is.",
+      "reasoning_cat2": "Paragraph 1 defines \"Dialogo\" as the name of the LLC itself, so \"the staffs of DMSA and Dialogo\" is circular unless it means LSB's pre-existing publication, an incoherence visible only by reading paragraph 1; it also interacts with paragraph 1's cost provisions treating \"the labor of management and staff of DMSA\" as DMSA's capital contribution and with paragraph 4's approved-budget limit.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "The waterfall is garbled and uses undefined terms — \"any out of pocket costs,\" \"the initial capital to launch the LLC,\" and an \"approved budget\" that no provision of the agreement creates — and the final sentence trails off incomprehensibly, leaving its operative content uncertain.",
+      "reasoning_cat2": "Its priority for repaying DMSA's discretionary \"initial capital\" (paragraph 1 lets DMSA decide the amount and include its own staff labor) can be read to override paragraph 1's pro rata profit and mandatory tax distributions, and the \"approved budget\" limit does not match paragraph 1's requirement that expenditures have DMSA's concurrence.",
+      "prob_cat1": 0.5,
+      "prob_cat2": 0.46,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "A conventional mutual confidentiality clause, though the definition of \"Proprietary Information\" is a bare enumerated list (client lists, prospects, marketing, product, strategic, financial, supplier, billing and client-provided data) whose edges — and whether pre-existing DMSA information is covered — could be argued; the text is heavily corrupted but the substance is standard.",
+      "reasoning_cat2": "It coexists uneasily with paragraph 2's licence for DMSA to retain and originate advertising clients for its own benefit, since client lists and prospects are expressly Proprietary Information of the LLC, but the two can largely be harmonised.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "An agree-to-agree provision: the parties will execute articles of organization and an operating agreement on unspecified \"standard terms and conditions,\" a phrase with no content, which raises the classic question whether the venture agreement is a binding contract or a preliminary memorandum.",
+      "reasoning_cat2": "Paragraph 1 likewise contemplates a further right-of-first-refusal agreement, so key governance and transfer terms are left to documents never executed, which bears on whether paragraphs 1-5 are themselves enforceable.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg5"
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "contract_id": "122FSupp3d1157_broker_dealer_agreement",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "neg17",
+    "c018": "neg18",
+    "c019": "neg19",
+    "c020": "neg20",
+    "c021": "neg21",
+    "c022": "neg22",
+    "c023": "neg23",
+    "c024": "neg24",
+    "c025": "neg25",
+    "c026": "neg26",
+    "c027": "neg27",
+    "c028": "neg28",
+    "c029": "neg29",
+    "c030": "neg30",
+    "c031": "neg31",
+    "c032": "neg32",
+    "c033": "neg33",
+    "c034": "neg34",
+    "c035": "pos1",
+    "c036": "neg35",
+    "c037": "neg36",
+    "c038": "neg37",
+    "c039": "neg38",
+    "c040": "neg39",
+    "c041": "pos2",
+    "c042": "neg40"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The recital defines the four series as the \"Series 2004 Bonds\" and then, in the same breath, says they are \"sometimes referred to together herein as the 'Series 2004 Auction Bonds'\", creating two labels for one thing with no stated difference. \"Sometimes\" is an unusually loose definitional signal, though the amounts and series are otherwise precise.",
+      "reasoning_cat2": "Section 1.3(f) (c007) then says references to \"Bonds or Auction Bonds\" mean each series of Series 2004 Bonds and Series 2004 Auction Bonds, which is circular against this recital; the recital also names the Issuer as the New Mexico Hospital Equipment Loan Council while the notice provision (c034) addresses the Issuer as Hospital Services Corporation. That mismatch is a genuine, if peripheral, whole-instrument inconsistency.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "\"Certain duties set forth herein\" is deliberately open-ended, but as a recital it defers entirely to the operative text and names nothing to construe. There is no term whose boundary a court would have to fix.",
+      "reasoning_cat2": "Checked against Sections 2.3(b), 2.4(c) and 2.6(a), which supply BD's actual duties; the recital neither adds nor contradicts them. Only a faint risk that a party would invoke it to argue BD's duties are exhaustively \"set forth herein\" against implied obligations.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "The double \"except as provided therein\"/\"except as otherwise provided therein\" qualifications leave the Auction Rate description hedged, and \"May I, 2004\" is an obvious OCR/typographical slip for May 1. Neither qualification is itself operative here.",
+      "reasoning_cat2": "Checked against Section 2.1(a) and the incorporation clause 2.1(b): the recital's account of the Auction Rate is consistent with the Auction Procedures being followed by the Auction Agent. The recital simply describes the Indenture, which governs on its own terms.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "A straightforward factual recital of appointment and direction; \"bas\" is a scanning artefact, not a meaning-changing error. Nothing in it carries two readings.",
+      "reasoning_cat2": "Checked against the preamble (Auction Agent acting \"not in its individual capacity but solely as agent of\" the Trustee) and Section 3.1(a); the recital's reference to the Company's request and direction sits slightly oddly with the Trustee-agency framing but is reconcilable. No operative provision contradicts it.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "A single-clause statement of background fact with no defined term to fix or catch-all to bound. \"One or more\" is precise enough.",
+      "reasoning_cat2": "Consistent with Section 2.1(c), which expressly contemplates other Persons executing Broker-Dealer Agreements. Nothing to reconcile.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "\"Unless the context clearly requires otherwise\" is precisely the sort of escape hatch whose boundary cannot be drawn in advance, and it governs three heavily used defined operations (purchase, sale, holding). Its practical effect depends entirely on unstated context.",
+      "reasoning_cat2": "Checked against Section 2.5(b) and 2.6(a), which speak of Auction Bonds being delivered and paid for by Agent Members — book-entry mechanics that the beneficial-ownership gloss must accommodate rather than contradict. The fit is workable.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "The sentence equates \"Bonds\" and \"Auction Bonds\" with both \"Series 2004 Bonds\" and \"Series 2004 Auction Bonds\", which are already defined as the same instruments, producing a definition that explains nothing. A reader cannot tell whether any distinction between the two labels survives.",
+      "reasoning_cat2": "Read against the opening recital (c001), where the identical set of bonds carries both names, and against Section 2.1(a)'s series-by-series Auction Rate determination; the \"apply separately to each series\" sentence is the only real work done here. The overlap is untidy but does not produce an operative contradiction.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "A boilerplate authority-and-enforceability warranty with the standard \"assuming due authorization\" assumption; every term is conventional. Nothing invites construction.",
+      "reasoning_cat2": "Checked against Section 5.5 (successors and assigns) and 5.6 (amendment); no tension. The Company gives no matching warranty, but that asymmetry is not a conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "Definitional and mechanical; \"refened\" is an OCR artefact that changes nothing. \"Initial Periods\" is a defined-elsewhere term but not ambiguous on its face.",
+      "reasoning_cat2": "Checked against the incorporated Auction Procedures (2.1(b)) and the schedule in 2.3(a); the definition of \"Auction\" is used consistently throughout Sections 2.3 to 2.5. No inconsistency found.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "A flat incorporation-by-reference clause; \"in their entirety\" and \"to the same extent as if fully set forth\" are as definite as such clauses get. Neither the Auction Procedures nor the Settlement Procedures is defined in this document, so their content must be hunted elsewhere.",
+      "reasoning_cat2": "This is the hinge for Category 2: it pulls Exhibit B of the Indenture wholesale into an agreement that contains its own timetable in 2.3(a) and its own settlement duties in 2.6, with no order-of-priority clause anywhere in Section 5. Any divergence between the incorporated procedures and 2.3(a)/2.6 would have to be resolved by construction.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "\"BD agrees to handle customer orders in accordance with its respective duties under applicable securities laws and rules\" imports an undefined and shifting external standard into a contractual promise, and \"respective\" has no antecedent in a single-BD sentence. Whether that sentence creates a contractual duty coextensive with securities law, or merely acknowledges one, is genuinely arguable.",
+      "reasoning_cat2": "Checked against Section 3.1(b) and 5.10 (no implied duties) and against 2.1(d), which permits BD to bid for its own account: a promise to handle customer orders per securities-law duties sits uneasily beside an express licence to trade against those customers in the same Auction. That is the very tension auction-rate litigation turned on.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.32,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "\"May participate in Auctions for their own accounts\" is permissive but silent on purpose, volume or disclosure, so it does not say whether support bidding to prevent a failed auction is permitted, required or forbidden. The affiliate carve-out and the Company's power to \"prohibit all of the Broker-Dealers\" add further scope questions.",
+      "reasoning_cat2": "Set against Section 2.3(b), where BD contracts to implement Auctions \"thereby achieving the lowest possible interest rate\", own-account bidding that props up or shades the clearing rate is hard to reconcile; Section 3.1's no-implied-duties language protects only the Auction Agent, not BD. This pairing is the most likely locus of a construction fight in the instrument.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "A single timed notification duty with a defined deadline and named subject matter; \"other electronic communication acceptable to the parties\" is the only soft edge. Nothing meaningful turns on it.",
+      "reasoning_cat2": "Matches the 9:30 a.m. line of the 2.3(a) schedule exactly and is cross-referenced there. Fully harmonised.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "\"Customers that it believes are Existing Owners\" makes the obligation turn on BD's own belief, and the confidentiality carve-outs ((a)–(c)) include the elastic \"expose the Auction Agent to loss, liability, claim, damage or expense\". Those are soft, but the duty itself is clear.",
+      "reasoning_cat2": "Checked against 2.3(d)'s transfer notices and 2.5(b)'s rule that the acquiring Broker-Dealer stays the Broker-Dealer on off-Auction transfers; the ownership list feeds those provisions coherently. No conflict found.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "A precise deadline, subject matter and delivery method; \"as of the opening of business on such date\" is slightly loose as to which date but readable. Little to construe.",
+      "reasoning_cat2": "Checked against 2.3(d), which uses the same 3:00 p.m. Business-Day-preceding cut-off, and 2.4(b); the timings are consistent. No inconsistency.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "The BMA sentence sets a Submission Deadline of 11:30 a.m. \"instead of 1:00 p.m.\" while the table beneath it still prints 1:00 p.m. (and 11:00 a.m. for daily periods), and the table's \"as soon as practical after 1:00 p.m. (by 11:30 a.m. in the case of a daily Auction Period)\" row is internally impossible as printed. The unilateral change power (\"may be changed at any time by the Auction Agent at the written direction of the Company to reflect then currently accepted market practices\") is also undefined in reach.",
+      "reasoning_cat2": "The schedule expressly defers to Sections 202, 203(b) and 204 of Exhibit B of the Indenture, which are incorporated by 2.1(b), so any divergence between the printed table and the Indenture timetable must be resolved; Section 2.4(b) supplies a second, timing-free notice duty for the same changes. That layering is a real reconciliation problem.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "The parenthetical \"(and thereby achieving the lowest possible interest rate on the Series 2004 Auction Bonds)\" can be read as a mere statement of purpose or as a substantive performance standard binding BD, and \"lowest possible\" has no measurable boundary. \"Other relevant documents prepared for the purpose of disclosure\" is likewise undefined in scope.",
+      "reasoning_cat2": "Read with 2.1(d), which lets BD bid for its own account, and with 5.10/3.1(b)'s hostility to implied duties, a lowest-possible-rate obligation is difficult to harmonise with a Broker-Dealer trading on the other side of the same Auction. This is the clause a disappointed issuer would build a breach claim on.",
+      "prob_cat1": 0.53,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "A clear anti-netting rule with a form requirement; \"in such other form as may be reasonably acceptable to the Auction Agent\" is the only discretionary element and is bounded by reasonableness. Little scope for two readings.",
+      "reasoning_cat2": "Checked against the Order definitions and Settlement Procedures incorporated by 2.1(b) and Exhibit B forms referenced in 2.3(d); consistent. No conflict.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c019",
+      "reasoning_cat1": "Two specified notices tied to named exhibits with a firm 3:00 p.m. cut-off; \"is not required to accept\" leaves the Auction Agent discretion but says so plainly. Nothing ambiguous is named.",
+      "reasoning_cat2": "Section 2.6(a) makes departures from Auction results \"of no effect unless and until\" notice is given \"in accordance with the terms of Section 2.3(d)\", yet 2.3(d) permits the Auction Agent to refuse late notices — a small circularity worth noting. Otherwise the two fit.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c020",
+      "reasoning_cat1": "A results-notification duty keyed to paragraph (a) of the Settlement Procedures; \"as soon as reasonably practicable\" and \"if so requested\" are standard softeners. Nothing to construe.",
+      "reasoning_cat2": "Cross-checked with the 2.3(a) schedule (notice of results by approximately 3:00 p.m.) and the incorporated Settlement Procedures; consistent. No conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c021",
+      "reasoning_cat1": "One sentence, one duty, no qualifiers — but it states no deadline or manner for the notice. That silence is thin ground for a dispute.",
+      "reasoning_cat2": "Section 2.3(a) already requires notice of schedule changes to BD, the Company and the Trustee before the close of business on the Business Day preceding effectiveness, so 2.4(b) duplicates it without timing; a party could argue the two impose different standards. Duplication rather than contradiction.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c022",
+      "reasoning_cat1": "\"Take such other action as is required of BD pursuant to the Settlement Procedures\" is an open-ended catch-all appended to a specific notification duty, and its reach depends wholly on a document not reproduced here. That is a modest general-vs-specific concern.",
+      "reasoning_cat2": "Checked against 2.1(b), which incorporates the Settlement Procedures in their entirety, and 2.6(a), which sets out BD's settlement obligations expressly; the catch-all is consistent with both. No contradiction found.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c023",
+      "reasoning_cat1": "A pass-through delivery duty expressly measured by the Auction Agreement's own terms; \"after receipt\" is the only untimed element. Nothing genuinely ambiguous.",
+      "reasoning_cat2": "It defers to Section 2 of the Auction Agreement, a document not before the reader and not incorporated by 2.1(b) (which covers only the Auction and Settlement Procedures); that gap is a small integration risk. Otherwise consistent with 2.4(a).",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c024",
+      "reasoning_cat1": "\"May be adjusted from time to time with the approval of the Company upon a written request of the Broker-Dealer\" does not say whether approval may be withheld at will, whether the adjustment binds other Broker-Dealers, or whether the rate can move downward. The rate itself (.25 of 1% per annum) is precise.",
+      "reasoning_cat2": "Section 5.6(a) says the Agreement cannot be modified except by an instrument signed by every party and consented to by the Issuer and the Bond Insurer, yet 2.5(a) lets the fee rate — a core commercial term — change on the Company's approval alone. That is a specific conflict between two operative provisions.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c025",
+      "reasoning_cat1": "Long but arithmetically specific; the notable defect is the reference to \"the definition of 'Broker-Dealer' contained in the Series 2004 Auction Bonds\", which is a mechanical error — the definition sits in the Indenture. \"Conclusive absent manifest error\" also imports an undefined standard.",
+      "reasoning_cat2": "Section 2.1(c) expressly locates the \"Broker-Dealer\" definition in the Indenture, so this paragraph contradicts it on the face of the instrument; the daily-Auction-Period formula also folds the no-Auction case into item (5) rather than a separate (B) clause, unlike the first paragraph. Both are reconcilable by reading, but a court would have to do the reading.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c026",
+      "reasoning_cat1": "A one-line optional right; \"shall have the right to pay\" is clear, though it says nothing about subrogation, timing, or whether payment discharges the Company. \"Broker-Dealer fee\" is lower-cased against the defined \"Broker-Dealer Fee\" used elsewhere.",
+      "reasoning_cat2": "The Bond Insurer is never defined in this instrument yet appears here, in 5.5 (as third-party beneficiary and consent-holder on assignment) and in 5.6(a); the payment mechanics in 2.5(b) route all payment through the Company to the Auction Agent with no channel for an insurer payment. That leaves the mechanics of this right unprovided for.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c027",
+      "reasoning_cat1": "\"BD shall promptly deliver such funds to the party entitled to receive such funds\" makes BD an unconditional backstop for its customers' failures without naming a limit, and \"the party entitled\" is left to be worked out. The clause is otherwise carefully sequenced.",
+      "reasoning_cat2": "It expressly ties departures from Auction results to notice under 2.3(d), which in turn lets the Auction Agent refuse late notices, and it disclaims Auction Agent enforcement duties consistently with 3.1(a)–(b). The fit is workable but the 2.3(d) loop is slightly circular.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c028",
+      "reasoning_cat1": "A blanket disclaimer for four named parties over a described class of failures; \"or otherwise\" at the end is a catch-all whose reach beyond the Auction Procedures is unstated. That is the only soft edge.",
+      "reasoning_cat2": "The Company disclaims responsibility here while assuming an express payment obligation under 2.5(b) and the power to prohibit own-account bids under 2.1(d); the disclaimer is confined to owner/Agent Member delivery failures, so the two coexist. No real conflict located.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c029",
+      "reasoning_cat1": "\"Owes no duties, fiduciary or otherwise, to any other Person by reason of this Broker-Dealer Agreement\" is sweeping and, taken literally, would negate duties the same agreement expressly imposes. The literal breadth versus the intended no-implied-duty point is a genuine reading question.",
+      "reasoning_cat2": "Sections 2.2(a), 2.2(c), 2.4(a), 2.4(b) and 2.4(d) all impose express duties running from the Auction Agent to BD, a \"Person\" other than the Trustee; 3.1(b) reconciles this by limiting the disclaimer to implied duties, but 3.1(a)'s wording does not say so. That harmonisation exercise is exactly Category 2 territory.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c030",
+      "reasoning_cat1": "A conventional express-duties-only clause, tied to an identified incorporation provision. Nothing vague is named.",
+      "reasoning_cat2": "It expressly preserves duties \"incorporated herein by reference pursuant to Section 2.1(b)\", which cures the tension 3.1(a) creates; checked also against 5.10, which does the same job for the Company. Coherent.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.15,
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c031",
+      "reasoning_cat1": "The first sentence exculpates absent \"negligence or misconduct\" while the second exculpates good-faith errors of judgment unless the Agent was \"negligent in ascertaining the pertinent facts\" — two overlapping standards whose interaction is not spelt out, and \"misconduct\" is undefined (wilful? any?). That is nameable ambiguity.",
+      "reasoning_cat2": "It cross-refers to \"Section 3.2(d) hereof\", which does not appear anywhere in this instrument — a dangling cross-reference to delegation authority that would have to be construed or supplied. Read with 3.1(a)–(b) and 3.1(d), the liability scheme otherwise hangs together.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c032",
+      "reasoning_cat1": "\"Indemnity satisfactory to the Auction Agent\" and \"might, in its judgment, involve any expense or liability\" hand the Agent a subjective trigger that could excuse almost any legal step. The enumerated three items are otherwise specific.",
+      "reasoning_cat2": "Consistent with 2.2(b)(c), which uses the identical \"indemnity satisfactory to it\" formula, and with 3.1(a)–(c); no other provision compels the Agent to act at its own expense. No conflict.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c033",
+      "reasoning_cat1": "A classic ejusdem generis problem: \"circumstances beyond its reasonable control, including without limitation\" followed by an enumerated list of physical and civil catastrophes, leaving open whether market-wide events such as an auction-market collapse fall within it. The clause also breaks off mid-list in the instrument as filed.",
+      "reasoning_cat2": "Checked against 3.1(b)–(d) and the fixed deadlines in 2.2, 2.3(a) and 2.4; force majeure is the only relief valve for those timings, so its reach matters to the whole Section 2 timetable. No direct contradiction, but the interaction is untested.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c034",
+      "reasoning_cat1": "The clause speaks of \"notice to the other party\" and \"the other party\" in a three-party agreement, and as filed it gives addresses only for the Company and the Issuer — no address block for BD or the Auction Agent, whose officers the last sentence nevertheless designates. Telecopy notice is effective on transmission rather than receipt, a deliberate but consequential asymmetry.",
+      "reasoning_cat2": "The Issuer is defined in the first recital as the New Mexico Hospital Equipment Loan Council, yet the notice address here is \"HOSPITAL SERVICES CORPORATION\" — a direct mismatch with the defined term. \"BD Officer\" and \"Authorized Officer\" are also used without definition anywhere in the instrument.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.41,
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c035",
+      "reasoning_cat1": "An integration clause that integrates not just itself but \"the other agreements and instruments executed and delivered in connection with the issuance of the Series 2004 Auction Bonds\" — an unbounded set — and then denies any understanding \"oral, written or inferred\". \"Relating to the subject matter hereof\" and \"inferred\" both have contestable reach.",
+      "reasoning_cat2": "Read with 2.1(b), which incorporates the Auction and Settlement Procedures, and with 5.10, which reaches the Indenture and the Auction Agreement, the entire-agreement clause sweeps in documents whose terms are not before the parties and supplies no priority rule. Whether marketing or offering materials fall inside \"other instruments\" is precisely what an issuer and its broker-dealer would fight about.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c036",
+      "reasoning_cat1": "The clause enumerates who may enforce — Auction Agent, Bond Insurer, BD and their successors — then adds an exception for \"the rights expressly granted to the Issuer herein\", an expressio unius list with a carve-out that does not match the parties. Whether the omission of the Company is deliberate exclusion or drafting slip is the question.",
+      "reasoning_cat2": "The Company is a signatory in the preamble and holds express rights under 2.1(d) (prohibiting own-account Bids), 2.3(a) (directing schedule changes) and 2.5(a) (approving the fee rate), yet is absent from the list of Persons who may claim any right under the Agreement. That is a squarely nameable incoherence going to whether the Company can sue on this instrument at all.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.51,
+      "dataset_clause_id": "neg35"
+    },
+    {
+      "clause_id": "c037",
+      "reasoning_cat1": "A clear written-instrument-only amendment bar; \"modified, amended, rescinded, canceled or waived\" is comprehensive and the signature requirements are explicit. Nothing vague to name.",
+      "reasoning_cat2": "It requires the written consent of the Issuer and the Bond Insurer, neither of whom signs the Agreement and the latter of whom is nowhere defined, and it conflicts with 2.5(a)'s mechanism for adjusting the Broker-Dealer Fee Rate on the Company's approval alone. That fee-rate route is a specific end-run around this clause.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.32,
+      "dataset_clause_id": "neg36"
+    },
+    {
+      "clause_id": "c038",
+      "reasoning_cat1": "The clause preserves rights only \"with respect to any subsequent breach\", which by negative implication suggests non-exercise may waive rights as to the current breach — the opposite of what a no-waiver clause usually achieves. That inversion is a real, nameable reading problem.",
+      "reasoning_cat2": "Section 5.6(a) says the Agreement cannot be waived except by a signed writing, which cuts against any implied waiver of the present breach that 5.6(b)'s wording leaves open. The two subsections of the same section pull mildly against each other.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg37"
+    },
+    {
+      "clause_id": "c039",
+      "reasoning_cat1": "Standard severability with no reformation or essential-term proviso; every term is conventional. Nothing to construe.",
+      "reasoning_cat2": "Checked against 5.4 and 5.9; no provision is designated non-severable and none conflicts. Coherent.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg38"
+    },
+    {
+      "clause_id": "c040",
+      "reasoning_cat1": "Pure boilerplate counterparts language, universally understood. No ambiguity available.",
+      "reasoning_cat2": "Nothing elsewhere in the instrument bears on execution formalities beyond the signature page. No conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "dataset_clause_id": "neg39"
+    },
+    {
+      "clause_id": "c041",
+      "reasoning_cat1": "\"The United States District Court in the County of New York\" names a court that does not exist as described, and the sentence is ungrammatical (\"the parties agree that ... and that, in connection with any such action or proceeding, submit to the jurisdiction\"), so it is unclear whether the clause is exclusive, whether state courts are excluded, and whether federal subject-matter jurisdiction can be conjured. That is a mechanical error with real consequences for where suit may be brought.",
+      "reasoning_cat2": "Checked against 5.5 (Bond Insurer as third-party beneficiary) and 5.7; nothing else in the instrument addresses forum, so the defect is intrinsic rather than relational. The New York choice of law sits comfortably with a New Mexico issuer and obligor.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c042",
+      "reasoning_cat1": "The clause protects only the Company — not BD or the Auction Agent — and reaches into two other instruments (\"the Indenture or the Auction Agreement\"), so \"herein or therein\" spans documents whose express terms are not reproduced. Whether it also negates the implied covenant of good faith is arguable.",
+      "reasoning_cat2": "The Company nevertheless carries express obligations under 2.5(a)–(b) (paying the Broker-Dealer Fee) and discretionary powers under 2.1(d) and 2.3(a), and 3.1(b) gives the Auction Agent a parallel but separate no-implied-duties shield; a party could argue 5.10 immunises the Company's exercise of those discretions. That is a genuine reconciliation question across Sections 2, 3 and 5.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg40"
+    }
+  ]
+}
