@@ -15,6 +15,12 @@
 # manifest records the resolved path, its version, and what is on PATH, so the
 # two can never be confused again.
 #
+# `matplotlib` and `openpyxl` are host-side only — figures and spreadsheet
+# reading. Nothing a container session runs imports them, and the host that
+# drove these runs has matplotlib 3.11.1, because 3.8.4 has no wheel for
+# CPython 3.13 on Windows. The image installs the pin; the manifest records the
+# host. The versions that decide what a session does are the other two.
+#
 # Every one of these is recorded per run in
 # output/llm_logs/exp3_agent/run_manifest_<stamp>.json, along with the
 # interpreter, the platform, the git commit and the environment sweep.
