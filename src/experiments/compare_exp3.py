@@ -1,20 +1,12 @@
-"""The two runs side by side: ROC-AUC, precision, recall, flag rate.
-
-The results section used to state bootstrap confidence intervals, a sign test, a
-McNemar test and a table of Spearman correlations, none of which was produced by
-any script in `src/`. They are dropped rather than committed: at 134 positives in
-6,461 clauses they read a great deal into very little, and none changed what the
-comparison says.
-
-Reported per panel, per run:
+"""The two runs side by side, per panel:
 
   ROC-AUC     ranking quality, threshold-free
   precision   of what we flagged, how much was really litigated
   recall      of what was litigated, how much we flagged
   flag rate   what share of the contract a reader is asked to read
 
-The flag rate is what keeps the other two honest. At 2% prevalence a threshold
-that flags a third of the contract can post a respectable recall and be useless.
+The flag rate keeps the other two honest: at 2% prevalence a threshold that
+flags a third of the contract can post a respectable recall and be useless.
 
 The figure is the same sweep drawn out: `plot_exp3_thresholds.py --run <run>`.
 

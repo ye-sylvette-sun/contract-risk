@@ -1,24 +1,12 @@
 """What the machine was, when a run is read back a year later.
 
-The first agent run recorded the CLI version — it is on every line of every
-trajectory — and nothing else. Not the Python SDK version, not the interpreter,
-not the OS, not which environment variables were set, not the hashes of the
-prompt or the dataset the run was scored against. So the honest statement about
-it was "the prompt-visible context is verified clean; the process-level
-configuration is not verifiable from the published artefacts", which is not a
-statement anyone should have to make about their own experiment.
+One `run_manifest.json` per invocation, beside the run's logs, written TWICE:
+before the first session so a run that dies still says what it was, and again at
+the end with the outcome.
 
-This writes one `run_manifest.json` beside each run's logs. It is written TWICE:
-once before the first session, so a run that dies still says what it was, and
-again at the end with the outcome. Nothing in it is optional and nothing in it
-is expensive.
-
-Deliberately absent: the VALUES of environment variables. Only the names of what
-was removed are recorded — a manifest that leaks an API key would be a worse
-problem than the one it solves.
-
-Used by both experiments, so the two are comparable on provenance and not only
-on predictions.
+Deliberately absent: the VALUES of environment variables. Only names are
+recorded — a manifest that leaks an API key would be worse than the problem it
+solves. Used by both experiments, so they are comparable on provenance too.
 """
 import hashlib
 import json

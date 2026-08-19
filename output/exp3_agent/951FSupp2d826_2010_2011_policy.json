@@ -1,0 +1,493 @@
+{
+  "contract_id": "951FSupp2d826_2010_2011_policy",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "pos1",
+    "c012": "neg11",
+    "c013": "neg12",
+    "c014": "neg13",
+    "c015": "neg14",
+    "c016": "neg15",
+    "c017": "neg16",
+    "c018": "neg17",
+    "c019": "neg18",
+    "c020": "neg19",
+    "c021": "neg20",
+    "c022": "neg21",
+    "c023": "neg22",
+    "c024": "neg23",
+    "c025": "neg24",
+    "c026": "neg25",
+    "c027": "neg26",
+    "c028": "neg27",
+    "c029": "neg28",
+    "c030": "neg29",
+    "c031": "neg30",
+    "c032": "neg31",
+    "c033": "neg32",
+    "c034": "neg33",
+    "c035": "neg34",
+    "c036": "neg35",
+    "c037": "neg36",
+    "c038": "neg37",
+    "c039": "neg38",
+    "c040": "neg39",
+    "c041": "neg40",
+    "c042": "neg41",
+    "c043": "neg42",
+    "c044": "neg43",
+    "c045": "neg44",
+    "c046": "neg45",
+    "c047": "neg46",
+    "c048": "neg47",
+    "c049": "neg48",
+    "c050": "neg49",
+    "c051": "neg50",
+    "c052": "neg51",
+    "c053": "neg52",
+    "c054": "neg53"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "A standard claims-made legend whose operative content ('first made ... and reported in writing ... pursuant to the terms herein') simply cross-refers to the body of the policy; no term in it is genuinely two-sided on its face.",
+      "reasoning_cat2": "It tracks Insuring Agreement I and Section V.A, though it omits the 60-day post-expiration tail and the ERP deeming rule in II.C, leaving only a small gap between the legend and the operative reporting terms.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The condition that the Policy 'shall not be valid unless also signed by another duly authorized representative' is oddly circular (officers already signed) and could be read to make validity turn on a countersignature that may or may not appear.",
+      "reasoning_cat2": "Nothing else in the policy addresses countersignature; Section VIII.K on endorsements signed by an authorized representative is consistent rather than conflicting.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "A short consideration/reliance recital; 'in reliance on all Statements made in the Application' is broad but is defined and elaborated elsewhere rather than ambiguous here.",
+      "reasoning_cat2": "It is a recital of reliance sitting against operative Section VIII.B (severability of the Application) and VIII.K's entire-agreement sentence, a classic recital-vs-operative tension over what the Application does to coverage.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "The grant is garbled — 'made against any Insured by or on behalf Employee' drops words — and it couples an open-ended 'as soon as practicable' duty with a hard sixty-day outside date, a pairing insureds and insurers routinely read differently.",
+      "reasoning_cat2": "It must be reconciled with Section V.A (Claims deemed first made on the earlier date under any prior policy), II.C (ERP claims deemed made in the preceding Policy Period) and VI.A/VI.C's separate notice clocks, which do not line up cleanly with the sixty-day tail stated here.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "The extension is carefully bounded and its own last sentence defines 'spouse'; the only wrinkle is capitalised 'Spouse' being used as if defined when it is not.",
+      "reasoning_cat2": "It fits Section III.I/III.J (Insured, Insured Individual) and Section III.L (Loss) without visible tension.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "Plain derivative-coverage language with an express carve-out for the representatives' own wrongful acts; nothing on the face invites two readings.",
+      "reasoning_cat2": "Consistent with the definitions of Insured Individual and Loss and with Section VIII.I (Bankruptcy); no competing provision found.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "The trigger is one-sided and incomplete — the ERP arises only if the Insurer non-renews or the Parent Company cancels, saying nothing about Parent Company non-renewal — and 'given by the insured' leaves who may elect uncertain as between Policyholder and Insured Individuals.",
+      "reasoning_cat2": "It interacts with VIII.C (cancellation/non-renewal notice), Item 5 of the Declarations and VIII.J (which excepts ERP notice from the Parent Company's authority), and its deeming of ERP claims into the preceding Policy Period sits awkwardly against Insuring Agreement I's separate ERP language.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "'each and every signed application ... other materials submitted therewith ... and any other such documents submitted in connection with the underwriting' is an open catch-all after enumerated specifics, and its reach into public DOL/EEOC filings is genuinely arguable.",
+      "reasoning_cat2": "It feeds Section VIII.B (representations and severability) and the preamble's reliance language, so its breadth directly affects a rescission/misrepresentation dispute, but no direct contradiction appears.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "'any other payment to or for the benefit of an employee arising out of the employment relationship' is a broad catch-all trailing a specific list, though the final sentence carves out salary and commissions.",
+      "reasoning_cat2": "Benefits are also excluded from Loss (III.L.4 and L.6) and made defence-costs-only by Exclusion B.1, an overlap that requires harmonising but is not plainly contradictory.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "One line; 'implied employment contract' is broad but is a familiar legal category rather than a two-meaning term.",
+      "reasoning_cat2": "It expands coverage while Exclusion A.4 and Exclusion B.3 pull contractual liability back out, so the interaction between grant and exclusions is a live harmonising question.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "The definition is the coverage trigger and its components — 'a written demand ... for monetary or non-monetary relief', 'similar formal proceeding', 'commenced by a notice of charges ... or similar document' — are exactly the phrases parties fight over in deciding what and when a Claim is; the collective-bargaining carve-out adds a further scope question.",
+      "reasoning_cat2": "It has to be read with III.R (Potential Claim), VI.A's awareness provision and V.A's rule deeming related Claims first made on the earliest date under this or any prior policy, all of which bear on whether a demand became a Claim in this policy year.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.45,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "'reasonable and necessary legal fees and expenses' is a standard but inherently contestable measure, though the parenthetical exclusions are precise.",
+      "reasoning_cat2": "Consistent with V.A (defence costs erode limits), V.C (consent) and Exclusion B (defence-costs-only); no conflict located.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "Very broad ('any Federal, State, or local statute, regulation, ordinance or common law concerning discrimination in employment anywhere in the world') but breadth here favours the insured and is not two-sided.",
+      "reasoning_cat2": "It feeds Wrongful Employment Act (III.X) and is cut back by Exclusion A.5's law-based exclusions, an overlap that mostly works.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "Item 5 ('any individual contracted to perform work ... but only if such individual performs work or services solely for or on behalf of the Policyholder') and the 'solely directed' qualifier in item 3 create real line-drawing problems.",
+      "reasoning_cat2": "Employee overlaps heavily with Insured Individual (III.J) and cuts against III.V and Exclusion A.9, which push independent contractors out of coverage — so a contractor may be an Employee claimant yet excluded elsewhere.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "Subparagraph 3, 'illegal work related harassment', is a bare catch-all appended to two specific sexual-harassment definitions, the classic general-vs-specific problem.",
+      "reasoning_cat2": "It feeds III.X and is limited by exclusions rather than contradicted by them; no conflicting provision identified.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "A one-line definition with two defined components; nothing to construe.",
+      "reasoning_cat2": "Used consistently throughout; the only friction is that Insuring Agreement A contemplates Claims by an Employee against an Insured where the two categories overlap.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "Categories are conditioned on written indemnity agreements and on direction of labour, which are workable tests, though the overlap of items 2 and 3 with 'Employee' invites argument about which hat a claimant wears.",
+      "reasoning_cat2": "Because III.G (Employee) covers much the same people, a person may be both claimant and Insured under Insuring Agreement A, a whole-instrument wrinkle the policy never resolves.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.23,
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "'common nexus [of] any fact, circumstance, situation, event, transaction, cause or series of causally or logically connected' facts is famously elastic — 'logically connected' has no discernible boundary.",
+      "reasoning_cat2": "It drives V.A's single-Claim/relation-back rule and Exclusion A.2(b)'s prior-claim bar, so its reach determines whether a Claim belongs to this policy year at all.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.4,
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c019",
+      "reasoning_cat1": "A long definition with nine carve-outs, several of which are contestable ('matters uninsurable under the law applicable to this Policy', amounts the Insureds are 'legally or financially absolved from payment'), and the most-favourable-jurisdiction punitive rule adds choice-of-law complexity.",
+      "reasoning_cat2": "It overlaps Exclusion B.1 and B.3 (Benefits and contract amounts) and Item 6 of the Declarations on punitive damages; the overlaps require harmonising but I found no square contradiction.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c020",
+      "reasoning_cat1": "The list is mis-numbered (two items numbered 5, one numbered 3) and 'failure to grant or adopt adequate employment related policies and procedures' is vague; the trailing 'but only when alleged as part of a Claim for' limiter also raises scope questions.",
+      "reasoning_cat2": "Its limiter ties it to Breach of Employment Contract, Discrimination, Harassment, Retaliation and Wrongful Job Action, and Exclusion A.8 removes emotional distress in part, an interaction that needs reconciling with item 5's emotional-distress tort.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c021",
+      "reasoning_cat1": "Pure pointer to Item 1 of the Declarations; nothing to construe.",
+      "reasoning_cat2": "Item 1 names FINRA and every downstream use is consistent.",
+      "prob_cat1": 0.03,
+      "prob_cat2": 0.04,
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c022",
+      "reasoning_cat1": "Straightforward aggregation of Parent Company and Subsidiaries with a bankruptcy gloss; no contested term.",
+      "reasoning_cat2": "Depends on III.U (Subsidiary) and VIII.A, whose timing rules are themselves murky, but Policyholder itself does not conflict with them.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c023",
+      "reasoning_cat1": "The definition contains a bad cross-reference: it points to 'Section VII.C' but Section VII is Notices and cancellation is Section VIII.C, a mechanical error going to when the Policy Period ends.",
+      "reasoning_cat2": "The mis-citation is only resolvable by reading VIII.C (Cancellation/Nonrenewal), and Policy Period drives the trigger in Insuring Agreement I, II.C and V.A, so the error ripples through the instrument.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c024",
+      "reasoning_cat1": "Extremely broad ('any substance ... exhibiting any hazardous characteristics', 'noise', 'odor'), which is expansive drafting for the insurer's benefit but rarely two-sided in an employment policy.",
+      "reasoning_cat2": "Used only in Exclusion A.7, which carves back Retaliation claims; the fit is coherent.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c025",
+      "reasoning_cat1": "'an allegation or accusation ... provided such allegation does not constitute a Claim, but subsequently may give rise to a Claim' is circular and its boundary against a 'written demand' Claim is genuinely uncertain.",
+      "reasoning_cat2": "It is the hinge of Section VI's awareness provision and sits directly against III.D's definition of Claim; whether a matter was a Potential Claim or already a Claim decides which policy year responds.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c026",
+      "reasoning_cat1": "Definite and specific — it names ADEA, EPA and FMLA liquidated damages; nothing vague.",
+      "reasoning_cat2": "It works with III.L.9 and Item 6 of the Declarations (Punitive Damages Coverage: Yes), which restores punitive damages 'to the extent insurable'; the interaction is complex but coherent.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.15,
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c027",
+      "reasoning_cat1": "'the illegal retaliatory treatment of Employees, including any retaliatory treatment against an Employee for' four listed activities — 'including' leaves it unclear whether the list is exhaustive or illustrative.",
+      "reasoning_cat2": "Retaliation is the express carve-back from Exclusions A.5 and A.7, so its scope determines how much of those exclusions survives — a real whole-instrument pressure point.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c028",
+      "reasoning_cat1": "The closing timing clause is syntactically tangled ('on or before the effective date ... or after the effective date ... if the entity is covered pursuant to Section VIII.A.1, solely with regard to Wrongful Acts occurring at or after'), leaving the temporal condition hard to parse.",
+      "reasoning_cat2": "It cross-refers to VIII.A.1, whose 10%/110% employee thresholds leave acquisitions in between unaddressed, so the two provisions do not mesh cleanly.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c029",
+      "reasoning_cat1": "'who is, or attempted to be, a customer or vendor' is loose, but the definition is otherwise closed and the contractor exclusion is explicit.",
+      "reasoning_cat2": "It excludes independent contractors while III.G and III.J bring contractors inside 'Employee'/'Insured Individual', and Exclusion A.9 adds a further contractor bar — a coordination question across three provisions.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c030",
+      "reasoning_cat1": "A two-branch definition composed entirely of other defined terms; nothing to construe.",
+      "reasoning_cat2": "Consistent with Insuring Agreement I, III.X and III.Z; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c031",
+      "reasoning_cat1": "The closed list of five defined torts is workable, but 'Other Workplace Torts' is pluralised against the singular defined term and 'any other persons for whom the Insureds are legally responsible' is an open-ended catch-all after two specific categories.",
+      "reasoning_cat2": "It gathers III.C, III.F, III.H, III.T, III.Y and III.M, and the 'Other Workplace Tort' component is itself limited to claims for those same torts, a circularity that must be harmonised with III.M.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c032",
+      "reasoning_cat1": "'wrongful ... adverse change in the terms, conditions or status of employment' is a general residual sitting after specific items (dismissal, failure to promote, demotion) with no discernible boundary.",
+      "reasoning_cat2": "It feeds III.X and interacts with Exclusion B.1's carve-back for 'wrongful termination of employment'; the fit is workable but the terminology is not identical.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c033",
+      "reasoning_cat1": "The enumerated protected characteristics are followed by 'or on any other basis prohibited by law', a textbook general catch-all against specifics, and the paragraph is mis-lettered '2.' with a sub-item numbered '7.'.",
+      "reasoning_cat2": "It works with III.V (Third Party Claim) and Item 7 of the Declarations; the contractor carve-out in III.V is the only friction and it is external to this text.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c034",
+      "reasoning_cat1": "The repeated 'based upon, arising out of, directly or indirectly resulting from, in consequence of or in any way involving' formula is notoriously elastic, and A.5's trailing 'including any other federal, state local or foreign statute or law similar to any statute or law described in (a) through (h)' is an express ejusdem-generis problem.",
+      "reasoning_cat2": "A.1 and A.2 turn on the Pending or Prior Claim Date and Interrelated Wrongful Acts (III.K) and must be squared with V.A's relation-back rule; A.5's Retaliation carve-back also has to be reconciled with III.T.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c035",
+      "reasoning_cat1": "The 'defence costs only' mechanism is clear, but B.1's carve-back 'shall not apply to any Claim for wrongful termination of employment' uses a phrase that is not the defined 'Wrongful Job Action', leaving its scope arguable.",
+      "reasoning_cat2": "Amounts described here (Benefits, contract amounts) are in places already carved out of Loss by III.L.4 and L.6, so the two provisions overlap and a court would have to decide which controls.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c036",
+      "reasoning_cat1": "The related-claims sentence ('deemed to be first made on the earlier date that ... any of the Claims is first made ... under this Policy or any prior policy') is dense and its 'valid notice' limb is undefined, though the limit mechanics themselves are plain.",
+      "reasoning_cat2": "Its closing sentence limits coverage to Claims 'deemed to have been first made during the Policy Period', which sits against Insuring Agreement I and II.C covering Claims first made in the Extended Reporting Period — a genuine internal tension.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg35"
+    },
+    {
+      "clause_id": "c037",
+      "reasoning_cat1": "Two lines, a single retention pointer to Item 4; nothing ambiguous on its face.",
+      "reasoning_cat2": "Read with V.A's rule deeming related Claims a single Claim and V.C's 50%-of-retention consent threshold, the number of retentions payable is determined elsewhere and coherently.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg36"
+    },
+    {
+      "clause_id": "c038",
+      "reasoning_cat1": "'which shall not be unreasonably withheld' and 'unreasonably refuse to consent' are standards, not rules, and the hammer clause's interaction with 'Defense Costs up to the date the Insureds refused to settle' is contestable.",
+      "reasoning_cat2": "It must be squared with V.A (defence costs erode and may exhaust the limit) and with the duty to defend ceasing on exhaustion; the pieces fit, if uncomfortably.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg37"
+    },
+    {
+      "clause_id": "c039",
+      "reasoning_cat1": "It requires awareness of, and notice of, a 'Potential Claim' during the Policy Period and then deems the later Claim made 'during the Policy Period in which the Potential Claim was first reported' — a phrase that assumes multiple policy periods this one-year policy does not have.",
+      "reasoning_cat2": "It depends entirely on III.R's circular Potential Claim definition and on III.D (Claim), and it supplies a different relation-back rule from V.A's interrelated-claims provision.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.35,
+      "dataset_clause_id": "neg38"
+    },
+    {
+      "clause_id": "c040",
+      "reasoning_cat1": "A specific six-item content requirement made a condition precedent; the only softness is 'such additional information and cooperation as it may reasonably require', and the sub-numbering is corrupted ('nN').",
+      "reasoning_cat2": "It conditions the VI.A awareness benefit and parallels V.C's cooperation duty and VIII.H's compliance condition; no contradiction found.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg39"
+    },
+    {
+      "clause_id": "c041",
+      "reasoning_cat1": "A single, dated obligation — sixty days after the Claim is first made — clear on its face save for 'as soon as practicable' running alongside it.",
+      "reasoning_cat2": "Insuring Agreement I sets a different outside date (sixty days after expiration of the Policy Period), so a Claim arising from a noticed Potential Claim faces two inconsistent reporting deadlines.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.34,
+      "dataset_clause_id": "neg40"
+    },
+    {
+      "clause_id": "c042",
+      "reasoning_cat1": "The deeming sentence is self-defeating: notices are effective 'upon actual receipt ... or one day following the date such notices are sent, whichever is earlier', which can make a notice effective before it arrives.",
+      "reasoning_cat2": "It governs every notice duty in the policy (Insuring Agreement I, VI.A/C, VIII.C, VIII.J), so the deeming rule's oddity affects timeliness disputes across the instrument.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg41"
+    },
+    {
+      "clause_id": "c043",
+      "reasoning_cat1": "The thresholds do not cover the field — entities are deemed Subsidiaries only if under 10% of Employees, and ninety-day run-off applies only if the workforce exceeds 110%, leaving transactions in between unaddressed — and the text is visibly corrupted where the asset-acquisition subparagraph begins.",
+      "reasoning_cat2": "It is cross-referenced by III.U (Subsidiary) and shapes III.O (Policyholder), and the gap it leaves is precisely what those definitions assume is filled.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.35,
+      "dataset_clause_id": "neg42"
+    },
+    {
+      "clause_id": "c044",
+      "reasoning_cat1": "'All such statements are the basis of this Policy' is warranty-style language of uncertain effect, and the imputation list ('human resources manager or risk manager') has fuzzy edges.",
+      "reasoning_cat2": "It sits against the preamble's reliance recital and against VIII.K's statement that the Policy is the entire agreement even though the Application is 'incorporated in and constitute[s] part of this Policy'.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg43"
+    },
+    {
+      "clause_id": "c045",
+      "reasoning_cat1": "Mechanically defective numbering (two paragraphs numbered 5) and the Parent Company's cancellation notice need only state 'when thereafter such cancellation will be effective', with no minimum period.",
+      "reasoning_cat2": "It is the provision III.P should have cross-referenced, and cancellation/non-renewal here triggers the ERP right in II.C, which is drafted around a narrower set of triggers.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg44"
+    },
+    {
+      "clause_id": "c046",
+      "reasoning_cat1": "The excess condition is expressed only 'If any Loss arising from any Third Party Claim' is otherwise insured, then closes 'in all other events, this Policy is intended to provide primary insurance' — the mismatch between the narrow trigger and the sweeping close is arguable.",
+      "reasoning_cat2": "Read with Item 7 (Third Party Claim Coverage included) and III.V, the clause makes only third-party coverage excess, which is coherent but leaves other-insurance disputes for ordinary claims unaddressed.",
+      "prob_cat1": 0.23,
+      "prob_cat2": 0.15,
+      "dataset_clause_id": "neg45"
+    },
+    {
+      "clause_id": "c047",
+      "reasoning_cat1": "One sentence of worldwide territorial scope; nothing to construe.",
+      "reasoning_cat2": "Consistent with the 'anywhere in the world' language in III.F, III.Q and Exclusions A.5 and A.11.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg46"
+    },
+    {
+      "clause_id": "c048",
+      "reasoning_cat1": "A precise currency and exchange-rate mechanic with a named source and named dates.",
+      "reasoning_cat2": "Fits III.L (Loss) and V.A/V.B amounts; no competing provision.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg47"
+    },
+    {
+      "clause_id": "c049",
+      "reasoning_cat1": "Standard subrogation with a cooperation duty; 'everything necessary' is broad but conventional.",
+      "reasoning_cat2": "Complements V.C's cooperation duty and VIII.H; nothing in the policy limits subrogation against Insureds, but no conflict is created.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg48"
+    },
+    {
+      "clause_id": "c050",
+      "reasoning_cat1": "'full compliance with all the terms of this Policy' as a condition precedent is a sweeping standard, and the sentence misspells 'liability' as 'ability' in the joinder prohibition.",
+      "reasoning_cat2": "It hardens every notice and cooperation duty (Insuring Agreement I, VI, V.C) into conditions precedent, which is severe but not inconsistent with them.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg49"
+    },
+    {
+      "clause_id": "c051",
+      "reasoning_cat1": "One sentence, symmetric and definite.",
+      "reasoning_cat2": "Consistent with III.O's inclusion of debtors in possession and with II.B's extension to representatives of insolvent Insured Individuals.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg50"
+    },
+    {
+      "clause_id": "c052",
+      "reasoning_cat1": "Clear agency appointment; the only wrinkle is the parenthetical excepting 'the giving of notice to apply for any Extended Reporting Period'.",
+      "reasoning_cat2": "That exception has to be read with II.C, which says the election notice is 'given by the insured' without saying who among Policyholder and Insured Individuals may give it, and with VII's rule that notice to Insureds goes to the Parent Company.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg51"
+    },
+    {
+      "clause_id": "c053",
+      "reasoning_cat1": "The no-waiver sentence is oddly bilateral and the integration language is squeezed into a clause about endorsements, but the operative rule (written endorsement signed by the Insurer) is definite.",
+      "reasoning_cat2": "It declares the Policy the entire agreement while VIII.B and the preamble incorporate the Application and make its statements 'part of this Policy', a tension a court could be asked to resolve.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.29,
+      "dataset_clause_id": "neg52"
+    },
+    {
+      "clause_id": "c054",
+      "reasoning_cat1": "A conventional headings clause with no operative content.",
+      "reasoning_cat2": "It disclaims headings that the policy elsewhere relies on for cross-references (e.g. III.P's citation to a lettered subsection), a mild but real tension.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg53"
+    }
+  ]
+}

@@ -113,7 +113,16 @@ The one-shot run is a stateless API call with nothing to isolate. The agent run
 spawns the Claude Code CLI, which can load settings files, `CLAUDE.md`, memory,
 skills and MCP servers that never appear in the conversation.
 
-Every session runs under:
+**Every session runs in its own container**, and that is the first line of
+defence rather than the last. The image has no `~/.claude`, no user `CLAUDE.md`,
+no skills, no MCP registration and no `/etc/claude-code/managed-settings.json`
+— managed policy being the one channel an environment sweep cannot reach. Only
+the contract's own workspace is mounted, so `dataset.csv` and the other 63
+contracts are not on the filesystem at all. The two prompts are mounted
+read-only outside the workspace, so the workspace holds exactly what the model
+is meant to see.
+
+The options below are still applied, but they are now belt-and-braces:
 
 | | |
 |---|---|
@@ -122,12 +131,24 @@ Every session runs under:
 | `strict_mcp_config=True` | ignore project, user and plugin MCP configuration |
 | `tools` / `allowed_tools` | `Read`, `Grep`, `Glob`, `Write` |
 | `disallowed_tools` | `Bash`, `Edit`, `Task`, `Skill`, `WebFetch` and the rest, named explicitly |
-| `PreToolUse` hook | every path resolved against the workspace; anything outside is refused |
+| `PreToolUse` hook | every path-shaped argument resolved against the workspace; anything outside is refused |
+
+The hook covers `file_path`, `path`, `notebook_path`, **`pattern` and `glob`**.
+The last two were once missing, and an audit found sessions issuing
+`/tmp/**/contract.txt`, `/*/*/contract.txt` and
+`/**/<other-contract>*/contract.txt` that the hook never saw. Nothing escaped —
+they returned "No files found" or hit ripgrep's timeout — but that is
+containment by filesystem layout, not by construction.
+`src/experiments/test_isolation.py` now pins all 22 cases, costs nothing, and
+runs on host and container alike.
 
 Auto memory, `CLAUDE.md` injection, the auto-updater and the CLI's non-essential
-traffic sit outside `setting_sources` and are disabled by sweeping the parent
-process's environment before the SDK spawns anything. `ClaudeAgentOptions.env`
-cannot do this — it merges over the inherited environment and can only add.
+traffic sit outside `setting_sources` and are disabled by sweeping the
+environment **inside the container** before the SDK spawns anything.
+`ClaudeAgentOptions.env` cannot do this — it merges over the inherited
+environment and can only add. In a container the sweep typically removes
+nothing, because there is nothing to remove; on a developer machine it removed
+eleven variables.
 
 `preflight.py` runs one real session under these options and audits its
 trajectory for memory, `CLAUDE.md`, skills, `mcp__*` tools, free-standing
@@ -135,11 +156,12 @@ trajectory for memory, `CLAUDE.md`, skills, `mcp__*` tools, free-standing
 and paths outside the workspace. It exits non-zero on any failure and runs before
 the full run.
 
-Provenance goes in `run_manifest_<stamp>.json` beside the session logs: SDK and
-CLI versions (the CLI is the one bundled in the SDK wheel, which the SDK spawns
-in preference to anything on `PATH`), interpreter, platform, git commit, the
-names of every environment variable removed, the options verbatim, and SHA-256 of
-the prompts and of `dataset.csv`.
+Provenance goes in `run_manifest_<stamp>.json` beside the session logs: the
+image id, SDK and CLI versions (the CLI is the one bundled in the SDK wheel,
+which the SDK spawns in preference to anything on `PATH` — the image build
+asserts the bundled version), interpreter, platform, git commit, the options
+verbatim, and SHA-256 of the Dockerfile, the entrypoint, `isolation.py`, the
+prompts and `dataset.csv`.
 
 `REPRODUCIBILITY.md` covers each point in detail.
 
@@ -194,64 +216,110 @@ unjudged; where both exist for one provision, readers prefer the scored row.
 
 ## 8. Results
 
-**Pending.** The agent arm is being rerun under the corrected harness of §5. The
-`agent` figures below are from the superseded run, kept on
-`legacy_agent_experiment_8.17`, and are not to be cited. The `llm_api` column is
-unaffected.
-
 Both runs cover all 6,461 clauses of all 64 contracts with no provision left
 unjudged on either side, so the comparison is like-for-like on identical clauses
-under identical ids.
+under identical ids. Full write-up in [REPORT.md](REPORT.md).
 
-| | ROC-AUC | P@0.5 | R@0.5 | flagged |
-|---|---:|---:|---:|---:|
-| `llm_api` | 0.869 | 0.21 | 0.46 | 4.6% |
-| `agent` *(superseded)* | 0.914 | 0.27 | 0.66 | 5.0% |
+| panel | | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
+|---|---|---:|---:|---:|---:|---:|
+| risky vs not | `llm_api` | 0.869 | 0.312 | 0.21 | 0.46 | 4.6% |
+| risky vs not | **`agent`** | **0.891** | **0.385** | **0.25** | **0.54** | 4.5% |
+| type 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
+| type 1 — intrinsic | **`agent`** | **0.890** | **0.358** | **0.31** | **0.48** | 3.0% |
+| type 2 — relational | `llm_api` | **0.958** | 0.139 | 0.04 | 0.42 | 2.1% |
+| type 2 — relational | `agent` | 0.942 | **0.220** | 0.04 | **0.58** | 2.5% |
 
-Per category, one-vs-rest — ROC-AUC:
-
-| | `llm_api` | `agent` *(superseded)* | positives |
-|---|---:|---:|---:|
-| type 1 — intrinsic defect | 0.863 | 0.909 | 122 |
-| type 2 — relational defect | 0.958 | 0.960 | 12 |
+At 2.1% prevalence PR-AUC is the number to read; ROC-AUC is flattered by the
+6,327 easy negatives. The agent arm leads on PR-AUC in all three panels at an
+identical flag rate — its extra recall is a better-chosen 4.5%, not a larger one.
 
 What each recall target costs on the risky-vs-not panel:
 
 | recall | | threshold | precision | flagged |
 |---:|---|---:|---:|---:|
 | 70% | `llm_api` | 0.37 | 0.088 | 16.7% |
-| 70% | `agent` *(superseded)* | 0.47 | 0.224 | 6.6% |
+| 70% | **`agent`** | 0.42 | **0.122** | **12.1%** |
 | 80% | `llm_api` | 0.31 | 0.059 | 28.9% |
-| 80% | `agent` *(superseded)* | 0.40 | 0.106 | 16.0% |
+| 80% | **`agent`** | 0.35 | **0.077** | **21.9%** |
+| 90% | `llm_api` | 0.25 | 0.047 | **39.9%** |
+| 90% | `agent` | 0.27 | 0.046 | 41.7% |
 
 Full sweeps in `output/figures/exp3_<run>_threshold_curves.png`: precision and
 recall on top, flag rate underneath, for each of the three panels.
 
-**Shared weakness.** Both rank type 2 well (ROC ≈ 0.96) and neither is usable as
-an absolute probability for it — 12 positives is too few to calibrate against.
+**Shared weakness.** Both rank type 2 well (ROC ≈ 0.95) and neither is usable as
+an absolute probability for it — precision at 0.5 is 0.04 either way, on 12
+positives.
+
+**One run per arm.** No temperature or seed is set, run-to-run variance is not
+measured, and the gaps above are not known to exceed it. See §5 of
+[REPORT.md](REPORT.md).
 
 ### Cost
 
 | | calls | input | cache-read | output | |
 |---|---:|---:|---:|---:|---:|
 | `llm_api` | 65 | 3,960,394 | 0 | 1,265,372 | **$51.44** |
-| `agent` *(superseded)* | 64 (816 turns) | 18,979 | 46,599,371 | 1,642,032 | $121.81 API-equivalent |
+| `agent` | 64 (847 turns) | 1,278 | 34,300,221 | 1,537,402 | $109.31 API-equivalent |
 
 The agent run is billed to a Claude Code subscription, so its dollar figure is
 what the same tokens would have cost through the API, not an amount charged.
-Caching absorbed 99.6% of its input: an agent re-sends its transcript every turn,
-and without caching the 46.6M cache-read tokens would have been billed in full.
+Caching absorbed 86% of its input: an agent re-sends its transcript every turn,
+and without caching the 34.3M cache-read tokens would have been billed in full.
+Per provision the agent spends 238 output tokens against the one-shot arm's 196.
 
 ---
 
 ## 9. Running it
 
+### First by hand: the subscription credential
+
+The one-shot arm bills the **API key** from `.env`. The agent arm bills the
+Claude Code **subscription**, and every session runs in a container that has no
+`~/.claude` to log in from — so the credential must be passed in from outside.
+
+Run this in a **real terminal**, before anything else:
+
 ```bash
-python src/experiments/exp3_llm_api.py --shuffle          # API key
-python src/experiments/exp3_agent.py   --shuffle          # subscription
+claude setup-token          # opens a browser; prints a long-lived (1-year) token
+```
+
+It cannot be scripted, and it is worth knowing why rather than rediscovering it:
+the flow is a full-screen terminal prompt. Given a pipe instead of a TTY it
+blocks forever with no output, and teeing its output to capture the token makes
+it exit immediately after "Opening browser to sign in". Interactive and
+capturable are mutually exclusive here. So: run it by hand, copy the token, and
+put it in `.env` (loaded by `lib.py`), or export it in the shell you start the
+run from — an exported value wins over `.env`.
+
+```bash
+CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...                   # in .env
+export CLAUDE_CODE_OAUTH_TOKEN='sk-ant-oat01-...'          # bash / zsh
+$env:CLAUDE_CODE_OAUTH_TOKEN = 'sk-ant-oat01-...'          # PowerShell
+```
+
+With that variable unset, `exp3_agent.py` falls back to bind-mounting
+`~/.claude/.credentials.json` read-only, as a **single file** — never the
+directory. The fallback works; it just cannot refresh a token that expires
+mid-run, and four containers sharing one read-only file could not refresh it
+safely anyway.
+
+### Then the experiment
+
+```bash
+docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
+python src/experiments/test_isolation.py                  # 22 cases, no cost
+python src/experiments/preflight.py --container           # one real session, audited
+
+python src/experiments/exp3_llm_api.py --shuffle --parallel 4        # API key
+python src/experiments/exp3_agent.py --shuffle --parallel 4           # subscription
 python src/experiments/plot_exp3_thresholds.py --run llm_api
 python src/experiments/plot_exp3_thresholds.py --run agent
 ```
+
+`--parallel` sets how many containers run at once; they are independent
+sessions against one subscription, so the only shared resource is the rate
+limit, which pauses new launches when the CLI says the window is gone.
 
 Both are resumable: a contract already scored is skipped, and any provision left
 unjudged by an earlier run is finished before new contracts are started.

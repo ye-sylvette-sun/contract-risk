@@ -1,38 +1,21 @@
 """Threshold-sweep figure for experiment 3.
 
-Three binary tasks, side by side, each swept over a flagging threshold t in
-[0, 1]:
+Three binary tasks swept over a flagging threshold t in [0, 1]: risky vs not
+(score `max(prob_cat1, prob_cat2)`), type 1 vs not (`prob_cat1`), type 2 vs not
+(`prob_cat2`). The two type panels are ONE-VS-REST — for type 1 a type-2 clause
+counts as a negative — because each probability is an independent judgement, not
+a share of one distribution.
 
-  * **risky vs not** — score `max(prob_cat1, prob_cat2)`, positive when the court
-    construed the clause at all;
-  * **type 1 vs not** — score `prob_cat1`, positive when the construction turned
-    on an intrinsic textual defect (taxonomy 1.x);
-  * **type 2 vs not** — score `prob_cat2`, positive when it turned on the
-    clause's relationship to the rest of the instrument (2.x).
+Per task: precision and recall on top, the share of clauses flagged below. The
+bottom row stops the top being read too kindly — near 2% prevalence, flagging a
+third of the contract can still post a respectable recall.
 
-The two type panels are **one-vs-rest**: for type 1, a type-2 clause counts as a
-negative, and the other way round. That is the question the two probabilities
-are actually asked — each is an independent judgement about its own category,
-not a share of one distribution.
-
-Per task:
-
-  * top    — precision and recall against threshold
-  * bottom — the share of clauses flagged against threshold
-
-The bottom row is what stops the top one being read too kindly: at a prevalence
-near 2%, a threshold that flags a third of the contract can still post a
-respectable recall.
-
-The two experiments are named in parallel throughout, so every artefact of one
-has a counterpart of the other under the same stem:
+Artefacts are named in parallel for both runs, <run> being `llm_api` or `agent`:
 
     exp3_<run>_preds.csv                 one row per provision
     exp3_<run>/                          the model's returned judgments
     llm_logs/exp3_<run>/                 request, response and usage per call
     figures/exp3_<run>_threshold_curves.png
-
-with <run> being `llm_api` or `agent`.
 
 Usage:
     python src/experiments/plot_exp3_thresholds.py --run llm_api

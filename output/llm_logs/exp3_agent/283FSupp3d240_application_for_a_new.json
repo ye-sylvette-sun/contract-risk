@@ -1,0 +1,105 @@
+{
+  "contract_id": "283FSupp3d240_application_for_a_new",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 39,
+  "container_rc": 0,
+  "image": "contract-risk-judge:0.2.139",
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 14,
+  "duration_ms": 162267,
+  "total_cost_usd": 0.7309,
+  "usage": {
+    "input_tokens": 24,
+    "cache_creation_input_tokens": 33867,
+    "cache_read_input_tokens": 160724,
+    "output_tokens": 12469,
+    "output_tokens_details": {
+      "thinking_tokens": 3832
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 33867,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 40,
+        "cache_read_input_tokens": 34214,
+        "cache_creation_input_tokens": 3729,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3729
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 24,
+      "outputTokens": 12469,
+      "cacheReadInputTokens": 160724,
+      "cacheCreationInputTokens": 33867,
+      "webSearchRequests": 0,
+      "costUSD": 0.730877,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "b5c11c17-1795-4f8d-83a7-73ac63bc8baa",
+  "errors": null,
+  "result": "I wrote 39 judgments (20 in `predictions_001.json`, 19 in `predictions_002.json`).",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/tmp/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/tmp/outputs/examples/1.3_93FSupp3d375_personal_deposit_account_agreement/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/tmp/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/contract.txt"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "utilization": null,
+      "resets_at": 1787126400
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 39,
+  "n_wanted": 39,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

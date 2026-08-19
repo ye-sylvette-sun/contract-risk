@@ -1,0 +1,331 @@
+{
+  "contract_id": "226FSupp3d719_pond_agreement",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "pos1",
+    "c018": "neg17",
+    "c019": "neg18",
+    "c020": "neg19",
+    "c021": "neg20",
+    "c022": "neg21",
+    "c023": "neg22",
+    "c024": "neg23",
+    "c025": "neg24",
+    "c026": "neg25",
+    "c027": "neg26",
+    "c028": "neg27",
+    "c029": "neg28",
+    "c030": "neg29",
+    "c031": "neg30",
+    "c032": "neg31",
+    "c033": "neg32",
+    "c034": "neg33",
+    "c035": "neg34",
+    "c036": "neg35"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "A straightforward definitional paragraph naming the parties and the lender; no term in it carries two reasonable meanings.",
+      "reasoning_cat2": "It fixes the Lender as DSI Lending Resources, while Arbitration Paragraph 1(b) defines 'the Lender' more loosely as 'any Lender who provides you with a loan as a result of our services' — a small definitional mismatch, not a real conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The service promises are all 'we will attempt to', qualified by 'if requested', 'where available' and 'certain CAB services', so the boundary of what is actually owed for the fee is genuinely indeterminate, and the eight enumerated services sit against an open-ended 'additional services'.",
+      "reasoning_cat2": "It states the loan will bear 'no more than ten percent per annum', which sits against the COST AND PAYMENT TERMS figures ($3.00 interest on $300 over four months) and against the 708.90%/713.38% CAB fee framing; a court comparing them could find tension.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "The flat assertion that 'the fee that we charge you is not interest' is exactly the characterisation payday/CAB litigation turns on, and it is a legal conclusion embedded in a one-sentence disclosure.",
+      "reasoning_cat2": "It must be read against COST AND PAYMENT TERMS, which folds the CAB fee into the Finance Charge and an APR of 713.38%, and against the LOC clause's 'no amount in excess of lawful amounts' savings language.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "The numbers do not add up on their face: the Finance Charge is stated as $561.15 but its two components are $3.00 and $556.15, payments are 'LO payments' of $86.15 bi-weekly yet the 'Total of Payments is $86.15' — plain mechanical errors that change what is owed.",
+      "reasoning_cat2": "The stated 10.00% lender interest and the refund-on-acceleration promise interact with the DEFAULT clause ('less any unearned charges') and the reimbursement clause, and the arithmetic mismatch cannot be harmonised with the rest of the cost disclosure.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "'a late charge equal to the greater of 5% or $7.50' never says 5% of what, and 'attorneys' fees, and costs of collection' is an untethered catch-all at the end of an enumerated list.",
+      "reasoning_cat2": "It overlaps with the LOC clause's separate reimbursement promise and with the Collection Expenses clause's 'reasonable attorneys' fees' standard, which is narrower than the unqualified 'attorneys' fees' here.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "The opening sentence is scrambled and a statutory cross-reference is rendered as 'Chapter $ of the Texas Business and Commerce Code', and the LOC cap ('not to exceed principal, interest, returned item fee, and late fee, as applicable') is left indefinite.",
+      "reasoning_cat2": "Its reimbursement obligation duplicates the Other Fees clause and its automatic revocation on cancellation must be squared with the Notice of Cancellation forms and the three-day cancellation notice.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "Default is triggered by failure 'to perform your other promises' to us and by failure to perform obligations to the lender — a boundary a court would have to draw — and the text is mechanically corrupted mid-sentence.",
+      "reasoning_cat2": "Acceleration 'less any unearned charges' must be read with the CAB-fee prorated refund promise in COST AND PAYMENT TERMS and with the LOC presentment condition of ten days' default.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "A conventional waiver-of-notices list, each item specific and qualified by 'to the extent permitted by law'; nothing needs construing on its face.",
+      "reasoning_cat2": "'we are not required to file suit or arbitrate' sits alongside the Arbitration Provision but is permissive rather than contradictory, and the carve-out 'except for notices provided in this Agreement' preserves the pre-suit and opt-out notices.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "It refers to 'the Jury Trial Waiver and Arbitration Agreement' and to the customer's failure to 'reject' it, terminology that matches nothing else in the document (the section is captioned Waiver of Jury Trial and Arbitration Provision and speaks of opt-out, not rejection).",
+      "reasoning_cat2": "A standalone jury waiver that survives whether or not the arbitration provision is opted out under the OPT-OUT PROCESS creates a real question about what remains if the Arbitration Provision is 'deemed void' under Paragraph 8.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "Standard savings/usury-spreading boilerplate with no term whose meaning is contested on its face.",
+      "reasoning_cat2": "The identical language is repeated in the LOC clause and in Arbitration Paragraph 4; duplication, not contradiction.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "'any claim that this agreement or related matter ... is legally non-compliant, illegal or unenforceable' is a sweeping and vaguely bounded trigger, and 'any corrective action shall relieve us and Lender of any liability' is drafted wholly one-sidedly.",
+      "reasoning_cat2": "It imposes a 60-day pre-suit condition that must be reconciled with Arbitration Paragraph 4's separate 30-day remedy notice and with Paragraph 1's delegation of validity questions to arbitration.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.35,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "'all costs and disbursements' is an unbounded add-on to 'reasonable attorneys' fees', and the second sentence is a statutory notice that states no party obligation at all.",
+      "reasoning_cat2": "The 'reasonable' qualifier here is narrower than the unqualified attorneys'-fee entitlement in the Other Fees paragraph, a mild inconsistency.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "One sentence, a single factual stipulation, nothing to construe.",
+      "reasoning_cat2": "It reinforces Arbitration Paragraph 7's FAA choice; no provision cuts against it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "Two short, definite sentences with a clear asymmetry that is nonetheless unambiguous in operation.",
+      "reasoning_cat2": "It fits Arbitration Paragraph 8, which binds successors and assigns of both sides; no conflict found.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "Pure address and contact information; no operative term at all.",
+      "reasoning_cat2": "The address matches the pre-suit notice and opt-out addresses elsewhere in the document.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "Descriptive prose about what arbitration is ('some evidence', 'may be limited', 'rarely overturns') rather than operative terms, so its vagueness is unlikely to be the thing construed.",
+      "reasoning_cat2": "Its promise that each party 'has an opportunity to present some evidence' sits awkwardly with Paragraph 5, which lets the arbitrator decide dispositive motions 'with or without a hearing' — a recital-versus-operative tension.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "It gives 'dispute' the 'broadest possible meaning' and expressly sweeps in 'the validity and scope of this Arbitration Provision' — a delegation formula courts routinely have to construe, followed by ten enumerated categories that invite expressio unius argument.",
+      "reasoning_cat2": "It clashes with Paragraph 3, which says the validity and enforceability of the class waiver 'shall be determined solely by a court of competent jurisdiction and not by the arbitrator', and with Paragraph 6's small-claims carve-out.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.45,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "An all-caps acknowledgment of the jury waiver; badly garbled in the scan but the substance is a single unambiguous statement.",
+      "reasoning_cat2": "It duplicates the separate WAIVER OF RIGHT TO TRIAL BY JURY clause, which is expressed not to modify this provision; overlapping rather than conflicting.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c019",
+      "reasoning_cat1": "A short acknowledgment with an express small-claims carve-out; nothing genuinely two-sided in the wording.",
+      "reasoning_cat2": "It matches Paragraph 6's retention of small-claims rights and Paragraph 3's arbitration mandate; harmonises cleanly.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c020",
+      "reasoning_cat1": "The class/representative waiver is stated in plain absolute terms; the residual 'in any other representative capacity' is a catch-all but a familiar one.",
+      "reasoning_cat2": "It is consistent with Paragraph 3's class-arbitration bar, though its reference only to 'ANY LAWSUIT FILED AGAINST US' leaves arbitration to Paragraph 3 to cover.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c021",
+      "reasoning_cat1": "It combines an absolute class-arbitration bar with a 'notwithstanding any other provision herein to the contrary' carve-out reserving validity of that bar to a court, and then a blow-up fallback to court litigation — three moving parts whose interaction is genuinely arguable.",
+      "reasoning_cat2": "It contradicts Paragraph 1(a), which commits 'the validity and scope of this Arbitration Provision' to arbitration, and its court fallback must be squared with Paragraph 8's void-the-whole-provision rule.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.46,
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c022",
+      "reasoning_cat1": "'any other arbitrator ... reasonably satisfactory to us' and the 20-day default giving the drafter the choice are open-ended and one-sidedly drafted, and the paragraph is a sprawling mix of selection rules, fee rules and unrelated usury boilerplate.",
+      "reasoning_cat2": "Its cap — advancing filing/administrative/hearing fees only 'up to $1000' — sits directly against Paragraph 5, which says that at the customer's request 'we will advance your portion of the arbitration expenses' without any cap.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.48,
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c023",
+      "reasoning_cat1": "It says each party bears its own fees 'but without limitation of any party's ability to recover costs and attorneys' fees to the extent authorized by law', and instructs the arbitrator to entertain Rule 12/56-style motions while applying no rules of civil procedure — internally awkward.",
+      "reasoning_cat2": "The uncapped advance of Arbitration Fees conflicts with Paragraph 4's $1000 ceiling, and the loser-reimburses rule sits against Paragraph 4's promise that the arbitrator decides who ultimately pays.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.43,
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c024",
+      "reasoning_cat1": "'disputes within the scope of such tribunal's jurisdiction' and 'cannot be adjudicated within the jurisdiction of a small claims tribunal' leave the dividing line to be worked out, especially for claims that could have been but were not filed there.",
+      "reasoning_cat2": "It is the express exception to Paragraph 3 and to 2(b), but its last sentence sending small-claims appeals to arbitration cuts against Paragraph 4's rule that a judgment entered in a lawsuit ends the right to demand arbitration.",
+      "prob_cat1": 0.25,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c025",
+      "reasoning_cat1": "A short, definite choice-of-law rule with a clearly stated fallback; nothing ambiguous in the words.",
+      "reasoning_cat2": "It is consistent with the GOVERNING LAW clause and with the Interstate Commerce stipulation; the Texas fallback is a subordinate condition, not a contradiction.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.15,
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c026",
+      "reasoning_cat1": "The blow-up proviso — the whole Arbitration Provision is void if the class-arbitration bar is 'deemed invalid or unenforceable' — turns on who deems it and when, and cuts against the severability sentence immediately preceding it.",
+      "reasoning_cat2": "It conflicts with the ENTIRE AGREEMENT clause, which says an invalid provision 'shall be reformed if practicable' and 'shall not in any way affect the remaining provisions', and it overlaps imperfectly with Paragraph 3's own court fallback.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.46,
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c027",
+      "reasoning_cat1": "The text as executed is partly illegible and the opt-out window (ninety calendar days) with its content requirements is the sort of mechanism whose compliance is routinely fought over.",
+      "reasoning_cat2": "It is the mechanism the jury-waiver clause alludes to as a right to 'reject' the arbitration agreement, and a customer who opts out is still left bound by the separate WAIVER OF RIGHT TO TRIAL BY JURY clause.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c028",
+      "reasoning_cat1": "A one-sentence choice of law with a single stated exception; the wording is definite.",
+      "reasoning_cat2": "Paragraph 7 adds a Texas-arbitration-law fallback that this clause's flat 'governed by the FAA' does not mention — a minor gap rather than a contradiction.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c029",
+      "reasoning_cat1": "A statutorily framed all-caps warning creating no rights or obligations, so there is nothing to construe.",
+      "reasoning_cat2": "It is consistent with the short-term installment structure disclosed in the cost terms; no operative provision contradicts it.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c030",
+      "reasoning_cat1": "Pure regulator contact information; not an operative term.",
+      "reasoning_cat2": "Nothing elsewhere in the instrument bears on it, although the pre-suit notice clause conditions claims generally.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c031",
+      "reasoning_cat1": "'the entire agreement between you and us relating to the subject matter' and the reform-if-practicable severability are boilerplate, but 'reformed if practicable' is an indefinite standard.",
+      "reasoning_cat2": "Its severability rule conflicts with Arbitration Paragraph 8, which voids the whole Arbitration Provision if the class waiver falls, and its integration language sits against the separate disclosure statement and Notices of Cancellation the signature block acknowledges.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c032",
+      "reasoning_cat1": "The acknowledgment list is so corrupted in the executed text that clause (a) cannot be read at all, and the warranties ('no intention to file a petition', account is 'legitimate, open, and active') are subjective and open-ended.",
+      "reasoning_cat2": "It recites receipt of a separate disclosure statement and two Notices of Cancellation, which the ENTIRE AGREEMENT clause's integration language does not mention, and it certifies assent to an Arbitration Provision the opt-out clause allows the customer to reject.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c033",
+      "reasoning_cat1": "'BEFORE MIDNIGHT OF THE THIRD DAY AFTER THE DATE OF THE TRANSACTION' fixes a deadline but 'the date of the transaction' is not defined anywhere in the instrument.",
+      "reasoning_cat2": "The attached Notice of Cancellation measures the same period 'within three days after the date the contract is signed' and then names a fixed date, so the three formulations must be reconciled.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c034",
+      "reasoning_cat1": "A short grant of a three-day cancellation right; the only softness is 'within three days after the date the contract is signed'.",
+      "reasoning_cat2": "It uses a different reference point from the NOTICE clause ('date of the transaction'), and the LOC clause conditions automatic revocation on the customer 'timely' exercising this right.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c035",
+      "reasoning_cat1": "A single definite obligation to return payments within ten days; the only mechanical flaw is the missing space in 'within10 days'.",
+      "reasoning_cat2": "It assumes payments made to the seller, whereas the cost terms show the CAB fee is financed by and paid through the Lender, leaving unclear what would be returned on cancellation.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c036",
+      "reasoning_cat1": "It states a method and a fixed calendar deadline; 'or other written notice' is a small open end but the instruction is otherwise definite.",
+      "reasoning_cat2": "The 04/12/2012 deadline squares with the 4/9/2012 execution date and the three-day rule in the NOTICE clause, so the pieces cohere.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg35"
+    }
+  ]
+}

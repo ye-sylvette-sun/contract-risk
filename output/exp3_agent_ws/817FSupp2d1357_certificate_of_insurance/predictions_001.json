@@ -1,79 +1,57 @@
 {"judgments": [
-  {
-    "clause_id": "c001",
-    "reasoning_cat1": "The provision says insurance is provided by the company designated by an \"X\" in the box below, but no box or mark appears — only the Zurich name is printed, a mechanical gap between the designation mechanism and the text actually given. The identification of the insurer is otherwise plain and singular, so there is little for two parties to read differently.",
-    "reasoning_cat2": "It is consistent with the rest of the certificate, which repeatedly refers to \"the Company\" (claims-made notice, issuance provision) without naming any other insurer; nothing in the Master Policy references contradicts Zurich as insurer.",
-    "prob_cat1": 0.12,
-    "prob_cat2": 0.05
-  },
-  {
-    "clause_id": "c002",
-    "reasoning_cat1": "The claims-made-and-reported trigger turns on undefined-here terms (\"Claims\", \"Certificate Period\", \"any applicable Extended Reporting Period\", \"reported in writing to the Company\"), and whether a notice or a suit constitutes a claim first made and reported is the classic litigated question in such policies. The sentence is also mechanically run together with a comma splice before \"DEFENSE COSTS\", though that does not obviously change meaning.",
-    "reasoning_cat2": "Its trigger depends entirely on Item 5, whose dates are garbled (\"2/45/2007\" to \"2/AS/2808\"), so the reporting window cannot be fixed from the instrument itself, and it also depends on the Master Policy incorporated by Items 7-8 and the issuance provision.",
-    "prob_cat1": 0.38,
-    "prob_cat2": 0.30
-  },
-  {
-    "clause_id": "c003",
-    "reasoning_cat1": "A bare name and street address; nothing in it carries two meanings, and the only oddity is OCR of the label \"Item 1\".",
-    "reasoning_cat2": "It is referenced by Item 5 (\"address shown in Item 1\") for the time zone of the period, and the two fit together without tension.",
-    "prob_cat1": 0.05,
-    "prob_cat2": 0.06
-  },
-  {
-    "clause_id": "c004",
-    "reasoning_cat1": "\"Protective Life Insurance Company and Empire General and the Registered Representatives of ProEquities\" is a compound designation with an incomplete corporate name (\"Empire General\") and no statement of the scope or capacity in which the Registered Representatives are additional insureds — whether coverage follows the person or only sales of those companies' products is genuinely open. Naming who is insured, and for what, is precisely the sort of phrase two sides read differently.",
-    "reasoning_cat2": "It sits against Item 6, which distinguishes \"products of Protective Life and ProEquities, Inc.\" from \"all other covered products\", suggesting broader product coverage than the additional-insured list implies, and against the Master Policy incorporated by the issuance provision.",
-    "prob_cat1": 0.48,
-    "prob_cat2": 0.38
-  },
-  {
-    "clause_id": "c005",
-    "reasoning_cat1": "A producer name and mailing address with only transcription noise (\"York Read\", \"c/o a\"); no operative term is capable of two readings.",
-    "reasoning_cat2": "Nothing elsewhere in the certificate assigns the producer any role, so there is no provision it can contradict.",
-    "prob_cat1": 0.06,
-    "prob_cat2": 0.04
-  },
-  {
-    "clause_id": "c006",
-    "reasoning_cat1": "As written the per-claim limit ($2,060,000.09) exceeds the stated aggregate ($2,000,000.00), an internal numerical mismatch on the face of the item, and the sums themselves are mangled. Limits stated per \"Named Certificate Holder\" rather than per policy also leaves the sharing of limits among multiple insureds unstated.",
-    "reasoning_cat2": "The claims-made notice says \"Defense Costs\" are provided in addition to the Limits of Liability, so the two must be read together, but that is a harmonising rather than a conflicting relationship.",
-    "prob_cat1": 0.34,
-    "prob_cat2": 0.20
-  },
-  {
-    "clause_id": "c007",
-    "reasoning_cat1": "The dates are unreadable and impossible as written (\"2/45/2007\", \"2/AS/2808\"), and the From/To fields are transposed around the 12:01 A.M. language, so the very period on which a claims-made policy depends cannot be determined from the words. That is a mechanical defect that changes what the provision fixes.",
-    "reasoning_cat2": "It is the operative date reference for the claims-made-and-reported condition and for the Item 1 address time-zone rule, so its unintelligibility infects the trigger provision rather than merely standing alone.",
-    "prob_cat1": 0.45,
-    "prob_cat2": 0.30
-  },
-  {
-    "clause_id": "c008",
-    "reasoning_cat1": "The two-tier deductible turns on \"covered products\" — an undefined and elastic term — and on the distinction between products \"of Protective Life and ProEquities, Inc.\" and \"all other covered products\", so the boundary of the cheaper tier is contestable. The item presupposes a category of covered products it never enumerates.",
-    "reasoning_cat2": "It implies coverage for products beyond those of the entities named as Additional Insureds in Item 2, a tension that can only be resolved by the Master Policy referenced in Items 7-8 and the issuance provision.",
-    "prob_cat1": 0.42,
-    "prob_cat2": 0.38
-  },
-  {
-    "clause_id": "c009",
-    "reasoning_cat1": "\"Refer to Master Policy\" states no amount and no term of its own; it is a pointer rather than a promise, and while spare it is not ambiguous in meaning.",
-    "reasoning_cat2": "It incorporates an external document while the issuance provision declares that \"this policy embodies all agreements\" between the holder and the Company, a mild integration-versus-incorporation tension.",
-    "prob_cat1": 0.14,
-    "prob_cat2": 0.22
-  },
-  {
-    "clause_id": "c010",
-    "reasoning_cat1": "Again a pure cross-reference; endorsements effective at inception are left wholly to another document, which is terse but not internally ambiguous.",
-    "reasoning_cat2": "Unnamed endorsements incorporated from the Master Policy could modify any item on this certificate, and the merger language in the issuance provision points the other way, so a relationship problem is plausible.",
-    "prob_cat1": 0.15,
-    "prob_cat2": 0.24
-  },
-  {
-    "clause_id": "c011",
-    "reasoning_cat1": "The sentence is truncated mid-clause (\"RELATING TO THIS\"), leaving the reach of the integration undelivered, and it simultaneously deems the application and \"any attachments\" to be the holder's representations while calling this document the whole of the agreement. \"Issued in accordance with the Master Policy\" is itself an unspecified quantum of incorporation.",
-    "reasoning_cat2": "It conflicts on its face with Items 7 and 8, which expressly send the reader to the Master Policy for premium and endorsements, and with the claims-made notice's reference to an Extended Reporting Period defined nowhere in this certificate.",
-    "prob_cat1": 0.44,
-    "prob_cat2": 0.46
-  }
+  {"clause_id": "c001",
+   "reasoning_cat1": "The sentence refers to a Company 'designated by an X in the box below' but the certificate shows only a single name with no visible box or mark, a minor mechanical gap rather than a real ambiguity of meaning. The identity of the insurer (Zurich American) is nonetheless plain on the face of the document.",
+   "reasoning_cat2": "Nothing else in the certificate names a different insurer; the closing issuance paragraph refers to 'the Company' and the Master Policy consistently. No conflicting provision found.",
+   "prob_cat1": 0.13,
+   "prob_cat2": 0.07},
+  {"clause_id": "c002",
+   "reasoning_cat1": "The claims-made-and-reported trigger — 'made and reported in writing to the Company during the \"Certificate Period\" or any applicable extended reporting period' — turns on the undefined phrase 'applicable extended reporting period' and on what counts as a 'Claim' first made, terms that insureds and insurers routinely read differently. It also uses a comma splice before 'DEFENSE COSTS', but that does not change meaning.",
+   "reasoning_cat2": "It depends on Item 5's 'Certificate Period', which on this face is garbled/illegible, and on the Master Policy's definitions imported by the issuance paragraph and Items 7-8, so the reporting window cannot be fixed from the certificate alone. That dependency is a genuine, if unresolved, source of whole-instrument friction.",
+   "prob_cat1": 0.34,
+   "prob_cat2": 0.29},
+  {"clause_id": "c003",
+   "reasoning_cat1": "A pure identification entry naming one individual and an address; the only defect is an OCR-level typo ('lrem') that changes nothing substantive. There is no term capable of two readings.",
+   "reasoning_cat2": "It is cross-referenced by Item 5 ('address shown in Item I') and by Item 4's per-'Named Certificate Holder' limits, and is consistent with both. No conflict located.",
+   "prob_cat1": 0.06,
+   "prob_cat2": 0.06},
+  {"clause_id": "c004",
+   "reasoning_cat1": "The additional-insured entry is a run-on list — 'Protective Life Insurance Company and Empire General and the Registered Representatives of ProEquities, [Inc.]' — whose scope is genuinely uncertain: whether 'Registered Representatives' means all such representatives or only this holder, and whether 'Empire General' is a separate entity, are questions the words do not settle. The truncated corporate name and missing punctuation compound the list-scope problem.",
+   "reasoning_cat2": "It sits against Item 6, which distinguishes claims 'involving products of Protective Life and ProEquities, Inc.' from 'all other covered products', and against Item 1's single named holder, so the persons and products covered are defined by two different lists that do not obviously match. That mismatch is the most plausible construction fight in this one-page instrument.",
+   "prob_cat1": 0.44,
+   "prob_cat2": 0.33},
+  {"clause_id": "c005",
+   "reasoning_cat1": "A producer name and mailing address; 'Producer' is a term of art in insurance but is not operative here and creates no rights. Only OCR noise ('York Read', 'c/o a') affects the text.",
+   "reasoning_cat2": "No other provision assigns duties to the Producer, and notice under the claims-made clause runs to 'the Company', not the producer, so no inconsistency arises. Checked against the Claims Made notice and the issuance paragraph.",
+   "prob_cat1": 0.05,
+   "prob_cat2": 0.05},
+  {"clause_id": "c006",
+   "reasoning_cat1": "The per-claim figure is rendered '$2,060,000,09' against a '$2,000,000.00' aggregate, a numerical/mechanical discrepancy that on its face leaves the each-claim limit uncertain, though it looks like scanning corruption of an otherwise matching $2,000,000 pair. Absent that, the limits language is a standard, definite schedule entry.",
+   "reasoning_cat2": "It harmonises with the Claims Made notice's statement that 'Defense Costs are provided in addition to the Limits of Liability' and with the per-holder structure of Item 1; the Master Policy could impose a group aggregate, but nothing in the certificate contradicts these figures. No specific conflicting provision found.",
+   "prob_cat1": 0.27,
+   "prob_cat2": 0.14},
+  {"clause_id": "c007",
+   "reasoning_cat1": "The period entry is mangled — '2/45/2007', '2/AS/2808', '{2:01 A.M.' — so the inception and expiry dates are not ascertainable from the text as written, and in a claims-made policy the period is the operative trigger. Even discounting scanning artefacts, the clause depends on an 'address shown in Item I' cross-reference to fix local time.",
+   "reasoning_cat2": "The Certificate Period is the operative window incorporated by the Claims Made and Reported notice, so any indeterminacy here propagates directly into coverage; it also depends on Item 1's address. Checked against c002 and c003 — dependent, but not contradictory.",
+   "prob_cat1": 0.38,
+   "prob_cat2": 0.24},
+  {"clause_id": "c008",
+   "reasoning_cat1": "The two-tier deductible turns on 'covered claims involving products of Protective Life and ProEquities, Inc.' versus 'all other covered products', and neither 'covered products' nor 'involving' is defined in the certificate, leaving a specific-list-plus-catch-all structure whose reach is contestable. Whether a sale of an outside or unapproved product falls in the second tier — and is thereby conceded to be covered — is exactly the sort of argument the words invite.",
+   "reasoning_cat2": "Read with Item 2's additional insureds (the same two entities) and with the Master Policy incorporated by the issuance paragraph, the certificate's assumption that 'all other covered products' exist may or may not match the Master Policy's coverage grant, which is where an incoherence would appear. That relationship is the strongest Category 2 candidate here.",
+   "prob_cat1": 0.44,
+   "prob_cat2": 0.36},
+  {"clause_id": "c009",
+   "reasoning_cat1": "'Refer to Master Policy' is a bare cross-reference with no ambiguous term of its own; it states no amount and creates nothing to construe within itself. Its brevity is a delegation, not a defect.",
+   "reasoning_cat2": "It sits alongside the issuance paragraph's declaration that 'this policy embodies all agreements', a mild tension between incorporation and integration, but premium is not otherwise addressed in the certificate. No direct conflict identified.",
+   "prob_cat1": 0.07,
+   "prob_cat2": 0.13},
+  {"clause_id": "c010",
+   "reasoning_cat1": "Again a pure referral; the only softness is that the endorsements effective at inception are unidentified, so what modifies coverage cannot be read off this document. That is incompleteness rather than a nameable lexical ambiguity.",
+   "reasoning_cat2": "Unlisted endorsements could alter the limits, period or deductible set out in Items 4-6, and the closing integration language ('this policy embodies all agreements') pulls the other way from open-ended incorporation of Master Policy endorsements. Checked against c006, c007, c008 and c011 — a plausible but unproven friction.",
+   "prob_cat1": 0.09,
+   "prob_cat2": 0.19},
+  {"clause_id": "c011",
+   "reasoning_cat1": "It both incorporates the Master Policy ('issued in accordance with') and declares that 'this policy embodies all agreements existing between the Named Certificate Holder and the Company', while sweeping in 'the application and any attachments hereto' as the holder's representations — 'this policy' is undefined as between certificate and master policy, and the sentence is truncated mid-clause ('RELATING TO THIS'). The truncation and the 'GR' for 'OR' are mechanical errors in the operative merger language.",
+   "reasoning_cat2": "The integration statement sits directly against Items 7 and 8, which push premium and endorsements out to the Master Policy, and against a certificate whose key terms are meaningless without that separate document. That combination of incorporation plus integration is a real whole-instrument tension.",
+   "prob_cat1": 0.33,
+   "prob_cat2": 0.34}
 ]}

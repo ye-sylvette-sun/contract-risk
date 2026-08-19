@@ -1,18 +1,14 @@
 """Step 2 — locate every clause of a contract (one call per contract).
 
-It runs on every contract step 1 was shown, for every case step 1 processed.
-That is two groups. The contracts a positive came out of must be here, because a
-positive is never left without negatives cut from its own document, in its own
-OCR condition. The contracts that produced no positive are here because their
-clauses are negatives in their own right: the agreement was filed in the case,
-was before the court, and the court did not construe it.
+Runs on every contract step 1 was shown: those a positive came from (so a
+positive is never left without negatives from its own document) and those that
+produced none (whose clauses are negatives in their own right).
 
 The model returns a line range and two anchors per clause and writes no text.
-What it cannot be checked on is a range that starts and ends in the right place
-but swallows an intervening clause — both anchors match and the extraction
-silently contains too much (docs/DATASET.md §6). The three proposed detectors are
-implemented here as FLAGS, printed and stored: nothing is rejected on them, so
-they can be measured before anyone decides which earn their place.
+What it cannot be checked on is a range that starts and ends correctly but
+swallows an intervening clause — both anchors match and the extraction silently
+contains too much (docs/DATASET.md §6). The detectors below are FLAGS only,
+printed and stored, so they can be measured before anyone rejects on them.
 
 Input : output/clauses.json, output/contracts.json, output/contracts/*.md
 Output: output/inventory.json  (resumable — re-runs only what is missing)
@@ -27,27 +23,14 @@ import lib
 
 OUT = lib.OUT / "inventory.json"
 
-# A clause this many times the contract's median length is flagged for review.
-# Reporting only: nothing is rejected on it, here or anywhere downstream.
+# A clause this many times the contract's median length is flagged. Reporting
+# only — nothing is rejected on it.
 #
-# Raised from 6 after reading, line by line, ten flagged clauses across two
-# contracts. Only two were genuinely several clauses merged; the rest were
-# single provisions that simply run long, which is ordinary in a terms-of-service
-# agreement or a policy. Measured on that truth set:
-#
-#     WIDE     flags   true   false   missed   precision   recall
-#        6        10      2       8        0        0.20     100%
-#       10         6      2       4        0        0.33     100%
-#       11         3      1       2        1        0.33      50%
-#       18         1      1       0        1        1.00      50%
-#
-# 10 is the ceiling of what length alone can do. Above it recall breaks
-# immediately, and precision does not improve: a genuinely merged clause and a
-# perfectly good one both sit at 10.8x the median, so NO threshold separates
-# them. Going higher trades a real defect for nothing.
-#
-# The truth set is ten clauses in two contracts. Treat 10 as the best current
-# estimate, not a settled constant, and re-derive it when more have been read.
+# Raised from 6 after reading ten flagged clauses by hand: at 6, precision 0.20;
+# at 10, 0.33 with recall still 100%; above 10 recall breaks and precision does
+# not improve, because a merged clause and a good one both sit at 10.8x the
+# median. Truth set is ten clauses in two contracts — re-derive when more have
+# been read.
 WIDE = 10
 
 

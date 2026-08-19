@@ -1,32 +1,23 @@
 """Score the locator against stored logs, at zero API cost. See docs/DATASET.md.
 
-Two kinds of log can be scored, and the script picks per clause:
+Two kinds of log, picked per clause:
 
-* **replay** — a log from this pipeline, whose clauses carry `head` and `tail`.
-  The anchors the model actually returned are re-run through `locate()`, which
-  is how ANCHOR_MATCH and SLACK are tuned against real answers.
-* **synthesised** — a log whose clauses carry full `text` instead. The first and
-  last ANCHOR_WORDS words of that text are exactly what the prompts ask for, so
-  anchors are sliced out of it and `--anchor-words` can be swept.
+* **replay** — clauses carrying `head`/`tail`. The anchors the model actually
+  returned are re-run through `locate()`, which is how ANCHOR_MATCH and SLACK
+  are tuned against real answers.
+* **synthesised** — clauses carrying full `text`. Anchors are sliced from it, so
+  `--anchor-words` can be swept.
 
-Either way the whole locator — matching, snapping, slicing, normalising — is
-scored offline, at no API cost.
+Each log stores the numbered document that was sent, so nothing outside the log
+directory is needed and the OCR inputs need not be on disk.
 
-Each log also stores the numbered document that was sent, so the text those line
-numbers index is recovered from the log itself. Nothing outside the log
-directory is needed, and the OCR inputs do not have to be on disk.
+It measures what fraction of anchors match, how often snapping moves a boundary
+and by how much, and how often the extracted text differs from the raw source
+window. A difference is not automatically a fault — the anchors cut INSIDE the
+first and last line, so a heading's markdown is legitimately left out. What it
+catches is a span that lost real words.
 
-What it measures:
-
-  1. what fraction of anchors match at the claimed boundary;
-  2. how often snapping moves a boundary, and by how many lines;
-  3. how often the extracted text differs from the raw source window. A
-     difference is not automatically a fault: the anchors cut INSIDE the first
-     and last line, so a heading's markdown (`### **`) is legitimately left out
-     of the span. What it catches is a span that lost real words.
-
-Two-column interleave has no cheap detector and is not attempted here. It has to
-be counted by hand, and docs/DATASET.md requires it be reported, not hidden.
+Two-column interleave has no cheap detector and is not attempted here.
 
 Usage:
     python src/replay_anchors.py --logs output/llm_logs

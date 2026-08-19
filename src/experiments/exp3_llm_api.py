@@ -3,32 +3,23 @@
 The question: given a contract and its provisions, can a model pick out the ones
 a federal court actually construed?
 
-Everything the model needs goes into a single prompt — no tools, no agent loop,
-no second turn. **One call per contract, judging every provision of it at once**,
-which is a methodological requirement and not an optimisation: Category 2 risk is
-about how provisions sit against each other, so a model asked about half of a
-contract at a time is being asked a different, easier question. The call
-carries:
+Everything goes into a single prompt — no tools, no agent loop, no second turn.
+**One call per contract, judging every provision at once**, which is a
+methodological requirement: Category 2 risk is about how provisions sit against
+each other, so a model shown half a contract is being asked an easier question.
+The call carries the FULL contract text, every provision to judge quoted under
+an opaque id, and one worked PAIR per risk type — a clause a court construed,
+the court's own words about it, and a clause from the same contract that no
+court construed, framed as LOWER RISK and never as clean.
 
-  * the FULL contract text, because Category 2 risk is about the relationship
-    between provisions and cannot be seen from one provision alone;
-  * every provision of that contract to be judged, quoted verbatim under an id;
-  * one worked PAIR per risk type: a clause a court really did construe, the
-    court's own words about it from the opinion, and — from the same contract —
-    a clause no court construed. The second is framed as LOWER RISK, never as
-    clean: not being litigated is not evidence of soundness (see example_block).
+The judicial excerpt is the point of this experiment: `opinion_comment` is
+already in the dataset, so the model is shown what the two sides argued rather
+than left to guess what "risky" means from a bare label.
 
-The judicial excerpt is the point of this experiment. `opinion_comment` is
-already in the dataset for every positive, so the example needs no extra
-extraction step: the model is shown what the two sides argued and what the court
-found uncertain, rather than being left to guess what "risky" means from a bare
-label.
-
-Per provision the model returns two INDEPENDENT probabilities — `prob_cat1` for
-an intrinsic textual defect, `prob_cat2` for a relational one — with separate
-reasoning for each. Only the two categories are asked for; no fine subtype. A
-type is flagged at 0.5, but the raw probabilities are what get written out, so
-the operating threshold is a choice made afterwards (plot_exp3_thresholds.py).
+Per provision it returns two INDEPENDENT probabilities — `prob_cat1` intrinsic,
+`prob_cat2` relational — with separate reasoning. A type is flagged at 0.5, but
+the raw probabilities are what get written out, so the operating threshold is
+chosen afterwards.
 
 Gold: POSITIVE with taxonomy 1.x -> risky_cat1; 2.x -> risky_cat2; NEGATIVE ->
 not_risky.
@@ -42,10 +33,11 @@ Output: output/exp3_llm_api_preds.csv      per-provision predictions (resumable)
         output/llm_logs/exp3_llm_api/<cid>.json  full prompt, response and usage
 
 Usage:
-    python src/experiments/exp3_llm_api.py [--limit N] [--dry-run]
+    python src/experiments/exp3_llm_api.py [--limit N] [--parallel N] [--dry-run]
     python src/experiments/exp3_llm_api.py --metrics-only
 """
 import argparse
+import concurrent.futures as cf
 import csv
 import json
 import os
@@ -129,22 +121,15 @@ EXCERPT_CAP = 6_000     # characters of opinion an example may carry
 def pick_examples(rows):
     """One worked pair per risk type present in the data.
 
-    Chosen deterministically, never at random: for each taxonomy code, the
-    positive with the longest `opinion_comment` **that still fits under
-    EXCERPT_CAP**. The court's own words are what this experiment is testing and
-    a two-line excerpt teaches nothing — but the longest excerpt in the corpus
-    runs to 38,000 characters, which would swamp the other two examples and be
-    re-sent on every call. Where every candidate is over the cap, the shortest
-    is used whole: a court's reasoning cut off mid-sentence is worse than a
-    different example. Ties break on the clause id, so the same run always
-    produces the same examples.
+    Deterministic, never random: per taxonomy code, the positive with the
+    longest `opinion_comment` that still fits under EXCERPT_CAP (the longest in
+    the corpus runs to 38,000 characters and would swamp the others). Where
+    every candidate is over the cap the shortest is used whole — reasoning cut
+    off mid-sentence is worse than a different example. Ties break on clause id.
 
-    Each construed clause is paired with a clause from the SAME contract that no
-    court construed. Without the pair the model sees only litigated text and has
-    nothing to calibrate against, and the contrast that matters is within a
-    document, not across the corpus. The pair is a scale, not a right answer —
-    `example_block` is careful never to call the second clause clean, because the
-    data does not say that.
+    Each is paired with a clause from the SAME contract that no court construed,
+    so the contrast is within a document. The pair is a scale, not a right
+    answer.
     """
     by_contract = defaultdict(list)
     for r in rows:
@@ -173,14 +158,10 @@ def pick_examples(rows):
 def example_block(examples):
     """The worked examples, paired high-risk against lower-risk.
 
-    The wording of the second half of each pair is deliberate and was corrected
-    once. It is NOT a clean or risk-free provision and must never be presented as
-    one: all that is known about it is that no court construed it in that case.
-    It may be sound, or it may carry a defect nobody had occasion to litigate —
-    a dispute has to be worth its cost, and most defects never are. Calling such
-    a provision "not risky" would teach the model a fact the data does not
-    support, and would make the pair an instruction to match good drafting rather
-    than a scale to calibrate against.
+    The second half of each pair must never be presented as clean: all that is
+    known is that no court construed it. Calling it "not risky" would teach a
+    fact the data does not support, and turn the pair into an instruction to
+    match good drafting rather than a scale.
     """
     out = ["One worked pair per risk type. Each pair is two real provisions from "
            "the same contract: one a federal court construed — so it is KNOWN to "
@@ -218,22 +199,14 @@ def example_block(examples):
 def anonymise(clauses):
     """Present the provisions under opaque ids, in the order they appear.
 
-    The dataset's own `clause_id` is `pos1`/`neg14`, and rows arrive positives
-    first. Handing those to the model puts the gold label on the door of every
-    provision it is asked to judge, and groups the answers at the top of the
-    list. No result gathered that way can be defended, whether or not the model
-    took the hint.
+    The dataset's `pos1`/`neg14` ids would put the gold label on the door of
+    every provision and group the answers at the top of the list. So the model
+    sees `c001`, `c002`, ... in `source_span` order — the sequence a reader
+    meets them in, carrying no signal, each provision beside its neighbours,
+    which is what a Category 2 judgement needs.
 
-    So the model sees `c001`, `c002`, ... assigned in order of `source_span` —
-    the order the provisions occur in the contract. That order is also the
-    honest one: it is the sequence a reader meets them in, it carries no signal
-    about the labels, and it puts each provision next to its neighbours, which
-    is what a Category 2 judgement needs.
-
-    The mapping is returned rather than stored globally, written into the raw
-    answer alongside the judgments, and used to translate back before anything
-    reaches the predictions file. `clause_id` in the output is therefore still
-    the dataset's own id and joins to `dataset.csv` unchanged.
+    The mapping is translated back before anything reaches the predictions file,
+    so `clause_id` in the output still joins to `dataset.csv` unchanged.
 
     Returns (provisions in document order, real id -> opaque, opaque -> real).
     """
@@ -255,14 +228,10 @@ TOP_UP_ROUNDS = 2
 def top_up(cid, judged, real_of, fields):
     """Ask again, in the same conversation, for the provisions left out.
 
-    A model that returns 61 judgments when 359 were asked for has not answered
-    the question, and scoring the other 298 as "not risky" would measure this
-    harness rather than the model. It is asked to finish instead.
-
-    The follow-up carries its own previous answer as an assistant turn, so
-    "these ids are missing" is a claim it can check rather than one it has to
-    take on trust. Rounds stop as soon as one returns nothing new: a model that
-    has given up repeating itself will not be talked round by asking again.
+    61 judgments when 359 were asked for is not an answer, and scoring the rest
+    as "not risky" would measure the harness. The follow-up carries the model's
+    own previous answer as an assistant turn, so "these are missing" is checkable.
+    Rounds stop as soon as one returns nothing new.
     """
     for _ in range(TOP_UP_ROUNDS):
         missing = [oid for oid in real_of if oid not in judged]
@@ -299,16 +268,12 @@ def top_up(cid, judged, real_of, fields):
 
 
 def fill_gaps(groups, registry, block):
-    """Finish contracts already scored, but with provisions left unanswered.
+    """Finish contracts already scored but with provisions left unanswered.
 
-    Runs before the main loop, every time, so a gap left by an earlier run is
-    closed rather than inherited. The stored answer supplies the assistant turn,
-    so the follow-up is the same continued conversation the inline top-up uses
-    rather than a fresh ask.
-
-    Rows are appended with `ok=1`; readers prefer a scored row over a blank one
-    for the same (contract_id, clause_id), so the earlier blanks are superseded
-    without editing anything and the predictions file stays append-only.
+    Runs before the main loop every time, so a gap is closed rather than
+    inherited. Rows are appended with `ok=1`; readers prefer a scored row over a
+    blank one for the same key, so earlier blanks are superseded and the file
+    stays append-only.
     """
     if not PREDS.exists():
         return
@@ -389,11 +354,8 @@ def by_contract(rows):
 def done_contracts(path, groups=None):
     """Contracts that need no further call.
 
-    `groups` makes "done" mean COMPLETE. Without it, one scored provision marks
-    a whole contract finished, and a call that answered 1 of 85 is never revisited
-    — which is exactly what happened to `871FSupp2d671_2005_employment_agreement`,
-    whose other 84 provisions sat blank through a full re-run. A contract is done
-    when every provision of it has a scored row; anything short comes back.
+    `groups` makes "done" mean COMPLETE. Without it one scored provision marks a
+    contract finished, and a call that answered 1 of 85 is never revisited.
     """
     if not path.exists():
         return set()
@@ -405,6 +367,36 @@ def done_contracts(path, groups=None):
         return set(scored)
     return {cid for cid, ids in scored.items()
             if len(ids) >= len(groups.get(cid, ()))}
+
+
+def judge_one(cid, clauses, registry, block, n, total):
+    """One contract: one call, plus top-ups. Runs in a worker thread."""
+    text = (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
+    print(f"[{n}/{total}] {cid}: {len(clauses)} provisions, "
+          f"{len(text):,}-char contract", flush=True)
+    shown, opaque_of, real_of = anonymise(clauses)
+    fields = dict(citation=clauses[0]["citation"], contract_id=cid,
+                  examples=block, document=text,
+                  clauses=clause_block(shown, opaque_of))
+    answer = lib.ask("exp3", cid, effort="high", log_as="exp3_llm_api", **fields)
+    if not answer:
+        return {}, opaque_of
+
+    judged = {str(j["clause_id"]): j for j in answer["judgments"]}
+    judged = top_up(cid, judged, real_of, fields)
+    gold = {c["clause_id"]: c for c in clauses}
+    merged = list(judged.values())
+    for j in merged:
+        c = gold.get(real_of.get(str(j["clause_id"]), ""))
+        if c:
+            j["dataset_clause_id"] = c["clause_id"]
+            j["gold"] = gold_of(c)
+            j["gold_subtype"] = gold_fine(c)
+            j["clause_name"] = c["clause_name"]
+    (RAW / f"{cid}.json").write_text(json.dumps(
+        {"judgments": merged, "_id_map": real_of},
+        ensure_ascii=False, indent=2), encoding="utf-8")
+    return judged, opaque_of
 
 
 def run(args):
@@ -482,74 +474,57 @@ def run(args):
     if new:
         writer.writeheader()
 
-    for i, (cid, clauses) in enumerate(todo, 1):
-        text = (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
-        print(f"[{i}/{len(todo)}] {cid}: {len(clauses)} provisions, "
-              f"{len(text):,}-char contract")
-        shown, opaque_of, real_of = anonymise(clauses)
-        fields = dict(citation=clauses[0]["citation"], contract_id=cid,
-                      examples=block, document=text,
-                      clauses=clause_block(shown, opaque_of))
-        answer = lib.ask("exp3", cid, effort="high", log_as="exp3_llm_api",
-                         **fields)
+    # Contracts run in threads; only the main thread writes the CSV. The calls
+    # are independent, so a contract that fails is simply not written and comes
+    # back as outstanding on the next run.
+    lib.client()          # built once here, not raced for by the workers
+    with cf.ThreadPoolExecutor(max_workers=args.parallel) as pool:
+        futs = {pool.submit(judge_one, cid, cl, registry, block, i, len(todo)):
+                (cid, cl) for i, (cid, cl) in enumerate(todo, 1)}
+        for fut in cf.as_completed(futs):
+            cid, clauses = futs[fut]
+            try:
+                judged, opaque_of = fut.result()
+            except Exception as e:
+                print(f"    ! {cid}: {type(e).__name__}: {str(e)[:200]}",
+                      flush=True)
+                continue
 
-        judged = {}
-        if answer:
-            judged = {str(j["clause_id"]): j for j in answer["judgments"]}
-            judged = top_up(cid, judged, real_of, fields)
-            gold = {c["clause_id"]: c for c in clauses}
-            merged = list(judged.values())
-            for j in merged:
-                c = gold.get(real_of.get(str(j["clause_id"]), ""))
-                if c:
-                    j["dataset_clause_id"] = c["clause_id"]
-                    j["gold"] = gold_of(c)
-                    j["gold_subtype"] = gold_fine(c)
-                    j["clause_name"] = c["clause_name"]
-            (RAW / f"{cid}.json").write_text(json.dumps(
-                {"judgments": merged, "_id_map": real_of},
-                ensure_ascii=False, indent=2), encoding="utf-8")
-
-        n_ok = 0
-        for c in clauses:
-            j = judged.get(opaque_of[c["clause_id"]])
-            ok = j is not None
-            n_ok += ok
-            p1 = _f(j.get("prob_cat1")) if ok else ""
-            p2 = _f(j.get("prob_cat2")) if ok else ""
-            writer.writerow({
-                "contract_id": cid, "citation": c["citation"],
-                "clause_id": c["clause_id"], "clause_name": c["clause_name"],
-                "label": c["label"], "taxonomy": c["taxonomy"],
-                "gold": gold_of(c), "gold_subtype": gold_fine(c),
-                "pred": pred_from_probs(p1, p2) if ok else "",
-                "prob_cat1": p1, "prob_cat2": p2,
-                "reasoning_cat1": j.get("reasoning_cat1", "") if ok else "",
-                "reasoning_cat2": j.get("reasoning_cat2", "") if ok else "",
-                "ok": "1" if ok else "0"})
-        fout.flush()
-        missing = len(clauses) - n_ok
-        print(f"    {n_ok}/{len(clauses)} judged"
-              + (f"  ({missing} MISSING)" if missing else ""))
+            n_ok = 0
+            for c in clauses:
+                j = judged.get(opaque_of[c["clause_id"]])
+                ok = j is not None
+                n_ok += ok
+                p1 = _f(j.get("prob_cat1")) if ok else ""
+                p2 = _f(j.get("prob_cat2")) if ok else ""
+                writer.writerow({
+                    "contract_id": cid, "citation": c["citation"],
+                    "clause_id": c["clause_id"], "clause_name": c["clause_name"],
+                    "label": c["label"], "taxonomy": c["taxonomy"],
+                    "gold": gold_of(c), "gold_subtype": gold_fine(c),
+                    "pred": pred_from_probs(p1, p2) if ok else "",
+                    "prob_cat1": p1, "prob_cat2": p2,
+                    "reasoning_cat1": j.get("reasoning_cat1", "") if ok else "",
+                    "reasoning_cat2": j.get("reasoning_cat2", "") if ok else "",
+                    "ok": "1" if ok else "0"})
+            fout.flush()
+            missing = len(clauses) - n_ok
+            print(f"    {cid}: {n_ok}/{len(clauses)} judged"
+                  + (f"  ({missing} MISSING)" if missing else ""), flush=True)
 
     fout.close()
     metrics()
 
 
 def est(todo, registry, block):
-    """What the outstanding calls would cost, before any of them is sent.
+    """What the outstanding calls would cost, before any is sent.
 
-    The input side is exact, not approximated: every prompt is BUILT, exactly as
-    `lib.ask` would build it, and the largest one is metered by Claude's own
-    token counter — a free round trip. The rest are scaled from that call's
-    characters-per-token.
-
-    The output side cannot be known in advance — reasoning at high effort is
-    billed as output and is the larger half of the bill — so three rates are
-    shown rather than one number pretending to be a forecast. It also decides
-    whether a call FITS: the largest contract's judgments alone are checked
-    against lib.MAX_OUTPUT here, because a call that overruns is lost, not
-    truncated.
+    The input side is exact: every prompt is BUILT as `lib.ask` would build it,
+    the largest metered by Claude's own counter, the rest scaled from its
+    characters-per-token. The output side cannot be known in advance, so three
+    rates are shown rather than a forecast. It also checks the largest
+    contract's judgments against lib.MAX_OUTPUT — a call that overruns is lost,
+    not truncated.
     """
     if not todo:
         print("\nnothing outstanding — no calls to price")
@@ -718,6 +693,8 @@ def main():
                     help="run the contracts in a seeded random order instead of "
                          "largest first, so the first N are a fair sample")
     ap.add_argument("--seed", type=int, default=0, help="sample and shuffle seed")
+    ap.add_argument("--parallel", type=int, default=1,
+                    help="contracts in flight at once (one call each)")
     ap.add_argument("--dry-run", action="store_true",
                     help="print the cost of the outstanding calls and stop")
     ap.add_argument("--metrics-only", action="store_true")

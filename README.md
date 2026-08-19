@@ -15,6 +15,8 @@ model to predict the labels.
   runs, what the model is given, how it is scored.
 - **[docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)** — what the agent run is
   isolated from, and how that is checked.
+- **[docs/REPORT.md](docs/REPORT.md)** — the results: what the two runs found,
+  what separates them, and what is not established.
 
 This README is the repo tour and how to run it.
 
@@ -79,11 +81,17 @@ src/build_dataset.py         assemble + validate -> dataset.csv   (no LLM)
 src/replay_anchors.py        re-score the locator against stored logs (no LLM, no cost)
 
 src/experiments/exp3_llm_api.py          one API call per contract
-src/experiments/exp3_agent.py            one agent session per contract
+src/experiments/exp3_agent.py            one agent session per contract, in a container
+src/experiments/isolation.py             what a session may see: tools, path hook, env
+src/experiments/predictions.py           reading the judgment files the agent writes
+src/experiments/test_isolation.py        the path hook's cases (no cost, no API)
 src/experiments/manifest.py              what the machine was, per run
 src/experiments/preflight.py             one session, then audit it for leakage
 src/experiments/compare_exp3.py          ROC, precision, recall, flag rate
 src/experiments/plot_exp3_thresholds.py  --run {llm_api,agent}
+
+docker/Dockerfile                        the judging sandbox, base pinned by digest
+docker/judge_one.py                      the only code that runs inside it
 
 output/cases.json        cases in scope, with keys, headnotes and codes
 output/contracts.json    the document registry
@@ -120,7 +128,38 @@ byte-identical to their source. Step 0 registers only the entries their
 ```sh
 pip install -r requirements.txt
 echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+```
 
+**Then authenticate the subscription, by hand, once.** The dataset steps below
+bill the API key, but the agent experiment bills the Claude Code
+**subscription** — and it runs each session in a container with no `~/.claude`
+to log in from, so the credential has to be passed in.
+
+```sh
+claude setup-token          # opens a browser; prints a long-lived (1-year) token
+```
+
+Run that in a **real terminal**. It cannot be scripted: the flow is a full-screen
+prompt that needs a TTY, and it exits the moment its output is piped to a file or
+another process. Then put what it printed in `.env`, next to the API key — the
+run loads it from there:
+
+```sh
+CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
+```
+
+An exported `CLAUDE_CODE_OAUTH_TOKEN` also works and wins over `.env`. Only the
+token is handed to the container (`docker run -e`); the API key is not.
+
+If that variable is unset, `exp3_agent.py` falls back to bind-mounting
+`~/.claude/.credentials.json` read-only, as a single file — never the directory,
+which would carry `settings.json`, `CLAUDE.md` and the memory store in with it.
+That works, but a read-only mount cannot refresh an access token that expires
+part-way through a multi-hour run, which is why the token is preferred.
+
+Now the dataset:
+
+```sh
 python src/step0_corpus.py       # 0.  no LLM
 python src/step0b_layout.py      # 0b. one cheap Sonnet call per contract
 python src/step1_extract.py      # 1.  one call per case
