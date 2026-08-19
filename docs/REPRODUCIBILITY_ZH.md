@@ -6,8 +6,6 @@
 外部 review 指出：agent 实验为每份合同开了新的**对话**，但没有建立干净的**运行环境**。
 本文逐条列出 review 提出的问题、各自的处理，以及验证方式。
 
-修好的代码在 `main`，旧代码与旧结果在 `legacy_agent_experiment_8.17`。
-
 只有 **agent** 一路受影响。`exp3_llm_api.py` 是无状态 Messages API 调用，不涉及 CLI、
 配置文件、memory 或文件系统，其预测结果未重跑。
 
@@ -93,14 +91,31 @@
   这是限制生效、且提交代码与实际运行代码一致的证据。仍加入 `disallowed_tools`，因为
   "未列出"与"被明确拒绝"是两种不同的说法，只有后者可从外部检查。
 
+## 二之补、容器隔离
+
+- **原先运行在开发机的普通用户下。** 环境清扫覆盖不到企业托管的组织级策略
+  (`/etc/claude-code/managed-settings.json`)；而任何交互式用过 Claude Code 的机器，
+  `~/.claude` 里都带着配置、memory 与 skills。
+  **处理：** 每个 session 都在自己的容器里跑，基础镜像按 digest 锁定
+  (`ubuntu@sha256:d78ab764...`)，以镜像构建时新建的非 root 用户运行，其 home 目录是空的。
+  文件系统上没有托管策略文件、没有 `~/.claude`、没有 skills、没有任何 `CLAUDE.md`——
+  不是被关掉了，是从来没装过。容器只挂载当前这一份合同的工作区到 `/work`，两个 prompt
+  只读挂到 `/opt/task`；`dataset.csv`、本仓库以及另外 63 份合同根本不在它的文件系统上。
+  镜像构建时会断言 SDK 自带的 CLI 就是 2.1.233，构建得出来的镜像不可能悄悄换了 CLI。
+
+- **登录凭据要进容器，但不能把配置一起带进去。** 直接挂 `~/.claude` 目录会把配置、
+  memory、skills 一并带入。
+  **处理：** 用环境变量 `CLAUDE_CODE_OAUTH_TOKEN` 传入；没有它时，只读挂载单个文件
+  `~/.claude/.credentials.json`。目录本身永不挂载。manifest 记录用了哪条路径，不记录值。
+
 ## 三、未解决的问题
 
-- **每个条件仅运行一次。** 两路均未设 temperature 与 seed，重跑不会得到相同数字。多次
-  配对重复可界定该波动，因成本未做。
+- **每个条件仅运行一次。** 两路均未设 temperature 与 seed，API 也不提供确定性采样，
+  重跑不会得到相同数字。因此每个指标的**跑与跑之间的波动没有测量**，两路之间的差距也
+  无法确认超过了这个波动。多次配对重复可界定该波动，因成本未做。这是唯一会影响结果
+  解读方式的遗留项，详见 [REPORT.md](REPORT.md) 第 5 节。
 
-- **无操作系统层面的隔离。** 运行在单台机器的普通用户下，非容器、非专用系统账号。企业
-  托管的组织级策略是环境清扫无法覆盖的通道。preflight 验证的是实际进入模型上下文的
-  内容；manifest 记录机器，而非隔离机器。
+- **`claude-opus-5` 是别名。** 见第一节：能观测到的都记录了，但没有带日期的快照可锁。
 
 ## 四、验证方式
 
@@ -113,11 +128,14 @@ session，随后审计其轨迹，任一项不通过即以非零码退出。检�
 - 所有记录的 CLI 版本一致，且等于 SDK 解析出的版本；
 - 未使用四个工具以外的工具，此类尝试均被拒绝；
 - 无工作区外路径被实际读取（被拒绝的尝试计为通过并记录）；
-- 存在覆盖该合同的 manifest，其隔离选项为设定值，且环境开关均实际存在于 `os.environ`。
+- 存在覆盖该合同的 manifest，其隔离选项为设定值，且环境开关均实际存在于该 session
+  自己的环境中；
+- session 跑在预期的镜像里、工作目录只有 `/work`，且容器内需要清扫的环境变量为 0 个
+  ——这是在开发机上跑不出来的数字。
 
-该检查前两次运行均失败：一次因 manifest 记录的 CLI 未参与运行，一次因
+该检查早期两次运行失败：一次因 manifest 记录的 CLI 未参与运行，一次因
 `DISABLE_NON_ESSENTIAL_MODEL_CALLS` 不是有效变量名。两者均属选项看似生效、实际无效，
-仅靠阅读代码无法发现。
+仅靠阅读代码无法发现。当前 harness 14 项检查全部通过。
 
 ```sh
 python src/experiments/preflight.py                  # 运行一个 session 并审计
@@ -127,16 +145,22 @@ python src/experiments/preflight.py --audit <cid>    # 审计已运行的 sessio
 ## 五、复现步骤
 
 ```sh
-pip install -r requirements.txt        # 精确锁定；CLI 随 SDK 一并安装
+pip install -r requirements.txt        # 宿主机侧：够用来构建镜像并驱动实验
+docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
+claude setup-token                     # 手动跑一次，token 写进 .env
 python src/experiments/preflight.py    # 须输出 PREFLIGHT PASSED
-python src/experiments/exp3_agent.py --shuffle
+python src/experiments/exp3_agent.py --shuffle --parallel 6
 python src/experiments/compare_exp3.py
 python src/experiments/plot_exp3_thresholds.py --run agent
 ```
+
+`--parallel` 只决定同时跑几个容器。每份合同都是独立容器里的独立 session，这个数字
+不影响结果。
 
 数据集本身不需要 API key：`step0_corpus.py` 与 `build_dataset.py` 不做模型调用，且
 `build_dataset.py` 按记录的字符区间从磁盘重新切分每一行，文字不能逐字复现即拒绝写出。
 重跑复现的是流程，模型答案会不同，差异幅度即第三节所述的未解决问题。
 
 每个 session 留下 `output/llm_logs/exp3_agent/<cid>.trajectory.jsonl`，含每次工具调用、
-思考块、CLI 版本与工作目录，本文各项说法可据此重新审计，无需重跑。
+思考块、CLI 版本与工作目录；另有 `<cid>.json` 记录轮数、token 用量、计费模型、被拒绝的
+路径以及所用镜像。本文各项说法可据此重新审计，无需重跑。

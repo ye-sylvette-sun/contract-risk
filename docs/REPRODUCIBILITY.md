@@ -83,7 +83,13 @@ rerun.
   present used `>=` floors.
   **Fixed:** all dependencies pinned with `==` and committed before the run:
   `claude-agent-sdk==0.2.139`, `anthropic==0.122.0`, `matplotlib==3.8.4`,
-  `openpyxl==3.1.2`, installed into the image at build time. The SDK must be newer than 0.1.59, below which
+  `openpyxl==3.1.2`, installed into the image at build time. Read the manifests
+  with one caveat: they record the **host** environment, which drives the run
+  but does not perform it, and there `matplotlib` is 3.11.1 — 3.8.4 has no wheel
+  for CPython 3.13 on Windows. The two versions that decide what a session does,
+  `claude-agent-sdk` and `anthropic`, match everywhere; `matplotlib` and
+  `openpyxl` draw figures and read spreadsheets and are imported by nothing a
+  session runs. The SDK must be newer than 0.1.59, below which
   `setting_sources=[]` was mishandled.
 
 - **Only the CLI version was recorded; nothing else about the machine.**
@@ -134,6 +140,18 @@ rerun.
   read-only. The directory is never mounted. Manifests record which route was
   used, never the value.
 
+- **Not raised in the review, found in our own audit: the two arms were not
+  shown the same worked examples.** The agent's workspace carried each example's
+  full contract; `exp3_llm_api.py` puts only the two provision texts and the
+  court's verbatim words in its few-shot block. The agent therefore had evidence
+  available that the arm it is compared against did not.
+  **Fixed:** the example contracts are gone from the workspace, along with the
+  prompt line offering them, and everything was rerun. A census of the
+  trajectories shows the affordance was never used in either run — all 64
+  sessions read all three `notes.md`, none ever opened an example contract — so
+  no result depended on it, but the comparison should not have rested on the
+  model declining an advantage it was offered.
+
 ## 2. Two findings in the review that do not hold
 
 - **"Memory is keyed by the git repository, so all workspaces under it share one
@@ -154,11 +172,18 @@ rerun.
 
 - **One run per condition.** Neither arm sets a temperature or a seed, and the
   API exposes no way to make sampling deterministic, so a rerun will not
-  reproduce the same numbers. The run-to-run variance of every reported metric
-  is therefore **unmeasured**, and none of the differences between the two arms
-  is known to exceed it. Repeated paired runs would bound it; they were not
-  done, on cost. This is the one open item that changes how the results may be
-  read — see §6 of [REPORT.md](REPORT.md).
+  reproduce the same numbers. No repeat study was done, on cost, so the
+  run-to-run variance of each metric is **unquantified**.
+
+  One incidental measurement sets the scale. The agent arm was executed twice
+  under conditions verified identical by matching `prompt_sha256`,
+  `input_sha256`, model, effort, turn ceiling and image; between those two
+  executions ROC-AUC moved by about 0.02 and recall@0.5 by about 0.10 across the
+  full corpus. That is one observation, not an estimate, but it means
+  differences of a few hundredths in ROC-AUC are not interpretable on their own.
+  Which findings survive that caution, and which do not, is set out in §6 of
+  [REPORT.md](REPORT.md). This remains the one open item that changes how the
+  results may be read.
 
 - **`claude-opus-5` is an alias.** Covered in §1: what is observable is
   recorded, but there is no dated snapshot to pin.
