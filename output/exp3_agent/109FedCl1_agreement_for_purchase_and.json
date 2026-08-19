@@ -1,0 +1,358 @@
+{
+  "contract_id": "109FedCl1_agreement_for_purchase_and",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "neg17",
+    "c018": "neg18",
+    "c019": "neg19",
+    "c020": "neg20",
+    "c021": "neg21",
+    "c022": "neg22",
+    "c023": "neg23",
+    "c024": "neg24",
+    "c025": "neg25",
+    "c026": "neg26",
+    "c027": "neg27",
+    "c028": "neg28",
+    "c029": "neg29",
+    "c030": "neg30",
+    "c031": "neg31",
+    "c032": "neg32",
+    "c033": "neg33",
+    "c034": "neg34",
+    "c035": "neg35",
+    "c036": "neg36",
+    "c037": "neg37",
+    "c038": "neg38",
+    "c039": "neg39"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The granting language is riddled with transcription/typing errors ('parcel!', 'made apart hereof', 'any and ail') and the acreage is only 'approximately 10.89 acres', with the boundary of the estate conveyed left to Exhibit A; the trailing street-bed/award assignment sentence is a stock but sprawling catch-all.",
+      "reasoning_cat2": "Section 3 requires a deed containing 'new legal descriptions' reflecting the City's plat of vacation of Sixth and Abbott Streets, which does not obviously match the Exhibit A description referenced here, and Section 12 separately allocates condemnation awards, creating some tension with the award-assignment sentence.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The price mechanism is internally muddled: 'less any deductions identified below' and 'or less dependent upon setoffs as described below' point to deductions and setoffs that are never in fact identified anywhere below, and the illustrative TIF figures ('approximately', 'estimated') sit uneasily with the fixed $1,000,000 Outstanding Balance and an interest term keyed to whether Detroit or Michigan 'pay interest ... on the outstanding incurred eligible expenses'.",
+      "reasoning_cat2": "Its closing payment of the whole 'Purchase Price' is assumed by Section 8(a)(i), yet only $8,000,000 is payable at Closing, and its last sentence is repeated in Section 28 with 'setoff' rather than 'deductions' — the two versions of the same term do not read identically.",
+      "prob_cat1": 0.66,
+      "prob_cat2": 0.55,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "The deed must convey title 'free from any and all liens or encumbrances' yet 'subject only to' Permitted Exceptions identified in an Option Agreement whose date is left blank, and the descriptions depend on a City plat of vacation that may never be approved.",
+      "reasoning_cat2": "Section 4 speaks of 'those Permitted Exceptions attached hereto' and the attachment list includes 'Exhibit B — Permitted Exceptions', so the defined term has two competing sources — the Option Agreement (Section 3) and an exhibit (Section 4/Exhibit B).",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "The cure mechanism is garbled — Seller 'shall have ten (10) business days prior to the date of Closing' to cure, and Buyer must elect 'prior to the expiration of the period for Seller to remedy', which is circular; 'expanse' for expense and blanks for the title office add mechanical defects.",
+      "reasoning_cat2": "Its reference to 'Permitted Exceptions attached hereto' conflicts with Section 3, which defines Permitted Exceptions by reference to the Real Estate Option Agreement, and the 30-day/10-day timetable must be squared with the 90-day outside Closing date in Section 8(a).",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "The obligation has no delivery deadline and no cost allocation, and 'as a prepared in accordance with the 2005 ALTA standards' is ungrammatical; it is also conditioned on a City plat approval outside either party's control.",
+      "reasoning_cat2": "It parallels Section 3's dependence on the same plat of vacation and Section 4's title work, but nothing ties survey delivery to the Closing deadline in Section 8(a), leaving a gap rather than a clear contradiction.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "This is a broad as-is acknowledgment whose carve-out, 'except as expressly set forth elsewhere in the Agreement', is attached only to the inspection sentence and not to the acceptance sentence, leaving the scope of the disclaimer genuinely uncertain.",
+      "reasoning_cat2": "It sits directly against Section 7(d) and 7(e) environmental representations and against Section 11, which makes Seller bear risk of loss and repair damage before deed delivery — accepting the Property 'in the condition existing on the date of closing ... including all faults' is hard to reconcile with those.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "A bare introductory lead-in; the only oddity is that it uses both 'covenants and represents' where the heading says representations, which rarely generates dispute on its own.",
+      "reasoning_cat2": "It introduces the representations that Section 6's as-is clause and Section 23's no-merger clause both touch, but the lead-in itself adds nothing that could conflict.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "A short, standard title-and-authority representation with no ambiguous term; 'record owner' and 'requisite power and authority' are settled formulations.",
+      "reasoning_cat2": "It is consistent with Section 3's covenant to convey and with the Option Agreement recital in Section 24; nothing in the instrument contradicts Seller's ownership.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "'no knowledge of any teason' is a typographical error, and the representation that Seller knows of no reason 'why the local governmental authorities would not allow the Property to be developed for the Federal Office facilities contemplated herein' is open-ended knowledge language whose reach could be fought over.",
+      "reasoning_cat2": "The 'Federal Office facilities contemplated herein' are not actually described anywhere in this Agreement (only Section 13 mentions 'a leasehold for Federal facilities'), so the representation refers to a contemplated use the instrument never defines.",
+      "prob_cat1": 0.35,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "'of sufficient size, capacity and are available for immediate connection ... without any special charge, assessment or apparatus for its current use' is vague — sufficient for what use, and what 'its current use' refers to is unclear given the intended redevelopment.",
+      "reasoning_cat2": "Section 26 repeats the same sentence but adds 'Gas' and drops 'for its current use', and then makes Buyer solely responsible for all utility relocation costs — the two utility clauses are not identical and pull in different directions.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.49,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "The representation is limited to information Seller 'has', which is a soft qualifier, but the disclosure that the property is a statutory 'facility' is definite and tied to a cited statute.",
+      "reasoning_cat2": "It is expressly carved out of Section 7(e) and cuts against Section 6's as-is acceptance, but the carve-out is drafted, so the fit is workable.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "'to the best of Seller's actual knowledge' qualifies representations of legal compliance, and subparagraph (3) is convoluted — it purports to represent about hypothetical future purchasers availing themselves of exemptions and then describes 'the exemptions' as including the owner's own due-care obligations, which is not a coherent statement.",
+      "reasoning_cat2": "It excepts matters 'indicated on Schedule A attached', but the attachment list at the end of the Agreement contains only Exhibit A (Legal Description) and Exhibit B (Permitted Exceptions) — there is no Schedule A, so the carve-out has no referent.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "'will continue to be true and correct on each day hereafter' is an unbounded, perpetual bring-down with no end date and no materiality or knowledge qualifier, which is an odd and arguably unworkable formulation.",
+      "reasoning_cat2": "It has to be read with Section 23's no-merger clause (survival 'until fulfilled, up to and including ... written acceptance of occupancy') — the two survival periods are stated differently and the perpetual version here is hard to reconcile with the finite one there.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "The subparagraph numbering is broken on the face of the text — '(i) (ii) (iii) (iv)' appear as empty markers before the substantive obligations, so which obligation carries which number is indeterminate; 'a mutually agreeable date' also leaves the date to agreement.",
+      "reasoning_cat2": "It requires payment of 'the Purchase Price, plus or minus prorations ... as provided for in Section 2', but Section 2 makes only $8,000,000 payable at Closing with $1,000,000 deferred against TIF receipts, so the two do not say the same thing.",
+      "prob_cat1": 0.46,
+      "prob_cat2": 0.49,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "Short and standard, though 'any exceptions created or suffered by Buyer' is an unbounded add-on to the Permitted Exceptions carve-out.",
+      "reasoning_cat2": "Section 3 requires a deed free of 'any and all liens or encumbrances' subject only to Permitted Exceptions, while this adds Buyer-created exceptions — a small enlargement, and the Permitted Exceptions definition itself is contested between Sections 3 and 4.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "A boilerplate FIRPTA certification tied to a specific statutory section; the enumerated foreign-status terms are statutorily defined, leaving little to construe.",
+      "reasoning_cat2": "Nothing elsewhere in the Agreement addresses transferor tax status, so no conflict arises.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "The clause misidentifies itself — the text is subparagraph (iv) but refers to 'This Section 8(a)(v)', which is Possession — and 'if required the Title Company' is missing a word; 'extraordinary obligations' is also an undefined limit on a catch-all further-assurances duty.",
+      "reasoning_cat2": "The self-reference collides with Section 8(a)(v) (Possession) as it actually appears, and the further-assurances duty overlaps Section 16 without either clause acknowledging the other.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.41,
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "A one-sentence possession obligation with no ambiguous term.",
+      "reasoning_cat2": "It is consistent with Section 8(a) and Section 6; nothing in the instrument reserves possession to Seller after Closing.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c019",
+      "reasoning_cat1": "The escrow mechanics are stated plainly, with the 50/50 fee split expressly allocated; 'undertakings ... necessary for the Closing in escrow' is only mildly open-ended.",
+      "reasoning_cat2": "It refers to 'the Title Policy' though Section 4 speaks of an 'owner's title insurance policy or title commitment therefore', and to payment of 'the Purchase Price' though Section 2 defers $1,000,000 — a minor mismatch.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c020",
+      "reasoning_cat1": "'All real estate taxes, expenses and charges in connection with ownership and use of the Property' is a broad, unbounded category with no proration convention stated (calendar year, due date basis, etc.).",
+      "reasoning_cat2": "Section 2 already provides for 'standard deductions and prorations (customary closing expenses incurred by the Seller inclusive of utility and real estate tax prorations)', and Section 26 puts utility relocation costs on Buyer, so three provisions touch the same allocations.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c021",
+      "reasoning_cat1": "The remedy structure is self-contradictory on its face: Seller's recovery is capped 'as liquidated damages not to exceed $50,000', yet the last sentence lets 'the parties ... seek any other remedy available at law or in equity'; the clause also conflates the letter of credit as security with the measure of damages, contains 'fetter of credit', and imposes obligations on an undefined 'subsequent Buyer'.",
+      "reasoning_cat2": "The liquidated-damages cap and the open 'any other remedy' sentence cannot both stand with the specific-performance/actual-damages menu in the same paragraph, and the letter-of-credit and Option assignment machinery depends on the Real Estate Option Agreement referenced in Section 24 rather than on anything defined here.",
+      "prob_cat1": 0.72,
+      "prob_cat2": 0.61,
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c022",
+      "reasoning_cat1": "'injury beyond the ordinary wear and tear' and 'an appropriate deduction from the purchase price' are vague standards, and the choice between repair and deduction is not clearly allocated to either party; the stray semicolon after 'improvements' garbles the sentence.",
+      "reasoning_cat2": "It directly contradicts Section 6, under which Buyer accepts the Property in its condition on the closing date 'including all faults of every kind and nature ... whether now or hereafter existing', and the deduction remedy is not reflected in the Section 2 price mechanics.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.56,
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c023",
+      "reasoning_cat1": "'Substantial' and 'insubstantial' are defined circularly by reference to whether the taking 'would impair or otherwise affect the intended use', an intended use the Agreement never specifies; the first sentence is also broken by a period where the clause should continue, and 'Real Property' is an undefined term.",
+      "reasoning_cat2": "Section 1 assigns to Buyer Seller's interest in awards relating to the Property, whereas this clause gives all condemnation awards to Seller if Buyer terminates, and the 'intended use' turns on the Federal facilities referenced only in Sections 7(b) and 13.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c024",
+      "reasoning_cat1": "The clause is written in option-agreement vocabulary — 'the period of this Option including any extension periods', 'Optionee', 'Optionor' — none of which are defined here, and 'any other due diligence matters deemed reasonably prudent' is an open catch-all after a list of specific activities.",
+      "reasoning_cat2": "This is a purchase and sale agreement whose parties are 'Buyer' and 'Seller' with a 90-day closing under Section 8(a); there is no 'Option' term or extension mechanism in this instrument, so the clause appears lifted from the separate Real Estate Option Agreement referenced in Sections 3 and 24.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.62,
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c025",
+      "reasoning_cat1": "The address block for 'If to Buyer' is blank, so the notice provision cannot be performed against the Buyer, and the deemed-receipt sentence covers only mail and overnight courier, omitting the personal-delivery method the clause itself authorises.",
+      "reasoning_cat2": "Notice is a condition of the termination rights in Sections 4 and 12 and of the five-day cure mechanism in Section 10, so the blank and the incomplete deemed-receipt rule ripple into those provisions.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c026",
+      "reasoning_cat1": "The warranty that no amount is payable 'to any other person or entity' is odd phrasing ('other' than whom, given neither party is a broker) but the substance is a standard mutual no-broker representation.",
+      "reasoning_cat2": "No other provision addresses commissions or brokers, so there is nothing to conflict with.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c027",
+      "reasoning_cat1": "A conventional further-assurances clause; 'reasonably necessary' is a familiar standard courts apply without much difficulty.",
+      "reasoning_cat2": "It overlaps Section 8(a)(iv)'s further-documentation obligation, which contains its own 'extraordinary obligations' limit that this clause lacks — a mild inconsistency in the standard applied.",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c028",
+      "reasoning_cat1": "Standard time-of-the-essence language with a clear business-day extension rule and no ambiguous term.",
+      "reasoning_cat2": "It sits awkwardly with Section 8(a)'s Closing 'on a mutually agreeable date' and with Section 5's and Section 9's open-ended timing, but that tension is common and not a direct contradiction.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c029",
+      "reasoning_cat1": "Pure boilerplate directing that headings do not enlarge or limit meaning; nothing to construe.",
+      "reasoning_cat2": "It is consistent throughout; the only oddity is that several headings (e.g. Section 13's 'Option' language) diverge from their text, which this clause neutralises rather than aggravates.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c030",
+      "reasoning_cat1": "A one-sentence number-and-gender construction rule; no ambiguous term.",
+      "reasoning_cat2": "Nothing elsewhere in the instrument contradicts it.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c031",
+      "reasoning_cat1": "Governing law is expressed indirectly as 'the laws of the state in which the Property is located' rather than naming Michigan, and 'permitted assigns' is used though the Agreement never says which assignments are permitted.",
+      "reasoning_cat2": "The Agreement contemplates an assignment of the Option by GSA to the Buyer (Sections 10 and 24) and requires the Government's signature to amend (Section 24), yet no provision states the assignment conditions this clause presupposes.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.29,
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c032",
+      "reasoning_cat1": "A conventional prevailing-party fee clause with the determination expressly left to the court; 'reasonable attorneys' fees' is a routinely applied standard.",
+      "reasoning_cat2": "Section 10 caps Seller's recovery against Buyer at $50,000 liquidated damages, which arguably cannot coexist with an uncapped fee recovery, but the point is a secondary one.",
+      "prob_cat1": 0.1,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c033",
+      "reasoning_cat1": "The clause is short and definite: amendments must be written and executed by 'each party hereto'.",
+      "reasoning_cat2": "It conflicts squarely with the last sentence of Section 24, which requires any amendment to be executed by Buyer, Seller and the Government acting by GSA — a non-party under Section 24's own description — so the two amendment clauses state different signature requirements.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.58,
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c034",
+      "reasoning_cat1": "The survival period is vague and open-ended — 'until fulfilled, up to and including the time of completion of any improvements to be built thereon and the written acceptance of occupancy' — with no deadline and no identification of the improvements.",
+      "reasoning_cat2": "This Agreement imposes no obligation on anyone to construct improvements or to obtain GSA acceptance of occupancy, so the survival trigger depends on events governed only by the separate Option/lease arrangements referenced in Sections 13 and 24; it also states a different survival period from the perpetual bring-down in Section 7.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.51,
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c035",
+      "reasoning_cat1": "The clause says the Agreement 'cancels and supersedes all prior agreements' and 'is entire in itself' while in the same sentence preserving a prior Real Estate Option Agreement (whose date is left blank) as an operative agreement, and then adds that no representations other than 'those expressly contained herein' were made — three statements that do not sit together.",
+      "reasoning_cat2": "The final sentence requires the Government's execution to amend, contradicting Section 22's 'executed by each party hereto'; and the preserved Option supplies the Permitted Exceptions in Section 3 and the assignment machinery in Section 10, so 'entire in itself' cannot be taken literally.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.63,
+      "dataset_clause_id": "neg35"
+    },
+    {
+      "clause_id": "c036",
+      "reasoning_cat1": "A single flat prohibition on recording with no qualifier or ambiguous term.",
+      "reasoning_cat2": "It restricts Buyer only, while Section 10 gives Buyer a specific-performance remedy that a lis pendens would ordinarily support — a modest tension, not a contradiction.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg36"
+    },
+    {
+      "clause_id": "c037",
+      "reasoning_cat1": "The clause is a warranty and a cost allocation jammed together, with an intruded page number ('after 8 closing') corrupting the final phrase, and 'all public and quasi-public and private utilities terminations, and relocations' is a sweeping, unbounded cost transfer.",
+      "reasoning_cat2": "Its first sentence duplicates Section 7(c) but adds 'Gas' and drops 'for its current use', and its cost allocation to Buyer cuts against the Section 7(c) representation that connection is available 'without any special charge, assessment or apparatus' and against the Section 9 proration of charges.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "neg37"
+    },
+    {
+      "clause_id": "c038",
+      "reasoning_cat1": "Standard counterparts language; the only quirk is 'deemed to be one original' rather than 'one and the same instrument'.",
+      "reasoning_cat2": "It duplicates the counterparts sentence already in Section 22, but the two say the same thing, so no inconsistency arises.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg38"
+    },
+    {
+      "clause_id": "c039",
+      "reasoning_cat1": "'The Seller will cooperate ... to secure all necessary government approvals' is an unbounded best-efforts obligation with no standard or deadline, and 'any other applicable grant and/or loan programs' is an open catch-all after the specific Brownfield Plan.",
+      "reasoning_cat2": "Its second sentence repeats the last sentence of Section 2 but substitutes 'less any setoff' for 'less any deductions', and the 'Outstanding Balance' it invokes is defined in Section 2 by reference to deductions and setoffs that are never actually identified anywhere in the instrument.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.51,
+      "dataset_clause_id": "neg39"
+    }
+  ]
+}

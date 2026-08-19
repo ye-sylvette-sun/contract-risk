@@ -1,0 +1,60 @@
+{
+  "contract_id": "303FSupp3d236_fund_s_trust_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 119,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 13,
+  "duration_ms": 379290,
+  "total_cost_usd": 2.4705869999999996,
+  "usage": {
+    "input_tokens": 20,
+    "cache_creation_input_tokens": 137977,
+    "cache_read_input_tokens": 532484,
+    "output_tokens": 32979,
+    "output_tokens_details": {
+      "thinking_tokens": 11198
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 137977,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 20,
+      "outputTokens": 32979,
+      "cacheReadInputTokens": 532484,
+      "cacheCreationInputTokens": 137977,
+      "webSearchRequests": 0,
+      "costUSD": 2.4705869999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "45d83244-486b-4e5d-89ae-bba5e4c5f03f",
+  "errors": null,
+  "result": "I wrote 119 judgments (60 in `predictions_001.json`, 59 in `predictions_002.json`).",
+  "path_denials": [],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1787090400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

@@ -107,7 +107,45 @@ dropped.
 
 ---
 
-## 5. How it is scored
+## 5. Isolating the agent run
+
+The one-shot run is a stateless API call with nothing to isolate. The agent run
+spawns the Claude Code CLI, which can load settings files, `CLAUDE.md`, memory,
+skills and MCP servers that never appear in the conversation.
+
+Every session runs under:
+
+| | |
+|---|---|
+| `setting_sources=[]` | the SDK's isolation mode: no settings file, no `CLAUDE.md` |
+| `skills=[]` | `None` means "the SDK configures nothing", not "skills off" |
+| `strict_mcp_config=True` | ignore project, user and plugin MCP configuration |
+| `tools` / `allowed_tools` | `Read`, `Grep`, `Glob`, `Write` |
+| `disallowed_tools` | `Bash`, `Edit`, `Task`, `Skill`, `WebFetch` and the rest, named explicitly |
+| `PreToolUse` hook | every path resolved against the workspace; anything outside is refused |
+
+Auto memory, `CLAUDE.md` injection, the auto-updater and the CLI's non-essential
+traffic sit outside `setting_sources` and are disabled by sweeping the parent
+process's environment before the SDK spawns anything. `ClaudeAgentOptions.env`
+cannot do this — it merges over the inherited environment and can only add.
+
+`preflight.py` runs one real session under these options and audits its
+trajectory for memory, `CLAUDE.md`, skills, `mcp__*` tools, free-standing
+`<system-reminder>` blocks, stray models, CLI version drift, out-of-scope tools
+and paths outside the workspace. It exits non-zero on any failure and runs before
+the full run.
+
+Provenance goes in `run_manifest_<stamp>.json` beside the session logs: SDK and
+CLI versions (the CLI is the one bundled in the SDK wheel, which the SDK spawns
+in preference to anything on `PATH`), interpreter, platform, git commit, the
+names of every environment variable removed, the options verbatim, and SHA-256 of
+the prompts and of `dataset.csv`.
+
+`REPRODUCIBILITY.md` covers each point in detail.
+
+---
+
+## 6. How it is scored
 
 Three binary tasks, each swept over a flagging threshold t in [0, 1]:
 
@@ -122,11 +160,12 @@ negative, and the other way round. That is the question the two probabilities ar
 actually asked — each is an independent judgement about its own category, not a
 share of one distribution.
 
-Reported per panel: precision and recall against threshold, **and the share of
-clauses flagged**. The flag rate is what stops the first two being read too
-kindly — at 2% prevalence, a threshold that flags a third of the contract can
-still post a respectable recall. Ranking quality is reported threshold-free as
-ROC-AUC and PR-AUC; with 2% positives, **PR-AUC is the number that matters**.
+Reported per panel: **ROC-AUC** for ranking quality without picking a threshold,
+then **precision**, **recall** and **the share of clauses flagged** against
+threshold. The flag rate is what stops the first two being read too kindly — at
+2% prevalence, a threshold that flags a third of the contract can still post a
+respectable recall. `compare_exp3.py` prints these; `plot_exp3_thresholds.py`
+draws the sweep.
 
 Runs are compared only on the clauses **both** have scored, joined on
 `(contract_id, clause_id)`. A partial run against a full one would differ as much
@@ -134,7 +173,7 @@ in which contracts each covered as in anything about the method.
 
 ---
 
-## 6. Artifacts
+## 7. Artifacts
 
 Named in parallel, with `<run>` being `llm_api` or `agent`:
 
@@ -153,71 +192,59 @@ unjudged; where both exist for one provision, readers prefer the scored row.
 
 ---
 
-## 7. Results
+## 8. Results
 
-Both runs cover all 6,461 clauses of all 64 contracts, with **no provision left
-unjudged on either side**, so this is a like-for-like comparison on identical
-clauses under identical ids.
+**Pending.** The agent arm is being rerun under the corrected harness of §5. The
+`agent` figures below are from the superseded run, kept on
+`legacy_agent_experiment_8.17`, and are not to be cited. The `llm_api` column is
+unaffected.
 
-| | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
-|---|---:|---:|---:|---:|---:|
-| `llm_api` | 0.869 | 0.302 | 0.21 | 0.46 | 4.6% |
-| `agent` | **0.914** | **0.434** | **0.27** | **0.66** | 5.0% |
+Both runs cover all 6,461 clauses of all 64 contracts with no provision left
+unjudged on either side, so the comparison is like-for-like on identical clauses
+under identical ids.
 
-PR-AUC is average precision with tied scores collapsed into one operating point.
-Both runs put many clauses on the same 0.01 grid value, and scoring tied rows
-individually inflates the figure.
+| | ROC-AUC | P@0.5 | R@0.5 | flagged |
+|---|---:|---:|---:|---:|
+| `llm_api` | 0.869 | 0.21 | 0.46 | 4.6% |
+| `agent` *(superseded)* | 0.914 | 0.27 | 0.66 | 5.0% |
 
-Per category, one-vs-rest:
+Per category, one-vs-rest — ROC-AUC:
 
-| | `llm_api` ROC / PR | `agent` ROC / PR | positives |
-|---|---|---|---:|
-| type 1 — intrinsic defect | 0.863 / 0.294 | 0.909 / 0.410 | 122 |
-| type 2 — relational defect | 0.958 / 0.136 | 0.960 / 0.230 | 12 |
+| | `llm_api` | `agent` *(superseded)* | positives |
+|---|---:|---:|---:|
+| type 1 — intrinsic defect | 0.863 | 0.909 | 122 |
+| type 2 — relational defect | 0.958 | 0.960 | 12 |
 
-**The agent run is better on every headline measure**, and at a nearly identical
-flag rate it finds two thirds of the litigated clauses against under a half.
-Bootstrapping by contract — the honest unit, since clauses within a contract are
-not independent — the ROC gain is +0.046 (95% CI [+0.001, +0.092]) and the PR
-gain +0.132 (95% CI [+0.006, +0.258]). Both clear zero, but barely. Per contract
-the agent wins 23, loses 11 and ties 14 (sign test p = 0.058); per clause, 33
-positives cross 0.5 only in the agent run against 6 only in the API run
-(McNemar p = 0.00001). So the recall gain is solid and the ranking gain is real
-but wide.
+What each recall target costs on the risky-vs-not panel:
 
-**Why is unresolved.** Search is not the answer — `Grep` was used 21 times across
-64 sessions and never in the median one, so the agent mostly reads the same
-material in the same order the one-shot call is handed. Extra compute is not
-enough either: 1.32× the output tokens overall, and on the largest contracts
-1.40× for a 3.4× PR-AUC difference. Degradation over a long single generation is
-not visible in the API's output — its reasoning text grows rather than shrinks
-through a document and does not become more repetitive. And no session property
-we can measure (turns, batches, tool calls, greps, tokens per clause) correlates
-with how much that session beat the API on its contract: every Spearman ρ is
-within ±0.08 of zero. The one surviving hypothesis is that batching lets the
-agent carry a cross-clause hypothesis, which is weakly supported — the advantage
-concentrates on contracts holding three or more positives. Full analysis in
-`REPORT.md`.
+| recall | | threshold | precision | flagged |
+|---:|---|---:|---:|---:|
+| 70% | `llm_api` | 0.37 | 0.088 | 16.7% |
+| 70% | `agent` *(superseded)* | 0.47 | 0.224 | 6.6% |
+| 80% | `llm_api` | 0.31 | 0.059 | 28.9% |
+| 80% | `agent` *(superseded)* | 0.40 | 0.106 | 16.0% |
 
-**Shared weakness.** Both rank type 2 well (ROC ≈ 0.96) and calibrate it badly
-(PR 0.14 / 0.23 on 12 positives). Neither is usable as an absolute probability for
-that category.
+Full sweeps in `output/figures/exp3_<run>_threshold_curves.png`: precision and
+recall on top, flag rate underneath, for each of the three panels.
+
+**Shared weakness.** Both rank type 2 well (ROC ≈ 0.96) and neither is usable as
+an absolute probability for it — 12 positives is too few to calibrate against.
 
 ### Cost
 
 | | calls | input | cache-read | output | |
 |---|---:|---:|---:|---:|---:|
 | `llm_api` | 65 | 3,960,394 | 0 | 1,265,372 | **$51.44** |
-| `agent` | 64 (816 turns) | 18,979 | 46,599,371 | 1,642,032 | $121.81 API-equivalent |
+| `agent` *(superseded)* | 64 (816 turns) | 18,979 | 46,599,371 | 1,642,032 | $121.81 API-equivalent |
 
-The agent run was billed to a Claude Code subscription, so its dollar figure is
+The agent run is billed to a Claude Code subscription, so its dollar figure is
 what the same tokens would have cost through the API, not an amount charged.
 Caching absorbed 99.6% of its input: an agent re-sends its transcript every turn,
 and without caching the 46.6M cache-read tokens would have been billed in full.
 
 ---
 
-## 8. Running it
+## 9. Running it
 
 ```bash
 python src/experiments/exp3_llm_api.py --shuffle          # API key
@@ -234,4 +261,5 @@ documents. `--dry-run` on `exp3_llm_api.py` prices the outstanding calls exactly
 by building every prompt and metering the largest.
 
 The agent run reads its rate-limit state from the CLI and waits out an exhausted
-window; `--rest-every N` paces it when the CLI reports nothing usable.
+window. There is no other pacing: it starts the next contract as soon as the
+previous one is written.

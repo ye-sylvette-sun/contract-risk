@@ -1,0 +1,142 @@
+{
+  "contract_id": "817FSupp2d1357_settlement_and_release_agreement",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "pos1",
+    "c007": "neg6",
+    "c008": "neg7",
+    "c009": "neg8",
+    "c010": "neg9",
+    "c011": "neg10",
+    "c012": "neg11",
+    "c013": "pos2",
+    "c014": "neg12",
+    "c015": "neg13"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "The core release language is both garbled (typos throughout, and the final sentence breaks off mid-clause at 'as part of the consideration for Releasors'') and built on open-textured phrases — 'any and all consequences of the incident(s) underlying or giving rise to' the Lawsuits and 'directly or indirectly related to the Lawsuits' — whose outer boundary is exactly what parties fight about. The truncation leaves the reciprocal release from Releasees without a stated consideration, a mechanical defect that changes meaning.",
+      "reasoning_cat2": "Its scope must be squared with the narrower 'Full and Final Satisfaction' clause (c012), which reaches only claims 'asserted or might have been asserted by the Parties in the Lawsuits', and with the far broader catch-all in c010 ('no matter how remotely'); the three descriptions of the same release do not line up. That mismatch is a live source of whole-instrument argument about whether later, non-lawsuit claims survive.",
+      "prob_cat1": 0.62,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "A plain no-assignment/no-subrogation warranty; the OCR typos ('othec', 'werrent') do not alter meaning and nothing in it carries two readings.",
+      "reasoning_cat2": "It is verbatim duplicated later as numbered paragraph 5 (c007), which is redundancy rather than contradiction, and it sits comfortably with the indemnity against subrogation liens in c011.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "Standard capacity recital; 'sui juris' and 'no present disability or limitation' are legal terms of art with settled content and nothing turns on their edges here.",
+      "reasoning_cat2": "Checked against the signature blocks and c014 (representation of counsel) — consistent, and no other provision qualifies party capacity.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "Boilerplate non-reliance; 'merits, legal liability or value of this claim' is definite enough, though 'this claim' is undefined where the instrument elsewhere speaks of 'the Lawsuits'.",
+      "reasoning_cat2": "It states the Parties relied on no representation of the other, while c008 expressly says Releasees 'duly rely upon the truth, accuracy and validity of all promises, representations and warranties of the Releasors contained herein' — a real, if reconcilable, tension between non-reliance and reliance.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "One sentence, single meaning; 'voluntarily' is as definite as such a recital gets.",
+      "reasoning_cat2": "Nothing in c004, c014 or the release paragraphs pulls against it.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.03,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "The closing words are unreadable ('the terms of this reement ae conzartunl an not 8 mere rsa'), an obvious mechanical corruption of what appears to be a 'contractual and not a mere recital' clause, so part of the operative sentence has no determinate meaning.",
+      "reasoning_cat2": "As a merger clause it must be reconciled with the truncated consideration sentence in c001 and with the duplicated warranty in c002/c007, but no other provision incorporates an outside agreement, so the fit is workable.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "Identical substance to c002 and equally definite; the misspellings do not create a second reading.",
+      "reasoning_cat2": "Its verbatim repetition of c002 raises only a surplusage question, not a conflict; it is consistent with the lien indemnity in c011.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "A short reliance acknowledgment; 'all promises, representations and warranties of the Releasors contained herein' is bounded by the four corners of the document.",
+      "reasoning_cat2": "It sits directly against c004's statement that the decision was made 'without reliance upon any statement or representation by Releasees, Releasors, or their respective representatives' — the same instrument both asserts and disclaims reliance.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "Conventional no-admission language; 'compromise of doubtful and disputed claims' is a settled formulation and the typos are immaterial.",
+      "reasoning_cat2": "Consistent with the payment recital in c001 and the 'Full and Final Satisfaction' language in c012; no provision elsewhere concedes liability.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "The scope words are deliberately elastic — claims 'traced either directly or indirectly to the Lawsuits', 'even to the extent of death, or as may appear at any time in the future, no matter how remotely any such potential claim may be related' — and the boundary of what is 'remotely related' is precisely the sort of line a court must draw; 'between the Parties' also leaves unclear whether it is mutual and whether it reaches claims never part of the Lawsuits.",
+      "reasoning_cat2": "It is materially broader than c001 (consequences of the incidents underlying the Lawsuits) and broader still than c012 (claims 'asserted or might have been asserted by the Parties in the Lawsuits'), so the instrument gives three different measures of the same release.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "Classic general-versus-specific problem: named specifics (Alston & Bird LLP, Mason Bahr LLP) followed by 'or any other entity related to the Lawsuits', with 'including, but not limited to' straddling 'law firm' and leaving unclear whether the qualifier 'related to the Lawsuits' limits the insurance companies and government agencies too.",
+      "reasoning_cat2": "It is one-sided (only Releasors indemnify) against the otherwise mutual release in c001 and duplicates the subrogation subject-matter of c002/c007, but no provision squarely contradicts it.",
+      "prob_cat1": 0.47,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "'Full and Final Satisfaction of any and all claims, whether specifically stated or not, which were asserted or might have been asserted by the Parties in the Lawsuits' turns on the reach of 'might have been asserted ... in the Lawsuits', a phrase with a narrow (pleadable in those suits) and a broad reading.",
+      "reasoning_cat2": "That limit to claims assertable 'in the Lawsuits' is narrower than c010's release of claims 'no matter how remotely' related and than c001's release of all consequences of the underlying incidents, creating a genuine internal mismatch about the settlement's outer boundary.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "The sentence breaks off incomplete ('no part of the monetary payment is in'), so a whole term is missing, and 'shall not be used to the detriment of the Parties' and 'any person not party or privy to this settlement' are vague obligations with no stated remedy.",
+      "reasoning_cat2": "The carve-out 'except as may be required by law' must be read with the litigation-dismissal obligations in c001 and the merger clause in c006, but nothing else in the instrument addresses confidentiality, so the incoherence is largely internal to the clause.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "Plain representation of having read and understood the terms with counsel; 'adequately represented' is mildly evaluative but nothing operative turns on it.",
+      "reasoning_cat2": "Consistent with c003, c004 and c005; no provision suggests any party proceeded without counsel.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.05,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "A single-sentence Georgia choice-of-law clause with no carve-outs; the run-together 'State ofGeorgia' is a typographical artifact only.",
+      "reasoning_cat2": "It fits the Georgia venue recitals and the Fulton/DeKalb County actions named in c001, and no forum or arbitration clause competes with it.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "dataset_clause_id": "neg13"
+    }
+  ]
+}

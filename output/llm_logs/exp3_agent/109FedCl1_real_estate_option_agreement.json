@@ -1,0 +1,65 @@
+{
+  "contract_id": "109FedCl1_real_estate_option_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 43,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 10,
+  "duration_ms": 148182,
+  "total_cost_usd": 0.8334874999999999,
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 45345,
+    "cache_read_input_tokens": 140535,
+    "output_tokens": 12388,
+    "output_tokens_details": {
+      "thinking_tokens": 3512
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 45345,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 14,
+      "outputTokens": 12388,
+      "cacheReadInputTokens": 140535,
+      "cacheCreationInputTokens": 45345,
+      "webSearchRequests": 0,
+      "costUSD": 0.8334874999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "086a027d-9eb5-4aae-af43-e55ee807e264",
+  "errors": null,
+  "result": "Wrote 43 judgments.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/provisions.json"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1787090400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

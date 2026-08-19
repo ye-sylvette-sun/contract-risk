@@ -1,0 +1,65 @@
+{
+  "contract_id": "787FSupp2d118_employment_agreement_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 37,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 12,
+  "duration_ms": 134910,
+  "total_cost_usd": 0.757827,
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 40703,
+    "cache_read_input_tokens": 157814,
+    "output_tokens": 10872,
+    "output_tokens_details": {
+      "thinking_tokens": 2988
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 40703,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 18,
+      "outputTokens": 10872,
+      "cacheReadInputTokens": 157814,
+      "cacheCreationInputTokens": 40703,
+      "webSearchRequests": 0,
+      "costUSD": 0.757827,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "accff591-7cb2-4fbc-8bec-8be7a3a0976c",
+  "errors": null,
+  "result": "I wrote 37 judgments.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/contract.txt"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1787090400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

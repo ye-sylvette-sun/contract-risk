@@ -1,0 +1,65 @@
+{
+  "contract_id": "97FSupp3d548_mortgage_loan_purchase_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 332,
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 20,
+  "duration_ms": 782965,
+  "total_cost_usd": 5.332055,
+  "usage": {
+    "input_tokens": 34,
+    "cache_creation_input_tokens": 255418,
+    "cache_read_input_tokens": 2024710,
+    "output_tokens": 70614,
+    "output_tokens_details": {
+      "thinking_tokens": 19881
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 255418,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 34,
+      "outputTokens": 70614,
+      "cacheReadInputTokens": 2024710,
+      "cacheCreationInputTokens": 255418,
+      "webSearchRequests": 0,
+      "costUSD": 5.332055,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "cff61004-0ccf-45d2-ad2b-e274a060f16c",
+  "errors": null,
+  "result": "Wrote 332 judgments across predictions_001.json–predictions_006.json.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/tmp/x"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "resetsAt": 1787108400,
+      "rateLimitType": "five_hour",
+      "overageStatus": "rejected",
+      "overageDisabledReason": "org_level_disabled",
+      "isUsingOverage": false
+    }
+  }
+}

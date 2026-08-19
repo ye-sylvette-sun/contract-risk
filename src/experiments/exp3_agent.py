@@ -49,6 +49,7 @@ Usage:
 import argparse
 import asyncio
 import csv
+import hashlib
 import importlib.util
 import json
 import os
@@ -62,7 +63,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib  # noqa: E402
+import manifest  # noqa: E402
 
 # Everything about WHAT to judge is shared with the one-shot experiment by
 # importing it, not by copying it. If the taxonomy, the example choice or the
@@ -82,27 +85,74 @@ RAW = lib.OUT / "exp3_agent"
 WS = lib.OUT / "exp3_agent_ws"
 LOGS = lib.OUT / "llm_logs" / "exp3_agent"
 
-REST_SECONDS = 1 * 60 * 60  # the blind fallback's pause, see `--rest-every`
 WARN_AT = 0.90              # utilisation at which we stop starting new sessions
 
 
-# ------------------------------------------------------------------- auth ----
+# ---------------------------------------------------------- environment ----
+# Everything that could steer the CLI without appearing in the conversation.
+# Swept from the PARENT process, because `ClaudeAgentOptions.env` merges OVER
+# the inherited environment and cannot take anything away:
+#
+#   process_env = {**inherited_env, "CLAUDE_CODE_ENTRYPOINT": "sdk-py",
+#                  **options.env, "CLAUDE_AGENT_SDK_VERSION": __version__}
+#
+# (`_internal/transport/subprocess_cli.py`). Passing `env={...}` sets a variable
+# correctly and restricts nothing, which is why the sweep happens here instead.
+DENY = re.compile(r"^(ANTHROPIC_|CLAUDE_|CLAUDECODE|DISABLE_)", re.I)
+PROXY = {"HTTP_PROXY", "HTTPS_PROXY", "ALL_PROXY", "NO_PROXY"}
+
+# Set after the sweep, so these survive it. None of them sits under
+# `setting_sources`, so none is covered by the isolation in `judge()`.
+HERMETIC = {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",          # memory is default-on
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",           # so is CLAUDE.md injection
+    # The CLI's own side-calls. The first run billed `claude-haiku-4-5` in every
+    # one of its 64 sessions for these, so the agent arm was not the single
+    # model the comparison claims. The variable name matters and cannot be
+    # guessed: `DISABLE_NON_ESSENTIAL_MODEL_CALLS`, which is what this file
+    # tried first, does not exist in the CLI and did nothing — the preflight's
+    # MODEL check is what caught it.
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",                      # pin what the SDK bundles
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1",
+}
+
+
 def env():
-    """The environment the CLI runs in — subscription billing, caching on.
+    """Sanitise the environment the CLI will inherit. Returns the names removed.
 
-    The SDK spawns the Claude Code CLI with `env=os.environ`, inherited whole.
-    `lib` loads `.env`, which carries `ANTHROPIC_API_KEY`, and the CLI bills the
-    API whenever it finds that key. Popping it is what makes this run count
-    against the subscription instead. Nothing here needs the key: the agent path
-    never calls the Messages API directly.
+    Three jobs, and they are not separable.
 
-    `DISABLE_PROMPT_CACHING` is cleared for the same reason in reverse. Caching
-    is on by default and matters far more here than in the one-shot experiment:
-    an agent re-sends its whole transcript on every turn, so the contract it read
-    on turn 2 is re-billed on turns 3..60 unless the cache absorbs it.
+    `ANTHROPIC_API_KEY` must go or the CLI bills the API instead of the
+    subscription — `lib` loads `.env`, so the key is always present by the time
+    this runs. Nothing on the agent path needs it: it never calls the Messages
+    API directly.
+
+    Every other `CLAUDE_*`, `ANTHROPIC_*`, `DISABLE_*` and proxy variable must go
+    because the previous run could not say what was set on the operator's
+    machine. An unfalsifiable claim about the environment is the thing this
+    fixes; a variable that is provably absent needs no argument.
+
+    Then the things `setting_sources=[]` does NOT cover are turned off
+    explicitly: auto memory, CLAUDE.md injection, the CLI's own non-essential
+    traffic (which is what the stray Haiku billing was), and the auto-updater.
+
+    `DISABLE_PROMPT_CACHING` is swept by the same rule and deliberately not set
+    back. Caching is on by default and matters far more here than in the
+    one-shot experiment: an agent re-sends its whole transcript every turn, so
+    the contract it read on turn 2 is re-billed on turns 3..60 unless the cache
+    absorbs it.
+
+    Only NAMES are returned, and only names are recorded in the manifest. A
+    removed variable's value is never written anywhere.
     """
-    for k in ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN", "DISABLE_PROMPT_CACHING"):
+    removed = sorted(k for k in os.environ
+                     if DENY.match(k) or k.upper() in PROXY)
+    for k in removed:
         os.environ.pop(k, None)
+    os.environ.update(HERMETIC)
+    return removed
 
 
 # -------------------------------------------------------------- workspace ----
@@ -343,12 +393,90 @@ def read_predictions(root, real_of, clauses):
     return by_real, why
 
 
-async def judge(cid, root, prompt_text, system_prompt, limits, resume=None):
-    """One agent session. `resume` continues an earlier one by its id."""
-    from claude_agent_sdk import (ClaudeAgentOptions, RateLimitEvent,
-                                  ResultMessage, query)
+TOOLS = ["Read", "Grep", "Glob", "Write"]
 
-    options = ClaudeAgentOptions(
+# Named rather than merely absent from `tools`. The previous run showed the
+# allow-list holding — the model attempted `Bash` once and `Edit` once across 64
+# sessions and both came back "not enabled in this context" — but "the tool was
+# never listed" and "the tool is refused" are different claims, and only the
+# second one is checkable from the outside.
+DENIED_TOOLS = ["Bash", "BashOutput", "KillShell", "Edit", "NotebookEdit",
+                "WebFetch", "WebSearch", "Task", "Skill", "TodoWrite",
+                "SlashCommand"]
+
+# Tool inputs that name a path. Grep and Glob call it `path`, Read and Write
+# call it `file_path`; anything else the four tools take is a pattern or a
+# string, not a location.
+PATH_KEYS = ("file_path", "path", "notebook_path")
+
+
+def confine(root, denials):
+    """A PreToolUse hook that refuses any path outside the workspace.
+
+    The session has no `Bash`, so it cannot escape by running a command, but
+    `Read` and `Glob` still accept an absolute path and would happily read this
+    repository's own source, the gold labels in `dataset.csv`, or another
+    contract's workspace. Nothing in the previous run's 755 tool calls did so —
+    every path was inside its own workspace — but that is again an observation
+    after the fact rather than a property of the harness.
+
+    A relative path is resolved against `root`, which is the session's cwd, so
+    the ordinary case costs nothing. `..` is what `resolve()` collapses and this
+    then catches.
+
+    Denials are appended to `denials` and recorded with the session. A hook that
+    refuses silently would be indistinguishable from a hook that never fired.
+    """
+    base = Path(root).resolve()
+
+    async def hook(input_data, tool_use_id, context):
+        ti = input_data.get("tool_input") or {}
+        for key in PATH_KEYS:
+            raw = ti.get(key)
+            if not raw:
+                continue
+            target = Path(raw)
+            target = (base / target).resolve() if not target.is_absolute() \
+                else target.resolve()
+            if target != base and base not in target.parents:
+                denials.append({"tool": input_data.get("tool_name"),
+                                key: str(raw)})
+                return {"hookSpecificOutput": {
+                    "hookEventName": "PreToolUse",
+                    "permissionDecision": "deny",
+                    "permissionDecisionReason":
+                        f"{raw} is outside the workspace for this contract. "
+                        f"Everything you need is in the working directory."}}
+        return {}
+
+    return hook
+
+
+def agent_options(root, system_prompt, resume, denials):
+    """The options every session runs under. Isolation is stated here, once.
+
+    Each of the last four fields answers a specific way the CLI can pick up
+    context that never appears in the conversation:
+
+      setting_sources=[]     `None` — what the first run passed, under a comment
+                             claiming the opposite — loads user, project AND
+                             local settings plus every CLAUDE.md on the ancestor
+                             chain. `[]` is the SDK's isolation mode.
+      skills=[]              `None` is "the SDK configures nothing", so the CLI's
+                             own defaults still apply. `[]` is skills off.
+      strict_mcp_config      ignore project, user and plugin MCP configuration.
+      hooks                  confine the filesystem to the workspace (see above).
+
+    Auto memory, CLAUDE.md injection, the auto-updater and the CLI's own model
+    calls sit OUTSIDE `setting_sources` and are handled in `env()` instead.
+
+    `ClaudeAgentOptions` is a dataclass, so an option that does not exist in the
+    pinned SDK raises TypeError here rather than being silently ignored. If a
+    session starts, every isolation option below was real.
+    """
+    from claude_agent_sdk import ClaudeAgentOptions, HookMatcher
+
+    return ClaudeAgentOptions(
         model=MODEL,
         effort=EFFORT,
         cwd=str(root),
@@ -357,14 +485,25 @@ async def judge(cid, root, prompt_text, system_prompt, limits, resume=None):
         # Read/Grep/Glob to explore, Write to answer. No Bash and no Edit: the
         # agent has no reason to run commands or alter the contract it is
         # judging, and a tool it cannot call is a failure mode it cannot have.
-        tools=["Read", "Grep", "Glob", "Write"],
-        allowed_tools=["Read", "Grep", "Glob", "Write"],
+        tools=list(TOOLS),
+        allowed_tools=list(TOOLS),
+        disallowed_tools=list(DENIED_TOOLS),
         permission_mode="acceptEdits",
         max_turns=MAX_TURNS,
-        # Hermetic: no user or project settings, so the run does not depend on
-        # whatever is in ~/.claude at the time.
-        setting_sources=None,
+        setting_sources=[],
+        skills=[],
+        strict_mcp_config=True,
+        hooks={"PreToolUse": [HookMatcher(matcher=t, hooks=[confine(root, denials)])
+                              for t in TOOLS]},
     )
+
+
+async def judge(cid, root, prompt_text, system_prompt, limits, resume=None):
+    """One agent session. `resume` continues an earlier one by its id."""
+    from claude_agent_sdk import RateLimitEvent, ResultMessage, query
+
+    denials = []
+    options = agent_options(root, system_prompt, resume, denials)
 
     result = {}
     async for message in query(prompt=prompt_text, options=options):
@@ -387,6 +526,7 @@ async def judge(cid, root, prompt_text, system_prompt, limits, resume=None):
                 "errors": message.errors,
                 "result": (message.result or "")[:500],
             }
+    result["path_denials"] = denials
     return result
 
 
@@ -483,11 +623,14 @@ def stamp(unix):
 def pause_for(limits):
     """Seconds to wait before starting another session, from what the CLI said.
 
-    The CLI emits a rate-limit event only when the state CHANGES, so silence is
-    not evidence of headroom — it usually means nothing has moved since the last
-    event. This reads whatever the most recent events said and is deliberately
-    conservative: a hard `rejected` sleeps until the stated reset, and merely
-    being close to the ceiling stops the run rather than creeping over it.
+    The only thing that stops the run. It waits when the CLI has actually said
+    the window is gone — a hard `rejected` sleeps until the stated reset, and
+    utilisation at or above `WARN_AT` waits rather than creeping over the
+    ceiling. Anything else starts the next contract immediately.
+
+    The CLI emits a rate-limit event only when the state CHANGES, so silence
+    here means nothing has moved since the last event, not that headroom is
+    known.
     """
     for kind, info in limits.items():
         if info.status == "rejected":
@@ -498,18 +641,6 @@ def pause_for(limits):
             return wait, (f"{kind} at {info.utilization:.0%}, waiting for the "
                           f"window to reset at {stamp(info.resets_at)}")
     return 0, None
-
-
-def informative(limits):
-    """Whether anything we have been told actually measures the headroom.
-
-    A `five_hour: allowed` event with no `utilization` says only that the last
-    call was permitted — it does not say how close the ceiling is, and treating
-    its arrival as knowledge would silently disable the blind pacing fallback.
-    Only a utilisation figure, or an outright rejection, counts.
-    """
-    return any(i.utilization is not None or i.status == "rejected"
-               for i in limits.values())
 
 
 async def fill_gaps(by_cid, examples, system_prompt, limits):
@@ -577,7 +708,7 @@ async def fill_gaps(by_cid, examples, system_prompt, limits):
     fout.close()
 
 
-async def run(args):
+async def run(args, env_removed=()):
     rows = api.load_rows(lib.OUT / "dataset.csv")
     registry = lib.read_json(lib.OUT / "contracts.json", {})
     examples = api.pick_examples(rows)
@@ -590,6 +721,14 @@ async def run(args):
     groups = api.by_contract(eval_rows)
     done = api.done_contracts(PREDS)
     todo = [(cid, cl) for cid, cl in groups.items() if cid not in done]
+    # One named contract. The preflight uses this to run a single real session
+    # under the real options before the full run is started.
+    only = getattr(args, "only", None)
+    if only:
+        todo = [(cid, cl) for cid, cl in todo if cid == only]
+        if not todo:
+            print(f"{only}: not an outstanding contract (done already, or an "
+                  f"example contract, or no such id)")
     if args.shuffle:
         random.Random(args.seed).shuffle(todo)
         print(f"order shuffled, seed {args.seed}")
@@ -612,6 +751,31 @@ async def run(args):
     for d in (RAW, LOGS, WS):
         d.mkdir(parents=True, exist_ok=True)
 
+    # Provenance, written BEFORE the first session so a run that dies still says
+    # what it was. One file per invocation, stamped, because the script is
+    # resumable and a second invocation is genuinely a second process — possibly
+    # a different machine, a different SDK, a different CLI.
+    opts = manifest.options_digest(agent_options(WS, system_prompt, None, []))
+    opts["system_prompt"] = "sha256:" + hashlib.sha256(
+        system_prompt.encode("utf-8")).hexdigest()
+    # The real cwd is per contract; this object is built only to be recorded.
+    opts["cwd"] = f"{WS.relative_to(lib.ROOT)}/<contract_id>"
+    started = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    man = manifest.Manifest(
+        LOGS / f"run_manifest_{started}.json", run="agent", repo_root=lib.ROOT,
+        model=MODEL, effort=EFFORT, max_turns=MAX_TURNS,
+        billing="subscription", options=opts,
+        seed=args.seed if args.shuffle else None,
+        contract_order=[cid for cid, _ in todo],
+        examples=[{"code": e["code"], "contract_id": e["row"]["contract_id"],
+                   "clause_id": e["row"]["clause_id"]} for e in examples],
+    )
+    man.record_env(env_removed, HERMETIC)
+    man.hash_prompts(lib.PROMPTS / "exp3.md", lib.PROMPTS / "exp3.schema.json")
+    man.hash_inputs(dataset=lib.OUT / "dataset.csv",
+                    contracts=lib.OUT / "contracts.json")
+    man.write()
+
     limits = {}
     await fill_gaps(groups, examples, system_prompt, limits)
     if not todo:
@@ -623,21 +787,18 @@ async def run(args):
     if new:
         writer.writeheader()
 
-    spend, since_rest = 0.0, 0
+    # Which models the CLI actually billed. With
+    # DISABLE_NON_ESSENTIAL_MODEL_CALLS this should be exactly {MODEL} — the
+    # first run also billed `claude-haiku-4-5` in every one of its 64 sessions
+    # for CLI-internal calls, so the agent arm was not the single model the
+    # comparison claims. Recorded rather than assumed.
+    seen_models, spend = set(), 0.0
     for i, (cid, clauses) in enumerate(todo, 1):
         wait, why = pause_for(limits)
         if wait > 0:
             print(f"  ~ {why} ({wait / 3600:.1f}h)")
             time.sleep(wait)
             limits.clear()
-        elif args.rest_every and since_rest >= args.rest_every \
-                and not informative(limits):
-            # Nothing has ever told us where we stand, so fall back to the blind
-            # pacing rule rather than assume there is room.
-            print(f"  ~ no usable rate-limit reading from the CLI; resting "
-                  f"{REST_SECONDS / 3600:.0f}h after {since_rest} contracts")
-            time.sleep(REST_SECONDS)
-            since_rest = 0
 
         root, real_of = build_workspace(cid, clauses, registry, examples)
         print(f"[{i}/{len(todo)}] {cid}: {len(clauses)} provisions, "
@@ -670,8 +831,6 @@ async def run(args):
                 if attempt == 0:
                     print("      nothing written; retrying once")
                     await asyncio.sleep(30)
-        since_rest += 1
-
         judged, why_not = read_predictions(root, real_of, clauses)
         if why_not:
             print(f"    ! {why_not}")
@@ -686,6 +845,7 @@ async def run(args):
             cost += extra.get("total_cost_usd") or 0.0
         spend += cost
 
+        seen_models.update((result.get("model_usage") or {}).keys())
         (LOGS / f"{cid}.json").write_text(json.dumps({
             "contract_id": cid, "model": MODEL, "effort": EFFORT,
             "n_provisions": len(clauses), **result,
@@ -725,10 +885,18 @@ async def run(args):
               f"  [in {u.get('input_tokens', 0):,} "
               f"cache-read {u.get('cache_read_input_tokens', 0):,} "
               f"out {u.get('output_tokens', 0):,}]")
+        if result.get("path_denials"):
+            print(f"    ! {len(result['path_denials'])} path(s) denied outside "
+                  f"the workspace: {result['path_denials'][:3]}")
+        stray = seen_models - {MODEL}
+        if stray:
+            print(f"    ! model(s) other than {MODEL} billed: {sorted(stray)}")
         if result.get("is_error"):
             print(f"    ! session error: {result.get('errors')}")
 
     fout.close()
+    man.finish(contracts_run=len(todo), cost_usd_api_equivalent=round(spend, 2),
+               models_seen=sorted(seen_models))
     print(f"\n{len(todo)} session(s), ${spend:.2f} at API-equivalent rates")
     if todo:
         print(f"  -> {spend / len(todo):.2f} per contract, "
@@ -743,16 +911,14 @@ def main():
     ap.add_argument("--shuffle", action="store_true",
                     help="seeded random order instead of largest first")
     ap.add_argument("--seed", type=int, default=0)
-    # Blind pacing only. The rate-limit-driven pause is NOT covered by this and
-    # cannot be switched off: if the CLI reports the window exhausted, the run
-    # waits for it whatever this says.
-    ap.add_argument("--rest-every", type=int, default=20, metavar="N",
-                    help=f"pause {REST_SECONDS // 3600}h every N contracts while "
-                         f"the CLI reports no usable rate-limit reading; "
-                         f"0 disables the pause")
+    ap.add_argument("--only", metavar="CONTRACT_ID",
+                    help="run exactly one contract by id")
     args = ap.parse_args()
-    env()
-    asyncio.run(run(args))
+    removed = env()
+    if removed:
+        print(f"environment swept: {len(removed)} variable(s) removed "
+              f"({', '.join(removed)})")
+    asyncio.run(run(args, removed))
 
 
 if __name__ == "__main__":

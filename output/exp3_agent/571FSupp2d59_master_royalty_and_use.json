@@ -1,0 +1,763 @@
+{
+  "contract_id": "571FSupp2d59_master_royalty_and_use",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "pos1",
+    "c008": "neg7",
+    "c009": "neg8",
+    "c010": "neg9",
+    "c011": "neg10",
+    "c012": "neg11",
+    "c013": "neg12",
+    "c014": "neg13",
+    "c015": "neg14",
+    "c016": "neg15",
+    "c017": "neg16",
+    "c018": "neg17",
+    "c019": "neg18",
+    "c020": "neg19",
+    "c021": "neg20",
+    "c022": "neg21",
+    "c023": "neg22",
+    "c024": "neg23",
+    "c025": "neg24",
+    "c026": "neg25",
+    "c027": "neg26",
+    "c028": "neg27",
+    "c029": "neg28",
+    "c030": "neg29",
+    "c031": "neg30",
+    "c032": "neg31",
+    "c033": "neg32",
+    "c034": "neg33",
+    "c035": "neg34",
+    "c036": "neg35",
+    "c037": "neg36",
+    "c038": "neg37",
+    "c039": "neg38",
+    "c040": "neg39",
+    "c041": "neg40",
+    "c042": "neg41",
+    "c043": "neg42",
+    "c044": "neg43",
+    "c045": "neg44",
+    "c046": "neg45",
+    "c047": "neg46",
+    "c048": "neg47",
+    "c049": "neg48",
+    "c050": "neg49",
+    "c051": "neg50",
+    "c052": "neg51",
+    "c053": "neg52",
+    "c054": "neg53",
+    "c055": "neg54",
+    "c056": "neg55",
+    "c057": "neg56",
+    "c058": "neg57",
+    "c059": "neg58",
+    "c060": "neg59",
+    "c061": "neg60",
+    "c062": "neg61",
+    "c063": "neg62",
+    "c064": "neg63",
+    "c065": "neg64",
+    "c066": "neg65",
+    "c067": "neg66",
+    "c068": "neg67",
+    "c069": "neg68",
+    "c070": "neg69",
+    "c071": "neg70",
+    "c072": "neg71",
+    "c073": "neg72",
+    "c074": "neg73",
+    "c075": "neg74",
+    "c076": "neg75",
+    "c077": "neg76",
+    "c078": "neg77",
+    "c079": "neg78",
+    "c080": "neg79",
+    "c081": "neg80",
+    "c082": "neg81",
+    "c083": "neg82",
+    "c084": "neg83"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "Standard preamble, but it recites 'by and among' for only two parties and identifies Clearwire Spectrum Holdings II LLC as a Nevada LLC; nothing here has two reasonable meanings.",
+      "reasoning_cat2": "The preamble names only Licensee and Clearwire as 'Parties', yet Article V has Licensee representing to 'Clearwire and Clearwire Parent', Article VI has Clearwire Parent making representations, and Section 4.02(c)(iii)(2) speaks of 'each Clearwire Affiliate that is a Party hereto' — a genuine incoherence about who is bound.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "The recitals introduce loaded characterizations ('Total Consideration', 'would not have been executed but for all of the elements') whose legal effect is contestable, though the language itself is not internally ambiguous.",
+      "reasoning_cat2": "Recital language that the IUAs 'would not have been executed but for all of the elements of the Total Consideration' and that Licensee is a 'shareholder of Clearwire Corporation' cuts against the operative refund and termination machinery in Sections 2.02 and 9.01, a classic recital-versus-operative tension.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.34,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "Descriptive overview defining 'EBS Spectrum Capacity' with the odd qualifier 'collectively, when under IUA hereunder'; that qualifier is loose but the sense is recoverable.",
+      "reasoning_cat2": "It sits consistently with Sections 1.02 and 4.02, though the 'when under IUA' limitation could matter against Section 7.06's reference to 'Licensee's EBS Spectrum'.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "Characterizing the initial payment as exceeding 'the value of the Initial Spectrum Capacity' while being consideration for the Option and ROFR and also an 'advance payment' invites competing readings of what the $23M actually bought.",
+      "reasoning_cat2": "Read against Section 2.01 (Prepaid Royalties applied against IUA amounts) and Section 2.02 (full refund of the unapplied balance), the statement that part of the payment is consideration for the Option and ROFR is hard to reconcile with a right to refund the entire unapplied balance.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "'which consists of, among other items (i)...(iv), together with technology, facilities, equipment and other functionality' is an open-ended list against enumerated specifics — the reach of the catch-all is uncertain.",
+      "reasoning_cat2": "It cross-references ARTICLE II and ARTICLE III (miskeyed as 'ARTICLE I]' and 'ARTICLE II'), and the enumerated benefits track Sections 3.03, 3.04, 3.08 and 3.09 without evident conflict.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "OCR-mangled defined-term references ('TUA', 'ARTICLE II') aside, the exchange it describes is definite and the defined term 'Access Right Royalties' is anchored to ARTICLE III.",
+      "reasoning_cat2": "Section 1.01(c) and the recitals treat Access Right Royalties as a separate limb of the Total Consideration, consistent with this provision; no operative conflict located.",
+      "prob_cat1": 0.15,
+      "prob_cat2": 0.15,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "The Option is an agreement to negotiate price 'in good faith based on fair market value' subject to a $0.15/MHz POP cap, and turns on the undefined-in-text trigger 'Available' — both are prime candidates for competing constructions.",
+      "reasoning_cat2": "It interlocks with Section 1.04 (ROFR), Section 1.02(d) (lapse on Term expiry), Section 2.02 (Term not deemed expired while Option periods run) and Section 9.03 (survival), and those provisions pull in different directions on when the Option dies.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.52,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "The paragraph contains outright mechanical errors ('a GSA the covers the same metropolitan are in Puerto Rico') and a defined 'Substantially Similar' that is circular, plus a $0.15 ceiling sitting against a $0.10 floor in the same paragraph.",
+      "reasoning_cat2": "Its price mechanics (Higher Price / MFN) can exceed the $0.15 per MHz POP cap fixed in Section 1.02(b), and its twelve-month post-Term survival is in tension with Section 9.01's Term and Section 1.02(d)'s lapse rule.",
+      "prob_cat1": 0.55,
+      "prob_cat2": 0.5,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "Short and mostly definite, but 'Available' is a boundary term and the carve-out for prior notice of 'intention to exercise' is loosely drawn.",
+      "reasoning_cat2": "The automatic lapse of Options on Term expiry conflicts with Section 9.03 (Options survive termination if the triggering event occurred earlier) and with Section 2.02's proviso that the Term is not deemed expired while Option periods remain open.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "Obligates Clearwire to 'cause' unnamed Service Affiliates to assume liability, with the scope of 'such additional agreements as may be required' left vague; still, the last sentence preserves Clearwire's primary obligation.",
+      "reasoning_cat2": "It coordinates with the ARTICLE III Access Right Royalties and the 'Collateral Document' concept used in Section 1.01(a); no contradictory provision found.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "Long but mostly mechanical; the fair-market-value substitution and 'other terms that are more favorable to the third party' comparison are judgment-laden but procedurally channelled to arbitration.",
+      "reasoning_cat2": "Its carve-out depends on compliance with the Section 1.02(b) Option Notice and it expressly survives a failed Option negotiation, while Section 1.02(d) and Section 9.03 give inconsistent signals on post-Term survival of ROFR rights.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "The $23,000,000 figure and payment trigger are definite; the only softness is 'applied as provided in Section 1.02(b)'.",
+      "reasoning_cat2": "Section 1.02(b) addresses application only to Future Spectrum Capacity IUAs while this section says the Prepaid Royalties apply to Initial and Future IUAs, and Section 4.01(b)(iii) separately requires delivery of an 'Upfront Royalty' under each IUA — the relationship among these payments is genuinely unclear.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.48,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "The proviso that 'the Term shall not be deemed to have expired for this purpose during a period that the Option periods described in Section 1.02(b) have not terminated' is opaque, and Clearwire's unilateral power to extend the refund date and thereby extend the Term is an unusual, contestable mechanic.",
+      "reasoning_cat2": "Section 9.01 defines the Term as ending when Licensee returns the entire unused Prepaid Royalties, so the refund duty triggered by expiration of the Term and the Term ending on refund are circular; this is the sharpest whole-instrument incoherence in the document.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.62,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "'commercially reasonable best efforts to enter into a joint venture', 'consider in good faith', and the odd trailing condition about pricing 'greater than Clearwire's lowest wholesale price' are vague and grammatically awkward.",
+      "reasoning_cat2": "The benchmark to third-party agreements sits alongside Section 3.05's 'lowest wholesale rate' standard without contradiction, though the Puerto Rico carve-out echoes Section 1.02(c).",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "A one-sentence pointer to Sections 3.02–3.04; nothing to construe on its face.",
+      "reasoning_cat2": "It is consistent with Sections 3.03 and 3.04 and with Section 1.01(c)'s listing of the Access Right Royalties.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "'the same capacity and characteristics as the highest level of premium mass market retail service' and 'individuals that are associated with an Educational End User at the time' are elastic standards that could be read differently.",
+      "reasoning_cat2": "Subjecting the accounts to Clearwire's 'then generally applicable Acceptable Use Policy' subject to non-inconsistency with the Agreement leaves a workable hierarchy; Section 3.05(a) expressly incorporates this definition.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.18,
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "'in such locations served by the Clearwire National Platform on a full time basis as Licensee desires' is loosely bounded, and the 5% Educational Reservation is tied to shifting FCC Rules.",
+      "reasoning_cat2": "It refers disputes to the 'Dispute Resolution Procedure', which Section 10.11 defines (in truncated form) as the sole means of resolution — a workable fit, and Section 3.04 expressly builds on it.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.19,
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "'adjusted upward every five years proportionate to the growth of the overall data capacity' measured by 'average throughput' in a manner 'as shall be agreed' is an agreement to agree with a vague metric.",
+      "reasoning_cat2": "It calls the accounts 'Basic Cost-Free Education Account' while Sections 1.01(c) and 3.04 call the same thing 'Educational Reservation Basic Cost-Free Educational Accounts', and the five-year adjustment sits beside Section 3.04(a)'s annual recalculation without a stated ordering.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c019",
+      "reasoning_cat1": "A short 'in addition to and not in lieu of' introduction with the computation deferred to the subsections; nothing ambiguous stated.",
+      "reasoning_cat2": "It coordinates cleanly with Sections 3.02(a) and 3.03 on stacking of accounts.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c020",
+      "reasoning_cat1": "Turns on undefined-in-text units 'Sector' and 'Market Area' and on the greater-of comparison; the annual recalculation date is definite.",
+      "reasoning_cat2": "It works with the Formula Quantity subsection and Section 3.05's cap of twice the Cost-Free Accounts; the five-year adjustment in Section 3.03(b) is on a different cycle but applies to a different account type.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c021",
+      "reasoning_cat1": "The subsection is mislabelled '(3)' where '(i)' is plainly intended, and 'rounded up or down to the nearest whole number' is redundant but harmless; the Local Channel Ratio itself is defined with care.",
+      "reasoning_cat2": "Section 3.08(b) cross-refers to 'Sections 3.04(a)(ii)', which depends on this mis-numbering being read as intended, but nothing substantive conflicts.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c022",
+      "reasoning_cat1": "'officially associated with' an Educational End User and the resale prohibition are illustrated by an example, which helps, though the boundary of 'Educational End User environment' remains soft.",
+      "reasoning_cat2": "Section 3.08(b) expressly excepts this section and Section 3.05 from the no-resale covenant, so the pieces fit.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c023",
+      "reasoning_cat1": "A timing rule keyed to commercial launch or the Commencement Date, whichever is later; definite.",
+      "reasoning_cat2": "Consistent with Section 3.01's 'from and after the Commencement Date of an IUA'.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c024",
+      "reasoning_cat1": "'lowest wholesale rate provided by Clearwire to an arms-length third party in such Market Area or other comparable market' leaves the comparator set genuinely open.",
+      "reasoning_cat2": "Section 3.01's Puerto Rico joint-venture proviso uses a slightly different benchmark ('Clearwire's lowest wholesale price in the market'), a mild mismatch rather than a conflict.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c025",
+      "reasoning_cat1": "Refers to 'any Licensee requesting' when there is a single Licensee, and 'thirty (30) days after the availability of such services' is a loose trigger.",
+      "reasoning_cat2": "It defers to a 'standard Clearwire wholesale agreement form ... consistent with the terms of this Agreement and the applicable IUA', which is subordinated rather than conflicting.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c026",
+      "reasoning_cat1": "'10% above Clearwire's cost to acquire' is a definite formula, though 'cost' is unelaborated.",
+      "reasoning_cat2": "The no-resale restriction matches Sections 3.04(a)(ii) and 3.08(b).",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c027",
+      "reasoning_cat1": "'generally provided', 'reasonably necessary support', and 'as contemplated by their agreement' (whose agreement?) are all soft, and the six-month lag is oddly phrased as an outer limit rather than an entitlement date.",
+      "reasoning_cat2": "Section 3.08(c) lets Clearwire restrict capabilities for capacity reasons, which cuts against the unqualified 'full use' language here.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c028",
+      "reasoning_cat1": "'the same degree of access ... that is provided to premium third party content providers' turns on an undefined comparator class.",
+      "reasoning_cat2": "It is qualified by Section 3.08(c)'s capacity carve-out, which is expressly cross-referenced, so the fit is intended.",
+      "prob_cat1": 0.27,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c029",
+      "reasoning_cat1": "'most favored program suppliers' and 'educational in nature' are undefined evaluative terms, and the cross-reference is garbled ('Sections 3.04(a)(i1)').",
+      "reasoning_cat2": "The no-resale covenant expressly excepts Sections 3.04(a)(ii) and 3.05, harmonising with the MVNO right; no conflict found.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.18,
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c030",
+      "reasoning_cat1": "'no longer commercially and technically feasible due to limitations in network capabilities' is a vague, unilaterally-invoked standard reserved to the drafter's benefit.",
+      "reasoning_cat2": "It directs Clearwire to 'comply with the provisions of ARTICLE III to ensure timely access to information about capacity usage', but ARTICLE III contains no such information-access provisions — a broken internal reference, and the restriction right cuts against Sections 3.07 and 3.08(a).",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c031",
+      "reasoning_cat1": "'commercially reasonable best efforts' is an internally mixed standard and 'one ordinary unpaid channel carried on such entity's basic tier' is imprecise.",
+      "reasoning_cat2": "Limited Reciprocity is listed in Section 1.01(c) as a core Access Right Royalty, yet here it is only a best-efforts undertaking at Licensee's cost — a tension between the described bundle and the operative promise.",
+      "prob_cat1": 0.37,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c032",
+      "reasoning_cat1": "'the following actions required of it by subsections (a) through (c)' uses a singular pronoun for two parties, a trivial slip.",
+      "reasoning_cat2": "Subsections (a)-(c) exist and match; nothing elsewhere contradicts.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c033",
+      "reasoning_cat1": "A closing-deliverables list; definite items, though the Wire Account language ('each a Wire Account') suggests plural accounts where one is specified.",
+      "reasoning_cat2": "It refers to 'Schedule 4.01', which does not appear in the Agreement's List of Schedules (only Schedule A and the Licensee Schedule), and to Exhibit III, which the exhibit list confirms.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c034",
+      "reasoning_cat1": "Deliverables are enumerated and definite on their face.",
+      "reasoning_cat2": "Item (iii) requires delivery of 'the Upfront Royalty provided for in the applicable EBS Spectrum Capacity IUA', a payment concept nowhere reconciled with the $23,000,000 Prepaid Royalties in Section 2.01 or the refund mechanics of Section 2.02.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.4,
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c035",
+      "reasoning_cat1": "Routine officers' certificate requirement; unambiguous.",
+      "reasoning_cat2": "It refers to 'each other Party' in a two-party agreement, a harmless residue, and matches Sections 4.01(a)(iii) and 4.01(b)(ii).",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c036",
+      "reasoning_cat1": "Defines Initial Closing and Initial Closing Date by reference to the Effective Date; definite.",
+      "reasoning_cat2": "Consistent with the Preamble's Effective Date and Section 4.01's execution deliveries.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg35"
+    },
+    {
+      "clause_id": "c037",
+      "reasoning_cat1": "'shall take place as specified in the applicable IUAs when the Parties reach agreement on the pricing' makes the closing contingent on an agreement that may never be reached.",
+      "reasoning_cat2": "It depends on the Section 1.02(b) negotiation process, which expressly permits Clearwire to walk away, so the two fit — though the Subsequent Closing Date/Effective Date equation must be squared with Section 10.02's survival period.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg36"
+    },
+    {
+      "clause_id": "c038",
+      "reasoning_cat1": "The 'No Injunctions or Restraints' condition is a sentence fragment with no operative verb ('No temporary restraining order ... preventing the consummation'), so what must be true at closing is stated only by implication.",
+      "reasoning_cat2": "It refers to a single 'following condition' and then lists one; nothing elsewhere contradicts it.",
+      "prob_cat1": 0.32,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg37"
+    },
+    {
+      "clause_id": "c039",
+      "reasoning_cat1": "Standard closing conditions with a clear waiver mechanic; the reference to representations 'contained in the IUA' rather than in this Agreement is deliberate.",
+      "reasoning_cat2": "The parallel Licensee subsection is also numbered '(ii)', a numbering collision, but the substance dovetails with Section 4.01(c).",
+      "prob_cat1": 0.12,
+      "prob_cat2": 0.17,
+      "dataset_clause_id": "neg38"
+    },
+    {
+      "clause_id": "c040",
+      "reasoning_cat1": "Mirror-image conditions, clearly drafted apart from the mis-numbering carried over from the preceding subsection.",
+      "reasoning_cat2": "It requires resolutions of 'each Clearwire Affiliate that is a Party hereto', but the Preamble names no Clearwire Affiliate as a Party — an unreconciled reference.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg39"
+    },
+    {
+      "clause_id": "c041",
+      "reasoning_cat1": "The general rule (electronic delivery) and the proviso (Initial Closing at named offices) are stated in one breath and sit uneasily together, though the proviso plainly governs.",
+      "reasoning_cat2": "Nothing else in the Agreement fixes a closing location; no conflict found.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg40"
+    },
+    {
+      "clause_id": "c042",
+      "reasoning_cat1": "'reasonable best efforts' and 'necessary, proper or advisable' are conventional further-assurances language whose reach is broad but rarely determinative.",
+      "reasoning_cat2": "Section 7.07's 'commercially reasonable best efforts' standard is a different formulation of a similar duty, but the two are not inconsistent.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.12,
+      "dataset_clause_id": "neg41"
+    },
+    {
+      "clause_id": "c043",
+      "reasoning_cat1": "Standard organization and good-standing representation with a Material Adverse Effect qualifier; definite in operation.",
+      "reasoning_cat2": "The lead-in runs the representation to 'Clearwire and Clearwire Parent', although Clearwire Parent is not made a Party by the Preamble — a recurring who-is-bound problem.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.26,
+      "dataset_clause_id": "neg42"
+    },
+    {
+      "clause_id": "c044",
+      "reasoning_cat1": "Boilerplate authorization and enforceability representation with the usual bankruptcy and equity carve-outs.",
+      "reasoning_cat2": "Its 'on the date hereof' limitation differs from Clearwire's mirror in Section 6.02, which is not so limited, but that asymmetry is deliberate rather than contradictory.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg43"
+    },
+    {
+      "clause_id": "c045",
+      "reasoning_cat1": "Standard no-conflict representation with enumerated categories and a materiality exception; nothing genuinely elastic.",
+      "reasoning_cat2": "It is qualified by Schedule 5.03, which is not in the document's List of Schedules, but that is a disclosure-schedule gap rather than an internal conflict.",
+      "prob_cat1": 0.08,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg44"
+    },
+    {
+      "clause_id": "c046",
+      "reasoning_cat1": "A no-consents representation whose only softness is the trailing 'except as contemplated herein or therein', a self-referential carve-out of uncertain reach.",
+      "reasoning_cat2": "The parallel Clearwire representation in Section 6.03(b) instead carves out FCC spectrum-lease filings, and FCC approval is plainly needed for the IUAs, which sits awkwardly with this unqualified statement.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.25,
+      "dataset_clause_id": "neg45"
+    },
+    {
+      "clause_id": "c047",
+      "reasoning_cat1": "'Proceedings of general applicability and those related to market transitions' is a vague exclusion, and 'nor does there exist any basis therefore' is both a typo and an extraordinarily broad promise.",
+      "reasoning_cat2": "It relies on Schedule 5.04 and on the knowledge standard fixed by Section 5.07, both of which fit; no contradiction located.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.15,
+      "dataset_clause_id": "neg46"
+    },
+    {
+      "clause_id": "c048",
+      "reasoning_cat1": "The provision stacks 'only to the best knowledge', an assumption about third parties' compliance, and 'complied in all respects' against Material Adverse Effect qualifiers, producing a genuinely tangled standard.",
+      "reasoning_cat2": "Section 8.02 directs that Damages be computed 'without regard to any limitation or qualification as to materiality ... knowledge or similar language', which strips out precisely the qualifiers this representation depends on.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.34,
+      "dataset_clause_id": "neg47"
+    },
+    {
+      "clause_id": "c049",
+      "reasoning_cat1": "One-line brokers representation; unambiguous.",
+      "reasoning_cat2": "Mirrors Section 6.06 and conflicts with nothing.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.04,
+      "dataset_clause_id": "neg48"
+    },
+    {
+      "clause_id": "c050",
+      "reasoning_cat1": "'best knowledge after commercially reasonable investigation' including 'all facts which it knew or should have known' is a constructive-knowledge standard with a fuzzy boundary, but it is at least defined.",
+      "reasoning_cat2": "Section 8.02's instruction to disregard knowledge qualifiers in measuring Damages undercuts the utility of this definition, and no counterpart exists for Clearwire.",
+      "prob_cat1": 0.2,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg49"
+    },
+    {
+      "clause_id": "c051",
+      "reasoning_cat1": "Standard good-standing representation; the reference to Clearwire as a 'foreign corporation' when it is an LLC is a minor slip.",
+      "reasoning_cat2": "It makes representations about Clearwire Parent, a Delaware corporation that the Preamble does not make a Party, leaving unclear who is answerable for them under Section 8.01(b).",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.32,
+      "dataset_clause_id": "neg50"
+    },
+    {
+      "clause_id": "c052",
+      "reasoning_cat1": "Boilerplate authorization and enforceability language; definite.",
+      "reasoning_cat2": "It states that Clearwire Parent has authority and defines 'Clearwire Documents' collectively, yet the enforceability sentence runs only against Clearwire, and Clearwire Parent is not a signing Party under the Preamble.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg51"
+    },
+    {
+      "clause_id": "c053",
+      "reasoning_cat1": "Standard no-conflict representation with enumerated heads and a materiality exception.",
+      "reasoning_cat2": "Unlike Section 5.03, it is not qualified by any schedule, but nothing elsewhere contradicts it.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg52"
+    },
+    {
+      "clause_id": "c054",
+      "reasoning_cat1": "Clear no-consents statement with an express FCC spectrum-lease filing carve-out.",
+      "reasoning_cat2": "The same carve-out is duplicated verbatim at the end of Section 6.05, where it fits far less naturally; the duplication is untidy rather than contradictory.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg53"
+    },
+    {
+      "clause_id": "c055",
+      "reasoning_cat1": "Litigation representation bounded by a materiality lead-in and a schedule; unambiguous.",
+      "reasoning_cat2": "Narrower than the Licensee's Section 5.04 counterpart, but asymmetry of this kind is a bargained allocation, not an internal inconsistency.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.09,
+      "dataset_clause_id": "neg54"
+    },
+    {
+      "clause_id": "c056",
+      "reasoning_cat1": "'has complied in all respects' immediately qualified by a Material Adverse Effect exception is internally awkward, and the appended FCC filing carve-out is grafted onto a permits representation with stray punctuation.",
+      "reasoning_cat2": "The carve-out repeats Section 6.03(b) and the materiality qualifier is nullified for damages purposes by Section 8.02; neither is a squarely contradictory provision.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg55"
+    },
+    {
+      "clause_id": "c057",
+      "reasoning_cat1": "One-line brokers representation; unambiguous.",
+      "reasoning_cat2": "Mirrors Section 5.06; no conflict.",
+      "prob_cat1": 0.04,
+      "prob_cat2": 0.04,
+      "dataset_clause_id": "neg56"
+    },
+    {
+      "clause_id": "c058",
+      "reasoning_cat1": "'commercially reasonable efforts' to obtain consents 'required to be obtained by Clearwire and the Licensee' is broad, and the two sentences overlap confusingly on whose consents are whose.",
+      "reasoning_cat2": "Sections 5.03(b) and 6.03(b) represent that no consents are required except FCC filings, which sits oddly with a covenant to obtain a long list of consents.",
+      "prob_cat1": 0.21,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg57"
+    },
+    {
+      "clause_id": "c059",
+      "reasoning_cat1": "The duty is triggered by the party's own determination that a matter is 'reasonably likely to constitute a breach', a self-judging standard, but the mechanic is plain.",
+      "reasoning_cat2": "It imposes duties on Clearwire Parent, which the Preamble does not make a Party; otherwise it fits the indemnity structure of Article VIII.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg58"
+    },
+    {
+      "clause_id": "c060",
+      "reasoning_cat1": "A single sprawling sentence with stacked provisos, an internal cross-reference to 'this sentence' that is hard to locate, and 'material risk' and 'knowingly or negligently' as the operative standards.",
+      "reasoning_cat2": "Its opening limitation to 'spectrum that has not been subject to an IUA' is hard to square with the proviso making Clearwire responsible for the substantial-service requirement on licensed spectrum, and with Section 7.06's tax covenant running to spectrum under IUAs.",
+      "prob_cat1": 0.4,
+      "prob_cat2": 0.35,
+      "dataset_clause_id": "neg59"
+    },
+    {
+      "clause_id": "c061",
+      "reasoning_cat1": "The section opens by limiting itself to spectrum not subject to an IUA, then closes with a general right to 'sell, assign, sublease, delegate or transfer this Agreement or any of its rights or obligations' to affiliates — a scope mismatch within one provision.",
+      "reasoning_cat2": "That closing sentence overrides the consent regime in the same section and is not reflected in Section 10.09's 'permitted assigns' language, leaving the assignment rules incoherent across the instrument.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.4,
+      "dataset_clause_id": "neg60"
+    },
+    {
+      "clause_id": "c062",
+      "reasoning_cat1": "'The Parties believe that the provisions of this Agreement comply with all current FCC rules' followed by an agreement 'not to express any contrary view' is an unusual covenant of doubtful scope and enforceability.",
+      "reasoning_cat2": "Section 3.03(a) contemplates jointly approaching the FCC for clarification when rules are disputed, which sits awkwardly with a promise never to express a contrary regulatory view.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg61"
+    },
+    {
+      "clause_id": "c063",
+      "reasoning_cat1": "'all fees and taxes (now existing or hereafter arising) imposed on Licensee as a result of the licensing, regulation or use' with a non-exhaustive 'including, without limitation' list is a general catch-all against specifics.",
+      "reasoning_cat2": "It runs 'until the end of the term of the IUA that is the last to expire', which extends well past the eighteen-month Term in Section 9.01, and overlaps Section 10.01's separate tax allocation.",
+      "prob_cat1": 0.3,
+      "prob_cat2": 0.3,
+      "dataset_clause_id": "neg62"
+    },
+    {
+      "clause_id": "c064",
+      "reasoning_cat1": "'act in a cooperative manner to preserve the intent of the relationships' and 'maintain that mutual advantage in accordance with the initial intent of the Parties' are about as vague as an operative covenant gets.",
+      "reasoning_cat2": "A free-floating duty to preserve 'mutual advantage' can be invoked against almost any specific allocation in the Agreement, including Sections 1.02(b) and 2.02, but no single provision squarely contradicts it.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.29,
+      "dataset_clause_id": "neg63"
+    },
+    {
+      "clause_id": "c065",
+      "reasoning_cat1": "Limb (iii) is a sweeping catch-all — 'or otherwise related to the activities of Clearwire, any of its Affiliates or any of its sublicensees or resellers including, without limitation, damage to health' — whose reach against the enumerated specifics is genuinely uncertain.",
+      "reasoning_cat2": "It has no counterpart in Licensee's indemnity at Section 8.01(a), and the internal lettering of Section 8.01(a) (which uses '(a)' and '(i)') breaks the cross-references in Section 8.03.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.27,
+      "dataset_clause_id": "neg64"
+    },
+    {
+      "clause_id": "c066",
+      "reasoning_cat1": "The definition is deliberately expansive ('of every kind and description, contingent or otherwise') and includes items like 'statutory or regulatory compliance requirements' that are not obviously losses.",
+      "reasoning_cat2": "Its instruction to disregard materiality, Material Adverse Effect and knowledge qualifiers directly negates the qualifiers built into Sections 5.01, 5.05, 6.01 and 6.05 — a designed override, but one that leaves the representations' true content contestable.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg65"
+    },
+    {
+      "clause_id": "c067",
+      "reasoning_cat1": "Headed as a limit on representation and warranty breaches, the operative text also captures 'the breach of any covenant', and the $10,000 Deductible is stated as a threshold that is then fully recoverable — internally confused.",
+      "reasoning_cat2": "It cites 'Section 8.01(a)(i)' and 'Section 8.01(b)(i)', but Section 8.01(a)'s sub-items are lettered '(a)' and '(i)', so the cross-reference does not map cleanly onto the indemnity it purports to limit.",
+      "prob_cat1": 0.41,
+      "prob_cat2": 0.35,
+      "dataset_clause_id": "neg66"
+    },
+    {
+      "clause_id": "c068",
+      "reasoning_cat1": "Long but conventional claim-handling machinery; 'reasonably and promptly' and 'conflict or potential conflict' are soft but standard and procedurally bounded.",
+      "reasoning_cat2": "It refers to 'the Deductible referred to above', which Section 8.03 supplies, and works with Sections 8.01 and 8.04(c) without contradiction.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.11,
+      "dataset_clause_id": "neg67"
+    },
+    {
+      "clause_id": "c069",
+      "reasoning_cat1": "A mechanical notice-of-sums-due step; unambiguous.",
+      "reasoning_cat2": "It fits Section 8.04(a) and does not conflict with the arbitration references elsewhere.",
+      "prob_cat1": 0.06,
+      "prob_cat2": 0.07,
+      "dataset_clause_id": "neg68"
+    },
+    {
+      "clause_id": "c070",
+      "reasoning_cat1": "A clear actual-prejudice rule for late notice; the standard is definite.",
+      "reasoning_cat2": "It qualifies the 'reasonably and promptly' notice duty in Section 8.04(a), which is exactly its intended function.",
+      "prob_cat1": 0.07,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg69"
+    },
+    {
+      "clause_id": "c071",
+      "reasoning_cat1": "Clause (3) defines the Term as ending when Licensee returns the unused Prepaid Royalties, which is circular given that the refund duty arises on expiration; the trailing 'except as it pertains to Puerto Rico' is unexplained and Clearwire's unilateral extension right cuts against fixed expiry.",
+      "reasoning_cat2": "It must be read with Section 2.02 (refund within five days after expiration, and Term not deemed expired while Option periods run), Section 1.02(d) (Options lapse on Term expiry) and Section 9.03 (Options survive) — those provisions cannot all be given full effect.",
+      "prob_cat1": 0.48,
+      "prob_cat2": 0.58,
+      "dataset_clause_id": "neg70"
+    },
+    {
+      "clause_id": "c072",
+      "reasoning_cat1": "'Event of Default' is defined by stacked vague terms — 'material obligation', 'material representation and warranty', and failure resulting in 'the inability of the other party to exercise its full rights' — and the second sentence about 'Loss' is unrelated to defaults.",
+      "reasoning_cat2": "Section 9.01 hangs termination rights on this definition, and it imports 'Loss (as defined in the applicable IUA)', a term that appears nowhere else in this instrument.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.37,
+      "dataset_clause_id": "neg71"
+    },
+    {
+      "clause_id": "c073",
+      "reasoning_cat1": "'obligations ... that by their nature would continue beyond expiration' is an inherently uncertain category, and the counterfactual 'or would have occurred, if Licensee complied in full' compounds it.",
+      "reasoning_cat2": "It preserves Options and rights of first refusal after termination, which directly contradicts Section 1.02(d)'s rule that outstanding Options lapse automatically on expiration of the Term.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.5,
+      "dataset_clause_id": "neg72"
+    },
+    {
+      "clause_id": "c074",
+      "reasoning_cat1": "A detailed enumerated tax list closed by 'or similar fees or taxes or governmental charges', a modest general-versus-specific tail.",
+      "reasoning_cat2": "It overlaps Section 7.06's broader tax covenant without an ordering rule, and it indemnifies the 'Licensee(s) Indemnified Parties', a defined term drawn from Section 8.01(b) with a stray plural.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg73"
+    },
+    {
+      "clause_id": "c075",
+      "reasoning_cat1": "A one-year survival period running from either the Initial or a Subsequent Closing 'with respect to the EBS Spectrum that is subject to such ... Closing' is workable but the second sentence ('survive indefinitely until, by their respective terms, they are no longer operative') is close to self-cancelling.",
+      "reasoning_cat2": "Section 9.03 states a different survival rule by nature of the obligation, and Section 8.03's indemnity for representation breaches is not expressly tied to this one-year window.",
+      "prob_cat1": 0.28,
+      "prob_cat2": 0.33,
+      "dataset_clause_id": "neg74"
+    },
+    {
+      "clause_id": "c076",
+      "reasoning_cat1": "Standard integration and non-waiver language, carefully drafted and definite.",
+      "reasoning_cat2": "The integration clause covers 'this Agreement (including the schedules and exhibits hereto)' while the transaction also runs through IUAs, Collateral Documents and the Stock Pledge Agreement referenced in Sections 1.03 and 4.01(a) — leaving room to argue about what is integrated.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg75"
+    },
+    {
+      "clause_id": "c077",
+      "reasoning_cat1": "A plain New York choice-of-law clause excluding renvoi; nothing to construe.",
+      "reasoning_cat2": "No competing choice-of-law or forum term appears in the Agreement; Section 10.11 addresses procedure, not governing law.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg76"
+    },
+    {
+      "clause_id": "c078",
+      "reasoning_cat1": "Headings-have-no-effect clause; unambiguous.",
+      "reasoning_cat2": "Useful here, since the table of contents mis-numbers many sections; it neutralises rather than creates conflict.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.08,
+      "dataset_clause_id": "neg77"
+    },
+    {
+      "clause_id": "c079",
+      "reasoning_cat1": "The notice addressee is given as 'Clearwire Spectrum Holdings I LLC' rather than the 'II LLC' named in the Preamble, and the Kirkland, Washington addresses carry (415) area-code fax numbers — mechanical errors in the notice details themselves.",
+      "reasoning_cat2": "The party-name discrepancy with the Preamble is the kind of mismatch that can be argued about when notice of default under Section 9.01 is at stake.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.24,
+      "dataset_clause_id": "neg78"
+    },
+    {
+      "clause_id": "c080",
+      "reasoning_cat1": "'to the extent possible' and 'reasonable time to comment' are soft, but the structure of the consent-plus-legal-exception is conventional.",
+      "reasoning_cat2": "No confidentiality section survives in the executed text to conflict with it (Section 11.14 appears only in the table of contents), so no operative clash.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.13,
+      "dataset_clause_id": "neg79"
+    },
+    {
+      "clause_id": "c081",
+      "reasoning_cat1": "A bare, one-sentence severability clause with no reformation or essential-terms proviso, so what happens when a central term fails is unaddressed.",
+      "reasoning_cat2": "Given the interlocking Option, refund and Term mechanics of Sections 1.02, 2.02 and 9.01, the absence of any carve-out makes its application uncertain, but no provision contradicts it.",
+      "prob_cat1": 0.16,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg80"
+    },
+    {
+      "clause_id": "c082",
+      "reasoning_cat1": "One sentence, definite, though 'permitted assigns' presupposes an assignment-restriction that this section does not state.",
+      "reasoning_cat2": "The only assignment rules appear in Section 7.04, which is expressly limited to spectrum not subject to an IUA and yet contains a general right to transfer 'this Agreement' to affiliates — so what counts as a 'permitted assign' is not settled by the instrument.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.31,
+      "dataset_clause_id": "neg81"
+    },
+    {
+      "clause_id": "c083",
+      "reasoning_cat1": "A stipulation that 'monetary damages alone will not be adequate' coupled with cumulative-remedies language is conventional, though the stipulation of irreparable harm for any refusal to perform is broad.",
+      "reasoning_cat2": "It preserves every remedy 'at law or in equity' notwithstanding any other provision, which pulls against Section 10.11's statement that the Dispute Resolution Procedures are the Parties' 'sole means' of resolving disputes.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.38,
+      "dataset_clause_id": "neg82"
+    },
+    {
+      "clause_id": "c084",
+      "reasoning_cat1": "The text breaks off mid-sentence at 'as their sole means of', so the operative scope of the exclusive dispute mechanism is literally incomplete — a mechanical defect on the face of the provision.",
+      "reasoning_cat2": "A 'sole means' ADR provision has to be reconciled with Section 10.10's preservation of all legal and equitable remedies and with the arbitration references in Sections 1.04 and 3.03(b), which assume a fuller procedure than what survives here.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.42,
+      "dataset_clause_id": "neg83"
+    }
+  ]
+}
