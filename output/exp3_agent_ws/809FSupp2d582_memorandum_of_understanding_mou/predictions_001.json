@@ -1,47 +1,65 @@
 {"judgments": [
- {"clause_id": "c001",
-  "reasoning_cat1": "A definitional recital identifying the underlying agreements; it is riddled with OCR/typographical corruption and uses an open-ended 'all addenda ... including, but not limited to' catalogue, so the outer boundary of 'the reinsurance relationship' is not fixed by the enumeration.",
-  "reasoning_cat2": "The defined term drives the operative sections (c005, c009, c012), which instead list the four agreements 'and all addenda' individually, so the recital and operative text mostly track each other; no specific contradiction found.",
-  "prob_cat1": 0.19,
-  "prob_cat2": 0.14},
- {"clause_id": "c002",
-  "reasoning_cat1": "A one-line recital that a dispute exists over 'funds owed' and 'who is responsible for certain payments'; vague ('certain payments') but it creates no obligation to construe.",
-  "reasoning_cat2": "Read against Section I (c005) and Section IX (c015) it is merely background and does not point away from any operative term.",
-  "prob_cat1": 0.11,
-  "prob_cat2": 0.10},
- {"clause_id": "c003",
-  "reasoning_cat1": "Purely a naming recital defining 'the Lawsuit' by reference to the captioned action; nothing is ambiguous beyond scanning errors.",
-  "reasoning_cat2": "The defined term is used consistently in Sections V, VI and IX (c011, c012, c015), including the direction to 'refile the lawsuit', with no mismatch.",
-  "prob_cat1": 0.05,
-  "prob_cat2": 0.06},
- {"clause_id": "c004",
-  "reasoning_cat1": "The 'business solution' is described in sweeping, undefined terms — 'all fees and expenses and costs associated in any way' — and 'going forward, beginning May 4, 2009' fixes a date whose effect is left to the operative text.",
-  "reasoning_cat2": "This recital promises forward payment of everything from May 4, 2009 while Section I (c005) carves out payments 'completed' before that date and Section IX (c015) caps the remedy at refiling suit, a classic recital-versus-operative pull that a court could be asked to resolve.",
-  "prob_cat1": 0.24,
-  "prob_cat2": 0.36},
- {"clause_id": "c005",
-  "reasoning_cat1": "It commits the parties to enter a future LPT whose terms are not set (an agreement to agree), while carefully defining 'completed' payment; the open question is what an LPT must contain and what 'all past and future losses, payments, risks, and liabilities' reaches.",
-  "reasoning_cat2": "Section IX (c015) refers to a 'mutually agreeable reinsurance agreement/LPT' and makes non-completion merely a trigger for refiling, which sits uneasily with the mandatory 'shall enter into' here and with Section V's assertion (c011) that the MOU is definite enough to enforce.",
-  "prob_cat1": 0.43,
-  "prob_cat2": 0.47},
- {"clause_id": "c006",
-  "reasoning_cat1": "The ZBA paragraph is date-specific and mechanical; the only slack is what happens to the account if the LPT is not executed by June 30, 2009, since permission runs 'until the LPT is executed, but no later than' that date.",
-  "reasoning_cat2": "That gap connects to Section IX (c015), which contemplates the LPT never being executed and gives only the refiling remedy, but nothing in the ZBA terms directly contradicts another clause.",
-  "prob_cat1": 0.17,
-  "prob_cat2": 0.20},
- {"clause_id": "c007",
-  "reasoning_cat1": "Detailed and largely self-executing, but it turns on soft standards — investments 'acceptable to Lincoln General', an 'A rated' reinsurer, an actuary approved but 'not unreasonably withheld' — and calls $3 million 'partial security' while capping any replacement collateral at $3 million.",
-  "reasoning_cat2": "Checked against Section I (c005), which imposes unlimited LPT liability, and Section IX (c015)'s reference to 'posting of appropriate security'; the cap is expressly disclaimed as a limitation on obligations, so no clear conflict.",
-  "prob_cat1": 0.31,
-  "prob_cat2": 0.22},
- {"clause_id": "c008",
-  "reasoning_cat1": "It says 'those funds may be released' without saying how much (all funds, or only the excess over estimated remaining liability) or to whom, then adds that the release 'shall be performed annually' — permissive and mandatory in the same breath.",
-  "reasoning_cat2": "It must be read with the withdrawal restriction in Section II(a) (c007) that funds may only be withdrawn with Lincoln General's consent, which arguably qualifies or is qualified by this automatic annual release.",
-  "prob_cat1": 0.36,
-  "prob_cat2": 0.28},
- {"clause_id": "c009",
-  "reasoning_cat1": "The funding duty is stated broadly with an 'include, but not be limited to' list closing in 'any other expenses related to' claims handling, so the catch-all's reach against the enumerated items is not fixed.",
-  "reasoning_cat2": "The final sentence preserving 'any obligations of U.S. Auto, Gamma, or any other defendant' pulls against Section X (c016), which contemplates releases of all Defendants on Santa Fe's performance.",
-  "prob_cat1": 0.26,
-  "prob_cat2": 0.29}
+  {
+    "clause_id": "c001",
+    "reasoning_cat1": "The recital defines \"the reinsurance relationship\" by an enumerated list of agreements plus \"all addenda ... including, but not limited to\" three named addenda, leaving the catch-all's reach open (a classic general-vs-specific problem), and it is riddled with OCR/typographical corruption. It also names State and County Mutual Fire Insurance Company, a non-signatory, as a party to that relationship.",
+    "reasoning_cat2": "The operative sections (I, III, VI) never use the defined term \"the reinsurance relationship\" but instead re-list the 2002/2003 GAAs and Q/S plus addenda, so the defined term does work only in Recital 4, raising a modest recital-vs-operative mismatch. No direct contradiction with any operative clause is apparent.",
+    "prob_cat1": 0.34,
+    "prob_cat2": 0.19
+  },
+  {
+    "clause_id": "c002",
+    "reasoning_cat1": "\"[F]unds owed ... and who is responsible for certain payments\" is vague, but as a background recital it fixes no rights and the vagueness is unlikely to be construed. Nothing in it must be applied to a set of facts.",
+    "reasoning_cat2": "It is consistent with Recital 3 and with the operative allocation of payment responsibility in Sections I and III; nothing contradicts it. It only frames the dispute the MOU resolves.",
+    "prob_cat1": 0.10,
+    "prob_cat2": 0.07
+  },
+  {
+    "clause_id": "c003",
+    "reasoning_cat1": "A purely factual recital identifying the Lawsuit and defining that term; no term in it carries two meanings. The only defects are scanning typos that do not change meaning.",
+    "reasoning_cat2": "The defined term \"Lawsuit\" is used consistently in Sections III, V, VI and IX, and its refiling in Section IX presupposes the same case. No conflict found.",
+    "prob_cat1": 0.05,
+    "prob_cat2": 0.05
+  },
+  {
+    "clause_id": "c004",
+    "reasoning_cat1": "\"[A]ll fees and expenses and costs associated in any way with the insurance policies\" is an open-ended catch-all whose boundary is undefined, and \"going forward, beginning May 4, 2009\" sets a date whose operative effect is left to later sections. The phrase \"business solution\" is itself indeterminate.",
+    "reasoning_cat2": "This recital says the solution covers payments beginning May 4, 2009, while operative Section I carves out payments \"completed\" before May 4, 2009 and Section VII subjects everything to regulatory approval, so a recital-vs-operative argument about the scope of what Santa Fe assumed is available. That is a recognisable 2.3 tension, though the operative text can largely be harmonised with it.",
+    "prob_cat1": 0.35,
+    "prob_cat2": 0.36
+  },
+  {
+    "clause_id": "c005",
+    "reasoning_cat1": "This is an agreement to enter into a future LPT with no agreed terms, and the bespoke definition of a \"completed\" payment (\"dated and issued\") plus \"all past and future losses ... whether or not known\" invites argument about what Santa Fe actually assumed. The definiteness of the obligation to \"enter into\" an unwritten agreement is precisely the kind of thing courts construe.",
+    "reasoning_cat2": "Section IX describes the same LPT as a \"mutually agreeable reinsurance agreement/LPT\" and makes non-completion merely a trigger for refiling the lawsuit, while Section V declares the MOU \"sufficiently definite to allow the parties to sue for its enforcement\" — the three cannot easily be read together. Section VII's regulatory-approval condition further undercuts the flat June 30, 2009 deadline.",
+    "prob_cat1": 0.55,
+    "prob_cat2": 0.63
+  },
+  {
+    "clause_id": "c006",
+    "reasoning_cat1": "\"[U]ntil the LPT is executed, but no later than June 30, 2009\" and the reimbursement window \"from May 4, 2009 until the date of execution\" are workable dates, though it is unclear what governs the ZBA if no LPT is ever executed. The wording is otherwise mechanical and administrative.",
+    "reasoning_cat2": "It dovetails with Section I's May 4, 2009 cut-off and its LPT deadline, and no other provision addresses the ZBA; the only gap is the Section IX scenario where the LPT is never executed. No direct contradiction identified.",
+    "prob_cat1": 0.17,
+    "prob_cat2": 0.16
+  },
+  {
+    "clause_id": "c007",
+    "reasoning_cat1": "\"[O]ther investments acceptable to Lincoln General,\" \"an A rated reinsurer,\" and the default-collateral formula tied to \"future losses forecast\" leave real judgment calls, and the parenthetical \"but not as a limitation on those obligations\" tries to fix a tension it half creates. Still, the alternatives are carefully specified and capped at $3 million.",
+    "reasoning_cat2": "The $3 million security dovetails with Section IX, which lists \"the posting of appropriate security\" as an action whose non-completion merely permits refiling — a plausible tension between a firm security obligation and a remedy that abandons it. Nothing else in the MOU addresses security.",
+    "prob_cat1": 0.34,
+    "prob_cat2": 0.28
+  },
+  {
+    "clause_id": "c008",
+    "reasoning_cat1": "\"[T]hose funds may be released\" does not say whether all trust funds or only the excess over estimated remaining liability is released, and \"may\" leaves it unclear who holds the discretion; \"this release shall be performed annually\" sits awkwardly with the permissive \"may.\" That is a namable lexical ambiguity.",
+    "reasoning_cat2": "It has to be read against Section II(a), which says trust funds \"shall only be able to be withdrawn with Lincoln General's consent\" — an annual release mechanism and a consent-only withdrawal rule are in tension. No other provision resolves the point.",
+    "prob_cat1": 0.42,
+    "prob_cat2": 0.35
+  },
+  {
+    "clause_id": "c009",
+    "reasoning_cat1": "\"[A]ll activities in connection with ... handling of claims\" is expanded by an \"include, but not be limited to\" list ending in \"any other expenses related to\" claims work, a general catch-all against enumerated specifics. Its outer boundary (e.g. defence of the Lawsuit itself, extracontractual liability) is genuinely uncertain.",
+    "reasoning_cat2": "The final sentence preserves the other defendants' obligations, which sits uneasily with Section X's contemplated \"releases of all Defendants\" once Santa Fe performs, and with Section IV's separate $1.5 million payment. That is a real, if arguable, whole-instrument tension.",
+    "prob_cat1": 0.38,
+    "prob_cat2": 0.31
+  }
 ]}

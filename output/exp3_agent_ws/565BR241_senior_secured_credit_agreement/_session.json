@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 23,
-  "duration_ms": 703409,
-  "total_cost_usd": 3.7422,
+  "duration_ms": 613107,
+  "total_cost_usd": 3.5943,
   "usage": {
     "input_tokens": 40,
-    "cache_creation_input_tokens": 144268,
-    "cache_read_input_tokens": 1420889,
-    "output_tokens": 63554,
+    "cache_creation_input_tokens": 147870,
+    "cache_read_input_tokens": 1441136,
+    "output_tokens": 55794,
     "output_tokens_details": {
-      "thinking_tokens": 22378
+      "thinking_tokens": 17122
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 144268,
+      "ephemeral_1h_input_tokens": 147870,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 55,
-        "cache_read_input_tokens": 137349,
-        "cache_creation_input_tokens": 10995,
+        "output_tokens": 29,
+        "cache_read_input_tokens": 146074,
+        "cache_creation_input_tokens": 7218,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 10995
+          "ephemeral_1h_input_tokens": 7218
         },
         "type": "message"
       }
@@ -40,26 +40,31 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 40,
-      "outputTokens": 63554,
-      "cacheReadInputTokens": 1420889,
-      "cacheCreationInputTokens": 144268,
+      "outputTokens": 55794,
+      "cacheReadInputTokens": 1441136,
+      "cacheCreationInputTokens": 147870,
       "webSearchRequests": 0,
-      "costUSD": 3.7421745000000004,
+      "costUSD": 3.594318,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "b7b54f99-afe4-40f5-adf0-8d5347199e02",
+  "session_id": "a2584e68-e4aa-489d-af2a-b427040db9e8",
   "errors": null,
-  "result": "All 240 provisions judged across five batch files (c001–c050, c051–c100, c101–c150, c151–c200, c201–c240): 240 judgments written.",
-  "path_denials": [],
+  "result": "I wrote 240 judgments across predictions_001.json–predictions_005.json.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    }
+  ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

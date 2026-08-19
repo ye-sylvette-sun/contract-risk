@@ -1,6 +1,6 @@
 # Worked example — Category 2.2 — whole-instrument incoherence
 
-Contract `779FSupp2d416_lovejoy_inc_kamco_industrial`, filed in 779 F.Supp.2d 416. The full text is in `contract.txt` beside this file.
+Contract `779FSupp2d416_lovejoy_inc_kamco_industrial`, filed in 779 F.Supp.2d 416.
 
 A court construed **3** of this contract's provisions; the other **18** it did not. Read that as the base rate to expect, NOT as a quota to reproduce.
 

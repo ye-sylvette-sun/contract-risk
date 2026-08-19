@@ -11,50 +11,50 @@
   "judgments": [
     {
       "clause_id": "c001",
-      "reasoning_cat1": "A plain identification of the two Consultants, the Company and an effective date keyed to the last signature; nothing in it carries two meanings, though it defines \"Consultants\" collectively without saying how the two share anything.",
-      "reasoning_cat2": "Section 2.a then uses the singular \"Consultant\" and promises \"twenty-percent (20%) of the Profits,\" so the collective definition here leaves open whether 20% is per person or shared, a mild tension rather than a direct conflict.",
-      "prob_cat1": 0.09,
-      "prob_cat2": 0.13,
+      "reasoning_cat1": "The preamble is a plain identification of two individual Consultants, a Georgia LLC Company, and an effective date keyed to last signature, with no vague operative term to construe; the only softness is that it defines a joint plural term (\"Consultants\") without saying whether they hold rights jointly or severally. The signature block shows different dates, but the last-signed rule itself is mechanically determinate.",
+      "reasoning_cat2": "Section 2.a pays \"Consultant\" in the singular while the preamble defines the collective \"Consultants,\" and Section 2.b uses the plural again, so the definition sits awkwardly against the payment provisions on whether 20% is shared or owed to each. That mismatch is real but is naturally litigated at Section 2 rather than in the preamble itself.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.24,
       "dataset_clause_id": "neg1"
     },
     {
       "clause_id": "c002",
-      "reasoning_cat1": "The recitals contain soft, undefined commitments — \"future consulting services to enhance the value for the sale\" upon request, and reliance on a Jasper Port \"scheduled for construction in 2023\" — whose content and effect are not fixed anywhere.",
-      "reasoning_cat2": "The operative Sections 2.a and 2.b impose an unconditional 20% payment obligation with no requirement that any future services actually be rendered, so a party could argue the recital's services language is a condition the operative text omits (classic recital-versus-operative divergence), and Section 3's integration clause does nothing to resolve it.",
-      "prob_cat1": 0.3,
-      "prob_cat2": 0.5,
+      "reasoning_cat1": "The recitals contain several unbounded phrases — \"long-term investment,\" reliance on a port \"scheduled for construction in 2023,\" and services \"to enhance the value for the sale of the property\" — none of which has an applicable boundary. The clause also mixes past assistance with a future, request-contingent service obligation, leaving unclear whether any performance is promised.",
+      "reasoning_cat2": "The recital frames the payment as compensation \"for their consulting services\" rendered on request, whereas operative Sections 2.a and 2.b make the 20% payable simply upon a sale or on realized tax savings with no service condition — a classic recital-versus-operative divergence. Section 3's integration clause also invites argument over whether these Whereas clauses can qualify Section 2 at all.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.55,
       "dataset_clause_id": "neg2"
     },
     {
       "clause_id": "c003",
-      "reasoning_cat1": "\"Profit\" is defined as total proceeds less \"reasonable expenses, holding costs and expenses relating to transactions regarding the property (i.e. donations, etc)\" — \"reasonable,\" \"holding costs,\" and an \"i.e. ... etc\" catch-all that misuses i.e. for e.g. leave the deductible categories genuinely unbounded (general-vs-specific and vagueness both).",
-      "reasoning_cat2": "It must be read with Section 2.a, which measures the Consultants' 20% by this figure, and with Section 2.b, where the same 100-acre donation is treated as a benefit generating shared tax savings while the definition apparently treats donations as a profit-reducing expense — a real risk of internal incoherence.",
-      "prob_cat1": 0.74,
-      "prob_cat2": 0.4,
+      "reasoning_cat1": "\"Profit\" is defined by subtracting \"reasonable expenses, holding costs and expenses relating to transactions regarding the property (i.e. donations, etc)\" — \"reasonable,\" \"holding costs\" and the misused \"i.e.\" followed by \"etc\" leave the deduction categories and the catch-all's reach genuinely open. This is both lexical vagueness and a general-versus-specific list problem in a single sentence.",
+      "reasoning_cat2": "Read with Section 2.b, the same 100-acre donation appears both as a deductible \"expense relating to transactions\" reducing Profit and as an independent source of tax savings the Consultants share, which is hard to harmonise. Applying the definition to a partial sale under Section 2.a (allocating holding costs to \"a portion\") also strains the whole instrument.",
+      "prob_cat1": 0.79,
+      "prob_cat2": 0.44,
       "dataset_clause_id": "pos1"
     },
     {
       "clause_id": "c004",
-      "reasoning_cat1": "\"Consultant\" appears in the singular against the two-person defined term \"Consultants,\" and \"[u]pon sale of a portion or all\" leaves unclear how expenses and holding costs are allocated to a partial sale, so both the payee and the measure are arguable.",
-      "reasoning_cat2": "Its operation depends entirely on the elastic Section 1 definition of \"Profit\" and on the preamble's collective definition of \"Consultants\"; the mismatch between them is the kind of point a court would have to resolve.",
-      "prob_cat1": 0.42,
-      "prob_cat2": 0.33,
+      "reasoning_cat1": "\"Upon sale of a portion or all of Delta Bluffs\" does not say how Profit is computed for a partial sale or whether expenses are allocated pro rata, and it says \"pay Consultant\" in the singular for two named payees. It also fixes no time for payment beyond \"upon sale.\"",
+      "reasoning_cat2": "Its operation depends entirely on the Section 1 Profit definition, whose \"reasonable expenses\" and donation carve-out control the amount, and the singular \"Consultant\" conflicts with the preamble's plural definition and with Section 2.b's \"Consultants.\" Whether the recital's request-based service condition qualifies this unconditional obligation is a further whole-instrument question.",
+      "prob_cat1": 0.51,
+      "prob_cat2": 0.42,
       "dataset_clause_id": "pos2"
     },
     {
       "clause_id": "c005",
-      "reasoning_cat1": "\"Company or its principal may realize certain tax savings\" is permissive and indefinite, \"its principal\" is undefined, and payment is triggered \"once the risk of a federal or state tax audit has expired, which is expected to occur in October 2016\" — an expectation, not a fixed date — with a comma splice joining the two sentences.",
-      "reasoning_cat2": "Read against Section 1, the donation is listed as an expense reducing \"Profit\" yet here generates a separate 20% entitlement, and the recital describes the donation as already completed with Consultants' assistance, leaving the timing and measure of this payment hard to harmonise.",
-      "prob_cat1": 0.58,
-      "prob_cat2": 0.36,
+      "reasoning_cat1": "The sentence is a comma splice joining a permissive statement (\"may realize certain tax savings\") to an obligation, and \"its principal,\" \"such savings,\" and \"once the risk of a federal or state tax audit has expired, which is expected to occur in October 2016\" each admit competing readings — notably whether October 2016 is the trigger or a mere estimate. \"Certain tax savings\" is undefined and unquantified.",
+      "reasoning_cat2": "Tax savings are labelled \"Profits from Tax Savings\" yet Section 1 defines Profit only as sale proceeds less expenses, so the defined term does not fit this subsection; the donation also features in Section 1 as a deductible expense and in the recital as work already performed. Payment measured by savings realized by \"its principal\" rather than by the contracting Company sits uneasily with the preamble's party definition.",
+      "prob_cat1": 0.66,
+      "prob_cat2": 0.45,
       "dataset_clause_id": "pos3"
     },
     {
       "clause_id": "c006",
-      "reasoning_cat1": "A short, conventional merger clause; the only soft edge is the limiting phrase \"in connection with Delta Bluffs,\" which confines its supersession effect but is not itself of two reasonable meanings.",
-      "reasoning_cat2": "It sits against the recitals in c002, which supply the only description of the consulting services and of the Jasper Port assumption; if one side relies on that background, the integration clause is the provision opposed to it, but the recitals are part of the same writing so the tension is limited.",
-      "prob_cat1": 0.13,
-      "prob_cat2": 0.2,
+      "reasoning_cat1": "The clause is limited to the entire agreement \"in connection with Delta Bluffs,\" a subject-matter qualifier that leaves other dealings between these parties outside it, and the sentence ends in a comma as though truncated. It also lacks any no-oral-modification or reliance-disclaimer language, so its effect on extrinsic evidence is arguable.",
+      "reasoning_cat2": "It must be squared with the recitals' references to the relied-upon appraisal, the prior donation and the promise of future services on request — matters the operative sections do not address — raising whether those understandings survive or are superseded. Nothing else in this three-section instrument directly contradicts it, so the tension is interpretive rather than a flat conflict.",
+      "prob_cat1": 0.29,
+      "prob_cat2": 0.33,
       "dataset_clause_id": "pos4"
     }
   ]

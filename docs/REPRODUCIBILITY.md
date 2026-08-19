@@ -74,7 +74,7 @@ rerun.
   `file_path` — a `Glob` call takes its path through `pattern`, and a hook that
   inspects only `file_path` lets absolute glob patterns through untouched.
   `test_isolation.py` pins this in 22 cases and runs both on the host and inside
-  the image. Across the 64 sessions the model made 58 attempts outside the
+  the image. Across the 64 sessions the model made 32 attempts outside the
   workspace, all `Read`, all refused, all at invented locations
   (`/tmp/outputs/...`, `/mnt/user-data/outputs/...`, `/Users/you/work/...`);
   every session then found the real path and finished normally.
@@ -147,8 +147,8 @@ rerun.
   in this context."* — a refusal is evidence the restriction held, not that it
   failed. `disallowed_tools` was added regardless, because "never listed" and
   "explicitly refused" are different claims and only the second is checkable
-  from outside. A census of all 783 tool calls across the 64 sessions gives
-  `Read 460 / Write 171 / Glob 102 / Grep 50` and nothing else.
+  from outside. A census of all 727 tool calls across the 64 sessions gives
+  `Read 445 / Write 165 / Glob 92 / Grep 25` and nothing else.
 
 ## 3. Not fixed
 
@@ -158,7 +158,7 @@ rerun.
   is therefore **unmeasured**, and none of the differences between the two arms
   is known to exceed it. Repeated paired runs would bound it; they were not
   done, on cost. This is the one open item that changes how the results may be
-  read — see §5 of [REPORT.md](REPORT.md).
+  read — see §6 of [REPORT.md](REPORT.md).
 
 - **`claude-opus-5` is an alias.** Covered in §1: what is observable is
   recorded, but there is no dated snapshot to pin.

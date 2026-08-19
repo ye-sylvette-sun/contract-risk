@@ -1,16 +1,16 @@
 {
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 13,
-  "duration_ms": 234384,
-  "total_cost_usd": 1.4495,
+  "num_turns": 11,
+  "duration_ms": 204142,
+  "total_cost_usd": 1.3086,
   "usage": {
-    "input_tokens": 22,
-    "cache_creation_input_tokens": 79019,
-    "cache_read_input_tokens": 342576,
-    "output_tokens": 19515,
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 75644,
+    "cache_read_input_tokens": 256037,
+    "output_tokens": 16964,
     "output_tokens_details": {
-      "thinking_tokens": 8000
+      "thinking_tokens": 3616
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 79019,
+      "ephemeral_1h_input_tokens": 75644,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 3,
-        "cache_read_input_tokens": 78308,
-        "cache_creation_input_tokens": 4787,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 74057,
+        "cache_creation_input_tokens": 5663,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 4787
+          "ephemeral_1h_input_tokens": 5663
         },
         "type": "message"
       }
@@ -39,27 +39,22 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 22,
-      "outputTokens": 19515,
-      "cacheReadInputTokens": 342576,
-      "cacheCreationInputTokens": 79019,
+      "inputTokens": 16,
+      "outputTokens": 16964,
+      "cacheReadInputTokens": 256037,
+      "cacheCreationInputTokens": 75644,
       "webSearchRequests": 0,
-      "costUSD": 1.4494630000000002,
+      "costUSD": 1.3086385,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "29f2a551-3fbd-4691-8fd6-80b441a7f8b6",
+  "session_id": "de2dbdf0-9efe-4de8-9498-2b508176d597",
   "errors": null,
-  "result": "65",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
-    }
-  ],
+  "result": "65 judgments written.",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",

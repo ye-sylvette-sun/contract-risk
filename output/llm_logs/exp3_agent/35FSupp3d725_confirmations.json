@@ -7,16 +7,16 @@
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 16,
-  "duration_ms": 385127,
-  "total_cost_usd": 2.7155,
+  "num_turns": 24,
+  "duration_ms": 431092,
+  "total_cost_usd": 2.5063,
   "usage": {
-    "input_tokens": 26,
-    "cache_creation_input_tokens": 137022,
-    "cache_read_input_tokens": 773763,
-    "output_tokens": 38331,
+    "input_tokens": 40,
+    "cache_creation_input_tokens": 109444,
+    "cache_read_input_tokens": 998237,
+    "output_tokens": 36500,
     "output_tokens_details": {
-      "thinking_tokens": 9625
+      "thinking_tokens": 8993
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 137022,
+      "ephemeral_1h_input_tokens": 109444,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 32,
-        "cache_read_input_tokens": 134575,
-        "cache_creation_input_tokens": 6523,
+        "output_tokens": 44,
+        "cache_read_input_tokens": 107580,
+        "cache_creation_input_tokens": 5940,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 6523
+          "ephemeral_1h_input_tokens": 5940
         },
         "type": "message"
       }
@@ -45,27 +45,36 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 26,
-      "outputTokens": 38331,
-      "cacheReadInputTokens": 773763,
-      "cacheCreationInputTokens": 137022,
+      "inputTokens": 40,
+      "outputTokens": 36500,
+      "cacheReadInputTokens": 998237,
+      "cacheCreationInputTokens": 109444,
       "webSearchRequests": 0,
-      "costUSD": 2.7155065,
+      "costUSD": 2.5062585,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "666a3585-903c-4aa9-8c2a-b817421c10f8",
+  "session_id": "d09cb269-33a5-4f76-856b-ea969277aed5",
   "errors": null,
-  "result": "190 judgments written (c001–c190) across predictions_001.json–predictions_004.json.",
-  "path_denials": [],
+  "result": "I wrote 190 judgments (48 + 48 + 46 + 48) across predictions_001.json–predictions_004.json.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/1.3_93FSupp3d375_personal_deposit_account_agreement/notes.md"
+    }
+  ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

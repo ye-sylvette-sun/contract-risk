@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 11,
-  "duration_ms": 301537,
-  "total_cost_usd": 1.4375,
+  "duration_ms": 286267,
+  "total_cost_usd": 1.3854,
   "usage": {
     "input_tokens": 16,
-    "cache_creation_input_tokens": 70429,
-    "cache_read_input_tokens": 197921,
-    "output_tokens": 25365,
+    "cache_creation_input_tokens": 68843,
+    "cache_read_input_tokens": 195687,
+    "output_tokens": 23960,
     "output_tokens_details": {
-      "thinking_tokens": 8050
+      "thinking_tokens": 5337
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 70429,
+      "ephemeral_1h_input_tokens": 68843,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 40,
-        "cache_read_input_tokens": 66812,
-        "cache_creation_input_tokens": 7693,
+        "output_tokens": 36,
+        "cache_read_input_tokens": 65358,
+        "cache_creation_input_tokens": 7561,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 7693
+          "ephemeral_1h_input_tokens": 7561
         },
         "type": "message"
       }
@@ -40,31 +40,31 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 16,
-      "outputTokens": 25365,
-      "cacheReadInputTokens": 197921,
-      "cacheCreationInputTokens": 70429,
+      "outputTokens": 23960,
+      "cacheReadInputTokens": 195687,
+      "cacheCreationInputTokens": 68843,
       "webSearchRequests": 0,
-      "costUSD": 1.4374554999999998,
+      "costUSD": 1.3853535000000001,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "35e1a914-dfe1-4231-8195-90273217babf",
+  "session_id": "12e79043-c0f4-4488-96c7-693c1abeaed9",
   "errors": null,
-  "result": "I wrote 83 judgments (45 in `predictions_001.json`, 38 in `predictions_002.json`).",
+  "result": "83 judgments written (50 in `predictions_001.json`, 33 in `predictions_002.json`).",
   "path_denials": [
     {
       "tool": "Read",
-      "file_path": "/tmp/outputs/contract.txt"
+      "file_path": "/contract.txt"
     }
   ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

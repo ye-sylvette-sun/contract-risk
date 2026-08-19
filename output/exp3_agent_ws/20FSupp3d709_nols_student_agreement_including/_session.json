@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 9,
-  "duration_ms": 99819,
-  "total_cost_usd": 0.5067,
+  "duration_ms": 110240,
+  "total_cost_usd": 0.5532,
   "usage": {
-    "input_tokens": 10,
-    "cache_creation_input_tokens": 28139,
-    "cache_read_input_tokens": 74214,
-    "output_tokens": 7528,
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 29117,
+    "cache_read_input_tokens": 95697,
+    "output_tokens": 8565,
     "output_tokens_details": {
-      "thinking_tokens": 1085
+      "thinking_tokens": 2339
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 28139,
+      "ephemeral_1h_input_tokens": 29117,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 9,
-        "cache_read_input_tokens": 28957,
-        "cache_creation_input_tokens": 3258,
+        "output_tokens": 3,
+        "cache_read_input_tokens": 30412,
+        "cache_creation_input_tokens": 2781,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 3258
+          "ephemeral_1h_input_tokens": 2781
         },
         "type": "message"
       }
@@ -39,27 +39,27 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 10,
-      "outputTokens": 7528,
-      "cacheReadInputTokens": 74214,
-      "cacheCreationInputTokens": 28139,
+      "inputTokens": 12,
+      "outputTokens": 8565,
+      "cacheReadInputTokens": 95697,
+      "cacheCreationInputTokens": 29117,
       "webSearchRequests": 0,
-      "costUSD": 0.506747,
+      "costUSD": 0.5532035,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "d87f3756-6551-4e0f-9101-ae6da34ab5ab",
+  "session_id": "89eab8ea-b57b-40a6-9e9e-c0e24a091682",
   "errors": null,
-  "result": "24 judgments written.",
+  "result": "24",
   "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

@@ -1,51 +1,43 @@
 {"judgments": [
-  {
-    "clause_id": "c001",
-    "reasoning_cat1": "The preamble is a short introductory promise to provide 'materials developed at St. Jude' and defines 'Recipient' as both Dr. June personally and the Trustees of the University of Pennsylvania collectively, which leaves it uncertain whose acts bind whom and what 'materials developed at St. Jude' covers before paragraph 1 narrows it. The collective definition of a two-person 'Recipient' is the only nameable soft spot, and it is a familiar one in transfer letters.",
-    "reasoning_cat2": "Read against paragraph 1, which defines 'Materials' narrowly as the anti-CD19 construct, and against the closing paragraph making delivery conditional on a signed letter, the preamble's broader phrase 'materials developed at St. Jude' is subordinate rather than contradictory. No operative provision points the other way, so any tension is resolvable.",
-    "prob_cat1": 0.21,
-    "prob_cat2": 0.16
-  },
-  {
-    "clause_id": "c002",
-    "reasoning_cat1": "The definition sweeps in 'any progeny, portions, unmodified derivatives and any accompanying know-how or data', each of which has contestable boundaries — whether a lentiviral vector incorporating the construct is a 'portion' or 'unmodified derivative', and what unwritten 'know-how' travels with the construct. The paired sentence disclaiming 'express or implied licenses ... except as provided in this Agreement' invites argument about what paragraph 3 does provide.",
-    "reasoning_cat2": "It must be squared with paragraph 3 (permission to use Materials to produce a GMP lentiviral vector clone) and paragraph 5 (ownership of products 'derived from' or that 'could not have been produced but for' the Materials), which use different and broader derivative language than 'unmodified derivatives'. That mismatch between the defined term and the ownership trigger is a real, nameable internal friction.",
-    "prob_cat1": 0.61,
-    "prob_cat2": 0.38
-  },
-  {
-    "clause_id": "c003",
-    "reasoning_cat1": "'Sole responsibility for any and all receipt, storage, handling, disposition, transfer and uses ... in compliance with all applicable Federal, State and local laws ... including, but not limited to' laws protecting human research subjects is standard catch-all drafting whose reach is broad but not genuinely uncertain. The illustrative 'including but not limited to' expressly defeats an expressio unius reading.",
-    "reasoning_cat2": "It sits comfortably with paragraph 3's contemplation of a Phase I clinical trial and with the indemnity in paragraph 7; nothing in paragraph 5 or 10 pulls against it. No conflicting provision found.",
-    "prob_cat1": 0.14,
-    "prob_cat2": 0.07
-  },
-  {
-    "clause_id": "c004",
-    "reasoning_cat1": "This is the classic battleground clause: 'sole purpose', 'in quantities sufficient to complete a Phase I clinical trial', 'may not be taken or sent to another institution', 'may not be provided to a commercial entity', and 'research that is subject to consulting or licensing obligations to another party' are all terms whose edges two parties would draw differently (e.g. whether a corporate collaborator's involvement is 'providing' Materials to a commercial entity). Each restriction is nameable and vague at its boundary.",
-    "reasoning_cat2": "It is the only source of any permitted use, so it must be harmonised with paragraph 1's disclaimer of implied licenses and with paragraph 5's ownership claim over anything 'derived from' the Materials; whether producing a GMP vector and running a trial creates rights St. Jude then owns is left unresolved. The interaction with paragraph 1 is a genuine whole-instrument question.",
-    "prob_cat1": 0.72,
-    "prob_cat2": 0.44
-  },
-  {
-    "clause_id": "c005",
-    "reasoning_cat1": "The obligation — supply a copy of any publication containing experimental results from use of the Materials and acknowledge St. Jude as source — is simple, though 'any publication' and the absence of any timing make the duty's trigger slightly loose. Nothing here has two plausible competing meanings of consequence.",
-    "reasoning_cat2": "It overlaps with the last sentence of paragraph 5, which requires the proposed publication to be submitted to St. Jude thirty days before submission for review; a reader must decide whether paragraph 4 is a post-publication copy duty on top of, or a relaxation of, that pre-publication review. That overlap is real but reconcilable as cumulative.",
-    "prob_cat1": 0.19,
-    "prob_cat2": 0.31
-  },
-  {
-    "clause_id": "c006",
-    "reasoning_cat1": "'Contact St. Jude to determine ownership interests, if any' states no standard or consequence, and the triggers — a product that 'contains a portion of', 'is derived from', or 'could not have been produced but for' the Materials — are open-ended, while 'Ownership shall follow inventorship according to US patent law' may contradict the flat assertion of St. Jude ownership of Materials and progeny that opens the paragraph. The 'but for' trigger is exactly the kind of phrase parties fight over.",
-    "reasoning_cat2": "Its derivative language is broader than paragraph 1's defined 'unmodified derivatives', and paragraph 10's survival sentence refers to 'Sections 5, 5 and 7' where two paragraphs bear the number 5, leaving it uncertain that this ownership paragraph survives termination. Those two cross-references make the whole-instrument fit genuinely uncertain.",
-    "prob_cat1": 0.55,
-    "prob_cat2": 0.41
-  },
-  {
-    "clause_id": "c007",
-    "reasoning_cat1": "The warranty disclaimer and consequential-damages exclusion are conventional, fully capitalised and internally definite; the only intrinsic flaw is that the paragraph is misnumbered '5' when a paragraph 5 already exists and no paragraph 6 appears. That numbering slip is a mechanical error rather than a distortion of the clause's own meaning.",
-    "reasoning_cat2": "Because paragraph 10 says 'Sections 5, 5 and 7 shall survive', it is unclear whether this disclaimer (the second '5') survives termination or whether the duplicate reference was meant to capture sections 5 and 6. That is a specific, nameable defect in its relationship to paragraph 10.",
-    "prob_cat1": 0.29,
-    "prob_cat2": 0.46
-  }
+  {"clause_id": "c001",
+   "reasoning_cat1": "The preamble lumps Dr. June personally and the Trustees of the University of Pennsylvania together as a single defined 'Recipient', leaving it uncertain whether obligations run against the individual scientist, the institution, or both jointly. It is otherwise a short introductory sentence with no operative promise of its own beyond the promise to provide materials.",
+   "reasoning_cat2": "The collective 'Recipient' definition sits against a signature block that separates 'Recipient Scientist' from 'Institution Official', and against paragraphs 3 and 7-8 which impose institution-level duties (insurance, indemnity), so who is bound could be argued. No direct contradiction is visible, however, so the tension is latent rather than express.",
+   "prob_cat1": 0.24,
+   "prob_cat2": 0.19},
+
+  {"clause_id": "c002",
+   "reasoning_cat1": "The definition of 'Materials' extends to 'any progeny, portions, unmodified derivatives and any accompanying know-how or data', a general-versus-specific list whose reach over a modified product (e.g. a lentiviral vector clone incorporating the construct) is genuinely contestable, and the term 'unmodified derivatives' is itself imprecise. The final sentence's reservation of rights 'including any altered forms of the Materials made by St. Jude' compounds the uncertainty about what the Recipient actually receives.",
+   "reasoning_cat2": "Read against paragraph 3, which authorises the Recipient to make a vector clone 'incorporating Materials', and paragraph 5, which asserts St. Jude ownership of 'the Materials and any progeny thereof' while contemplating Recipient patent filings, the scope of the definition drives the whole ownership dispute. That interplay is the classic place a court is asked to harmonise definition and operative grant.",
+   "prob_cat1": 0.55,
+   "prob_cat2": 0.40},
+
+  {"clause_id": "c003",
+   "reasoning_cat1": "A routine compliance covenant; the 'including, but not limited to' phrasing is expressly non-exhaustive, so ejusdem generis has little bite, and 'sole responsibility' is plain. Nothing in it requires a line to be drawn that the words do not draw.",
+   "reasoning_cat2": "It sits comfortably with the indemnity in paragraph 7 and the insurance obligation in paragraph 8, reinforcing rather than contradicting them. No other provision allocates regulatory responsibility differently.",
+   "prob_cat1": 0.11,
+   "prob_cat2": 0.06},
+
+  {"clause_id": "c004",
+   "reasoning_cat1": "This is the operative use restriction and it is dense with contestable terms: 'sole purpose', 'quantities sufficient to complete a Phase I clinical trial', 'taken or sent to another institution', and above all 'may not be provided to a commercial entity' and 'used in research that is subject to consulting or licensing obligations to another party', with a carve-out for U.S. government grantee obligations. Each of those phrases can plausibly be read narrowly (physical transfer of the construct) or broadly (any commercial collaboration), which is precisely the kind of fight a court decides.",
+   "reasoning_cat2": "It must be reconciled with paragraph 5, which expressly contemplates that the Recipient may file a patent application or 'commercialize a product' derived from the Materials, and with the 'Materials' definition in paragraph 1; a party could argue paragraph 5 permits what paragraph 3 forbids. That apparent tension between an absolute prohibition and an express commercialisation mechanism is a genuine whole-instrument problem.",
+   "prob_cat1": 0.72,
+   "prob_cat2": 0.52},
+
+  {"clause_id": "c005",
+   "reasoning_cat1": "The duty is limited to publications 'that contain[] experimental results obtained from the use of the Materials' and to acknowledging St. Jude 'as the source', with no time limit, no definition of 'publication', and no stated consequence — vague at the edges but modest in stakes. The OCR damage in the middle of the clause is transcription noise rather than a drafting error.",
+   "reasoning_cat2": "It overlaps awkwardly with paragraph 5, which imposes a thirty-day pre-submission review of 'the results of such research using the Materials'; one clause requires only a post hoc copy, the other prior review, and their respective triggers are not aligned. A party could argue paragraph 4 states the complete publication obligation and paragraph 5's review applies only to the narrower patent/commercialisation research.",
+   "prob_cat1": 0.28,
+   "prob_cat2": 0.38},
+
+  {"clause_id": "c006",
+   "reasoning_cat1": "Several phrases invite construction: 'could not have been produced but for the use of the Materials', an obligation merely to 'contact St. Jude to determine ownership interests, if any', and 'Ownership shall follow inventorship according to US patent law' — the first sets an extremely broad but-for reach, the second creates a duty with no determinate outcome, and 'such research' has no clear antecedent. The publication-review sentence attaches to that unclear antecedent, so its scope is likewise uncertain.",
+   "reasoning_cat2": "Its assertion of St. Jude ownership over 'the Materials and any progeny thereof' interacts directly with the paragraph 1 definition and with paragraph 3's prohibition on commercial provision, while paragraph 10 purports to make 'Sections 5, 5 and 7' survive — an ambiguous cross-reference given two paragraphs bear the number 5. Harmonising this ownership/commercialisation mechanism with the flat use restriction is a real whole-instrument exercise.",
+   "prob_cat1": 0.58,
+   "prob_cat2": 0.44},
+
+  {"clause_id": "c007",
+   "reasoning_cat1": "The disclaimer and consequential-damages exclusion are conventional, capitalised and internally consistent; nothing in the wording needs a line drawn. Its only defect is that it is mis-numbered as a second paragraph '5', which is a numbering error rather than a change in meaning within the clause itself.",
+   "reasoning_cat2": "The duplicate '5' matters because paragraph 10 makes 'Sections 5, 5 and 7' survive termination, so whether this disclaimer survives depends on resolving that cross-reference. That is a specific, checkable incoherence with the termination provision.",
+   "prob_cat1": 0.27,
+   "prob_cat2": 0.42}
 ]}

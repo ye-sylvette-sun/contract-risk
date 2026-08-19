@@ -1,44 +1,37 @@
 {"judgments": [
-  {
-    "clause_id": "c008",
-    "reasoning_cat1": "A broad one-way indemnity covering 'any and all claims, demands or legal causes of action of any nature whatsoever (including without limitation legal expenses), arising out of or related to Recipient's acceptance, use and disposal of the Materials ... including but not limited to any and all claims for personal injury or death' is expansive but not internally uncertain; 'arising out of or related to' is the only elastic phrase. Its one-sidedness could attract contra proferentem, but only if some genuine ambiguity first appeared.",
-    "reasoning_cat2": "It coheres with paragraph 2 (sole responsibility for handling and use), paragraph 6's disclaimer and paragraph 8's insurance requirement, and it is expressly listed as surviving in paragraph 10. No contradicting provision found.",
-    "prob_cat1": 0.20,
-    "prob_cat2": 0.11
-  },
-  {
-    "clause_id": "c009",
-    "reasoning_cat1": "The clause states 'Three Million ($1,000,000) dollars aggregate' — the words and the numeral disagree, a mechanical error that directly changes the required coverage; 'occurrence basis, or claims made including tail coverage' is also left to the Recipient's election without a standard. The words-versus-figures mismatch is a nameable defect on the face of the provision, even allowing for the document's poor scan quality.",
-    "reasoning_cat2": "Nothing else in the letter fixes coverage amounts; paragraph 9 merely requires a certificate confirming 'the insurance coverage set forth in section 8', so the internal error propagates but no other provision contradicts it. Insurance is also absent from the paragraph 10 survival list, which is a minor gap rather than an incoherence.",
-    "prob_cat1": 0.43,
-    "prob_cat2": 0.14
-  },
-  {
-    "clause_id": "c010",
-    "reasoning_cat1": "A short, definite obligation to furnish a certificate on request confirming section 8 coverage and promising thirty days' notice of cancellation or reduction; the only softness is that the insurer, not the Recipient, must make the promise. There is no term here whose meaning two parties would plausibly dispute.",
-    "reasoning_cat2": "Its cross-reference to section 8 is accurate and section 8 exists; unlike paragraph 10's 'Sections 5, 5 and 7', this reference points somewhere unambiguous. No conflict with any other provision.",
-    "prob_cat1": 0.10,
-    "prob_cat2": 0.08
-  },
-  {
-    "clause_id": "c011",
-    "reasoning_cat1": "'Sections 5, 5 and 7 shall survive' is a mechanical error on the face of the clause — the same number is listed twice and section 6 (or the second paragraph numbered 5) is not clearly captured — so the survival of the ownership, publication-review and warranty-disclaimer terms is left uncertain. 'Breaches any term' with no materiality qualifier and the duty to 'return all Materials and progeny' also lack boundaries.",
-    "reasoning_cat2": "The MTA has no stated term or expiration yet the clause refers to 'termination or expiration', and the duplicate '5' can only be resolved by reading paragraphs 5 (ownership) and 5-bis (disclaimer) together, so the clause cannot be applied without construing the document's numbering as a whole. That is a specific incoherence traceable to paragraphs 5 and 6/5-bis.",
-    "prob_cat1": 0.47,
-    "prob_cat2": 0.53
-  },
-  {
-    "clause_id": "c012",
-    "reasoning_cat1": "Standard modification-in-writing, non-waiver and severability boilerplate, each sentence self-contained and definite; 'to the extent permitted by law' is conventional rather than ambiguous. Nothing here names a contestable term.",
-    "reasoning_cat2": "It is unnumbered and hangs after paragraph 10, which is a formatting slip rather than a conflict, and nothing in paragraphs 1-10 or the closing letter contradicts the writing/waiver/severability regime. No inconsistency found.",
-    "prob_cat1": 0.08,
-    "prob_cat2": 0.09
-  },
-  {
-    "clause_id": "c013",
-    "reasoning_cat1": "The closing request to return a signed copy and the statement that 'The Materials will be forwarded to you upon receipt of the signed letter' are plain instructions; the only issue is whether they are formation conditions or mere logistics. That is a slim, unnamed ambiguity rather than a contestable term.",
-    "reasoning_cat2": "It fits the preamble's 'Before receiving the materials, we ask that you and your Institute agree', and the signature block requires signature by Dr. June and an authorised institutional official, matching the collective 'Recipient' definition. No operative provision pulls the other way.",
-    "prob_cat1": 0.11,
-    "prob_cat2": 0.10
-  }
+  {"clause_id": "c008",
+   "reasoning_cat1": "A broad but conventional indemnity: 'any and all claims ... of any nature whatsoever' 'arising out of or related to' the Recipient's acceptance, use and disposal of the Materials, with a non-exclusive 'including but not limited to' tail. 'Arising out of or related to' is boilerplate breadth rather than a genuine two-way ambiguity, and the list of indemnitees is enumerated.",
+   "reasoning_cat2": "It coheres with paragraph 2 (sole responsibility for handling) and paragraph 8 (liability insurance backing the indemnity), and it is one of the sections paragraph 10 expressly preserves. No other clause allocates these risks differently.",
+   "prob_cat1": 0.17,
+   "prob_cat2": 0.10},
+
+  {"clause_id": "c009",
+   "reasoning_cat1": "The clause states 'Three Million ($1,000,000) dollars aggregate' — the words and the parenthetical figure contradict each other, a textbook mechanical error that changes the amount owed. It also offers an unelaborated alternative ('occurrence basis, or claims made including tail coverage') without specifying who chooses.",
+   "reasoning_cat2": "Paragraph 9 cross-refers to 'the insurance coverage set forth in section 8' without repeating any figure, so nothing elsewhere resolves the words-versus-numerals conflict. There is no other insurance or limitation provision that contradicts it.",
+   "prob_cat1": 0.57,
+   "prob_cat2": 0.14},
+
+  {"clause_id": "c010",
+   "reasoning_cat1": "A short, mechanical certificate-of-insurance requirement with a definite trigger ('upon request') and a definite notice period; both limbs are specific. Nothing in it carries a second reasonable reading.",
+   "reasoning_cat2": "Its cross-reference to 'section 8' is accurate — paragraph 8 is the liability insurance clause — so the numbering defects elsewhere in the letter do not infect it. No conflicting provision was found.",
+   "prob_cat1": 0.08,
+   "prob_cat2": 0.09},
+
+  {"clause_id": "c011",
+   "reasoning_cat1": "The survival sentence reads 'Sections 5, 5 and 7 shall survive', repeating a number and omitting 6, so it cannot be applied on its face — a mechanical error that determines whether the ownership clause, the warranty disclaimer, or both endure. 'Breaches any term' with no materiality qualifier is broad but at least definite.",
+   "reasoning_cat2": "Because the letter contains two paragraphs numbered 5 (ownership/publication and the warranty disclaimer) and no paragraph 6, this clause can only be resolved by reading the instrument as a whole, and the post-termination duty to 'return all Materials and progeny' sits awkwardly with paragraph 5's acknowledgment of Recipient patent filings and paragraph 1's expansive 'Materials'. That is a specific, named incoherence with c006 and c007.",
+   "prob_cat1": 0.52,
+   "prob_cat2": 0.58},
+
+  {"clause_id": "c012",
+   "reasoning_cat1": "Standard modification-in-writing, non-waiver and severability boilerplate, each limb self-contained and definite. Its only oddity is that it bears no paragraph number, which does not change its meaning.",
+   "reasoning_cat2": "Nothing else in this short letter provides for oral variation or for the effect of an invalid term, and the severability limb harmonises with the termination clause rather than fighting it. No conflict found.",
+   "prob_cat1": 0.09,
+   "prob_cat2": 0.08},
+
+  {"clause_id": "c013",
+   "reasoning_cat1": "Purely procedural closing language about returning a signed copy and forwarding the Materials; the terms are concrete and no phrase bears two meanings. It does, however, frame the whole letter as an offer accepted by signature, which is unremarkable.",
+   "reasoning_cat2": "Read against the preamble's collective 'Recipient' and a signature block signed by both a Recipient Scientist and an Institution Official, one could argue about when the agreement became binding, but nothing in the text contradicts another clause. Low risk of a whole-instrument problem.",
+   "prob_cat1": 0.08,
+   "prob_cat2": 0.12}
 ]}

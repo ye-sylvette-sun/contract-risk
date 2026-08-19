@@ -1,16 +1,16 @@
 {
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 17,
-  "duration_ms": 558438,
-  "total_cost_usd": 3.3802,
+  "num_turns": 19,
+  "duration_ms": 660791,
+  "total_cost_usd": 3.5324,
   "usage": {
     "input_tokens": 28,
-    "cache_creation_input_tokens": 157745,
-    "cache_read_input_tokens": 1044014,
-    "output_tokens": 51224,
+    "cache_creation_input_tokens": 163686,
+    "cache_read_input_tokens": 927161,
+    "output_tokens": 57274,
     "output_tokens_details": {
-      "thinking_tokens": 13365
+      "thinking_tokens": 11162
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 157745,
+      "ephemeral_1h_input_tokens": 163686,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 29,
-        "cache_read_input_tokens": 157076,
-        "cache_creation_input_tokens": 4745,
+        "output_tokens": 176,
+        "cache_read_input_tokens": 153818,
+        "cache_creation_input_tokens": 13944,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 4745
+          "ephemeral_1h_input_tokens": 13944
         },
         "type": "message"
       }
@@ -40,21 +40,34 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 28,
-      "outputTokens": 51224,
-      "cacheReadInputTokens": 1044014,
-      "cacheCreationInputTokens": 157745,
+      "outputTokens": 57274,
+      "cacheReadInputTokens": 927161,
+      "cacheCreationInputTokens": 163686,
       "webSearchRequests": 0,
-      "costUSD": 3.380197,
+      "costUSD": 3.5324305000000003,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "12db5a8e-5cfd-49d7-b7f9-194735307bf0",
+  "session_id": "829c52f6-88d4-41b1-8ae4-5628436803ba",
   "errors": null,
-  "result": "I wrote 260 judgments across predictions_001.json–predictions_005.json.",
-  "path_denials": [],
+  "result": "I wrote 260 judgments across predictions_001.json (c001–c060), predictions_002.json (c061–c126), predictions_003.json (c127–c206), and predictions_004.json (c207–c260).",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/tmp/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/tmp/outputs/examples/1.3_93FSupp3d375_personal_deposit_account_agreement/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/tmp/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
+    }
+  ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",

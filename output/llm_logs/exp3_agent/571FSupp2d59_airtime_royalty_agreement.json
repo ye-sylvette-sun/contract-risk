@@ -7,16 +7,16 @@
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 9,
-  "duration_ms": 273657,
-  "total_cost_usd": 1.5523,
+  "num_turns": 10,
+  "duration_ms": 279951,
+  "total_cost_usd": 1.5842,
   "usage": {
-    "input_tokens": 12,
-    "cache_creation_input_tokens": 85118,
-    "cache_read_input_tokens": 233455,
-    "output_tokens": 23373,
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 86264,
+    "cache_read_input_tokens": 222660,
+    "output_tokens": 24405,
     "output_tokens_details": {
-      "thinking_tokens": 7330
+      "thinking_tokens": 7702
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 85118,
+      "ephemeral_1h_input_tokens": 86264,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 36,
-        "cache_read_input_tokens": 82427,
-        "cache_creation_input_tokens": 6767,
+        "output_tokens": 3,
+        "cache_read_input_tokens": 83179,
+        "cache_creation_input_tokens": 7161,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 6767
+          "ephemeral_1h_input_tokens": 7161
         },
         "type": "message"
       }
@@ -45,27 +45,27 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 12,
-      "outputTokens": 23373,
-      "cacheReadInputTokens": 233455,
-      "cacheCreationInputTokens": 85118,
+      "inputTokens": 14,
+      "outputTokens": 24405,
+      "cacheReadInputTokens": 222660,
+      "cacheCreationInputTokens": 86264,
       "webSearchRequests": 0,
-      "costUSD": 1.5522924999999996,
+      "costUSD": 1.584165,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "535350d2-5252-424c-805c-36fa77282c54",
+  "session_id": "e01fe607-e15c-4b6d-ab07-be5b4b7d1211",
   "errors": null,
-  "result": "82 judgments written (45 in `predictions_001.json`, 37 in `predictions_002.json`).",
+  "result": "82",
   "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

@@ -8,15 +8,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 8,
-  "duration_ms": 62786,
-  "total_cost_usd": 0.3276,
+  "duration_ms": 63075,
+  "total_cost_usd": 0.3102,
   "usage": {
     "input_tokens": 8,
-    "cache_creation_input_tokens": 18876,
-    "cache_read_input_tokens": 35172,
-    "output_tokens": 4847,
+    "cache_creation_input_tokens": 18334,
+    "cache_read_input_tokens": 35064,
+    "output_tokens": 4371,
     "output_tokens_details": {
-      "thinking_tokens": 2021
+      "thinking_tokens": 1599
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 18876,
+      "ephemeral_1h_input_tokens": 18334,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 13,
-        "cache_read_input_tokens": 18449,
-        "cache_creation_input_tokens": 4503,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 18379,
+        "cache_creation_input_tokens": 4031,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 4503
+          "ephemeral_1h_input_tokens": 4031
         },
         "type": "message"
       }
@@ -46,26 +46,26 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 8,
-      "outputTokens": 4847,
-      "cacheReadInputTokens": 35172,
-      "cacheCreationInputTokens": 18876,
+      "outputTokens": 4371,
+      "cacheReadInputTokens": 35064,
+      "cacheCreationInputTokens": 18334,
       "webSearchRequests": 0,
-      "costUSD": 0.32756100000000005,
+      "costUSD": 0.310187,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "b9c51633-4aeb-4312-a6c0-86195d52b722",
+  "session_id": "0b21ba1f-d692-4966-9c9a-ec259050c86e",
   "errors": null,
-  "result": "Wrote 8 judgments.",
+  "result": "8 judgments written.",
   "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

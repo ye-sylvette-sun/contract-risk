@@ -1,37 +1,37 @@
 {"judgments": [
-  {"clause_id": "c007",
-   "reasoning_cat1": "The sentence is missing its modal verb ('using the Material [shall] be jointly published'), a mechanical defect that leaves the obligation's mandatory character unclear, and 'in accordance with academic standards' is an unbounded standard.",
-   "reasoning_cat2": "Its trigger, 'the collaborative research study between St. Jude and Recipient Scientist,' depends on the preamble's undefined description of the collaboration, but no other clause contradicts it.",
-   "prob_cat1": 0.47,
-   "prob_cat2": 0.21},
-
-  {"clause_id": "c008",
-   "reasoning_cat1": "'[D]estroy all unused Materials' on termination is clear enough, but the clause says nothing about which restrictions survive termination, and the OCR-garbled text ('thirty (30) clays') does not itself change meaning.",
-   "reasoning_cat2": "Read with ¶2's transfer ban, ¶4's use limits and ¶8's commercialisation consent, it is uncertain whether a thirty-day notice frees the Recipient of all obligations while St. Jude keeps title under ¶1 — a survival gap rather than a flat contradiction.",
-   "prob_cat1": 0.28,
-   "prob_cat2": 0.34},
-
-  {"clause_id": "c009",
-   "reasoning_cat1": "'[A]ny product that contains Material' begs the contested definitional question, and the licence back — mis-transcribed as 'raw-exclusive' (non-exclusive) over 'any inventions that arise from the use of the Materials' — is broad and undefined in scope, with a further garbled inventorship sentence appended.",
-   "reasoning_cat2": "It sits against ¶4's flat prohibition on use 'for any commercial purpose' and against ¶1's denial of any express or implied licence to Recipient, so the three clauses together leave genuine doubt about whether commercialisation was ever permissible and who owns Recipient inventions.",
-   "prob_cat1": 0.55,
-   "prob_cat2": 0.57},
-
-  {"clause_id": "c010",
-   "reasoning_cat1": "A conventional capitalised disclaimer of warranties and non-infringement; the terms are standard and no phrase carries a competing reasonable meaning despite the OCR noise.",
-   "reasoning_cat2": "Nothing elsewhere — ¶1's patent-application acknowledgment or ¶10's liability allocation — conflicts with it; the disclaimer is consistent with St. Jude's retained title.",
-   "prob_cat1": 0.10,
-   "prob_cat2": 0.06},
-
-  {"clause_id": "c011",
-   "reasoning_cat1": "A long, carefully layered liability allocation with a defined 'Claims' term and a narrow gross-negligence carve-out; 'solely caused by' is strict but not ambiguous, and 'Except to the extent prohibited by law' is a standard saving phrase.",
-   "reasoning_cat2": "It dovetails with ¶9's warranty disclaimer and ¶4's compliance obligation, and no other provision allocates risk differently.",
-   "prob_cat1": 0.13,
-   "prob_cat2": 0.07},
-
-  {"clause_id": "c012",
-   "reasoning_cat1": "A purely administrative signing instruction that creates no substantive obligation and has no operative term to construe.",
-   "reasoning_cat2": "It is consistent with the preamble's statement that the Agreement is 'effective upon signing' and with the signature block; nothing conflicts.",
-   "prob_cat1": 0.05,
-   "prob_cat2": 0.05}
+  {
+    "clause_id": "c008",
+    "reasoning_cat1": "\"No rights in the Material other than those specifically set forth in the Agreement\" and termination on thirty days' notice are definite; the residual soft spots are the shift between \"Material\" and \"Materials\" and the undefined reach of \"unused Materials\" (does it capture derived constructs?). Nothing else in the wording is genuinely two-sided.",
+    "reasoning_cat2": "The clause contains no survival provision, yet Paragraph 8 (c009) grants St. Jude a perpetual-sounding non-exclusive licence and imposes a sixty-day patent-notification duty, and Paragraph 1 (c002) reserves title — so what survives an at-will termination is left unresolved. That is a real, if modest, whole-instrument gap rather than a flat contradiction.",
+    "prob_cat1": 0.24,
+    "prob_cat2": 0.29
+  },
+  {
+    "clause_id": "c009",
+    "reasoning_cat1": "\"Any product that contains Material\" is the pivotal ambiguous phrase — whether a construct engineered from the Material \"contains\" it is exactly the kind of question two parties read oppositely — and \"inventions that arise from the use of the Materials\" is an open-ended scope for the reserved licence. The mislabelled paragraph number and the garbled trailing text add to, but do not create, the difficulty.",
+    "reasoning_cat2": "It permits patenting and (with approval) commercialisation, which sits against Paragraph 4's (c005) absolute \"will not be used for any commercial purpose\" and against Paragraph 3's (c004) pre-clinical-only limitation; its operation also depends wholly on the \"Material\" definition in Paragraph 1 (c002). Those are specific, named inconsistencies within the same short instrument.",
+    "prob_cat1": 0.60,
+    "prob_cat2": 0.52
+  },
+  {
+    "clause_id": "c010",
+    "reasoning_cat1": "A conventional capitalised disclaimer of merchantability, fitness and non-infringement, expressed in settled boilerplate language with no catch-all resting on enumerated specifics. The only oddity is OCR noise, not a drafting error.",
+    "reasoning_cat2": "It coexists naturally with the liability allocation in Paragraph 10 (c011) and with the acknowledgment in Paragraph 1 (c002) that the Material may be the subject of a patent application; no provision elsewhere promises any warranty. No conflict found.",
+    "prob_cat1": 0.08,
+    "prob_cat2": 0.06
+  },
+  {
+    "clause_id": "c011",
+    "reasoning_cat1": "The allocation is long but internally consistent, with the usual carve-outs (\"except to the extent prohibited by law\"; claims \"solely caused by the gross negligence or willful misconduct of St. Jude\"); \"solely caused\" is a possible pressure point but a familiar and workable one. The collective defined term \"Claims\" is properly introduced.",
+    "reasoning_cat2": "It complements the disclaimer in Paragraph 9 (c010) and does not contradict Paragraph 4's (c005) requirement of lawful storage, use and disposal; no other clause allocates risk differently. No conflict found.",
+    "prob_cat1": 0.11,
+    "prob_cat2": 0.07
+  },
+  {
+    "clause_id": "c012",
+    "reasoning_cat1": "A ministerial signing instruction naming the person to whom the countersigned letter should be returned; it creates no obligation capable of two readings. Nothing to construe.",
+    "reasoning_cat2": "It matches the preamble's statement that the Agreement is \"effective upon signing\" (c001) and the signature blocks; the only loose thread is that the Recipient Scientist and an authorised official both sign, which no other provision contradicts. No conflict found.",
+    "prob_cat1": 0.04,
+    "prob_cat2": 0.05
+  }
 ]}

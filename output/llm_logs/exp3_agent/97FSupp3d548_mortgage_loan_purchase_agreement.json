@@ -8,15 +8,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 21,
-  "duration_ms": 753372,
-  "total_cost_usd": 5.374,
+  "duration_ms": 647968,
+  "total_cost_usd": 5.058,
   "usage": {
     "input_tokens": 36,
-    "cache_creation_input_tokens": 254572,
-    "cache_read_input_tokens": 2168343,
-    "output_tokens": 69756,
+    "cache_creation_input_tokens": 244894,
+    "cache_read_input_tokens": 2250953,
+    "output_tokens": 59338,
     "output_tokens_details": {
-      "thinking_tokens": 21323
+      "thinking_tokens": 8167
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 254572,
+      "ephemeral_1h_input_tokens": 244894,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 359,
-        "cache_read_input_tokens": 245968,
-        "cache_creation_input_tokens": 12680,
+        "output_tokens": 29,
+        "cache_read_input_tokens": 244296,
+        "cache_creation_input_tokens": 4674,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 12680
+          "ephemeral_1h_input_tokens": 4674
         },
         "type": "message"
       }
@@ -46,20 +46,20 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 36,
-      "outputTokens": 69756,
-      "cacheReadInputTokens": 2168343,
-      "cacheCreationInputTokens": 254572,
+      "outputTokens": 59338,
+      "cacheReadInputTokens": 2250953,
+      "cacheCreationInputTokens": 244894,
       "webSearchRequests": 0,
-      "costUSD": 5.3739715,
+      "costUSD": 5.058046500000001,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "2d8bc492-6e88-4ab8-8ee8-73c3f5df1cad",
+  "session_id": "50b8401d-9919-4cb4-a41d-39617083684a",
   "errors": null,
-  "result": "332",
+  "result": "I wrote 332 judgments across predictions_001.json–predictions_005.json.",
   "path_denials": [],
   "rate_limits": {
     "five_hour": {

@@ -7,16 +7,16 @@
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 20,
-  "duration_ms": 419172,
-  "total_cost_usd": 2.4663,
+  "num_turns": 14,
+  "duration_ms": 415156,
+  "total_cost_usd": 2.5136,
   "usage": {
-    "input_tokens": 30,
-    "cache_creation_input_tokens": 123980,
-    "cache_read_input_tokens": 669432,
-    "output_tokens": 35666,
+    "input_tokens": 22,
+    "cache_creation_input_tokens": 129045,
+    "cache_read_input_tokens": 661116,
+    "output_tokens": 35698,
     "output_tokens_details": {
-      "thinking_tokens": 9908
+      "thinking_tokens": 7971
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 123980,
+      "ephemeral_1h_input_tokens": 129045,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 40,
-        "cache_read_input_tokens": 119252,
-        "cache_creation_input_tokens": 8804,
+        "output_tokens": 44,
+        "cache_read_input_tokens": 124785,
+        "cache_creation_input_tokens": 9682,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 8804
+          "ephemeral_1h_input_tokens": 9682
         },
         "type": "message"
       }
@@ -45,40 +45,27 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 30,
-      "outputTokens": 35666,
-      "cacheReadInputTokens": 669432,
-      "cacheCreationInputTokens": 123980,
+      "inputTokens": 22,
+      "outputTokens": 35698,
+      "cacheReadInputTokens": 661116,
+      "cacheCreationInputTokens": 129045,
       "webSearchRequests": 0,
-      "costUSD": 2.466316,
+      "costUSD": 2.513568,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "1ecd2c5d-74e8-4ce0-9e8e-72c79f3f2b10",
+  "session_id": "8f6fea12-f3a5-4c46-98a1-f6eb2b827a45",
   "errors": null,
-  "result": "154 judgments written (c001–c154) across predictions_001.json, predictions_002.json and predictions_003.json.",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/1.3_93FSupp3d375_personal_deposit_account_agreement/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
-    }
-  ],
+  "result": "I wrote 154 judgments (c001–c154) across predictions_001.json, predictions_002.json and predictions_003.json.",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

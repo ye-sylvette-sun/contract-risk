@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 11,
-  "duration_ms": 100583,
-  "total_cost_usd": 0.5799,
+  "duration_ms": 109472,
+  "total_cost_usd": 0.597,
   "usage": {
     "input_tokens": 16,
-    "cache_creation_input_tokens": 31402,
-    "cache_read_input_tokens": 128868,
-    "output_tokens": 8054,
+    "cache_creation_input_tokens": 31773,
+    "cache_read_input_tokens": 129207,
+    "output_tokens": 8584,
     "output_tokens_details": {
-      "thinking_tokens": 2571
+      "thinking_tokens": 3213
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 31402,
+      "ephemeral_1h_input_tokens": 31773,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 13,
-        "cache_read_input_tokens": 33076,
-        "cache_creation_input_tokens": 2402,
+        "output_tokens": 3,
+        "cache_read_input_tokens": 33894,
+        "cache_creation_input_tokens": 1955,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 2402
+          "ephemeral_1h_input_tokens": 1955
         },
         "type": "message"
       }
@@ -40,31 +40,31 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 16,
-      "outputTokens": 8054,
-      "cacheReadInputTokens": 128868,
-      "cacheCreationInputTokens": 31402,
+      "outputTokens": 8584,
+      "cacheReadInputTokens": 129207,
+      "cacheCreationInputTokens": 31773,
       "webSearchRequests": 0,
-      "costUSD": 0.579884,
+      "costUSD": 0.5970135,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "b5df72b3-e3b7-419b-b5fe-87ed80da701c",
+  "session_id": "a129cf2e-2a41-4c41-bdfe-192dd9756a18",
   "errors": null,
-  "result": "I wrote 24 judgments.",
+  "result": "24",
   "path_denials": [
     {
       "tool": "Read",
-      "file_path": "/contract.txt"
+      "file_path": "/tmp/outputs/contract.txt"
     }
   ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [
