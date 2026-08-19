@@ -7,16 +7,16 @@
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 15,
-  "duration_ms": 106250,
-  "total_cost_usd": 0.422,
+  "num_turns": 9,
+  "duration_ms": 84538,
+  "total_cost_usd": 0.4471,
   "usage": {
-    "input_tokens": 26,
-    "cache_creation_input_tokens": 17027,
-    "cache_read_input_tokens": 118954,
-    "output_tokens": 7686,
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 23761,
+    "cache_read_input_tokens": 83858,
+    "output_tokens": 6699,
     "output_tokens_details": {
-      "thinking_tokens": 2278
+      "thinking_tokens": 2343
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 17027,
+      "ephemeral_1h_input_tokens": 23761,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 9,
-        "cache_read_input_tokens": 19243,
-        "cache_creation_input_tokens": 1860,
+        "output_tokens": 13,
+        "cache_read_input_tokens": 26178,
+        "cache_creation_input_tokens": 1659,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 1860
+          "ephemeral_1h_input_tokens": 1659
         },
         "type": "message"
       }
@@ -45,40 +45,27 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 26,
-      "outputTokens": 7686,
-      "cacheReadInputTokens": 118954,
-      "cacheCreationInputTokens": 17027,
+      "inputTokens": 12,
+      "outputTokens": 6699,
+      "cacheReadInputTokens": 83858,
+      "cacheCreationInputTokens": 23761,
       "webSearchRequests": 0,
-      "costUSD": 0.42202700000000004,
+      "costUSD": 0.44707399999999997,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "3edf83d6-c164-42c6-8d36-535e4bbbcf6d",
+  "session_id": "d5e42dea-5621-4bee-9af6-1c41b41b109b",
   "errors": null,
-  "result": "13 judgments written.",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/1.3_93FSupp3d375_personal_deposit_account_agreement/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/provisions.json"
-    }
-  ],
+  "result": "I wrote 13 judgments.",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1787126400
+      "resets_at": 1787144400
     }
   },
   "models_seen": [

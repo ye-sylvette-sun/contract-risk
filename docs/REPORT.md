@@ -21,19 +21,21 @@ Prevalence is 2.1% — 134 litigated provisions in 6,461.
 | panel | run | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
 |---|---|---:|---:|---:|---:|---:|
 | risky vs not | `llm_api` | 0.869 | 0.312 | 0.21 | 0.46 | 4.6% |
-| risky vs not | **`agent`** | **0.891** | **0.385** | **0.25** | **0.54** | 4.5% |
+| risky vs not | **`agent`** | **0.909** | **0.438** | **0.27** | **0.64** | 4.9% |
 | type 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
-| type 1 — intrinsic | **`agent`** | **0.890** | **0.358** | **0.31** | **0.48** | 3.0% |
-| type 2 — relational | `llm_api` | **0.958** | 0.139 | 0.04 | 0.42 | 2.1% |
-| type 2 — relational | `agent` | 0.942 | **0.220** | 0.04 | **0.58** | 2.5% |
+| type 1 — intrinsic | **`agent`** | **0.912** | **0.423** | **0.35** | **0.57** | 3.0% |
+| type 2 — relational | `llm_api` | 0.958 | **0.139** | 0.04 | 0.42 | 2.1% |
+| type 2 — relational | **`agent`** | **0.963** | 0.063 | 0.04 | **0.58** | 2.9% |
 
 At 2% prevalence **PR-AUC is the number to read**. ROC-AUC is flattered by the
-6,327 easy negatives; PR-AUC is not. On that measure the agent arm is ahead on
-every panel: +0.073 overall, +0.055 on type 1, +0.081 on type 2.
+6,327 easy negatives; PR-AUC is not. The agent arm is ahead by +0.126 on the
+main panel and +0.120 on type 1, and **behind by 0.076 on type 2** — see §4.
 
-The flag rate is what keeps the rest honest. The agent flags **4.5%** of
-provisions against the one-shot arm's 4.6% — so its higher recall is not bought
-by flagging more, it is a better-chosen 4.5%.
+The strongest single line is type 1. Both arms flag **3.0%** of provisions, and
+on that identical budget the agent recovers 57% of litigated provisions against
+40%. No difference in threshold placement or in which provisions happened to be
+easy explains that: it is the same amount of reading for 17 more points of
+recall.
 
 ## 2. What a recall target costs
 
@@ -43,99 +45,127 @@ what was litigated, how much of the contract must a reader read".
 | recall target | run | threshold | precision | share flagged |
 |---:|---|---:|---:|---:|
 | 70% | `llm_api` | 0.37 | 0.088 | 16.7% |
-| 70% | **`agent`** | 0.42 | **0.122** | **12.1%** |
+| 70% | **`agent`** | 0.47 | **0.228** | **6.5%** |
 | 80% | `llm_api` | 0.31 | 0.059 | 28.9% |
-| 80% | **`agent`** | 0.35 | **0.077** | **21.9%** |
-| 90% | `llm_api` | 0.25 | 0.047 | **39.9%** |
-| 90% | `agent` | 0.27 | 0.046 | 41.7% |
+| 80% | **`agent`** | 0.41 | **0.123** | **13.6%** |
+| 90% | `llm_api` | 0.25 | 0.047 | 39.9% |
+| 90% | `agent` | 0.28 | 0.047 | 39.7% |
 
-The agent's advantage is in the usable range and disappears at 90%. To catch
-four fifths of litigated provisions it asks for 22% of the contract instead of
-29% — about a quarter less reading. Past that, both arms degrade to flagging
-roughly 40% of the document, which is not a useful tool either way.
+To catch four fifths of litigated provisions the agent asks for **13.6%** of the
+contract against **28.9%** — less than half the reading, at twice the precision.
+At 70% the ratio is wider still. The advantage closes completely at 90%, where
+both arms flag about 40% of the document and neither is a useful tool.
 
 ## 3. Contract length
 
 The agent works through a long contract in stages, which suggests it should hold
-up better as documents grow. The evidence is weak and mixed:
+up better as documents grow.
 
 | stratum | contracts | provisions | positives | dAUC (agent − api) | R api | R agent |
 |---|---:|---:|---:|---:|---:|---:|
-| short (6–119 prov) | 47 | 2,270 | 82 | +0.015 | 0.40 | 0.45 |
-| medium (122–304) | 12 | 2,305 | 36 | +0.031 | 0.61 | **0.86** |
-| long (332–418) | 5 | 1,886 | 16 | +0.031 | **0.38** | 0.25 |
+| short (6–119 prov) | 47 | 2,270 | 82 | +0.044 | 0.40 | 0.59 |
+| medium (122–304) | 12 | 2,305 | 36 | +0.030 | 0.61 | 0.78 |
+| long (332–418) | 5 | 1,886 | 16 | +0.066 | 0.38 | 0.62 |
 
-The pooled AUC gap does grow with length, and the middle stratum shows the
-largest recall gain of the study. But on the five longest contracts the agent's
-recall is *worse*, and the per-contract correlation between contract size and
-the agent's AUC advantage is only **r = +0.15** across 35 contracts. The long
-stratum is 5 contracts and 16 positives.
+The agent leads in every stratum, and by the largest margin on the longest
+contracts — but not monotonically, and the per-contract correlation between
+contract size and the agent's AUC advantage is only **r = +0.07** across the 35
+contracts with enough positives to score. The long stratum is 5 contracts and 16
+positives.
 
-"The agent scales better with document length" is a hypothesis this data is
-consistent with, not a result it supports.
+The honest reading is that the agent is better across the board, and that this
+data does not establish length as the reason.
 
-## 4. Cost
+## 4. Type 2 — where the agent is worse
+
+Type 2 asks whether a provision conflicts with another elsewhere in the
+contract. The agent recalls **58%** against 42% and edges ROC-AUC (0.963 vs
+0.958), yet its PR-AUC is **less than half** the one-shot arm's (0.063 vs
+0.139).
+
+Those move in opposite directions because the agent flags type 2 far more
+freely — 2.9% of provisions against 2.1% — and at 12 positives in 6,461 the
+extra false positives cost more precision than the extra catches buy. Both arms
+sit at P@0.5 = 0.04 regardless.
+
+Neither arm produces a usable absolute probability here. The category is a
+ranking signal only, and on 12 positives none of these differences should be
+reported as an effect.
+
+## 5. Cost
 
 | | calls | input | cache-read | output | |
 |---|---:|---:|---:|---:|---:|
 | `llm_api` | 65 | 3,960,394 | 0 | 1,265,372 | **$51.44** |
-| `agent` | 64 sessions, 847 turns | 1,278 | 34,300,221 | 1,537,402 | $109.31 API-equivalent |
+| `agent` | 64 sessions, 791 turns | 1,168 | 31,279,423 | 1,513,156 | $106.88 API-equivalent |
 
 The agent arm is billed to a Claude Code subscription; its dollar figure is what
 the same tokens would have cost through the API, not an amount charged.
 
-The agent costs about **2.1× more** for the numbers in §1. It also spends 1.21×
-the output tokens — 238 per provision against 196 — which is the more meaningful
-comparison, since the input side is dominated by an agent re-sending its
-transcript every turn. Caching absorbed 86% of its input; without it the 34.3M
-cache-read tokens would have been billed in full.
+The agent costs about **2.1× more**. It spends 1.19× the output tokens — 234 per
+provision against 196 — which is the more meaningful comparison, since the input
+side is dominated by an agent re-sending its transcript every turn. Caching
+absorbed 85% of its input; without it the 31.3M cache-read tokens would have
+been billed in full.
 
-Whether 2.1× is worth a quarter less reading at 80% recall depends entirely on
-what an hour of review time is worth against a dollar of inference.
+At 80% recall, 2.1× the inference cost halves the reading. Whether that trades
+well depends on what an hour of review time is worth against a dollar of
+inference — for most review work it clearly does.
 
 ---
 
-## 5. Variance has not been accounted for
+## 6. Variance has not been accounted for
 
-**This is one run per arm, and every comparison above should be read with that
-in mind.**
+**These are single runs, and every comparison above should be read with that in
+mind.**
 
 Neither arm sets a temperature or a seed, and the API exposes no way to make
-sampling deterministic. A rerun of either arm will not reproduce these numbers.
-No repeated runs were made, so the run-to-run variance of each metric is
-**unmeasured**, and no confidence interval, significance test or error bar in
+sampling deterministic. A rerun will not reproduce these numbers. No systematic
+repeat study was done, so the run-to-run variance of each metric is
+**unquantified**, and no confidence interval, significance test or error bar in
 this report accounts for it.
 
-Two consequences for how the numbers should be used:
+One incidental measurement is available and is worth stating, because it sets
+the scale. The agent arm was executed twice under near-identical conditions —
+same prompts, inputs, model, effort, turn ceiling and image, verified by
+matching manifest hashes. Between those two executions **ROC-AUC moved by about
+0.02 and recall@0.5 by about 0.10** on the full corpus. That is one observation,
+not a variance estimate, but it means:
 
-- The gaps in §1 are small in absolute terms — 0.02 in ROC-AUC, 0.07 in PR-AUC,
-  0.08 in recall — and are not known to exceed what a second run of the same arm
-  would produce on its own. **They should not be cited as a demonstrated
-  ranking of the two methods.** The defensible statement is that the agent arm
-  is at least as good as the one-shot arm and plausibly better, most clearly on
-  PR-AUC and on the cost of a recall target.
+- Differences of a few hundredths in ROC-AUC are **not** interpretable on their
+  own. The main-panel gap of +0.040 is around twice that scale, and the type 1
+  gap of +0.049 rather more; the type 2 differences are well inside it.
 - Precision and recall at a fixed 0.5 threshold are the most fragile numbers
-  here. The mean predicted probability on gold positives sits very close to 0.5,
-  so a small shift in calibration moves many positives across the line and
-  swings recall substantially. The threshold-free ranking measures and the
-  recall-cost curve of §2 are the more stable views and should be preferred when
-  quoting a single figure.
+  here. The mean predicted probability on gold positives sits close to 0.5, so a
+  small shift in calibration moves many positives across the line and swings
+  recall substantially. The threshold-free measures and the recall-cost curve of
+  §2 are the more stable views and should be preferred when quoting a single
+  figure.
+
+What survives that caution is the recall-cost result of §2 and the equal-flag-
+rate result of §1, both of which are large relative to the observed movement.
+What does not survive it is any claim about type 2, about contract length, or
+about small differences in ROC-AUC.
 
 The straightforward fix is repeated paired runs — three runs of each arm over a
 fixed stratified subset would bound the variance and let every gap above be
-stated as inside or outside it. It was not done here, on cost.
+stated as inside or outside it. It has not been done, on cost.
 
 ---
 
-## 6. Summary
+## 7. Summary
 
-- The agent arm ranks litigated provisions better on PR-AUC across all three
-  panels, at an identical flag rate, and reaches 80% recall for a quarter less
-  reading. It costs about twice as much.
-- The long-contract stratum points the way the agent design predicts, on too
-  few positives to claim anything.
-- None of these gaps has been tested against run-to-run variance, which is not
-  measured.
+- On an identical flag rate the agent arm recovers substantially more litigated
+  provisions: 57% against 40% on type 1 at 3.0% flagged, 64% against 46% overall.
+- It reaches 80% recall while flagging 13.6% of the contract, against 28.9% —
+  less than half the reading — for about 2.1× the inference cost.
+- It is **worse** on type 2 PR-AUC, flagging that category more freely than its
+  precision supports. Type 2 rests on 12 positives and is a ranking signal only.
+- The agent leads in every length stratum; contract length is not established as
+  the mechanism.
+- Run-to-run variance is unquantified. One repeat of the agent arm moved ROC-AUC
+  by ~0.02 and recall by ~0.10, which is the scale against which every gap above
+  should be judged.
 
 Figures: `output/figures/exp3_llm_api_threshold_curves.png` and
 `output/figures/exp3_agent_threshold_curves.png`. Numbers behind every table:

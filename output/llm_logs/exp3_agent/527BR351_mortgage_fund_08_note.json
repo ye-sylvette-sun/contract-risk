@@ -7,16 +7,16 @@
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 18,
-  "duration_ms": 436134,
-  "total_cost_usd": 3.3838,
+  "num_turns": 19,
+  "duration_ms": 479182,
+  "total_cost_usd": 3.5086,
   "usage": {
-    "input_tokens": 30,
-    "cache_creation_input_tokens": 177072,
-    "cache_read_input_tokens": 1293509,
-    "output_tokens": 38648,
+    "input_tokens": 34,
+    "cache_creation_input_tokens": 180571,
+    "cache_read_input_tokens": 1291826,
+    "output_tokens": 42273,
     "output_tokens_details": {
-      "thinking_tokens": 11708
+      "thinking_tokens": 8303
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 177072,
+      "ephemeral_1h_input_tokens": 180571,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 3,
-        "cache_read_input_tokens": 176520,
-        "cache_creation_input_tokens": 4628,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 177001,
+        "cache_creation_input_tokens": 7646,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 4628
+          "ephemeral_1h_input_tokens": 7646
         },
         "type": "message"
       }
@@ -45,22 +45,27 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 30,
-      "outputTokens": 38648,
-      "cacheReadInputTokens": 1293509,
-      "cacheCreationInputTokens": 177072,
+      "inputTokens": 34,
+      "outputTokens": 42273,
+      "cacheReadInputTokens": 1291826,
+      "cacheCreationInputTokens": 180571,
       "webSearchRequests": 0,
-      "costUSD": 3.3838244999999993,
+      "costUSD": 3.5086179999999993,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "2f148cb8-6239-44bf-8ea6-3eff4264dc10",
+  "session_id": "f2c12b5e-bbea-4394-9348-f45df939f41f",
   "errors": null,
-  "result": "186",
-  "path_denials": [],
+  "result": "186 judgments written.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    }
+  ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",

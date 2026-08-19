@@ -122,6 +122,14 @@ Enumerates a contract's clauses in document order, producing the negatives. It
 runs on every contract step 1 was shown, so no positive lacks negatives from its
 own document and the agreements the court never reached are inventoried too.
 
+The model is asked for **every** clause, not for the ones step 1 left over. It
+is given the contract and nothing else — no opinion, and no indication of which
+clause the court construed — so its list normally contains the positive as well.
+The overlap is removed afterwards by `build_dataset.py`, on line spans alone.
+Withholding step 1's answer is the point: were the model told which clause was
+litigated, its enumeration of the others could be shaped by that, and the two
+classes would differ by more than the one property being labelled.
+
 Three over-capture detectors run as **flags** — clauses out of document order,
 overlapping spans, and a clause longer than 10× the contract's median. They are
 printed and stored; none of them rejects anything.

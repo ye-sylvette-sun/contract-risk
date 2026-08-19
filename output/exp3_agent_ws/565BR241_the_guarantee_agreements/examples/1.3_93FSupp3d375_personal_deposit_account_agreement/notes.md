@@ -1,6 +1,6 @@
 # Worked example — Category 1.3 — general-vs-specific / list scope
 
-Contract `93FSupp3d375_personal_deposit_account_agreement`, filed in 93 F.Supp.3d 375. The full text is in `contract.txt` beside this file.
+Contract `93FSupp3d375_personal_deposit_account_agreement`, filed in 93 F.Supp.3d 375.
 
 A court construed **4** of this contract's provisions; the other **251** it did not. Read that as the base rate to expect, NOT as a quota to reproduce.
 

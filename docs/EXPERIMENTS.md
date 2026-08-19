@@ -10,6 +10,7 @@ differ only in how the material reaches the model:
 |---|---|---|
 | shape | one Messages API call per contract | one Claude Code session per contract |
 | the contract | inside the prompt | a file in a workspace |
+| worked examples | a few-shot block in the prompt | one `notes.md` per pair in the workspace, same text |
 | reading | one pass, in the order given | the model chooses — read, re-read, grep |
 | answer | structured output | a file the model writes |
 | model | `claude-opus-5`, effort `high` | `claude-opus-5`, effort `high` |
@@ -18,7 +19,10 @@ differ only in how the material reaches the model:
 
 Both import the same taxonomy, the same worked examples, the same gold mapping
 and the same provision-id scheme from `exp3_llm_api.py`, so the comparison cannot
-drift between them. The judging criteria live in `prompts/exp3.md` and its
+drift between them. The example material is the same evidence on both sides: the
+two provision texts and the court's verbatim words, and nothing more. The
+examples' full contracts are deliberately absent from the agent's workspace,
+because the one-shot arm's few-shot block does not carry them either. The judging criteria live in `prompts/exp3.md` and its
 `SYSTEM` section is used **verbatim** by both.
 
 ---
@@ -223,50 +227,57 @@ under identical ids. Full write-up in [REPORT.md](REPORT.md).
 | panel | | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
 |---|---|---:|---:|---:|---:|---:|
 | risky vs not | `llm_api` | 0.869 | 0.312 | 0.21 | 0.46 | 4.6% |
-| risky vs not | **`agent`** | **0.891** | **0.385** | **0.25** | **0.54** | 4.5% |
+| risky vs not | **`agent`** | **0.909** | **0.438** | **0.27** | **0.64** | 4.9% |
 | type 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
-| type 1 — intrinsic | **`agent`** | **0.890** | **0.358** | **0.31** | **0.48** | 3.0% |
-| type 2 — relational | `llm_api` | **0.958** | 0.139 | 0.04 | 0.42 | 2.1% |
-| type 2 — relational | `agent` | 0.942 | **0.220** | 0.04 | **0.58** | 2.5% |
+| type 1 — intrinsic | **`agent`** | **0.912** | **0.423** | **0.35** | **0.57** | 3.0% |
+| type 2 — relational | `llm_api` | 0.958 | **0.139** | 0.04 | 0.42 | 2.1% |
+| type 2 — relational | **`agent`** | **0.963** | 0.063 | 0.04 | **0.58** | 2.9% |
 
 At 2.1% prevalence PR-AUC is the number to read; ROC-AUC is flattered by the
-6,327 easy negatives. The agent arm leads on PR-AUC in all three panels at an
-identical flag rate — its extra recall is a better-chosen 4.5%, not a larger one.
+6,327 easy negatives. The clearest line is type 1: both arms flag **3.0%** of
+provisions, and on that identical budget the agent recovers 57% of litigated
+provisions against 40%.
 
 What each recall target costs on the risky-vs-not panel:
 
 | recall | | threshold | precision | flagged |
 |---:|---|---:|---:|---:|
 | 70% | `llm_api` | 0.37 | 0.088 | 16.7% |
-| 70% | **`agent`** | 0.42 | **0.122** | **12.1%** |
+| 70% | **`agent`** | 0.47 | **0.228** | **6.5%** |
 | 80% | `llm_api` | 0.31 | 0.059 | 28.9% |
-| 80% | **`agent`** | 0.35 | **0.077** | **21.9%** |
-| 90% | `llm_api` | 0.25 | 0.047 | **39.9%** |
-| 90% | `agent` | 0.27 | 0.046 | 41.7% |
+| 80% | **`agent`** | 0.41 | **0.123** | **13.6%** |
+| 90% | `llm_api` | 0.25 | 0.047 | 39.9% |
+| 90% | `agent` | 0.28 | 0.047 | 39.7% |
 
 Full sweeps in `output/figures/exp3_<run>_threshold_curves.png`: precision and
 recall on top, flag rate underneath, for each of the three panels.
 
-**Shared weakness.** Both rank type 2 well (ROC ≈ 0.95) and neither is usable as
+**Where the agent is worse.** On type 2 its PR-AUC is less than half the
+one-shot arm's (0.063 vs 0.139): it flags that category more freely (2.9% vs
+2.1%) than 12 positives can support, so the extra false positives cost more
+precision than the extra catches buy.
+
+**Shared weakness.** Both rank type 2 well (ROC ≈ 0.96) and neither is usable as
 an absolute probability for it — precision at 0.5 is 0.04 either way, on 12
 positives.
 
-**One run per arm.** No temperature or seed is set, run-to-run variance is not
-measured, and the gaps above are not known to exceed it. See §5 of
-[REPORT.md](REPORT.md).
+**Variance is unquantified.** No temperature or seed is set. One repeat of the
+agent arm under matching manifest hashes moved ROC-AUC by ~0.02 and recall@0.5
+by ~0.10, which is the scale against which the gaps above should be judged. See
+§6 of [REPORT.md](REPORT.md).
 
 ### Cost
 
 | | calls | input | cache-read | output | |
 |---|---:|---:|---:|---:|---:|
 | `llm_api` | 65 | 3,960,394 | 0 | 1,265,372 | **$51.44** |
-| `agent` | 64 (847 turns) | 1,278 | 34,300,221 | 1,537,402 | $109.31 API-equivalent |
+| `agent` | 64 (791 turns) | 1,168 | 31,279,423 | 1,513,156 | $106.88 API-equivalent |
 
 The agent run is billed to a Claude Code subscription, so its dollar figure is
 what the same tokens would have cost through the API, not an amount charged.
-Caching absorbed 86% of its input: an agent re-sends its transcript every turn,
-and without caching the 34.3M cache-read tokens would have been billed in full.
-Per provision the agent spends 238 output tokens against the one-shot arm's 196.
+Caching absorbed 85% of its input: an agent re-sends its transcript every turn,
+and without caching the 31.3M cache-read tokens would have been billed in full.
+Per provision the agent spends 234 output tokens against the one-shot arm's 196.
 
 ---
 

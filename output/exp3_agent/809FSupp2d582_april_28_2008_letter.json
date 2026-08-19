@@ -11,50 +11,50 @@
   "judgments": [
     {
       "clause_id": "c001",
-      "reasoning_cat1": "The preamble is a straightforward identification of the signatories and the subject matter, though it sweeps in 'proposed additional defendants' who are not yet parties to the suit and describes the subject only loosely as 'the tolling of certain claims.' Nothing in it operates on its own, so there is little for a court to construe beyond who is bound.",
-      "reasoning_cat2": "Read against the operative paragraphs (the 'Other Causes of Action' paragraph and the Defendants' reciprocal tolling paragraph), the collective 'Defendants' definition is used consistently, and the reciprocal paragraph itself disclaims that the Defendants are proper parties, which harmonises with the preamble's reference to proposed additional defendants. No specific conflict located.",
-      "prob_cat1": 0.11,
-      "prob_cat2": 0.1,
+      "reasoning_cat1": "This is a straightforward identification of the signatories and of the defined terms 'Defendants', 'Parties' and 'Lawsuit'; the only oddity is the inclusion of 'proposed additional defendants' who are not yet parties to the suit, which slightly blurs who is bound. The OCR-style garbling ('Qpmp..any', 'Maxwoll') is transcription noise rather than a drafting error that changes meaning.",
+      "reasoning_cat2": "The defined term 'Defendants' is used consistently in the reciprocal covenants (c005) and the merit-reservation paragraph (c006), and nothing elsewhere contradicts the recital of purpose ('scope of the Lawsuit and the tolling of certain claims'). The only mild tension is that c005 has Defendants deny they are 'proper parties', which sits awkwardly with a preamble that binds proposed additional defendants.",
+      "prob_cat1": 0.13,
+      "prob_cat2": 0.11,
       "dataset_clause_id": "neg1"
     },
     {
       "clause_id": "c002",
-      "reasoning_cat1": "This is the heart of the bargain and is drafted as a purportedly exhaustive limitation ('limit the scope of its claims ... to the following') that immediately dissolves into open-ended catch-alls — 'includes, but is not limited to', 'claims related to', 'among other things' — so the reach of the retained claims against the enumerated specifics is genuinely uncertain (ejusdem generis / expressio unius). The list is also mechanically defective: there is no '(1)' matching the '(2)', leaving the boundary of the first item unclear.",
-      "reasoning_cat2": "It must be read against the 'Other Causes of Action' paragraph, which excludes improper-reserve claims 'other than concerning the exclusion or misapplication of IBNR'; a claim about reserves or conversion of funds could plausibly fall on either side of that line, so the two paragraphs may overlap. That potential overlap is the most likely source of a whole-instrument argument here.",
-      "prob_cat1": 0.56,
-      "prob_cat2": 0.33,
+      "reasoning_cat1": "The operative limitation is written as an exhaustive list ('limit the scope of its claims ... to the following') yet immediately undercuts itself with 'This includes, but is not limited to' and 'may encompass ... among other things', so the reach of the retained claims is genuinely uncertain — the classic general-versus-specific problem; there is also a mechanical defect in that the first enumerated item bears no number while the second is '(2)'. Terms such as 'claims related to' and 'as a result of alleged exclusion or misapplication of IBNR' are elastic enough that the parties could reasonably differ about which pleaded causes of action survive.",
+      "reasoning_cat2": "It must be read against c003, which carves out 'Other Causes of Action' including improper reserves 'other than concerning the exclusion or misapplication of IBNR' — the boundary between an IBNR-based commission claim retained here and an excluded reserving/claims-handling claim is exactly where the two paragraphs rub. Harmonising the open-ended 'not limited to' language of this paragraph with the exclusions in c003 leaves a real gap over borderline claims.",
+      "prob_cat1": 0.61,
+      "prob_cat2": 0.47,
       "dataset_clause_id": "neg2"
     },
     {
       "clause_id": "c003",
-      "reasoning_cat1": "The defined term 'Other Causes of Action' rests on vague descriptors — 'mishandling of insurance claims', 'improper reserves', 'improper closing of claims files' — plus an embedded IBNR carve-out that makes the category's edge contestable, and it pairs a covenant not to assert with a reservation to sue later. Whether a given theory is a retained claim or an 'Other Cause of Action' is exactly the kind of question a court would have to decide.",
-      "reasoning_cat2": "It interlocks with the scope-limitation paragraph (which retains IBNR-related conversion and trust claims 'not limited to' the listed ones) and with the Defendants' reciprocal tolling paragraph; the IBNR proviso is the seam where the two definitions can be argued to overlap. The bar on filing 'during the pendency of the Lawsuit' also sits alongside the tolling promise and could be argued to conflict in timing.",
-      "prob_cat1": 0.48,
-      "prob_cat2": 0.36,
+      "reasoning_cat1": "'Other Causes of Action' is defined by a specific enumeration (mishandling of claims, improper reserves, improper closing of files, the decision to stop writing policies) with a parenthetical carve-back for IBNR, and whether a given theory falls inside that list or inside the retained IBNR claims is contestable; 'alleged mishandling of insurance claims on the reinsured policies' is broad and undefined. The sentence also ends abruptly in the transcription, and 'during the pendency of the Lawsuit' leaves the moment of expiry (judgment? appeal?) unspecified.",
+      "reasoning_cat2": "Read with c002's 'includes, but is not limited to' language, this exclusion may be swallowed or may swallow retained claims, and its filing bar interacts with the tolling promise in c005 ('until the Lawsuit has been settled or otherwise finally resolved, including the completion of any appeals'), which does not use the same 'pendency' formula. That mismatch between 'pendency of the Lawsuit' here and 'finally resolved ... including appeals' in c004/c005 is a specific reconcilability problem.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.44,
       "dataset_clause_id": "pos1"
     },
     {
       "clause_id": "c004",
-      "reasoning_cat1": "The tolling sentence is workable but its endpoints invite argument — tolling runs 'until the Lawsuit has been settled or otherwise finally resolved, including the completion of any appeals', while limitations defences existing 'immediately before this agreement is executed' are preserved, and the execution date is itself uncertain on this letter. The unclosed quotation defining 'the Excess Funds Claim(s)' and the doubled 'the the' are mechanical slips that do not clearly change meaning.",
-      "reasoning_cat2": "It is the mirror of the Defendants' reciprocal paragraph and consistent with it; the only tension I found is with the final paragraph reserving 'any and all applicable defenses', which a party could read as restoring the res judicata and limitations defences expressly waived here. That tension is real but resolvable by treating the express waiver as controlling.",
-      "prob_cat1": 0.33,
-      "prob_cat2": 0.27,
+      "reasoning_cat1": "The paragraph contains mechanical defects — an unclosed quotation/parenthesis in the definition ('the E.xcess Funds Claim(s).'), the duplicated 'for the the' — and a substantive tension between agreeing to toll limitations and simultaneously preserving 'any limitations defenses which may exist immediately before this agreement is executed', a reservation whose operation on a tolled claim is not obvious. The scope of the defined Excess Funds Claim is itself framed by what 'U.S. Auto contends', which imports one party's characterisation into the definition.",
+      "reasoning_cat2": "Lincoln General here expressly waives res judicata and collateral estoppel as to the Excess Funds Claims, yet c006 lets both sides 'assert any and all applicable defenses or affirmative defenses' to any later-filed separate lawsuit — a direct candidate for conflict unless the general reservation is read subject to the specific waiver. The filing bar here ('during the pendency of the Lawsuit') also does not match the tolling endpoint stated two sentences earlier ('finally resolved, including the completion of any appeals').",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.43,
       "dataset_clause_id": "neg3"
     },
     {
       "clause_id": "c005",
-      "reasoning_cat1": "This is the reciprocal of the Excess Funds paragraph and is drafted in parallel, definite terms — waiver of preclusion defences, tolling until final resolution, preservation of pre-execution limitations defences — with no term whose meaning is genuinely doubtful. The added disclaimer that Defendants do not concede they are proper parties is a standard non-admission.",
-      "reasoning_cat2": "Checked against the 'Other Causes of Action' paragraph (which is where the defined term originates and which bars Lincoln General from filing during the pendency of the Lawsuit) and against the Excess Funds paragraph: the obligations line up symmetrically. The only friction is again with the final reservation-of-defences paragraph.",
-      "prob_cat1": 0.22,
-      "prob_cat2": 0.26,
+      "reasoning_cat1": "This is the mirror image of c004 and is cleanly drafted on its own terms; the only intrinsic strain is the same combination of a tolling promise with a reservation of 'any limitations defenses which may exist immediately before this agreement is executed'. Nothing here needs a named ambiguous term beyond the borrowed definition of 'Other Causes of Action'.",
+      "reasoning_cat2": "Its waiver of res judicata and collateral estoppel is in tension with c006's blanket reservation of 'any and all applicable defenses', and its tolling endpoint ('finally resolved, including the completion of any appeals') is stated differently from the filing bar in c003 ('during the pendency of the Lawsuit'). It also depends entirely on the c003 definition, so any indeterminacy there propagates here.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.38,
       "dataset_clause_id": "neg4"
     },
     {
       "clause_id": "c006",
-      "reasoning_cat1": "The reservation of 'any and all applicable defenses or affirmative defenses' is a broad catch-all whose reach is uncertain, and the sentence is textually incomplete — the object of 'defenses ... to ___ allegations, claims, or counterclaims' has dropped out. 'Applicable' is doing heavy, undefined work.",
-      "reasoning_cat2": "This paragraph sits directly against the express waivers in the Excess Funds paragraph and the Defendants' reciprocal paragraph, where both sides relinquished res judicata and collateral estoppel and agreed to toll limitations; a litigant could argue the later 'any and all applicable defenses' language takes back what those paragraphs gave up. That is a nameable internal tension, though the specific waivers would likely prevail over the general reservation.",
-      "prob_cat1": 0.29,
-      "prob_cat2": 0.38,
+      "reasoning_cat1": "The sentence has a visible textual gap ('assert any and all applicable defenses or affirmative defenses to ____ allegations'), and the sweeping phrase 'any and all applicable defenses' is a general catch-all whose reach against the specifically waived defenses is left unstated. Whether 'applicable' silently excludes the waived preclusion and limitations defenses is precisely the kind of question a court would have to resolve.",
+      "reasoning_cat2": "It sits directly against c004 and c005, in which the parties 'expressly relinquish and waive' res judicata and collateral estoppel and agree to toll limitations; a literal reading of this paragraph would restore the very defenses those paragraphs surrender. That is a concrete, nameable internal inconsistency rather than a speculative one, though the usual specific-over-general rule would likely resolve it.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.46,
       "dataset_clause_id": "neg5"
     }
   ]

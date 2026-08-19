@@ -1,47 +1,65 @@
 {"judgments": [
- {"clause_id": "c010",
-  "reasoning_cat1": "A plain payment schedule: five $300,000 instalments beginning January 2, 2010 totalling exactly $1.5 million, memorialised by a note substantially in the form of Exhibit A; the arithmetic and dates are internally consistent.",
-  "reasoning_cat2": "Exhibit A is not attached to the instrument, and Section IX (c015) limits the remedy for non-completion to refiling, which could be argued to swallow the note obligation, but nothing directly contradicts the payment terms.",
-  "prob_cat1": 0.11,
-  "prob_cat2": 0.16},
- {"clause_id": "c011",
-  "reasoning_cat1": "The embedded stipulation that the MOU 'is sufficiently definite to allow the parties to sue for its enforcement' is a self-serving legal conclusion sitting in a document full of agreements to agree, and 'tolling and other litigation resumption agreements' is left undefined.",
-  "reasoning_cat2": "It squarely collides with Section IX (c015), which says that if the required actions are not completed Lincoln's remedy 'shall be to refile the lawsuit' — enforceability of the MOU versus a single restoration-of-the-status-quo remedy is the obvious construction fight here.",
-  "prob_cat1": 0.52,
-  "prob_cat2": 0.68},
- {"clause_id": "c012",
-  "reasoning_cat1": "The tolling period reads 'for five (5) years of until all claims ... have been paid and settled', where the mangled 'of/or' leaves it unclear whether five years is a floor, a cap, or an alternative to the claims-run-off date.",
-  "reasoning_cat2": "It works with Section V (c011)'s promised 'tolling and other litigation resumption agreements' and Section IX (c015)'s refiling remedy; the tolling term is what makes refiling meaningful, so the fit is supportive rather than contradictory.",
-  "prob_cat1": 0.38,
-  "prob_cat2": 0.22},
- {"clause_id": "c013",
-  "reasoning_cat1": "'Subject to regulatory approval' names no regulator, no applicant, no deadline and no consequence of refusal, and 'the matters to which it addresses' is undefined — a short clause with a large unresolved boundary.",
-  "reasoning_cat2": "It cannot be easily squared with Section V (c011), where dismissal follows on execution and the MOU is declared immediately enforceable, nor with the fixed June 30, 2009 deadlines in Sections I and II (c005, c007).",
-  "prob_cat1": 0.44,
-  "prob_cat2": 0.44},
- {"clause_id": "c014",
-  "reasoning_cat1": "A standard joint-drafting clause disclaiming contra proferentem; its wording is conventional and self-contained.",
-  "reasoning_cat2": "It bears on how every other clause is read but contradicts none; nothing elsewhere in the MOU identifies a drafter or reserves construction against one.",
-  "prob_cat1": 0.09,
-  "prob_cat2": 0.10},
- {"clause_id": "c015",
-  "reasoning_cat1": "The heading covers failure to complete 'or Later Breach' but the body addresses only non-completion, and 'Lincoln's remedy shall be to refile the lawsuit' does not say whether it is the sole and exclusive remedy; the illustrative 'such as ... including but not limited to' list adds further scope uncertainty.",
-  "reasoning_cat2": "Directly opposed to Section V (c011)'s statement that the MOU is definite enough to sue on, and it would also strip content from the payment and security obligations in Sections II and IV (c007, c010) — the central whole-instrument tension in this document.",
-  "prob_cat1": 0.58,
-  "prob_cat2": 0.71},
- {"clause_id": "c016",
-  "reasoning_cat1": "It is an agreement to draft a future settlement agreement whose terms — 'among other things', 'the particulars of the releases ... shall be set forth in the settlement agreement' — are expressly left open.",
-  "reasoning_cat2": "Releases of all Defendants sit against Section III (c009), which preserves the other defendants' obligations, and against Section IX (c015), which treats failure to reach this very agreement as merely restoring the lawsuit.",
-  "prob_cat1": 0.38,
-  "prob_cat2": 0.37},
- {"clause_id": "c017",
-  "reasoning_cat1": "Ordinary counterparts and facsimile-execution boilerplate; the terms are conventional and unambiguous despite scanning noise.",
-  "reasoning_cat2": "Consistent with Section V (c011), which turns on 'execution of this Memorandum of Understanding'; no other clause addresses execution formalities differently.",
-  "prob_cat1": 0.05,
-  "prob_cat2": 0.06},
- {"clause_id": "c018",
-  "reasoning_cat1": "A further-assurances clause qualified by 'reasonably necessary', which is a familiar standard rather than a genuine ambiguity, though it is run together with the counterparts section and carries a duplicated section number.",
-  "reasoning_cat2": "It overlaps the specific future-document duties in Sections I, IX and X (c005, c015, c016); a party could argue it independently compels execution of the LPT or settlement agreement notwithstanding the refiling-only remedy.",
-  "prob_cat1": 0.14,
-  "prob_cat2": 0.21}
+  {
+    "clause_id": "c010",
+    "reasoning_cat1": "The arithmetic works (5 x $300,000 = $1.5 million) and the dates are fixed; the only softness is \"substantially similar to Exhibit A,\" which is a common and rarely litigated formula. Nothing here carries two reasonable meanings.",
+    "reasoning_cat2": "The Exhibit A promissory note is not attached to the instrument as scanned, and Section IX makes refiling the remedy for failure to complete required actions, which arguably swallows this payment obligation too; otherwise no provision contradicts it. The tension is generic rather than specific to this clause.",
+    "prob_cat1": 0.12,
+    "prob_cat2": 0.22
+  },
+  {
+    "clause_id": "c011",
+    "reasoning_cat1": "The interpolated recital that the MOU \"is sufficiently definite to allow the parties to sue for its enforcement\" is an attempt to legislate its own enforceability, and \"tolling and other litigation resumption agreements\" is an undefined, unexecuted category. Whether a party can contract itself into definiteness is exactly the question a court would be asked.",
+    "reasoning_cat2": "It squarely confronts Section IX, which says that if the required actions are not completed Lincoln's remedy \"shall be to refile the lawsuit\" — a suit for enforcement and a refiling-only remedy pull in opposite directions, and Section VI already supplies the tolling that this clause says will be separately documented. This is the clearest 2.1/2.2 pairing in the instrument.",
+    "prob_cat1": 0.48,
+    "prob_cat2": 0.66
+  },
+  {
+    "clause_id": "c012",
+    "reasoning_cat1": "\"[F]or five (5) years of until all claims ... have been paid\" contains a mechanical error ('of' for 'or'), and even read as \"or\" it is ambiguous whether the tolling runs for the longer or the shorter of the two periods. The scope phrase \"or otherwise related to\" the underlying agreements is also open-ended.",
+    "reasoning_cat2": "It overlaps with Section V's promise to \"execute tolling and other litigation resumption agreements,\" leaving unclear whether this clause is itself the tolling agreement or merely an agreement to make one, and it interlocks with Section IX's refiling remedy. That overlap is a genuine but modest incoherence.",
+    "prob_cat1": 0.47,
+    "prob_cat2": 0.33
+  },
+  {
+    "clause_id": "c013",
+    "reasoning_cat1": "\"[S]ubject to regulatory approval\" names no regulator, no approval, no deadline and no consequence of refusal, and \"the matters to which it addresses\" is both ungrammatical and boundless. It is a one-line condition of indeterminate scope.",
+    "reasoning_cat2": "It cannot be squared easily with Section V's declaration that the MOU is immediately enforceable on execution, nor with the firm June 30, 2009 deadlines in Sections I and II; whether it is a condition precedent to the whole MOU or only to the LPT is unresolved by any other clause. That is a real whole-instrument problem.",
+    "prob_cat1": 0.50,
+    "prob_cat2": 0.46
+  },
+  {
+    "clause_id": "c014",
+    "reasoning_cat1": "A short, standard joint-drafting clause whose only function is to disable contra proferentem; its meaning is plain. It creates no ambiguity of its own.",
+    "reasoning_cat2": "It is consistent with the rest of the MOU and with Section V; its only interaction is to bear on how the genuinely contested clauses (V and IX) are construed. No contradiction found.",
+    "prob_cat1": 0.09,
+    "prob_cat2": 0.08
+  },
+  {
+    "clause_id": "c015",
+    "reasoning_cat1": "The heading covers \"Later Breach\" but the text addresses only inability \"to complete all of the actions,\" it does not say the refiling remedy is exclusive, and \"mutually agreeable\" LPT plus \"appropriate security\" are indeterminate; the illustrative \"such as ... including but not limited to\" list leaves the trigger's reach open. It also names only \"Lincoln's\" remedy, saying nothing about the defendants.",
+    "reasoning_cat2": "It directly contradicts Section V's statement that the MOU is \"sufficiently definite to allow the parties to sue for its enforcement,\" and if read as an exclusive remedy it would nullify Sections I, II, III and IV's substantive obligations. This is the paradigm conflicting-clause problem in this instrument.",
+    "prob_cat1": 0.62,
+    "prob_cat2": 0.72
+  },
+  {
+    "clause_id": "c016",
+    "reasoning_cat1": "It is an agreement to draft a future settlement agreement whose \"particulars of the releases\" and \"other terms\" are expressly left for later, and \"among other things\" makes even the listed content non-exhaustive. Whether it binds anyone to anything is precisely what would be argued.",
+    "reasoning_cat2": "Section IX expressly contemplates that \"the settlement agreement contemplated by section X\" may never be executed, with refiling as the consequence, and Section III preserves the other defendants' obligations that this clause contemplates releasing. Those interactions leave the operative effect of the release promise uncertain.",
+    "prob_cat1": 0.50,
+    "prob_cat2": 0.44
+  },
+  {
+    "clause_id": "c017",
+    "reasoning_cat1": "A boilerplate counterparts and telecopy clause; \"may by executed\" is a typo that does not change meaning. Nothing in it is capable of two readings.",
+    "reasoning_cat2": "It is consistent with Section V, which keys the MOU's operation to \"execution,\" and with the signature pages; no other provision addresses execution formalities. No conflict found.",
+    "prob_cat1": 0.07,
+    "prob_cat2": 0.06
+  },
+  {
+    "clause_id": "c018",
+    "reasoning_cat1": "\"[S]uch other and further documents ... as may be reasonably necessary\" is standard further-assurances language, vague by design but conventionally applied. In the underlying document it is not even separately numbered, appearing as the tail of the counterparts paragraph.",
+    "reasoning_cat2": "It supports rather than conflicts with Sections I, V and X, which all contemplate later documentation, though it sits oddly beside Section IX's acceptance that those documents may never be completed. That tension belongs mainly to Section IX.",
+    "prob_cat1": 0.14,
+    "prob_cat2": 0.19
+  }
 ]}

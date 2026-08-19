@@ -1,6 +1,6 @@
 # Worked example — Category 1.1 — lexical ambiguity or vagueness
 
-Contract `99FSupp3d585_asset_purchase_and_product`, filed in 99 F.Supp.3d 585. The full text is in `contract.txt` beside this file.
+Contract `99FSupp3d585_asset_purchase_and_product`, filed in 99 F.Supp.3d 585.
 
 A court construed **3** of this contract's provisions; the other **95** it did not. Read that as the base rate to expect, NOT as a quota to reproduce.
 

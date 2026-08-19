@@ -8,15 +8,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 13,
-  "duration_ms": 318566,
-  "total_cost_usd": 2.08,
+  "duration_ms": 348332,
+  "total_cost_usd": 2.1716,
   "usage": {
     "input_tokens": 20,
-    "cache_creation_input_tokens": 113479,
-    "cache_read_input_tokens": 504081,
-    "output_tokens": 27724,
+    "cache_creation_input_tokens": 116044,
+    "cache_read_input_tokens": 509814,
+    "output_tokens": 30245,
     "output_tokens_details": {
-      "thinking_tokens": 5202
+      "thinking_tokens": 5841
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 113479,
+      "ephemeral_1h_input_tokens": 116044,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 34,
-        "cache_read_input_tokens": 110300,
-        "cache_creation_input_tokens": 7255,
+        "output_tokens": 3,
+        "cache_read_input_tokens": 113594,
+        "cache_creation_input_tokens": 6526,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 7255
+          "ephemeral_1h_input_tokens": 6526
         },
         "type": "message"
       }
@@ -46,26 +46,21 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 20,
-      "outputTokens": 27724,
-      "cacheReadInputTokens": 504081,
-      "cacheCreationInputTokens": 113479,
+      "outputTokens": 30245,
+      "cacheReadInputTokens": 509814,
+      "cacheCreationInputTokens": 116044,
       "webSearchRequests": 0,
-      "costUSD": 2.0800305,
+      "costUSD": 2.1715720000000003,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "81f08580-5575-4a09-9533-5c3a7dcca7c1",
+  "session_id": "4888db27-b5ec-4217-96f5-26f6bfc44313",
   "errors": null,
-  "result": "140 judgments written across predictions_001.json, predictions_002.json, and predictions_003.json.",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/provisions.json"
-    }
-  ],
+  "result": "140",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",

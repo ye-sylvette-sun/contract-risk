@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 11,
-  "duration_ms": 146079,
-  "total_cost_usd": 0.7946,
+  "duration_ms": 155627,
+  "total_cost_usd": 0.8189,
   "usage": {
     "input_tokens": 16,
-    "cache_creation_input_tokens": 41741,
-    "cache_read_input_tokens": 148240,
-    "output_tokens": 12120,
+    "cache_creation_input_tokens": 42322,
+    "cache_read_input_tokens": 147072,
+    "output_tokens": 12884,
     "output_tokens_details": {
-      "thinking_tokens": 4237
+      "thinking_tokens": 4294
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 41741,
+      "ephemeral_1h_input_tokens": 42322,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 3,
-        "cache_read_input_tokens": 42509,
-        "cache_creation_input_tokens": 3308,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 42564,
+        "cache_creation_input_tokens": 3834,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 3308
+          "ephemeral_1h_input_tokens": 3834
         },
         "type": "message"
       }
@@ -40,20 +40,20 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 16,
-      "outputTokens": 12120,
-      "cacheReadInputTokens": 148240,
-      "cacheCreationInputTokens": 41741,
+      "outputTokens": 12884,
+      "cacheReadInputTokens": 147072,
+      "cacheCreationInputTokens": 42322,
       "webSearchRequests": 0,
-      "costUSD": 0.7946099999999999,
+      "costUSD": 0.8189360000000001,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "ebe68f7f-4d52-4056-857f-f00addf56194",
+  "session_id": "02089e83-9f2e-4871-80e9-5eb90761dc6d",
   "errors": null,
-  "result": "37",
+  "result": "37 judgments written.",
   "path_denials": [
     {
       "tool": "Read",

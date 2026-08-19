@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 13,
-  "duration_ms": 338501,
-  "total_cost_usd": 2.0415,
+  "duration_ms": 317362,
+  "total_cost_usd": 1.9459,
   "usage": {
     "input_tokens": 20,
-    "cache_creation_input_tokens": 105736,
-    "cache_read_input_tokens": 471912,
-    "output_tokens": 29924,
+    "cache_creation_input_tokens": 102968,
+    "cache_read_input_tokens": 467053,
+    "output_tokens": 27302,
     "output_tokens_details": {
-      "thinking_tokens": 7888
+      "thinking_tokens": 7306
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 105736,
+      "ephemeral_1h_input_tokens": 102968,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 40,
-        "cache_read_input_tokens": 104015,
-        "cache_creation_input_tokens": 5797,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 101717,
+        "cache_creation_input_tokens": 5327,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 5797
+          "ephemeral_1h_input_tokens": 5327
         },
         "type": "message"
       }
@@ -40,20 +40,20 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 20,
-      "outputTokens": 29924,
-      "cacheReadInputTokens": 471912,
-      "cacheCreationInputTokens": 105736,
+      "outputTokens": 27302,
+      "cacheReadInputTokens": 467053,
+      "cacheCreationInputTokens": 102968,
       "webSearchRequests": 0,
-      "costUSD": 2.041516,
+      "costUSD": 1.9458565,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "e7837778-69ba-452b-b443-ac7c622e6fac",
+  "session_id": "83be0272-80eb-4fff-980e-f360e229e84a",
   "errors": null,
-  "result": "135 judgments written (c001–c135) across predictions_001.json, predictions_002.json and predictions_003.json.",
+  "result": "135 judgments written.",
   "path_denials": [],
   "rate_limits": {
     "five_hour": {

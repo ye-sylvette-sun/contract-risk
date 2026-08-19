@@ -11,50 +11,50 @@
   "judgments": [
     {
       "clause_id": "c001",
-      "reasoning_cat1": "The paragraph turns on several open-textured terms — \"the Business\" defined only as \"Spanish language and bilingual print and media business\", capital \"in an amount that DMSA deems appropriate\", and \"all expenditures must be done with the concurrence of DMSA\" — each of which two parties could plausibly read differently, and it says nothing about what LSB contributes beyond \"not ... any cash\", leaving the pre-existing Dialogo publication's status unstated.",
-      "reasoning_cat2": "Its mandatory annual tax distribution and pro-rata profit distribution sit awkwardly against Paragraph 4's waterfall, which subordinates the tax distribution to full repayment of DMSA's unilaterally-sized initial capital and makes any remainder discretionary with the Board; it also interacts uneasily with Paragraph 3's reference to \"Dialogo\" as an existing staffed business rather than the newly-formed LLC.",
-      "prob_cat1": 0.58,
-      "prob_cat2": 0.54,
+      "reasoning_cat1": "The core funding promise — DMSA \"shall contribute the initial capital to launch the LLC in an amount that DMSA deems appropriate\" — pairs a mandatory verb with a purely subjective measure, and \"initial capital\" is expressly said to include soft items (travel, legal fees, \"labor of management and staff\"), so its amount and character are indeterminate; \"all expenditures must be done with the concurrence of DMSA\" and the misspelling of the member's name (\"Lilhan\") add further construction handles.",
+      "reasoning_cat2": "Paragraph 1 gives the board discretion over distributions and mandates pro rata sharing, while paragraph 4 imposes a mandatory waterfall that repays DMSA's undefined \"initial capital\" ahead of any member distribution, and the promised right-of-first-refusal side agreement in paragraph 1 is not among the further documents listed in paragraph 6.",
+      "prob_cat1": 0.57,
+      "prob_cat2": 0.49,
       "dataset_clause_id": "pos1"
     },
     {
       "clause_id": "c002",
-      "reasoning_cat1": "The one-sided structure — DMSA free to keep and originate business while LSB is bound by \"diligent efforts\" and a non-compete reaching anything \"to the extent it relates to the Business\" — plus the merely precatory \"intends to use diligent efforts\", gives a court plainly nameable vague terms and a contra proferentem/one-sidedness point.",
-      "reasoning_cat2": "The freedom it gives DMSA and its principals to compete pulls against Paragraph 1's statement that the parties form the LLC \"for the purpose of jointly developing\" the Business and against the opening promise here to \"jointly pursue the Business\"; it also switches to \"the Company\", a term defined nowhere in Paragraph 1.",
-      "prob_cat1": 0.55,
-      "prob_cat2": 0.42,
+      "reasoning_cat1": "The paragraph simultaneously says DMSA has \"any obligation\" to direct nothing to the LLC and then that it \"does agree that it intends to use diligent efforts to direct appropriate business\" — \"intends to\" versus \"agrees\", plus \"diligent efforts\" and \"appropriate business\", are exactly the kind of terms two parties would read differently; the one-sided asymmetry (LSB is flatly barred from outside Business activity, DMSA is not) invites construction against the drafter.",
+      "reasoning_cat2": "It sits awkwardly with paragraph 1's statement that the parties form the LLC \"for the purpose of jointly developing\" the Business and with LSB's role as Publisher developing long-term strategy, since DMSA's reserved freedom to keep competing media and advertising clients can hollow out the joint purpose; it also refers to \"the Company\" where the rest of the instrument uses \"the LLC\".",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.47,
       "dataset_clause_id": "neg1"
     },
     {
       "clause_id": "c003",
-      "reasoning_cat1": "A single undefined sentence: \"the staffs of DMSA and Dialogo\" uses \"Dialogo\" — the name Paragraph 1 gives to the LLC itself — so it either refers circularly to the new LLC or, more likely, to LSB's pre-existing Dialogo newspaper, and \"initially rely on\" fixes neither duration nor payment.",
-      "reasoning_cat2": "Read against Paragraph 1, which names the LLC \"Dialogo\" and says LSB contributes no cash and nothing else, this sentence is the only hint that an existing Dialogo business and its staff come into the venture, which is precisely the kind of unreconciled gap a court must construe.",
-      "prob_cat1": 0.62,
-      "prob_cat2": 0.58,
+      "reasoning_cat1": "A single undefined sentence: \"initially\" has no end point, \"rely on the staffs\" states no obligation, cost allocation or duration, and \"Dialogo\" is used as if it were an entity separate from the LLC.",
+      "reasoning_cat2": "Paragraph 1 defines the LLC itself as \"Dialogo\", so read with paragraph 1 this clause says the LLC will rely on its own staff — an incoherence unless \"Dialogo\" means LSB's pre-existing publication; it also cuts against paragraph 4's rule that no member may incur costs for the LLC except under an approved budget.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.51,
       "dataset_clause_id": "neg2"
     },
     {
       "clause_id": "c004",
-      "reasoning_cat1": "The text is materially garbled and at least one sentence trails off unfinished (\"it is the Domd of Dibemes nee wilt barron, + but thet may' our in thi Sunure Hf eppreved by\"), and the waterfall's first tier — reimbursement of unspecified \"out of pocket costs\" — and the \"approved budget\" are undefined.",
-      "reasoning_cat2": "It conflicts with Paragraph 1: there the board \"shall distribute each year at least enough cash\" for owners' taxes and all distributed profits go pro rata, whereas here tax money ranks only third behind repayment of DMSA's self-determined initial capital and the residue is discretionary.",
-      "prob_cat1": 0.55,
-      "prob_cat2": 0.52,
+      "reasoning_cat1": "The waterfall's terms are undefined and open — \"any out of pocket costs\" (whose?), \"the initial capital to launch the LLC\" (an amount DMSA alone fixes), and the residual Board discretion — and the closing sentence conditions all spending on an \"approved budget\" that the clause never provides a mechanism to approve.",
+      "reasoning_cat2": "It conflicts with paragraph 1, which vests distribution decisions in the board and promises pro rata distribution of all distributed profits plus a mandatory annual tax distribution, whereas here client receipts are consumed by cost reimbursement and repayment of DMSA's capital first; no budget process appears anywhere else in the agreement.",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.48,
       "dataset_clause_id": "neg3"
     },
     {
       "clause_id": "c005",
-      "reasoning_cat1": "The definition of \"Proprietary Information\" is a long enumerated list closing with the broad, undelimited \"client provided information, documents and data\", raising an ejusdem generis/scope question, and the provision has no time limit or carve-out for information already known to a party.",
-      "reasoning_cat2": "It coexists with Paragraph 2, which lets DMSA and its principals retain and originate advertising contracts and clients for their own benefit — potentially using the very client lists this paragraph makes confidential to the LLC — a tension worth construing, though the paragraphs can arguably be harmonised.",
-      "prob_cat1": 0.44,
-      "prob_cat2": 0.33,
+      "reasoning_cat1": "The definition of \"Proprietary Information\" is a long enumerated list ending in \"client provided information, documents and data\", leaving its outer reach and any exclusion for publicly known or independently developed information unstated, and the consent carve-out (\"without the prior written consent of the LLC\") sits oddly beside a use permitted \"for purposes of this Agreement\".",
+      "reasoning_cat2": "It is hard to reconcile with paragraph 2, which lets DMSA and its principals keep and originate advertising clients for their own benefit while client lists and prospects are defined as the LLC's Proprietary Information; no other provision resolves that overlap.",
+      "prob_cat1": 0.33,
+      "prob_cat2": 0.31,
       "dataset_clause_id": "neg4"
     },
     {
       "clause_id": "c006",
-      "reasoning_cat1": "It is an agreement to execute further documents on unstated \"standard terms and conditions\", with a duplicated verb and an incomplete list, so whether it binds the parties to anything definite is genuinely arguable.",
-      "reasoning_cat2": "Its contemplation of an articles of organization and an operating agreement yet to be negotiated bears on whether the whole instrument (including Paragraph 1's promise that \"the owners will sign an agreement\" on transfers) is a binding contract or a preliminary memorandum — a whole-instrument question a court would have to answer.",
-      "prob_cat1": 0.48,
-      "prob_cat2": 0.4,
+      "reasoning_cat1": "It is an agreement to execute later documents on unspecified \"standard terms and conditions\", a classic agreement-to-agree whose content cannot be fixed from the text, and the listing of only articles of organization and an operating agreement leaves other contemplated documents outside the list.",
+      "reasoning_cat2": "Paragraph 1 separately promises a right-of-first-refusal and share-issuance agreement that this list omits, so the two provisions do not fully match, though nothing else in the instrument is directly contradicted.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.26,
       "dataset_clause_id": "neg5"
     }
   ]

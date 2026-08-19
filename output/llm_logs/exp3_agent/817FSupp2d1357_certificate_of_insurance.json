@@ -8,15 +8,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 8,
-  "duration_ms": 69556,
-  "total_cost_usd": 0.3426,
+  "duration_ms": 64334,
+  "total_cost_usd": 0.3277,
   "usage": {
-    "input_tokens": 10,
-    "cache_creation_input_tokens": 18897,
-    "cache_read_input_tokens": 51811,
-    "output_tokens": 5108,
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 18658,
+    "cache_read_input_tokens": 34940,
+    "output_tokens": 4944,
     "output_tokens_details": {
-      "thinking_tokens": 1679
+      "thinking_tokens": 1443
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,7 +24,7 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 18897,
+      "ephemeral_1h_input_tokens": 18658,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
@@ -32,11 +32,11 @@
       {
         "input_tokens": 2,
         "output_tokens": 9,
-        "cache_read_input_tokens": 18208,
-        "cache_creation_input_tokens": 4765,
+        "cache_read_input_tokens": 18130,
+        "cache_creation_input_tokens": 4604,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 4765
+          "ephemeral_1h_input_tokens": 4604
         },
         "type": "message"
       }
@@ -45,19 +45,19 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 10,
-      "outputTokens": 5108,
-      "cacheReadInputTokens": 51811,
-      "cacheCreationInputTokens": 18897,
+      "inputTokens": 8,
+      "outputTokens": 4944,
+      "cacheReadInputTokens": 34940,
+      "cacheCreationInputTokens": 18658,
       "webSearchRequests": 0,
-      "costUSD": 0.3426255,
+      "costUSD": 0.32769,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "c1f6d75d-3ef8-4e92-ab27-a792a314a449",
+  "session_id": "5e8e8724-361d-47a7-a48f-62cbe562cb07",
   "errors": null,
   "result": "11 judgments written.",
   "path_denials": [],

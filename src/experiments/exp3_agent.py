@@ -64,18 +64,22 @@ WARN_AT = 0.90              # rate-limit utilisation at which we stop launching
 
 # -------------------------------------------------------------- workspace ----
 def write_examples(root, examples):
-    """One directory per worked pair: the whole contract, plus the notes."""
+    """One directory per worked pair, holding the notes and nothing else.
+
+    The example CONTRACTS are deliberately not here. `exp3_llm_api.py` puts only
+    the two provision texts and the court's words in its few-shot block, so
+    shipping the full contracts would give this arm more evidence than the one
+    it is compared against.
+    """
     for e in examples:
         r, foil = e["row"], e["foil"]
         d = root / "examples" / f"{e['code']}_{r['contract_id']}"
         d.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(lib.ROOT / r["contract_file"], d / "contract.txt")
 
         notes = [
             f"# Worked example — {api.TYPE_NAME[e['code']]}",
             "",
-            f"Contract `{r['contract_id']}`, filed in {r['citation']}. The full "
-            f"text is in `contract.txt` beside this file.",
+            f"Contract `{r['contract_id']}`, filed in {r['citation']}.",
             "",
             f"A court construed **{e['n_pos']}** of this contract's provisions; "
             f"the other **{e['n_neg']}** it did not. Read that as the base rate "
@@ -145,8 +149,7 @@ Work in this order.
 1. Read every `examples/*/notes.md`. Each gives a provision a federal court
    actually construed and the court's own words about the dispute, paired with a
    provision from the same contract that no court construed. That is the
-   standard to apply — not your own sense of what looks badly drafted. The
-   example contracts are there in full if you want the context around them.
+   standard to apply — not your own sense of what looks badly drafted.
 2. Read `contract.txt`. You need the whole instrument for Category 2: a conflict
    cannot be seen from one provision alone. It is long — read it in pieces, and
    use Grep to chase a defined term or a cross-reference wherever it leads.

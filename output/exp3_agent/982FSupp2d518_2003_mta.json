@@ -17,97 +17,97 @@
   "judgments": [
     {
       "clause_id": "c001",
-      "reasoning_cat1": "The opening paragraph is introductory rather than operative and its key phrase, 'for use In a collaborative research study,' is undefined and vague as to what collaboration entails; the OCR-level errors ('inc e', 'th University') do not themselves change meaning.",
-      "reasoning_cat2": "It frames the deal as a collaborative research study while the operative terms (¶2 total ban on transfer, ¶3 limiting use to creating a lentiviral construct for pre-clinical studies, ¶4 no commercial purpose) are purely restrictive, which is the classic recital-versus-operative tension over how far the collaboration extended.",
+      "reasoning_cat1": "The purpose clause turns on the undefined phrase \"collaborative research study,\" which sets no boundary on what work is within or outside the arrangement, and describes the transferred item only as \"biological material that is proprietary to St. Jude.\" That is a nameable vagueness a court could be asked to apply, though as an introductory sentence its operative force is limited.",
+      "reasoning_cat2": "Read against Paragraph 3 (c004), which confines use to creating a lentiviral construct for pre-clinical studies, and Paragraph 6 (c007) on joint publication of the \"collaborative research study,\" the preamble's broad framing of a collaboration can be argued to enlarge or qualify the narrow operative permission. That is a classic recital-vs-operative tension, but the mismatch is one of emphasis rather than outright contradiction.",
       "prob_cat1": 0.31,
-      "prob_cat2": 0.34,
+      "prob_cat2": 0.3,
       "dataset_clause_id": "neg1"
     },
     {
       "clause_id": "c002",
-      "reasoning_cat1": "The definition of 'Material' turns on the phrase 'any progeny, portions, unmodified derivatives and any accompanying know-how or data,' and whether a modified or newly engineered construct made from the transferred material is still 'Material' is exactly the kind of enumerated-list/lexical boundary a court must construe; 'unmodified derivatives' has no stated boundary.",
-      "reasoning_cat2": "Read against ¶3, which expressly authorises the Recipient to use the Material 'to create a lentiviral chimeric T-cell receptor construct,' the definition's retention of title and denial of rights leaves genuinely unresolved who owns that new construct, and ¶8's patent and license terms assume Recipient inventions exist.",
-      "prob_cat1": 0.72,
-      "prob_cat2": 0.52,
+      "reasoning_cat1": "The definition of \"Material\" — the construct \"including any progeny, portions, unmodified derivatives and any accompanying know-how or data\" — is a general-plus-enumerated list whose reach over modified derivatives is precisely what two parties would fight about, and \"unmodified derivatives\" and \"know-how\" are each contestable terms. The retained-title and no-implied-licence sentences compound the question of what the Recipient's own creations are.",
+      "reasoning_cat2": "Paragraph 3 (c004) expressly authorises the Recipient to make a new lentiviral construct from the Material, so whether that new construct is itself \"Material\" (and thus caught by Paragraphs 4, 7 and 8) cannot be resolved from the definition alone; Paragraph 8's phrase \"any product that contains Material\" depends entirely on this definition. The instrument gives no rule for modified derivatives, leaving a genuine internal gap.",
+      "prob_cat1": 0.68,
+      "prob_cat2": 0.55,
       "dataset_clause_id": "pos1"
     },
     {
       "clause_id": "c003",
-      "reasoning_cat1": "The transfer ban is absolute in form but its reach depends entirely on the contested scope of 'Material'; 'made available to any other person or third party' and 'immediate and direct control' are broad phrases whose application to collaborators or derived constructs is uncertain.",
-      "reasoning_cat2": "It sits awkwardly with the preamble's 'collaborative research study' and with ¶3's authorisation to create a new construct, and against ¶5's unrestricted right of St. Jude to distribute the same material, so the one-sided prohibition invites argument about whether derivatives are covered.",
-      "prob_cat1": 0.4,
-      "prob_cat2": 0.41,
+      "reasoning_cat1": "\"Persons directly supervised by Recipient Scientist\" and \"immediate and direct control\" are vague at the edges, and the ban on transfer \"to any other laboratory or ... any other person or third party\" is broadly drafted against the Recipient. Still, the prohibition is stated in absolute terms and is comparatively easy to apply.",
+      "reasoning_cat2": "It sits comfortably with Paragraph 5 (c006), which preserves only St. Jude's distribution rights, and with Paragraph 7 (c008)'s no-other-rights language; the only strain is whether products made from the Material, rather than the Material itself, are covered, which turns on the c002 definition. No direct contradiction with another operative term was found.",
+      "prob_cat1": 0.22,
+      "prob_cat2": 0.16,
       "dataset_clause_id": "neg2"
     },
     {
       "clause_id": "c004",
-      "reasoning_cat1": "'[W]ill only be used to create a lentiviral chimeric, T-cell receptor construct to be used in pre-clinical studies' is genuinely ambiguous as to whether the pre-clinical limitation attaches only to the act of creation or follows the resulting construct forever, and whether that construct is itself governed by the Agreement.",
-      "reasoning_cat2": "It must be reconciled with ¶1's definition of Material (which covers only 'unmodified derivatives') and with ¶4's bar on human and commercial use, and the three together leave open whether later clinical or commercial use of the derived lentiviral construct breaches the deal.",
-      "prob_cat1": 0.66,
-      "prob_cat2": 0.53,
+      "reasoning_cat1": "\"Will only be used to create a lentiviral chimeric T-cell receptor construct to be used in pre-clinical studies\" is genuinely ambiguous as to whether the pre-clinical limitation attaches to the use of the Material, to the new construct in perpetuity, or only to the immediate project, and \"pre-clinical\" itself invites argument. This is the kind of short restrictive phrase that two parties read oppositely.",
+      "reasoning_cat2": "Paragraph 4 (c005) separately bars human use and commercial use, and Paragraph 8 (c009) contemplates that the Recipient may patent and (with approval) commercialise inventions made through use of the Material — which is hard to reconcile with a permanent pre-clinical-only limit on the derived construct. Whether the restriction survives into the new construct depends on the \"Material\" definition in c002.",
+      "prob_cat1": 0.63,
+      "prob_cat2": 0.48,
       "dataset_clause_id": "pos2"
     },
     {
       "clause_id": "c005",
-      "reasoning_cat1": "'[A]ny commercial purpose' is undefined and its boundary (sponsored research, licensing, a company-funded trial) is a familiar site of dispute, and 'may not be used in humans' likewise leaves open whether it reaches products derived from the Material.",
-      "reasoning_cat2": "It reads directly against ¶8, which contemplates commercialisation of 'any product that contains Material' with St. Jude's prior written approval and Recipient patent filings, so an absolute no-commercial-purpose rule and a consent-based commercialisation rule are hard to harmonise.",
+      "reasoning_cat1": "\"The Material will not be used for any commercial purpose\" and \"may not be used in humans\" are flat prohibitions whose reach depends on the contested word \"Material\"; \"commercial purpose\" is an identifiably vague boundary (does patenting, sponsored research or licensing count?). The comma splice before \"The Material will not be used\" is cosmetic only.",
+      "reasoning_cat2": "Paragraph 8 (c009) permits the Recipient to commercialise products containing Material with St. Jude's prior written approval and to patent inventions made through use of the Material, which pulls directly against an unqualified ban on any commercial purpose. That tension between Paragraphs 4 and 8 is a specific, nameable internal conflict.",
       "prob_cat1": 0.44,
       "prob_cat2": 0.52,
       "dataset_clause_id": "neg3"
     },
     {
       "clause_id": "c006",
-      "reasoning_cat1": "A single short sentence reserving an 'unrestricted right to distribute' to commercial or noncommercial entities; the wording is plain and the operative term has no competing meaning.",
-      "reasoning_cat2": "It is asymmetric with ¶2's total ban on Recipient transfers but not contradictory, since the parties are differently situated; nothing elsewhere (¶1 title retention) cuts against it.",
+      "reasoning_cat1": "A single sentence reserving an \"unrestricted right to distribute the Material to other commercial or noncommercial entities\" is short and definite, and the enumerated pair \"commercial or noncommercial\" is exhaustive rather than open-ended. Little here for a court to construe.",
+      "reasoning_cat2": "It is the mirror image of the Recipient-side transfer ban in Paragraph 2 (c003) and does not collide with the exclusivity-free structure of the agreement; nothing elsewhere promises the Recipient any exclusivity that this would contradict. No conflict found.",
       "prob_cat1": 0.11,
-      "prob_cat2": 0.12,
+      "prob_cat2": 0.09,
       "dataset_clause_id": "neg4"
     },
     {
       "clause_id": "c007",
-      "reasoning_cat1": "The sentence is missing its modal verb ('using the Material [shall] be jointly published'), a mechanical defect that leaves the obligation's mandatory character unclear, and 'in accordance with academic standards' is an unbounded standard.",
-      "reasoning_cat2": "Its trigger, 'the collaborative research study between St. Jude and Recipient Scientist,' depends on the preamble's undefined description of the collaboration, but no other clause contradicts it.",
-      "prob_cat1": 0.47,
-      "prob_cat2": 0.21,
+      "reasoning_cat1": "The sentence is missing its operative verb (\"result ... using the Material ___ be jointly published\"), so whether joint publication is mandatory or merely agreed-to is unclear, and \"in accordance with academic standards\" is an undefined external benchmark. Both the gap and the standard are nameable defects.",
+      "reasoning_cat2": "It keys to the preamble's \"collaborative research study\" (c001), so its scope depends on how far that collaboration extends, but no other provision addresses publication or confidentiality to contradict it. The fit with the rest of the instrument is loose rather than inconsistent.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.17,
       "dataset_clause_id": "neg5"
     },
     {
       "clause_id": "c008",
-      "reasoning_cat1": "'[D]estroy all unused Materials' on termination is clear enough, but the clause says nothing about which restrictions survive termination, and the OCR-garbled text ('thirty (30) clays') does not itself change meaning.",
-      "reasoning_cat2": "Read with ¶2's transfer ban, ¶4's use limits and ¶8's commercialisation consent, it is uncertain whether a thirty-day notice frees the Recipient of all obligations while St. Jude keeps title under ¶1 — a survival gap rather than a flat contradiction.",
-      "prob_cat1": 0.28,
-      "prob_cat2": 0.34,
+      "reasoning_cat1": "\"No rights in the Material other than those specifically set forth in the Agreement\" and termination on thirty days' notice are definite; the residual soft spots are the shift between \"Material\" and \"Materials\" and the undefined reach of \"unused Materials\" (does it capture derived constructs?). Nothing else in the wording is genuinely two-sided.",
+      "reasoning_cat2": "The clause contains no survival provision, yet Paragraph 8 (c009) grants St. Jude a perpetual-sounding non-exclusive licence and imposes a sixty-day patent-notification duty, and Paragraph 1 (c002) reserves title — so what survives an at-will termination is left unresolved. That is a real, if modest, whole-instrument gap rather than a flat contradiction.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.29,
       "dataset_clause_id": "neg6"
     },
     {
       "clause_id": "c009",
-      "reasoning_cat1": "'[A]ny product that contains Material' begs the contested definitional question, and the licence back — mis-transcribed as 'raw-exclusive' (non-exclusive) over 'any inventions that arise from the use of the Materials' — is broad and undefined in scope, with a further garbled inventorship sentence appended.",
-      "reasoning_cat2": "It sits against ¶4's flat prohibition on use 'for any commercial purpose' and against ¶1's denial of any express or implied licence to Recipient, so the three clauses together leave genuine doubt about whether commercialisation was ever permissible and who owns Recipient inventions.",
-      "prob_cat1": 0.55,
-      "prob_cat2": 0.57,
+      "reasoning_cat1": "\"Any product that contains Material\" is the pivotal ambiguous phrase — whether a construct engineered from the Material \"contains\" it is exactly the kind of question two parties read oppositely — and \"inventions that arise from the use of the Materials\" is an open-ended scope for the reserved licence. The mislabelled paragraph number and the garbled trailing text add to, but do not create, the difficulty.",
+      "reasoning_cat2": "It permits patenting and (with approval) commercialisation, which sits against Paragraph 4's (c005) absolute \"will not be used for any commercial purpose\" and against Paragraph 3's (c004) pre-clinical-only limitation; its operation also depends wholly on the \"Material\" definition in Paragraph 1 (c002). Those are specific, named inconsistencies within the same short instrument.",
+      "prob_cat1": 0.6,
+      "prob_cat2": 0.52,
       "dataset_clause_id": "pos3"
     },
     {
       "clause_id": "c010",
-      "reasoning_cat1": "A conventional capitalised disclaimer of warranties and non-infringement; the terms are standard and no phrase carries a competing reasonable meaning despite the OCR noise.",
-      "reasoning_cat2": "Nothing elsewhere — ¶1's patent-application acknowledgment or ¶10's liability allocation — conflicts with it; the disclaimer is consistent with St. Jude's retained title.",
-      "prob_cat1": 0.1,
+      "reasoning_cat1": "A conventional capitalised disclaimer of merchantability, fitness and non-infringement, expressed in settled boilerplate language with no catch-all resting on enumerated specifics. The only oddity is OCR noise, not a drafting error.",
+      "reasoning_cat2": "It coexists naturally with the liability allocation in Paragraph 10 (c011) and with the acknowledgment in Paragraph 1 (c002) that the Material may be the subject of a patent application; no provision elsewhere promises any warranty. No conflict found.",
+      "prob_cat1": 0.08,
       "prob_cat2": 0.06,
       "dataset_clause_id": "neg7"
     },
     {
       "clause_id": "c011",
-      "reasoning_cat1": "A long, carefully layered liability allocation with a defined 'Claims' term and a narrow gross-negligence carve-out; 'solely caused by' is strict but not ambiguous, and 'Except to the extent prohibited by law' is a standard saving phrase.",
-      "reasoning_cat2": "It dovetails with ¶9's warranty disclaimer and ¶4's compliance obligation, and no other provision allocates risk differently.",
-      "prob_cat1": 0.13,
+      "reasoning_cat1": "The allocation is long but internally consistent, with the usual carve-outs (\"except to the extent prohibited by law\"; claims \"solely caused by the gross negligence or willful misconduct of St. Jude\"); \"solely caused\" is a possible pressure point but a familiar and workable one. The collective defined term \"Claims\" is properly introduced.",
+      "reasoning_cat2": "It complements the disclaimer in Paragraph 9 (c010) and does not contradict Paragraph 4's (c005) requirement of lawful storage, use and disposal; no other clause allocates risk differently. No conflict found.",
+      "prob_cat1": 0.11,
       "prob_cat2": 0.07,
       "dataset_clause_id": "neg8"
     },
     {
       "clause_id": "c012",
-      "reasoning_cat1": "A purely administrative signing instruction that creates no substantive obligation and has no operative term to construe.",
-      "reasoning_cat2": "It is consistent with the preamble's statement that the Agreement is 'effective upon signing' and with the signature block; nothing conflicts.",
-      "prob_cat1": 0.05,
+      "reasoning_cat1": "A ministerial signing instruction naming the person to whom the countersigned letter should be returned; it creates no obligation capable of two readings. Nothing to construe.",
+      "reasoning_cat2": "It matches the preamble's statement that the Agreement is \"effective upon signing\" (c001) and the signature blocks; the only loose thread is that the Recipient Scientist and an authorised official both sign, which no other provision contradicts. No conflict found.",
+      "prob_cat1": 0.04,
       "prob_cat2": 0.05,
       "dataset_clause_id": "neg9"
     }
