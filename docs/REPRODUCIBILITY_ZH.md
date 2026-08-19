@@ -38,6 +38,8 @@
   `DISABLE_*` 及代理变量名的条目，再设置上述开关。注意 review 建议的 `env={...}` 无法
   达到此效果：SDK 构造的是 `{**inherited_env, ..., **options.env, ...}`，`options.env`
   覆盖在继承环境之上，只能增不能减，限制继承必须在父进程完成。记录变量名，不记录值。
+  搬进容器之后这套清扫已无可清扫之物：容器启动时没有任何 `CLAUDE_*` 或 `ANTHROPIC_*`
+  变量，64 个 session 记录的清扫数量都是 **0**。代码保留，因为这个数字正是靠它才可查。
 
 - **CLI 可能在运行中途自动升级。**
   **修复：**`DISABLE_AUTOUPDATER=1`。实际影响有限，原因见下文 CLI 版本一条。
@@ -54,44 +56,34 @@
 - **无文件系统边界。** session 无 `Bash`，但 `Read`、`Glob` 接受绝对路径，可触及本仓库
   源码、`dataset.csv` 中的标准答案或其他合同的工作区。
   **修复：**`PreToolUse` hook 将每个路径参数相对 session 工作区解析，工作区外的一律
-  拒绝并记录。preflight 中模型曾请求 `/tmp/outputs/...` 与
-  `/mnt/user-data/outputs/...`，均被拒绝，任务照常完成。
+  拒绝并记录。检查的参数名包括 `pattern` 与 `glob`，不只是 `file_path`——`Glob` 的路径
+  是走 `pattern` 传的，只看 `file_path` 的 hook 会让绝对路径的 glob 整个漏过去。
+  `test_isolation.py` 用 22 个用例把这件事钉死，宿主机与镜像内都跑。64 个 session 里
+  模型共有 32 次工作区外的尝试，全部是 `Read`，全部被拒绝，全部指向并不存在的位置
+  （`/tmp/outputs/...`、`/mnt/user-data/outputs/...`、`/Users/you/work/...`）；每个
+  session 随后都找到了真实路径并正常完成。
 
 - **`claude-agent-sdk` 不在 `requirements.txt` 中**，已有两条依赖使用 `>=` 下界。
   **修复：**全部改为 `==` 锁定并在运行前提交：`claude-agent-sdk==0.2.139`、
-  `anthropic==0.122.0`、`matplotlib==3.8.4`、`openpyxl==3.1.2`。SDK 须高于 0.1.59，
-  低于该版本 `setting_sources=[]` 行为不正确。
+  `anthropic==0.122.0`、`matplotlib==3.8.4`、`openpyxl==3.1.2`，在镜像构建时装入。
+  看 manifest 时有一点要注意：它记录的是**宿主机**环境——宿主机驱动实验但不执行实验——
+  那里的 `matplotlib` 是 3.11.1，因为 3.8.4 在 Windows + CPython 3.13 上没有 wheel。
+  真正决定 session 行为的两个版本 `claude-agent-sdk` 与 `anthropic` 处处一致；
+  `matplotlib` 与 `openpyxl` 只用来画图和读表格，session 运行的代码一个都不 import。
+  SDK 须高于 0.1.59，低于该版本 `setting_sources=[]` 行为不正确。
 
 - **仅记录了 CLI 版本，机器环境无记录。**
   **修复：**每次调用在首个 session 前写入
   `output/llm_logs/exp3_agent/run_manifest_<时间戳>.json`，结束时再写一次，内容包括
   SDK 与 CLI 版本、Python 解释器、平台、git commit 与 dirty 标志、隔离选项原文、被清扫
   的环境变量名单、生效的开关、prompt 与 `dataset.csv`、`contracts.json` 的 SHA-256、
-  选中的示范例子、合同运行顺序。文件名带时间戳而非覆盖写，因为脚本可续跑。
+  模型、effort、选中的示范例子、合同运行顺序，以及容器的 image id 与内容哈希。每个字段
+  对应 review 的哪一条要求，见第四节。文件名带时间戳而非覆盖写，因为脚本可续跑。
 
 - **记录的 CLI 版本会是错的。** SDK 的 wheel 内置一份 CLI 并优先于 `PATH` 使用。本机
   `claude --version` 为 Homebrew 的 2.1.227，实际运行的是内置的 2.1.233。
   **修复：**manifest 通过 SDK 自身的查找逻辑解析 CLI，同时记录其路径、版本与 `PATH`
   上的版本。因此锁定 `claude-agent-sdk` 即锁定 CLI。
-
-- **`claude-opus-5` 是别名而非带日期的快照**，API 返回的即该别名，无法直接锁定。
-  **部分修复：**记录可观测项——API 每次调用返回的 `model` 字段、CLI 每个 session 报告的
-  `model_usage` 键、manifest 的起止时间。若日后暴露带日期的 id，在 `lib.MODEL` 中锁定。
-
-## 二、review 中两条不成立的判断
-
-- **"memory 位置按 git 仓库确定，仓库下所有工作区共用一份 memory。"** 实际按工作目录
-  的绝对路径确定：64 个工作区在 `~/.claude/projects/` 下生成 64 个独立目录，其中没有
-  任何一个含 `memory/`。工作区结构无需改动。
-
-- **"轨迹中出现一次 `Bash` 与一次 `Edit` 调用，说明实际代码与提交代码不一致，或工具
-  限制失效。"** 两次调用均返回错误：*"No such tool available: Bash. Bash exists but is
-  not enabled in this context."* 64 个 session 全部 755 次工具调用的统计为
-  `Read 470 / Write 170 / Glob 92 / Grep 21 / Edit 1 / Bash 1`。两次越界尝试均被拒绝，
-  这是限制生效、且提交代码与实际运行代码一致的证据。仍加入 `disallowed_tools`，因为
-  "未列出"与"被明确拒绝"是两种不同的说法，只有后者可从外部检查。
-
-## 二之补、容器隔离
 
 - **原先运行在开发机的普通用户下。** 环境清扫覆盖不到企业托管的组织级策略
   (`/etc/claude-code/managed-settings.json`)；而任何交互式用过 Claude Code 的机器，
@@ -108,16 +100,74 @@
   **处理：** 用环境变量 `CLAUDE_CODE_OAUTH_TOKEN` 传入；没有它时，只读挂载单个文件
   `~/.claude/.credentials.json`。目录本身永不挂载。manifest 记录用了哪条路径，不记录值。
 
+- **review 未提及、我们自查发现：两路看到的示范例子并不相同。** agent 的工作区里放了
+  每个示范例子的合同全文，而 `exp3_llm_api.py` 的 few-shot 块里只有两段条款正文和法院
+  的原话。也就是说 agent 手上有对照组拿不到的材料。
+  **处理：**删掉工作区里的示范合同，连同 prompt 里提到它们的那一句，然后全部重跑。
+  轨迹统计显示这个入口两次运行中从未被用过——64 个 session 全都读了三份 `notes.md`，
+  没有一个打开过示范合同——所以没有结果依赖于它；但对比的成立不应该建立在"模型主动
+  放弃了给它的优势"之上。
+
+- **`claude-opus-5` 是别名而非带日期的快照**，API 返回的即该别名，无法直接锁定。
+  **部分修复：**记录可观测项——API 每次调用返回的 `model` 字段、CLI 每个 session 报告的
+  `model_usage` 键、manifest 的起止时间。若日后暴露带日期的 id，在 `lib.MODEL` 中锁定。
+
+## 二、review 中两条不成立的判断
+
+- **"memory 位置按 git 仓库确定，仓库下所有工作区共用一份 memory。"** 实际按工作目录
+  的绝对路径确定：64 个工作区在 `~/.claude/projects/` 下生成 64 个独立目录，其中没有
+  任何一个含 `memory/`。工作区结构无需改动。
+
+- **"轨迹中出现一次 `Bash` 与一次 `Edit` 调用，说明实际代码与提交代码不一致，或工具
+  限制失效。"** 两次调用均返回错误：*"No such tool available: Bash. Bash exists but is
+  not enabled in this context."* 被拒绝恰恰说明限制生效，而不是失效。仍加入
+  `disallowed_tools`，因为"未列出"与"被明确拒绝"是两种不同的说法，只有后者可从外部
+  检查。本次运行 64 个 session 全部 727 次工具调用的统计为
+  `Read 445 / Write 165 / Glob 92 / Grep 25`，没有别的。
+
 ## 三、未解决的问题
 
 - **每个条件仅运行一次。** 两路均未设 temperature 与 seed，API 也不提供确定性采样，
-  重跑不会得到相同数字。因此每个指标的**跑与跑之间的波动没有测量**，两路之间的差距也
-  无法确认超过了这个波动。多次配对重复可界定该波动，因成本未做。这是唯一会影响结果
-  解读方式的遗留项，详见 [REPORT.md](REPORT.md) 第 5 节。
+  重跑不会得到相同数字。没有做重复实验（成本原因），因此每个指标**跑与跑之间的波动
+  没有量化**。
+
+  有一个附带的观测可以给出量级：agent 一路被完整执行过两次，两次的 `prompt_sha256`、
+  `input_sha256`、模型、effort、轮数上限与镜像均一致；两次之间在全语料上 ROC-AUC 相差
+  约 0.02，召回率@0.5 相差约 0.10。这是一次观测而非方差估计，但它意味着几个百分点以内
+  的 ROC-AUC 差异不能单独拿来解读。哪些结论经得起这个尺度、哪些经不起，见
+  [REPORT.md](REPORT.md) 第 6 节。这仍是唯一会影响结果解读方式的遗留项。
 
 - **`claude-opus-5` 是别名。** 见第一节：能观测到的都记录了，但没有带日期的快照可锁。
 
-## 四、验证方式
+## 四、记录了什么、记在哪
+
+每次运行留下两类文件，都已提交。
+
+**`run_manifest_<时间戳>.json`**——每次启动一份，首个 session 前写一次，结束时再写一次：
+
+| review 的要求 | 字段 |
+|---|---|
+| SDK / CLI 版本 | `packages`；`cli_version`、`cli_path`（实际运行的内置二进制）、`cli_on_path`（`claude --version` 会报告的那个） |
+| 环境变量白名单 | `env_set`、`env_removed` |
+| prompt / 输入哈希 | `prompt_sha256`、`input_sha256`；system prompt 以 `sha256:` 摘要形式存放，不存原文 |
+| 模型、effort | `model`（请求的）、`models_seen`（实际计费的）、`effort`、`max_turns` |
+| 运行顺序 | `contract_order`、`seed`、`examples` |
+| 机器 | `python`、`platform`、`git_commit`、`git_dirty`、`billing` |
+| 隔离 | `options` 原文——`setting_sources`、`skills`、`strict_mcp_config`、`disallowed_tools`、`hooks`、`cwd` |
+| 容器 | image tag、image id，以及 Dockerfile、entrypoint、`isolation.py` 的 SHA-256 |
+
+**`<cid>.json`**——每份合同一份：模型、effort、`models_seen`、session id、轮数、token
+用量、`container_rc`、镜像、`path_denials`，以及 `env_removed`——清扫程序自己给出的
+"这里没有东西可删"的记录。旁边还有 `<cid>.trajectory.jsonl` 与 `<cid>.container.log`。
+
+**指令加载清单**是唯一一条我们用别的方式满足的要求，这个差别应当讲清楚而不是含糊过去：
+CLI 不输出这样的记录，所以没有一份"实际加载了什么"的正面清单。替代的做法是：镜像里
+根本没有可加载的东西——没有 `~/.claude`、没有任何 `CLAUDE.md`、没有 skills、没有托管
+配置文件——再由 `preflight.py` 从 session 自己的轨迹里核对它们确实不存在（第五节）。
+"构造上不存在 + 反向审计"是在 CLI 不支持的前提下能拿到的最强证据，但它确实弱于
+review 要求的那份清单。
+
+## 五、验证方式
 
 `preflight.py` 在剩余合同中选最小的一份，以与正式实验完全相同的选项真实运行一个
 session，随后审计其轨迹，任一项不通过即以非零码退出。检查项：
@@ -142,7 +192,7 @@ python src/experiments/preflight.py                  # 运行一个 session 并�
 python src/experiments/preflight.py --audit <cid>    # 审计已运行的 session
 ```
 
-## 五、复现步骤
+## 六、复现步骤
 
 ```sh
 pip install -r requirements.txt        # 宿主机侧：够用来构建镜像并驱动实验
