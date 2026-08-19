@@ -11,50 +11,50 @@
   "judgments": [
     {
       "clause_id": "c001",
-      "reasoning_cat1": "The cover letter is built on evaluative, boundary-less language — \"broad based, high quality investment banking services\", \"unparalleled auction rate performance\", \"a sincere desire to work with Presbyterian\" — terms whose content a court would have to fix (promise versus puffery) before any of it could be applied. Phrases like \"the commitment and depth of services that we are prepared to provide\" name no obligation and are the sort of words two parties can read very differently.",
-      "reasoning_cat2": "Read against the body of the proposal (c005's list of \"service areas desired by Presbyterian\" including auction agent/broker-dealer services), the letter's promissory tone sits uneasily with a document that elsewhere only describes capabilities, and nothing in this instrument disclaims the letter or reserves the terms for a later agreement. That gap between an introductory, recital-like letter and the descriptive text it introduces is a real but unnamed source of tension.",
-      "prob_cat1": 0.54,
-      "prob_cat2": 0.29,
+      "reasoning_cat1": "The cover letter is written in promotional register — \"broad based, high quality investment banking services,\" \"unparalleled auction rate performance,\" \"a sincere desire to work with Presbyterian\" — terms whose boundary cannot be applied, and the passage is peppered with mechanical corruption (\"IJ\", \"ll _j\", \"I ~ .1\"); the live question is whether such words are puffery or an undertaking of a service standard.",
+      "reasoning_cat2": "Read against the services list in c002 and the claim in c005 to be a \"leader and innovator in each of the service areas desired by Presbyterian,\" the letter's promise of a \"long-term relationship\" is consistent rather than contradictory, and this instrument contains no operative term (no scope, fee or duty clause) for it to collide with.",
+      "prob_cat1": 0.42,
+      "prob_cat2": 0.17,
       "dataset_clause_id": "neg1"
     },
     {
       "clause_id": "c002",
-      "reasoning_cat1": "This is a garbled RFP question header followed by a bullet list of service categories (\"Liquidity and credit support\", \"Assistance with merger, acquisition, and divestiture transactions\") with no lead-in tying the list to any obligation, so the list's scope and whether it is exhaustive is genuinely open. The transcription is also mangled to the point that the sentence structure cannot be reconstructed with confidence.",
-      "reasoning_cat2": "The same service categories reappear in c005 in a differently worded list (auction agent/broker-dealer services, credit enhancement), and the two enumerations do not match item for item, which invites argument about which list defines the engagement. Beyond that mismatch I found no operative provision it contradicts.",
-      "prob_cat1": 0.33,
-      "prob_cat2": 0.16,
+      "reasoning_cat1": "This is the RFP's question restated as a garbled bullet list, with interleaved text and OCR damage (\"Re-marketin~;\", \"divestihire h·ansactions\"), so the enumerated services and the general invitation to \"describe capabilities\" leave the set of services actually offered uncertain — a classic list-scope problem.",
+      "reasoning_cat2": "The list overlaps but does not match the service catalogue in c005 (which adds credit enhancement and omits liquidity/credit support), a mismatch worth noting but not an operative contradiction anywhere in the document.",
+      "prob_cat1": 0.34,
+      "prob_cat2": 0.19,
       "dataset_clause_id": "neg2"
     },
     {
       "clause_id": "c003",
-      "reasoning_cat1": "The quoted Business Principle — \"Our clients' interests always come first\" — is exactly the kind of absolute but undefined statement that parties litigate as either a binding undertaking or mere aspiration, alongside \"focusing on what is best for the client rather than what produces the next trade.\" Its reach (all business activities? this engagement?) cannot be fixed from the words.",
-      "reasoning_cat2": "It incorporates Appendix A by reference while the rest of the document contains no disclaimer or integration language, and it pulls against c005/c006, which describe Goldman acting as principal counterparty on derivatives and as underwriter — roles in tension with an unqualified client-first commitment. That is a genuine whole-instrument strain, though not a clean textual contradiction.",
-      "prob_cat1": 0.51,
-      "prob_cat2": 0.31,
+      "reasoning_cat1": "\"Our clients' interests always come first\" is exactly the kind of phrase two parties read differently — an aspirational business principle or an assumed duty of loyalty — and the sentence carries mechanical defects (missing full stop after \"come first\", \"welt\" for \"well\") that blur where the quoted principle ends.",
+      "reasoning_cat2": "It sits awkwardly beside c002's offer to act as \"Counter-party on derivative transactions\" and c005's underwriting/broker-dealer roles, which are principal, adverse-interest capacities, and the Business Principles are incorporated only by reference to an Appendix A not reproduced here.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.38,
       "dataset_clause_id": "neg3"
     },
     {
       "clause_id": "c004",
-      "reasoning_cat1": "Mostly narrative description of past clients, but \"Services provided ... are similar to those sought by Presbyterian and have included:\" is an open-ended, non-exhaustive list whose boundary (\"similar\", \"have included\") is undefined. The vagueness is real but the sentence promises nothing, which cuts against a construction fight.",
-      "reasoning_cat2": "It introduces the client table and overlaps with the service lists in c002 and c005 without conflicting with them; I found no provision it cannot be reconciled with.",
-      "prob_cat1": 0.24,
-      "prob_cat2": 0.11,
+      "reasoning_cat1": "Descriptive marketing prose; the only soft edges are \"similar to those sought by Presbyterian\" and the open-ended list of services \"have included,\" which describes past clients rather than promising anything, so there is little for a court to construe.",
+      "reasoning_cat2": "Its service list (strategic capital planning, credit strategy, capital raising, strategic advisory) tracks c005 and c002 closely enough to raise no incoherence, and the \"illustrative list\" that follows is plainly non-exhaustive.",
+      "prob_cat1": 0.18,
+      "prob_cat2": 0.1,
       "dataset_clause_id": "neg4"
     },
     {
       "clause_id": "c005",
-      "reasoning_cat1": "The sentence enumerates \"the service areas desired by Presbyterian: capital formation, underwriting; remarketing; auction agent/broker-dealer services; derivative product development and execution; strategic advisory services; and use of credit enhancement\" — a closed-looking list, punctuated inconsistently with both commas and semicolons, that a party could use to define the scope of the engagement. \"Leader and innovator in each\" is also an unmeasurable claim.",
-      "reasoning_cat2": "This list does not line up with the differently worded service list in c002 or the \"have included\" list in c004, so which enumeration governs is unsettled; no outright contradiction appears elsewhere in the document.",
-      "prob_cat1": 0.39,
+      "reasoning_cat1": "The enumerated service areas are punctuated inconsistently (colon, then commas and semicolons mixed) and the claim to be \"a leader and innovator in each of the service areas desired by Presbyterian\" is a vague superlative whose enumerated list may or may not be exhaustive of what was offered.",
+      "reasoning_cat2": "Compared with the c002 bullet list, this catalogue drops liquidity support and merger/acquisition assistance and adds credit enhancement, a discrepancy in the described scope of engagement, though nothing in the document makes either list operative.",
+      "prob_cat1": 0.3,
       "prob_cat2": 0.21,
       "dataset_clause_id": "neg5"
     },
     {
       "clause_id": "c006",
-      "reasoning_cat1": "Largely technical description of the CSM model with capability language (\"can assist\", \"has the capability\"), which commits to little; the passage ends mid-sentence (\"whose organization and finances are complex and lend\") and contains typos such as \"cost of capitat\". Those defects are transcription-level rather than meaning-changing.",
-      "reasoning_cat2": "\"We use this analytical tool for only a select group of clients\" is a qualification sitting against the proposal's general promises of full-service coverage in c001 and c003, but it is a soft tension rather than a conflict with any operative term.",
-      "prob_cat1": 0.21,
-      "prob_cat2": 0.12,
+      "reasoning_cat1": "Mostly concrete description of a proprietary model, but the text is corrupted (\"cost of capitat\", \"struchlring\") and breaks off mid-sentence at \"complex and lend\", and \"the central tool used in providing this service\" leaves \"this service\" without a defined antecedent.",
+      "reasoning_cat2": "The statement that the CSM model is used \"for only a select group of clients\" sits in mild tension with c003's promise of \"complete, broad based, intensive coverage\" for all clients, but no operative provision commits Goldman to deploy the model for Presbyterian.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.16,
       "dataset_clause_id": "neg6"
     }
   ]

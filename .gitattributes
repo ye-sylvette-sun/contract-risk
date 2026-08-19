@@ -1,0 +1,14 @@
+# No end-of-line conversion, on any platform.
+#
+# The experiment's inputs are hashed into
+# output/llm_logs/exp3_agent/run_manifest_<stamp>.json, and the agent is shown
+# output/contracts/<cid>.md by a verbatim copy. A checkout with
+# core.autocrlf=true rewrites every LF to CRLF, which changes those hashes,
+# changes the bytes the model reads and changes every character offset — so the
+# same commit judged on Windows would not be the same experiment as on macOS.
+# It happened: dataset.csv hashed bb6066eb on the machine that ran the first 52
+# contracts and 62009ac6 on the Windows checkout that was to run the rest.
+#
+# `-text` disables the conversion in both directions, whatever the user's
+# core.autocrlf says.
+* -text

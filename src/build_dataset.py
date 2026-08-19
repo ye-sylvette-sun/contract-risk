@@ -1,27 +1,19 @@
 """Assemble and validate dataset.csv (no LLM).
 
-Positives are the clauses step 1 found. Negatives are every *other* clause of
-every contract of the same case — "other" meaning every clause whose line window
-does not intersect a positive's. That is exact set arithmetic, not a similarity
-score: the section containing the disputed sub-clause contains its lines, so it
-is excluded and the exclusion is printed.
+Positives are the clauses step 1 found. Negatives are every other clause whose
+line window does not intersect a positive's — exact set arithmetic, not a
+similarity score.
 
-A positive's own contract always contributes negatives, on purpose. Those two
-classes are then the same document, in the same OCR condition, drafted by the
-same parties — so a classifier cannot win by recognising document style, and
-neither can it win by recognising scan quality, which is what makes it safe to
-carry the OCR damage into the dataset instead of repairing it.
+A positive's own contract always contributes negatives, so both classes come
+from the same document in the same OCR condition: a classifier cannot win by
+recognising style or scan quality, which is what makes it safe to carry the OCR
+damage rather than repair it. The other agreements of the case contribute too —
+they were before the court and not construed, and they are the only documents
+where the right answer is "nothing here".
 
-The other agreements of the case contribute negatives too. A case often files
-several and the court reaches only some; the rest were before the court and were
-not construed, which is what a negative is. They also supply the only documents
-in which the right answer is "nothing here" — without them an evaluation cannot
-see a model that flags something in every contract it is given.
-
-Then it validates, loudly, and refuses to write on failure. The gate is that
-every row re-slices: reading its contract file at the recorded character span
-and normalising must reproduce `clause_text` exactly. Nothing is taken on trust
-from the step artifacts.
+Then it validates, loudly, and refuses to write on failure: every row must
+re-slice from its contract file at the recorded span and reproduce
+`clause_text` exactly.
 
 Input : output/clauses.json, output/inventory.json, output/contracts.json
 Output: output/dataset.csv
@@ -67,30 +59,19 @@ def main():
 
     for citation, found in sorted(clauses.items()):
         case = cases.get(citation, {})
-        # For a contract with no positive of its own, the risk type is the
-        # CASE's — still the Westlaw keys, never a model's choice. Every case in
-        # scope is filed under exactly one code, so this is unambiguous.
+        # Fallback risk type for a contract with no positive of its own. Still
+        # the Westlaw keys, never a model's choice.
         case_code = ",".join(case.get("taxonomy", []))
         case_key = ",".join(sorted(case.get("keys", {})))
 
-        # `clause_id` is numbered WITHIN ITS CONTRACT, in document order.
-        #
-        # Both halves of that matter. Scoping it to the contract means adding
-        # another agreement to the case cannot renumber a clause in a document
-        # that did not change — with case-scoped ids, one new contract sorting
-        # early shifts every id after it, and every prediction keyed on those ids
-        # silently points at the wrong clause. Ordering by character span means
-        # the id is a function of the document and the located boundaries alone,
-        # not of the order a model happened to answer in.
-        #
-        # It is unique per (contract_id, clause_id), which is how every consumer
-        # keys, not per clause_id alone.
+        # `clause_id` is numbered WITHIN ITS CONTRACT, in document order, so
+        # adding an agreement cannot renumber a clause in a document that did
+        # not change, and the id depends only on the located boundaries. Unique
+        # per (contract_id, clause_id), which is how every consumer keys.
         by_pos = defaultdict(list)
         for c in found["clauses"]:
             by_pos[c["contract_id"]].append(c)
-        # The code is per clause: which risk type the court's construction of
-        # THIS clause turned on, drawn from the case's own Westlaw keys and
-        # validated against them in step 1. Never a model's free choice.
+        # The code is per clause, from the case's own Westlaw keys.
         for cid in sorted(by_pos):
             for i, c in enumerate(sorted(by_pos[cid], key=lambda c: c["span"]), 1):
                 rows.append(row(citation, found["case_desc"], registry[cid], c,
@@ -98,19 +79,16 @@ def main():
                                 "step 1 — construed by the court",
                                 c["taxonomy"], c["key"], c["opinion_comment"]))
 
-        # Every inventoried contract of the case contributes negatives, not only
-        # the ones that produced a positive. An agreement filed in the case that
-        # the court never construed is a negative document: its clauses were
-        # before the court and were not disputed.
+        # Every inventoried contract contributes negatives, not only those that
+        # produced a positive.
         n_case = 0
         for cid in sorted(c for c in of_case.get(citation, [])
                           if c in inventory):
             n = 0
             here = [c for c in found["clauses"] if c["contract_id"] == cid]
             positives = [c["lines"] for c in here]
-            # A negative carries the risk type its own contract's positives were
-            # construed under — that is what it is a negative of. Where the
-            # contract has none, it falls back to the case's code.
+            # A negative carries the risk type its own contract's positives
+            # were construed under; failing that, the case's code.
             taxonomy = ",".join(sorted({c["taxonomy"] for c in here})) or case_code
             key = ",".join(sorted({k for c in here
                                    for k in c["key"].split(",")})) or case_key
@@ -134,26 +112,18 @@ def main():
                   f"run step 2")
         print(f"{citation}: {len(found['clauses'])} positive, {n_case} negative")
 
-    # Validate, loudly.
-    #
     # The uniqueness that matters is POSITIONAL: one clause must not be cut
-    # twice out of the same place. This used to assert on `clause_text`
-    # instead, on the assumption that identical text means the same clause
-    # extracted twice. That assumption is false, and an insurance policy breaks
-    # it immediately: every endorsement of one policy carried a verbatim `All
-    # other terms, conditions and limitations of this Policy shall remain
-    # unchanged`, and one boilerplate ran to nine copies. Those are nine real
-    # clauses at nine distinct spans, and refusing to write them would have been
-    # the pipeline lying about the document.
+    # twice from the same place. Asserting on `clause_text` instead would be
+    # wrong — one policy repeats `All other terms ... remain unchanged` across
+    # nine endorsements, and those are nine real clauses at nine spans.
     same_place = [k for k, n in Counter(
         (r["contract_id"], r["source_span"]) for r in rows).items() if n > 1]
     assert not same_place, \
         f"{len(same_place)} clause(s) extracted twice from the same span: " \
         f"{same_place[:3]}"
 
-    # Identical text under BOTH labels is a different matter — the same words
-    # cannot be evidence for and against at once, and no downstream consumer
-    # could resolve it. That is fatal; repetition within one label is not.
+    # Identical text under BOTH labels is fatal: the same words cannot be
+    # evidence for and against at once. Repetition within one label is fine.
     by_text = {}
     for r in rows:
         by_text.setdefault(r["clause_text"], set()).add(r["label"])
@@ -173,8 +143,12 @@ def main():
             f"{r['clause_id']} of {r['citation']} has no opinion passage"
 
     path = lib.OUT / "dataset.csv"
+    # `lineterminator="\n"`: csv defaults to CRLF on every platform, so the
+    # committed dataset.csv (LF) did not byte-match what a rebuild produced, and
+    # the two hashed differently in the run manifests. The rows were identical;
+    # the file was not. Now a rebuild reproduces the committed artifact exactly.
     with path.open("w", newline="", encoding="utf-8") as fh:
-        w = csv.DictWriter(fh, fieldnames=FIELDS)
+        w = csv.DictWriter(fh, fieldnames=FIELDS, lineterminator="\n")
         w.writeheader()
         w.writerows(rows)
 
@@ -187,9 +161,8 @@ def main():
               f"{sum(scores) / len(scores):.3f} mean, "
               f"{sum(1 for s in scores if s == 1.0)} exact")
 
-    # Reported, not asserted: repeated boilerplate is a property of the source
-    # documents. A consumer that wants one row per distinct wording can dedupe
-    # on `clause_text`; the count is printed so nobody has to discover it.
+    # Reported, not asserted: repeated boilerplate is a property of the source.
+    # Dedupe on `clause_text` if you want one row per distinct wording.
     rep = Counter(r["clause_text"] for r in rows)
     dup_texts = {t: n for t, n in rep.items() if n > 1}
     if dup_texts:

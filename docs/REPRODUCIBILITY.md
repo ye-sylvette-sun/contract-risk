@@ -4,9 +4,6 @@ A review found that the agent experiment starts a fresh *conversation* for each
 contract but does not establish a clean *environment*. This document lists each
 point it raised, what was done about it, and how the claims are checked.
 
-The corrected harness is on `main`; the superseded code and results are on
-`legacy_agent_experiment_8.17`.
-
 Only the **agent** arm is affected. `exp3_llm_api.py` is a stateless Messages API
 call with no CLI, settings, memory or filesystem, and its predictions were not
 rerun.
@@ -48,7 +45,10 @@ rerun.
   this: the SDK builds `{**inherited_env, ..., **options.env, ...}`, so
   `options.env` merges over the inherited environment and can only add.
   Restricting inheritance must happen in the parent. Variable names are
-  recorded; values are not.
+  recorded; values are not. Since the run moved into a container the sweep has
+  nothing left to remove: the container starts with no `CLAUDE_*` or
+  `ANTHROPIC_*` variable, and all 64 sessions recorded **0 variables swept**.
+  The code is kept because it is what makes that number checkable.
 
 - **The CLI could update itself mid-run.**
   **Fixed:** `DISABLE_AUTOUPDATER=1`. Limited effect in practice — see the CLI
@@ -69,16 +69,21 @@ rerun.
   accept absolute paths and could reach this repository's source, the gold labels
   in `dataset.csv`, or another contract's workspace.
   **Fixed:** a `PreToolUse` hook resolves every path argument against the
-  session's workspace and refuses anything outside it, recording the refusal. In
-  preflight sessions the model requested `/tmp/outputs/...` and
-  `/mnt/user-data/outputs/...`; every attempt was refused and the task completed
-  normally.
+  session's workspace and refuses anything outside it, recording the refusal.
+  The argument names it checks include `pattern` and `glob`, not only
+  `file_path` — a `Glob` call takes its path through `pattern`, and a hook that
+  inspects only `file_path` lets absolute glob patterns through untouched.
+  `test_isolation.py` pins this in 22 cases and runs both on the host and inside
+  the image. Across the 64 sessions the model made 58 attempts outside the
+  workspace, all `Read`, all refused, all at invented locations
+  (`/tmp/outputs/...`, `/mnt/user-data/outputs/...`, `/Users/you/work/...`);
+  every session then found the real path and finished normally.
 
 - **`claude-agent-sdk` was absent from `requirements.txt`**, and the two entries
   present used `>=` floors.
   **Fixed:** all dependencies pinned with `==` and committed before the run:
   `claude-agent-sdk==0.2.139`, `anthropic==0.122.0`, `matplotlib==3.8.4`,
-  `openpyxl==3.1.2`. The SDK must be newer than 0.1.59, below which
+  `openpyxl==3.1.2`, installed into the image at build time. The SDK must be newer than 0.1.59, below which
   `setting_sources=[]` was mishandled.
 
 - **Only the CLI version was recorded; nothing else about the machine.**
@@ -105,6 +110,30 @@ rerun.
   manifest's start and finish times. If a dated id is exposed for opus-5, pin it
   in `lib.MODEL`.
 
+- **The session ran as an ordinary user on a developer machine.** The
+  environment sweep cannot reach managed organisational policy
+  (`/etc/claude-code/managed-settings.json`), and a machine that has ever run
+  Claude Code interactively carries a `~/.claude` with settings, a memory store
+  and skills in it.
+  **Fixed:** every session runs in its own container, from an image pinned by
+  digest (`ubuntu@sha256:d78ab764...`), as a non-root user whose home was
+  created by the build and holds nothing. There is no managed policy file, no
+  `~/.claude`, no skills marketplace and no `CLAUDE.md` anywhere on the
+  filesystem — not because they were disabled but because they were never
+  installed. The container mounts exactly one contract's workspace at `/work`
+  and the two prompts read-only at `/opt/task`; `dataset.csv`, this repository
+  and the other 63 contracts are not on its filesystem at all. The build asserts
+  that the SDK's bundled CLI is 2.1.233 before the image is usable, so an image
+  that builds cannot quietly carry a different CLI.
+
+- **Authentication had to enter the container without bringing configuration
+  with it.** Bind-mounting `~/.claude` would import settings, memory and skills
+  along with the credential.
+  **Fixed:** `CLAUDE_CODE_OAUTH_TOKEN` is passed as an environment variable, or
+  failing that the single file `~/.claude/.credentials.json` is mounted
+  read-only. The directory is never mounted. Manifests record which route was
+  used, never the value.
+
 ## 2. Two findings in the review that do not hold
 
 - **"Memory is keyed by the git repository, so all workspaces under it share one
@@ -112,27 +141,27 @@ rerun.
   workspaces produced 64 separate directories under `~/.claude/projects/`, none
   containing a `memory/` folder. The workspace layout needed no change.
 
-- **"One `Bash` call and one `Edit` call in the trajectories mean the executed
-  harness differed from the committed one, or the tool restriction did not
-  hold."** Both calls returned an error: *"No such tool available: Bash. Bash
-  exists but is not enabled in this context."* A census of all 755 tool calls
-  across the 64 sessions gives `Read 470 / Write 170 / Glob 92 / Grep 21 /
-  Edit 1 / Bash 1`. Two out-of-scope attempts were refused, which is evidence the
-  restriction held and that the committed code matches the executed code.
-  `disallowed_tools` was added regardless, because "never listed" and "explicitly
-  refused" are different claims and only the second is checkable from outside.
+- **"A `Bash` or `Edit` call in the trajectories means the executed harness
+  differed from the committed one, or the tool restriction did not hold."** Such
+  a call returns *"No such tool available: Bash. Bash exists but is not enabled
+  in this context."* — a refusal is evidence the restriction held, not that it
+  failed. `disallowed_tools` was added regardless, because "never listed" and
+  "explicitly refused" are different claims and only the second is checkable
+  from outside. A census of all 783 tool calls across the 64 sessions gives
+  `Read 460 / Write 171 / Glob 102 / Grep 50` and nothing else.
 
 ## 3. Not fixed
 
-- **One run per condition.** Neither arm sets a temperature or a seed, so a rerun
-  will not reproduce the same numbers. Repeated paired runs would bound that
-  variance; they are not being done, on cost.
+- **One run per condition.** Neither arm sets a temperature or a seed, and the
+  API exposes no way to make sampling deterministic, so a rerun will not
+  reproduce the same numbers. The run-to-run variance of every reported metric
+  is therefore **unmeasured**, and none of the differences between the two arms
+  is known to exceed it. Repeated paired runs would bound it; they were not
+  done, on cost. This is the one open item that changes how the results may be
+  read — see §5 of [REPORT.md](REPORT.md).
 
-- **No OS-level isolation.** The run happens as an ordinary user on one machine,
-  not in a container or under a dedicated account. Managed organisational policy
-  is the one channel the environment sweep cannot reach. The preflight verifies
-  what actually reached the model's context; the manifest records the machine
-  rather than isolating it.
+- **`claude-opus-5` is an alias.** Covered in §1: what is observable is
+  recorded, but there is no dated snapshot to pin.
 
 ## 4. How the claims are checked
 
@@ -148,12 +177,15 @@ non-zero on any failure. Checks:
 - no tool used outside the four, and any such attempt refused;
 - no path outside the workspace served — refused attempts are recorded and pass;
 - a manifest covering this contract, with the isolation options at their set
-  values and every environment flag present in `os.environ`.
+  values and every environment flag present in the session's own environment;
+- the session ran in the expected image with `/work` as its only working
+  directory, and the container had 0 environment variables to sweep — the one
+  number a run on a developer machine could not produce.
 
-Its first two runs failed: once because the manifest named a CLI that never ran,
+Two early runs failed: once because the manifest named a CLI that never ran,
 once because `DISABLE_NON_ESSENTIAL_MODEL_CALLS` is not a valid variable name.
 Both are options that appear to take effect while doing nothing, and neither is
-visible by reading the code.
+visible by reading the code. The current harness passes all 14 checks.
 
 ```sh
 python src/experiments/preflight.py                  # run one session, audit it
@@ -163,12 +195,17 @@ python src/experiments/preflight.py --audit <cid>    # audit one already run
 ## 5. Reproducing the run
 
 ```sh
-pip install -r requirements.txt        # exact pins; the CLI comes with the SDK
+pip install -r requirements.txt        # host side: enough to build and drive
+docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
+claude setup-token                     # by hand, once; the token goes in .env
 python src/experiments/preflight.py    # must print PREFLIGHT PASSED
-python src/experiments/exp3_agent.py --shuffle
+python src/experiments/exp3_agent.py --shuffle --parallel 6
 python src/experiments/compare_exp3.py
 python src/experiments/plot_exp3_thresholds.py --run agent
 ```
+
+`--parallel` only sets how many containers run at once. Each contract is a
+separate session in a separate container, so the number does not affect results.
 
 The dataset needs no API key: `step0_corpus.py` and `build_dataset.py` make no
 model calls, and `build_dataset.py` re-cuts every row from disk and refuses to
@@ -176,5 +213,7 @@ write unless the text reproduces exactly. A rerun reproduces the procedure; the
 model's answers will differ, and by how much is the open question in §3.
 
 Every session leaves `output/llm_logs/exp3_agent/<cid>.trajectory.jsonl` — every
-tool call, thinking block, the CLI version and the working directory — so the
-claims here can be re-audited from the artefacts without rerunning anything.
+tool call, thinking block, the CLI version and the working directory — plus a
+`<cid>.json` recording turns, usage, models billed, refused paths and the image
+it ran in. The claims here can be re-audited from those artefacts without
+rerunning anything.

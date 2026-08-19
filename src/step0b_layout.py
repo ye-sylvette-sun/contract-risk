@@ -1,37 +1,20 @@
 """Step 0b — screen out two-column scans (one cheap call per contract).
 
-Some filings were printed in two side-by-side columns, and `ocrmypdf` reads such
-a page straight across: every output line carries the left column and the right
-column run together, from two passages that have nothing to do with each other.
-The text is not damaged in a way any later step can repair, and it is not
-detectably wrong to a step that reads one clause at a time — the anchors match,
-the line range is real, and the extracted "clause" is two unrelated halves of
-two clauses, alternating line by line — the failure the rest of the design
-cannot see (docs/DATASET.md §3, step 0b). This step is where it is caught: before step 1 spends a
-call on the document, and before anything cut from it reaches the dataset.
+`ocrmypdf` reads a two-column page straight across, so every line carries the
+left and right columns run together. Later steps cannot see this: the anchors
+match, the line range is real, and the "clause" is two unrelated halves
+alternating line by line (docs/DATASET.md §3).
 
-It is a screen, not a judgement about the contract, so it does not run on MODEL.
-It runs on Sonnet at low effort: the question is shallow and visual, and the
-answer is one boolean. A full 117-contract screen costs a few dollars, against
-roughly $0.60 for a single step-1 call on one of the larger cases.
+Two detectors, and either one rejects. They fail differently — the model missed
+two policies whose two-column part is a fraction of a huge filing, the gutter
+rule misses documents whose left column is often empty — so the union beats
+both. Sonnet at low effort: the question is shallow and visual.
 
-Why an LLM and not a rule. A deterministic gutter detector was written and
-measured first (a run of blank space at the same column position on consecutive
-lines). It separates cleanly at the top — the worst offender scores highest —
-but it cannot be made to catch a document whose left column is often empty
-without also flagging a quarter of the corpus, including contracts that have
-already been inventoried and read fine. The thresholds both halves use are set
-from those measurements, and are the constants at the top of this file. The model
-sees what the rule cannot: that the two halves of the line are
-unrelated *text*, which is the actual definition of the fault.
-
-Nothing here is deleted. A rejected contract keeps its file and its registry
-row; layout.json records the verdict, the model's evidence for it, and what it
-cost, and step 1 skips the contract. A verdict can be re-read, and a wrong one
-can be undone by editing one boolean.
+Nothing is deleted. A rejected contract keeps its file and registry row;
+layout.json records the verdict and the evidence, and step 1 skips it.
 
 Input : output/contracts.json, output/contracts/<cid>.md
-Output: output/layout.json  (resumable — re-runs only what is missing)
+Output: output/layout.json  (resumable)
 
 Usage:
     python src/step0b_layout.py [--case CITATION] [--contract CONTRACT_ID]
@@ -48,26 +31,14 @@ MODEL = "claude-sonnet-5"
 EFFORT = "low"
 
 # ------------------------------------------------------------ the gutter ----
-# The deterministic half. A page set in two columns leaves a GUTTER: a run of
-# blank space at the same column position on line after line. Contracts are full
-# of aligned white space that means nothing — indents, letterheads, signature
-# blocks, tables — so the discriminator is PERSISTENCE. A real body column holds
-# its gutter for dozens of consecutive lines; a letterhead holds it for five.
+# A two-column page leaves a GUTTER: blank space at the same column position
+# line after line. Contracts are full of meaningless aligned whitespace, so the
+# discriminator is PERSISTENCE — a body column holds its gutter for dozens of
+# lines, a letterhead for five.
 #
-# Measured over all 117 contracts, against every case confirmed by hand:
-#
-#     0.36  170FSupp3d754_ambit_pennsylvania_northeast_llc   two-column
-#     0.24  33FSupp3d110_homeowner_s_policy_the              two-column
-#     0.24  170FSupp3d754_ambit_northeast_llc_pennsylvania   two-column
-#     0.21  278FSupp3d1165_motion_picture_television_prod    two-column
-#     ----------------------------------------------------- GUTTER = 0.15
-#     0.08  894F3d509_delaware_river_basin_compact           clean
-#     0.08  809FSupp2d582_april_28_2008_letter               clean
-#      ...  113 more, all 0.08 or below
-#
-# Four flagged, four true, nothing else within 0.13 of the line. Its blind spot
-# is a document whose LEFT column is often empty — the run breaks where there is
-# no internal gap — which is why it does not replace the model call.
+# Measured over all 117 contracts: the four true two-column scans score
+# 0.21-0.36, everything else 0.08 or below. Hence GUTTER = 0.15, with nothing
+# within 0.13 of it.
 GAP = re.compile(r"\S(\s{3,})\S")
 WIDE_LINE = 45    # a line shorter than this cannot show a body-width gutter
 TOL = 6           # a column wanders a few characters down the page
@@ -76,11 +47,10 @@ GUTTER = 0.15     # coverage at or above this is two-column, whatever the model 
 
 
 def gutter(text):
-    """(fraction of substantial lines inside a sustained column run, longest run).
+    """(fraction of substantial lines in a sustained run, longest run).
 
-    WIDE_LINE, TOL and RUN are the values the table above was measured at.
-    Change one and the threshold means something else — re-measure before
-    trusting it.
+    GUTTER was measured at these WIDE_LINE/TOL/RUN values; change one and
+    re-measure before trusting the threshold.
     """
     lines = [ln.rstrip() for ln in text.split("\n")]
     idx = [i for i, ln in enumerate(lines) if len(ln) >= WIDE_LINE]
@@ -105,10 +75,9 @@ def gutter(text):
         longest = max(longest, cur)
     return len(covered) / len(idx), longest
 
-# What the model is shown. Consecutive lines, in windows spread from the first
-# line of the file to the last, because the signature of an interleaved scan is
-# that the SAME break recurs line after line — a line on its own shows nothing,
-# and a single window at the front of the document would see only front matter.
+# Windows of consecutive lines, spread over the whole file: the signature is a
+# break recurring line after line, and a single window at the front would see
+# only front matter.
 SPAN = 24              # consecutive lines per window
 SHARE = 0.25           # of the document...
 FLOOR, CEIL = 400, 1200  # ...but never fewer or more lines than this
@@ -118,11 +87,8 @@ MIN_LINE = 40          # start a window on a line at least this long, not a blan
 def sample(text):
     """[(first line number, lines)] — the windows shown to the model.
 
-    A whole document would be more thorough and is affordable at Sonnet rates,
-    but the largest contract here is 676,993 characters and the question is a
-    needle: whether any run of lines interleaves. Windows spread evenly over the
-    file keep the cost flat and, more importantly, keep every part of a long
-    document equally likely to be looked at.
+    Sampled rather than sent whole: the largest contract is 677k characters,
+    and this keeps every part of it equally likely to be looked at.
     """
     lines = text.split("\n")
     want = int(min(max(len(lines) * SHARE, FLOOR), CEIL))
@@ -144,11 +110,8 @@ def sample(text):
 
 
 def render(windows, total):
-    """The windows as the model sees them: real line numbers, gaps marked.
-
-    The line numbers are the file's own, not the sample's, so the evidence the
-    model quotes back can be looked up in the file.
-    """
+    """The windows as the model sees them. Line numbers are the file's own, so
+    quoted evidence can be looked up."""
     parts, prev = [], 0
     for start, lines in windows:
         if start > prev + 1:
@@ -172,10 +135,8 @@ def main():
     registry = lib.read_json(lib.OUT / "contracts.json", {})
     done = lib.read_json(OUT, {})
 
-    # Note what is NOT here: a `cid in done -> skip` rule. Resumability lives
-    # further down, around the CALL alone, because the gutter is free and has to
-    # be scored on every contract every run — that is what let it be added to
-    # 117 stored verdicts without paying for any of them again.
+    # No `cid in done -> skip` here: resumability wraps the CALL alone, so the
+    # free gutter score is recomputed for every contract on every run.
     for cid, entry in sorted(registry.items()):
         if (args.case and entry["citation"] != args.case) or \
            (args.contract and cid != args.contract):
@@ -184,10 +145,6 @@ def main():
         total = text.count("\n") + 1
         cov, longest = gutter(text)
 
-        # The gutter costs nothing, so it is scored on every contract, every
-        # run. A contract that already has a verdict is re-scored and its
-        # combined answer updated WITHOUT a call: that is how the deterministic
-        # half was added to 117 stored verdicts for free.
         prev = done.get(cid)
         if prev and not args.force:
             # `model_two_column` is absent from a verdict written before the
@@ -209,10 +166,7 @@ def main():
             said, finding = answer["two_column"], answer["finding"]
             evidence = answer["evidence"]
 
-        # Either detector rejects. They fail differently — the model missed two
-        # policies whose two-column part is a fraction of a 200,000-character
-        # filing, and the gutter misses a document whose left column is often
-        # empty — so the union is strictly better than either.
+        # Either detector rejects.
         done[cid] = {"citation": entry["citation"],
                      "two_column": bool(said) or cov >= GUTTER,
                      "model_two_column": bool(said),

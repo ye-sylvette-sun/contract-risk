@@ -1,0 +1,169 @@
+{
+  "contract_id": "809FSupp2d582_memorandum_of_understanding_mou",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "pos1",
+    "c012": "pos2",
+    "c013": "neg11",
+    "c014": "neg12",
+    "c015": "pos3",
+    "c016": "neg13",
+    "c017": "neg14",
+    "c018": "neg15"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "reasoning_cat1": "A definitional recital identifying the underlying agreements; it is riddled with OCR/typographical corruption and uses an open-ended 'all addenda ... including, but not limited to' catalogue, so the outer boundary of 'the reinsurance relationship' is not fixed by the enumeration.",
+      "reasoning_cat2": "The defined term drives the operative sections (c005, c009, c012), which instead list the four agreements 'and all addenda' individually, so the recital and operative text mostly track each other; no specific contradiction found.",
+      "prob_cat1": 0.19,
+      "prob_cat2": 0.14,
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "reasoning_cat1": "A one-line recital that a dispute exists over 'funds owed' and 'who is responsible for certain payments'; vague ('certain payments') but it creates no obligation to construe.",
+      "reasoning_cat2": "Read against Section I (c005) and Section IX (c015) it is merely background and does not point away from any operative term.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "reasoning_cat1": "Purely a naming recital defining 'the Lawsuit' by reference to the captioned action; nothing is ambiguous beyond scanning errors.",
+      "reasoning_cat2": "The defined term is used consistently in Sections V, VI and IX (c011, c012, c015), including the direction to 'refile the lawsuit', with no mismatch.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "reasoning_cat1": "The 'business solution' is described in sweeping, undefined terms — 'all fees and expenses and costs associated in any way' — and 'going forward, beginning May 4, 2009' fixes a date whose effect is left to the operative text.",
+      "reasoning_cat2": "This recital promises forward payment of everything from May 4, 2009 while Section I (c005) carves out payments 'completed' before that date and Section IX (c015) caps the remedy at refiling suit, a classic recital-versus-operative pull that a court could be asked to resolve.",
+      "prob_cat1": 0.24,
+      "prob_cat2": 0.36,
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "reasoning_cat1": "It commits the parties to enter a future LPT whose terms are not set (an agreement to agree), while carefully defining 'completed' payment; the open question is what an LPT must contain and what 'all past and future losses, payments, risks, and liabilities' reaches.",
+      "reasoning_cat2": "Section IX (c015) refers to a 'mutually agreeable reinsurance agreement/LPT' and makes non-completion merely a trigger for refiling, which sits uneasily with the mandatory 'shall enter into' here and with Section V's assertion (c011) that the MOU is definite enough to enforce.",
+      "prob_cat1": 0.43,
+      "prob_cat2": 0.47,
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "reasoning_cat1": "The ZBA paragraph is date-specific and mechanical; the only slack is what happens to the account if the LPT is not executed by June 30, 2009, since permission runs 'until the LPT is executed, but no later than' that date.",
+      "reasoning_cat2": "That gap connects to Section IX (c015), which contemplates the LPT never being executed and gives only the refiling remedy, but nothing in the ZBA terms directly contradicts another clause.",
+      "prob_cat1": 0.17,
+      "prob_cat2": 0.2,
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "reasoning_cat1": "Detailed and largely self-executing, but it turns on soft standards — investments 'acceptable to Lincoln General', an 'A rated' reinsurer, an actuary approved but 'not unreasonably withheld' — and calls $3 million 'partial security' while capping any replacement collateral at $3 million.",
+      "reasoning_cat2": "Checked against Section I (c005), which imposes unlimited LPT liability, and Section IX (c015)'s reference to 'posting of appropriate security'; the cap is expressly disclaimed as a limitation on obligations, so no clear conflict.",
+      "prob_cat1": 0.31,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "reasoning_cat1": "It says 'those funds may be released' without saying how much (all funds, or only the excess over estimated remaining liability) or to whom, then adds that the release 'shall be performed annually' — permissive and mandatory in the same breath.",
+      "reasoning_cat2": "It must be read with the withdrawal restriction in Section II(a) (c007) that funds may only be withdrawn with Lincoln General's consent, which arguably qualifies or is qualified by this automatic annual release.",
+      "prob_cat1": 0.36,
+      "prob_cat2": 0.28,
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "reasoning_cat1": "The funding duty is stated broadly with an 'include, but not be limited to' list closing in 'any other expenses related to' claims handling, so the catch-all's reach against the enumerated items is not fixed.",
+      "reasoning_cat2": "The final sentence preserving 'any obligations of U.S. Auto, Gamma, or any other defendant' pulls against Section X (c016), which contemplates releases of all Defendants on Santa Fe's performance.",
+      "prob_cat1": 0.26,
+      "prob_cat2": 0.29,
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "reasoning_cat1": "A plain payment schedule: five $300,000 instalments beginning January 2, 2010 totalling exactly $1.5 million, memorialised by a note substantially in the form of Exhibit A; the arithmetic and dates are internally consistent.",
+      "reasoning_cat2": "Exhibit A is not attached to the instrument, and Section IX (c015) limits the remedy for non-completion to refiling, which could be argued to swallow the note obligation, but nothing directly contradicts the payment terms.",
+      "prob_cat1": 0.11,
+      "prob_cat2": 0.16,
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "reasoning_cat1": "The embedded stipulation that the MOU 'is sufficiently definite to allow the parties to sue for its enforcement' is a self-serving legal conclusion sitting in a document full of agreements to agree, and 'tolling and other litigation resumption agreements' is left undefined.",
+      "reasoning_cat2": "It squarely collides with Section IX (c015), which says that if the required actions are not completed Lincoln's remedy 'shall be to refile the lawsuit' — enforceability of the MOU versus a single restoration-of-the-status-quo remedy is the obvious construction fight here.",
+      "prob_cat1": 0.52,
+      "prob_cat2": 0.68,
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c012",
+      "reasoning_cat1": "The tolling period reads 'for five (5) years of until all claims ... have been paid and settled', where the mangled 'of/or' leaves it unclear whether five years is a floor, a cap, or an alternative to the claims-run-off date.",
+      "reasoning_cat2": "It works with Section V (c011)'s promised 'tolling and other litigation resumption agreements' and Section IX (c015)'s refiling remedy; the tolling term is what makes refiling meaningful, so the fit is supportive rather than contradictory.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.22,
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c013",
+      "reasoning_cat1": "'Subject to regulatory approval' names no regulator, no applicant, no deadline and no consequence of refusal, and 'the matters to which it addresses' is undefined — a short clause with a large unresolved boundary.",
+      "reasoning_cat2": "It cannot be easily squared with Section V (c011), where dismissal follows on execution and the MOU is declared immediately enforceable, nor with the fixed June 30, 2009 deadlines in Sections I and II (c005, c007).",
+      "prob_cat1": 0.44,
+      "prob_cat2": 0.44,
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c014",
+      "reasoning_cat1": "A standard joint-drafting clause disclaiming contra proferentem; its wording is conventional and self-contained.",
+      "reasoning_cat2": "It bears on how every other clause is read but contradicts none; nothing elsewhere in the MOU identifies a drafter or reserves construction against one.",
+      "prob_cat1": 0.09,
+      "prob_cat2": 0.1,
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c015",
+      "reasoning_cat1": "The heading covers failure to complete 'or Later Breach' but the body addresses only non-completion, and 'Lincoln's remedy shall be to refile the lawsuit' does not say whether it is the sole and exclusive remedy; the illustrative 'such as ... including but not limited to' list adds further scope uncertainty.",
+      "reasoning_cat2": "Directly opposed to Section V (c011)'s statement that the MOU is definite enough to sue on, and it would also strip content from the payment and security obligations in Sections II and IV (c007, c010) — the central whole-instrument tension in this document.",
+      "prob_cat1": 0.58,
+      "prob_cat2": 0.71,
+      "dataset_clause_id": "pos3"
+    },
+    {
+      "clause_id": "c016",
+      "reasoning_cat1": "It is an agreement to draft a future settlement agreement whose terms — 'among other things', 'the particulars of the releases ... shall be set forth in the settlement agreement' — are expressly left open.",
+      "reasoning_cat2": "Releases of all Defendants sit against Section III (c009), which preserves the other defendants' obligations, and against Section IX (c015), which treats failure to reach this very agreement as merely restoring the lawsuit.",
+      "prob_cat1": 0.38,
+      "prob_cat2": 0.37,
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c017",
+      "reasoning_cat1": "Ordinary counterparts and facsimile-execution boilerplate; the terms are conventional and unambiguous despite scanning noise.",
+      "reasoning_cat2": "Consistent with Section V (c011), which turns on 'execution of this Memorandum of Understanding'; no other clause addresses execution formalities differently.",
+      "prob_cat1": 0.05,
+      "prob_cat2": 0.06,
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c018",
+      "reasoning_cat1": "A further-assurances clause qualified by 'reasonably necessary', which is a familiar standard rather than a genuine ambiguity, though it is run together with the counterparts section and carries a duplicated section number.",
+      "reasoning_cat2": "It overlaps the specific future-document duties in Sections I, IX and X (c005, c015, c016); a party could argue it independently compels execution of the LPT or settlement agreement notwithstanding the refiling-only remedy.",
+      "prob_cat1": 0.14,
+      "prob_cat2": 0.21,
+      "dataset_clause_id": "neg15"
+    }
+  ]
+}

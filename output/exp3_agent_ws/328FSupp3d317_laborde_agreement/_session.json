@@ -1,0 +1,95 @@
+{
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 13,
+  "duration_ms": 166247,
+  "total_cost_usd": 0.8234,
+  "usage": {
+    "input_tokens": 18,
+    "cache_creation_input_tokens": 42543,
+    "cache_read_input_tokens": 145862,
+    "output_tokens": 12998,
+    "output_tokens_details": {
+      "thinking_tokens": 3767
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 42543,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 42420,
+        "cache_creation_input_tokens": 4199,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4199
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 18,
+      "outputTokens": 12998,
+      "cacheReadInputTokens": 145862,
+      "cacheCreationInputTokens": 42543,
+      "webSearchRequests": 0,
+      "costUSD": 0.823401,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "80c380fe-00db-4286-86fe-1eb6e1620c51",
+  "errors": null,
+  "result": "33 judgments written.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/1.3_93FSupp3d375_personal_deposit_account_agreement/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "utilization": null,
+      "resets_at": 1787126400
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 33,
+  "n_wanted": 33,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

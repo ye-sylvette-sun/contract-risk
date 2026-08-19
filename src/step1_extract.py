@@ -1,26 +1,20 @@
 """Step 1 — locate the clauses the parties disputed (one LLM call per case).
 
-The core judgment step. The model is given the opinion and every contract
-registered for the case, and it says which clauses the parties disputed and
-where they sit: a line range plus a short verbatim anchor at each end. A clause
-is positive because the opinion shows the two sides fought over it and the court
-discussed it — whatever the court decided. Reaching litigation at all is what
-makes a clause risky, so one the court examined and upheld counts just as much.
+The core judgment step. Given the opinion and every contract registered for the
+case, the model says which clauses the parties disputed and where: a line range
+plus a verbatim anchor at each end. A clause is positive because the opinion
+shows the two sides fought over it — whatever the court decided, since reaching
+litigation is itself what makes it risky.
 
-Every block it sees is a contract now — which one is a contract was settled
-upstream, in step 0 (docs/DATASET.md §3). What it still has to judge is which
-CLAUSE was disputed, and it may legitimately answer "none": the opinion can turn
-on an agreement that was never filed.
+It may legitimately answer "none": the opinion can turn on an agreement that
+was never filed.
 
-The model does not write the clause text and it does not choose the label: the
-taxonomy codes come from the Westlaw keys the case was selected under and are
-facts about the case, not answers. Every clause must also point at the passage
-of the opinion that shows the dispute, which is what keeps clause selection tied
-to the court's own words rather than to what looks risky to a model of the same
-family as the ones under evaluation.
+The model writes no clause text and chooses no label — the taxonomy codes come
+from the Westlaw keys and are facts about the case. Every clause must point at
+the opinion passage showing the dispute, which keeps selection tied to the
+court's words rather than to what looks risky to a model.
 
-Contracts step 0b rejected as two-column scans are dropped before the call. A
-case whose every contract was rejected is recorded as skipped and costs nothing.
+Contracts step 0b rejected as two-column scans are dropped before the call.
 
 Input : output/cases.json, output/contracts.json, output/contracts/*.md,
         output/opinions/<id>.txt, output/layout.json

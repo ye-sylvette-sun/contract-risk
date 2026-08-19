@@ -1,34 +1,24 @@
 """Step 0 — build the corpus (no LLM).
 
-Two jobs, neither of which needs a model:
+Two jobs, neither needing a model:
 
 1. **Link.** Join the Westlaw headnotes, the opinion text and the docket linking
-   sheet, and keep the cases worth spending money on. A case is in scope when it
-   is filed under one of the twelve taxonomy keys, its opinion text is
-   available, and the linking sheet shows at least one Bloomberg entry document
-   — i.e. the contract can actually be downloaded. Doing the acquisition match
-   first is what makes it affordable to give the model whole opinions later
-   instead of regex-harvested snippets.
+   sheet, and keep the cases worth spending money on: filed under one of the
+   twelve taxonomy keys, opinion text available, and at least one downloadable
+   entry document. Matching on acquisition first is what makes it affordable to
+   send whole opinions later.
 
-2. **Register.** Write each contract the Contract-Risk repo extracted to
-   output/contracts/<cid>.md, stripped, and record it in output/contracts.json.
+2. **Register.** Write each contract Contract-Risk extracted to
+   output/contracts/<cid>.md, stripped, and record it in contracts.json.
 
-The contract text is not OCR'd here and no longer comes from Datalab. It comes
-from the Contract-Risk repo, which for each case already:
+Contract text is not OCR'd here. Contract-Risk downloaded the filings, OCR'd
+them, had a model say which file holds which agreement, cut that file to the
+agreement's own lines (verbatim line range — no model wrote the words), and
+recorded whether it is the right contract and readable in `contract_check.csv`.
 
-  * downloaded the docket filings and OCR'd them (`ocrmypdf --force-ocr`),
-  * had a model say which file holds which named agreement, and
-  * sliced that file down to the contract's own lines — a VERBATIM line-range
-    cut, made by the same reasoning this pipeline uses: the model returns line
-    numbers and the script cuts the lines, so no model wrote the words.
-  * checked each result against the opinion: is this the contract the court was
-    construing, and is it readable? That verdict is `contract_check.csv`.
-
-So step 1 is handed contracts, not whole bundles of filings. That is cheaper and
-better targeted than the old arrangement, but it moves one judgement upstream:
-WHICH document is the contract is now their answer rather than step 1's. Their
-verdict is carried onto every row of contracts.json, so a doubtful one can be
-found again. --verdict decides which are registered.
+That moves one judgement upstream: WHICH document is the contract is their
+answer, not step 1's. Their verdict is carried onto every registry row so a
+doubtful one can be found again; --verdict decides which are registered.
 
 Input : data/wl-headnotes-parsed/<key>/citations.csv
         data/opinions-case-dot-law.csv
@@ -100,11 +90,9 @@ def entry_documents():
 def extracted():
     """normalised citation -> the contracts Contract-Risk extracted for it.
 
-    Joins their two records on (case, agreement): `contract_extraction.csv` says
-    where each slice came from, `contract_check.csv` says whether it is the right
-    contract and readable. Both are carried through, because a row of this
-    dataset should be traceable to the file and line range it was cut from
-    without opening their repo.
+    Joins their two records on (case, agreement) and carries both through, so a
+    dataset row is traceable to its source file and line range without opening
+    their repo.
     """
     out = {}
     if not lib.EXTRACTION.is_file():
@@ -178,14 +166,10 @@ def link():
 
 # -------------------------------------------------------------- register ---
 def contract_id(citation, agreement, taken):
-    """The id is built from the citation and the agreement's name.
-
-    Their agreement name, not one a model of ours invented, and it is stable:
-    they wrote it once and it is what their two CSVs are keyed on, so the same
-    input always produces the same id. `taken` appends a numeric suffix if a base
-    id ever repeats — two agreements of one case can slug to the same four words
-    — so one registration can never silently overwrite another.
-    """
+    """The id is built from the citation and Contract-Risk's agreement name,
+    which is stable and is what their CSVs are keyed on. `taken` appends a
+    suffix when two agreements of one case slug alike, so a registration can
+    never silently overwrite another."""
     base = f"{lib.cite_id(citation)}_{lib.slug(agreement)}"
     cid, n = base, 1
     while cid in taken:
@@ -195,15 +179,12 @@ def contract_id(citation, agreement, taken):
 
 
 def shingles(text, k=SHINGLE):
-    """The set of overlapping k-word runs in `text`.
+    """The set of overlapping k-word runs in `text` — a document fingerprint.
 
-    A document's fingerprint. Building it is linear, and comparing two is linear
-    in the smaller — which is the whole point: `difflib.SequenceMatcher.ratio`
-    is quadratic with `autojunk=False`, and these documents run to 690,000
-    characters. It ran for eleven minutes on one pair of agreements before this
-    replaced it. The cheap `real_quick_ratio`/`quick_ratio` gates that used to
-    guard it do not help, because those compare bags of characters and two
-    unrelated English contracts have nearly identical ones.
+    Linear to build and compare, which is the point: `SequenceMatcher.ratio` is
+    quadratic and ran for eleven minutes on one pair of 690k-character
+    agreements. Its quick_ratio gates do not help — they compare bags of
+    characters, and two unrelated English contracts have nearly identical ones.
     """
     words = text.split()
     return {" ".join(words[i:i + k]) for i in range(max(1, len(words) - k + 1))}
@@ -212,10 +193,8 @@ def shingles(text, k=SHINGLE):
 def same(a, b):
     """Is this the same document, extracted twice under two agreement names?
 
-    Containment, not Jaccard: what is being caught is one document filed twice,
-    and the second copy often carries extra pages — a cover sheet, a further
-    schedule. Measuring against the SMALLER fingerprint keeps that a duplicate,
-    where Jaccard would call it a new document because of the extra.
+    Containment, not Jaccard: the second copy often carries extra pages, and
+    measuring against the SMALLER fingerprint keeps that a duplicate.
     """
     sa, sb = shingles(a), shingles(b)
     if not sa or not sb:
@@ -226,15 +205,10 @@ def same(a, b):
 def candidates(offered, verdicts):
     """One case's extracted contracts, stripped and worth a call.
 
-    Two filters, both cheap and both printed. The verdict is Contract-Risk's own
-    check of whether this is the contract the court construed and whether it can
-    be read; registering an `empty_or_unreadable` one would spend a step-2 call
-    to locate clauses in noise. The character floor is the one lib.n_tokens
-    already uses: no token is shorter than one character, so a file under
-    MIN_INPUT_TOKENS characters cannot reach the token floor either.
-
-    `strip_pdf_text`, not `strip_ocr`: their files are OCR'd plain text, not the
-    Datalab markdown the latter was written for.
+    Two filters, both printed: Contract-Risk's own verdict, and a character
+    floor (no token is shorter than one character, so a file under
+    MIN_INPUT_TOKENS characters cannot reach the token floor either).
+    `strip_pdf_text`, not `strip_ocr` — their files are OCR'd plain text.
     """
     out = []
     for c in offered:

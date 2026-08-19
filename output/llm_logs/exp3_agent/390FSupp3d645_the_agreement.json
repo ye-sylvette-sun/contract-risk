@@ -3,18 +3,20 @@
   "model": "claude-opus-5",
   "effort": "high",
   "n_provisions": 6,
+  "container_rc": 0,
+  "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 9,
-  "duration_ms": 41652,
-  "total_cost_usd": 0.2734645,
+  "num_turns": 10,
+  "duration_ms": 42808,
+  "total_cost_usd": 0.2739,
   "usage": {
     "input_tokens": 12,
-    "cache_creation_input_tokens": 16190,
-    "cache_read_input_tokens": 64659,
-    "output_tokens": 3167,
+    "cache_creation_input_tokens": 16295,
+    "cache_read_input_tokens": 63663,
+    "output_tokens": 3161,
     "output_tokens_details": {
-      "thinking_tokens": 1198
+      "thinking_tokens": 1037
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -22,28 +24,40 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 16190,
+      "ephemeral_1h_input_tokens": 16295,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
-    "iterations": [],
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 13,
+        "cache_read_input_tokens": 17661,
+        "cache_creation_input_tokens": 2710,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2710
+        },
+        "type": "message"
+      }
+    ],
     "speed": "standard"
   },
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 12,
-      "outputTokens": 3167,
-      "cacheReadInputTokens": 64659,
-      "cacheCreationInputTokens": 16190,
+      "outputTokens": 3161,
+      "cacheReadInputTokens": 63663,
+      "cacheCreationInputTokens": 16295,
       "webSearchRequests": 0,
-      "costUSD": 0.2734645,
+      "costUSD": 0.2738665,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "f97a4bcf-adc1-49f5-b886-1f61bc157928",
+  "session_id": "5fe75c69-03e7-449a-a08f-cb136dd56e80",
   "errors": null,
   "result": "Wrote 6 judgments.",
   "path_denials": [
@@ -55,11 +69,25 @@
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
-      "resetsAt": 1787090400,
-      "rateLimitType": "five_hour",
-      "overageStatus": "rejected",
-      "overageDisabledReason": "org_level_disabled",
-      "isUsingOverage": false
+      "utilization": null,
+      "resets_at": 1787126400
     }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 6,
+  "n_wanted": 6,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
   }
 }

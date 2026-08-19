@@ -1,21 +1,11 @@
-"""Shared machinery for the dataset build.
+"""Shared machinery for the dataset build: paths, the taxonomy, one stateless
+Claude call, `numbered()`, the `CLAUSE` definition both prompts share, and
+`locate()`.
 
-Five things every step needs:
-
-* where the inputs live,
-* how to make ONE stateless Claude call whose answer is forced to a schema,
-* `numbered()` — how a document is shown to the model,
-* `CLAUSE` — the single definition of what a clause is and how to point at one,
-  injected into both prompts so neither can hold a copy that drifts,
-* `locate()` — the only route by which a model's answer becomes dataset text.
-
-The model does not write clause text. It returns a coarse line window plus a
-short verbatim anchor at each end of the clause; `locate()` matches those
-anchors against the file, snaps the boundary to where they actually are, and
-slices the text out of the file. Nothing the model writes is carried into the
-dataset — the anchors only say *where*.
-
-See docs/DATASET.md.
+The model never writes clause text. It returns a coarse line window plus a short
+verbatim anchor at each end; `locate()` matches those against the file, snaps
+the boundary to where they actually are, and slices the text out of the file
+itself. The anchors only say *where*. See docs/DATASET.md.
 """
 
 import bisect
@@ -30,12 +20,9 @@ import anthropic
 import httpx
 
 MODEL = "claude-opus-5"
-# The model's own ceiling, read from GET /v1/models/claude-opus-5
-# (`max_tokens: 128000`), not a self-imposed budget. It covers thinking AND the
-# response together, and only what is actually produced is billed — so there is
-# nothing to gain by setting it lower. It matters most in the experiments, where
-# every provision of a contract is judged in ONE call and a batch that runs past
-# the ceiling is not usefully truncated, it is lost after being paid for.
+# The model's own ceiling, not a self-imposed budget: covers thinking and
+# response together, and only what is produced is billed, so there is nothing to
+# gain by lowering it.
 MAX_OUTPUT = 128_000
 MIN_INPUT_TOKENS = 200       # cover sheets and stamps: not worth a call
 MAX_INPUT_TOKENS = 900_000   # 1M context less the output budget, with margin
@@ -53,21 +40,14 @@ CONTRACTS = OUT / "contracts"
 OPINIONS = OUT / "opinions"
 
 
-# The bulk inputs. Too large for GitHub, so they are gitignored and provided
-# separately, but they live inside the repo like everything else — every path in
-# this file is relative to ROOT and nothing is read from outside it.
+# Bulk inputs: gitignored and provided separately, but linked inside the repo —
+# every path here is relative to ROOT and nothing is read from outside it.
 DATA = ROOT / "data"                  # Westlaw headnotes, opinions, the linking sheet
 
-# The contract text comes from the Contract-Risk repo, which already downloaded
-# the filings, OCR'd them (`ocrmypdf --force-ocr`), identified which file holds
-# which agreement, and sliced each one down to the contract's own lines.
-#
-# That slice is a VERBATIM line range — their extract_contracts.py has the model
-# return line numbers and cuts the lines itself, for the same reason this
-# pipeline does. So the text is their OCR output unedited, which is what makes it
-# usable here: an LLM chose the boundaries, but no LLM wrote the words.
-# Independently checked — all 205 re-sliceable extractions are byte-identical to
-# their source at the recorded spans. See docs/DATASET.md §3, step 0.
+# Contract text comes from the Contract-Risk repo: filings downloaded, OCR'd
+# (`ocrmypdf --force-ocr`), then cut to each agreement's own lines by a VERBATIM
+# line range. An LLM chose the boundaries; no LLM wrote the words. All 205
+# re-sliceable extractions are byte-identical to their source.
 SOURCE = ROOT / "contract_risk" / "generated" / "corpus" / "contracts"
 EXTRACTED = SOURCE / "extracted_contracts"    # <case>__<agreement>.txt
 EXTRACTION = SOURCE / "contract_extraction.csv"   # where each slice came from
@@ -147,9 +127,8 @@ def slug(text, words=4):
 
 
 # ------------------------------------------------------------ the clause ----
-# One definition, injected into both prompts as {clause_def} by prompt(). What
-# a clause IS and how to point at one live here; WHICH clauses a step wants —
-# the ones the court construed, or all of them — stays in each prompt.
+# Injected into both prompts as {clause_def}. What a clause IS and how to point
+# at one live here; WHICH clauses a step wants stays in each prompt.
 CLAUSE = f"""\
 ### What a clause is
 
@@ -268,20 +247,13 @@ _TAG = re.compile(r"</?(?:b|i|u|em|strong|sup|sub|span|font|br|input)\b[^>]*/?>"
 
 
 def strip_ocr(raw):
-    """Drop page markers, front-matter and figures.
+    """Drop page markers, front-matter and figures (Datalab Marker artifacts).
 
-    Run once, before anything else. Line numbers index this text, the model sees
-    this text, and output/contracts/<cid>.md is written from it — so a line
-    number can never mean two things.
-
-    Most of this is a no-op on the professor's OCR, which is plain text with no
-    markup: the markers and figure blocks below are the Datalab Marker artifacts
-    this pipeline used to read. It stays because it is the single place where the
-    text a line number means is fixed, and because a `.txt` that happens to carry
-    an HTML tag should still be handled the same way. Docket stamps are NOT
-    removed here — a stamp sits between two lines of a clause, so removing it
-    would shift every line number after it. `normalise()` drops it from the
-    extracted span instead, once the line numbers no longer matter.
+    Run once, before anything else: line numbers index this text, the model sees
+    this text, and output/contracts/<cid>.md is written from it, so a line
+    number can never mean two things. Docket stamps are NOT removed here — that
+    would shift every line number after them; `normalise()` drops them from the
+    extracted span instead.
     """
     text = "\n".join(ln for ln in raw.splitlines()
                      if not ln.strip().startswith(("----- Page ", "- source:",
@@ -289,11 +261,9 @@ def strip_ocr(raw):
     lines = _TAG.sub("", text).split("\n")
     out = list(lines)
 
-    # Marker writes every figure three times: the markdown itself, a paragraph
-    # describing the picture, then the alt text repeated verbatim. None of it is
-    # text and no clause contains it. The repeated alt text is what anchors
-    # this: nothing is removed without finding it. Lines are BLANKED, never
-    # removed, so line numbers stay stable.
+    # Marker writes every figure three times: markdown, a description, then the
+    # alt text verbatim. The repeated alt text anchors this — nothing is removed
+    # without finding it. Lines are BLANKED, never removed, so line numbers hold.
     for i, line in enumerate(lines):
         alts = {" ".join(a.split()) for a in _IMAGE.findall(line) if a.strip()}
         if not alts:
@@ -312,24 +282,14 @@ def strip_ocr(raw):
 
 
 def strip_pdf_text(raw):
-    """The same job as strip_ocr(), for OCR'd plain text rather than markdown.
+    """strip_ocr()'s job for OCR'd plain text: blank the CM/ECF header
+    (`_DOCKET`) and turn form feeds into spaces.
 
-    Two input formats, two functions, so neither drifts into handling the
-    other's furniture. This one blanks the CM/ECF header stamped across the top
-    of every page of a filing (`_DOCKET`), and turns the form feeds the PDF text
-    layer leaves behind into spaces.
-
-    Lines are BLANKED, never removed, exactly as in strip_ocr(): line numbers
-    have to index the same text the model sees and the same text
-    output/contracts/<cid>.md is written from, or a line number means two
-    different things.
-
-    It deliberately does NOT touch bare page numbers or Bates stamps, though
-    `normalise()` knows both. Those are dropped from an extracted span only, so
-    the contract file keeps them and `source_span` offsets stay meaningful. The
-    docket header is different in kind: it is the only furniture long enough to
-    swallow a line of a clause in the model's view of the document, which is
-    what makes it worth removing before the model reads rather than after.
+    Lines are BLANKED, never removed, as in strip_ocr(). Bare page numbers and
+    Bates stamps are deliberately left alone — `normalise()` drops those from an
+    extracted span, so the file keeps them and `source_span` stays meaningful.
+    The docket header is the only furniture long enough to swallow a line of a
+    clause in the model's view, which is why it goes before the model reads.
     """
     out = []
     for line in raw.replace("\x0c", " ").split("\n"):
@@ -345,30 +305,20 @@ def numbered(text):
 
 
 # ---------------------------------------------------------- normalisation ---
-# A page number or a Bates stamp sitting on its own line between two lines of a
-# clause. The whole line must be one and it must be short. Both patterns are
-# labelled: a bare number is NOT one of them, because a lone `1993` or `5,000`
-# on its own line is as likely to be a flattened table cell as a page number,
-# and dropping a figure the contract states is the one thing this pipeline must
-# never do. A stray page number left in the text is the cheaper mistake.
-# This is the ONLY thing dropped from an extracted span. docs/DATASET.md §2.
+# A page number or Bates stamp alone on its line. Both patterns are LABELLED: a
+# bare number is not one, because a lone `1993` is as likely to be a flattened
+# table cell, and dropping a figure the contract states is the one thing this
+# must never do. The only thing dropped from an extracted span.
 _STAMP = re.compile(
     r"p(?:age)?\.?\s*\d{1,4}(?:\s*of\s*\d{1,4})?"   # p. 3  /  Page 3 of 12
     r"|[A-Za-z][\w&.\-]{0,20}[ \-_]0\d{3,}",        # Bates: ROADLINK 00066
     re.I)
 
-# One part of the CM/ECF header stamped across the top of every page of a filing:
-#
-#   Case 2:15-cv-01243-SD Document 1-1 Filed 03/11/15 Page 1 of 20
-#
-# The professor's OCR keeps these, where Datalab's layout model used to drop
-# them, so the pipeline has to. They are too long for the FURNITURE cap above and
-# nothing in _STAMP matches them, so they are their own rule.
-#
-# Every district words the stamp differently and the OCR mangles it further, so
-# no single spelling is written down: the parts are listed and any TWO of them
-# make a stamp. `[il1]` in the PageID part is not a typo — OCR reads its capital
-# I as a lowercase l or a 1, and `PagelD` is the commonest form in this corpus.
+# The CM/ECF header, e.g. `Case 2:15-cv-01243-SD Document 1-1 Filed 03/11/15
+# Page 1 of 20`. Too long for FURNITURE and unmatched by _STAMP, so its own rule.
+# Every district words it differently and OCR mangles it further, so no single
+# spelling is written down: any TWO parts make a stamp. `[il1]` is not a typo —
+# OCR reads the capital I of PageID as l or 1.
 _PART = (
     r"\s*(?:case|in\sre)?[:\s]*\d{1,2}[:\-]\d{2}[\-\s]?[a-z]{0,3}[\-\s]?\d+"
     r"[\w\s.:\-]{0,24}?"                              # 2:15-cv-01243-ACK-BMK
@@ -384,19 +334,12 @@ _PART = (
 )
 _DOCKET = re.compile(rf"(?:{_PART}){{2,}}", re.I)
 
-# The publisher's footer printed at the foot of a policy form. Unlike everything
-# else here it is removed INLINE, because the OCR runs it into the middle of a
-# text line rather than leaving it alone on one — so `_stamp`'s whole-line
-# fullmatch, which is what makes the rules above safe, cannot reach it.
-#
-# Removing text from the middle of a line is the dangerous direction, so the
-# pattern is deliberately narrow: a form id and its revision date, and the OCR
-# junk between a copyright year and `Page N of M` ONLY when the whole footer is
-# present. An earlier version allowed that junk after a bare form id and ate the
-# word `Premises` out of `Policy Form No. PF-27556c (11/40) Premises Pollution
-# Liability III Insurance Policy` — the policy's own name. Measured over all 117
-# contracts: 49 hits in 3 of them, and every word it takes is either part of the
-# form id or the garbled copyright glyph (`fsa`, `Keg`, `Kes`).
+# A policy form's publisher footer. Removed INLINE, because OCR runs it into
+# the middle of a text line where `_stamp`'s whole-line fullmatch cannot reach.
+# Cutting mid-line is the dangerous direction, so the pattern is narrow: the
+# junk after a copyright year is allowed ONLY when the whole footer is present.
+# An earlier version allowed it after a bare form id and ate the word `Premises`
+# out of a policy's own name. 49 hits across 3 of the 117 contracts.
 _FOOTER = re.compile(
     r"[A-Z]{2,4}-\d{3,6}[a-z]?.{0,2}?\s*\(\d{1,2}/\d{2,4}\)"    # PF-27556c (11/10)
     r"(?:\s*©\s*\d{4}"                                     # © 2010
@@ -413,15 +356,10 @@ _HYPHEN = re.compile(r"(\w)-\n[ \t]*([a-z])")
 def _stamp(line):
     """Is the WHOLE line page furniture?
 
-    `fullmatch` is the safety property, and it is the whole reason this may be
-    trusted on a corpus this size: the line is only dropped when there is
-    nothing else on it. One word of contract text sharing the line makes the
-    match fail and the line survives, stamp and all.
-
-    Measured over the 282,326 lines of the extracted corpus: 5,248 lines (1.86%)
-    are dropped, and not one of them holds a run of four English words. About
-    1,000 stamps survive — OCR mangled past any rule (`Case 2:11-cv-9 Document 3
-    y HigsiP 9/13 Page 1 of 8`). Leaving those in is the cheap direction to err.
+    `fullmatch` is the safety property: one word of contract text sharing the
+    line makes the match fail and the line survives, stamp and all. Over the
+    corpus's 282,326 lines this drops 1.86%, none holding four English words;
+    ~1,000 OCR-mangled stamps survive, which is the cheap direction to err.
     """
     s = line.strip(" |*_`#>~\x0c\t-.")
     if not s:
@@ -433,12 +371,9 @@ def _stamp(line):
 def normalise(text):
     """Dataset text from a raw span: drop furniture, de-hyphenate, collapse space.
 
-    Nothing else. No substitution, no number correction, no label mending: what
-    the scan says is what the dataset carries. docs/DATASET.md §2.
-
-    Order matters. Whole-line stamps go first so a word the scanner split
-    *across* one still rejoins; the inline footer goes last, because it can
-    itself span a line break and would otherwise be half-eaten.
+    Nothing else — what the scan says is what the dataset carries. Order
+    matters: whole-line stamps first so a word split across one still rejoins,
+    the inline footer last because it can itself span a line break.
     """
     kept = "\n".join(ln for ln in text.split("\n") if not _stamp(ln))
     return " ".join(_FOOTER.sub(" ", _HYPHEN.sub(r"\1\2", kept)).split())
@@ -452,23 +387,18 @@ _FOLD = str.maketrans({"“": '"', "”": '"', "‘": "'", "’": "'",
 
 
 def _words(text):
-    """Whitespace and markdown punctuation are not evidence of anything.
-
-    A token with no letter or digit in it is a list bullet or a table rule, not
-    a word. Punctuation *inside* a word is kept, because a comma can decide a
-    case. An anchor is compared under this folding so it is not lost to a stray
-    pipe the model did or did not copy.
-    """
+    """Words, ignoring markdown punctuation. Punctuation INSIDE a word is kept —
+    a comma can decide a case. Anchors are compared under this folding so one is
+    not lost to a stray pipe the model did or did not copy."""
     return [w for w in text.translate(_FOLD).lower().split()
             if any(c.isalnum() for c in w)]
 
 
 def _tokens(text):
-    """Every word of `text` as (folded word, start, end) offsets into `text`.
+    """Every word of `text` as (folded word, start, end).
 
-    `_FOLD` maps each character to exactly one character, so an offset into the
-    folded text is an offset into `text` — which is what turns an anchor match
-    into a character span in the contract file.
+    `_FOLD` is 1:1, so an offset into the folded text is an offset into `text` —
+    which is what turns an anchor match into a character span in the file.
     """
     return [(m.group().lower(), m.start(), m.end())
             for m in re.finditer(r"\S+", text.translate(_FOLD))
@@ -482,11 +412,10 @@ def _token_lines(win, toks, lo):
 
 
 def _best(want, toks, target):
-    """The run of len(want) tokens in `toks` that best matches `want`.
+    """The run of len(want) tokens best matching `want` -> (ratio, first, last+1).
 
-    Returns (ratio, first, last + 1). Ties go to the run nearest `target` — the
-    position the model claimed — so a clause whose opening words also appear
-    elsewhere in the widened window snaps to the copy it actually named.
+    Ties go to the run nearest `target`, the position the model claimed, so
+    repeated opening words snap to the copy it actually named.
     """
     n = len(want)
     best = (-1.0, 0, 0)
@@ -502,22 +431,13 @@ def _best(want, toks, target):
 def locate(text, start, end, head, tail):
     """Where in `text` the clause with these anchors actually is.
 
-    Returns (record, None), or (None, why) when an anchor does not match. The
-    record carries the character span the anchors snapped to, the line range
-    that span covers, the match score, and the extracted text.
-
-    The anchors do three jobs (docs/DATASET.md §2). They prove the range is
-    real:
-    an anchor matching nothing near the claimed window means the model pointed
-    at the wrong place. They repair the range: the window is widened by SLACK
-    lines on each side and the boundary is snapped to where the anchor is, so a
-    miscounted line is corrected rather than fatal. And they cut inside a line,
-    which is what separates two lettered sub-clauses the OCR ran together.
+    Returns (record, None), or (None, why) if an anchor does not match. The
+    anchors do three jobs: prove the range is real, repair it (the window is
+    widened by SLACK lines and the boundary snapped to the anchor), and cut
+    INSIDE a line, which is what separates sub-clauses the OCR ran together.
 
     ANCHOR_MATCH is a locating tolerance, not a text tolerance — the text comes
-    from the file regardless of how well the anchor scored. It exists because a
-    model copying eight words out of damaged OCR will occasionally slip a
-    character, and that must not cost a clause.
+    from the file regardless of the score.
     """
     lines = text.split("\n")
     if not (isinstance(start, int) and isinstance(end, int)):
@@ -544,9 +464,9 @@ def locate(text, start, end, head, tail):
                       f"{h_score:.2f}: {head[:60]!r}")
 
     if want_tail:
-        # The tail is searched from the head onward, so it can never land
-        # before it, and the earliest best-scoring run wins — over-capture is
-        # the failure this design cannot otherwise see (docs/DATASET.md §6).
+        # Searched from the head onward, so the tail can never land before it
+        # and the earliest best-scoring run wins — over-capture is the failure
+        # this design cannot otherwise see.
         tail_at = max((i for i, n in enumerate(at) if n <= end),
                       default=len(toks) - 1)
         t_score, _t_i, t_j = _best(want_tail, toks[h_i:],
@@ -597,10 +517,9 @@ def client():
 
 
 def n_tokens(text):
-    """Claude's own count, from the metering endpoint — no inference, no tokens
-    charged. A text shorter than MIN_INPUT_TOKENS *characters* cannot be that
-    many tokens, since no token is shorter than one character, so the trivial
-    cases skip the round trip."""
+    """Claude's own count, from the metering endpoint. A text shorter than
+    MIN_INPUT_TOKENS characters cannot be that many tokens, so it skips the
+    round trip."""
     if len(text) < MIN_INPUT_TOKENS:
         return len(text)
     return client().messages.count_tokens(
@@ -626,23 +545,14 @@ BACKOFF = 20         # seconds before the first retry, doubling thereafter
 def _stream(name, model, effort, p, more=()):
     """One request, retried through transient server errors.
 
-    The SDK retries a request that fails before the stream opens. It cannot
-    retry one that fails DURING the stream, which is where these land: a call
-    that has been running for ten minutes raises `overloaded_error` from inside
-    the iterator and the whole answer is lost. On a run of sixty long calls that
-    is close to certain to happen at least once, so it is handled here rather
-    than left to kill the run.
+    The SDK retries a failure BEFORE the stream opens but cannot retry one
+    during it — a ten-minute call raising `overloaded_error` from inside the
+    iterator loses the whole answer. Only server and connection faults are
+    retried; a 400 is deterministic and raised at once.
 
-    Only server-side and connection faults are retried. A 400 — a bad schema, an
-    input over the ceiling — is deterministic and is raised immediately, because
-    retrying it would just spend four more times as long failing.
-
-    `httpx.HTTPError` is caught alongside the SDK's own exceptions and is not
-    redundant. The SDK maps a transport failure to `APIConnectionError` only
-    while it owns the request; once the stream is open the bytes are pulled
+    `httpx.HTTPError` is not redundant: once the stream is open the bytes come
     through httpx directly, and a socket dropped mid-answer surfaces as a raw
-    `httpx.ReadError` that the SDK never sees. One killed a 64-call run at call
-    37 with `[WinError 10054] An existing connection was forcibly closed`.
+    `httpx.ReadError` the SDK never sees. One killed a 64-call run at call 37.
     """
     body = {
         "model": model,
@@ -678,10 +588,8 @@ def _stream(name, model, effort, p, more=()):
 def prompt(name, **fields):
     """prompts/<name>.md -> its four sections, filled in.
 
-    The template is split into sections BEFORE substitution, so a heading that
-    happens to appear inside an OCR'd document can never be read as a section
-    marker. `{clause_def}` is filled from CLAUSE unless the caller overrides it,
-    so no prompt can hold a copy of the clause definition that drifts.
+    Split into sections BEFORE substitution, so a heading inside an OCR'd
+    document can never be read as a section marker.
     """
     fields.setdefault("clause_def", CLAUSE)
     text = (PROMPTS / f"{name}.md").read_text(encoding="utf-8")
@@ -700,47 +608,22 @@ def schema(name):
 def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(), **fields):
     """One stateless call. Returns the parsed answer, or None if it did not land.
 
-    `more` continues the conversation instead of starting a new one: the turns
-    given are appended after the first user message, so the model is asked its
-    follow-up question with its own earlier answer in view. The one caller that
-    needs this is the top-up, which asks for the provisions a first answer left
-    out — and asking "you missed these" only means anything if the model can see
-    what it already said.
+    `more` continues the conversation instead of starting a new one — the top-up
+    needs this, since "you missed these" only means anything if the model can
+    see what it already said. `log_as` names the log directory when one prompt
+    serves two experiments whose logs must stay separate.
 
-    `log_as` names the log directory when it should not be the prompt's name.
-    One prompt can serve two experiments — `prompts/exp3.md` holds the judging
-    criteria that both the one-shot and the agentic run are given, word for word
-    — but their logs are separate bodies of data and are named after the
-    experiment, not the template they share.
+    The document goes first and the instructions after it, so a rule sits beside
+    the text it governs rather than tens of thousands of tokens above it.
 
-    The document goes first and the instructions after it, so a rule sits next
-    to the text it governs rather than tens of thousands of tokens above it.
+    `effort="high"`, raised from "medium": both steps ask a judgement, and every
+    call at medium spent ZERO thinking tokens, so there was headroom to buy.
+    Reasoning is billed as output — watch `output_tokens` after changing it.
 
-    `model` defaults to MODEL and is overridden by exactly one caller: step 0b's
-    layout screen, which asks a shallow question of a whole document and so runs
-    on Sonnet. The two steps that decide what goes in the dataset do not choose
-    their model — they get MODEL.
-
-    `effort="high"`, raised from "medium". Both steps ask a judgement question,
-    not a lookup: step 1 decides whether the opinion really shows a dispute over
-    a clause, and step 2 decides where one clause ends and the next begins —
-    which, on a section built from unnumbered titled blocks, is exactly the call
-    the medium-effort runs got wrong. Every call at medium spent ZERO thinking
-    tokens (measured: output was 100% JSON), so there was headroom to buy.
-
-    It is not free: reasoning is billed as output, and step 2's output already
-    dominates its cost. Watch `output_tokens` in the logs after any change here.
-
-    NOTHING IS CACHED, deliberately. The document block used to carry a
-    `cache_control` marker, on the reasoning that a second call over the same
-    document would be charged at cache-read rates. No caller has such a second
-    call: step 1 sends an opinion plus every contract of a case, step 2 sends one
-    contract on its own, the experiments send one contract per call, and no two
-    calls anywhere share a prefix. Measured over the first four real calls:
-    54,310 tokens written to cache, ZERO read. Since a cache write is billed at
-    1.25x the base input rate, the marker was a flat 25% surcharge on every
-    document token in exchange for nothing — about $13 over a full 68-case run.
-    Do not restore it without a prefix two calls actually share.
+    NOTHING IS CACHED, deliberately. No two calls share a prefix (measured:
+    54,310 tokens written to cache, ZERO read), and a cache write costs 1.25x
+    base input — a flat 25% surcharge for nothing. Do not restore the marker
+    without a prefix two calls actually share.
     """
     p = prompt(name, **fields)
     msg = _stream(name, model, effort, p, more)

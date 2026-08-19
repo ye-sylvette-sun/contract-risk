@@ -1,8 +1,8 @@
 # Worked example — Category 2.2 — whole-instrument incoherence
 
-Contract `779FSupp2d416_lovejoy_inc_kamco_industrial`, filed in 779 F.Supp.2d 416. The full text is in `contract.txt` beside this file — read it if you want to see what the construed provision sits next to.
+Contract `779FSupp2d416_lovejoy_inc_kamco_industrial`, filed in 779 F.Supp.2d 416. The full text is in `contract.txt` beside this file.
 
-A court construed **3** of this contract's provisions; the other **18** it did not. That ratio is what a real contract looks like. Read it as the base rate to expect, NOT as a quota to reproduce.
+A court construed **3** of this contract's provisions; the other **18** it did not. Read that as the base rate to expect, NOT as a quota to reproduce.
 
 ## HIGH RISK — a federal court construed this provision
 
@@ -12,7 +12,7 @@ A court construed **3** of this contract's provisions; the other **18** it did n
 16. This agreement shall commence and become effective January 1, 2004, and shall continue in force for a one (1) year period, and shall be automatically renewed for additional one (1) year periads thereafter unless terminated by written notice from either party to the other party not less than GB/EQ ADVd OOWY> éSTSES/eTs S@:-PT 6882/20/ Ta sixty (60) days prior to the end of the initial or any subsequent ope (1) year term. This Agreement may also be terminated: a) By the Company immediately upon written notice to the Representative by registered or certified mail if there is a change of fifty (50%) percent or more of the present ownership or control of the Representative’s business without Company's written consent. b) By the Representative immediately upon written notice to the Company by registered or certified mail in the event the Company sells substantially all of the assets of its business or there is a change of fifty (50%) percent or more of its present ownership, or it is toerged with another firm, corporation or business and the Company is not the surviving company. c) By either party: i. In the event of the other party’s unreasonable and repeated failure to perform the terms and conditions of this agreement, written notice of the fatlure is mailed to or served upon that party, the failure is not cured within thirty (30) days after receipt of such notice, and written notice of termination is mailed via certified or registered to, or served upon that party, or ii. Upon immediate written notice to the other party in the event that party has filed or has filed against it a petition in bankruptcy (which is not dismissed within thirty (30) days after it is filed) or that party makes an assignment for the benefit of creditors, or iii. By mutual woitten agreement.
 ```
 
-### What the court said about it, verbatim from the opinion in 779 F.Supp.2d 416
+### What the court said, verbatim from the opinion in 779 F.Supp.2d 416
 
 ```
 The more significant problem with Love-joy’s argument that it had an “unfettered” right to redefine the House Accounts is that this interpretation would nullify portions of the Agreement’s termination provision. PL’s Opp. Br. at 17. Under the termination provision, the Agreement became effective January 1, 2004, and:
@@ -27,7 +27,7 @@ The inconsistency between the termination provision and the House Accounts provi
 
 ## LOWER RISK — from the same contract
 
-"8. Payment of Commissions". No court construed it in this case. That is the only thing known about it: it is not established to be sound, only never fought over.
+"8. Payment of Commissions". No court construed it in this case. It is not established to be sound, only never fought over.
 
 ```
 8. Commissions due the Representative are payable based on invoices to the customer, and will be paid forty-five (45) days from the conclusion of the month in which shipment took place. If orders are returned to and accepted by the Company for credit, commissions paid or credited to the Representative for such orders shall be deducted from the amount of other commissions due, if that amount is sufficient, otherwise, commissions paid on such retummed-for-credit orders shall be refunded to the Company. Accounts listed for collection will be written off and commissions deducted. When collection is made, the Representative will receive commission based on the net amount collected.

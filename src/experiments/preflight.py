@@ -1,33 +1,16 @@
 """Prove the agent harness is isolated, before spending a run on it.
 
-The first agent run was defended after the fact: the trajectories were searched
-for memory, `CLAUDE.md` and skills, none was found, and the conclusion was that
-nothing had leaked in. That argument happened to be right and was worth nothing,
-because it was made about a run that had already been paid for, on a machine
-that happened to have nothing to leak. `setting_sources=None` — which loads user,
-project and local settings — sat under a comment claiming the opposite for the
-whole of it.
+Runs ONE real session in a container, on the smallest outstanding contract, then
+audits its own trajectory. Nothing is mocked: the session is billed, its
+predictions are kept, and the full run continues from it.
 
-So this runs ONE real session, under the real options, on the smallest
-outstanding contract, and then audits its own trajectory. Nothing here is a
-mock: the session is billed, its predictions are written to the real files, and
-the full run continues from it rather than repeating it.
-
-The checks, each a way the CLI can take on context that never appears in the
-conversation:
-
-    MEMORY      no memory file injected into the first user turn
-    CLAUDE_MD   no CLAUDE.md from ~/.claude or any ancestor directory
-    SKILLS      no skill listing, no Skill tool, no mcp__* tool
-    REMINDERS   <system-reminder> blocks only as the CLI's wrapper around a
-                tool result — never as a free-standing instruction
-    MODEL       exactly one model billed, and it is the one we asked for
-    CLI         one CLI version across every record, equal to the installed one
-    TOOLS       no tool outside the four, and every attempt at one refused
-    PATHS       no file read or written outside the contract's workspace
-    MANIFEST    a run manifest exists and records the environment sweep
-
-Any failure exits non-zero. The output goes in the repo beside the manifests.
+    MEMORY / CLAUDE_MD / SKILLS   none of those channels reached the model
+    REMINDERS   <system-reminder> only as the CLI's wrapper around a tool result
+    MODEL       exactly one model billed, and it is the one asked for
+    CLI         one CLI version everywhere, equal to the one the SDK spawns
+    TOOLS       nothing outside the four, and every attempt refused
+    PATHS       nothing served from outside the workspace
+    ENV/OPTIONS the isolation options and flags were actually set
 
 Usage:
     python src/experiments/preflight.py              # run one contract, audit it
@@ -39,12 +22,13 @@ import json
 import re
 import sys
 from argparse import Namespace
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib  # noqa: E402
 import exp3_agent as ag  # noqa: E402
+import isolation  # noqa: E402
 
 api = ag.api
 
@@ -126,6 +110,13 @@ def audit(cid):
     recs = list(records(traj))
     a.check("TRAJECTORY", True, f"{len(recs)} records, {traj.name}")
 
+    # Every session runs in a container, so the workspace is always /work — and
+    # that is itself a check: one cwd, and it is the mount point.
+    cwds = sorted({r.get("cwd") for r in recs if r.get("cwd")})
+    info = json.loads(summary.read_text(encoding="utf-8")) if summary.exists() else {}
+    a.check("CONTAINER", cwds == ["/work"], f"{info.get('image', '?')}, cwd {cwds}")
+    ws = PurePosixPath("/work")
+
     # ---- context channels ---------------------------------------------------
     whole = traj.read_text(encoding="utf-8")
     for name, patterns in PROBES.items():
@@ -161,8 +152,11 @@ def audit(cid):
             f"({'bundled' if '_bundled' in (cli.get('cli_path') or '') else cli.get('cli_path')})")
 
     if summary.exists():
-        info = json.loads(summary.read_text(encoding="utf-8"))
-        billed = sorted((info.get("model_usage") or {}).keys())
+        # `models_seen` unions the first session AND every top-up round;
+        # `model_usage` covers only the session it came from. Prefer the union,
+        # or a stray model billed while finishing a short answer goes unseen.
+        billed = sorted(info.get("models_seen")
+                        or (info.get("model_usage") or {}).keys())
         a.check("MODEL", billed == [ag.MODEL],
                 f"billed {billed}, asked for {ag.MODEL}")
     else:
@@ -170,12 +164,8 @@ def audit(cid):
 
     # ---- the filesystem the session actually reached ------------------------
     # Read from the TRANSCRIPT, not from our own denial log: the question is
-    # whether anything outside the workspace was ever served, and only the
-    # transcript can answer that. An attempt that was refused is the hook
-    # working — it is reported, and it passes, the same way the model's two
-    # refused `Bash`/`Edit` calls in the first run were evidence for the
-    # allow-list rather than against it.
-    ws = (ag.WS / cid).resolve()
+    # whether anything outside the workspace was ever SERVED. An attempt that
+    # was refused is the hook working, so it is reported and it passes.
     results = {}
     for rec in recs:
         for b in blocks(rec):
@@ -187,12 +177,22 @@ def audit(cid):
             if b.get("type") != "tool_use":
                 continue
             ti = b.get("input") or {}
-            for key in ag.PATH_KEYS:
+            for key in isolation.PATH_KEYS:
                 raw = ti.get(key)
                 if not raw:
                     continue
-                t = Path(raw)
-                t = (ws / t).resolve() if not t.is_absolute() else t.resolve()
+                t = PurePosixPath(str(raw).replace("\\", "/"))
+                t = ws / t if not t.is_absolute() else t
+                # Collapse `..` by hand: these are container paths, so they
+                # cannot be resolved against this filesystem.
+                parts = []
+                for seg in t.parts:
+                    if seg == "..":
+                        if parts[1:]:
+                            parts.pop()
+                    elif seg != ".":
+                        parts.append(seg)
+                t = PurePosixPath(*parts)
                 if t != ws and ws not in t.parents:
                     outside.append(str(raw))
                     res = results.get(b.get("id")) or {}
@@ -214,7 +214,7 @@ def audit(cid):
                 if "No such tool available" in t:
                     refused.append(t.split(":")[1].strip().split(".")[0]
                                    if ":" in t else t[:40])
-    outside = {k: v for k, v in used.items() if k not in ag.TOOLS}
+    outside = {k: v for k, v in used.items() if k not in isolation.TOOLS}
     a.check("TOOLS", not outside,
             f"{used}" + (f", refused {refused}" if refused else ""))
 
@@ -235,11 +235,15 @@ def audit(cid):
         a.check("OPTIONS", not wrong,
                 "setting_sources=[], skills=[], strict_mcp_config=True"
                 if not wrong else f"wrong: {wrong}")
-        got = m.get("env_set") or {}
-        unset = [k for k in ag.HERMETIC if got.get(k) != ag.HERMETIC[k]]
-        a.check("ENV", not unset and m.get("env_removed") is not None,
-                f"{len(m.get('env_removed') or [])} variable(s) swept, "
-                f"{len(ag.HERMETIC) - len(unset)}/{len(ag.HERMETIC)} flag(s) set"
+        # The sweep happened in the container, so the manifest can only say what
+        # the host intended. What the session did is in its own summary.
+        got = info.get("env_set") or {}
+        unset = [k for k in isolation.HERMETIC if got.get(k) != isolation.HERMETIC[k]]
+        removed = info.get("env_removed")
+        a.check("ENV", not unset and removed is not None,
+                f"{len(removed) if isinstance(removed, list) else '?'} variable(s) "
+                f"swept in the container, "
+                f"{len(isolation.HERMETIC) - len(unset)}/{len(isolation.HERMETIC)} flag(s) set"
                 + (f"; NOT SET {unset}" if unset else ""))
     return a.report()
 
@@ -273,17 +277,14 @@ def main():
     if args.audit:
         sys.exit(audit(args.audit))
 
-    removed = ag.env()
-    print(f"environment swept: {len(removed)} variable(s) removed"
-          + (f" ({', '.join(removed)})" if removed else ""))
-
     cid = args.contract or smallest_outstanding()
     if not cid:
         print("nothing outstanding to preflight on")
         sys.exit(1)
+
     print(f"preflight on {cid}\n")
-    asyncio.run(ag.run(Namespace(limit=0, shuffle=False, seed=0, rest_every=0,
-                                 only=cid), removed))
+    asyncio.run(ag.run(Namespace(limit=0, shuffle=False, seed=0, only=cid,
+                                 parallel=1, image=ag.IMAGE)))
     sys.exit(audit(cid))
 
 
