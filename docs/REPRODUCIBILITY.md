@@ -98,7 +98,9 @@ rerun.
   and again at the end: SDK and CLI versions, interpreter, platform, git commit
   and dirty flag, the isolation options verbatim, the names of every environment
   variable swept, the flags set, SHA-256 of the prompts and of `dataset.csv` and
-  `contracts.json`, the worked examples chosen, and the contract order. Stamped
+  `contracts.json`, the model, the effort, the worked examples chosen, the
+  contract order, and the container's image id and content hashes. §4 maps each
+  field to the requirement it answers. Stamped
   rather than overwritten, because the script is resumable.
 
 - **The recorded CLI version would have been the wrong one.** The SDK ships a CLI
@@ -188,7 +190,39 @@ rerun.
 - **`claude-opus-5` is an alias.** Covered in §1: what is observable is
   recorded, but there is no dated snapshot to pin.
 
-## 4. How the claims are checked
+## 4. What is logged, and where
+
+Two files per run, both committed.
+
+**`run_manifest_<stamp>.json`** — one per launch, written before the first
+session and again at the end:
+
+| Required | Field |
+|---|---|
+| SDK / CLI version | `packages`; `cli_version`, `cli_path` (the bundled binary that ran), `cli_on_path` (what `claude --version` would report) |
+| Environment allowlist | `env_set`, `env_removed` |
+| Prompt / input hashes | `prompt_sha256`, `input_sha256`; the system prompt is stored as a `sha256:` digest, not as text |
+| Model, effort | `model` as asked for, `models_seen` as billed, `effort`, `max_turns` |
+| Run order | `contract_order`, `seed`, `examples` |
+| Machine | `python`, `platform`, `git_commit`, `git_dirty`, `billing` |
+| Isolation | `options` verbatim — `setting_sources`, `skills`, `strict_mcp_config`, `disallowed_tools`, `hooks`, `cwd` |
+| Container | image tag, image id, SHA-256 of the Dockerfile, the entrypoint and `isolation.py` |
+
+**`<cid>.json`** — one per contract: model, effort, `models_seen`, session id,
+turns, usage, `container_rc`, image, `path_denials`, and `env_removed` — the
+sweep's own report that there was nothing left to remove. Beside it,
+`<cid>.trajectory.jsonl` and `<cid>.container.log`.
+
+**The instruction-loading manifest** is the one requirement met differently, and
+the difference should be stated rather than glossed: the CLI emits no such
+record, so there is no positive list of what was loaded. In its place, nothing
+is installed to load — no `~/.claude`, no `CLAUDE.md`, no skills, no
+managed-settings file anywhere in the image — and `preflight.py` audits the
+transcript for their absence (§5). Absence by construction plus a negative audit
+is the strongest evidence available without CLI support, and it is weaker than
+what was asked for.
+
+## 5. How the claims are checked
 
 `preflight.py` runs one real session on the smallest outstanding contract, under
 the options the full run uses, then audits that session's transcript. It exits
@@ -217,7 +251,7 @@ python src/experiments/preflight.py                  # run one session, audit it
 python src/experiments/preflight.py --audit <cid>    # audit one already run
 ```
 
-## 5. Reproducing the run
+## 6. Reproducing the run
 
 ```sh
 pip install -r requirements.txt        # host side: enough to build and drive
