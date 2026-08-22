@@ -8,7 +8,7 @@ Everything goes into a single prompt — no tools, no agent loop, no second turn
 methodological requirement: Category 2 risk is about how provisions sit against
 each other, so a model shown half a contract is being asked an easier question.
 The call carries the FULL contract text, every provision to judge quoted under
-an opaque id, and one worked PAIR per risk type — a clause a court construed,
+an opaque id, and one worked PAIR per risk category — a clause a court construed,
 the court's own words about it, and a clause from the same contract that no
 court construed, framed as LOWER RISK and never as clean.
 
@@ -17,7 +17,7 @@ already in the dataset, so the model is shown what the two sides argued rather
 than left to guess what "risky" means from a bare label.
 
 Per provision it returns two INDEPENDENT probabilities — `prob_cat1` intrinsic,
-`prob_cat2` relational — with separate reasoning. A type is flagged at 0.5, but
+`prob_cat2` relational — with separate reasoning. A category is flagged at 0.5, but
 the raw probabilities are what get written out, so the operating threshold is
 chosen afterwards.
 
@@ -75,7 +75,7 @@ FIELDS = ["contract_id", "citation", "clause_id", "clause_name",
           "label", "taxonomy", "gold", "gold_subtype", "pred",
           "prob_cat1", "prob_cat2", "reasoning_cat1", "reasoning_cat2", "ok"]
 
-TYPE_NAME = {
+CATEGORY_NAME = {
     "1.1": "Category 1.1 — lexical ambiguity or vagueness",
     "1.2": "Category 1.2 — mechanical error",
     "1.3": "Category 1.3 — general-vs-specific / list scope",
@@ -104,7 +104,7 @@ def _f(x, default=0.0):
 
 
 def pred_from_probs(p1, p2):
-    """Coarse label at FLAG. Both below -> not_risky; else the likelier type."""
+    """Coarse label at FLAG. Both below -> not_risky; else the likelier category."""
     if p1 < FLAG and p2 < FLAG:
         return "not_risky"
     return "risky_cat1" if p1 >= p2 else "risky_cat2"
@@ -119,7 +119,7 @@ EXCERPT_CAP = 6_000     # characters of opinion an example may carry
 
 
 def pick_examples(rows):
-    """One worked pair per risk type present in the data.
+    """One worked pair per risk category present in the data.
 
     Deterministic, never random: per taxonomy code, the positive with the
     longest `opinion_comment` that still fits under EXCERPT_CAP (the longest in
@@ -176,7 +176,7 @@ def example_block(examples):
            "have more such provisions, or none at all.\n"]
     for e in examples:
         r, foil = e["row"], e["foil"]
-        out.append(f"\n================ {TYPE_NAME[e['code']]} ================")
+        out.append(f"\n================ {CATEGORY_NAME[e['code']]} ================")
         out.append(f"From {r['citation']}, contract {r['contract_id']}.")
         out.append(f"In this contract a court construed {e['n_pos']} provision"
                    f"{'' if e['n_pos'] == 1 else 's'}; the other {e['n_neg']} it "

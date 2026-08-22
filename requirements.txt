@@ -1,33 +1,5 @@
-# Pinned, not floored. The first agent run could not be reinstalled from this
-# file at all: `claude-agent-sdk` was declared in a requirements.txt one
-# directory ABOVE the repo, which was never committed, and the two entries that
-# were here used `>=` floors. A floor records what the code needs, not what it
-# ran on, and the difference is the whole reproducibility claim.
-#
-# Versions are whatever `pip freeze` reports on the machine that does the run,
-# committed BEFORE it starts.
-#
-# The Claude Code CLI needs no separate pin: the SDK ships one inside its own
-# wheel and prefers it to anything on PATH, so `claude-agent-sdk==0.2.139`
-# pins the CLI to 2.1.233 by construction. Do not read `claude --version` and
-# assume that is what ran — on the machine that did the preflight, PATH had
-# 2.1.227 from Homebrew and every session ran on the bundled 2.1.233. The
-# manifest records the resolved path, its version, and what is on PATH, so the
-# two can never be confused again.
-#
-# `matplotlib` and `openpyxl` are host-side only — figures and spreadsheet
-# reading. Nothing a container session runs imports them, and the host that
-# drove these runs has matplotlib 3.11.1, because 3.8.4 has no wheel for
-# CPython 3.13 on Windows. The image installs the pin; the manifest records the
-# host. The versions that decide what a session does are the other two.
-#
-# Every one of these is recorded per run in
-# output/llm_logs/exp3_agent/run_manifest_<stamp>.json, along with the
-# interpreter, the platform, the git commit and the environment sweep.
-#
-# claude-agent-sdk must be > 0.1.59: below that, `setting_sources=[]` — the
-# isolation this run depends on — was mishandled.
 anthropic==0.122.0
 claude-agent-sdk==0.2.139
+httpx==0.28.1
 matplotlib==3.8.4
 openpyxl==3.1.2

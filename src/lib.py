@@ -79,7 +79,7 @@ KEYS = {
     "160": ("k160", "2.3", "whether a RECITAL conflicts with or controls the operative terms"),
 }
 
-TYPES = {
+CATEGORIES = {
     "1.1": "Lexical ambiguity or vagueness — a word or phrase in the clause is "
            "susceptible to more than one reasonable reading on its face.",
     "1.2": "Mechanical error — a mistake in writing, grammar, spelling or "
@@ -100,12 +100,12 @@ KEY_BY_LABEL = {label: (folder, code, about)
 
 
 def risk_lines(key_labels):
-    """The risk types a case was selected under, as prompt text."""
+    """The risk categories a case was selected under, as prompt text."""
     out = []
     for label in key_labels:
         _, code, about = KEY_BY_LABEL[label]
         out.append(f"  [{code}] Westlaw key {label} — {about}.\n"
-                   f"        {TYPES[code]}")
+                   f"        {CATEGORIES[code]}")
     return "\n".join(out)
 
 

@@ -59,7 +59,7 @@ def main():
 
     for citation, found in sorted(clauses.items()):
         case = cases.get(citation, {})
-        # Fallback risk type for a contract with no positive of its own. Still
+        # Fallback risk category for a contract with no positive of its own. Still
         # the Westlaw keys, never a model's choice.
         case_code = ",".join(case.get("taxonomy", []))
         case_key = ",".join(sorted(case.get("keys", {})))
@@ -87,7 +87,7 @@ def main():
             n = 0
             here = [c for c in found["clauses"] if c["contract_id"] == cid]
             positives = [c["lines"] for c in here]
-            # A negative carries the risk type its own contract's positives
+            # A negative carries the risk category its own contract's positives
             # were construed under; failing that, the case's code.
             taxonomy = ",".join(sorted({c["taxonomy"] for c in here})) or case_code
             key = ",".join(sorted({k for c in here

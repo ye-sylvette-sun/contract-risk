@@ -22,16 +22,16 @@ Prevalence is 2.1% — 134 litigated provisions in 6,461.
 |---|---|---:|---:|---:|---:|---:|
 | risky vs not | `llm_api` | 0.869 | 0.312 | 0.21 | 0.46 | 4.6% |
 | risky vs not | **`agent`** | **0.909** | **0.438** | **0.27** | **0.64** | 4.9% |
-| type 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
-| type 1 — intrinsic | **`agent`** | **0.912** | **0.423** | **0.35** | **0.57** | 3.0% |
-| type 2 — relational | `llm_api` | 0.958 | **0.139** | 0.04 | 0.42 | 2.1% |
-| type 2 — relational | **`agent`** | **0.963** | 0.063 | 0.04 | **0.58** | 2.9% |
+| category 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
+| category 1 — intrinsic | **`agent`** | **0.912** | **0.423** | **0.35** | **0.57** | 3.0% |
+| category 2 — relational | `llm_api` | 0.958 | **0.139** | 0.04 | 0.42 | 2.1% |
+| category 2 — relational | **`agent`** | **0.963** | 0.063 | 0.04 | **0.58** | 2.9% |
 
 At 2% prevalence **PR-AUC is the number to read**. ROC-AUC is flattered by the
 6,327 easy negatives; PR-AUC is not. The agent arm is ahead by +0.126 on the
-main panel and +0.120 on type 1, and **behind by 0.076 on type 2** — see §4.
+main panel and +0.120 on category 1, and **behind by 0.076 on category 2** — see §4.
 
-The strongest single line is type 1. Both arms flag **3.0%** of provisions, and
+The strongest single line is category 1. Both arms flag **3.0%** of provisions, and
 on that identical budget the agent recovers 57% of litigated provisions against
 40%. No difference in threshold placement or in which provisions happened to be
 easy explains that: it is the same amount of reading for 17 more points of
@@ -76,14 +76,14 @@ positives.
 The honest reading is that the agent is better across the board, and that this
 data does not establish length as the reason.
 
-## 4. Type 2 — where the agent is worse
+## 4. Category 2 — where the agent is worse
 
-Type 2 asks whether a provision conflicts with another elsewhere in the
+Category 2 asks whether a provision conflicts with another elsewhere in the
 contract. The agent recalls **58%** against 42% and edges ROC-AUC (0.963 vs
 0.958), yet its PR-AUC is **less than half** the one-shot arm's (0.063 vs
 0.139).
 
-Those move in opposite directions because the agent flags type 2 far more
+Those move in opposite directions because the agent flags category 2 far more
 freely — 2.9% of provisions against 2.1% — and at 12 positives in 6,461 the
 extra false positives cost more precision than the extra catches buy. Both arms
 sit at P@0.5 = 0.04 regardless.
@@ -133,8 +133,8 @@ matching manifest hashes. Between those two executions **ROC-AUC moved by about
 not a variance estimate, but it means:
 
 - Differences of a few hundredths in ROC-AUC are **not** interpretable on their
-  own. The main-panel gap of +0.040 is around twice that scale, and the type 1
-  gap of +0.049 rather more; the type 2 differences are well inside it.
+  own. The main-panel gap of +0.040 is around twice that scale, and the category 1
+  gap of +0.049 rather more; the category 2 differences are well inside it.
 - Precision and recall at a fixed 0.5 threshold are the most fragile numbers
   here. The mean predicted probability on gold positives sits close to 0.5, so a
   small shift in calibration moves many positives across the line and swings
@@ -144,7 +144,7 @@ not a variance estimate, but it means:
 
 What survives that caution is the recall-cost result of §2 and the equal-flag-
 rate result of §1, both of which are large relative to the observed movement.
-What does not survive it is any claim about type 2, about contract length, or
+What does not survive it is any claim about category 2, about contract length, or
 about small differences in ROC-AUC.
 
 The straightforward fix is repeated paired runs — three runs of each arm over a
@@ -156,11 +156,11 @@ stated as inside or outside it. It has not been done, on cost.
 ## 7. Summary
 
 - On an identical flag rate the agent arm recovers substantially more litigated
-  provisions: 57% against 40% on type 1 at 3.0% flagged, 64% against 46% overall.
+  provisions: 57% against 40% on category 1 at 3.0% flagged, 64% against 46% overall.
 - It reaches 80% recall while flagging 13.6% of the contract, against 28.9% —
   less than half the reading — for about 2.1× the inference cost.
-- It is **worse** on type 2 PR-AUC, flagging that category more freely than its
-  precision supports. Type 2 rests on 12 positives and is a ranking signal only.
+- It is **worse** on category 2 PR-AUC, flagging that category more freely than its
+  precision supports. Category 2 rests on 12 positives and is a ranking signal only.
 - The agent leads in every length stratum; contract length is not established as
   the mechanism.
 - Run-to-run variance is unquantified. One repeat of the agent arm moved ROC-AUC
