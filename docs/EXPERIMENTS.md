@@ -33,7 +33,7 @@ The 64 contracts of the dataset that are not used as worked examples:
 
 ```
 6,461 clauses  |  134 positive  (2.1%)  |  64 contracts
-type 1: 122 positive   type 2: 12 positive
+cat1: 122 positive   cat2: 12 positive
 ```
 
 Three contracts are held out permanently to supply the worked examples — one per
@@ -178,13 +178,13 @@ Three binary tasks, each swept over a flagging threshold t in [0, 1]:
 | panel | score | positive when |
 |---|---|---|
 | risky vs not | `max(prob_cat1, prob_cat2)` | the court construed the clause at all |
-| type 1 vs not | `prob_cat1` | the construction turned on an intrinsic defect |
-| type 2 vs not | `prob_cat2` | it turned on the clause's fit with the instrument |
+| category 1 vs not | `prob_cat1` | the construction turned on an intrinsic defect |
+| category 2 vs not | `prob_cat2` | it turned on the clause's fit with the instrument |
 
-The two type panels are **one-vs-rest**: for type 1 a type-2 clause counts as a
-negative, and the other way round. That is the question the two probabilities are
-actually asked — each is an independent judgement about its own category, not a
-share of one distribution.
+The two category panels are **one-vs-rest**: for category 1 a category-2
+clause counts as a negative, and the other way round. That is the question the
+two probabilities are actually asked — each is an independent judgement about
+its own category, not a share of one distribution.
 
 Reported per panel: **ROC-AUC** for ranking quality without picking a threshold,
 then **precision**, **recall** and **the share of clauses flagged** against
@@ -228,13 +228,13 @@ under identical ids. Full write-up in [REPORT.md](REPORT.md).
 |---|---|---:|---:|---:|---:|---:|
 | risky vs not | `llm_api` | 0.869 | 0.312 | 0.21 | 0.46 | 4.6% |
 | risky vs not | **`agent`** | **0.909** | **0.438** | **0.27** | **0.64** | 4.9% |
-| type 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
-| type 1 — intrinsic | **`agent`** | **0.912** | **0.423** | **0.35** | **0.57** | 3.0% |
-| type 2 — relational | `llm_api` | 0.958 | **0.139** | 0.04 | 0.42 | 2.1% |
-| type 2 — relational | **`agent`** | **0.963** | 0.063 | 0.04 | **0.58** | 2.9% |
+| category 1 — intrinsic | `llm_api` | 0.863 | 0.303 | 0.25 | 0.40 | 3.0% |
+| category 1 — intrinsic | **`agent`** | **0.912** | **0.423** | **0.35** | **0.57** | 3.0% |
+| category 2 — relational | `llm_api` | 0.958 | **0.139** | 0.04 | 0.42 | 2.1% |
+| category 2 — relational | **`agent`** | **0.963** | 0.063 | 0.04 | **0.58** | 2.9% |
 
 At 2.1% prevalence PR-AUC is the number to read; ROC-AUC is flattered by the
-6,327 easy negatives. The clearest line is type 1: both arms flag **3.0%** of
+6,327 easy negatives. The clearest line is category 1: both arms flag **3.0%** of
 provisions, and on that identical budget the agent recovers 57% of litigated
 provisions against 40%.
 
@@ -252,12 +252,12 @@ What each recall target costs on the risky-vs-not panel:
 Full sweeps in `output/figures/exp3_<run>_threshold_curves.png`: precision and
 recall on top, flag rate underneath, for each of the three panels.
 
-**Where the agent is worse.** On type 2 its PR-AUC is less than half the
+**Where the agent is worse.** On category 2 its PR-AUC is less than half the
 one-shot arm's (0.063 vs 0.139): it flags that category more freely (2.9% vs
 2.1%) than 12 positives can support, so the extra false positives cost more
 precision than the extra catches buy.
 
-**Shared weakness.** Both rank type 2 well (ROC ≈ 0.96) and neither is usable as
+**Shared weakness.** Both rank category 2 well (ROC ≈ 0.96) and neither is usable as
 an absolute probability for it — precision at 0.5 is 0.04 either way, on 12
 positives.
 

@@ -38,8 +38,8 @@ RECALL_TARGETS = (0.70, 0.80, 0.90)
 
 PANELS = {
     "risky vs not": "risky",
-    "type 1 vs not": "cat1",
-    "type 2 vs not": "cat2",
+    "category 1 vs not": "cat1",
+    "category 2 vs not": "cat2",
 }
 
 
@@ -70,10 +70,10 @@ def load(path):
 def scored(rows, which):
     """(score, label) per row for one panel.
 
-    The two type panels are one-vs-rest: for type 1 a type-2 clause counts as a
-    negative, and the other way round. That is the question the two
-    probabilities are actually asked — each is an independent judgement about
-    its own category, not a share of one distribution.
+    The two category panels are one-vs-rest: for category 1 a category-2
+    clause counts as a negative, and the other way round. That is the question
+    the two probabilities are actually asked — each is an independent
+    judgement about its own category, not a share of one distribution.
     """
     if which == "risky":
         return ([max(api._f(r["prob_cat1"]), api._f(r["prob_cat2"])) for r in rows],

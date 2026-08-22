@@ -85,8 +85,11 @@ rerun.
   `claude-agent-sdk==0.2.139`, `anthropic==0.122.0`, `matplotlib==3.8.4`,
   `openpyxl==3.1.2`, installed into the image at build time. Read the manifests
   with one caveat: they record the **host** environment, which drives the run
-  but does not perform it, and there `matplotlib` is 3.11.1 — 3.8.4 has no wheel
-  for CPython 3.13 on Windows. The two versions that decide what a session does,
+  but does not perform it, and in every manifest written so far `matplotlib` is
+  3.11.1 — that host was CPython 3.13 on Windows, where 3.8.4 has no wheel. The
+  host has since been rebuilt on CPython 3.12, where the pinned wheel installs,
+  so a manifest written now would record 3.8.4. The two versions that decide
+  what a session does,
   `claude-agent-sdk` and `anthropic`, match everywhere; `matplotlib` and
   `openpyxl` draw figures and read spreadsheets and are imported by nothing a
   session runs. The SDK must be newer than 0.1.59, below which

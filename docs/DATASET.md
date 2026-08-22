@@ -32,9 +32,9 @@ may carry a defect nobody had occasion to fight over. Precision measured against
 these labels is a lower bound.
 
 **No model assigns the label.** It comes from the **Westlaw Key Numbers** the
-case was filed under. Twelve keys map onto six risk-type codes:
+case was filed under. Twelve keys map onto six risk-category codes:
 
-| code | risk type |
+| code | risk category |
 |---|---|
 | 1.1 | Lexical ambiguity — a word or phrase is open to more than one reasonable reading |
 | 1.2 | Mechanical error — a mistake in writing, grammar, spelling or punctuation |
@@ -105,6 +105,30 @@ fraction of a long filing. Between them they reject 8 of 117 contracts, four
 being insurance policies with two-column endorsement pages. Nothing is deleted —
 `output/layout.json` records both scores and the evidence.
 
+### From the linking sheet to 67 contracts
+
+Each filter with the count it leaves. Everything here is recomputable from
+`data/`, `contract_risk/generated/` and `output/{cases,contracts,layout}.json`.
+
+| | agreements | cases |
+|---|---:|---:|
+| in the docket linking sheet | 9,055 | 3,596 |
+| with a Bloomberg **Entry Document** link — the rest cite an exhibit nobody can download | **1,374** | 732 |
+| downloaded, OCR'd and line-cut by Contract-Risk — *a sample of the above, not a filter* | **209** | 120 |
+| in a case in scope: filed under one of the 12 keys, with opinion text on disk | 143 | 81 |
+| Contract-Risk's verdict is `usable` | 123 | 68 |
+| registered — de-duplicated at 0.90 shingle containment, over the length floor | **117** | 68 |
+| single-column — Step 0b rejects 8 two-column scans | **109** | 68 |
+| in a case filed under a **single risk category** | **67** | **39** |
+
+The last row is the only filter about labels rather than about whether a
+document is usable, and it costs the most.
+
+**The rule.** A case is kept only if all its Westlaw keys map to one taxonomy
+code. Several keys are fine — 7 of the 44 kept cases carry two keys meaning the
+same risk category (`k143.5` and `k147(3)` both map to 2.2). Excluded is a case
+whose keys span two codes.
+
 ### Step 1 — which clauses were disputed (Opus 5, high effort, one call per case)
 
 The call carries the **numbered opinion plus every registered contract of the
@@ -154,7 +178,7 @@ is filed under exactly one.
 
 | column | |
 |---|---|
-| `citation`, `taxonomy`, `key` | the case and the risk type, from the Westlaw key |
+| `citation`, `taxonomy`, `key` | the case and the risk category, from the Westlaw key |
 | `clause_id` | `pos1…` / `neg1…` **within the contract**, in document order — unique per `(contract_id, clause_id)` |
 | `clause_name`, `label` | `POSITIVE` / `NEGATIVE` |
 | `provenance` | which step produced the row |

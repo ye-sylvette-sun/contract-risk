@@ -1,10 +1,10 @@
 """Threshold-sweep figure for experiment 3.
 
 Three binary tasks swept over a flagging threshold t in [0, 1]: risky vs not
-(score `max(prob_cat1, prob_cat2)`), type 1 vs not (`prob_cat1`), type 2 vs not
-(`prob_cat2`). The two type panels are ONE-VS-REST — for type 1 a type-2 clause
-counts as a negative — because each probability is an independent judgement, not
-a share of one distribution.
+(score `max(prob_cat1, prob_cat2)`), category 1 vs not (`prob_cat1`),
+category 2 vs not (`prob_cat2`). The two category panels are ONE-VS-REST —
+for category 1 a category-2 clause counts as a negative — because each
+probability is an independent judgement, not a share of one distribution.
 
 Per task: precision and recall on top, the share of clauses flagged below. The
 bottom row stops the top being read too kindly — near 2% prevalence, flagging a
@@ -54,10 +54,10 @@ TASKS = [
     ("Risky vs not",
      lambda r: max(float(r["prob_cat1"]), float(r["prob_cat2"])),
      lambda r: r["gold"] != "not_risky"),
-    ("Type 1 vs not — intrinsic defect",
+    ("Category 1 vs not — intrinsic defect",
      lambda r: float(r["prob_cat1"]),
      lambda r: r["gold"] == "risky_cat1"),
-    ("Type 2 vs not — relational defect",
+    ("Category 2 vs not — relational defect",
      lambda r: float(r["prob_cat2"]),
      lambda r: r["gold"] == "risky_cat2"),
 ]
@@ -182,7 +182,7 @@ def main():
     fig.text(0.5, 0.935,
              f"Exp 3 — {subtitle}  ·  "
              f"{len(rows)} clauses from {n_contracts} contracts  ·  "
-             f"the two type panels are one-vs-rest",
+             f"the two category panels are one-vs-rest",
              ha="center", fontsize=9.5, color=INK2)
     fig.legend(handles=[
         plt.Line2D([], [], color=C_PRECISION, linestyle="--", linewidth=1.5,

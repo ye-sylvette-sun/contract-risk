@@ -50,7 +50,7 @@ def taxonomy_of(value):
     spelling cannot come back at all. This exists because it did: before the
     enum, one run answered with the Westlaw KEY LABEL — `k152`, `k143(2)` —
     instead of the code that label maps to, and once with `[1.1]`. All twelve
-    named the right risk type in the wrong vocabulary, and two whole cases lost
+    named the right risk category in the wrong vocabulary, and two whole cases lost
     every clause they had to it.
 
     It concedes nothing on provenance. The result still has to be one of the
@@ -77,7 +77,7 @@ def check(clause, case, texts, opinion_lines):
 
     # The model does not choose the label — the codes are handed to it as facts
     # about the case, and one outside that set is rejected. This is an integrity
-    # check on which risk type the dispute falls under, NOT a filter on whether
+    # check on which risk category the dispute falls under, NOT a filter on whether
     # a clause was disputed: a clause the court examined and upheld is still a
     # positive, so nothing here may turn on how the case came out.
     codes = lib.codes_of(case)

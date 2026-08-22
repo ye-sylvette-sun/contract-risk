@@ -77,7 +77,7 @@ def write_examples(root, examples):
         d.mkdir(parents=True, exist_ok=True)
 
         notes = [
-            f"# Worked example — {api.TYPE_NAME[e['code']]}",
+            f"# Worked example — {api.CATEGORY_NAME[e['code']]}",
             "",
             f"Contract `{r['contract_id']}`, filed in {r['citation']}.",
             "",

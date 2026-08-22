@@ -36,7 +36,7 @@ An unlitigated clause is **lower risk, not sound**: it may be well drafted, or i
 may carry a defect nobody had occasion to fight over. Precision against these
 labels is a lower bound.
 
-The risk *type* is never a model's opinion either — it comes from the Westlaw Key
+The risk *category* is never a model's opinion either — it comes from the Westlaw Key
 Number the case was filed under.
 
 **The classes are not matched on clause length, deliberately.** Positives run

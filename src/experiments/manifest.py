@@ -19,7 +19,7 @@ from dataclasses import fields, is_dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
-PACKAGES = ("claude-agent-sdk", "anthropic", "matplotlib", "openpyxl")
+PACKAGES = ("claude-agent-sdk", "anthropic", "httpx", "matplotlib", "openpyxl")
 
 
 def _utc():

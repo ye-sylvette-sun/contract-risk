@@ -67,7 +67,9 @@
   **修复：**全部改为 `==` 锁定并在运行前提交：`claude-agent-sdk==0.2.139`、
   `anthropic==0.122.0`、`matplotlib==3.8.4`、`openpyxl==3.1.2`，在镜像构建时装入。
   看 manifest 时有一点要注意：它记录的是**宿主机**环境——宿主机驱动实验但不执行实验——
-  那里的 `matplotlib` 是 3.11.1，因为 3.8.4 在 Windows + CPython 3.13 上没有 wheel。
+  已经写下的 manifest 里 `matplotlib` 都是 3.11.1，因为当时的宿主机是 Windows +
+  CPython 3.13，3.8.4 在那里没有 wheel。宿主机后来已重建到 CPython 3.12，锁定的
+  wheel 能装上，所以现在再写一份 manifest 会记录 3.8.4。
   真正决定 session 行为的两个版本 `claude-agent-sdk` 与 `anthropic` 处处一致；
   `matplotlib` 与 `openpyxl` 只用来画图和读表格，session 运行的代码一个都不 import。
   SDK 须高于 0.1.59，低于该版本 `setting_sources=[]` 行为不正确。
