@@ -1,0 +1,2439 @@
+{
+  "contract_id": "527BR351_liquidating_trust_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 88,
+  "n_issues": 59,
+  "n_located": 54,
+  "n_judged": 52,
+  "n_skipped": 7,
+  "counts": {
+    "cat1": 11,
+    "cat2": 0,
+    "none": 41
+  },
+  "parties": {
+    "debtor_mortgage_fund_08": {
+      "n_issues": 33,
+      "n_located": 29,
+      "by_tab": {
+        "risks_negotiation": 17,
+        "proofread": 16
+      },
+      "by_kind": {
+        "Important": 4,
+        "Notable": 8,
+        "Minor": 5,
+        "Internal Annotations": 2,
+        "Spelling + Grammar": 1,
+        "Definitions": 13
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Unilateral Trustee Rate Increases Without Cap",
+          "description": "Section 4.7(a) allows the Trustee to increase compensation rates annually with only 10 days' notice to holders, without requiring approval from the Bankruptcy Court or the Committee, and without any cap on the increase amount . This is problematic for the Debtor and the estate because the Trustee could significantly increase rates over time, depleting Trust Assets at the expense of creditors. The provision should require Committee approval or impose a reasonable cap.",
+          "revision": "... Trustee may increase said compensation by no more than five percent (5%) per year upon ten (10) days'",
+          "comment": "We introduced a 5% annual cap on trustee compensation increases to protect estate assets and ensure creditor recoveries are not undermined by unconstrained fee escalation over the life of the Trust.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34110,
+            "end_char": 34161,
+            "start_line": 556,
+            "end_line": 556,
+            "match_cover": 0.444,
+            "match_run": 5,
+            "matched_text": "Trustee may increase said compensation upon ten (10",
+            "clause": {
+              "clause_id": "neg69",
+              "label": "NEGATIVE",
+              "clause_name": "4.7(a) Expense Reimbursement and Compensation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision clearly permits annual rate increases without a cap or further approval. The issue concerns commercial protection, not uncertainty in construing the text."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Committee Can Remove Trustee Without Cause",
+          "description": "Section 5.2 allows the Committee to remove the Trustee \"without cause\" . While removal for Cause is appropriately defined, unlimited removal without cause gives the Committee disproportionate power and could destabilize the Trust's administration. From the Debtor's perspective, an abrupt removal could disrupt ongoing liquidation and litigation, harming the estate. Consider requiring at minimum reasonable written notice (e.g., 30 days) and a transition period before removal without cause takes effect.",
+          "revision": "... by the Committee without cause upon not less than thirty (30) days' prior written notice to the Trustee and the Bankruptcy Court.",
+          "comment": "We revised this provision to require 30 days' prior written notice before a without-cause removal, ensuring orderly transition of Trust administration and preserving continuity of ongoing liquidation and litigation consistent with the estate's fiduciary obligations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 35368,
+            "end_char": 35503,
+            "start_line": 578,
+            "end_line": 580,
+            "match_cover": 0.5,
+            "match_run": 3,
+            "matched_text": "by filing not less than ninety (90) days’ prior written notice of the proposed effective date of resignation with the Bankruptcy Court",
+            "clause": {
+              "clause_id": "neg73",
+              "label": "NEGATIVE",
+              "clause_name": "5.1 Resignation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Committee’s right to remove the Trustee without cause is unambiguous. The absence of notice or transition protections is a negotiation issue rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Low Threshold for Committee Approval of Asset Dispositions",
+          "description": "Section 3.3(e) requires Committee approval only for the sale, liquidation, abandonment, or disposition of assets with a gross fair market value of $5,000 or more . This is an extremely low threshold that could create significant administrative burden, slowing down the Trust's liquidation process and potentially increasing costs. From the Debtor's perspective, a higher threshold (e.g., $25,000 or $50,000) would allow for more efficient administration while still providing meaningful Committee oversight over material transactions.",
+          "revision": "The Trustee shall sell, liquidate, abandon or otherwise dispose of an asset with a gross fair market value of $525,000 or more only pursuant ...",
+          "comment": "We increased the approval threshold to $25,000 to strike a more practical balance between Committee oversight and efficient trust administration, consistent with the scale of assets typically involved in liquidating trusts of this nature.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19889,
+            "end_char": 20027,
+            "start_line": 331,
+            "end_line": 332,
+            "match_cover": 0.96,
+            "match_run": 19,
+            "matched_text": "The Trustee shall sell, liquidate, abandon or otherwise dispose of an asset with a gross fair market value of $5,000 or more only pursuant",
+            "clause": {
+              "clause_id": "neg49",
+              "label": "NEGATIVE",
+              "clause_name": "3.3(e) Supervision by Committee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The $5,000 approval threshold is definite and readily applicable. Whether it is administratively inefficient does not create ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Broad Exculpation Extends to All Trustee Agents",
+          "description": "Section 4.3(a) exculpates not only the Trustee but also all attorneys, accountants, professionals, employees, and \"any other duly designated agent or representative\" from liability for anything other than willful misconduct, gross negligence, or fraud . This is quite broad — excluding ordinary negligence as a standard of liability for all these parties means the Debtor's estate has very limited recourse if professionals retained by the Trustee act negligently. Consider narrowing the exculpation for non-Trustee parties to at least include ordinary negligence.",
+          "revision": "a. None of the Trustee or ...",
+          "comment": "Blanket exculpation of all Trustee-designated agents and professionals from ordinary negligence liability is overbroad and disproportionately limits the estate's remedies; exculpation at this level should be reserved for the Trustee itself, not the full range of retained professionals.",
+          "group_size": 1,
+          "location": {
+            "start_char": 27457,
+            "end_char": 27482,
+            "start_line": 454,
+            "end_line": 454,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "a. None of the Trustee or",
+            "clause": {
+              "clause_id": "neg60",
+              "label": "NEGATIVE",
+              "clause_name": "4.3(a) Standard of Care"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 4.3(a) clearly extends exculpation to the listed agents and representatives, subject to specified exceptions. Its breadth is a substantive allocation of risk, not a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Missing Conjunction Creates Ambiguity in Confidentiality Obligation",
+          "description": "Section 4.9 appears to be missing an \"and\" between \"while serving as Trustee under this Trust Agreement\" and \"following the termination of this Trust Agreement\"  . As drafted, it reads as though the confidentiality obligation applies only while serving, but the intended meaning is likely that the obligation applies both during service and after termination/resignation/removal. This ambiguity could allow a former Trustee to argue the obligation ended upon departure.",
+          "revision": "... Trustee under this Trust Agreement and",
+          "comment": "The conjunction clarifies that the confidentiality obligation runs both during and after the Trustee's tenure, reflecting the clear intent of the provision and preventing a gap in protection upon termination or resignation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13041,
+            "end_char": 13105,
+            "start_line": 217,
+            "end_line": 217,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "Trustee under this Trust Agreement (in the form of an errors and",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(m) Obtain insurance for Trustee liabilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The missing conjunction in Section 4.9 makes the temporal modifiers grammatically malformed and obscures whether confidentiality applies both during and after service. This is a mechanical drafting error affecting scope."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Duplicate Section Numbering (Two Sections Numbered 3.8)",
+          "description": "There are two sections both numbered \"3.8\" — one for \"Reporting by the Trustee\"  and another for \"Compliance with Laws\" . This duplication creates ambiguity when cross-referencing these provisions. The Compliance with Laws section should be renumbered to 3.9 (and the missing Section 3.7 should also be noted — the agreement jumps from 3.6 to 3.8).",
+          "revision": "3.8 |9  Compliance with Laws. Any and ...",
+          "comment": "Renumbered from duplicate 3.8 to 3.9 to resolve conflicting section numbering and ensure accurate cross-referencing throughout the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25371,
+            "end_char": 25406,
+            "start_line": 416,
+            "end_line": 416,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "3.8 | Compliance with Laws. Any and",
+            "clause": {
+              "clause_id": "neg57",
+              "label": "NEGATIVE",
+              "clause_name": "3.8 Compliance with Laws"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Using “3.8” for two different provisions is a mechanical numbering error that makes any reference to Section 3.8 potentially indeterminate."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Trustee Serves Without Bond",
+          "description": "Section 4.8 provides that the Trustee shall serve without bond . Given that the Trustee will be handling potentially significant Trust Assets with broad authority and limited liability (only for willful misconduct, gross negligence, or fraud), the absence of a bond requirement removes a layer of financial protection for the Debtor and the beneficiaries. The Debtor should consider requiring a bond or at minimum requiring the Trustee to maintain appropriate insurance coverage.",
+          "revision": "The Trustee shall serve without bond.obtain and maintain a bond in an amount to be determined by the Committee, the cost of which shall be borne by the Liquidating Trust.",
+          "comment": "We introduced a bonding requirement because the Trustee's broad discretionary authority over Trust Assets, combined with a limited liability standard, creates meaningful financial exposure for beneficiaries that warrants this standard protective measure.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34814,
+            "end_char": 35370,
+            "start_line": 566,
+            "end_line": 578,
+            "match_cover": 0.387,
+            "match_run": 6,
+            "matched_text": "The Trustee shall serve without bond. 4.9 Confidentiality. The Trustee shall, while serving as Trustee under this Trust Agreement following the termination of this Trust Agreement or following the earlier of his or her removal or resignation hereunder, hold strictly confidential and not use for pers",
+            "clause": {
+              "clause_id": "neg72",
+              "label": "NEGATIVE",
+              "clause_name": "4.9 Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The direction that the Trustee serve without bond is explicit. The resulting lack of financial protection is a negotiation risk, not an interpretive one."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Amendment Requires Only Trustee and Committee Approval",
+          "description": "Section 8.1 allows any substantive provision of this Trust Agreement to be amended by the Trustee with Committee approval alone . The Debtor is entirely excluded from the amendment process, meaning the agreement could be materially modified without the Debtor's knowledge or consent. While the Plan controls over inconsistencies, amendments that don't directly conflict with the Plan but still affect the Debtor's interests could be made unilaterally. Consider requiring notice to, or consent of, the Debtor for material amendments.",
+          "revision": "... upon approval of the Committee and with prior written notice to the Debtor. Notwithstanding this Section, any",
+          "comment": "We revised this provision to require prior written notice to the Debtor before any amendment becomes effective, as the Debtor retains residual interests under the Plan that could be materially affected by changes to the Trust Agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 43905,
+            "end_char": 43970,
+            "start_line": 707,
+            "end_line": 707,
+            "match_cover": 0.529,
+            "match_run": 5,
+            "matched_text": "upon approval of the Committee. Notwithstanding this Section, any",
+            "clause": {
+              "clause_id": "neg80",
+              "label": "NEGATIVE",
+              "clause_name": "8.1 Amendment and Waiver"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 8.1 clearly permits amendment by the Trustee with Committee approval and does not require Debtor participation. The requested Debtor notice or consent is an additional protection, not a cure for ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Deadline for Distribution After Liquidation",
+          "description": "Section 3.6 states the Trustee shall make distributions \"within a reasonable time after liquidation of all assets\" , but does not define what constitutes a \"reasonable time.\" This vague standard could allow distributions to be delayed indefinitely. From the Debtor's perspective (concerned with finality and winding down), a specific timeframe — such as 90 or 120 days — would provide more certainty and help ensure prompt closure.",
+          "revision": "claims within a reasonable timeone hundred twenty (120) days after liquidation of all assets ...",
+          "comment": "We introduced a 120-day distribution deadline to replace the open-ended 'reasonable time' standard, ensuring prompt closure of the Liquidating Trust and providing certainty to all stakeholders.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23911,
+            "end_char": 23974,
+            "start_line": 389,
+            "end_line": 389,
+            "match_cover": 0.643,
+            "match_run": 5,
+            "matched_text": "claims within a reasonable time after liquidation of all assets",
+            "clause": {
+              "clause_id": "neg54",
+              "label": "NEGATIVE",
+              "clause_name": "3.6 Distributions; Withholding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “within a reasonable time” has an elastic boundary and requires contextual determination of how long the Trustee may delay distribution."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Trustee Can Liquidate Assets to Pay Own Compensation",
+          "description": "Section 4.7(b) allows the Trustee to unilaterally \"reduce to cash\" (i.e., liquidate) Trust Assets when cash is insufficient to cover the Trustee's own compensation and that of retained professionals  . This creates a conflict of interest: the Trustee may force-liquidate assets at unfavorable prices to ensure payment. This provision should require Committee approval before the Trustee liquidates assets specifically for self-compensation.",
+          "revision": "then the Trustee may, with the prior approval of the Committee, reduce to cash that portion ...",
+          "comment": "We conditioned asset liquidation for Trustee compensation on prior Committee approval to introduce a necessary check against the inherent conflict of interest in allowing a fiduciary to unilaterally liquidate Trust Assets for its own benefit, consistent with sound trust governance principles under California law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34671,
+            "end_char": 34719,
+            "start_line": 563,
+            "end_line": 563,
+            "match_cover": 0.562,
+            "match_run": 5,
+            "matched_text": "then the Trustee may reduce to cash that portion",
+            "clause": {
+              "clause_id": "neg70",
+              "label": "NEGATIVE",
+              "clause_name": "4.7(b) Insufficient cash"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 4.7(b) clearly authorizes liquidation of sufficient Trust Assets to fund compensation and reimbursement. The alleged conflict of interest is a governance concern, not textual ambiguity."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Limited to Regular Mail Only",
+          "description": "Section 9.6 provides that notices shall be deemed sufficient if deposited \"postage prepaid, in a post office or letter box\" . This provision relies solely on regular mail, which is slow and provides no proof of delivery. Modern practice typically includes provisions for email, overnight courier, and certified mail. The Committee voting provisions in Section 3.3(f) already contemplate email communication , creating an inconsistency. Consider expanding the notice provision to include additional delivery methods and clarifying when notice is deemed received.",
+          "revision": "... given, for all purposes, if (a) deposited, postage prepaid, in a ...",
+          "comment": "The current notice provision relies solely on regular mail with no proof of delivery; we have expanded it to include email, overnight courier, and certified mail, which is consistent with standard practice and the email communication already contemplated in Section 3.3(f).",
+          "group_size": 1,
+          "location": {
+            "start_char": 47361,
+            "end_char": 47421,
+            "start_line": 764,
+            "end_line": 764,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "given, for all purposes, if deposited, postage prepaid, in a",
+            "clause": {
+              "clause_id": "neg86",
+              "label": "NEGATIVE",
+              "clause_name": "9.6 Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 9.6’s mail rule and Section 3.3(f)’s specific authorization of email for Committee procedures can be harmonized because they address different notice settings. There is no direct contradiction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Periodic Reporting Obligation to Debtor",
+          "description": "Section 3.3(e) requires the Trustee to report to the Committee , and Section 3.4 addresses books and records access for holders , but there is no provision requiring the Trustee to provide periodic status reports to the Debtor regarding the liquidation progress, asset values, or distributions. Given the Debtor's interest in the orderly wind-down of its estate, the Trustee should be required to provide at least quarterly reports to the Debtor as well.",
+          "revision": "... and shall report to the Committee and shall provide quarterly written reports to the Debtor regarding the status of Trust Assets, liquidation progress, and distributions.",
+          "comment": "As Debtor-in-Possession, our client retains a direct interest in the orderly administration of its estate and is entitled to sufficient information to fulfill its oversight responsibilities; quarterly reporting to the Debtor is consistent with California trust law and standard bankruptcy liquidating trust practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19854,
+            "end_char": 20364,
+            "start_line": 330,
+            "end_line": 337,
+            "match_cover": 0.44,
+            "match_run": 6,
+            "matched_text": "and shall report to the Committee. The Trustee shall sell, liquidate, abandon or otherwise dispose of an asset with a gross fair market value of $5,000 or more only pursuant to approval of the Committee; notwithstanding the foregoing, the Trustee shall be entitled to take any other action with respe",
+            "clause": {
+              "clause_id": "neg49",
+              "label": "NEGATIVE",
+              "clause_name": "3.3(e) Supervision by Committee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a periodic reporting obligation to the Debtor is an omitted protection, not an ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Debtor Waives All Reversionary Interests",
+          "description": "Section 9.3 contains a broad waiver by the Debtor of \"any and all rights to any reversionary interests in any of the Trust Assets\" . While common in liquidating trust agreements, the Debtor should confirm this is consistent with the Plan and that no surplus assets could revert to the Debtor or its members/equity holders after all Class 2 claims are fully satisfied. If there is any possibility of surplus, the Debtor should negotiate to preserve a reversionary interest for the benefit of equity holders after all claims are fully paid.",
+          "revision": "... any of the Trust Assets; provided, however, that if the Trust Assets exceed the amount necessary to satisfy all allowed claims in full, any surplus shall be returned to the Debtor or its equity holders.",
+          "comment": "We added a surplus reversion clause to ensure equitable treatment of residual assets: absent this proviso, the Debtor's equity holders would be permanently stripped of any recovery even in a scenario where Trust Assets exceed all allowed claims, which is inconsistent with basic priority principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19211,
+            "end_char": 19740,
+            "start_line": 319,
+            "end_line": 328,
+            "match_cover": 0.4,
+            "match_run": 5,
+            "matched_text": "any of the Trust Assets with his or her own property or the property of any other person. c. Neither the Liquidating Trust nor the Trustee shall take any action that would result in the Liquidating Trust becoming subject to registration as an “investment company” pursuant to the Investment Company A",
+            "clause": {
+              "clause_id": "neg47",
+              "label": "NEGATIVE",
+              "clause_name": "3.3(c) No investment company registration"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The waiver of all reversionary interests is express and broad. Whether it is consistent with bankruptcy priority principles or should preserve a surplus is a substantive negotiation issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unlimited Indemnification Commitment Authority",
+          "description": "Sections 3.2(o), (p), and (q) each authorize the Trustee to \"commit the Liquidating Trust to indemnify\" legal counsel, accountants, and other professionals retained by the Trust in connection with their services   . There is no cap or limitation on the scope of these indemnification commitments, nor any requirement for Committee approval. The Trustee could potentially commit the Trust to unlimited indemnification exposure, depleting assets available for distribution to creditors. Consider requiring Committee approval for indemnification commitments exceeding a specified dollar threshold.",
+          "revision": "... with the performance of services, subject to approval of the Committee for any individual indemnification commitment exceeding $25,000. A law firm or ...",
+          "comment": "We introduced a Committee approval requirement for indemnification commitments exceeding $25,000 to ensure appropriate governance over Trust assets and protect the interests of creditors who are the ultimate beneficiaries of the Liquidating Trust.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14169,
+            "end_char": 14640,
+            "start_line": 234,
+            "end_line": 240,
+            "match_cover": 0.435,
+            "match_run": 5,
+            "matched_text": "with the performance of services. A public accounting firm or public accountant shall not be disqualified from serving as accountant to the Liquidating Trust solely because of its prior retention by the Debtor; q. retain and pay professionals to assist the Trustee in carrying out the powers and duti",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(q) Retain professionals"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Trustee’s authority to grant indemnities is stated without a cap or approval threshold. That breadth is clear and does not require construction."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Short Dispute Resolution Notice Period",
+          "description": "Section 3.3(g) provides that disputes between the Trustee and the Committee shall be resolved by the Bankruptcy Court after hearing on only five (5) calendar days' notice . This is a very short notice period that may not provide adequate time for the parties (particularly the Debtor, who is not mentioned as receiving notice) to prepare for a hearing on potentially complex disputes. Consider extending to at least ten (10) business days and ensuring the Debtor receives notice of any such disputes.",
+          "revision": "Court after hearing on five (5) calendarten (10) business days' notice by any party to all other parties to this Trust Agreement, unless the Bankruptcy Court ...",
+          "comment": "We revised the notice period to 10 business days and expanded notice recipients to all parties to the Trust Agreement, as 5 calendar days is insufficient for preparation on complex Trustee-Committee disputes, particularly where the Debtor's interests may be affected.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21915,
+            "end_char": 22010,
+            "start_line": 361,
+            "end_line": 361,
+            "match_cover": 0.538,
+            "match_run": 6,
+            "matched_text": "Court after hearing on five (5) calendar days’ notice by any party, unless the Bankruptcy Court",
+            "clause": {
+              "clause_id": "neg51",
+              "label": "NEGATIVE",
+              "clause_name": "3.3(g) Dispute resolution"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The five-calendar-day notice period is definite. Its adequacy and the omission of Debtor notice are procedural negotiation concerns."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Inconsistent Use of \"Register\" vs. \"Registry\"",
+          "description": "The Recitals define the official record as the \"Register\"  but then refer to \"such official registry\" in the same sentence . This inconsistency could create ambiguity about whether the \"Register\" and \"registry\" are the same document. The term should be used consistently throughout.",
+          "revision": "... not recorded on such official registry.Register.",
+          "comment": "Standardized terminology to use 'Register' consistently throughout, eliminating potential ambiguity from the mixed use of 'Register' and 'registry' in the same sentence.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2104,
+            "end_char": 2142,
+            "start_line": 36,
+            "end_line": 36,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "not recorded on such official registry",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Recitals"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The use of the undefined word “registry” immediately after defining “Register” creates at least some lexical uncertainty as to whether both terms identify the same official record."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Trustee's Sole Discretion on Confidentiality Agreements",
+          "description": "Section 3.4 allows the Trustee to require holders requesting information to enter into a confidentiality agreement \"satisfactory in form and substance to the Trustee\" . This gives the Trustee unilateral discretion to set confidentiality terms that could be so onerous as to effectively block holders from accessing information about the Trust's administration. Consider requiring that the confidentiality agreement be \"reasonable\" or in a form approved by the Committee.",
+          "revision": "confidentiality agreement satisfactoryreasonable in form and substance to ...",
+          "comment": "We replaced 'satisfactory in form and substance to the Trustee' with 'reasonable in form and substance' to ensure the confidentiality threshold does not vest the Trustee with unchecked discretion to block legitimate information requests from holders.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23057,
+            "end_char": 23120,
+            "start_line": 375,
+            "end_line": 375,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "confidentiality agreement satisfactory in form and substance to",
+            "clause": {
+              "clause_id": "neg52",
+              "label": "NEGATIVE",
+              "clause_name": "3.4 Books and Records"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Satisfactory in form and substance to the Trustee” clearly vests the acceptability determination in the Trustee. The possibility of onerous requirements concerns discretion and fairness, not ambiguity."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Typo in \"including\" creates appearance of annotation",
+          "description": "The text \"includmg\" in Section 2.2  appears to be a typographical error for \"including\" but could be mistaken for an internal annotation marker. While this is technically a spelling error rather than an annotation, the unusual rendering may suggest draft status or incomplete editing.",
+          "revision": "includmgincluding",
+          "comment": "Corrected typographical error: 'includmg' changed to 'including' for accuracy and to remove any appearance of an annotation marker.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Typo \"of expenses\" appears incomplete",
+          "description": "In subsection 3.2(l) , the phrase \"pay any fees and reimburse the of expenses\" contains what appears to be an extra \"the\" that disrupts the sentence flow, suggesting incomplete editing or a drafting artifact.",
+          "revision": "... any fees and reimburse the of expenses",
+          "comment": "Corrected drafting artifact by removing the erroneous word 'of' to restore proper sentence flow: 'pay any fees and reimburse the expenses.'",
+          "group_size": 1,
+          "location": {
+            "start_char": 12824,
+            "end_char": 12862,
+            "start_line": 213,
+            "end_line": 213,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "any fees and reimburse the of expenses",
+            "clause": {
+              "clause_id": "neg26",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(l) Pay professionals employed by PCCC"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The phrase “reimburse the of expenses” contains an erroneous word sequence that disrupts the grammatical object of “reimburse.” It is a mechanical drafting error."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelled \"WHEREOF\"",
+          "revision": "IN WITNESS WHEREOPFWHEREOF, the parties hereto have ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 48899,
+            "end_char": 48943,
+            "start_line": 829,
+            "end_line": 829,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "IN WITNESS WHEREOPF, the parties hereto have",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Effective Date",
+          "description": "The term 'Effective Date' is capitalized and used throughout the document      but is never defined in this Trust Agreement. While introductory language indicates capitalized terms have meanings from the Plan, the Effective Date is critical to understanding when obligations arise and should be explicitly cross-referenced or defined.",
+          "revision": "defined herein, all capitalized terms contained herein (including without limitation Effective Date, Bankruptcy Code, Disclosure Statement, and Estates) shall have the meanings ascribed to them in the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 912,
+            "end_char": 1014,
+            "start_line": 14,
+            "end_line": 14,
+            "match_cover": 0.593,
+            "match_run": 9,
+            "matched_text": "defined herein, all capitalized terms contained herein shall have the meanings ascribed to them in the",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The preamble expressly provides that capitalized terms not defined in the agreement have the meanings assigned in the Plan. Thus “Effective Date” is incorporated by reference rather than left textually undefined."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: PCCC",
+          "description": "The term 'PCCC' appears in  but is never defined in this Trust Agreement. The context suggests PCCC may be related to professionals or employees, but without a definition, readers cannot determine what entity or role this acronym refers to. This creates ambiguity in understanding who may be reimbursed for expenses.",
+          "revision": "employed by PCCC;the Pacific Coast Consumer Counsel (\"PCCC\");",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 12897,
+            "end_char": 13283,
+            "start_line": 214,
+            "end_line": 223,
+            "match_cover": 0.556,
+            "match_run": 3,
+            "matched_text": "employed by PCCC; m. at the expense of the Liquidating Trust, obtain insurance coverage with respect to the liabilities and obligations of the Trustee under this Trust Agreement (in the form of an errors and omissions policy or otherwise); n. obtain insurance coverage with respect to real and person",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(m) Obtain insurance for Trustee liabilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“PCCC” is an unexplained acronym, and the surrounding text does not reveal whose professionals or employees are meant. Its referent and therefore the scope of the payment authority are uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Reserved Claims",
+          "description": "The term 'Reserved Claims' is used in  and  but is never defined in this Trust Agreement. While the document references that the term is defined in the Plan, this is a critical substantive term that describes what the Trustee has authority to prosecute and settle. Without understanding what constitutes Reserved Claims, the scope of trustee authority is unclear.",
+          "revision": "settling Reserved Claims (as defined in the Plan), enforcing contracts, and asserting claims, defenses, offsets and privileges;",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 10761,
+            "end_char": 10862,
+            "start_line": 172,
+            "end_line": 172,
+            "match_cover": 0.706,
+            "match_run": 9,
+            "matched_text": "settling Reserved Claims, enforcing contracts, and asserting claims, defenses, offsets and privileges",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(b) Perform duties of a trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement expressly identifies “Reserved Claims” as a term defined in the Plan, and the preamble incorporates Plan definitions generally. The cross-document definition is not a construction defect in this agreement."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Estates",
+          "description": "The term appears as capitalized 'Estates' in  but in lowercase as 'estate' throughout most of the document       . This inconsistent capitalization creates ambiguity about whether Estates is a defined term. The capitalized form in the authority section should either be lowercased for consistency or all lowercase instances should be capitalized if referring to the defined term. Lowercase term(s) Sections 704, 108 and 1106 of the Bankruptcy Code and be a representative of the Estatesestates for purposes",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Bankruptcy Court",
+          "description": "The term 'Bankruptcy Court' is capitalized and used extensively throughout the document           but is never formally defined. While it likely refers to the United States Bankruptcy Court for the Northern District of California mentioned in the preamble, the term should be explicitly defined to avoid ambiguity, especially since the document contemplates ongoing court jurisdiction.",
+          "revision": "Bankruptcy Court for the Northern District of California (the \"Bankruptcy Court\") (the \"Debtor\"), the OFFICIAL UNSECURED",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 210,
+            "end_char": 305,
+            "start_line": 7,
+            "end_line": 7,
+            "match_cover": 0.812,
+            "match_run": 9,
+            "matched_text": "Bankruptcy Court for the Northern District of California (the “Debtor”), the OFFICIAL UNSECURED",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The preamble identifies the relevant United States Bankruptcy Court, and subsequent uses of “Bankruptcy Court” have an evident referent in context. Lack of a formal parenthetical definition does not create genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Disclosure Statement",
+          "description": "The term 'Disclosure Statement' is capitalized and referenced in  and , but is never defined in this Trust Agreement. While the introductory language indicates capitalized terms are defined in the Plan, the Disclosure Statement is a separate document that should be explicitly identified or cross-referenced to avoid confusion about which document is being referenced.",
+          "revision": "Statement (as defined in the Plan);",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 42202,
+            "end_char": 42237,
+            "start_line": 682,
+            "end_line": 683,
+            "match_cover": 0.833,
+            "match_run": 4,
+            "matched_text": "as that term is defined in the Plan",
+            "clause": {
+              "clause_id": "neg79",
+              "label": "NEGATIVE",
+              "clause_name": "7.1 Termination of Liquidating Trust"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Capitalized terms not locally defined are assigned their Plan meanings by the preamble. The desirability of a more specific citation to the Disclosure Statement is a drafting convenience rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Class 2 claims",
+          "description": "The term 'Class 2 claims' is used extensively throughout the document          but is never defined in this Trust Agreement. While these claim classifications are presumably defined in the Plan, the Trust Agreement should define or cross-reference what constitutes Class 2 claims since they are the primary beneficiaries of the trust.",
+          "revision": "allowed Class 2 claims (as defined in the Plan);",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5009,
+            "end_char": 5336,
+            "start_line": 80,
+            "end_line": 84,
+            "match_cover": 0.778,
+            "match_run": 4,
+            "matched_text": "allowed Class 2 claims (with each such holder receiving an undivided interest therein pro rata in proportion to all allowed Class 2 claims), and then by such holders to the Liquidating Trust in exchange for interests in the Trust for the benefit of such holders (the “Liquidating Trust Interests”), i",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.2 Treatment of Transfer of Trust Assets"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The preamble incorporates the Plan’s meanings for capitalized claim classifications, including Class 2 claims. The agreement therefore supplies a clear definitional route."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Class 1 claims",
+          "description": "The term 'Class 1 claims' appears in  but is never defined in this Trust Agreement. Since the Trustee has distribution obligations with respect to Class 1 claims from proceeds of secured asset sales, this classification should be defined or cross-referenced to the Plan.",
+          "revision": "... to holders of Class 1 (as defined in the Plan)",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 41905,
+            "end_char": 42237,
+            "start_line": 674,
+            "end_line": 683,
+            "match_cover": 0.7,
+            "match_run": 4,
+            "matched_text": "of 19 Case3:14-cv-00993-SI Documenti6-3 Filed07/15/14 Page4é of 49 TERMINATION OF LIQUIDATING TRUST 7.1 Termination of Liquidating Trust. The Liquidating Trust will terminate on the earlier of: (a) the liquidation, administration and distribution of the Trust Assets and the Reserved Claims, as that ",
+            "clause": {
+              "clause_id": "neg79",
+              "label": "NEGATIVE",
+              "clause_name": "7.1 Termination of Liquidating Trust"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Class 1 claims” is governed by the agreement’s express incorporation of Plan definitions. Repeating the definition locally would improve convenience but is not necessary to resolve meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Class 3 claims",
+          "description": "The term 'Class 3 claims' appears in  in the tax treatment section but is never defined in this Trust Agreement. Since holders of Class 3 claims are parties for tax purposes under the agreement, this classification should be defined or cross-referenced to the Plan.",
+          "revision": "Class 3 claims)claims (as defined in the Plan)) for tax purposes as being ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4884,
+            "end_char": 4925,
+            "start_line": 79,
+            "end_line": 79,
+            "match_cover": 0.571,
+            "match_run": 5,
+            "matched_text": "Class 3 claims) for tax purposes as being",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.2 Treatment of Transfer of Trust Assets"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Plan’s definitions are expressly incorporated for capitalized terms such as “Class 3 claims.” The term is not intrinsically ambiguous merely because its definition appears in the incorporated Plan."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Chapter 11 Case",
+          "description": "The term 'Chapter 11 Case' is capitalized in    but is never formally defined. While the context makes it clear this refers to the bankruptcy case, the term should be defined to specify the exact case being referenced, particularly since the document contemplates ongoing jurisdiction.",
+          "revision": "11 Case (as defined in the Plan);",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 41867,
+            "end_char": 42237,
+            "start_line": 673,
+            "end_line": 683,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "11 Entered: 12/21/11 16:54:26 Page 15 of 19 Case3:14-cv-00993-SI Documenti6-3 Filed07/15/14 Page4é of 49 TERMINATION OF LIQUIDATING TRUST 7.1 Termination of Liquidating Trust. The Liquidating Trust will terminate on the earlier of: (a) the liquidation, administration and distribution of the Trust As",
+            "clause": {
+              "clause_id": "neg79",
+              "label": "NEGATIVE",
+              "clause_name": "7.1 Termination of Liquidating Trust"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The preamble identifies the pending Chapter 11 case by number and incorporates Plan definitions. In context, “Chapter 11 Case” has a sufficiently clear referent."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Petition Date",
+          "description": "The term 'Petition Date' is capitalized in  but is never defined in this Trust Agreement. This is a critical date for determining when tax liabilities were incurred and should be defined or cross-referenced to the Plan for clarity.",
+          "revision": "... prior to the Petition Date (as defined in the Plan) or during the pendency of ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 12449,
+            "end_char": 12501,
+            "start_line": 201,
+            "end_line": 201,
+            "match_cover": 0.667,
+            "match_run": 5,
+            "matched_text": "prior to the Petition Date or during the pendency of",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(h) Section 505 determinations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Petition Date” is a capitalized bankruptcy term whose Plan meaning is incorporated by the preamble. The absence of the calendar date in this agreement is not itself a construction defect."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term form: Debtors",
+          "description": "The term 'Debtors' (plural) appears in    but the defined term is 'Debtor' (singular) as defined in . This inconsistency could create confusion about whether multiple debtors are involved or if this is a drafting error. The term should be consistently used in singular form to match the definition. Modify term(s) avoid and recover transfers of the Debtors'Debtor's property as may be permitted by the",
+          "revision": "",
+          "comment": "",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent definition formatting: Plan",
+          "description": "The term 'Plan' is defined in  with unusual quotation mark formatting using a mix of double quotes and two single quotes. This appears to be a typographical error and should use consistent double quotes like other defined terms in the document. Modify term(s) December 20, 2011), as the same may be amended (the \"Plan''\"), which provides for the establishment of",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        }
+      ]
+    },
+    "trustee_uecker": {
+      "n_issues": 26,
+      "n_located": 25,
+      "by_tab": {
+        "risks_negotiation": 15,
+        "proofread": 11
+      },
+      "by_kind": {
+        "Important": 4,
+        "Notable": 7,
+        "Minor": 4,
+        "Spelling + Grammar": 2,
+        "Section References": 1,
+        "Internal Annotations": 1,
+        "Definitions": 7
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Uncapped Assumed Liabilities Risk for Trustee",
+          "description": "In Section 1.1(b), the Trustee assumes liabilities that include open-ended categories such as \"any expenses incurred and unpaid, or to be incurred\" and \"any obligations owing pursuant to the Plan and unpaid (including, without limitation, obligations incurred before the Effective Date).\" These open-ended assumed liabilities could expose the Trustee to assuming obligations that far exceed the value of the Trust Assets. Consider adding a limitation that the Trustee's assumption of liabilities is limited to the extent of available Trust Assets.",
+          "revision": "... subject to the following liabilities (but only to the extent of available Trust Assets), if any: (i) any",
+          "comment": "We limited the Trustee's assumption of liabilities to the extent of available Trust Assets to ensure the Trustee cannot be held personally responsible for obligations exceeding Trust Assets, which is consistent with standard liquidating trust practice and the Trustee's fiduciary role.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3744,
+            "end_char": 3797,
+            "start_line": 64,
+            "end_line": 64,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "subject to the following liabilities, if any: (i) any",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "1.1(b) Assumption of Liabilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The categories of assumed liabilities are broad but textually clear, and the Trustee assumes them expressly on behalf of the Liquidating Trust. The requested asset-value limitation is a liability protection rather than an interpretive clarification."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Committee Has Unrestricted Removal Power",
+          "description": "Section 5.2  allows the Committee to remove the Trustee \"without cause,\" which provides no job security whatsoever for Ms. Uecker. While removal for Cause by the Bankruptcy Court is appropriately defined, the Committee's unilateral right to remove without cause, without any notice requirement, transition period, or compensation protection, is highly unfavorable to the Trustee. Consider requiring reasonable notice (e.g., 30–90 days) and payment of accrued compensation and expenses through the effective date of removal.",
+          "revision": "... by the Committee without cause upon not less than sixty (60) days' prior written notice to the Trustee; provided that the Trustee shall be entitled to payment of all accrued compensation and reimbursement of all expenses through the effective date of removal.",
+          "comment": "We added a minimum notice period and compensation protection upon without-cause removal to ensure basic procedural fairness; an unrestricted, immediate removal right with no financial protection is inconsistent with market practice for liquidating trustee arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6887,
+            "end_char": 7500,
+            "start_line": 114,
+            "end_line": 122,
+            "match_cover": 0.405,
+            "match_run": 6,
+            "matched_text": "by certificates. 2.2 ‘Transferability of Liquidating Trust Interests. Subject to compliance with applicable law, the Liquidating Trust Interests are transferable upon written notice to the Trustee, provided, however, that neither the Liquidating Trust nor the Trustee shall take any steps, directly o",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.2 Transferability of Liquidating Trust Interests"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Committee’s unrestricted without-cause removal right is explicit. Missing notice, transition, and compensation protections are negotiation omissions, not construction defects."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Limited to Amounts Not Covered by Insurance",
+          "description": "Section 4.3(f)  limits the Trustee's indemnification to amounts not covered by insurance. While this is a reasonable anti-double-recovery provision, the language should clarify that the Trustee is not required to obtain or maintain insurance as a precondition to indemnification, and that the Liquidating Trust bears the cost of any such insurance. Otherwise, the Trustee could be denied indemnification for failing to procure insurance, even though insurance procurement is discretionary under Section 3.2(m).",
+          "revision": "... indemnification from the Liquidating Trust under this Section to the extent that it is not covered by insurance actually obtained and in effect, if any. For the avoidance of doubt, the Trustee shall not be required to obtain or maintain insurance as a condition of indemnification.",
+          "comment": "The added sentence ensures the anti-double-recovery mechanism operates as intended without inadvertently converting the Trustee's discretionary insurance authority into a mandatory precondition to indemnification, which would create an inconsistency within the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 30763,
+            "end_char": 31287,
+            "start_line": 500,
+            "end_line": 507,
+            "match_cover": 0.587,
+            "match_run": 18,
+            "matched_text": "indemnification from the Liquidating Trust under this Section to the extent that it is not covered by insurance, if any. 44 Reliance by Trustee. The Trustee may rely, and shall be fully protected in acting or refraining from acting, on any resolution, statement, certificate, instrument, opinion, rep",
+            "clause": {
+              "clause_id": "neg66",
+              "label": "NEGATIVE",
+              "clause_name": "4.4 Reliance by Trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 4.3(f)’s phrase “insurance, if any” operates as an anti-double-recovery limitation and does not require the Trustee to obtain insurance. It does not conflict with the discretionary insurance authority in Section 3.2(m)."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Obligation Lacks Temporal Limitation",
+          "description": "Section 4.9  imposes a confidentiality obligation on the Trustee that appears to apply indefinitely after termination of the Trust Agreement or the Trustee's removal/resignation. While confidentiality is appropriate, an unlimited duration is burdensome. Consider adding a reasonable time limitation (e.g., three years after termination) or at minimum clarifying that the obligation terminates when the information becomes publicly available.",
+          "revision": "... Trustee under this Trust Agreement and for a period of three (3) years following the termination of this Trust Agreement or following the earlier of his or her removal or",
+          "comment": "We limited the confidentiality obligation to three years post-termination, as an indefinite restriction on a former trustee is commercially unreasonable and inconsistent with standard fiduciary practice in California.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34910,
+            "end_char": 35045,
+            "start_line": 568,
+            "end_line": 570,
+            "match_cover": 0.733,
+            "match_run": 17,
+            "matched_text": "Trustee under this Trust Agreement following the termination of this Trust Agreement or following the earlier of his or her removal or",
+            "clause": {
+              "clause_id": "neg72",
+              "label": "NEGATIVE",
+              "clause_name": "4.9 Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision imposes confidentiality after termination or departure without stating an end date. Its indefinite duration may be burdensome, but the absence of a negotiated sunset does not make the obligation ambiguous."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Low Asset Disposition Threshold Requiring Committee Approval",
+          "description": "Section 3.3(e)  requires Committee approval for the sale, liquidation, abandonment, or other disposition of any asset with a gross fair market value of $5,000 or more. This is a very low threshold that could significantly burden the Trustee's ability to administer the Trust efficiently. Consider raising this threshold to a more practical level (e.g., $25,000 or $50,000).",
+          "revision": "market value of $525,000 or more only pursuant ...",
+          "comment": "We increased the Committee approval threshold to $25,000 to reflect a more practical level of oversight, consistent with the administrative realities of trust liquidation and avoiding bottlenecks on routine asset dispositions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19983,
+            "end_char": 20027,
+            "start_line": 332,
+            "end_line": 332,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "market value of $5,000 or more only pursuant",
+            "clause": {
+              "clause_id": "neg49",
+              "label": "NEGATIVE",
+              "clause_name": "3.3(e) Supervision by Committee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The $5,000 threshold is precise. The claimed burden on Trust administration is commercial and operational rather than interpretive."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Cap on Rate Increases Lacks Reasonableness Standard",
+          "description": "Section 4.7(a)  allows the Trustee to increase compensation rates once per calendar year with only ten days' notice and without Bankruptcy Court approval. While this benefits the Trustee by providing flexibility, the absence of any cap or reasonableness standard could invite challenges from beneficiaries. Adding a reference to a standard such as CPI would make this provision more defensible.",
+          "revision": "... Trustee may increase said compensation by an amount not to exceed the greater of (i) five percent (5%) or (ii) the percentage increase in the Consumer Price Index for the prior year, upon ten (10) days'",
+          "comment": "We added a cap tied to CPI or 5% (whichever is greater) to provide an objective, market-referenced standard for annual rate increases, consistent with trustee compensation norms and California trust administration principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34110,
+            "end_char": 34161,
+            "start_line": 556,
+            "end_line": 556,
+            "match_cover": 0.222,
+            "match_run": 5,
+            "matched_text": "Trustee may increase said compensation upon ten (10",
+            "clause": {
+              "clause_id": "neg69",
+              "label": "NEGATIVE",
+              "clause_name": "4.7(a) Expense Reimbursement and Compensation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The compensation provision unambiguously contains no cap or reasonableness standard. Adding a CPI-based limitation would change the bargain rather than clarify uncertain text."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Very Short Dispute Resolution Notice Period",
+          "description": "Section 3.3(g) provides that disputes between the Trustee and the Committee are resolved by the Bankruptcy Court on only five calendar days' notice . This is an extremely short timeframe for the Trustee to prepare a response or retain counsel for a hearing. Consider extending to at least fourteen calendar days unless shortened by the Court for cause.",
+          "revision": "Court after hearing on five (5)fourteen (14) calendar days' notice by any ...",
+          "comment": "We revised the notice period to 14 calendar days to ensure both parties have a meaningful opportunity to prepare for Bankruptcy Court proceedings; the Court retains full discretion to shorten the period upon a showing of cause.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21915,
+            "end_char": 21975,
+            "start_line": 361,
+            "end_line": 361,
+            "match_cover": 0.769,
+            "match_run": 6,
+            "matched_text": "Court after hearing on five (5) calendar days’ notice by any",
+            "clause": {
+              "clause_id": "neg51",
+              "label": "NEGATIVE",
+              "clause_name": "3.3(g) Dispute resolution"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Five calendar days is a definite notice period. Whether that period affords enough preparation time is a procedural fairness issue, not a construction issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Should Cover Defense Costs Regardless of Outcome",
+          "description": "Section 4.3(c)  provides indemnification except for willful misconduct, gross negligence, or fraud. However, Section 4.3(d)  requires the Trustee to repay advanced expenses if \"ultimately determined\" to have engaged in such conduct. The repayment obligation in Section 4.3(d) is appropriate, but it should clarify who makes the \"ultimate determination\" — it should require a final, non-appealable court order rather than leaving this ambiguous, to protect the Trustee from premature clawback demands.",
+          "revision": "... willful misconduct, or gross negligence, as determined by a final, non-appealable order of a court of competent jurisdiction, in connection with the affairs ...",
+          "comment": "We specified that the repayment obligation under Section 4.3(d) is triggered only upon a final, non-appealable court order, which is the appropriate standard under California law to protect fiduciaries from premature or contested clawback demands before liability is conclusively established.",
+          "group_size": 1,
+          "location": {
+            "start_char": 30227,
+            "end_char": 30297,
+            "start_line": 492,
+            "end_line": 492,
+            "match_cover": 0.417,
+            "match_run": 5,
+            "matched_text": "willful misconduct, or gross negligence in connection with the affairs",
+            "clause": {
+              "clause_id": "neg63",
+              "label": "NEGATIVE",
+              "clause_name": "4.3(d) Advancement of expenses"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “ultimately determined” does not identify the decision-maker or whether the determination must be final and non-appealable. Those unresolved boundaries affect when repayment becomes due."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Mandatory Custodian Requirement May Be Overly Restrictive",
+          "description": "Section 1.4  requires the Trustee to use a custodian to maintain cash, securities, and similar investments. This mandatory requirement could impose unnecessary costs on the Trust, particularly for modest cash balances. Consider making this discretionary or establishing a threshold above which a custodian is required.",
+          "revision": "The Trustee shallmay use a custodian (such as ...",
+          "comment": "We revised this provision to make custodian use discretionary rather than mandatory, reflecting that a blanket requirement imposes disproportionate costs on the Trust for smaller or short-term cash holdings.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5985,
+            "end_char": 6102,
+            "start_line": 99,
+            "end_line": 100,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "the Trustee determines are in the best interests of the Liquidating Trust. The Trustee shall use a custodian (such as",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "1.4 Ownership by Trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“The Trustee shall use a custodian” is mandatory and unambiguous. The expense or inconvenience of that requirement is a negotiation concern."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Amendment Requires Committee Approval Only—No Trustee Protection",
+          "description": "Section 8.1  allows amendment of the Trust Agreement by the Trustee \"upon approval of the Committee.\" However, this provision does not expressly protect the Trustee from amendments that adversely affect her compensation, indemnification, or exculpation rights without her consent. Consider adding a carve-out providing that no amendment may adversely modify the Trustee's compensation, indemnification, or exculpation provisions without the Trustee's written consent.",
+          "revision": "... upon approval of the Committee; provided, however, that no amendment shall adversely affect the Trustee's rights to compensation, expense reimbursement, indemnification, or exculpation under this Trust Agreement without the prior written consent of the Trustee. Notwithstanding this Section, any",
+          "comment": "We introduced a Trustee consent requirement for amendments adversely affecting the Trustee's compensation, indemnification, or exculpation to reflect standard fiduciary protections and ensure the Trustee is not exposed to unilateral modification of rights that are fundamental to her acceptance of the role.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29132,
+            "end_char": 29684,
+            "start_line": 473,
+            "end_line": 480,
+            "match_cover": 0.385,
+            "match_run": 4,
+            "matched_text": "of the Liquidating Trust; provided, however, that no such indemnification will be made to such persons for actions or omissions as a result of willful misconduct, gross negligence or fraud. d. If the Trustee, the Committee, or members of the Committee become involved in any action, proceeding, or in",
+            "clause": {
+              "clause_id": "neg63",
+              "label": "NEGATIVE",
+              "clause_name": "4.3(d) Advancement of expenses"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 8.1 already requires the Trustee to make an amendment, with Committee approval, so an amendment cannot be effected by the Committee alone under its terms. The requested additional carve-out is a substantive protection, not a response to construction uncertainty."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Limited to Mail Only",
+          "description": "Section 9.6  provides that notices are deemed sufficient only \"if deposited, postage prepaid, in a post office or letter box.\" This excludes email and other electronic means of notice, which is inconsistent with Section 3.3(f)  where the Committee itself may act by email. The Trustee should have the flexibility to send and receive notices by email and other electronic methods, which would reduce costs and increase efficiency.",
+          "revision": "... given, for all purposes, if (i) deposited, postage prepaid, in a ...",
+          "comment": "We expanded the notice provision to include email and other electronic methods, which aligns with the Committee's existing email-based operations under Section 3.3(f) and reflects standard practice in modern trust administration.",
+          "group_size": 1,
+          "location": {
+            "start_char": 47361,
+            "end_char": 47421,
+            "start_line": 764,
+            "end_line": 764,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "given, for all purposes, if deposited, postage prepaid, in a",
+            "clause": {
+              "clause_id": "neg86",
+              "label": "NEGATIVE",
+              "clause_name": "9.6 Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The general mail provision and the specific email procedures for Committee meetings and approvals can be read together without contradiction. Expanding permissible delivery methods is a modernization proposal rather than a construction cure."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Trustee's Compensation Priority Not Specified",
+          "description": "Section 4.7(b)  allows the Trustee to liquidate Trust Assets if cash is insufficient to pay compensation and expenses. However, there is no express statement that the Trustee's compensation and expense reimbursement constitute a first-priority administrative claim against the Trust Assets. Without this clarification, the Trustee's compensation could potentially be subordinated to other Trust liabilities, which would be adverse to Ms. Uecker's interests.",
+          "revision": "b. The Trustee's compensation, expense reimbursement, and amounts owed to professionals and third parties retained by the Trustee shall constitute a first-priority administrative expense of the Liquidating Trust. If the cash in ...",
+          "comment": "The Trustee's compensation and expense reimbursement are administrative costs essential to Trust operations; expressly designating them as first-priority administrative expenses reflects standard liquidating trust practice and ensures the Trust can attract and retain a qualified fiduciary.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34274,
+            "end_char": 34817,
+            "start_line": 559,
+            "end_line": 566,
+            "match_cover": 0.485,
+            "match_run": 6,
+            "matched_text": "b. If the cash in the Liquidating Trust is at any time insufficient to compensate and reimburse the Trustee, including any professionals and other third parties retained by the Trustee, for . any amounts to which they are entitled hereunder and if the Trustee shall be unable to borrow funds sufficie",
+            "clause": {
+              "clause_id": "neg70",
+              "label": "NEGATIVE",
+              "clause_name": "4.7(b) Insufficient cash"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement does not expressly grant first priority to Trustee compensation, but that is an omitted economic protection. The existing liquidation authority remains intelligible without such priority language."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Successor Trustee Acceptance Lacks Release of Outgoing Trustee",
+          "description": "Section 5.3  provides that a successor Trustee files an acceptance instrument, but does not require the successor's acceptance to include a release of the outgoing Trustee from further obligations upon proper transfer of Trust Assets. This leaves Ms. Uecker potentially exposed to ongoing liability even after properly transitioning all assets and records.",
+          "revision": "... satisfactory to the successor Trustee, which instrument shall include an acknowledgment of receipt of all Trust Assets and a release of the outgoing Trustee from ongoing obligations hereunder (except obligations that expressly survive resignation or removal). Thereupon, such successor Trustee ...",
+          "comment": "We revised Section 5.3 to include an acknowledgment of receipt and release of the outgoing Trustee upon acceptance, which reflects standard fiduciary succession practice and ensures a clean transfer of responsibility without perpetual exposure for the departing Trustee.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5443,
+            "end_char": 6137,
+            "start_line": 91,
+            "end_line": 100,
+            "match_cover": 0.35,
+            "match_run": 4,
+            "matched_text": "The Trustee shall be Susan L. Uecker of Uecker & Associates, Inc. and any successor trustee appointed hereunder. 1.4 Ownership by Trustee. The Trustee shall promptly record or register in his or her name as trustee, or in the name or names of any nominee or person, in accordance with the terms hereo",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "1.4 Ownership by Trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 5.3 does not release the outgoing Trustee, but the absence of a release is not ambiguous. The proposed release would add substantive liability protection."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Holder Access to Books—\"Undue Burden\" Determination Should Be Trustee's",
+          "description": "Section 3.4  allows holders to obtain information about Trust management subject to conditions including that access \"does not constitute an undue burden on the Trustee.\" The provision should expressly vest the determination of undue burden in the Trustee's reasonable discretion to avoid disputes over access rights.",
+          "revision": "on the Trustee (as determined by the Trustee in her reasonable discretion), and is not detrimental ...",
+          "comment": "The 'undue burden' standard has been clarified to vest the determination in the Trustee's reasonable discretion, which is consistent with the Trustee's fiduciary role and provides an objective, reviewable standard that protects both parties from open-ended disputes over access obligations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3560,
+            "end_char": 3967,
+            "start_line": 62,
+            "end_line": 66,
+            "match_cover": 0.5,
+            "match_run": 4,
+            "matched_text": "the Trustee, and the Trustee on behalf, and for the benefit, of the Liquidating Trust hereby assumes and agrees that all such Trust Assets will be transferred to the Liquidating Trust subject to the following liabilities, if any: (i) any expenses incurred and unpaid, or to be incurred, by the Truste",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "1.1(b) Assumption of Liabilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “undue burden” is an open-textured standard whose application can be disputed, including the degree of cost or disruption sufficient to deny access."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Trustee's Compensation Should Survive Termination",
+          "description": "Section 4.3(e)  provides that indemnification provisions survive for former Trustees, but the compensation section (Section 4.7) lacks a parallel survival clause. If the Trust terminates or the Trustee is removed before all accrued compensation and expenses are paid, there may be no express mechanism ensuring payment. Consider adding survival language to the compensation provision.",
+          "revision": "... the Trustee under this Trust Agreement. The Trustee's rights to compensation and reimbursement under this Section shall survive the termination of this Trust Agreement. As",
+          "comment": "We added a survival clause to the compensation provision to create parity with the indemnification survival language in Section 4.3(e); without it, the Trustee could be left without an express contractual basis to recover accrued compensation following termination.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34522,
+            "end_char": 35286,
+            "start_line": 561,
+            "end_line": 574,
+            "match_cover": 0.52,
+            "match_run": 6,
+            "matched_text": "the Trustee shall be unable to borrow funds sufficient for such compensation and reimbursement in accordance with the terms of this Trust Agreement, then the Trustee may reduce to cash that portion of the Trust Assets necessary so as to effect such compensation and reimbursement. 4.8 Bond. The Trust",
+            "clause": {
+              "clause_id": "neg72",
+              "label": "NEGATIVE",
+              "clause_name": "4.9 Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The compensation provisions lack an express survival clause, but that omission does not create an intrinsic ambiguity or contradiction. Adding survival language would supply additional collection protection."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: includmg",
+          "description": "Misspelling of \"including\"",
+          "revision": "the Liquidating Trust Interests, includmgincluding without limitation",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6832,
+            "end_char": 7318,
+            "start_line": 114,
+            "end_line": 120,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "The Liquidating Trust Interests shall not be evidenced by certificates. 2.2 ‘Transferability of Liquidating Trust Interests. Subject to compliance with applicable law, the Liquidating Trust Interests are transferable upon written notice to the Trustee, provided, however, that neither the Liquidating",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.2 Transferability of Liquidating Trust Interests"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Includmg” is an obvious misspelling of “including” that does not alter the reasonably understood meaning of the sentence. It therefore does not meet the mechanical-error category’s requirement that meaning be changed."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Duplicate Section Number - Section 3.8",
+          "description": "Article 3 contains two sections numbered as \"3.8\". The first Section 3.8  is titled \"Reporting by the Trustee\" and the second Section 3.8  is titled \"Compliance with Laws\". This creates ambiguity as any cross-reference to \"Section 3.8\" would be unclear as to which provision it refers to. Additionally, Section 3.7 appears to be missing from the numbering sequence (jumping from 3.6 to 3.8). The second instance should likely be numbered as Section 3.9.",
+          "revision": "3.8 |9 Compliance with Laws.",
+          "comment": "Corrected duplicate section numbering — renumbered the second '3.8' to '3.9' to restore sequential order and eliminate cross-reference ambiguity within Article 3.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25371,
+            "end_char": 25397,
+            "start_line": 416,
+            "end_line": 416,
+            "match_cover": 0.833,
+            "match_run": 3,
+            "matched_text": "3.8 | Compliance with Laws",
+            "clause": {
+              "clause_id": "neg57",
+              "label": "NEGATIVE",
+              "clause_name": "3.8 Compliance with Laws"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The duplicate use of Section 3.8 is a mechanical numbering error that makes references to that section potentially ambiguous."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Internal annotation regarding accounting firms",
+          "description": "The text in subsection (p)  contains what appears to be an internal drafting note \"to'\" with a semicolon and apostrophe that suggests incomplete editing or a reminder to add or revise content. This should be removed or corrected.",
+          "revision": "... firms or public accountants to'",
+          "comment": "Removed apparent internal drafting artifact ('to'') that was left in the text during editing; no substantive change to meaning intended.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13822,
+            "end_char": 13849,
+            "start_line": 230,
+            "end_line": 230,
+            "match_cover": 0.8,
+            "match_run": 4,
+            "matched_text": "firms or public accountants",
+            "clause": {
+              "clause_id": "neg30",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(p) Retain accountants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The stray mark in “to’ perform” is an obvious typographical artifact, but the infinitive phrase remains readily understandable and its substantive meaning is unchanged."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Effective Date",
+          "description": "The term 'Effective Date' is used throughout the document      but is never defined in this Trust Agreement. The document states in the recitals  that 'all capitalized terms contained herein shall have the meanings ascribed to them in the Plan,' suggesting this term should be defined in the Plan. However, for clarity and ease of reference, it would be beneficial to define this critical date within the Trust Agreement itself, particularly since it triggers important rights and obligations such as the transfer of Trust Assets.",
+          "revision": "December 20, 2011), as the same may be amended (the \"Plan''), which provides for the establishment of a liquidating trust effective as of the date the Plan becomes effective (the \"Effective Date\"), and further provides for the establishment of",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 493,
+            "end_char": 1110,
+            "start_line": 10,
+            "end_line": 20,
+            "match_cover": 0.692,
+            "match_run": 10,
+            "matched_text": "December 20, 2011), as the same may be amended (the “Plan’’), which provides for the establishment of a liquidating trust evidenced hereby (the “Liquidating Trust”) to resolve, liquidate and realize upon the assets, rights of action and such other claims and property transferred to it by the Debtor ",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The preamble expressly incorporates Plan definitions for capitalized terms, supplying the meaning of “Effective Date.” A repeated local definition would aid convenience but is not required for construction."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Petition Date",
+          "description": "The term 'Petition Date' appears in  but is never defined in this Trust Agreement. While the document references that undefined terms should be interpreted according to the Plan , the Petition Date is a fundamental date in bankruptcy proceedings (the date the bankruptcy petition was filed) and should be defined for clarity and self-containment of the agreement.",
+          "revision": "such liabilities were incurred prior to the date on which the Debtor filed its Chapter 11 bankruptcy petition (the \"Petition Date\") or during the pendency of the Debtor's Chapter",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 12418,
+            "end_char": 12522,
+            "start_line": 201,
+            "end_line": 201,
+            "match_cover": 0.552,
+            "match_run": 9,
+            "matched_text": "such liabilities were incurred prior to the Petition Date or during the pendency of the Debtor’s Chapter",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(h) Section 505 determinations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement directs readers to the Plan for meanings of capitalized terms not defined locally. Accordingly, “Petition Date” is incorporated rather than genuinely undefined."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Reserved Claims",
+          "description": "The term 'Reserved Claims' is used in multiple locations   but is never defined in this Trust Agreement. The document indicates  that capitalized terms should have meanings from the Plan, but for a term this central to the Trustee's authority (commencing, prosecuting, or settling such claims), it would be clearer to define it within the agreement or at least provide a reference to where the definition can be found.",
+          "revision": "Sections 704, 108 and 1106 of the Bankruptcy Code and be a representative of the Estates for purposes of Section 1123 of the Bankruptcy Code, including, without limitation, commencing, prosecuting or settling claims reserved by the Debtor under the Plan (the \"Reserved Claims\"), enforcing contracts, and asserting claims, defenses, offsets and privileges; provided that the specific Reserved Claims are identified in the Plan;",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 10561,
+            "end_char": 11309,
+            "start_line": 170,
+            "end_line": 179,
+            "match_cover": 0.746,
+            "match_run": 32,
+            "matched_text": "Sections 704, 108 and 1106 of the Bankruptcy Code and be a representative of the Estates for purposes of Section 1123 of the Bankruptcy Code, including, without limitation, commencing, prosecuting or settling Reserved Claims, enforcing contracts, and asserting claims, defenses, offsets and privilege",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(b) Perform duties of a trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Reserved Claims” is expressly described elsewhere in the agreement as defined in the Plan, whose definitions are incorporated by the preamble. No intrinsic uncertainty follows from using that incorporated definition."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: PCCC",
+          "description": "The term 'PCCC' appears in  but is never defined anywhere in the Trust Agreement. This acronym is used in the context of paying fees and expenses of professionals or employees, but readers cannot determine what entity or party PCCC refers to without a definition.",
+          "revision": "1. pay any fees and reimburse the of expenses of any professionals or employees",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 12817,
+            "end_char": 12896,
+            "start_line": 213,
+            "end_line": 213,
+            "match_cover": 1.0,
+            "match_run": 14,
+            "matched_text": "1. pay any fees and reimburse the of expenses of any professionals or employees",
+            "clause": {
+              "clause_id": "neg26",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(l) Pay professionals employed by PCCC"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The acronym “PCCC” has no identifiable referent in the agreement’s text, leaving uncertain which entity’s professionals or employees may be paid."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Estates",
+          "description": "The term 'Estates' appears in  in the phrase 'representative of the Estates for purposes of Section 1123 of the Bankruptcy Code.' The document never defines what 'Estates' means, though it likely refers to the bankruptcy estate(s) of the Debtor. This should be clarified, especially since elsewhere the document uses the singular 'estate'    when referring to the Debtor's estate.",
+          "revision": "b. perform the duties, exercise the powers, and assert the rights of a trustee under Sections 704, 108 and 1106 of the Bankruptcy Code and be a representative of the bankruptcy estate of the Debtor (the \"Estates\") for purposes Plan, as successor to and representative of the estateEstates of the Debtor. Except with respect to the terms",
+          "comment": "",
+          "group_size": 11,
+          "location": {
+            "start_char": 10476,
+            "end_char": 10905,
+            "start_line": 169,
+            "end_line": 174,
+            "match_cover": 0.667,
+            "match_run": 30,
+            "matched_text": "b. perform the duties, exercise the powers, and assert the rights of a trustee under Sections 704, 108 and 1106 of the Bankruptcy Code and be a representative of the Estates for purposes of Section 1123 of the Bankruptcy Code, including, without limitation, commencing, prosecuting or settling Reserv",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(b) Perform duties of a trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The capitalized plural term “Estates” is uncertain because the agreement otherwise identifies a single Debtor and generally refers to its singular “estate.” It is unclear whether the provision intends one estate or additional unidentified estates."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Disclosure Statement",
+          "description": "The term 'Disclosure Statement' is referenced in  and  but is never defined in this Trust Agreement. While the document indicates that undefined capitalized terms should refer to the Plan , the Disclosure Statement is a separate document in bankruptcy proceedings that explains the Plan to creditors. A definition or reference would be helpful for clarity.",
+          "revision": "Bankruptcy Code or applicable state law, including, without limitation, those identified in the disclosure statement approved by the Bankruptcy Court in connection with the Plan (the \"Disclosure Statement\") or otherwise identified in the Disclosure",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 11816,
+            "end_char": 12400,
+            "start_line": 190,
+            "end_line": 200,
+            "match_cover": 0.588,
+            "match_run": 15,
+            "matched_text": "Bankruptcy Code or applicable state law, including, without limitation, those identified in the Disclosure Statement; f. determine and satisfy any and all liabilities created, incurred or assumed by the Liquidating Trust; g. file all tax and information returns with respect to the Liquidating Trust ",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "3.2(g) File tax returns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The preamble incorporates meanings assigned by the Plan to otherwise undefined capitalized terms. A more precise local identification of the Disclosure Statement would improve usability but does not itself establish construction risk."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: WHEREOPF",
+          "description": "Should be \"WHEREOF\" not \"WHEREOPF\"",
+          "revision": "IN WITNESS WHEREOPFWHEREOF, the parties hereto have ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 48899,
+            "end_char": 48943,
+            "start_line": 829,
+            "end_line": 829,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "IN WITNESS WHEREOPF, the parties hereto have",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term form: Debtors",
+          "description": "The term is defined in singular form as 'Debtor'  throughout most of the document, but appears in plural form 'Debtors' in several locations   . Since the definition refers to a single entity ('MORTGAGE FUND °08 LLC'), all references should use the singular 'Debtor' for consistency with the defined term. Modify term(s) e. avoid and recover transfers of the Debtors'Debtor's property as may be permitted by the",
+          "revision": "",
+          "comment": "",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Preamble",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Effective Date",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The preamble expressly provides that capitalized terms not defined in the agreement have the meanings assigned in the Plan. Thus “Effective Date” is incorporated by reference rather than left textually undefined."
+        },
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Bankruptcy Court",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The preamble identifies the relevant United States Bankruptcy Court, and subsequent uses of “Bankruptcy Court” have an evident referent in context. Lack of a formal parenthetical definition does not create genuine ambiguity."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Undefined term: Effective Date",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The preamble expressly incorporates Plan definitions for capitalized terms, supplying the meaning of “Effective Date.” A repeated local definition would aid convenience but is not required for construction."
+        }
+      ],
+      "risky": false
+    },
+    "neg11": {
+      "clause_id": "neg11",
+      "clause_name": "2.2 Transferability of Liquidating Trust Interests",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Committee Has Unrestricted Removal Power",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Committee’s unrestricted without-cause removal right is explicit. Missing notice, transition, and compensation protections are negotiation omissions, not construction defects."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Spelling error: includmg",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Includmg” is an obvious misspelling of “including” that does not alter the reasonably understood meaning of the sentence. It therefore does not meet the mechanical-error category’s requirement that meaning be changed."
+        }
+      ],
+      "risky": false
+    },
+    "neg16": {
+      "clause_id": "neg16",
+      "clause_name": "3.2(b) Perform duties of a trustee",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Reserved Claims",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement expressly identifies “Reserved Claims” as a term defined in the Plan, and the preamble incorporates Plan definitions generally. The cross-document definition is not a construction defect in this agreement."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Undefined term: Reserved Claims",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Reserved Claims” is expressly described elsewhere in the agreement as defined in the Plan, whose definitions are incorporated by the preamble. No intrinsic uncertainty follows from using that incorporated definition."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Undefined term: Estates",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The capitalized plural term “Estates” is uncertain because the agreement otherwise identifies a single Debtor and generally refers to its singular “estate.” It is unclear whether the provision intends one estate or additional unidentified estates."
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "Recitals",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Inconsistent Use of \"Register\" vs. \"Registry\"",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The use of the undefined word “registry” immediately after defining “Register” creates at least some lexical uncertainty as to whether both terms identify the same official record."
+        }
+      ],
+      "risky": true
+    },
+    "neg21": {
+      "clause_id": "neg21",
+      "clause_name": "3.2(g) File tax returns",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Undefined term: Disclosure Statement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The preamble incorporates meanings assigned by the Plan to otherwise undefined capitalized terms. A more precise local identification of the Disclosure Statement would improve usability but does not itself establish construction risk."
+        }
+      ],
+      "risky": false
+    },
+    "neg22": {
+      "clause_id": "neg22",
+      "clause_name": "3.2(h) Section 505 determinations",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Petition Date",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Petition Date” is a capitalized bankruptcy term whose Plan meaning is incorporated by the preamble. The absence of the calendar date in this agreement is not itself a construction defect."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Undefined term: Petition Date",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement directs readers to the Plan for meanings of capitalized terms not defined locally. Accordingly, “Petition Date” is incorporated rather than genuinely undefined."
+        }
+      ],
+      "risky": false
+    },
+    "neg26": {
+      "clause_id": "neg26",
+      "clause_name": "3.2(l) Pay professionals employed by PCCC",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Typo \"of expenses\" appears incomplete",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The phrase “reimburse the of expenses” contains an erroneous word sequence that disrupts the grammatical object of “reimburse.” It is a mechanical drafting error."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Undefined term: PCCC",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The acronym “PCCC” has no identifiable referent in the agreement’s text, leaving uncertain which entity’s professionals or employees may be paid."
+        }
+      ],
+      "risky": true
+    },
+    "neg27": {
+      "clause_id": "neg27",
+      "clause_name": "3.2(m) Obtain insurance for Trustee liabilities",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Missing Conjunction Creates Ambiguity in Confidentiality Obligation",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The missing conjunction in Section 4.9 makes the temporal modifiers grammatically malformed and obscures whether confidentiality applies both during and after service. This is a mechanical drafting error affecting scope."
+        },
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: PCCC",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“PCCC” is an unexplained acronym, and the surrounding text does not reveal whose professionals or employees are meant. Its referent and therefore the scope of the payment authority are uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg30": {
+      "clause_id": "neg30",
+      "clause_name": "3.2(p) Retain accountants",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Internal annotation regarding accounting firms",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The stray mark in “to’ perform” is an obvious typographical artifact, but the infinitive phrase remains readily understandable and its substantive meaning is unchanged."
+        }
+      ],
+      "risky": false
+    },
+    "neg31": {
+      "clause_id": "neg31",
+      "clause_name": "3.2(q) Retain professionals",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Unlimited Indemnification Commitment Authority",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Trustee’s authority to grant indemnities is stated without a cap or approval threshold. That breadth is clear and does not require construction."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "1.1(b) Assumption of Liabilities",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Uncapped Assumed Liabilities Risk for Trustee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The categories of assumed liabilities are broad but textually clear, and the Trustee assumes them expressly on behalf of the Liquidating Trust. The requested asset-value limitation is a liability protection rather than an interpretive clarification."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Holder Access to Books—\"Undue Burden\" Determination Should Be Trustee's",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “undue burden” is an open-textured standard whose application can be disputed, including the degree of cost or disruption sufficient to deny access."
+        }
+      ],
+      "risky": true
+    },
+    "neg47": {
+      "clause_id": "neg47",
+      "clause_name": "3.3(c) No investment company registration",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Debtor Waives All Reversionary Interests",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The waiver of all reversionary interests is express and broad. Whether it is consistent with bankruptcy priority principles or should preserve a surplus is a substantive negotiation issue."
+        }
+      ],
+      "risky": false
+    },
+    "neg49": {
+      "clause_id": "neg49",
+      "clause_name": "3.3(e) Supervision by Committee",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Low Threshold for Committee Approval of Asset Dispositions",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The $5,000 approval threshold is definite and readily applicable. Whether it is administratively inefficient does not create ambiguity."
+        },
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "No Periodic Reporting Obligation to Debtor",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a periodic reporting obligation to the Debtor is an omitted protection, not an ambiguity or internal inconsistency."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Low Asset Disposition Threshold Requiring Committee Approval",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The $5,000 threshold is precise. The claimed burden on Trust administration is commercial and operational rather than interpretive."
+        }
+      ],
+      "risky": false
+    },
+    "neg51": {
+      "clause_id": "neg51",
+      "clause_name": "3.3(g) Dispute resolution",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Short Dispute Resolution Notice Period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The five-calendar-day notice period is definite. Its adequacy and the omission of Debtor notice are procedural negotiation concerns."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Very Short Dispute Resolution Notice Period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Five calendar days is a definite notice period. Whether that period affords enough preparation time is a procedural fairness issue, not a construction issue."
+        }
+      ],
+      "risky": false
+    },
+    "neg52": {
+      "clause_id": "neg52",
+      "clause_name": "3.4 Books and Records",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Trustee's Sole Discretion on Confidentiality Agreements",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Satisfactory in form and substance to the Trustee” clearly vests the acceptability determination in the Trustee. The possibility of onerous requirements concerns discretion and fairness, not ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg54": {
+      "clause_id": "neg54",
+      "clause_name": "3.6 Distributions; Withholding",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "No Deadline for Distribution After Liquidation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “within a reasonable time” has an elastic boundary and requires contextual determination of how long the Trustee may delay distribution."
+        }
+      ],
+      "risky": true
+    },
+    "neg57": {
+      "clause_id": "neg57",
+      "clause_name": "3.8 Compliance with Laws",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Duplicate Section Numbering (Two Sections Numbered 3.8)",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Using “3.8” for two different provisions is a mechanical numbering error that makes any reference to Section 3.8 potentially indeterminate."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Duplicate Section Number - Section 3.8",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The duplicate use of Section 3.8 is a mechanical numbering error that makes references to that section potentially ambiguous."
+        }
+      ],
+      "risky": true
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "1.2 Treatment of Transfer of Trust Assets",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Class 2 claims",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The preamble incorporates the Plan’s meanings for capitalized claim classifications, including Class 2 claims. The agreement therefore supplies a clear definitional route."
+        },
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Class 3 claims",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Plan’s definitions are expressly incorporated for capitalized terms such as “Class 3 claims.” The term is not intrinsically ambiguous merely because its definition appears in the incorporated Plan."
+        }
+      ],
+      "risky": false
+    },
+    "neg60": {
+      "clause_id": "neg60",
+      "clause_name": "4.3(a) Standard of Care",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Broad Exculpation Extends to All Trustee Agents",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 4.3(a) clearly extends exculpation to the listed agents and representatives, subject to specified exceptions. Its breadth is a substantive allocation of risk, not a construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg63": {
+      "clause_id": "neg63",
+      "clause_name": "4.3(d) Advancement of expenses",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Indemnification Should Cover Defense Costs Regardless of Outcome",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “ultimately determined” does not identify the decision-maker or whether the determination must be final and non-appealable. Those unresolved boundaries affect when repayment becomes due."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Amendment Requires Committee Approval Only—No Trustee Protection",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 8.1 already requires the Trustee to make an amendment, with Committee approval, so an amendment cannot be effected by the Committee alone under its terms. The requested additional carve-out is a substantive protection, not a response to construction uncertainty."
+        }
+      ],
+      "risky": true
+    },
+    "neg66": {
+      "clause_id": "neg66",
+      "clause_name": "4.4 Reliance by Trustee",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Indemnification Limited to Amounts Not Covered by Insurance",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 4.3(f)’s phrase “insurance, if any” operates as an anti-double-recovery limitation and does not require the Trustee to obtain insurance. It does not conflict with the discretionary insurance authority in Section 3.2(m)."
+        }
+      ],
+      "risky": false
+    },
+    "neg69": {
+      "clause_id": "neg69",
+      "clause_name": "4.7(a) Expense Reimbursement and Compensation",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Unilateral Trustee Rate Increases Without Cap",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision clearly permits annual rate increases without a cap or further approval. The issue concerns commercial protection, not uncertainty in construing the text."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "No Cap on Rate Increases Lacks Reasonableness Standard",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The compensation provision unambiguously contains no cap or reasonableness standard. Adding a CPI-based limitation would change the bargain rather than clarify uncertain text."
+        }
+      ],
+      "risky": false
+    },
+    "neg70": {
+      "clause_id": "neg70",
+      "clause_name": "4.7(b) Insufficient cash",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Trustee Can Liquidate Assets to Pay Own Compensation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 4.7(b) clearly authorizes liquidation of sufficient Trust Assets to fund compensation and reimbursement. The alleged conflict of interest is a governance concern, not textual ambiguity."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Trustee's Compensation Priority Not Specified",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement does not expressly grant first priority to Trustee compensation, but that is an omitted economic protection. The existing liquidation authority remains intelligible without such priority language."
+        }
+      ],
+      "risky": false
+    },
+    "neg72": {
+      "clause_id": "neg72",
+      "clause_name": "4.9 Confidentiality",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Trustee Serves Without Bond",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The direction that the Trustee serve without bond is explicit. The resulting lack of financial protection is a negotiation risk, not an interpretive one."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Confidentiality Obligation Lacks Temporal Limitation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision imposes confidentiality after termination or departure without stating an end date. Its indefinite duration may be burdensome, but the absence of a negotiated sunset does not make the obligation ambiguous."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Trustee's Compensation Should Survive Termination",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The compensation provisions lack an express survival clause, but that omission does not create an intrinsic ambiguity or contradiction. Adding survival language would supply additional collection protection."
+        }
+      ],
+      "risky": false
+    },
+    "neg73": {
+      "clause_id": "neg73",
+      "clause_name": "5.1 Resignation",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Committee Can Remove Trustee Without Cause",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Committee’s right to remove the Trustee without cause is unambiguous. The absence of notice or transition protections is a negotiation issue rather than a construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg79": {
+      "clause_id": "neg79",
+      "clause_name": "7.1 Termination of Liquidating Trust",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Disclosure Statement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Capitalized terms not locally defined are assigned their Plan meanings by the preamble. The desirability of a more specific citation to the Disclosure Statement is a drafting convenience rather than a construction defect."
+        },
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Class 1 claims",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Class 1 claims” is governed by the agreement’s express incorporation of Plan definitions. Repeating the definition locally would improve convenience but is not necessary to resolve meaning."
+        },
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Undefined term: Chapter 11 Case",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The preamble identifies the pending Chapter 11 case by number and incorporates Plan definitions. In context, “Chapter 11 Case” has a sufficiently clear referent."
+        }
+      ],
+      "risky": false
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "1.4 Ownership by Trustee",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "trustee_uecker",
+          "title": "Mandatory Custodian Requirement May Be Overly Restrictive",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“The Trustee shall use a custodian” is mandatory and unambiguous. The expense or inconvenience of that requirement is a negotiation concern."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Successor Trustee Acceptance Lacks Release of Outgoing Trustee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 5.3 does not release the outgoing Trustee, but the absence of a release is not ambiguous. The proposed release would add substantive liability protection."
+        }
+      ],
+      "risky": false
+    },
+    "neg80": {
+      "clause_id": "neg80",
+      "clause_name": "8.1 Amendment and Waiver",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Amendment Requires Only Trustee and Committee Approval",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 8.1 clearly permits amendment by the Trustee with Committee approval and does not require Debtor participation. The requested Debtor notice or consent is an additional protection, not a cure for ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg86": {
+      "clause_id": "neg86",
+      "clause_name": "9.6 Notices",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "debtor_mortgage_fund_08",
+        "trustee_uecker"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "debtor_mortgage_fund_08",
+          "title": "Notice Provision Limited to Regular Mail Only",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 9.6’s mail rule and Section 3.3(f)’s specific authorization of email for Committee procedures can be harmonized because they address different notice settings. There is no direct contradiction."
+        },
+        {
+          "party": "trustee_uecker",
+          "title": "Notice Provision Limited to Mail Only",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The general mail provision and the specific email procedures for Committee meetings and approvals can be read together without contradiction. Expanding permissible delivery methods is a modernization proposal rather than a construction cure."
+        }
+      ],
+      "risky": false
+    }
+  }
+}

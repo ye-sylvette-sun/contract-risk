@@ -1,0 +1,235 @@
+{
+"judgments": [
+{
+"clause_id": "c001",
+"reasoning_cat1": "The party definitions are explicit and tie each defined term to a named heading or entity, leaving no ambiguous term. The only quirk is the OCR-style quotation marks, which do not change meaning.",
+"reasoning_cat2": "The named lender and CAB are used consistently throughout the operative provisions, so no conflict appears. Definitions align with the services and LOC clauses.",
+"prob_cat1": 0.06,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c002",
+"reasoning_cat1": "The services are enumerated (1)-(7) with soft language like "attempt to" and "where available," and it references "Chapter 392" for compliance where the parties operate under Chapter 393, a potential cross-reference slip. The mix of firm promises and "we do not promise" language creates some scope uncertainty.",
+"reasoning_cat2": "The 10% interest cap and fee-only-if-approved statements are consistent with the Cost and LOC clauses. No direct contradiction with another operative provision was found.",
+"prob_cat1": 0.26,
+"prob_cat2": 0.13
+},
+{
+"clause_id": "c003",
+"reasoning_cat1": "This is a short, definite disclosure statement tracking the Truth in Lending Act with no ambiguous term. Its wording is clear.",
+"reasoning_cat2": "It is consistent with the Cost and Payment Terms treatment of the CAB fee as part of the finance charge. No conflict found.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.04
+},
+{
+"clause_id": "c004",
+"reasoning_cat1": "The provision is riddled with unfilled blanks and OCR garble ("°%", "Joan payments", "ofS", missing amounts), which are mechanical defects that leave key financial terms unstated. The payment-application waterfall itself is clear, but the surrounding gaps are significant.",
+"reasoning_cat2": "The application order (CAB fee first, then interest, then principal) could interact with the refund/rebate language and c005, but no square contradiction appears. The garbled blanks are intrinsic rather than relational.",
+"prob_cat1": 0.66,
+"prob_cat2": 0.14
+},
+{
+"clause_id": "c005",
+"reasoning_cat1": "The fees are specified with concrete figures, but each list ends in a general catch-all ("attorneys' fees, and costs of collection") whose reach is undefined. The "whichever is greater" mechanics are otherwise clear.",
+"reasoning_cat2": "The reimbursement obligation dovetails with the LOC clause (c006) and the interest cap; no contradiction found. Late charge and return fee terms are consistent with the default and collection clauses.",
+"prob_cat1": 0.18,
+"prob_cat2": 0.09
+},
+{
+"clause_id": "c006",
+"reasoning_cat1": "The clause degrades into clear OCR/mechanical corruption at the end ("unlgyuful excess", "maximug peepee law", "amortiz") and is cut off mid-sentence, garbling the savings language. This is a plain mechanical defect affecting meaning.",
+"reasoning_cat2": "The LOC amount, 175-day expiry, and revocation on cancellation align with the cancellation-notice provisions and c005. No operative conflict beyond the truncation was found.",
+"prob_cat1": 0.62,
+"prob_cat2": 0.12
+},
+{
+"clause_id": "c007",
+"reasoning_cat1": "Default triggers are enumerated, but remedy (2), "any other right or remedy allowed by law," is an open catch-all, and "less any unearned charges" is left unquantified. The triggers themselves are definite.",
+"reasoning_cat2": "The acceleration and collection rights track the collection-expenses and notices/waivers clauses without contradiction. Consistent with the whole.",
+"prob_cat1": 0.14,
+"prob_cat2": 0.07
+},
+{
+"clause_id": "c008",
+"reasoning_cat1": "The waiver list is enumerated but the collateral-related waivers ("go against any collateral," "substitute, exchange or release any collateral") sit oddly in a transaction whose only security is an LOC, creating mild scope uncertainty. Otherwise the boilerplate is standard.",
+"reasoning_cat2": "The reference to "collateral" may not map to the LOC structure described in c006, but this is loose drafting rather than a direct contradiction. Largely consistent.",
+"prob_cat1": 0.13,
+"prob_cat2": 0.11
+},
+{
+"clause_id": "c009",
+"reasoning_cat1": "The jury-waiver language is clear and expressly qualified "to the extent permitted by law." No ambiguous term stands out.",
+"reasoning_cat2": "It expressly interacts with the Arbitration Agreement and the opt-out mechanism, and it disclaims modifying that agreement, so the interplay is deliberately harmonized rather than conflicting. Consistent with c016-c024.",
+"prob_cat1": 0.07,
+"prob_cat2": 0.10
+},
+{
+"clause_id": "c010",
+"reasoning_cat1": "The savings clause is standard with only a minor typo ("applicable Jaw") that does not alter meaning. The amortize/prorate/spread language is well-worn and definite.",
+"reasoning_cat2": "It duplicates the truncated savings language in c006 but does not conflict with it; if anything it completes the same intent. Consistent with the whole.",
+"prob_cat1": 0.06,
+"prob_cat2": 0.06
+},
+{
+"clause_id": "c011",
+"reasoning_cat1": "The 60-day cure period and certified-mail requirement are specific, though "any claim... legally non-compliant, illegal or unenforceable" is broad. The wording is largely definite.",
+"reasoning_cat2": "It states it is cumulative of other notice and corrective-action procedures, and interacts with the arbitration and pre-suit framework without contradiction. Consistent.",
+"prob_cat1": 0.10,
+"prob_cat2": 0.08
+},
+{
+"clause_id": "c012",
+"reasoning_cat1": "The attorneys'-fee and anti-criminal-threat language is clear, though "all costs and disbursements" is a mild catch-all. Largely definite.",
+"reasoning_cat2": "It is consistent with the collection remedies in c005 and c007. No conflict found.",
+"prob_cat1": 0.08,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c013",
+"reasoning_cat1": "A single short stipulation that the agreement involves interstate commerce; unambiguous. No term to construe.",
+"reasoning_cat2": "It supports the FAA governance of arbitration (c025) and is consistent with the rest. No conflict.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c014",
+"reasoning_cat1": "A standard one-sided assignment clause; the terms are clear even if lopsided. No genuinely ambiguous term.",
+"reasoning_cat2": "Consistent with the entire-agreement and miscellaneous provisions; no contradiction found.",
+"prob_cat1": 0.05,
+"prob_cat2": 0.04
+},
+{
+"clause_id": "c015",
+"reasoning_cat1": "Purely factual recitation of address, agent for service, and phone number; nothing to construe. Definite.",
+"reasoning_cat2": "The address matches the notice provisions except that the opt-out clause names "PLS Financial Services" rather than PLS Loan Store, a discrepancy that lives in c021. This clause itself is consistent.",
+"prob_cat1": 0.03,
+"prob_cat2": 0.06
+},
+{
+"clause_id": "c016",
+"reasoning_cat1": "A short, emphatic introduction to the arbitration agreement; clear and definite. No ambiguous term.",
+"reasoning_cat2": "It introduces the arbitration scheme consistently developed in c017-c024. No conflict.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c017",
+"reasoning_cat1": ""Claim" is defined very broadly with a catch-all (d) "the actions of you, us, Lender, or third parties," whose reach against enumerated specifics can be contested. The opt-out carve-out and "we/us" expansion add scope questions.",
+"reasoning_cat2": "The opt-out carve-out (i) depends on c021, and the small-claims carve-out interacts with the litigation/arbitration mechanics; these are coordinated rather than conflicting. Mostly consistent.",
+"prob_cat1": 0.24,
+"prob_cat2": 0.13
+},
+{
+"clause_id": "c018",
+"reasoning_cat1": "The selection mechanics include the one-sided phrase "reasonably satisfactory to us" and permit either party to demand arbitration even after suit, which can be read against the drafter. The 20-day default-selection rule favors the CAB.",
+"reasoning_cat2": "It coordinates with c024 (arbitration controls over conflicting organization rules) and the no-class-action organization restriction in c023, without contradiction. Consistent.",
+"prob_cat1": 0.21,
+"prob_cat2": 0.10
+},
+{
+"clause_id": "c019",
+"reasoning_cat1": "The procedure is detailed and definite, with only a minor comma splice ("evidence, Unless") that does not change meaning. No ambiguous operative term.",
+"reasoning_cat2": "Venue and cost provisions are consistent with c018 and c020. No conflict found.",
+"prob_cat1": 0.07,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c020",
+"reasoning_cat1": "The entry-of-judgment mechanism is standard and clear. No ambiguous term.",
+"reasoning_cat2": "It is consistent with the FAA governance (c025) and the arbitration procedure. No conflict.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c021",
+"reasoning_cat1": "The opt-out mechanics are clear, but the 30-day window and "date of this Agreement" reference depend on a filled-in date the form leaves blank. The wording is otherwise definite.",
+"reasoning_cat2": "The opt-out notice address names "PLS Financial Services" while c015 and the other notice clauses name "PLS Loan Store of Texas, Inc." at the same suite, a discrepancy a consumer could argue about. This is a genuine cross-provision inconsistency.",
+"prob_cat1": 0.14,
+"prob_cat2": 0.30
+},
+{
+"clause_id": "c022",
+"reasoning_cat1": "The no-jury statement is clear and simply restates the arbitration consequence. No ambiguous term.",
+"reasoning_cat2": "It is consistent with the jury-waiver clause (c009) and the arbitration agreement. No conflict.",
+"prob_cat1": 0.05,
+"prob_cat2": 0.07
+},
+{
+"clause_id": "c023",
+"reasoning_cat1": "The class-action waiver is emphatic and comprehensive with clear language. No ambiguous term to construe.",
+"reasoning_cat2": "It coordinates with the arbitration-organization restriction and severability clause (c024); consistent. No conflict found.",
+"prob_cat1": 0.06,
+"prob_cat2": 0.06
+},
+{
+"clause_id": "c024",
+"reasoning_cat1": "The severability and conflict-control language is standard and definite. No ambiguous term.",
+"reasoning_cat2": "It coordinates with the broader entire-agreement severability (c028) and controls over conflicting arbitration rules; consistent. No conflict.",
+"prob_cat1": 0.05,
+"prob_cat2": 0.06
+},
+{
+"clause_id": "c025",
+"reasoning_cat1": "The governing-law split (Texas generally, FAA for arbitration) is clear, with only a stray apostrophe in "FAA'". No genuine ambiguity.",
+"reasoning_cat2": "It is consistent with the arbitration clauses and the interstate-commerce stipulation (c013). No conflict.",
+"prob_cat1": 0.05,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c026",
+"reasoning_cat1": "The caution is a statutory-style disclosure in clear terms; no ambiguous operative term. Definite.",
+"reasoning_cat2": "It is consistent with the short-term nature of the loan described elsewhere. No conflict.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.04
+},
+{
+"clause_id": "c027",
+"reasoning_cat1": "A factual complaint-contact notice; nothing to construe. Definite.",
+"reasoning_cat2": "Consistent with the rest of the instrument. No conflict.",
+"prob_cat1": 0.03,
+"prob_cat2": 0.03
+},
+{
+"clause_id": "c028",
+"reasoning_cat1": "The entire-agreement and reformation language is standard and clear. No ambiguous term.",
+"reasoning_cat2": "The integration clause references a "separate Credit Services Disclosure Statement" (in c029) which sits in mild tension with a pure integration clause, but reformation and severability are otherwise consistent. Largely consistent.",
+"prob_cat1": 0.06,
+"prob_cat2": 0.10
+},
+{
+"clause_id": "c029",
+"reasoning_cat1": "The certifications are enumerated and clear, but item (2) certifies "THIS CREDIT SERVICES AGREEMENT WITH ALL NECESSARY SPACES COMPLETED," wording that is only accurate if the blanks are filled. The certification wording itself is otherwise definite.",
+"reasoning_cat2": "The certification that all spaces are completed conflicts with the numerous unfilled blanks in c004 and the cancellation-date blanks (c033), a genuine relational tension. It also references a separate disclosure statement against the integration clause (c028).",
+"prob_cat1": 0.16,
+"prob_cat2": 0.34
+},
+{
+"clause_id": "c030",
+"reasoning_cat1": "The three-day cancellation notice is clear and statutory in form. No ambiguous term.",
+"reasoning_cat2": "It is consistent with the two attached Notice of Cancellation forms (c031-c033). No conflict.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.06
+},
+{
+"clause_id": "c031",
+"reasoning_cat1": ""Within three days after the date the contract is signed" is clear, though it measures from signing while c030 measures from "the date of the transaction," a subtle wording difference. Otherwise definite.",
+"reasoning_cat2": "The "signed" trigger here differs slightly from the "date of the transaction" trigger in c030, a minor internal inconsistency in the cancellation window. Otherwise consistent.",
+"prob_cat1": 0.08,
+"prob_cat2": 0.14
+},
+{
+"clause_id": "c032",
+"reasoning_cat1": "The 10-day refund term is specific and clear. No ambiguous term.",
+"reasoning_cat2": "Consistent with the cancellation right and LOC revocation on cancellation (c006). No conflict.",
+"prob_cat1": 0.04,
+"prob_cat2": 0.05
+},
+{
+"clause_id": "c033",
+"reasoning_cat1": "The how-to-cancel instruction is clear but ends with an unfilled deadline ("not later than midnight on") and duplicates the company name, a mechanical/blank defect. The instruction otherwise is definite.",
+"reasoning_cat2": "The blank cancellation deadline is inconsistent with c029's certification that all spaces are completed, the same relational gap noted there. Otherwise consistent with c030-c032.",
+"prob_cat1": 0.17,
+"prob_cat2": 0.12
+}
+]
+}

@@ -1,0 +1,2005 @@
+{
+  "contract_id": "721FSupp2d613_license_agreement_with_the",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 22,
+  "n_issues": 56,
+  "n_located": 55,
+  "n_judged": 38,
+  "n_skipped": 18,
+  "counts": {
+    "cat1": 23,
+    "cat2": 4,
+    "none": 11
+  },
+  "parties": {
+    "city_of_youngstown": {
+      "n_issues": 29,
+      "n_located": 28,
+      "by_tab": {
+        "risks_negotiation": 17,
+        "proofread": 12
+      },
+      "by_kind": {
+        "Important": 6,
+        "Notable": 9,
+        "Minor": 2,
+        "Spelling + Grammar": 10,
+        "Definitions": 2
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Broad Environmental Representation Exposes City to Liability",
+          "description": "In Section 6.D , the City makes an extraordinarily broad representation that the Premises \"has never, and does not currently contain, nor is it contaminated by, any hazardous or toxic waste materials.\" This is extremely risky given that the attached Phase II ESA (Exhibit B) itself documents the presence of petroleum hydrocarbons, PCBs, lead, benzene, toluene, and asbestos-containing materials on the site — a former steel manufacturing complex appearing on EPA's RCRA/CERCLA list . The qualifier \"in violation of any applicable environmental laws\" provides some protection, but the sweeping \"has never\" language is overbroad and factually questionable for a former industrial site. The City should narrow this representation to be limited to its actual knowledge and the ESA findings.",
+          "revision": "D. The Premises has never, andTo the best of the City's knowledge, based upon the Environmental Site Assessment attached as Exhibit B, the Premises does not currently contain, nor ...",
+          "comment": "We qualified this representation to reflect the City's actual knowledge as informed by the attached Phase II ESA, which is the appropriate standard for a former industrial site appearing on EPA's RCRA/CERCLA list; an unqualified historical warranty of no contamination is neither commercially standard nor factually supportable here.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3599,
+            "end_char": 3661,
+            "start_line": 68,
+            "end_line": 68,
+            "match_cover": 0.345,
+            "match_run": 5,
+            "matched_text": "D. The Premises has never, and does not currently contain, nor",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "6.D. City Warranty - Environmental"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue concerns the factual breadth and commercial risk of an unqualified warranty, not an ambiguity or internal contradiction. The express exception for matters in Exhibit B substantially reconciles the representation with the ESA findings."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Absolute Lien-Free and No-Litigation Warranties Too Broad",
+          "description": "In Section 6.B , the City makes an absolute warranty that the Premises \"shall be clear of all liens and claims of any party\" and that \"there are no claims, actions, suits, or proceedings instituted, filed or threatened, which may affect the Premises\" . For a former LTV Steel industrial site that was acquired via quit claim deed and appears on EPA's RCRA/CERCLA list, these absolute representations carry significant risk. The City should qualify these warranties with a knowledge qualifier and limit the lien representation to liens created by or through the City.",
+          "revision": "... use of the Premises and, to the best of the City's knowledge, said Premises shall be clear of all liens and claims created by or through the City, except for",
+          "comment": "The City acquired this former LTV Steel industrial site via quit claim deed and cannot warrant clean title against all historical liens and claims; this qualification limits the City's representation to matters within its knowledge and control, which is standard for municipal licensors dealing with complex industrial properties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2735,
+            "end_char": 2913,
+            "start_line": 53,
+            "end_line": 56,
+            "match_cover": 0.6,
+            "match_run": 10,
+            "matched_text": "use of the Premises and said Premises shall be clear of all liens and claims of any party, except for easements of record, any and all unrecorded easements identified by the City",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "6.B. City Warranty - Authority and Clear Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "An absolute warranty without a knowledge qualifier may be risky, but its meaning is clear and it does not conflict with another contractual provision."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No-Litigation Representation Should Be Knowledge-Qualified",
+          "description": "The City represents absolutely in Section 6.B that \"there are no claims, actions, suits, or proceedings instituted, filed or threatened, which may affect the Premises\" . Given the site's history as a former LTV Steel complex on EPA's RCRA/CERCLA list, this absolute statement is risky. The City should add a knowledge qualifier to protect against unknown or unfiled claims.",
+          "revision": "affecting the Premises. Finally, to the best of the City's knowledge, there are no claims, actions, ...",
+          "comment": "Given the site's environmental history and federal regulatory status, an absolute no-litigation representation is commercially unreasonable; we qualified this representation to the City's actual knowledge, which is consistent with market standard for complex industrial properties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3271,
+            "end_char": 3332,
+            "start_line": 61,
+            "end_line": 61,
+            "match_cover": 0.562,
+            "match_run": 5,
+            "matched_text": "affecting the Premises. Finally, there are no claims, actions",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "6.B. City Warranty - Authority and Clear Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a knowledge qualifier creates negotiation and factual-accuracy risk, not a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Insurance Amount May Be Inadequate for Former Industrial Site",
+          "description": "Section 7.C  requires Hardrives to maintain only $1,000,000 in comprehensive liability coverage. For a 58-acre former steel manufacturing site with documented environmental contamination, this amount may be inadequate to protect the City against potential environmental or personal injury claims. The City should require a higher coverage amount and should also require property/casualty insurance on the Premises and environmental liability insurance.",
+          "revision": "... Agreement, Hardrives shall maintain a policy of insurance in the amount of not less than $2,000,000.00 per occurrence and $5,000,000.00 in the aggregate, to include comprehensive general liability coverage and environmental liability coverage, naming the City, its officers, agents, and employees as additional",
+          "comment": "A 58-acre former steel manufacturing site with documented environmental contamination presents elevated exposure well beyond what $1M in general liability coverage can address; the revised limits and addition of environmental liability coverage reflect commercially reasonable protection for both parties given the known site conditions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5144,
+            "end_char": 5412,
+            "start_line": 95,
+            "end_line": 99,
+            "match_cover": 0.51,
+            "match_run": 12,
+            "matched_text": "Agreement, Hardrives shall maintain a policy of insurance in the amount of $1,000,000.00 to include comprehensive liability coverage naming the City, as an additional insured of said policy. Hardrives shall maintain worker's compensation insurance on its employees and",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "7.C. Hardrives Warranty - Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Whether $1 million is adequate insurance is a commercial risk-allocation question; the stated amount is textually definite."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Scope Should Cover Environmental Claims",
+          "description": "Section 7.E  provides that Hardrives will indemnify the City against claims \"resulting from injury on or about the Premises or in conjunction with Hardrives' use and occupancy.\" This language is limited to personal injury and does not expressly cover environmental claims, property damage, or regulatory enforcement actions arising from Hardrives' operations (e.g., paving material production). Given the environmental sensitivity of the site and Hardrives' intended industrial use, the indemnification should be broadened to include environmental liability, property damage, and regulatory fines.",
+          "revision": "E. Hardrives agrees to hold harmless the City against any and allindemnify, defend, and hold harmless the City, its officers, agents, and employees, against any and all claims, liabilities, damages, losses, costs, and expenses, including reasonable attorneys' fees and expenses incidental to the defense of same, resulting from injury, death, property damage, environmental contamination, or regulatory action on or about the Premises or in conjunction with Hardrives' use and occupancy of the Premises, except to the extent caused by the City's negligence or willful misconduct.",
+          "comment": "Given the industrial nature of Hardrives' intended use and the environmental sensitivity of the Premises, we expanded indemnification to cover environmental contamination, property damage, and regulatory actions — risks directly attributable to Hardrives' operations and appropriately allocated to the party creating them, consistent with Ohio indemnification principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5815,
+            "end_char": 6659,
+            "start_line": 109,
+            "end_line": 124,
+            "match_cover": 0.541,
+            "match_run": 11,
+            "matched_text": "E. Hardrives agrees to hold harmless the City against any and all claims, liabilities, damages, and losses, including expenses incidental to the defense of same, resulting from injury on or about the Premises or in conjunction with Hardrives’ use and occupancy of the Premises. F. All work performed ",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "7.E. Hardrives Warranty - Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The term “injury” may mean bodily injury alone or legal injury more broadly, including property or environmental harm. That lexical uncertainty affects the indemnity’s scope."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Environmental Compliance Limited to \"EPA\" Laws Only",
+          "description": "Section 7.D  requires Hardrives to comply with \"Environmental Protection Agency laws or regulations\" during its use . This is too narrow — it omits state environmental laws (Ohio EPA regulations), local environmental ordinances, and other federal environmental statutes not administered by EPA (e.g., OSHA requirements). For paving material production on a former industrial site, the City should require compliance with all applicable environmental laws at every level of government.",
+          "revision": "Hardrives will comply with Environmental Protection Agency lawsall applicable federal, state, and local environmental laws, rules, or",
+          "comment": "The original reference to 'Environmental Protection Agency laws or regulations' is underinclusive and would exclude Ohio EPA regulations, local environmental ordinances, and federal environmental statutes not administered by the EPA; this revision aligns the obligation with the full scope of applicable law as is standard practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5669,
+            "end_char": 6004,
+            "start_line": 105,
+            "end_line": 111,
+            "match_cover": 0.529,
+            "match_run": 7,
+            "matched_text": "Hardrives will comply with Environmental Protection Agency laws or regulations in effect presently or enacted during the term of this Agreement. E. Hardrives agrees to hold harmless the City against any and all claims, liabilities, damages, and losses, including expenses incidental to the defense of",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "7.E. Hardrives Warranty - Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Environmental Protection Agency laws or regulations” is uncertain as to whether it means only federal EPA-administered requirements, Ohio EPA requirements, or both."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Payment Due Date Specified for Annual Rental",
+          "description": "Section 4  references default for failure to make annual payments \"within thirty (30) days of the date payment is due,\" but Section 3  does not specify when the annual $1.00 payment is due. Without a defined due date, the default trigger is ambiguous and potentially unenforceable. The City should specify a payment due date.",
+          "revision": "... of one dollar ($1.00) per year, due and payable on the anniversary of the execution of this Agreement.",
+          "comment": "The annual due date has been specified to ensure the default provision in Section 4 operates as intended; without it, the 30-day cure period for nonpayment lacks a defined trigger, creating ambiguity that could undermine enforceability.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1328,
+            "end_char": 1758,
+            "start_line": 27,
+            "end_line": 34,
+            "match_cover": 0.632,
+            "match_run": 7,
+            "matched_text": "of one dollar ($1.00) per year. | 4, Event of Default. Failure to make annual payments within thirty (80) days of the date payment is due shall constitute an event of default. Upon written notice by the City, Hardrives shall have ten (10) days, within which to cure such default. If said default is n",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "Section 4 depends on “the date payment is due,” while Section 3 establishes no due date. Reading the payment and default provisions together leaves the default trigger operationally indeterminate."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No City Right to Terminate for Cause Beyond Payment Default",
+          "description": "Section 4  only addresses default for failure to make the $1.00 annual payment. There is no provision allowing the City to terminate the license for other material breaches — such as environmental violations, failure to maintain insurance, waste of the Premises, unauthorized use, or failure to comply with applicable laws. The City should have broader termination rights for any material breach of Hardrives' obligations under Section 7.",
+          "revision": "4,. Event of Default. Failure to make annual payments within thirty (80)(30) days of the",
+          "comment": "Limiting termination rights solely to payment default leaves the City without recourse for material breaches of Hardrives' core obligations; this revision aligns the default provision with standard licensing practice under Ohio law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1362,
+            "end_char": 1445,
+            "start_line": 29,
+            "end_line": 29,
+            "match_cover": 0.938,
+            "match_run": 12,
+            "matched_text": "4, Event of Default. Failure to make annual payments within thirty (80) days of the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "By expressly identifying nonpayment as an “event of default” while omitting all other breaches, Section 4 raises an expressio unius question about whether other breaches can trigger termination."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Holdover or Post-Expiration Provisions",
+          "description": "Section 5  provides that the Agreement continues for one year or until title conveyance pursuant to a Development Agreement to be entered by December 31, 1999. There is no provision addressing what happens if the term expires without title conveyance and no Development Agreement is executed. The City should include a holdover provision or automatic termination mechanism to avoid Hardrives claiming a right to remain on the Premises indefinitely.",
+          "revision": "... one (1) year from the date of execution of this Agreement, subject to renewal only upon mutual written agreement of the parties; or (2) until the",
+          "comment": "We clarified that any continuation beyond the initial one-year term requires mutual written agreement to ensure both parties have a clear, consensual basis for any extension and to avoid ambiguity about holdover rights.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1878,
+            "end_char": 1953,
+            "start_line": 37,
+            "end_line": 38,
+            "match_cover": 0.577,
+            "match_run": 11,
+            "matched_text": "one (1) year from the date of execution of this Agreement; or (2) until the",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The word “or” between the one-year term and the title-conveyance endpoint does not clearly establish which endpoint controls, particularly if conveyance never occurs."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Conflict Between Non-Assignment and Successors/Assigns Provision",
+          "description": "Section 9  states the Agreement \"is not assignable by either party without the written consent of the other party,\" while Section 12  includes \"successors, and assigns\" in the definition of the parties. These provisions are in tension — Section 12 appears to contemplate free assignability. Section 12 should clarify that assigns means only permitted assigns under Section 9.",
+          "revision": "... heirs, executors, administrators, successors, and permitted assigns.",
+          "comment": "We revised Section 12 to reference 'permitted assigns' to ensure consistency with Section 9's express requirement for written consent prior to assignment, avoiding an internal conflict that could undermine the assignment restriction.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7208,
+            "end_char": 7265,
+            "start_line": 135,
+            "end_line": 136,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "heirs, executors, administrators, successors, and assigns",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "12. Successors and Assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 12’s inclusion of “assigns” is in tension with Section 9’s prohibition on assignment without consent, even though a court could harmonize them by reading “assigns” as permitted assigns."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Survival Clause Is Overbroad",
+          "description": "Section 11  provides that \"all warranties, covenants, representations, and guarantees shall survive the execution and delivery of this Agreement.\" This survival clause has no time limitation, meaning the City's environmental representations, lien warranties, and other representations in Section 6 would survive indefinitely. The City should limit the survival period to a defined term (e.g., one year after termination) to avoid perpetual exposure.",
+          "revision": "... and guarantees shall survive the execution and delivery of this Agreement and any other documents contemplated by the Agreement for a period of one (1) year following the termination or expiration of this Agreement.",
+          "comment": "We limited the survival period to one year following termination or expiration to establish a defined and commercially reasonable window for claims, consistent with standard municipal licensing practice under Ohio law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6965,
+            "end_char": 7471,
+            "start_line": 130,
+            "end_line": 140,
+            "match_cover": 0.647,
+            "match_run": 19,
+            "matched_text": "and guarantees shall survive the execution and delivery of this Agreement and any other documents contemplated by the Agreement. 12. The terms \"City\" and “Hardrives,\" as both are used herein, shall include all persons so designated and their heirs, executors, administrators, successors, and assigns.",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "12. Successors and Assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Shall survive” does not specify the endpoint or duration of survival, leaving uncertainty over whether the obligations continue through termination indefinitely or only for a reasonable period."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "License Grant Lacks Revocability Language",
+          "description": "Section 1  grants Hardrives \"a license for use of the property\" but does not expressly state that the license is revocable. Under Ohio law, a license is generally revocable at will unless coupled with an interest. The City should include express language confirming the license is revocable to preserve the City's flexibility and avoid any argument that the license has created an irrevocable interest or a de facto lease.",
+          "revision": "... to grant to Hardrives a revocable, non-exclusive license for use of the ...",
+          "comment": "Under Ohio law, a license is revocable at will unless coupled with an interest; we have made this express in the grant language to ensure the nature of the arrangement is clear and consistent with settled Ohio property law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 441,
+            "end_char": 487,
+            "start_line": 14,
+            "end_line": 14,
+            "match_cover": 0.769,
+            "match_run": 5,
+            "matched_text": "to grant to Hardrives a license for use of the",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "1. Grant of License"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The grant of a “license for use” does not state whether it is revocable at will or protected for the stated term. Its revocability could therefore require construction in light of the agreement’s fixed-term language."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Premises Definition Overly Broad with \"Including But Not Limited To\"",
+          "description": "The Exhibit A description of the Premises  states the Premises \"shall include, but is not limited to\" the described parcel. This open-ended language could allow Hardrives to claim the license extends beyond the specifically described Parcel No. 3 to other portions of the former LTV Steel site. For clarity and to protect the City, the Premises should be limited to the specifically described property.",
+          "revision": "... in this License Agreement, shall include, but is notbe limited to, the",
+          "comment": "The Premises should be precisely defined to avoid ambiguity regarding the scope of the license grant; limiting the definition to the specifically described parcel ensures both parties have clear and enforceable boundaries.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7947,
+            "end_char": 8015,
+            "start_line": 170,
+            "end_line": 170,
+            "match_cover": 0.917,
+            "match_run": 8,
+            "matched_text": "in this License Agreement, shall include, but is not limited to, the",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "Exhibit A - Description of Premises"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "“Including, but not limited to” places an unrestricted catch-all against the specifically described Parcel No. 3, making the geographic scope of the Premises uncertain."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "City Warrants Surplus Declaration Before It May Have Occurred",
+          "description": "Section 2  states that the Premises \"will be declared surplus property and deemed not needed for public use by the Director of Finance.\" The use of \"will be\" suggests this declaration has not yet occurred at the time of execution. Licensing property before it has been formally declared surplus may conflict with Ohio municipal property disposition requirements. The City should ensure this declaration occurs before or contemporaneously with execution, and the language should reflect that.",
+          "revision": "... Hardrives agree that the Premises will behas been declared surplus",
+          "comment": "Ohio law requires that municipal property be formally declared surplus before it may be licensed or disposed of; we revised the language to confirm this declaration has already occurred rather than suggesting it is a future event.",
+          "group_size": 1,
+          "location": {
+            "start_char": 729,
+            "end_char": 787,
+            "start_line": 19,
+            "end_line": 19,
+            "match_cover": 0.8,
+            "match_run": 6,
+            "matched_text": "Hardrives agree that the Premises will be declared surplus",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Use"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Will be declared” leaves unclear when the surplus declaration must occur and whether it is a condition precedent to the license or merely a future covenant."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Right of Inspection Reserved for City",
+          "description": "The Agreement does not reserve the City's right to inspect the Premises during the license term. Given that Hardrives will be conducting industrial operations (paving material production) on a site with known environmental sensitivity, the City should have an express right to enter and inspect the Premises upon reasonable notice to verify compliance with environmental and other obligations. Section 7.B  addresses surrender condition but adding inspection language there would strengthen the City's position.",
+          "revision": "... the Premises during the term of its use of the Premises, to permit the City reasonable access to the Premises for inspection upon reasonable prior notice, and to surrender the Premises to the City upon",
+          "comment": "Given the industrial use of the Premises and the City's ongoing stewardship obligations as licensor, a reasonable right of inspection upon prior notice is a standard landlord/licensor protection and does not impose any undue burden on Hardrives.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4810,
+            "end_char": 4912,
+            "start_line": 89,
+            "end_line": 90,
+            "match_cover": 0.571,
+            "match_run": 11,
+            "matched_text": "the Premises during the term of its use of the Premises and to surrender the Premises to the City upon",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "7.B. Hardrives Warranty - No Waste / Surrender"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a contractual inspection right is a substantive omission and negotiation concern, not an ambiguity or inconsistency in existing text."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Notice Provision in Agreement",
+          "description": "The Agreement lacks a formal notice provision specifying how notices (including default notices under Section 4 ) are to be delivered, to what addresses, and when they are deemed effective. This is a standard boilerplate provision that protects both parties. Without it, the City's default notice under Section 4 could be challenged as improperly delivered. This is particularly important given the tight 10-day cure period.",
+          "revision": "... of the State of Ohio. All notices required or permitted under this Agreement shall be in writing and shall be deemed given when delivered personally, or three (3) days after being sent by certified mail, return receipt requested, to the parties at their respective addresses set forth herein or such other address as either party may designate in writing.",
+          "comment": "We introduced a standard notice provision to protect both parties by establishing clear delivery methods and effective-date rules, ensuring enforceability of all required notices under Ohio contract law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6894,
+            "end_char": 7402,
+            "start_line": 128,
+            "end_line": 139,
+            "match_cover": 0.22,
+            "match_run": 5,
+            "matched_text": "of the State of Ohio. 11. All warranties, covenants, representations, and guarantees shall survive the execution and delivery of this Agreement and any other documents contemplated by the Agreement. 12. The terms \"City\" and “Hardrives,\" as both are used herein, shall include all persons so designate",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "11. Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Upon written notice by the City” does not establish an authorized delivery method or whether notice is effective upon sending or receipt, leaving the cure period’s trigger uncertain."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "\"As Is\" Acceptance Should Disclaim Additional Warranties",
+          "description": "Section 8  provides that Hardrives accepts the Premises \"as is\" but the disclaimer could be strengthened. The City should add explicit disclaimers of implied warranties of fitness and merchantability to better protect against condition-related claims, especially given the former industrial use and known environmental conditions.",
+          "revision": "... the condition of the Premises, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE OR MERCHANTABILITY, apart from",
+          "comment": "We added explicit disclaimers of implied warranties of fitness and merchantability to align the 'as is' provision with standard commercial practice and Ohio law, ensuring clarity regarding the scope of the City's disclaimers given the known history of the Premises.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3748,
+            "end_char": 4398,
+            "start_line": 70,
+            "end_line": 79,
+            "match_cover": 0.429,
+            "match_run": 3,
+            "matched_text": "the Environmental Site Assessment Phase | and If report attached hereto as Exhibit B, in violation of any applicable environmental laws or regulations, including, but not limited to, Section 103 of the Comprehensive Environmental Response, Compensation and Liability Act, 42 U.S.C. D9601 et seq. and ",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "6.D. City Warranty - Environmental"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue seeks broader warranty disclaimers rather than identifying ambiguity. Section 8 expressly preserves the City’s stated representations, so the as-is language is reconcilable with them."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in number",
+          "description": "Number typo: \"(80)\" should be \"(30)\" in default provision",
+          "revision": "... make annual payments within thirty (80)(30) days of the",
+          "comment": "Corrected numerical typo: \"(80)\" changed to \"(30)\" to match the written-out word \"thirty\" in the default provision.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1394,
+            "end_char": 1445,
+            "start_line": 29,
+            "end_line": 29,
+            "match_cover": 0.9,
+            "match_run": 6,
+            "matched_text": "make annual payments within thirty (80) days of the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Thirty (80) days” contains inconsistent written and numerical values, a mechanical error that changes the applicable deadline."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"to be\"",
+          "description": "Grammar: \"to.be\" should be \"to be\" in groundwater flow description",
+          "revision": "... 3's groundwater was determined to. be in 4 north to",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 15700,
+            "end_char": 15746,
+            "start_line": 341,
+            "end_line": 341,
+            "match_cover": 0.9,
+            "match_run": 9,
+            "matched_text": "groundwater was determined to.be in 4 north to",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Development Agreement",
+          "description": "The term 'Development Agreement' is used in the Terms clause  but is never formally defined in this License Agreement. The clause references a future Development Agreement to be entered into by December 31, 1999, regarding transfer of title to the Premises, but readers lack clarity on what this separate agreement will entail or its relationship to this License Agreement.",
+          "revision": "conveyed and transferred to Hardrives by the City, pursuant to a Developmentdevelopment agreement (\"Development Agreement\")",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1989,
+            "end_char": 2075,
+            "start_line": 39,
+            "end_line": 40,
+            "match_cover": 0.867,
+            "match_run": 11,
+            "matched_text": "conveyed and transferred to Hardrives by the City, pursuant to a Development Agreement",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Development Agreement” is not defined or otherwise identified beyond a general description of a future agreement, leaving uncertainty about the instrument that triggers title transfer."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Event of Default",
+          "description": "The term is defined as 'Event of Default' in the heading and definition , but later referenced in lowercase as 'an event of default' . This inconsistency may create ambiguity about whether the lowercase usage refers to the defined term or a general concept.",
+          "revision": "an eventEvent of defaultDefault",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"biphenyls\"",
+          "description": "Typo: \"bipheny?s\" should be \"biphenyls\" in PCB description",
+          "revision": "TCLP metals, poly-chlorinated bipheny?sbiphenyls (PCBs) and the toxicity",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17661,
+            "end_char": 17724,
+            "start_line": 381,
+            "end_line": 381,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "TCLP metals, poly-chlorinated bipheny?s (PCBs) and the toxicity",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"oil\"",
+          "description": "Typo: \"oi]\" should be \"oil\" in tank area description",
+          "revision": "19) and cutting oi]oil tanks (Boring No. 27) exhibited ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 18299,
+            "end_char": 18350,
+            "start_line": 392,
+            "end_line": 392,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "19) and cutting oi] tanks (Boring No. 27) exhibited",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"oil\"",
+          "description": "Typo: \"oi]\" should be \"oil\" in tank area reference",
+          "revision": "... In addition, Boring No. 27 (oi](oil tank area) exhibited",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 18579,
+            "end_char": 18631,
+            "start_line": 396,
+            "end_line": 396,
+            "match_cover": 0.9,
+            "match_run": 6,
+            "matched_text": "In addition, Boring No. 27 (oi] tank area) exhibited",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Capitalization inconsistency",
+          "description": "Capitalization: \"Were\" should be \"were\" mid-sentence",
+          "revision": "area Werewere examined for contaminants from former ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 16620,
+            "end_char": 16667,
+            "start_line": 359,
+            "end_line": 359,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "area were examined for contaminants from former",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"soil\"",
+          "description": "Typo: \"soi}\" should be \"soil\" in sample description",
+          "revision": "... gasoline/petroleum bulk station. One (1) soi}soil",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 22926,
+            "end_char": 23033,
+            "start_line": 495,
+            "end_line": 498,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "gasoline/petroleum bulk station. One (1) soi} sample was extracted at a depth of ten (10) feet. . 2. ‘Soil",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"lead\"",
+          "description": "Typo: \"Jead\" should be \"lead\" in metals list",
+          "revision": "... for arsenic, barium, cadmium, chromium, Jeadlead, mercury,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17766,
+            "end_char": 17819,
+            "start_line": 382,
+            "end_line": 383,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "for arsenic, barium, cadmium, chromium, lead, mercury",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"federal\"",
+          "description": "Typo: \"federal]\" should be \"federal\" in regulations reference",
+          "revision": "RCRA/CERCLA Hazardous Waste' Characterization of federal] regulations",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17948,
+            "end_char": 18015,
+            "start_line": 385,
+            "end_line": 386,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "RCRA/CERCLA Hazardous Waste Characterization of federal regulations",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"toxicity\"",
+          "description": "Typo: \"toxicily\" should be \"toxicity\" in characteristics list",
+          "revision": "... of ignitability reactivity, corrosivity, or toxicilytoxicity",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 18154,
+            "end_char": 18197,
+            "start_line": 388,
+            "end_line": 389,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "of ignitability reactivity, corrosivity, or",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        }
+      ]
+    },
+    "hardrives_paving": {
+      "n_issues": 27,
+      "n_located": 27,
+      "by_tab": {
+        "risks_negotiation": 16,
+        "proofread": 11
+      },
+      "by_kind": {
+        "Notable": 7,
+        "Important": 5,
+        "Minor": 4,
+        "Spelling + Grammar": 8,
+        "Templated Content": 1,
+        "Definitions": 2
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Cure Period Too Short for Default",
+          "description": "Section 4 provides Hardrives only ten (10) days to cure a payment default after notice from the City. While the annual payment is only $1.00, the consequence of default is severe — Hardrives \"shall surrender all rights to the use of the Premises.\" A 10-day cure period is quite short and should be extended to at least thirty (30) days to protect Hardrives from inadvertent loss of its license rights over a trivial payment.",
+          "revision": "City, Hardrives shall have ten (10)thirty (30) days, within which to cure ...",
+          "comment": "A 30-day cure period is standard commercial practice and proportionate to the severity of the remedy; forfeiture of all license rights over a nominal $1.00 payment after only 10 days creates a punitive outcome inconsistent with equitable principles under Ohio law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1532,
+            "end_char": 1594,
+            "start_line": 32,
+            "end_line": 32,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "City, Hardrives shall have ten (10) days, within which to cure",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The ten-day cure period is definite; whether it is too short or disproportionate is a negotiation and equitable-remedy concern rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad Indemnification by Hardrives",
+          "description": "Section 7.E requires Hardrives to hold the City harmless against \"any and all claims, liabilities, damages, and losses\" resulting from \"injury on or about the Premises.\" This language is extremely broad — it could encompass injuries caused by the City's own negligence, pre-existing environmental conditions, or third parties unrelated to Hardrives' operations. Hardrives should limit its indemnification to claims arising from Hardrives' own negligent or willful acts or omissions, and should explicitly carve out liability from pre-existing conditions or the City's negligence.",
+          "revision": "... losses, including expenses incidental to the defense of same, resulting from the negligent or willful acts or omissions of Hardrives on or about the Premises or in",
+          "comment": "We limited the indemnification obligation to claims arising from Hardrives' own negligent or willful acts or omissions, which is consistent with Ohio law and standard commercial practice — indemnitors should not bear liability for risks created by others.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5915,
+            "end_char": 6029,
+            "start_line": 110,
+            "end_line": 111,
+            "match_cover": 0.667,
+            "match_run": 11,
+            "matched_text": "losses, including expenses incidental to the defense of same, resulting from injury on or about the Premises or in",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "7.E. Hardrives Warranty - Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The causal phrases “resulting from injury on or about the Premises” and “in conjunction with” Hardrives’ use are broad enough to leave uncertain whether the indemnity includes the City’s negligence, third-party conduct, or pre-existing conditions."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Insurance Coverage Lacks Specificity",
+          "description": "Section 7.C requires Hardrives to maintain \"$1,000,000.00\" in \"comprehensive liability coverage\" but does not specify whether this is per-occurrence or aggregate, does not require property/casualty insurance for the Premises itself, and does not address whether the City should carry its own insurance as property owner. From Hardrives' perspective, the agreement should clarify that this is per-occurrence coverage, and should require the City to maintain property insurance on the Premises (since the City remains the property owner).",
+          "revision": "... in the amount of $1,000,000.00 per occurrence to include",
+          "comment": "We specified the coverage as per-occurrence to eliminate ambiguity regarding how the limit applies to individual incidents, which is standard practice in commercial license agreements and provides clearer protection for both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5202,
+            "end_char": 5243,
+            "start_line": 96,
+            "end_line": 96,
+            "match_cover": 0.833,
+            "match_run": 8,
+            "matched_text": "in the amount of $1,000,000.00 to include",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "7.C. Hardrives Warranty - Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “in the amount of $1,000,000.00” does not specify whether the insurance limit applies per occurrence or in the aggregate, creating a genuine scope ambiguity."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Environmental Compliance Obligation Potentially Overbroad",
+          "description": "Section 7.D requires Hardrives to \"use all precautions necessary to ensure against the creation, use, or storage of any hazardous material or waste on the Premises.\" Given that the Premises is a former steel mill site with known environmental contamination (as documented in Exhibit B ), the prohibition on \"use\" of \"any hazardous material\" is extremely broad and could interfere with normal paving operations (which typically involve materials like asphalt, solvents, and petroleum products). The language should be narrowed to prohibit only unlawful use or storage, consistent with applicable regulations.",
+          "revision": "... necessary to ensure against the unlawful creation, use, or storage of any hazardous material or waste on the",
+          "comment": "We narrowed this obligation to unlawful creation, use, or storage of hazardous materials to align with applicable environmental regulations and avoid inadvertently prohibiting routine construction materials standard to paving operations, which is particularly important given the pre-existing contamination documented in Exhibit B.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5504,
+            "end_char": 5603,
+            "start_line": 102,
+            "end_line": 103,
+            "match_cover": 0.944,
+            "match_run": 12,
+            "matched_text": "necessary to ensure against the creation, use, or storage of any hazardous material or waste on the",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "7.D. Hardrives Warranty - Hazardous Materials"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined phrase “any hazardous material or waste” has uncertain boundaries and may or may not encompass ordinary asphalt, petroleum products, solvents, and similar operational materials."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Automatic Renewal or Extension Provision",
+          "description": "Section 5 provides a one-year term or until title is conveyed pursuant to a Development Agreement to be entered by December 31, 1999. There is no provision for what happens if the Development Agreement is not executed by that date or if the one-year term expires before title transfer. Hardrives risks losing its license rights with no recourse if the City delays conveying title. The agreement should provide for automatic renewal on the same terms until the Development Agreement is executed or title is transferred.",
+          "revision": "... or before December 31, 1999. If title has not been conveyed to Hardrives by the expiration of the initial one (1) year term, this Agreement shall automatically renew for successive one (1) year terms on the same terms and conditions until the earlier of (a) the conveyance of title or (b) written termination by either party upon ninety (90) days' prior notice.",
+          "comment": "We added an automatic renewal provision to prevent an inadvertent lapse of Hardrives' license rights due to delays in title conveyance or Development Agreement execution that are outside Hardrives' control, with a 90-day written termination right preserving the City's flexibility.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2183,
+            "end_char": 2849,
+            "start_line": 41,
+            "end_line": 55,
+            "match_cover": 0.226,
+            "match_run": 5,
+            "matched_text": "or before December 31, 1999. 6. Representation and Warranties of the City. The City represents and warrants to Hardrives, as follows: A. As of the date hereof, and on the date of the execution, delivery, and performance of this Agreement, the Board of Control for the City has been duly authorized by",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "6.A. City Warranty - Authorization"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Section 5’s alternative term endpoints do not clearly state what happens if the Development Agreement or conveyance never occurs, making the duration of the license uncertain."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "City's Environmental Warranty Lacks Indemnification for Pre-Existing Contamination",
+          "description": "Section 6.D's environmental representation is heavily qualified — the City only warrants that contamination does not violate applicable environmental laws . Given the ESA findings showing petroleum hydrocarbons, PCBs, lead, and asbestos on the site , Hardrives should insist that the City expressly indemnify Hardrives for any pre-existing environmental conditions. Without this, Hardrives could face environmental cleanup liability for conditions that predated its occupancy.",
+          "revision": "... or encumbrance on the Premises. The City shall indemnify and hold harmless Hardrives from any claims, costs, or liabilities arising from pre-existing environmental conditions at the Premises.",
+          "comment": "We added an express indemnification provision to allocate liability for pre-existing environmental conditions to the City, consistent with the principle that the party responsible for creating or inheriting contamination should bear the associated remediation risk — particularly given the ESA findings already documented at the Premises.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4396,
+            "end_char": 4822,
+            "start_line": 79,
+            "end_line": 89,
+            "match_cover": 0.393,
+            "match_run": 5,
+            "matched_text": "or encumbrance on the Premises. f. Representation and Warranties of Hardrives. Hardrives represents and warrants to the City as follows: A. As of the date hereof, and on the date of the execution and performance of this Agreement, Hardrives has been duly authorized to enter into this Agreement, and ",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "7.A. Hardrives Warranty - Authorization"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a City indemnity for pre-existing contamination is a risk-allocation omission, not an ambiguity or conflict among existing provisions."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "License is Revocable by Nature — No Protection Against Early Termination",
+          "description": "This agreement grants a \"license\" rather than a lease. Under Ohio law, a license is generally revocable at will by the licensor. The agreement does not expressly state that the license is irrevocable during its term, which creates risk for Hardrives — particularly given that Hardrives intends to invest in using the Premises for production operations and corporate offices . Hardrives should seek language making the license irrevocable during the term, or alternatively, the agreement should be restructured as a lease to provide greater possessory rights.",
+          "revision": "... to grant to Hardrives an irrevocable license for use of the ...",
+          "comment": "We clarified that the license is irrevocable during its term to reflect the parties' intent and protect Hardrives' substantial investment in production operations and corporate office use at the Premises — an at-will revocable license would be inconsistent with those commercial commitments.",
+          "group_size": 1,
+          "location": {
+            "start_char": 441,
+            "end_char": 487,
+            "start_line": 14,
+            "end_line": 14,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "to grant to Hardrives a license for use of the",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "1. Grant of License"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The grant of a “license” without express revocability language leaves room to dispute whether it is revocable at will or irrevocable during the stated term, especially given the contemplated operational investment."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Right to Remove Improvements or Personal Property on Termination",
+          "description": "Section 7.B requires Hardrives to \"surrender the Premises to the City upon termination of this Agreement in as good a condition as received.\" There is no express provision allowing Hardrives to remove its trade fixtures, equipment, personal property, and improvements it may have installed during the term. Hardrives should have the right to remove its property and any improvements it made at its own expense.",
+          "revision": "... the Premises during the term of its use of the Premises and to surrender the Premises to the City upon termination of this Agreement in as good a condition as received, normal wear and tear and damage due to casualty excepted. Hardrives shall have the right to remove all of its trade fixtures, equipment, personal property, and improvements installed by Hardrives at its own expense prior to or upon such surrender.",
+          "comment": "The surrender obligation as originally drafted did not address ownership of trade fixtures or improvements installed by Hardrives; this addition clarifies the parties' respective property rights and avoids disputes at termination, consistent with standard Ohio real property principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4810,
+            "end_char": 5955,
+            "start_line": 89,
+            "end_line": 110,
+            "match_cover": 0.704,
+            "match_run": 41,
+            "matched_text": "the Premises during the term of its use of the Premises and to surrender the Premises to the City upon termination of this Agreement in as good a condition as received, normal wear and tear and damage due to casualty excepted. Case: 4:04-cv-01817-GJL Doc #: 125-21 Filed: 03/10/10 3 of 14. PagelD #: ",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "7.D. Hardrives Warranty - Hazardous Materials"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The requirement to “surrender the Premises … in as good a condition as received” does not clearly establish whether Hardrives may or must remove later-added trade fixtures, equipment, or improvements."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Contradiction Between Non-Assignment and Successors/Assigns Binding",
+          "description": "Section 9  provides the agreement is \"not assignable by either party without the written consent of the other party,\" yet Section 12  states that \"City\" and \"Hardrives\" shall include \"their heirs, executors, administrators, successors, and assigns.\" These provisions are in tension — if assignment requires consent, the agreement should not automatically bind successors and assigns. The successors and assigns language should be qualified to be consistent with the non-assignment restriction.",
+          "revision": "... used herein, shall include all persons so designated and their heirs, executors, administrators, successors, and permitted assigns.",
+          "comment": "We qualified 'assigns' to 'permitted assigns' in Section 12 to ensure consistency with Section 9's explicit requirement that assignment requires written consent from both parties; the two provisions as drafted create an irreconcilable tension under Ohio contract interpretation principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7145,
+            "end_char": 7265,
+            "start_line": 134,
+            "end_line": 136,
+            "match_cover": 0.941,
+            "match_run": 15,
+            "matched_text": "used herein, shall include all persons so designated and their heirs, executors, administrators, successors, and assigns",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "12. Successors and Assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 12’s reference to “assigns” is in tension with Section 9’s consent requirement for assignment, although the provisions may be harmonized by limiting Section 12 to permitted assigns."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Notice Provision",
+          "description": "The agreement references \"written notice\" in Section 4  regarding default but contains no general notice provision specifying how notices must be delivered, to what addresses, and when they are deemed received. This is a significant gap — particularly since the default/cure mechanism depends on proper notice. Hardrives should seek a formal notice provision to protect against claims of inadequate notice.",
+          "revision": "... of default. Upon written notice sent by certified mail, return receipt requested, by the",
+          "comment": "We specified certified mail with return receipt requested as the delivery method for default notices to ensure an objective, verifiable record of delivery — a standard requirement under Ohio contract practice that protects both parties from disputes over the sufficiency of notice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1493,
+            "end_char": 1531,
+            "start_line": 31,
+            "end_line": 31,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "of default. Upon written notice by the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “written notice” omits the required delivery method and effective time, leaving uncertainty about when the ten-day cure period begins."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unrecorded Easements Exception is Open-Ended",
+          "description": "Section 6.B provides that the Premises shall be clear of all liens and claims except for \"easements of record, any and all unrecorded easements identified by the City prior to the execution of this Agreement\" . The exception for \"any and all unrecorded easements identified by the City\" is vague and open-ended — there is no requirement that these be disclosed to Hardrives in writing or listed in an exhibit. Hardrives should require that any unrecorded easements be specifically identified in a schedule attached to the agreement.",
+          "revision": "... and all unrecorded easements identified in writing by the",
+          "comment": "We revised the unrecorded easements exception to require written identification to ensure both parties have a clear, documented record of any encumbrances on the Premises prior to execution, consistent with standard due diligence expectations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2862,
+            "end_char": 2908,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "and all unrecorded easements identified by the",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "6.B. City Warranty - Authority and Clear Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Unrecorded easements identified by the City” is vague as to the form and sufficiency of identification, including whether oral or informal disclosure is enough."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "City's Litigation Representation May Be Too Absolute",
+          "description": "Section 6.B states \"there are no claims, actions, suits, or proceedings instituted, filed or threatened, which may affect the Premises\" . While this representation benefits Hardrives, it is unusually absolute and lacks a knowledge qualifier. If it turns out to be inaccurate (which is possible for a former industrial site), this could trigger disputes. Consider whether adding \"to the City's knowledge\" or a materiality qualifier would be strategically preferable to maintain the credibility of the representation, or whether the absolute form is intentionally protective of Hardrives.",
+          "revision": "Finally, to the best of the City's knowledge, there are no claims, actions, ...",
+          "comment": "We've qualified this representation with a knowledge standard, which is consistent with market practice for municipal representations regarding former industrial properties and reflects a more credible and enforceable commitment by the City.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2920,
+            "end_char": 3332,
+            "start_line": 56,
+            "end_line": 61,
+            "match_cover": 0.692,
+            "match_run": 5,
+            "matched_text": "to the execution of this Agreement, rights of way, and access rights appurtenant to the Center Street Bridge and access ramps thereto. Further, the City is not in default under any law or regulation or under any order of any court or federal, state, or municipal or other governmental department, com",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "6.B. City Warranty - Authority and Clear Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The representation is absolute but textually clear. Concerns about its truth, credibility, or lack of a knowledge qualifier are negotiation risks."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Default Provision Only Addresses Payment — No City Default",
+          "description": "Section 4 only addresses Hardrives' default for failure to make the $1.00 annual payment . There is no provision addressing a default by the City — for example, if the City fails to perform its obligations, breaches its representations and warranties, or fails to enter into the Development Agreement by December 31, 1999. Hardrives should have reciprocal remedies for City default.",
+          "revision": "... and shall surrender all rights to the use of the Premises. A material breach by the City of any representation, warranty, or covenant under this Agreement shall also constitute an event of default, and Hardrives shall be entitled to all remedies available at law or in equity, including specific performance.",
+          "comment": "We added a reciprocal City default provision to ensure balanced risk allocation — a contract that provides remedies only against one party is commercially inequitable and inconsistent with standard Ohio contract principles requiring mutual obligations and remedies.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1759,
+            "end_char": 2294,
+            "start_line": 34,
+            "end_line": 43,
+            "match_cover": 0.42,
+            "match_run": 11,
+            "matched_text": "and shall surrender all rights to the use of the Premises. 5. Terms. This Agreement shall continue: (1) for a term of one (1) year from the date of execution of this Agreement; or (2) until the date that title to the Premises is conveyed and transferred to Hardrives by the City, pursuant to a Develo",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an express City-default provision is a substantive remedial omission; it does not itself make the existing payment-default or term provisions ambiguous or contradictory."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Surplus Property Declaration May Create Risk",
+          "description": "Section 2 states \"the Premises will be declared surplus property and deemed not needed for public use by the Director of Finance\" . The use of future tense (\"will be declared\") rather than past tense suggests this declaration may not yet have occurred at the time of execution. If the surplus declaration has not been formally completed, the City's authority to license the property could be challenged. Hardrives should require confirmation that this declaration has been made as a condition precedent, or that the representation be changed to confirm the declaration has already occurred.",
+          "revision": "... Hardrives agree that the Premises will behas been declared surplus",
+          "comment": "We revised the surplus declaration language to reflect past tense to confirm that the required legal predicate for the City's licensing authority has already been satisfied; if the declaration is not yet finalized, the City's right to grant this license may be subject to challenge under Ohio law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 729,
+            "end_char": 787,
+            "start_line": 19,
+            "end_line": 19,
+            "match_cover": 0.8,
+            "match_run": 6,
+            "matched_text": "Hardrives agree that the Premises will be declared surplus",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Use"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The future-tense phrase “will be declared” leaves uncertain whether the surplus declaration is a condition precedent, a future covenant, or an event expected outside the agreement."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Exhibit A Description Broader Than Parcel No. 3",
+          "description": "Exhibit A states the Premises \"shall include, but is not limited to, the property designated as Parcel No. 3\" . The phrase \"include, but is not limited to\" is unusually expansive for a property description — it suggests the licensed Premises could extend beyond the legal description of Parcel No. 3. While this breadth may benefit Hardrives, it also creates ambiguity about the exact scope of the license. If the intent is to license Parcel No. 3 specifically, the language should be tightened; if additional property is intended, it should be specifically described.",
+          "revision": "... in this License Agreement, shall include, but is not limited to,consist of the",
+          "comment": "We tightened the Premises definition to provide a definitive boundary for the licensed area; under Ohio property law, license agreements should describe the licensed premises with sufficient certainty to avoid enforceability concerns arising from ambiguity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7947,
+            "end_char": 8204,
+            "start_line": 170,
+            "end_line": 173,
+            "match_cover": 0.929,
+            "match_run": 11,
+            "matched_text": "in this License Agreement, shall include, but is not limited to, the property designated as Parcel No. 3 in the Quit Claim Deed from the LTV Steel Company, Inc., as Grantor, to the City of Youngstown, Ohio, as Grantee, dated May 4, 1994, and recorded in the",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "Exhibit A - Description of Premises"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The general phrase “including, but not limited to” sits against the specific legal description of Parcel No. 3 and makes the licensed property’s outer boundaries uncertain."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Payment Due Date Specified",
+          "description": "Section 3 requires Hardrives to pay $1.00 per year , and Section 4 references a deadline of \"thirty (80) days of the date payment is due\" , but the agreement never specifies when the annual payment is actually due (e.g., on the anniversary of execution, January 1, etc.). This ambiguity could theoretically be used to trigger a default. Hardrives should clarify the payment due date.",
+          "revision": "... of one dollar ($1.00) per year, due on each anniversary of the execution of this Agreement.",
+          "comment": "The original agreement references a payment deadline but never specifies when the annual $1.00 payment is due; we clarified the due date as each anniversary of execution to provide both parties with a definite, objective benchmark and avoid any inadvertent default risk.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1328,
+            "end_char": 1758,
+            "start_line": 27,
+            "end_line": 34,
+            "match_cover": 0.706,
+            "match_run": 7,
+            "matched_text": "of one dollar ($1.00) per year. | 4, Event of Default. Failure to make annual payments within thirty (80) days of the date payment is due shall constitute an event of default. Upon written notice by the City, Hardrives shall have ten (10) days, within which to cure such default. If said default is n",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "Section 4 invokes a payment due date that Section 3 never supplies, so the annual rental and default provisions cannot together yield a definite default date."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in number",
+          "description": "Should be \"(30)\" not \"(80)\"",
+          "revision": "... make annual payments within thirty (80)(30) days of the",
+          "comment": "Corrected typographical error in the numeric parenthetical from \"(80)\" to \"(30)\" to match the written-out term \"thirty.\"",
+          "group_size": 1,
+          "location": {
+            "start_char": 1394,
+            "end_char": 1445,
+            "start_line": 29,
+            "end_line": 29,
+            "match_cover": 0.9,
+            "match_run": 6,
+            "matched_text": "make annual payments within thirty (80) days of the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "4. Event of Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The mismatch between “thirty” and “(80)” is a numerical drafting error that creates two different deadlines."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in phrase",
+          "description": "Should be \"IN WITNESS\" not \"iT WITNESS\"",
+          "revision": "iTIN WITNESS WHEREOF, the parties have ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7350,
+            "end_char": 7383,
+            "start_line": 139,
+            "end_line": 139,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "WITNESS WHEREOF, the parties have",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled execution date",
+          "description": "Found: \"on this day of April, 1999\" — Missing day of month leaves execution date incomplete and potentially unenforceable.",
+          "revision": "",
+          "comment": "Insert the specific day of the month for the April 1999 execution date.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7457,
+            "end_char": 7483,
+            "start_line": 140,
+            "end_line": 140,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "on this day of April, 1999",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization",
+          "description": "Should be \"TSCA\" not \"ISCA\"",
+          "revision": "... regulated under RCRA, CERCLA or ISCATSCA",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 14885,
+            "end_char": 14916,
+            "start_line": 323,
+            "end_line": 323,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "regulated under RCRA, CERCLA or",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Agreement",
+          "description": "The term 'Agreement' is capitalized and used consistently throughout the document (see clauses , , , and others), but it is never formally defined. The opening sentence  refers to 'This Agreement' without providing a defined term. This should be defined inline in the opening paragraph to clarify what document is being referenced when the capitalized term 'Agreement' appears.",
+          "revision": "This AgreementLicense Agreement (the \"Agreement\") is made by and between the CITY OF YOUNGSTOWN, OHIO",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 101,
+            "end_char": 167,
+            "start_line": 7,
+            "end_line": 7,
+            "match_cover": 0.8,
+            "match_run": 11,
+            "matched_text": "This Agreement is made by and between the CITY OF YOUNGSTOWN, OHIO",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble / Consideration"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“This Agreement” plainly refers to the license agreement being executed, and capitalization without a formal definition does not create genuine uncertainty."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Development Agreement",
+          "description": "The term 'Development Agreement' appears in the Terms clause   as a capitalized term, suggesting it is a defined term, but no definition is provided anywhere in the document. This creates ambiguity about what specific agreement is being referenced and what its terms might be. The parties should define what 'Development Agreement' means or provide more context about this referenced agreement.",
+          "revision": "conveyed and transferred to Hardrives by the City, pursuant to a Developmentdevelopment",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1989,
+            "end_char": 2053,
+            "start_line": 39,
+            "end_line": 39,
+            "match_cover": 0.917,
+            "match_run": 11,
+            "matched_text": "conveyed and transferred to Hardrives by the City, pursuant to a",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined capitalized term “Development Agreement” does not identify the precise future instrument whose execution and performance relate to conveyance and the license term."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Word choice error",
+          "description": "Should be \"a\" not \"at\" before \"total\"",
+          "revision": "and subsurface soils. Therefore, @a total of thirty-one (31) such",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 16332,
+            "end_char": 16396,
+            "start_line": 352,
+            "end_line": 352,
+            "match_cover": 0.909,
+            "match_run": 6,
+            "matched_text": "and subsurface soils. Therefore, @ total of thirty-one (31) such",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in word",
+          "description": "Should be \"oil\" not \"oi]\"",
+          "revision": "19) and cutting oi]oil tanks (Boring No. 27) exhibited ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 18299,
+            "end_char": 18350,
+            "start_line": 392,
+            "end_line": 392,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "19) and cutting oi] tanks (Boring No. 27) exhibited",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in word",
+          "description": "Should be \"leaching\" not \"Teaching\"",
+          "revision": "... (PCBs) and the toxicity characteristic Teachingleaching procedure",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17702,
+            "end_char": 17758,
+            "start_line": 381,
+            "end_line": 382,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "PCBs) and the toxicity characteristic leaching procedure",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in word",
+          "description": "Should be \"lead\" not \"Jead\"",
+          "revision": "... for arsenic, barium, cadmium, chromium, Jeadlead, mercury,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17766,
+            "end_char": 17819,
+            "start_line": 382,
+            "end_line": 383,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "for arsenic, barium, cadmium, chromium, lead, mercury",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in word",
+          "description": "Should be \"toxicity\" not \"toxicily\"",
+          "revision": "... of ignitability reactivity, corrosivity, or toxicilytoxicity",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 18154,
+            "end_char": 18197,
+            "start_line": 388,
+            "end_line": 389,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "of ignitability reactivity, corrosivity, or",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Preamble / Consideration",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "hardrives_paving"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "hardrives_paving",
+          "title": "Undefined term: Agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“This Agreement” plainly refers to the license agreement being executed, and capitalization without a formal definition does not create genuine uncertainty."
+        }
+      ],
+      "risky": false
+    },
+    "neg10": {
+      "clause_id": "neg10",
+      "clause_name": "6.D. City Warranty - Environmental",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "Broad Environmental Representation Exposes City to Liability",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue concerns the factual breadth and commercial risk of an unqualified warranty, not an ambiguity or internal contradiction. The express exception for matters in Exhibit B substantially reconciles the representation with the ESA findings."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "\"As Is\" Acceptance Should Disclaim Additional Warranties",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue seeks broader warranty disclaimers rather than identifying ambiguity. Section 8 expressly preserves the City’s stated representations, so the as-is language is reconcilable with them."
+        }
+      ],
+      "risky": false
+    },
+    "neg11": {
+      "clause_id": "neg11",
+      "clause_name": "7.A. Hardrives Warranty - Authorization",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "hardrives_paving"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "hardrives_paving",
+          "title": "City's Environmental Warranty Lacks Indemnification for Pre-Existing Contamination",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a City indemnity for pre-existing contamination is a risk-allocation omission, not an ambiguity or conflict among existing provisions."
+        }
+      ],
+      "risky": false
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "7.B. Hardrives Warranty - No Waste / Surrender",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "No Right of Inspection Reserved for City",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a contractual inspection right is a substantive omission and negotiation concern, not an ambiguity or inconsistency in existing text."
+        }
+      ],
+      "risky": false
+    },
+    "neg13": {
+      "clause_id": "neg13",
+      "clause_name": "7.C. Hardrives Warranty - Insurance",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "Insurance Amount May Be Inadequate for Former Industrial Site",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Whether $1 million is adequate insurance is a commercial risk-allocation question; the stated amount is textually definite."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Insurance Coverage Lacks Specificity",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “in the amount of $1,000,000.00” does not specify whether the insurance limit applies per occurrence or in the aggregate, creating a genuine scope ambiguity."
+        }
+      ],
+      "risky": true
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "7.D. Hardrives Warranty - Hazardous Materials",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "hardrives_paving"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "hardrives_paving",
+          "title": "Environmental Compliance Obligation Potentially Overbroad",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined phrase “any hazardous material or waste” has uncertain boundaries and may or may not encompass ordinary asphalt, petroleum products, solvents, and similar operational materials."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "No Right to Remove Improvements or Personal Property on Termination",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The requirement to “surrender the Premises … in as good a condition as received” does not clearly establish whether Hardrives may or must remove later-added trade fixtures, equipment, or improvements."
+        }
+      ],
+      "risky": true
+    },
+    "neg15": {
+      "clause_id": "neg15",
+      "clause_name": "7.E. Hardrives Warranty - Indemnification",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "Indemnification Scope Should Cover Environmental Claims",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The term “injury” may mean bodily injury alone or legal injury more broadly, including property or environmental harm. That lexical uncertainty affects the indemnity’s scope."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "Environmental Compliance Limited to \"EPA\" Laws Only",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Environmental Protection Agency laws or regulations” is uncertain as to whether it means only federal EPA-administered requirements, Ohio EPA requirements, or both."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Overly Broad Indemnification by Hardrives",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The causal phrases “resulting from injury on or about the Premises” and “in conjunction with” Hardrives’ use are broad enough to leave uncertain whether the indemnity includes the City’s negligence, third-party conduct, or pre-existing conditions."
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "1. Grant of License",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "License Grant Lacks Revocability Language",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The grant of a “license for use” does not state whether it is revocable at will or protected for the stated term. Its revocability could therefore require construction in light of the agreement’s fixed-term language."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "License is Revocable by Nature — No Protection Against Early Termination",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The grant of a “license” without express revocability language leaves room to dispute whether it is revocable at will or irrevocable during the stated term, especially given the contemplated operational investment."
+        }
+      ],
+      "risky": true
+    },
+    "neg20": {
+      "clause_id": "neg20",
+      "clause_name": "11. Survival",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "No Notice Provision in Agreement",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Upon written notice by the City” does not establish an authorized delivery method or whether notice is effective upon sending or receipt, leaving the cure period’s trigger uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg21": {
+      "clause_id": "neg21",
+      "clause_name": "12. Successors and Assigns",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "Conflict Between Non-Assignment and Successors/Assigns Provision",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 12’s inclusion of “assigns” is in tension with Section 9’s prohibition on assignment without consent, even though a court could harmonize them by reading “assigns” as permitted assigns."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "Survival Clause Is Overbroad",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Shall survive” does not specify the endpoint or duration of survival, leaving uncertainty over whether the obligations continue through termination indefinitely or only for a reasonable period."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Contradiction Between Non-Assignment and Successors/Assigns Binding",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 12’s reference to “assigns” is in tension with Section 9’s consent requirement for assignment, although the provisions may be harmonized by limiting Section 12 to permitted assigns."
+        }
+      ],
+      "risky": true
+    },
+    "neg22": {
+      "clause_id": "neg22",
+      "clause_name": "Exhibit A - Description of Premises",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "Premises Definition Overly Broad with \"Including But Not Limited To\"",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "“Including, but not limited to” places an unrestricted catch-all against the specifically described Parcel No. 3, making the geographic scope of the Premises uncertain."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Exhibit A Description Broader Than Parcel No. 3",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The general phrase “including, but not limited to” sits against the specific legal description of Parcel No. 3 and makes the licensed property’s outer boundaries uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "2. Use",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "City Warrants Surplus Declaration Before It May Have Occurred",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Will be declared” leaves unclear when the surplus declaration must occur and whether it is a condition precedent to the license or merely a future covenant."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Surplus Property Declaration May Create Risk",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The future-tense phrase “will be declared” leaves uncertain whether the surplus declaration is a condition precedent, a future covenant, or an event expected outside the agreement."
+        }
+      ],
+      "risky": true
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "4. Event of Default",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 7,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "No Payment Due Date Specified for Annual Rental",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "Section 4 depends on “the date payment is due,” while Section 3 establishes no due date. Reading the payment and default provisions together leaves the default trigger operationally indeterminate."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "No City Right to Terminate for Cause Beyond Payment Default",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "By expressly identifying nonpayment as an “event of default” while omitting all other breaches, Section 4 raises an expressio unius question about whether other breaches can trigger termination."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "Typo in number",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Thirty (80) days” contains inconsistent written and numerical values, a mechanical error that changes the applicable deadline."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Cure Period Too Short for Default",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The ten-day cure period is definite; whether it is too short or disproportionate is a negotiation and equitable-remedy concern rather than a construction defect."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "No Notice Provision",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “written notice” omits the required delivery method and effective time, leaving uncertainty about when the ten-day cure period begins."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "No Payment Due Date Specified",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "Section 4 invokes a payment due date that Section 3 never supplies, so the annual rental and default provisions cannot together yield a definite default date."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Typo in number",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The mismatch between “thirty” and “(80)” is a numerical drafting error that creates two different deadlines."
+        }
+      ],
+      "risky": true
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "5. Terms",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "No Holdover or Post-Expiration Provisions",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The word “or” between the one-year term and the title-conveyance endpoint does not clearly establish which endpoint controls, particularly if conveyance never occurs."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "Undefined term: Development Agreement",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Development Agreement” is not defined or otherwise identified beyond a general description of a future agreement, leaving uncertainty about the instrument that triggers title transfer."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Default Provision Only Addresses Payment — No City Default",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an express City-default provision is a substantive remedial omission; it does not itself make the existing payment-default or term provisions ambiguous or contradictory."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Undefined term: Development Agreement",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined capitalized term “Development Agreement” does not identify the precise future instrument whose execution and performance relate to conveyance and the license term."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "6.A. City Warranty - Authorization",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "hardrives_paving"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "hardrives_paving",
+          "title": "No Automatic Renewal or Extension Provision",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Section 5’s alternative term endpoints do not clearly state what happens if the Development Agreement or conveyance never occurs, making the duration of the license uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "6.B. City Warranty - Authority and Clear Title",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "city_of_youngstown",
+        "hardrives_paving"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "city_of_youngstown",
+          "title": "Absolute Lien-Free and No-Litigation Warranties Too Broad",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "An absolute warranty without a knowledge qualifier may be risky, but its meaning is clear and it does not conflict with another contractual provision."
+        },
+        {
+          "party": "city_of_youngstown",
+          "title": "No-Litigation Representation Should Be Knowledge-Qualified",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a knowledge qualifier creates negotiation and factual-accuracy risk, not a construction defect."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "Unrecorded Easements Exception is Open-Ended",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Unrecorded easements identified by the City” is vague as to the form and sufficiency of identification, including whether oral or informal disclosure is enough."
+        },
+        {
+          "party": "hardrives_paving",
+          "title": "City's Litigation Representation May Be Too Absolute",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The representation is absolute but textually clear. Concerns about its truth, credibility, or lack of a knowledge qualifier are negotiation risks."
+        }
+      ],
+      "risky": true
+    }
+  }
+}

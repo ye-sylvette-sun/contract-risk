@@ -1,0 +1,1620 @@
+{
+  "contract_id": "20FSupp3d709_nols_student_agreement_including",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 24,
+  "n_issues": 40,
+  "n_located": 38,
+  "n_judged": 38,
+  "n_skipped": 2,
+  "counts": {
+    "cat1": 13,
+    "cat2": 0,
+    "none": 25
+  },
+  "parties": {
+    "school_nols": {
+      "n_issues": 21,
+      "n_located": 19,
+      "by_tab": {
+        "risks_negotiation": 14,
+        "proofread": 7
+      },
+      "by_kind": {
+        "Notable": 6,
+        "Minor": 8,
+        "Definitions": 3,
+        "Spelling + Grammar": 2,
+        "Internal Annotations": 1,
+        "Templated Content": 1
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Released Parties definition should include independent contractors and successors",
+          "description": "The definition of \"Released Parties\"  includes officers, trustees, agents, employees, volunteers, and interns, but notably omits independent contractors and successors/assigns. Since the agreement separately acknowledges NOLS uses private contractors , and disclaims responsibility for them, the release should also protect those contractors to prevent them from seeking contribution from NOLS. Adding \"contractors, successors, and assigns\" would strengthen NOLS's protection.",
+          "revision": "staff including employees, volunteers and interns, interns, and independent contractors (\"Released Parties\"), with respect to ...",
+          "comment": "We added independent contractors to the Released Parties definition to align with the agreement's existing acknowledgment that NOLS engages private contractors, ensuring the release provides consistent protection and prevents indemnity gaps or contribution claims against NOLS.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7446,
+            "end_char": 7533,
+            "start_line": 136,
+            "end_line": 136,
+            "match_cover": 0.733,
+            "match_run": 6,
+            "matched_text": "staff including employees, volunteers and interns (“Released Parties”), with respect to",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The omission of contractors, successors, and assigns from the defined Released Parties is a negotiation gap, not an ambiguity or conflict. The contractor disclaimer can operate independently of the release."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Indemnity should cover \"reasonable\" attorney's fees and costs",
+          "description": "The indemnity definition in the Release and Indemnity section  includes \"costs and attorney's fees\" but does not specify \"reasonable\" costs and attorney's fees. Adding \"reasonable\" is standard practice and strengthens enforceability for NOLS.",
+          "revision": "to indemnify. (7indemnify(\"indemnify\" meaning to defend, and to pay or reimburse, including reasonable costs and",
+          "comment": "We qualified attorney's fees and costs as 'reasonable' to align with Wyoming legal standards and ensure the indemnity obligation is enforceable and consistent with market practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7827,
+            "end_char": 7917,
+            "start_line": 140,
+            "end_line": 140,
+            "match_cover": 0.875,
+            "match_run": 9,
+            "matched_text": "to indemnify. (7indemnify” meaning to defend, and to pay or reimburse, including costs and",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a reasonableness qualifier affects the breadth or enforceability of the fee obligation, but the existing phrase “costs and attorney's fees” is textually intelligible."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Medical costs provision lacks specificity on evacuation expenses",
+          "description": "The medical cost provision  states that \"Costs reasonably associated with medical services, including evacuation, shall be borne by me\" . Consider adding \"search and rescue\" alongside \"evacuation\" to make clear that the student bears all costs associated with both search/rescue operations and evacuation, which can be separately billed in many jurisdictions and can be very expensive in remote wilderness settings.",
+          "revision": "... associated with medical services, including search, rescue, and",
+          "comment": "Search and rescue operations are frequently billed independently from evacuation services in wilderness jurisdictions, so we clarified the provision to ensure all reasonably associated costs are clearly allocated to the participant as intended.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10819,
+            "end_char": 11000,
+            "start_line": 183,
+            "end_line": 187,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "associated with medical services, including evacuation, shall be borne by me. NOLS may share my or the minor student's contact information with other NOLS students or graduates and",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "Use of Contact Information and Images"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision clearly includes evacuation costs; failing expressly to add separately billed search-and-rescue costs is an omission in coverage, not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Image/likeness release lacks perpetual and irrevocable language",
+          "description": "The provision allowing NOLS to use the student's name, contact information, photo, or other image in promotional materials  does not specify that this consent is perpetual, irrevocable, royalty-free, or worldwide. Without such language, students could later revoke consent, creating risk for NOLS if the images are already in use in marketing materials.",
+          "revision": "... and photo or other image, in perpetuity and without compensation, in promotional materials and press ...",
+          "comment": "Without perpetual and royalty-free language, the release is ambiguous as to duration and revocability, creating risk for NOLS if consent is withdrawn after images are already in use; this language reflects standard practice for institutional promotional releases.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11171,
+            "end_char": 11230,
+            "start_line": 189,
+            "end_line": 189,
+            "match_cover": 0.667,
+            "match_run": 6,
+            "matched_text": "and photo or other image in promotional materials and press",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "Use of Contact Information and Images"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The authorization that NOLS “may use” the information and images does not specify its duration or whether consent can be revoked, leaving the temporal scope of “may use” uncertain."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Removal provision should clarify no refund obligation",
+          "description": "The provision reserving NOLS's right to refuse admission or remove a student  does not address whether the student is entitled to a refund upon removal. Without clarifying that removal does not entitle the student to a refund (or specifying NOLS's refund policy), NOLS could face disputes over tuition reimbursement.",
+          "revision": "... the student or the school, without obligation to refund tuition or fees.",
+          "comment": "We added explicit language confirming that removal or refusal of admission does not entitle the student to a tuition refund, which is consistent with NOLS's enrollment terms and necessary to provide clear financial expectations at the time of contracting.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10104,
+            "end_char": 10250,
+            "start_line": 169,
+            "end_line": 177,
+            "match_cover": 0.583,
+            "match_run": 5,
+            "matched_text": "the student or the school. [al student.agreement.09 rev. 1/26/09 3 Kore © National Outdoor Leadership School \\ NOLS is authorized to obtain or",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "Authorization for Medical Care"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement's silence about refunds following removal is a missing commercial term, not an intrinsic ambiguity or contradiction with another provision."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Contact info sharing provision is overly broad and may raise privacy concerns",
+          "description": "The provision allowing NOLS to share student contact information with \"environmental organizations or strategic partners\"  is quite broad and could create privacy law compliance issues, particularly for minor students under laws like COPPA or state privacy statutes. Consider narrowing this to require opt-in consent or limiting the scope of sharing to NOLS alumni communications, which would reduce regulatory risk for NOLS.",
+          "revision": "... environmental organizations or strategic partners with whom NOLS has a formal relationship and in which NOLS",
+          "comment": "We limited information sharing to organizations with a formal relationship with NOLS to ensure compliance with applicable privacy laws, including COPPA and state privacy statutes, which impose heightened protections for minor students' personal data.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11009,
+            "end_char": 11072,
+            "start_line": 187,
+            "end_line": 187,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "environmental organizations or strategic partners in which NOLS",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "Use of Contact Information and Images"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “strategic partners in which NOLS graduates may be interested” has uncertain boundaries and does not identify what relationships qualify as strategic partnerships."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Release should expressly survive course completion",
+          "description": "The release and indemnity provisions  state they apply to claims \"in connection with my, or the minor student's, enrollment or participation in an activity of NOLS\" but do not expressly state that these obligations survive the completion or termination of the course. Adding survival language would reinforce NOLS's position that the release remains effective post-course.",
+          "revision": "... in an activity of NOLS, and shall survive completion or termination of the course. These agreements of",
+          "comment": "Survival language has been added to confirm that release and indemnity obligations persist beyond course completion, which is standard practice for waivers of this nature and reflects the parties' intent that these provisions remain binding.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7787,
+            "end_char": 7995,
+            "start_line": 139,
+            "end_line": 141,
+            "match_cover": 0.529,
+            "match_run": 5,
+            "matched_text": "in an activity of NOLS. I agree further to indemnify. (7indemnify” meaning to defend, and to pay or reimburse, including costs and attorney's fees) Released Parties against any claim by a member of my, or the",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Express survival language may strengthen the release, but its omission does not create a textual contradiction or genuine ambiguity about claims arising from course participation."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Agreement places burden on student to determine age of legal competency",
+          "description": "The introductory provision  states \"Student and parent must determine the age of legal competency to sign contracts, in the state of the student's residence.\" This places the burden on the student/parent to determine legal capacity, but if a minor signs without proper parental consent, NOLS bears the risk of an unenforceable agreement. Consider requiring that NOLS verify the student's age and ensure parental signatures are obtained for all minors, rather than relying on the student's self-determination.",
+          "revision": "state of the student's residence. NOLS reserves the right to verify the student's age and require parental consent as appropriate.",
+          "comment": "If a minor signs without proper parental consent, the agreement may be voidable under applicable contract law; this revision ensures NOLS retains the right to verify age and obtain appropriate consent to protect the enforceability of the agreement for all parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9604,
+            "end_char": 10085,
+            "start_line": 163,
+            "end_line": 168,
+            "match_cover": 0.45,
+            "match_run": 5,
+            "matched_text": "of me or the minor student to the course is not intended as a representation that NOLS staff will be able to manage successfully a medical event or emergency related to a disclosed, or undisclosed, medical condition. The responsibility for determining a student's suitability for a course is not NOLS",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "Other Provisions – Medical Fitness and Disclosure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "This issue concerns allocation of the burden of verifying contractual capacity and the resulting enforceability risk, not ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Contractor liability disclaimer should be strengthened",
+          "description": "The contractor disclaimer  simply says NOLS \"is not responsible for the acts or omissions of such contractors.\" Courts may find this insufficient where NOLS has a non-delegable duty of care. Consider adding language clarifying that the student expressly releases NOLS from claims arising from contractor conduct and acknowledges contractors are independent third parties.",
+          "revision": "of such contractors, and I expressly release NOLS from any claims arising from contractor conduct.",
+          "comment": "We added an express release of NOLS for contractor conduct to make clear that independent third-party contractors are solely responsible for their own acts or omissions, consistent with Wyoming's recognition of assumption of risk in outdoor recreation contexts.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5575,
+            "end_char": 5639,
+            "start_line": 102,
+            "end_line": 103,
+            "match_cover": 1.0,
+            "match_run": 11,
+            "matched_text": "is not responsible for the acts or omissions of such contractors",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "Risk Bullet – Private Contractors"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Whether the disclaimer defeats non-delegable duties is a legal-enforceability concern; the existing statement that NOLS is not responsible for contractor conduct is textually clear."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Personal property disclaimer should extend to field operations",
+          "description": "The personal property disclaimer  only covers belongings \"stored at NOLS facilities.\" This does not address loss, theft, or damage to personal property during field operations, which is where most activities occur. NOLS should disclaim responsibility for personal belongings during all phases of the program, not just storage at facilities.",
+          "revision": "... to a student's personal belongings, whether stored",
+          "comment": "The disclaimer has been broadened to reflect that personal property exposure arises throughout all phases of the program, including field operations; limiting the disclaimer to facility storage alone does not accurately represent where program activities take place.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11396,
+            "end_char": 11437,
+            "start_line": 192,
+            "end_line": 192,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "to a student's personal belongings stored",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "Responsibility for Damage to Facilities or Gear"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The disclaimer unambiguously applies to belongings stored at NOLS facilities. Its failure to cover field operations is a scope limitation, not an ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Continuation of personal property disclaimer",
+          "description": "Extending the personal property disclaimer to cover all phases of the program requires also updating the next line  to encompass field operations and transit.",
+          "revision": "at NOLS facilities or in the field during any phase of the program.",
+          "comment": "The disclaimer is broadened to align with the full scope of the program, as NOLS has no practical ability to safeguard personal property during field and transit phases where controlled storage is unavailable.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11438,
+            "end_char": 11838,
+            "start_line": 193,
+            "end_line": 199,
+            "match_cover": 0.692,
+            "match_run": 3,
+            "matched_text": "at NOLS facilities. Any dispute between me, or the minor student, and NOLS will be governed by the substantive * laws (not including the laws which might apply the laws of another jurisdiction) of the State of Wyoming, and any mediation or suit shal] occur or be filed only in the State of Wyoming. I",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Other Provisions — Governing Law and Forum Selection"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Extending the disclaimer to field operations and transit would expand NOLS's protection, but the current facility-storage limitation is clear."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Free time disclaimer for during-course periods is weaker than before/after",
+          "description": "The free time provision  states \"NOLS has no responsibility for students during their free time before and after their course\" but the language for free time *during* the course  only says \"NOLS is not responsible for their conduct\" (referring to staff acting as private individuals). The during-course disclaimer  says NOLS \"cannot continually monitor\" students but does not expressly disclaim liability for during-course free time the way it does for before/after course. This gap could expose NOLS to claims for injuries during in-course free time.",
+          "revision": "... behavior and activities of students, and studentsNOLS is not responsible for students during free time periods. Students must",
+          "comment": "This aligns the during-course free time disclaimer with the pre/post-course language already in the agreement, ensuring consistent and unambiguous allocation of responsibility across all free time periods.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4651,
+            "end_char": 4704,
+            "start_line": 87,
+            "end_line": 87,
+            "match_cover": 0.444,
+            "match_run": 6,
+            "matched_text": "behavior and activities of students and students must",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "Risk Bullet – Free Time and Supervision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The provision identifies free time “before, during and after” the course but expressly disclaims responsibility only “before and after”; that enumeration raises an expressio unius question about responsibility during the course."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Severability clause should include reformation language",
+          "description": "The severability clause  states that if any part is found invalid, \"the remainder of the agreement nevertheless will be in full force and effect.\" This is a basic severability clause but lacks reformation language. For releases and liability waivers, courts often look for language authorizing the court to reform an overbroad provision to the maximum enforceable extent rather than simply severing it. This is particularly important for the release provisions, which are already stated to be \"intended to be enforced to the fullest extent permitted by law\" .",
+          "revision": "... appropriate authority to be invalid, such provision shall be reformed to the minimum extent necessary to make it valid and enforceable, and the",
+          "comment": "Wyoming courts and those in other jurisdictions recognize reformation as a preferred alternative to outright severance for liability waivers; this language aligns with the intent expressed elsewhere in the agreement that release provisions be enforced to the fullest extent permitted by law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11798,
+            "end_char": 12176,
+            "start_line": 199,
+            "end_line": 205,
+            "match_cover": 0.348,
+            "match_run": 5,
+            "matched_text": "appropriate authority to be invalid, the remainder of the agreement nevertheless will be in full force and effect. THE STUDENT AND THE PARENT(S) OR GUARDIAN OF A MINOR STUDENT HAVE READ THIS PAGE AND THE PREVIOUS 3 PAGES OF THIS DOCUMENT AND UNDERSTAND AND VOLUNTARILY AGREE TO ITS TERMS, WHICH SHALL",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Final Provision — Binding on Heirs, Estate, Executors and Administrators"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The severability clause clearly preserves the remainder of the agreement. Failure to authorize judicial reformation is an omitted remedy, not a construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Release carve-out for \"lands whose rules or regulations prohibit\" is vague",
+          "description": "The assumption of risk provision  and the release provision  both contain carve-outs for losses occurring \"on lands whose rules or regulations prohibit\" assumption of risk or release agreements \"as a matter of law.\" This phrasing is vague—it's unclear whether this refers to federal land management agency regulations, state recreational use statutes, or other rules. While the carve-out may be intended to address specific federal land permit requirements, its breadth could be exploited by claimants who argue that various state or local regulations qualify. Consider tightening this language to reference specific regulatory frameworks.",
+          "revision": "... lands whose rules or regulations expressly prohibit such agreements as a matter of applicable federal or state law.",
+          "comment": "We clarified the carve-out to limit it to express prohibitions under applicable federal or state law, which better defines the scope of the exception and prevents over-broad interpretations based on administrative policies or local regulations that do not carry the force of law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8632,
+            "end_char": 8756,
+            "start_line": 148,
+            "end_line": 153,
+            "match_cover": 0.722,
+            "match_run": 7,
+            "matched_text": "lands whose rules or regulations prohibit such agreements as a matter of law. Other Provisions if I am an adult student or",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “lands whose rules or regulations prohibit such agreements as a matter of law” is vague about which land-based rules, regulations, agencies, or legal regimes trigger the carve-out."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Medical Protocols",
+          "description": "The term 'Medical Protocols' is capitalized and used in the medical care section , suggesting it is a defined term, but no definition is provided in the document. This creates ambiguity about what specific protocols govern medical care decisions. Given that these protocols guide emergency medical procedures in wilderness settings, the lack of definition could lead to uncertainty about the scope and nature of medical care that may be provided.",
+          "revision": "Medical Protocols (meaning NOLS' written protocols established for wilderness medical care and first aid procedures). Any third-party medical care provider is authorized to exchange pertinent",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 10678,
+            "end_char": 10770,
+            "start_line": 182,
+            "end_line": 182,
+            "match_cover": 0.5,
+            "match_run": 11,
+            "matched_text": "Medical Protocols. Any third-party medical care provider is authorized to exchange pertinent",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "Authorization for Medical Care"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Medical Protocols” refers to an unidentified body of written procedures, leaving uncertain which protocols govern and what medical conduct they authorize."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: student",
+          "description": "The term 'Student' is formally defined at the beginning of the document , but appears in lowercase as 'student' multiple times throughout, including in the medical care provisions    . Defined terms should be consistently capitalized to clearly indicate when the formal definition applies.",
+          "revision": "I have verified with my or the minor studentStudent's physician and other medical professionals, or",
+          "comment": "",
+          "group_size": 14,
+          "location": {
+            "start_char": 8880,
+            "end_char": 8972,
+            "start_line": 156,
+            "end_line": 156,
+            "match_cover": 0.933,
+            "match_run": 8,
+            "matched_text": "I have verified with my or the minor student’s physician and other medical professionals, or",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "Other Provisions – Medical Fitness and Disclosure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase uses of “student” plainly refer to the student described by the agreement; the capitalization inconsistency does not alter meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in name field",
+          "description": "Appears to be a handwritten name with possible typo",
+          "revision": "",
+          "comment": "The name field as written is ambiguous and may not clearly identify the contracting party; we recommend confirming the correct spelling to ensure the agreement is properly executed.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Accent over letter e",
+          "description": "Unnecessary accent mark on \"the\"",
+          "revision": "... competency to sign contracts, in théthe",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 656,
+            "end_char": 705,
+            "start_line": 18,
+            "end_line": 19,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "competency to sign contracts, in thé state of the",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble – Signature Requirements"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The accent in “thé” is a typographical artifact that does not change the readily apparent meaning of “the state.”"
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Internal drafting note - indemnity definition",
+          "description": "The indemnification clause  contains a parenthetical note explaining the meaning of \"indemnify\" that appears to be an internal drafting note or reminder. The quotation format and explanatory style (\"7indemnify\" meaning to defend...\") suggests this was a drafting notation rather than final document language. This should either be removed or reformatted as a proper definition if the explanation is intended to remain.",
+          "revision": "indemnify. (7indemnify (\"indemnify\" meaning to defend, and ...",
+          "comment": "Removed internal drafting notation that was inadvertently left in the final document; the parenthetical explanation of 'indemnify' appears to be a drafting reminder rather than intended contract language.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7830,
+            "end_char": 7876,
+            "start_line": 140,
+            "end_line": 140,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "indemnify. (7indemnify” meaning to defend, and",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The parenthetical reads as an operative explanation of “indemnify,” not necessarily an internal drafting note. Whether it should be removed is an editorial issue; its malformed quotation is separately addressed in issue 36."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled parent/guardian date field",
+          "description": "Found: \"_—_/__f__\" — Missing parent signature date leaves the agreement execution date uncertain.",
+          "revision": "",
+          "comment": "Insert the applicable date or fraction representing the relevant term or period.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: parent",
+          "description": "The term 'Parent' is defined in  to mean parent or guardian when signing for a minor student, but appears in lowercase as 'parent' in . This should be capitalized to match the formal definition.",
+          "revision": "minor Student. Student and parentParent must determine the age of legal competency to sign contracts, in thé",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 590,
+            "end_char": 691,
+            "start_line": 18,
+            "end_line": 18,
+            "match_cover": 0.941,
+            "match_run": 12,
+            "matched_text": "minor student. Student and parent must determine the age of legal competency to sign contracts, in th",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble – Signature Requirements"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase “parent” remains readily identifiable as the parent or guardian described in the preamble, so the capitalization inconsistency does not affect construction."
+          }
+        }
+      ]
+    },
+    "student_plotkin": {
+      "n_issues": 19,
+      "n_located": 19,
+      "by_tab": {
+        "risks_negotiation": 15,
+        "proofread": 4
+      },
+      "by_kind": {
+        "Notable": 7,
+        "Important": 4,
+        "Minor": 4,
+        "Definitions": 2,
+        "Spelling + Grammar": 2
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "NOLS Disclaims Responsibility for Staff During \"Free Time\"",
+          "description": "The free time provision  states that when NOLS staff assist or accompany students during free time, \"they are acting as private individuals, and NOLS is not responsible for their conduct.\" This is problematic for Thomas — NOLS staff who interact with students in their capacity as known authority figures create an appearance of official involvement. The disclaimer shifts risk entirely to students, which could be unfair if a student reasonably relied on staff guidance.",
+          "revision": "... in doing so, they are acting as privatenot acting in their official capacity as NOLS staff, and NOLS' responsibility is limited to ensuring staff act in accordance with applicable codes of conduct.",
+          "comment": "We revised this provision because a blanket disclaimer of all responsibility is difficult to sustain where staff are known authority figures interacting with students; Wyoming law may impose a duty of care in such circumstances regardless of how NOLS characterizes the interaction.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4497,
+            "end_char": 4988,
+            "start_line": 85,
+            "end_line": 93,
+            "match_cover": 0.406,
+            "match_run": 7,
+            "matched_text": "in doing so, they are acting as private individuals, and NOLS is not responsible for their conduct. During the course NOLS cannot continually monitor the behavior and activities of students and students must accept responsibility for themselves and others whether or not under the direct supervision ",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "Risk Bullet – Free Time and Supervision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue challenges the fairness and legal effect of characterizing staff as private individuals during free time, but the disclaimer itself is not ambiguous or inconsistent with another operative term."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "NOLS Disclaims All Responsibility for Contractors",
+          "description": "The provision  states \"NOLS is not responsible for the acts or omissions of such contractors,\" including transportation providers. This is a blanket disclaimer that is unfavorable to Thomas. When NOLS selects and engages contractors (e.g., drivers, outfitters) as part of its program, NOLS should retain some responsibility for exercising reasonable care in selecting those contractors. Thomas should request language requiring NOLS to use reasonable care in contractor selection.",
+          "revision": "including, for example, transportation. NOLS will exercise reasonable care in selecting such contractors, but is not otherwise responsible for the acts or omissions of such contractors.",
+          "comment": "Where NOLS selects and engages contractors as part of its program, it should bear responsibility for exercising reasonable care in that selection; a blanket disclaimer of all responsibility for contractor acts is disproportionate and inconsistent with general negligence principles under Wyoming law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5530,
+            "end_char": 5639,
+            "start_line": 102,
+            "end_line": 103,
+            "match_cover": 0.615,
+            "match_run": 9,
+            "matched_text": "including, for example, transportation. NOLS is not responsible for the acts or omissions of such contractors",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "Risk Bullet – Private Contractors"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue seeks to impose a duty of reasonable contractor selection despite the disclaimer. That is a negotiation and enforceability concern, not a textual construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad Assumption of All Risks",
+          "description": "The assumption of risk provision  requires the student to \"expressly assume ALL risks of enrolling and participating in a NOLS program, inherent or otherwise.\" This goes well beyond assuming inherent risks (which is standard for outdoor recreation) and sweeps in risks arising from NOLS's own negligence or operational failures. For Thomas's protection, the assumption should be limited to inherent risks only.",
+          "revision": "ALLall inherent risks of enrolling and participating in a NOLS program, inherentwhether or otherwise, andnot described above.",
+          "comment": "We limited the assumption to inherent risks only, as Wyoming courts generally do not enforce blanket risk assumptions that extend to a party's own negligence without clear and unequivocal language — this revision aligns the provision with established recreational liability standards.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6735,
+            "end_char": 7166,
+            "start_line": 123,
+            "end_line": 128,
+            "match_cover": 0.824,
+            "match_run": 9,
+            "matched_text": "inherent and other risks involved. I acknowledge and assume the inherent risks described above and all other inherent risks of my NOLS activity. In addition, except with respect to an injury or other loss which occurs on lands whose rules or regulations prohibit my doing so as a matter of law, I exp",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "Acknowledgment and Assumption of Inherent and Other Risks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“ALL risks,” reinforced by “inherent or otherwise,” is deliberately broad rather than ambiguous. Whether that allocation is enforceable or overreaching is not a Category 1 or 2 defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Broad Indemnification Obligation on Student",
+          "description": "The indemnification clause  requires Thomas to indemnify NOLS (including defense costs and attorney's fees) against claims by family members, rescuers, other students, or \"any other person.\" This is an extraordinarily broad obligation for a student in a recreational program. It effectively makes Thomas a guarantor of NOLS's litigation costs for any third-party claim arising from his enrollment. The indemnity should be limited to claims directly caused by Thomas's own willful misconduct or breach of program rules, not claims that merely \"arise in whole or part\" from his participation.",
+          "revision": "to indemnify. (7indemnify (\"indemnify\" meaning to defend, and ...",
+          "comment": "The original indemnification scope is disproportionately broad for a recreational student enrollment, effectively imposing guarantor-level litigation exposure; we've limited the obligation to claims directly attributable to Thomas's own willful misconduct, which reflects a more equitable and commercially reasonable risk allocation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7827,
+            "end_char": 7876,
+            "start_line": 140,
+            "end_line": 140,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "to indemnify. (7indemnify” meaning to defend, and",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The indemnity lists claims by family members, rescuers, and other students before adding “any other person,” creating a classic question about whether the catch-all is limited by the preceding classes."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Release of Negligence Claims is Overreaching",
+          "description": "The release and indemnity provisions  state they \"include claims of negligence of a Released Party, but not of gross negligence or intentionally wrongful conduct.\" While excluding gross negligence is positive, releasing ordinary negligence claims is highly unfavorable to Thomas. Under Wyoming law, liability waivers for negligence in recreational activities can be enforceable but are strictly construed. Thomas should push to narrow this to inherent-risk-related claims only, preserving his ability to seek recourse if NOLS is negligent in supervision, equipment maintenance, or instruction.",
+          "revision": "Release and Indemnity include claims of negligence of a Released Party, but not ofarising from the inherent risks of the activities, but not claims of negligence, gross",
+          "comment": "We limited the release to inherent risks of the activities rather than a blanket waiver of all negligence claims, which aligns with how Wyoming courts strictly construe liability waivers in recreational contexts and ensures the release is more likely to be enforceable.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8300,
+            "end_char": 8770,
+            "start_line": 145,
+            "end_line": 153,
+            "match_cover": 0.63,
+            "match_run": 13,
+            "matched_text": "Release and Indemnity include claims of negligence of a Released Party, but not of gross negligence or intentionally wrongful conduct. They are intended to be enforced to the fullest extent permitted by law. These agreements of release and indemnity are of no force or effect with respect to an injur",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement expressly includes ordinary negligence and excludes gross negligence and intentional wrongdoing. The issue objects to that clear allocation rather than identifying ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "NOLS Disclaims Any Role in Assessing Student Suitability",
+          "description": "The provision  states that \"The responsibility for determining a student's suitability for a course is not NOLS' but, rather, the student's.\" While it is reasonable for the student to assess their own fitness, NOLS collects health information and reserves the right to refuse admission — suggesting NOLS does in fact evaluate suitability. This one-sided disclaimer allows NOLS to admit a student despite known health concerns while disclaiming any responsibility for that decision. Thomas should request that NOLS acknowledge a duty to act reasonably on disclosed medical information.",
+          "revision": "... student's suitability for a course is notrests primarily with the student, guided by family and her or his physician, though NOLS will act reasonably on disclosed medical information in making admission decisions. NOLS reserves the",
+          "comment": "Because NOLS collects medical information and retains the right to refuse admission, it exercises a de facto gatekeeping role; we revised the clause to reflect that both parties bear responsibility, with NOLS obligated to act reasonably on disclosed health information in its admission decisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9858,
+            "end_char": 9994,
+            "start_line": 166,
+            "end_line": 167,
+            "match_cover": 0.543,
+            "match_run": 8,
+            "matched_text": "student's suitability for a course is not NOLS’ but, rather, the student’s, guided by family and her or his physician. NOLS reserves the",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "Other Provisions – Medical Fitness and Disclosure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "NOLS's collection of health information and reserved removal right can coexist with the student's responsibility for determining suitability; those provisions do not directly contradict the disclaimer."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Unrestricted Right to Remove Student Without Refund Provision",
+          "description": "NOLS reserves the right to \"refuse admission or remove a student from a course for any reason it deems in the best interests of the student or the school\" . This grants NOLS unfettered discretion with no obligation to refund tuition or fees if removal occurs. Thomas should negotiate for language requiring a pro-rata refund of unused course fees if he is removed for reasons other than his own misconduct, and removal should be based on reasonable grounds rather than any reason NOLS deems appropriate.",
+          "revision": "... student from a course for any reason it deems in the bestreasonable cause, including conduct that endangers the safety of the student or others. In the event of removal, NOLS will refund a pro-rata portion of unused course fees unless the removal is due to the student's willful misconduct or violation of program rules.",
+          "comment": "We narrowed the removal standard to 'reasonable cause' and added a pro-rata refund obligation to ensure equitable treatment; Wyoming contract law disfavors forfeiture clauses that allow one party to retain full consideration without proportional performance.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10033,
+            "end_char": 10737,
+            "start_line": 168,
+            "end_line": 182,
+            "match_cover": 0.382,
+            "match_run": 11,
+            "matched_text": "student from a course for any reason it deems in the best interests of the student or the school. [al student.agreement.09 rev. 1/26/09 3 Kore © National Outdoor Leadership School \\ NOLS is authorized to obtain or provide emergency hospitalization, surgical or other medical care for me, or for the m",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "Authorization for Medical Care"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The broad removal discretion and absence of a refund promise are unfavorable terms or omissions, but they do not create a textual ambiguity or internal contradiction."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Broad Medical Authorization Without Limits",
+          "description": "The medical authorization provision  authorizes NOLS to \"obtain or provide emergency hospitalization, surgical or other medical care\" for Thomas. While emergency authorization is reasonable, the phrase \"or other medical care\" is open-ended and could encompass non-emergency procedures. Thomas should ensure the authorization is limited to emergency and reasonably necessary medical care, and that NOLS is required to contact him or his emergency contact before authorizing non-emergency procedures when practicable.",
+          "revision": "... emergency hospitalization, surgical or other reasonably necessary medical",
+          "comment": "We modified the authorization scope to 'reasonably necessary medical care' to ensure the provision is limited to genuinely necessary treatment and does not inadvertently authorize elective or non-urgent procedures without the student's knowledge or consent.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10259,
+            "end_char": 10311,
+            "start_line": 177,
+            "end_line": 177,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "emergency hospitalization, surgical or other medical",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "Authorization for Medical Care"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The catch-all “other medical care” follows “emergency hospitalization” and “surgical” care, leaving its scope open to construction by reference to the listed forms of care."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unlimited Medical and Evacuation Cost Obligation",
+          "description": "The medical provision  states \"Costs reasonably associated with medical services, including evacuation, shall be borne by me.\" This places uncapped financial exposure on Thomas for costs that could be extremely high (e.g., helicopter evacuations). While some cost responsibility is standard, this provision should clarify that costs are limited to those not covered by insurance and should reference NOLS's obligation (if any) to maintain evacuation or emergency insurance. At minimum, \"reasonably associated\" should be further defined or capped.",
+          "revision": "... shall be borne by me to the extent not covered by applicable insurance, including any insurance provided by or through NOLS.",
+          "comment": "We clarified that Thomas's cost responsibility is limited to amounts not covered by applicable insurance, which is standard practice and ensures the provision does not impose an unlimited personal financial burden on a student participant where insurance coverage exists.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10875,
+            "end_char": 11350,
+            "start_line": 184,
+            "end_line": 192,
+            "match_cover": 0.429,
+            "match_run": 5,
+            "matched_text": "shall be borne by me. NOLS may share my or the minor student's contact information with other NOLS students or graduates and/or with environmental organizations or strategic partners in which NOLS graduates may be interested; and NOLS may use my or the minor student’s name, contact information and p",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "Use of Contact Information and Images"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “costs reasonably associated with medical services” has an evaluative boundary that may require construction, including how closely evacuation expenses must relate to medical services."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Sharing Contact Info with Third Parties Without Consent",
+          "description": "The provision  allows NOLS to share Thomas's contact information with \"environmental organizations or strategic partners\" without requiring Thomas's prior consent. This raises privacy concerns and could result in unwanted solicitations. Thomas should request that contact information sharing with third-party organizations require opt-in consent.",
+          "revision": "graduates and/or, with my prior written consent, with environmental organizations or strategic ...",
+          "comment": "We revised this provision to require Thomas's prior written consent before sharing his contact information with environmental organizations or strategic partners, as unrestricted third-party data sharing raises legitimate privacy concerns.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10987,
+            "end_char": 11049,
+            "start_line": 187,
+            "end_line": 187,
+            "match_cover": 0.615,
+            "match_run": 5,
+            "matched_text": "graduates and/or with environmental organizations or strategic",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "Use of Contact Information and Images"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision clearly permits sharing without a separate opt-in. The issue concerns privacy policy and consent allocation, not ambiguity or inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unrestricted Use of Name, Image, and Contact Info",
+          "description": "The provision  grants NOLS blanket permission to use Thomas's \"name, contact information and photo or other image in promotional materials and press releases\" with no limitations on duration, scope, or right to opt out. This is a perpetual, irrevocable publicity release with no compensation and no ability for Thomas to withdraw consent. Thomas should negotiate the right to opt out of promotional use of his image and limit sharing of contact information.",
+          "revision": "... promotional materials and press releases, subject to my right to opt out of such use by providing written notice to NOLS.",
+          "comment": "We added a written opt-out mechanism to ensure Thomas retains a basic right of publicity over his own name and image, consistent with Wyoming law and standard fair dealing principles — the underlying promotional use right remains intact.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11199,
+            "end_char": 11325,
+            "start_line": 189,
+            "end_line": 191,
+            "match_cover": 0.381,
+            "match_run": 5,
+            "matched_text": "promotional materials and press releases. I agree to be responsible for any damage I, or the minor student, may cause to NOLS",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "Responsibility for Damage to Facilities or Gear"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The statement that NOLS “may use” the student's name and image provides no stated duration or revocation rule, leaving the continuing scope of the permission uncertain."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Student Responsible for All Damage to NOLS Gear Without Limitation",
+          "description": "The provision  makes Thomas \"responsible for any damage I, or the minor student, may cause to NOLS facilities or gear\" without any limitation for normal wear and tear or damage occurring during ordinary program activities. Given the nature of outdoor wilderness programs, equipment damage during normal use is foreseeable. Thomas should not be liable for ordinary wear and tear or damage resulting from NOLS-directed activities performed in good faith.",
+          "revision": "... be responsible for any damage beyond normal wear and tear that I, or the minor student, may negligently or intentionally cause to NOLS facilities or",
+          "comment": "We limited damage responsibility to negligent or intentional acts beyond normal wear and tear, as holding a student financially liable for all equipment degradation in a wilderness program is commercially unreasonable and inconsistent with standard outdoor education industry practices.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11253,
+            "end_char": 11339,
+            "start_line": 191,
+            "end_line": 191,
+            "match_cover": 0.64,
+            "match_run": 6,
+            "matched_text": "be responsible for any damage I, or the minor student, may cause to NOLS facilities or",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "Responsibility for Damage to Facilities or Gear"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The term “damage” may reasonably raise a boundary question over whether ordinary wear and tear or expected degradation from authorized use counts as damage caused by the student."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "NOLS Not Liable for Student's Personal Belongings",
+          "description": "The provision  states \"NOLS is not responsible for loss, theft or damage to a student's personal belongings stored at NOLS facilities.\" While limiting liability for stored belongings is understandable, the blanket disclaimer even covers theft or damage caused by NOLS's own negligence (e.g., failure to secure storage areas). Thomas should push for NOLS to accept responsibility when loss or damage results from NOLS's negligence.",
+          "revision": "... a student's personal belongings stored at NOLS facilities, except where such loss, theft or damage results from NOLS's negligence.",
+          "comment": "A blanket disclaimer that shields NOLS from liability even for its own negligent failure to secure storage facilities is unenforceable as against public policy under Wyoming law; we've narrowed the exclusion accordingly.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11399,
+            "end_char": 11485,
+            "start_line": 192,
+            "end_line": 195,
+            "match_cover": 0.474,
+            "match_run": 8,
+            "matched_text": "a student's personal belongings stored at NOLS facilities. Any dispute between me, or",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "Responsibility for Damage to Facilities or Gear"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The disclaimer plainly states that NOLS is not responsible for loss, theft, or damage to stored belongings. Whether it can lawfully encompass NOLS's own negligence is an enforceability issue."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Exclusive Wyoming Venue May Be Inconvenient",
+          "description": "The dispute resolution provision  requires that \"any mediation or suit shall occur or be filed only in the State of Wyoming.\" This exclusive venue clause could be burdensome for Thomas if he resides elsewhere, as he would need to travel to Wyoming to pursue any claim. Thomas should consider negotiating the option to bring claims in the state of his residence as well.",
+          "revision": "... and any mediation or suit shal]shall occur or be filed only in the State of Wyoming or the state of the student's primary residence.",
+          "comment": "We added the student's state of primary residence as an alternative venue to prevent an unreasonably burdensome forum requirement on a student who may reside outside Wyoming, consistent with equitable dispute resolution principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11658,
+            "end_char": 11855,
+            "start_line": 197,
+            "end_line": 200,
+            "match_cover": 0.8,
+            "match_run": 10,
+            "matched_text": "and any mediation or suit shal] occur or be filed only in the State of Wyoming. If any part of this agreement is found by a court or other appropriate authority to be invalid, the remainder of the",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Wyoming-only venue requirement is clear; inconvenience to an out-of-state student is a negotiation concern rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Agreement Binds Heirs and Estate",
+          "description": "The closing provision  states the agreement \"SHALL BE BINDING UPON THEM, THEIR HEIRS, ESTATE, EXECUTORS AND ADMINISTRATORS.\" This means that in the worst-case scenario of a fatality, Thomas's estate and heirs would be bound by the release and indemnity, potentially barring wrongful death claims. This is a significant concession. Thomas should be aware that this provision, if enforceable, could prevent his family from bringing claims in the event of his death due to NOLS's negligence.",
+          "revision": "... SHALL BE BINDING UPON THEM, THEIR HEIRS, ESTATE, EXECUTORS AND. THE AGREEMENT MAY BE MODIFIED ONLY IN WRITING.",
+          "comment": "We removed the extension of binding effect to heirs and estate, as such provisions may be unenforceable under Wyoming law to the extent they purport to extinguish statutory wrongful death claims that belong independently to surviving family members.",
+          "group_size": 1,
+          "location": {
+            "start_char": 12094,
+            "end_char": 12218,
+            "start_line": 204,
+            "end_line": 205,
+            "match_cover": 1.0,
+            "match_run": 10,
+            "matched_text": "SHALL BE BINDING UPON THEM, THEIR HEIRS, ESTATE, EXECUTORS AND ADMINISTRATORS. THE AGREEMENT MAY BE MODIFIED ONLY IN WRITING",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Final Provision — Binding on Heirs, Estate, Executors and Administrators"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The extension to heirs, the estate, executors, and administrators is explicit. Its effect on independent statutory wrongful-death claims concerns enforceability and governing law, not textual ambiguity."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Medical Protocols",
+          "description": "The term 'Medical Protocols' appears capitalized in  suggesting it is a defined term, but no definition is provided in the document. This term appears in a critical section addressing medical care procedures and should be clearly defined to avoid ambiguity about what protocols govern NOLS staff medical procedures.",
+          "revision": "Medical Protocols (defined as NOLS' written emergency medical care procedures and guidelines). Any third-party medical care provider is authorized to exchange pertinent",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 10678,
+            "end_char": 10770,
+            "start_line": 182,
+            "end_line": 182,
+            "match_cover": 0.565,
+            "match_run": 11,
+            "matched_text": "Medical Protocols. Any third-party medical care provider is authorized to exchange pertinent",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "Authorization for Medical Care"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The unidentified capitalized term “Medical Protocols” leaves uncertain which written procedures govern NOLS staff's provision of medical care."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Release and Indemnity",
+          "description": "The term appears capitalized as 'Release and Indemnity' in  but lowercase as 'release and indemnity' in . Since this refers to the specific agreements defined in the document heading  and section heading , it should be consistently capitalized throughout to maintain clarity that it references these specific contractual provisions.",
+          "revision": "These agreements of releaseRelease and indemnityIndemnity are of no force or effect",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8280,
+            "end_char": 8575,
+            "start_line": 144,
+            "end_line": 147,
+            "match_cover": 0.833,
+            "match_run": 6,
+            "matched_text": "These agreements of Release and Indemnity include claims of negligence of a Released Party, but not of gross negligence or intentionally wrongful conduct. They are intended to be enforced to the fullest extent permitted by law. These agreements of release and indemnity are of no force or effect",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The capitalization variation does not reasonably suggest two different sets of release and indemnity agreements in context, so it does not alter meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation error with parenthetical definition",
+          "description": "Missing opening quotation mark before \"indemnify\"",
+          "revision": "to indemnify. (7indemnify (\"indemnify\" meaning to defend, and ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7827,
+            "end_char": 7876,
+            "start_line": 140,
+            "end_line": 140,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "to indemnify. (7indemnify” meaning to defend, and",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "Agreements of Release and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The malformed opening “7indemnify” in place of an opening quotation mark is a mechanical punctuation or transcription error in the parenthetical definition."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in verb",
+          "description": "Should be \"shall\" not \"shal]\"",
+          "revision": "... and any mediation or suit shal]shall occur or be filed only ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 11658,
+            "end_char": 11712,
+            "start_line": 197,
+            "end_line": 197,
+            "match_cover": 0.917,
+            "match_run": 6,
+            "matched_text": "and any mediation or suit shal] occur or be filed only",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Other Provisions — Governing Law and Forum Selection"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Shal]” is a mechanical spelling or transcription error in the operative forum clause, corrupting the mandatory verb “shall,” even though the intended reading is apparent."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Preamble – Signature Requirements",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "school_nols"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Accent over letter e",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The accent in “thé” is a typographical artifact that does not change the readily apparent meaning of “the state.”"
+        },
+        {
+          "party": "school_nols",
+          "title": "Inconsistent capitalization: parent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase “parent” remains readily identifiable as the parent or guardian described in the preamble, so the capitalization inconsistency does not affect construction."
+        }
+      ],
+      "risky": false
+    },
+    "neg11": {
+      "clause_id": "neg11",
+      "clause_name": "Risk Bullet – Free Time and Supervision",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Free time disclaimer for during-course periods is weaker than before/after",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The provision identifies free time “before, during and after” the course but expressly disclaims responsibility only “before and after”; that enumeration raises an expressio unius question about responsibility during the course."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "NOLS Disclaims Responsibility for Staff During \"Free Time\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue challenges the fairness and legal effect of characterizing staff as private individuals during free time, but the disclaimer itself is not ambiguous or inconsistent with another operative term."
+        }
+      ],
+      "risky": true
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "Risk Bullet – Private Contractors",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Contractor liability disclaimer should be strengthened",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Whether the disclaimer defeats non-delegable duties is a legal-enforceability concern; the existing statement that NOLS is not responsible for contractor conduct is textually clear."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "NOLS Disclaims All Responsibility for Contractors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue seeks to impose a duty of reasonable contractor selection despite the disclaimer. That is a negotiation and enforceability concern, not a textual construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg15": {
+      "clause_id": "neg15",
+      "clause_name": "Acknowledgment and Assumption of Inherent and Other Risks",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "student_plotkin"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "student_plotkin",
+          "title": "Overly Broad Assumption of All Risks",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“ALL risks,” reinforced by “inherent or otherwise,” is deliberately broad rather than ambiguous. Whether that allocation is enforceable or overreaching is not a Category 1 or 2 defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg16": {
+      "clause_id": "neg16",
+      "clause_name": "Agreements of Release and Indemnity",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 9,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Released Parties definition should include independent contractors and successors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The omission of contractors, successors, and assigns from the defined Released Parties is a negotiation gap, not an ambiguity or conflict. The contractor disclaimer can operate independently of the release."
+        },
+        {
+          "party": "school_nols",
+          "title": "Indemnity should cover \"reasonable\" attorney's fees and costs",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a reasonableness qualifier affects the breadth or enforceability of the fee obligation, but the existing phrase “costs and attorney's fees” is textually intelligible."
+        },
+        {
+          "party": "school_nols",
+          "title": "Release should expressly survive course completion",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Express survival language may strengthen the release, but its omission does not create a textual contradiction or genuine ambiguity about claims arising from course participation."
+        },
+        {
+          "party": "school_nols",
+          "title": "Release carve-out for \"lands whose rules or regulations prohibit\" is vague",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “lands whose rules or regulations prohibit such agreements as a matter of law” is vague about which land-based rules, regulations, agencies, or legal regimes trigger the carve-out."
+        },
+        {
+          "party": "school_nols",
+          "title": "Internal drafting note - indemnity definition",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The parenthetical reads as an operative explanation of “indemnify,” not necessarily an internal drafting note. Whether it should be removed is an editorial issue; its malformed quotation is separately addressed in issue 36."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Broad Indemnification Obligation on Student",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The indemnity lists claims by family members, rescuers, and other students before adding “any other person,” creating a classic question about whether the catch-all is limited by the preceding classes."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Release of Negligence Claims is Overreaching",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement expressly includes ordinary negligence and excludes gross negligence and intentional wrongdoing. The issue objects to that clear allocation rather than identifying ambiguity or conflict."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Inconsistent capitalization: Release and Indemnity",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The capitalization variation does not reasonably suggest two different sets of release and indemnity agreements in context, so it does not alter meaning."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Punctuation error with parenthetical definition",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The malformed opening “7indemnify” in place of an opening quotation mark is a mechanical punctuation or transcription error in the parenthetical definition."
+        }
+      ],
+      "risky": true
+    },
+    "neg17": {
+      "clause_id": "neg17",
+      "clause_name": "Other Provisions – Medical Fitness and Disclosure",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Agreement places burden on student to determine age of legal competency",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "This issue concerns allocation of the burden of verifying contractual capacity and the resulting enforceability risk, not ambiguity or internal inconsistency."
+        },
+        {
+          "party": "school_nols",
+          "title": "Inconsistent capitalization: student",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase uses of “student” plainly refer to the student described by the agreement; the capitalization inconsistency does not alter meaning."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "NOLS Disclaims Any Role in Assessing Student Suitability",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "NOLS's collection of health information and reserved removal right can coexist with the student's responsibility for determining suitability; those provisions do not directly contradict the disclaimer."
+        }
+      ],
+      "risky": false
+    },
+    "neg18": {
+      "clause_id": "neg18",
+      "clause_name": "Authorization for Medical Care",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Removal provision should clarify no refund obligation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement's silence about refunds following removal is a missing commercial term, not an intrinsic ambiguity or contradiction with another provision."
+        },
+        {
+          "party": "school_nols",
+          "title": "Undefined term: Medical Protocols",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Medical Protocols” refers to an unidentified body of written procedures, leaving uncertain which protocols govern and what medical conduct they authorize."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Unrestricted Right to Remove Student Without Refund Provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The broad removal discretion and absence of a refund promise are unfavorable terms or omissions, but they do not create a textual ambiguity or internal contradiction."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Broad Medical Authorization Without Limits",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The catch-all “other medical care” follows “emergency hospitalization” and “surgical” care, leaving its scope open to construction by reference to the listed forms of care."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Undefined term: Medical Protocols",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The unidentified capitalized term “Medical Protocols” leaves uncertain which written procedures govern NOLS staff's provision of medical care."
+        }
+      ],
+      "risky": true
+    },
+    "neg19": {
+      "clause_id": "neg19",
+      "clause_name": "Use of Contact Information and Images",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Medical costs provision lacks specificity on evacuation expenses",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision clearly includes evacuation costs; failing expressly to add separately billed search-and-rescue costs is an omission in coverage, not a construction defect."
+        },
+        {
+          "party": "school_nols",
+          "title": "Image/likeness release lacks perpetual and irrevocable language",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The authorization that NOLS “may use” the information and images does not specify its duration or whether consent can be revoked, leaving the temporal scope of “may use” uncertain."
+        },
+        {
+          "party": "school_nols",
+          "title": "Contact info sharing provision is overly broad and may raise privacy concerns",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “strategic partners in which NOLS graduates may be interested” has uncertain boundaries and does not identify what relationships qualify as strategic partnerships."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Unlimited Medical and Evacuation Cost Obligation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “costs reasonably associated with medical services” has an evaluative boundary that may require construction, including how closely evacuation expenses must relate to medical services."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Sharing Contact Info with Third Parties Without Consent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision clearly permits sharing without a separate opt-in. The issue concerns privacy policy and consent allocation, not ambiguity or inconsistency."
+        }
+      ],
+      "risky": true
+    },
+    "neg20": {
+      "clause_id": "neg20",
+      "clause_name": "Responsibility for Damage to Facilities or Gear",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Personal property disclaimer should extend to field operations",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The disclaimer unambiguously applies to belongings stored at NOLS facilities. Its failure to cover field operations is a scope limitation, not an ambiguity."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Unrestricted Use of Name, Image, and Contact Info",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The statement that NOLS “may use” the student's name and image provides no stated duration or revocation rule, leaving the continuing scope of the permission uncertain."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Student Responsible for All Damage to NOLS Gear Without Limitation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The term “damage” may reasonably raise a boundary question over whether ordinary wear and tear or expected degradation from authorized use counts as damage caused by the student."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "NOLS Not Liable for Student's Personal Belongings",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The disclaimer plainly states that NOLS is not responsible for loss, theft, or damage to stored belongings. Whether it can lawfully encompass NOLS's own negligence is an enforceability issue."
+        }
+      ],
+      "risky": true
+    },
+    "neg21": {
+      "clause_id": "neg21",
+      "clause_name": "Severability",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "student_plotkin"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "student_plotkin",
+          "title": "Exclusive Wyoming Venue May Be Inconvenient",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Wyoming-only venue requirement is clear; inconvenience to an out-of-state student is a negotiation concern rather than a construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Other Provisions — Governing Law and Forum Selection",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Continuation of personal property disclaimer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Extending the disclaimer to field operations and transit would expand NOLS's protection, but the current facility-storage limitation is clear."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Spelling error in verb",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Shal]” is a mechanical spelling or transcription error in the operative forum clause, corrupting the mandatory verb “shall,” even though the intended reading is apparent."
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Final Provision — Binding on Heirs, Estate, Executors and Administrators",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "school_nols",
+        "student_plotkin"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "school_nols",
+          "title": "Severability clause should include reformation language",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The severability clause clearly preserves the remainder of the agreement. Failure to authorize judicial reformation is an omitted remedy, not a construction defect."
+        },
+        {
+          "party": "student_plotkin",
+          "title": "Agreement Binds Heirs and Estate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The extension to heirs, the estate, executors, and administrators is explicit. Its effect on independent statutory wrongful-death claims concerns enforceability and governing law, not textual ambiguity."
+        }
+      ],
+      "risky": false
+    }
+  }
+}

@@ -1,0 +1,2003 @@
+{
+  "contract_id": "871FSupp2d671_2005_noncompetition_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 24,
+  "n_issues": 54,
+  "n_located": 46,
+  "n_judged": 44,
+  "n_skipped": 10,
+  "counts": {
+    "cat1": 13,
+    "cat2": 1,
+    "none": 30
+  },
+  "parties": {
+    "company_ajuba": {
+      "n_issues": 26,
+      "n_located": 21,
+      "by_tab": {
+        "risks_negotiation": 15,
+        "proofread": 11
+      },
+      "by_kind": {
+        "Minor": 5,
+        "Notable": 8,
+        "Important": 2,
+        "Internal Annotations": 1,
+        "Spelling + Grammar": 3,
+        "Templated Content": 4,
+        "Section References": 1,
+        "Definitions": 2
+      },
+      "issues": [
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Passive Investment Threshold Too High",
+          "description": "The carve-out for passive investments permits the Shareholder to hold up to 2% of a publicly traded corporation's outstanding capital stock . For a large-cap competitor, a 2% stake could represent a substantial financial interest and potential influence. From the Company's perspective, this threshold should be reduced to 1% (or even less) to minimize the risk that the Shareholder gains meaningful involvement with a competitor through a public equity position.",
+          "revision": "holder of less than 21% of the outstanding capital ...",
+          "comment": "We reduced the passive investment threshold to 1% to ensure the carve-out remains limited to truly passive, non-influential positions; a 2% stake in a publicly traded competitor can carry meaningful economic weight and potential influence inconsistent with the non-compete's intent.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3566,
+            "end_char": 3615,
+            "start_line": 81,
+            "end_line": 81,
+            "match_cover": 0.889,
+            "match_run": 4,
+            "matched_text": "holder of less than 2% of the outstanding capital",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The 2% threshold is definite; the issue concerns the commercial adequacy of that negotiated percentage, not textual construction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Disparagement Exception Too Broad",
+          "description": "The no-disparagement provision in Section 4  includes an exception for statements made \"as part of any dispute resolution proceeding.\" This is overly broad and could allow the Shareholder to make disparaging public statements simply because a dispute exists, rather than limiting the exception to formal filings or testimony within proceedings. From the Company's perspective, this exception should be narrowed to cover only statements made in formal filings or testimony.",
+          "revision": "... of any other Party, except as part ofin connection with testimony, filings, or submissions made in any dispute",
+          "comment": "We limited the exception to formal litigation conduct — testimony, filings, and submissions — to ensure the no-disparagement obligation has meaningful effect and is not rendered illusory by a broadly worded carve-out.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9603,
+            "end_char": 9652,
+            "start_line": 185,
+            "end_line": 185,
+            "match_cover": 0.5,
+            "match_run": 7,
+            "matched_text": "of any other Party, except as part of any dispute",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Disparagement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “as part of any dispute resolution proceeding” has an uncertain boundary, including whether it covers only formal submissions or broader communications connected with a dispute."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Vague Notice Obligation for Compelled Disclosure",
+          "description": "The confidentiality exception for legally compelled disclosure  requires the Shareholder to give the Company \"an adequate opportunity to interpose an objection\" before disclosing, but does not specify what constitutes \"adequate\" — no minimum notice period or written notice requirement is stated. From the Company's perspective, this should specify a concrete advance notice period (e.g., at least 10 business days' prior written notice) to give the Company a meaningful opportunity to seek a protective order.",
+          "revision": "... Shareholder shall give the Company at least ten (10) business days' prior written notice and an adequate",
+          "comment": "We clarified the notice obligation by establishing a concrete 10 business days' written notice period, which provides legal certainty for both parties and ensures the Company has a meaningful opportunity to seek judicial relief before any disclosure occurs.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8552,
+            "end_char": 8598,
+            "start_line": 166,
+            "end_line": 166,
+            "match_cover": 0.412,
+            "match_run": 5,
+            "matched_text": "Shareholder shall give the Company an adequate",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "3.A. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Adequate opportunity” is vague because the provision supplies no objective timing or procedural standard for determining adequacy."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Assignment Rights Too Narrow for Company",
+          "description": "The successors and assigns provision  allows the Company to assign its rights only to an \"affiliate\" without the other party's consent. This is too restrictive — in a sale of the business, merger, or change-of-control transaction, the Company should be able to assign this noncompete to the acquirer without needing the Shareholder's consent.",
+          "revision": "obligations to an affiliate or to any successor in connection with any merger, consolidation, or sale of all or substantially all of its assets, without such consent.",
+          "comment": "We expanded permitted assignments to include successors in mergers, consolidations, or asset sales, which is standard market practice and necessary to preserve the enforceability of this agreement in a change-of-control transaction.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1867,
+            "end_char": 2029,
+            "start_line": 46,
+            "end_line": 48,
+            "match_cover": 0.37,
+            "match_run": 6,
+            "matched_text": "or entity that now, or at any time after the date of this Agreement, is a successor (whether by purchase of all or substantially all of the business and/or assets",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.B. Definition of “Company”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 1.B includes future successors within “Company,” while Section 5.F prohibits non-affiliate assignments without consent. A court may need to determine whether successor status under Section 1.B bypasses the assignment restriction in Section 5.F."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Short Lookback Period for Former Customers",
+          "description": "The definition of \"Customer\" in Section 1(C)  includes entities that were clients during only the six-month period prior to the Agreement. This is a relatively short lookback — customers who left within the preceding 12 or 24 months may still have valuable relationships and information the Shareholder could exploit. From the Company's perspective, extending this to twelve months would better protect against solicitation of recently departed clients.",
+          "revision": "... at any time during the sixtwelve",
+          "comment": "A six-month lookback is insufficient to protect legitimate business interests in recently departed client relationships; twelve months better reflects the period during which confidential client information and goodwill remain competitively sensitive.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2246,
+            "end_char": 2268,
+            "start_line": 52,
+            "end_line": 52,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "at any time during the",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "1.C. Definition of “Customer”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The six-month lookback is clear; the issue merely argues that a longer negotiated period would better protect the Company."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Tolling Provision for Breach Period",
+          "description": "The Restricted Period is defined as three years from the Agreement date , but there is no tolling provision. Without tolling, the Shareholder could violate the non-compete and simply run out the clock. From the Company's perspective, a tolling clause should be added so that the Restricted Period is extended by the duration of any breach.",
+          "revision": "Agreement; provided, however, that the Restricted Period shall be extended by the duration of any period during which the Shareholder is in breach of Section 2 of this Agreement.",
+          "comment": "Tolling provisions are standard in non-compete agreements under Michigan law and are necessary to ensure the agreed-upon Restricted Period is not rendered meaningless by a party who breaches and delays enforcement through litigation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5815,
+            "end_char": 6333,
+            "start_line": 123,
+            "end_line": 131,
+            "match_cover": 0.448,
+            "match_run": 3,
+            "matched_text": "provided, however, that to the extent any such provision may be made valid and enforceable in such jurisdiction by limitations on the scope of the activities, geographical area or time period covered, the Shareholder and the Company agree that such provision instead shall be deemed limited to the ex",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.B. Reasonableness and severability of restrictions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of tolling is an omitted commercial protection, not an ambiguity, mechanical defect, or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Lacks Email as Delivery Method",
+          "description": "The notice provision  permits delivery by courier, mail, and facsimile, but does not include email as an acceptable method of delivery. Facsimile is largely obsolete, and email is the standard modern business communication method. Adding email would ensure the Company can deliver effective notice efficiently.",
+          "revision": "... shall include communications by telex, facsimile and facsimile)email)",
+          "comment": "We included email alongside facsimile and other delivery methods to reflect modern business communication standards and ensure notice can be delivered efficiently by both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13372,
+            "end_char": 13616,
+            "start_line": 248,
+            "end_line": 251,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "shall include communications by telex and facsimile) and shall be delivered (a) in person or by courier or overnight service, (b) mailed by first class registered or certified mail, postage prepaid, return receipt requested, or (c) by facsimile",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "5.J. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The permitted delivery methods are expressly listed. Omitting email may be outdated or inconvenient, but it creates no construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Prevailing Party Attorney's Fees",
+          "description": "The remedies provision in Section 2(C)  entitles the Company to injunctive relief but does not address recovery of attorney's fees and costs incurred in enforcement. Adding fee-shifting would strengthen the Company's position and deter the Shareholder from contesting enforcement.",
+          "revision": "necessity of posting a bond. In any action to enforce this Section 2, the prevailing party shall be entitled to recover its reasonable attorneys' fees and costs.",
+          "comment": "We included a prevailing party attorneys' fees provision to reflect standard practice in restrictive covenant enforcement and to ensure that the cost of enforcement does not functionally undermine the remedy itself.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9280,
+            "end_char": 9588,
+            "start_line": 180,
+            "end_line": 185,
+            "match_cover": 0.407,
+            "match_run": 5,
+            "matched_text": "necessity of posting a bond. The provisions of this Section 3 shall survive the termination of this Agreement. | No Disparagement. While this Agreement is in effect and indefinitely thereafter, regardless of any dispute that may arise in the future, no Party shall disparage, criticize or make statem",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Disparagement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an attorney-fee provision is a remedies negotiation issue, not a textual ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Employee Non-Solicit Missing Independent Contractors",
+          "description": "The employee non-solicitation provision in Section 2(A)(3)  restricts the Shareholder from soliciting \"employee, sales agent, or consultant\" of the Company but does not expressly cover independent contractors. Many key service providers in healthcare claims processing may be classified as independent contractors. The Company should broaden this coverage.",
+          "revision": "employee, sales agent, independent contractor, or consultant of the Company, ...",
+          "comment": "We expanded the non-solicitation provision to include independent contractors, as many critical service providers in healthcare claims processing operate under that classification; omitting them would create an unintended loophole inconsistent with the intent of the restriction.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4209,
+            "end_char": 4260,
+            "start_line": 92,
+            "end_line": 92,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "employee, sales agent, or consultant of the Company",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The scope of “consultant” may be uncertain as applied to independent contractors, since some—but not necessarily all—independent contractors could reasonably fall within that term."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Prospective Client Restriction Weakened by Material Contact Requirement",
+          "description": "The definition of \"Customer\" in Section 1(C)  includes prospective clients actively sought during the twelve months prior to the Agreement, but only those \"with whom the Shareholder had material contact while a shareholder of the Company\" . The \"material contact\" qualifier significantly narrows protection — the Shareholder may have knowledge of prospective clients pursued by the Company's sales team even without direct personal contact. From the Company's perspective, removing or softening this qualifier (e.g., \"of which the Shareholder had knowledge\") would broaden protection.",
+          "revision": "whom the Shareholder had knowledge or material contact while a shareholder ...",
+          "comment": "The 'material contact' standard is insufficient to protect the Company's legitimate business interests, as a departing shareholder may have strategic knowledge of pursued prospects without direct contact; broadening to 'knowledge or material contact' reflects market-standard non-solicitation protections under Michigan law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2507,
+            "end_char": 2568,
+            "start_line": 57,
+            "end_line": 57,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "whom the Shareholder had material contact while a shareholder",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "1.C. Definition of “Customer”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Material contact” is a vague standard whose boundary is not defined, potentially requiring construction of what degree or kind of contact qualifies."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Return or Destruction of Confidential Information",
+          "description": "The confidentiality provision in Section 3  prohibits the Shareholder from disclosing or using Confidential Information but does not impose any obligation to return or destroy Confidential Information in the Shareholder's possession. From the Company's perspective, including a return/destruction obligation would strengthen protection. Consider adding a sentence at the end of Section 3(A) requiring the Shareholder to return or certify destruction of all Confidential Information upon the Company's request.",
+          "revision": "handling of such information. Upon the Company's request, the Shareholder shall promptly return or destroy all Confidential Information in his possession and certify such return or destruction in writing.",
+          "comment": "We added a standard return/destruction obligation to ensure the Company can reclaim control over its Confidential Information at the conclusion of the relationship, which is consistent with market practice in confidentiality provisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8675,
+            "end_char": 9112,
+            "start_line": 168,
+            "end_line": 178,
+            "match_cover": 0.345,
+            "match_run": 4,
+            "matched_text": "handling of such information. ome 1 1=CV-12936-MOB-LJM Doc#11-2 Filed 10/17/11 Pg5of10 Pg ID 162 — C) The Shareholder acknowledges and agrees that the Company's remedy at law for a breach or threatened breach of this Section 3 would be inadequate. Therefore, in the event of a breach by the Sharehold",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "3.B. Equitable remedies; survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "A return-or-destruction obligation is simply absent; its omission does not make the existing nondisclosure and nonuse duties ambiguous."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Waiver of Jury Trial",
+          "description": "The governing law and jurisdiction provision in Section 5(E)  does not include a waiver of jury trial. In enforcement actions for noncompetition and confidentiality agreements, a bench trial is generally more favorable to the enforcing party (here, the Company). Adding a mutual waiver of jury trial would benefit the Company.",
+          "revision": "venue laid therein. EACH PARTY HEREBY IRREVOCABLY WAIVES ALL RIGHT TO A TRIAL BY JURY IN ANY ACTION, PROCEEDING, OR COUNTERCLAIM ARISING OUT OF OR RELATING TO THIS AGREEMENT. Process in any action or ...",
+          "comment": "We have included a mutual jury trial waiver, which is standard in commercial agreements of this nature and applies equally to both parties, ensuring a more efficient and predictable resolution of any disputes.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10772,
+            "end_char": 11547,
+            "start_line": 206,
+            "end_line": 218,
+            "match_cover": 0.5,
+            "match_run": 3,
+            "matched_text": "each Party. Representation. The Shareholder acknowledges that he has had the opportunity to have this Agreement reviewed by the legal counsel of his choice. Governing Law: Jurisdiction. This Agreement shall be construed under the laws of the State of Michigan without regard to conflict of laws princ",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "5.E. Governing Law; Jurisdiction"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a jury-trial waiver concerns litigation strategy and negotiated procedure, not construction of existing text."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Survival Clause Should Explicitly Be Perpetual",
+          "description": "Section 3(B)  states that the confidentiality provisions \"shall survive the termination of this Agreement\" , but does not specify for how long. While the non-disclosure obligation itself in Section 3(A) applies \"at any time, either during or subsequent to the Restricted Period,\" making the survival clause explicitly perpetual (or for a specified long duration) would eliminate any ambiguity about the duration of the Company's protection.",
+          "revision": "... the termination of this Agreement indefinitely.",
+          "comment": "Michigan courts may construe an unqualified survival clause as subject to a reasonableness limitation; specifying indefinite survival aligns the clause with the underlying confidentiality obligation in Section 3(A), which already applies beyond the Restricted Period, and ensures consistent protection of the Company's proprietary information.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9356,
+            "end_char": 9462,
+            "start_line": 181,
+            "end_line": 183,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "the termination of this Agreement. | No Disparagement. While this Agreement is in effect and indefinitely",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Disparagement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Standing alone, “shall survive the termination” does not state a duration and can raise a temporal-scope question, although Section 3.A strongly supports indefinite application."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Mutual Non-Disparagement May Limit Company's Legitimate Communications",
+          "description": "The no-disparagement clause in Section 4  is fully mutual. This could limit the Company's ability to make truthful statements in the ordinary course of business — for example, explaining to clients or employees why the Shareholder is no longer involved. Consider carving out truthful statements made in the ordinary course of business or as required by law.",
+          "revision": "... may arise in the future, no Party shallthe Shareholder shall not disparage, criticize or",
+          "comment": "A fully mutual non-disparagement clause without carve-outs for truthful statements or legally required disclosures may unreasonably restrict the Company's ordinary business communications; standard practice is to exclude factual statements made in good faith or as required by law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9506,
+            "end_char": 9569,
+            "start_line": 184,
+            "end_line": 184,
+            "match_cover": 0.786,
+            "match_run": 7,
+            "matched_text": "may arise in the future, no Party shall disparage, criticize or",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Disparagement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Terms such as “disparage,” “criticize,” and “statements to the detriment” have uncertain boundaries, particularly as applied to truthful ordinary-course communications."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Business Definition Limited to Current Services",
+          "description": "The definition of \"Business\" in Section 1(A)  is limited to specifically enumerated services (claims processing, billing, etc.) for \"hospitals and physicians in the United States\" . This narrow scope does not capture services for other healthcare providers (e.g., ambulatory surgery centers, skilled nursing facilities, dental practices) or new service lines the Company may develop. From the Company's perspective, broadening the definition to cover services for all healthcare providers would better protect the Company's competitive position.",
+          "revision": "insurance claims for hospitals and physicians, physicians, and other healthcare providers in the United States.",
+          "comment": "We expanded the definition of 'Business' to reflect the Company's actual and reasonably anticipated market, ensuring the non-compete obligation is appropriately scoped to the full range of healthcare provider clients the Company services — consistent with Michigan's requirement that restrictive covenants be reasonable in scope.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1723,
+            "end_char": 1789,
+            "start_line": 44,
+            "end_line": 44,
+            "match_cover": 0.667,
+            "match_run": 6,
+            "matched_text": "insurance claims for hospitals and physicians in the United States",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "1.A. Definition of “Business”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The definition expressly covers the listed services for hospitals and physicians. The issue seeks broader substantive coverage rather than identifying uncertainty in the existing scope."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Internal drafting note - intentionally blank page",
+          "description": "The signature section  contains an internal drafting note \"This page intentionally left blank\"  which should be removed before finalization. This is a process marker that was likely used during document assembly and should not appear in the final executed version.",
+          "revision": "This page intentionally left blank",
+          "comment": "Removed internal drafting note 'This page intentionally left blank' — this placeholder should not appear in the final executed version of the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14989,
+            "end_char": 15023,
+            "start_line": 307,
+            "end_line": 307,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "This page intentionally left blank",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation error",
+          "description": "Extra period after \"and\"",
+          "revision": "... Company and to promote and.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3185,
+            "end_char": 3211,
+            "start_line": 74,
+            "end_line": 74,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "Company and to promote and",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The period after “and” interrupts the coordinated phrase “promote and preserve,” leaving a grammatically malformed sentence and constituting a mechanical punctuation error."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled date with placeholder symbol",
+          "description": "Found: \"July ¥ _, 2005\" — Unfilled date in Stock Purchase Agreement reference creates ambiguity about agreement execution date.",
+          "revision": "",
+          "comment": "Insert the specific day of the month for the July 2005 date.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled day in agreement date",
+          "description": "Found: \"July KX, 2005\" — Placeholder \"KX\" in agreement effective date makes commencement of restrictions uncertain.",
+          "revision": "",
+          "comment": "Insert the correct day of the month in place of 'KX'.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid section reference to Section 5(J)",
+          "description": "The Notices provision  references itself as \"this Section 5(J)\" , but based on the sequential lettering of subsections in Section 5, the Notices provision should be designated as Section 5(I), not Section 5(J). The subsections are: A (Entire Agreement), B (No Waiver), C (Amendment), D (Representation), E (Governing Law), F (Successors and Assigns), G (Counterparts), H (Partial Invalidity), and I (Notices). There is no subsection J in the document.",
+          "revision": "this Section 5(J)5(I)",
+          "comment": "Corrected internal cross-reference from Section 5(J) to Section 5(I) to match the actual sequential lettering of subsections in Section 5.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14416,
+            "end_char": 14432,
+            "start_line": 298,
+            "end_line": 298,
+            "match_cover": 0.667,
+            "match_run": 4,
+            "matched_text": "this Section 5(J",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "5.J. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The self-reference to nonexistent Section 5(J), rather than the apparent Section 5(I), is a mechanical cross-reference error."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing telephone number",
+          "description": "Found: \"Telephone :\" — Company notice provision lacks telephone number, undermining ability to contact for urgent communications.",
+          "revision": "",
+          "comment": "Insert the party's telephone number including area code.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing facsimile number",
+          "description": "Found: \"Facsimile:\" — Company notice provision lacks facsimile number, limiting acceptable delivery methods under notice provisions.",
+          "revision": "",
+          "comment": "Insert the facsimile (fax) number for the relevant party.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation error",
+          "description": "Extra period after \"thereby\"",
+          "revision": "... of the goodwill acquired thereby... If any",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4992,
+            "end_char": 5033,
+            "start_line": 105,
+            "end_line": 105,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "of the goodwill acquired thereby.. If any",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.B. Reasonableness and severability of restrictions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The duplicated period after “thereby” is typographical but does not alter the provision’s meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Acquired Companies",
+          "description": "The term 'Acquired Companies' is used in the definition of 'Customer'  but is never defined in this Agreement. This creates ambiguity about which entities are included when determining who qualifies as a Customer under the non-solicitation and non-competition provisions. The term appears to refer to entities acquired by the Buyer, but without a formal definition, the scope of the covenant restrictions is unclear.",
+          "revision": "F. \"Acquired Companies\" shall mean the Company and any other corporations or entities acquired by the Buyer pursuant to the Stock Purchase Agreement or any related transaction.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2691,
+            "end_char": 3405,
+            "start_line": 63,
+            "end_line": 78,
+            "match_cover": 0.481,
+            "match_run": 4,
+            "matched_text": "shall mean the period commencing on the date of this Agreement and ending on the date that is three (3) years after the date of this Agreement. E. The “Restricted Area” shall mean the United States, its territories and protectorates. 2 Non-Competition; Non-Solicitation. A. To induce the Buyer to ent",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Although “Acquired Companies” is not defined within this document, Background C imports meanings for otherwise undefined capitalized terms from the Stock Purchase Agreement. The issue therefore does not establish an intrinsic ambiguity in this instrument."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Unused definition: Sellers",
+          "description": "The term 'Sellers' is formally defined in the Background section  as Nader Samii, Devendra Saharia, and Shakti Singh collectively, but this defined term is never used elsewhere in the Agreement. Since the Agreement is specifically with Devendra Saharia as the 'Shareholder,' and only the Shareholder is bound by the covenants, the collective Sellers definition serves no purpose in this document. Remove definition Saharia and Shakti Singh (collectively, the \"Sellers\"). Buyer is purchasing all of",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Should be \"illegality\" not \"Wlegality\"",
+          "revision": "... in any respect, such invalidity, Wlegalityillegality, or unenforceability shall",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 12834,
+            "end_char": 12903,
+            "start_line": 240,
+            "end_line": 240,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "in any respect, such invalidity, Wlegality, or unenforceability shall",
+            "clause": {
+              "clause_id": "neg23",
+              "label": "NEGATIVE",
+              "clause_name": "5.H. Partial Invalidity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Wlegality” is a mechanical spelling error that replaces the operative legal term “illegality” with a nonexistent word."
+          }
+        }
+      ]
+    },
+    "shareholder_saharia": {
+      "n_issues": 28,
+      "n_located": 25,
+      "by_tab": {
+        "risks_negotiation": 16,
+        "proofread": 12
+      },
+      "by_kind": {
+        "Important": 3,
+        "Notable": 6,
+        "Minor": 7,
+        "Internal Annotations": 1,
+        "Spelling + Grammar": 1,
+        "Section References": 1,
+        "Templated Content": 3,
+        "Definitions": 6
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad \"Business\" Definition",
+          "description": "The definition of \"Business\"  is extremely broad, encompassing a wide range of healthcare revenue cycle services (claims processing, billing, collections, call center, consulting, data entry, etc.). This sweeping definition could prevent the Shareholder from working in virtually any healthcare revenue cycle management role for three years. To protect Saharia, this should be narrowed to the specific services actually provided by the Company as of the closing date.",
+          "revision": "\"Business\" shall mean the business ofactually conducted by the Company as of the date of this Agreement, specifically limited to providing claims processing, billing,",
+          "comment": "Under Michigan law, non-compete restrictions must be reasonable in scope and tied to legitimate business interests; an overly broad definition of 'Business' risks unenforceability, so we narrowed it to the specific services the Company actually provided as of closing.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2125,
+            "end_char": 2469,
+            "start_line": 51,
+            "end_line": 55,
+            "match_cover": 0.458,
+            "match_run": 5,
+            "matched_text": "shall mean (a) a client of the Buyer, or the Acquired Companies, (b) an entity which was a client of an Acquired Company at any time during the six _ month period prior to the date of this Agreement or (c) an entity which was actively sought by the Buyer or by an Acquired Company as a prospective cl",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "1.C. Definition of “Customer”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The breadth of the enumerated Business definition is an enforceability and negotiation concern, not an ambiguity in what services it lists."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Expansive \"Company\" Definition Includes Future Successors and Affiliates",
+          "description": "The definition of \"Company\"  extends beyond Ajuba to include any future successor, subsidiary, or affiliate \"at any time after the date of this Agreement.\" This means the non-compete effectively expands over time as the Company grows or is acquired, binding Saharia to restrictions he could not have anticipated. The definition should be fixed as of the closing date to prevent scope creep.",
+          "revision": "... mean Ajuba and its subsidiaries and any corporation oras of the date of this Agreement and any corporation or entity that, as of the date of this Agreement, is a subsidiary or affiliate of the Company.",
+          "comment": "We fixed the 'Company' definition to the closing date to ensure Saharia's non-compete scope is ascertainable at signing; binding a shareholder to restrictions tied to future, unidentified successors and affiliates raises enforceability concerns under Michigan non-compete law, which requires reasonable and definite scope.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1815,
+            "end_char": 2108,
+            "start_line": 46,
+            "end_line": 49,
+            "match_cover": 0.667,
+            "match_run": 8,
+            "matched_text": "mean Ajuba and its subsidiaries and any corporation or entity that now, or at any time after the date of this Agreement, is a successor (whether by purchase of all or substantially all of the business and/or assets, merger, consolidation or liquidation), subsidiary or affiliate of the Company",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.B. Definition of “Company”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The inclusion of future successors, subsidiaries, and affiliates is express. Potential future expansion is a commercial-scope concern, not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Customer Definition Includes Prospective Clients",
+          "description": "The \"Customer\" definition  includes entities that were merely \"actively sought\" as prospective clients during the twelve months prior to the Agreement. This is overly broad—Saharia may have no way to know which entities were being pursued by the Buyer. The prospective client prong should be removed or at minimum limited to prospects with whom the Shareholder personally had substantial dealings.",
+          "revision": "... Buyer, or the Acquired Companies, or (b)",
+          "comment": "The prospective client prong created an unenforceable and commercially unreasonable restriction under Michigan law, which requires non-compete obligations to be reasonably specific and knowable to the restricted party; we removed it to bring the definition into compliance.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2156,
+            "end_char": 2326,
+            "start_line": 51,
+            "end_line": 53,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "Buyer, or the Acquired Companies, (b) an entity which was a client of an Acquired Company at any time during the six _ month period prior to the date of this Agreement or",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "1.C. Definition of “Customer”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrases “actively sought” and “material contact” lack objective boundaries and may require construction when deciding whether a particular prospect is a Customer."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Passive Investment Threshold Too Low at 2%",
+          "description": "The non-compete carve-out for passive investments  only permits holding less than 2% of a publicly traded corporation. This is below market standard, which typically allows up to 5%. The threshold should be increased to better protect Saharia's investment flexibility.",
+          "revision": "holder of less than 25% of the outstanding capital ...",
+          "comment": "The 2% threshold is below market standard for passive investment carve-outs; a 5% threshold is consistent with typical non-compete provisions and reflects the widely accepted definition of a passive, non-controlling interest under Michigan law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3566,
+            "end_char": 3615,
+            "start_line": 81,
+            "end_line": 81,
+            "match_cover": 0.889,
+            "match_run": 4,
+            "matched_text": "holder of less than 2% of the outstanding capital",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The less-than-2% threshold is definite; whether market practice favors 5% is a negotiation issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Injunctive Relief Without Bond Requirement",
+          "description": "Section 2(C)  waives the bond requirement for injunctive relief. This is unfavorable to Saharia because a bond protects the restrained party from damages if an injunction is later found to have been wrongly granted. The bond waiver should be removed.",
+          "revision": "... its express and explicit terms without the.",
+          "comment": "Michigan courts generally require a bond as a condition of injunctive relief to protect the restrained party from wrongful enjoinment; waiving this protection is one-sided and inconsistent with equitable principles under Michigan Court Rule 3.310.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6775,
+            "end_char": 6817,
+            "start_line": 137,
+            "end_line": 137,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "its express and explicit terms without the",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "2.C. Injunctive relief for breach of covenant"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The bond waiver is express and unambiguous. Its procedural fairness or enforceability does not create one of the specified construction defects."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Obligation Has No Time Limitation",
+          "description": "The confidentiality restriction  applies \"at any time, either during or subsequent to the Restricted Period,\" creating an indefinite obligation. While trade secrets may warrant perpetual protection, the broad definition of \"Confidential Information\" goes well beyond trade secrets (e.g., price lists, sales figures, billing procedures). A reasonable time limitation should apply to non-trade-secret information.",
+          "revision": "... or use at any time, either during or subsequent during the Restricted Period or for a period of five (5) years following the expiration of the Restricted Period (provided that such time limitation shall not apply to information that constitutes a trade secret under applicable law), any Confidential Information of which the Shareholder",
+          "comment": "We narrowed the confidentiality obligation to five years post-Restricted Period for non-trade-secret information, as indefinite restrictions on general business information exceed what Michigan courts recognize as reasonable and risk unenforceability of the entire provision; trade secret protection is preserved without limitation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6906,
+            "end_char": 7034,
+            "start_line": 144,
+            "end_line": 146,
+            "match_cover": 0.358,
+            "match_run": 9,
+            "matched_text": "or use at any time, either during or subsequent to the Restricted Period, any Confidential Information of which the Shareholder",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "3.A. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“At any time” during or after the Restricted Period clearly creates an indefinite obligation. The issue concerns reasonableness and enforceability, not uncertain meaning."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Bond Waiver (Section 3)",
+          "description": "Similar to Section 2(C), the confidentiality enforcement provision  also waives the bond requirement for equitable relief. This is unfavorable to Saharia and should be removed for the same reasons.",
+          "revision": "available without the necessity of posting a bond. The provisions of this ...",
+          "comment": "Michigan courts generally require a bond as a condition of equitable relief; waiving that requirement in the confidentiality provision shifts procedural risk unfairly onto Saharia and is inconsistent with standard practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9258,
+            "end_char": 9331,
+            "start_line": 180,
+            "end_line": 180,
+            "match_cover": 1.0,
+            "match_run": 12,
+            "matched_text": "available without the necessity of posting a bond. The provisions of this",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "3.B. Equitable remedies; survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The confidentiality bond waiver is explicit; objecting to the allocation of procedural risk is a negotiation issue."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Non-Disparagement Applies Indefinitely and Only Benefits Company",
+          "description": "The no-disparagement clause  applies \"indefinitely\" after the Agreement ends. While it is stated as mutual (\"no Party shall disparage\"), in practice this primarily constrains Saharia, as the Company is the entity with ongoing business interests. Consider adding a reasonable time limitation or ensuring the provision is truly reciprocal by binding the Company's officers and directors.",
+          "revision": "... Agreement is in effect and indefinitelyfor a period of three (3) years thereafter,",
+          "comment": "An indefinite non-disparagement obligation is unenforceable as against public policy under Michigan law and imposes a disproportionate burden on an individual shareholder; a three-year post-termination period is commercially reasonable and consistent with market practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9423,
+            "end_char": 9893,
+            "start_line": 183,
+            "end_line": 191,
+            "match_cover": 0.538,
+            "match_run": 5,
+            "matched_text": "Agreement is in effect and indefinitely thereafter, regardless of any dispute that may arise in the future, no Party shall disparage, criticize or make statements to the detriment of any other Party, except as part of any dispute resolution proceeding related to any Agreement between the Parties. Mi",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Disparagement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Indefinitely thereafter” and “no Party” clearly establish an indefinite, facially mutual obligation. The asserted practical imbalance does not create textual ambiguity."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Buyer as Third-Party Beneficiary Expands Enforcement Risk",
+          "description": "The third-party beneficiary clause  makes the Buyer a third-party beneficiary, meaning both the Company and the Buyer can independently enforce the non-compete against Saharia. This creates dual enforcement exposure. Consider removing this provision or clarifying that the Buyer's rights are subject to the same limitations and defenses.",
+          "revision": "remedies under this Agreement except that the Buyer shall be deemed a third.",
+          "comment": "Granting Buyer unconditional third-party beneficiary status creates duplicative enforcement exposure; we've scoped the provision to ensure any Buyer enforcement rights remain subject to the same limitations and defenses applicable under this Agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10218,
+            "end_char": 10293,
+            "start_line": 196,
+            "end_line": 196,
+            "match_cover": 1.0,
+            "match_run": 13,
+            "matched_text": "remedies under this Agreement except that the Buyer shall be deemed a third",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "5.A. Entire Agreement; Third Party Beneficiaries"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Buyer’s third-party-beneficiary status is expressly granted. Dual enforcement exposure is a substantive risk rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Judicial Modification Clause Encourages Overreach",
+          "description": "The blue-pencil / judicial reformation provision  invites the court to narrow overly broad restrictions rather than strike them. This incentivizes the Company to draft aggressively broad restrictions knowing a court will simply trim them to what is enforceable. From Saharia's perspective, if a provision is found unreasonable, it should be void rather than reformed.",
+          "revision": "... such provision shall be deemed void and deleted herefrom with",
+          "comment": "Michigan courts have discretion to refuse reformation where a covenant is unreasonably overbroad; replacing blue-pencil reformation with a void-and-sever approach creates a balanced incentive structure that discourages aggressive over-drafting of restrictive covenants.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5628,
+            "end_char": 5680,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "such provision shall be deemed deleted herefrom with",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.B. Reasonableness and severability of restrictions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The judicial-modification mechanism clearly directs limitation to the extent necessary for enforceability. The concern is that this encourages over-drafting, not that its meaning is uncertain."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Worldwide Process Service is Burdensome",
+          "description": "The jurisdiction provision  permits process to be \"served on any party anywhere in the world.\" Given that Saharia resides in India , this broad service-of-process language could be used to serve him in a manner that does not provide adequate notice. Consider requiring that service on Saharia comply with applicable international service conventions (e.g., the Hague Convention).",
+          "revision": "... party anywhere in the world in accordance with applicable law.",
+          "comment": "We clarified the service-of-process provision to require compliance with applicable law, including relevant international service conventions, ensuring that service on parties residing abroad (such as in India) meets internationally recognized standards of notice and due process.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11702,
+            "end_char": 11729,
+            "start_line": 220,
+            "end_line": 220,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "party anywhere in the world",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "5.E. Governing Law; Jurisdiction"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Anywhere in the world” addresses the place of service and does not purport to displace legally required methods of service. The requested convention language is an additional safeguard, not a construction correction."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Lacks Email as Delivery Method",
+          "description": "The notice provision  only permits delivery by telex, facsimile, courier, or mail. Telex is obsolete and email is not included. Given that Saharia is based in India, email would be the most practical and reliable method of communication. Adding email as an accepted delivery method would modernize the provision and benefit both parties.",
+          "revision": "... (which shall include communications by telexemail and facsimile)",
+          "comment": "We added email as a permitted delivery method to modernize the notice provision and reflect current commercial practice, particularly given the cross-border nature of this arrangement between parties in different jurisdictions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13366,
+            "end_char": 13423,
+            "start_line": 248,
+            "end_line": 248,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "which shall include communications by telex and facsimile",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "5.J. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The omission of email from an express list of delivery methods is inconvenient but unambiguous."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Restricted Area Covers Entire United States",
+          "description": "The Restricted Area  covers \"the United States, its territories and protectorates.\" This is an extremely broad geographic restriction for a non-compete. While courts may uphold nationwide non-competes in the context of stock purchase transactions, Saharia should negotiate to limit the area to regions where the Company actually conducts business or has customers, which would be more defensible and less burdensome.",
+          "revision": "The \"Restricted Area\" shall mean the United States, its territories andthose states within the United States in which the Company conducts business or has Customers as of the date of this Agreement.",
+          "comment": "Michigan courts require non-compete restrictions to be reasonable in geographic scope; limiting the Restricted Area to states where the Company actually conducts business or has customers ensures enforceability and avoids overbreadth that could void the restriction entirely.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2839,
+            "end_char": 3575,
+            "start_line": 67,
+            "end_line": 81,
+            "match_cover": 0.625,
+            "match_run": 10,
+            "matched_text": "The “Restricted Area” shall mean the United States, its territories and protectorates. 2 Non-Competition; Non-Solicitation. A. To induce the Buyer to enter into the Stock Purchase Agreement, in recognition of the highly competitive nature of the industries in which the Company conducts its business,",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Restricted Area is geographically definite. Whether nationwide coverage is reasonable is an enforceability and negotiation question."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Carve-Out for Activities in India",
+          "description": "The non-compete  restricts the Shareholder from \"directly or indirectly\" engaging in competitive activity in the Restricted Area. Since Saharia resides in India  and the business involves offshore services, even work performed in India that touches U.S. customers could arguably fall within this restriction through the \"indirectly\" language. Consider adding an express carve-out for activities conducted entirely outside the Restricted Area that do not target U.S. customers.",
+          "revision": "directly or indirectly (but excluding activities conducted entirely outside the Restricted Area that do not involve solicitation of Customers) in the Restricted Area engage ...",
+          "comment": "We narrowed the restriction to exclude activities conducted entirely outside the Restricted Area that do not involve solicitation of Customers, ensuring the covenant is tailored to legitimate competitive threats rather than penalizing ordinary offshore work that does not target the protected market.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3346,
+            "end_char": 3398,
+            "start_line": 78,
+            "end_line": 78,
+            "match_cover": 0.333,
+            "match_run": 5,
+            "matched_text": "directly or indirectly in the Restricted Area engage",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “directly or indirectly in the Restricted Area engage” is uncertain as applied to work performed abroad that indirectly affects or serves the United States."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Pre-Negotiated Acknowledgment of Reasonableness",
+          "description": "Section 2(B)  contains a pre-negotiated acknowledgment that the restrictions \"are reasonable in scope and duration.\" This language weakens Saharia's ability to later argue the restrictions are unreasonable if challenged in court. Consider removing \"and agrees\" so this is merely an acknowledgment rather than a binding concession.",
+          "revision": "Section 2 are reasonable in scope and duration and are necessary to protect the",
+          "comment": "We revised this language to remove a pre-negotiated waiver of Saharia's right to contest reasonableness; under Michigan law, courts independently assess the enforceability of restrictive covenants and party stipulations do not foreclose that analysis.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4802,
+            "end_char": 4881,
+            "start_line": 103,
+            "end_line": 103,
+            "match_cover": 1.0,
+            "match_run": 14,
+            "matched_text": "Section 2 are reasonable in scope and duration and are necessary to protect the",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.B. Reasonableness and severability of restrictions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The acknowledgment of reasonableness is clear. Its possible evidentiary or litigation effect is not a textual construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Court Directed to Enforce Restrictions to \"Fullest Extent\"",
+          "description": "Section 2(B)  states \"It is the intention of the Parties that a court shall enforce these restrictions to the fullest extent permitted by law.\" This provision directs courts to maximize enforcement against Saharia. From Saharia's perspective, the agreement should not include language that advocates for the broadest possible enforcement of restrictions against him.",
+          "revision": "Agreement. It is the intention of the Parties that a court shall enforce theseIf any",
+          "comment": "Language directing courts to enforce restrictions to the 'fullest extent permitted by law' is one-sided and creates an unfair interpretive bias against the restricted party; neutral severability language is the appropriate standard under Michigan law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5280,
+            "end_char": 5545,
+            "start_line": 109,
+            "end_line": 120,
+            "match_cover": 0.933,
+            "match_run": 13,
+            "matched_text": "Agreement. It is the intention of the Parties that a court shall enforce these restrictions to the fullest extent permitted by law. The Shareholder and the 2 © oo 9:41-CV-12936-MOB-LJM Doc# 11-2 Filéd 10/17/11 Pg 4of10 “Pg ID 161 3. Company agree that, if any",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.B. Reasonableness and severability of restrictions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“To the fullest extent permitted by law” is a clear enforcement instruction. Its asserted one-sidedness does not itself create a genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Intentional blank page notation",
+          "description": "The signature page section contains an internal drafting note \"This page intentionally left blank\" . This is a process marker indicating a blank page in the original document and should be removed before finalization.",
+          "revision": "This page intentionally left blank",
+          "comment": "Removed internal drafting note 'This page intentionally left blank' — process marker not intended for inclusion in the final executed document.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14989,
+            "end_char": 15023,
+            "start_line": 307,
+            "end_line": 307,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "This page intentionally left blank",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Double period error",
+          "description": "Extra period in acknowledgment clause",
+          "revision": "... of the goodwill acquired thereby... If any",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4992,
+            "end_char": 5033,
+            "start_line": 105,
+            "end_line": 105,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "of the goodwill acquired thereby.. If any",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "2.B. Reasonableness and severability of restrictions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The double period is a harmless typographical blemish that does not change the acknowledgment’s meaning."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid subsection reference to Section 5(J)",
+          "description": "The Notices provision  contains a self-reference to \"this Section 5(J)\", but the Notices subsection appears to be Section 5(I), not Section 5(J). Based on the sequential lettering of subsections in Section 5, the Notices provision  is the ninth subsection (I), not the tenth (J). Only subsection A is explicitly labeled , but counting the subsequent provisions shows: A (Entire Agreement), B (No Waiver), C (Amendment), D (Representation), E (Governing Law), F (Successors and Assigns), G (Counterparts), H (Partial Invalidity), and I (Notices).",
+          "revision": "this Section 5(J)5(I)",
+          "comment": "Corrected internal cross-reference from Section 5(J) to Section 5(I) to accurately reflect the sequential lettering of subsections within Section 5, where Notices is the ninth subsection.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14416,
+            "end_char": 14432,
+            "start_line": 298,
+            "end_line": 298,
+            "match_cover": 0.667,
+            "match_run": 4,
+            "matched_text": "this Section 5(J",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "5.J. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The reference to Section 5(J) is a mechanical cross-reference error because Notices appears to be the ninth subsection, Section 5(I)."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled date placeholder with symbols",
+          "description": "Found: \"July KX, 2005\" — Date contains placeholder symbols leaving the execution date ambiguous and unenforceable.",
+          "revision": "",
+          "comment": "Insert the correct day of the month in place of 'KX'.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing telephone number",
+          "description": "Found: \"Telephone :\" — Unfilled telephone field in notice provision prevents effective communication under the Agreement. See 3 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the party's telephone number including area code.",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing facsimile number",
+          "description": "Found: \"Facsimile:\" — Unfilled facsimile field undermines notice delivery methods specified in the Agreement. See 3 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the facsimile (fax) number for the relevant party.",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Acquired Companies",
+          "description": "The term \"Acquired Companies\" and its singular form \"Acquired Company\" are used in the definition of Customer  but are never defined in the Agreement. This creates ambiguity about which entities are included when determining who qualifies as a Customer, particularly for purposes of the non-solicitation restrictions in Section 2. Given that Customer restrictions are a key part of the noncompetition obligations, the undefined nature of \"Acquired Companies\" undermines enforceability.",
+          "revision": "F. \"Acquired Companies\" shall mean the Company and its subsidiaries acquired by Buyer pursuant to the Stock Purchase Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2691,
+            "end_char": 3030,
+            "start_line": 63,
+            "end_line": 72,
+            "match_cover": 0.579,
+            "match_run": 4,
+            "matched_text": "shall mean the period commencing on the date of this Agreement and ending on the date that is three (3) years after the date of this Agreement. E. The “Restricted Area” shall mean the United States, its territories and protectorates. 2 Non-Competition; Non-Solicitation. A. To induce the Buyer to ent",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "1.D. Definition of “Restricted Period”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Background C provides that otherwise undefined capitalized terms take their meanings from the Stock Purchase Agreement, so “Acquired Companies” is not necessarily undefined for construction purposes."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Unused definition: Sellers",
+          "description": "The term \"Sellers\" is defined in the Background section  as referring collectively to Nader Samii, Devendra Saharia and Shakti Singh, but this defined term is never used anywhere else in the Agreement. Since the Agreement is only between the Company and Devendra Saharia (the Shareholder), and the other Sellers are not parties to this particular Agreement, the definition serves no purpose and creates unnecessary clutter in the document. Remove definition Saharia and Shakti Singh (collectively, the \"Sellers\"). Buyer is purchasing all of",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 476,
+            "end_char": 1616,
+            "start_line": 17,
+            "end_line": 42,
+            "match_cover": 0.301,
+            "match_run": 7,
+            "matched_text": "in this Agreement individually as a “Party” and together as the “Parties.” BACKGROUND A. Pursuant to the terms and conditions of the Stock Purchase Agreement, dated as of July ¥ _, 2005 (the “Stock Purchase Agreement”), among MiraMed Global Services, Inc., a Delaware corporation (“Buyer”) and Nader ",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Background A"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "An unused defined term is unnecessary drafting clutter but creates no ambiguity or inconsistency in an operative obligation."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: party",
+          "description": "In the Successors and Assigns provision , the word \"party\" appears in lowercase (\"no party may assign\") when it should be capitalized as \"Party\" to refer to the defined term. This inconsistency could create ambiguity about whether the restriction applies only to the defined Parties or to any party in general. See 5 uses of this definition",
+          "revision": "... assigns; provided, however, that no partyParty may assign or",
+          "comment": "",
+          "group_size": 5,
+          "location": {
+            "start_char": 11983,
+            "end_char": 12038,
+            "start_line": 226,
+            "end_line": 226,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "assigns; provided, however, that no party may assign or",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "5.F. Successors and Assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "In context, lowercase “party” plainly refers to a party to this Agreement. The capitalization inconsistency does not change the assignment provision’s meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: parties",
+          "description": "In the Notices provision , the phrase \"or to such other address as the parties hereto may designate\" uses lowercase \"parties\" when it should be capitalized as \"Parties\" to refer to the defined term. This inconsistency could create ambiguity.",
+          "revision": "or to such other address as the partiesParties hereto may designate in writing to the other in accordance",
+          "comment": "",
+          "group_size": 3,
+          "location": {
+            "start_char": 14312,
+            "end_char": 14410,
+            "start_line": 297,
+            "end_line": 297,
+            "match_cover": 0.944,
+            "match_run": 10,
+            "matched_text": "or to such other address as the parties hereto may designate in writing to the other in accordance",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "5.J. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The phrase “parties hereto” unambiguously identifies the contracting parties despite lowercase capitalization."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Ajuba",
+          "description": "In the definition of Company , the term \"Ajuba\" is used (\"The 'Company' shall mean Ajuba and its subsidiaries...\") but \"Ajuba\" itself is never formally defined. While it can be inferred from the recital  that Ajuba refers to Ajuba International, Inc., using an undefined shorthand in a formal definition creates potential ambiguity. The definition should either use the full corporate name or explicitly define \"Ajuba\" as shorthand for Ajuba International, Inc.",
+          "revision": "... The \"Company\" shall mean Ajuba International, Inc. (\"Ajuba\") and its subsidiaries and any ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1795,
+            "end_char": 1854,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 0.769,
+            "match_run": 6,
+            "matched_text": "The “Company” shall mean Ajuba and its subsidiaries and any",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.B. Definition of “Company”"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Ajuba” is an undefined shorthand within the definition of Company. Although context strongly suggests Ajuba International, Inc., the imprecise entity reference presents a lexical identification issue."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: customer",
+          "description": "In Section 2 non-solicitation provisions , the phrase \"customer's business\" uses lowercase \"customer\" when it should be capitalized as \"Customer\" to refer to the defined term. The provision restricts requesting or advising any Customer to withdraw business, so this reference should use the defined term.",
+          "revision": "any Customer to withdraw, curtail or cancel any such customerCustomer's business with |",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4000,
+            "end_char": 4077,
+            "start_line": 87,
+            "end_line": 88,
+            "match_cover": 0.917,
+            "match_run": 9,
+            "matched_text": "any Customer to withdraw, curtail or cancel any such customer’s business with",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "2.A. Non-Competition; Non-Solicitation covenants"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase possessive “customer’s” has the immediately preceding defined “Customer” as its clear antecedent, so the capitalization inconsistency does not affect meaning."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg10": {
+      "clause_id": "neg10",
+      "clause_name": "2.A. Non-Competition; Non-Solicitation covenants",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 8,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Passive Investment Threshold Too High",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The 2% threshold is definite; the issue concerns the commercial adequacy of that negotiated percentage, not textual construction."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Employee Non-Solicit Missing Independent Contractors",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The scope of “consultant” may be uncertain as applied to independent contractors, since some—but not necessarily all—independent contractors could reasonably fall within that term."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Punctuation error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The period after “and” interrupts the coordinated phrase “promote and preserve,” leaving a grammatically malformed sentence and constituting a mechanical punctuation error."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Undefined term: Acquired Companies",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Although “Acquired Companies” is not defined within this document, Background C imports meanings for otherwise undefined capitalized terms from the Stock Purchase Agreement. The issue therefore does not establish an intrinsic ambiguity in this instrument."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Passive Investment Threshold Too Low at 2%",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The less-than-2% threshold is definite; whether market practice favors 5% is a negotiation issue."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Restricted Area Covers Entire United States",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Restricted Area is geographically definite. Whether nationwide coverage is reasonable is an enforceability and negotiation question."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "No Carve-Out for Activities in India",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “directly or indirectly in the Restricted Area engage” is uncertain as applied to work performed abroad that indirectly affects or serves the United States."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Inconsistent capitalization: customer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase possessive “customer’s” has the immediately preceding defined “Customer” as its clear antecedent, so the capitalization inconsistency does not affect meaning."
+        }
+      ],
+      "risky": true
+    },
+    "neg11": {
+      "clause_id": "neg11",
+      "clause_name": "2.B. Reasonableness and severability of restrictions",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "No Tolling Provision for Breach Period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of tolling is an omitted commercial protection, not an ambiguity, mechanical defect, or internal inconsistency."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Punctuation error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The duplicated period after “thereby” is typographical but does not alter the provision’s meaning."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Judicial Modification Clause Encourages Overreach",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The judicial-modification mechanism clearly directs limitation to the extent necessary for enforceability. The concern is that this encourages over-drafting, not that its meaning is uncertain."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Pre-Negotiated Acknowledgment of Reasonableness",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The acknowledgment of reasonableness is clear. Its possible evidentiary or litigation effect is not a textual construction defect."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Court Directed to Enforce Restrictions to \"Fullest Extent\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“To the fullest extent permitted by law” is a clear enforcement instruction. Its asserted one-sidedness does not itself create a genuine ambiguity."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Double period error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The double period is a harmless typographical blemish that does not change the acknowledgment’s meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "2.C. Injunctive relief for breach of covenant",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "shareholder_saharia"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "shareholder_saharia",
+          "title": "Injunctive Relief Without Bond Requirement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The bond waiver is express and unambiguous. Its procedural fairness or enforceability does not create one of the specified construction defects."
+        }
+      ],
+      "risky": false
+    },
+    "neg13": {
+      "clause_id": "neg13",
+      "clause_name": "3.A. Confidentiality",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Vague Notice Obligation for Compelled Disclosure",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Adequate opportunity” is vague because the provision supplies no objective timing or procedural standard for determining adequacy."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Confidentiality Obligation Has No Time Limitation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“At any time” during or after the Restricted Period clearly creates an indefinite obligation. The issue concerns reasonableness and enforceability, not uncertain meaning."
+        }
+      ],
+      "risky": true
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "3.B. Equitable remedies; survival",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "No Return or Destruction of Confidential Information",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "A return-or-destruction obligation is simply absent; its omission does not make the existing nondisclosure and nonuse duties ambiguous."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Confidentiality Bond Waiver (Section 3)",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The confidentiality bond waiver is explicit; objecting to the allocation of procedural risk is a negotiation issue."
+        }
+      ],
+      "risky": false
+    },
+    "neg15": {
+      "clause_id": "neg15",
+      "clause_name": "4. No Disparagement",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "No Disparagement Exception Too Broad",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “as part of any dispute resolution proceeding” has an uncertain boundary, including whether it covers only formal submissions or broader communications connected with a dispute."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "No Prevailing Party Attorney's Fees",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an attorney-fee provision is a remedies negotiation issue, not a textual ambiguity or conflict."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Confidentiality Survival Clause Should Explicitly Be Perpetual",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Standing alone, “shall survive the termination” does not state a duration and can raise a temporal-scope question, although Section 3.A strongly supports indefinite application."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Mutual Non-Disparagement May Limit Company's Legitimate Communications",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Terms such as “disparage,” “criticize,” and “statements to the detriment” have uncertain boundaries, particularly as applied to truthful ordinary-course communications."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Non-Disparagement Applies Indefinitely and Only Benefits Company",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Indefinitely thereafter” and “no Party” clearly establish an indefinite, facially mutual obligation. The asserted practical imbalance does not create textual ambiguity."
+        }
+      ],
+      "risky": true
+    },
+    "neg16": {
+      "clause_id": "neg16",
+      "clause_name": "5.A. Entire Agreement; Third Party Beneficiaries",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "shareholder_saharia"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "shareholder_saharia",
+          "title": "Buyer as Third-Party Beneficiary Expands Enforcement Risk",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Buyer’s third-party-beneficiary status is expressly granted. Dual enforcement exposure is a substantive risk rather than a construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "Background A",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "shareholder_saharia"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "shareholder_saharia",
+          "title": "Unused definition: Sellers",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "An unused defined term is unnecessary drafting clutter but creates no ambiguity or inconsistency in an operative obligation."
+        }
+      ],
+      "risky": false
+    },
+    "neg20": {
+      "clause_id": "neg20",
+      "clause_name": "5.E. Governing Law; Jurisdiction",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "No Waiver of Jury Trial",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a jury-trial waiver concerns litigation strategy and negotiated procedure, not construction of existing text."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Worldwide Process Service is Burdensome",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Anywhere in the world” addresses the place of service and does not purport to displace legally required methods of service. The requested convention language is an additional safeguard, not a construction correction."
+        }
+      ],
+      "risky": false
+    },
+    "neg21": {
+      "clause_id": "neg21",
+      "clause_name": "5.F. Successors and Assigns",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "shareholder_saharia"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "shareholder_saharia",
+          "title": "Inconsistent capitalization: party",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "In context, lowercase “party” plainly refers to a party to this Agreement. The capitalization inconsistency does not change the assignment provision’s meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg23": {
+      "clause_id": "neg23",
+      "clause_name": "5.H. Partial Invalidity",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_ajuba"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Wlegality” is a mechanical spelling error that replaces the operative legal term “illegality” with a nonexistent word."
+        }
+      ],
+      "risky": true
+    },
+    "neg24": {
+      "clause_id": "neg24",
+      "clause_name": "5.J. Notices",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Notice Provision Lacks Email as Delivery Method",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The permitted delivery methods are expressly listed. Omitting email may be outdated or inconvenient, but it creates no construction defect."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Invalid section reference to Section 5(J)",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The self-reference to nonexistent Section 5(J), rather than the apparent Section 5(I), is a mechanical cross-reference error."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Notice Provision Lacks Email as Delivery Method",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The omission of email from an express list of delivery methods is inconvenient but unambiguous."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Invalid subsection reference to Section 5(J)",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The reference to Section 5(J) is a mechanical cross-reference error because Notices appears to be the ninth subsection, Section 5(I)."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Inconsistent capitalization: parties",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The phrase “parties hereto” unambiguously identifies the contracting parties despite lowercase capitalization."
+        }
+      ],
+      "risky": true
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "1.A. Definition of “Business”",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "company_ajuba"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Business Definition Limited to Current Services",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The definition expressly covers the listed services for hospitals and physicians. The issue seeks broader substantive coverage rather than identifying uncertainty in the existing scope."
+        }
+      ],
+      "risky": false
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "1.B. Definition of “Company”",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Assignment Rights Too Narrow for Company",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 1.B includes future successors within “Company,” while Section 5.F prohibits non-affiliate assignments without consent. A court may need to determine whether successor status under Section 1.B bypasses the assignment restriction in Section 5.F."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Expansive \"Company\" Definition Includes Future Successors and Affiliates",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The inclusion of future successors, subsidiaries, and affiliates is express. Potential future expansion is a commercial-scope concern, not a construction defect."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Undefined term: Ajuba",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Ajuba” is an undefined shorthand within the definition of Company. Although context strongly suggests Ajuba International, Inc., the imprecise entity reference presents a lexical identification issue."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "1.C. Definition of “Customer”",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_ajuba",
+        "shareholder_saharia"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "company_ajuba",
+          "title": "Short Lookback Period for Former Customers",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The six-month lookback is clear; the issue merely argues that a longer negotiated period would better protect the Company."
+        },
+        {
+          "party": "company_ajuba",
+          "title": "Prospective Client Restriction Weakened by Material Contact Requirement",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Material contact” is a vague standard whose boundary is not defined, potentially requiring construction of what degree or kind of contact qualifies."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Overly Broad \"Business\" Definition",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The breadth of the enumerated Business definition is an enforceability and negotiation concern, not an ambiguity in what services it lists."
+        },
+        {
+          "party": "shareholder_saharia",
+          "title": "Customer Definition Includes Prospective Clients",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrases “actively sought” and “material contact” lack objective boundaries and may require construction when deciding whether a particular prospect is a Customer."
+        }
+      ],
+      "risky": true
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "1.D. Definition of “Restricted Period”",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "shareholder_saharia"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "shareholder_saharia",
+          "title": "Undefined term: Acquired Companies",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Background C provides that otherwise undefined capitalized terms take their meanings from the Stock Purchase Agreement, so “Acquired Companies” is not necessarily undefined for construction purposes."
+        }
+      ],
+      "risky": false
+    }
+  }
+}

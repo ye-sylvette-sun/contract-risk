@@ -1,0 +1,2184 @@
+{
+  "contract_id": "817FSupp2d1357_settlement_and_release_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 15,
+  "n_issues": 57,
+  "n_located": 55,
+  "n_judged": 52,
+  "n_skipped": 5,
+  "counts": {
+    "cat1": 11,
+    "cat2": 0,
+    "none": 41
+  },
+  "parties": {
+    "releasee_american_guarantee": {
+      "n_issues": 20,
+      "n_located": 19,
+      "by_tab": {
+        "risks_negotiation": 10,
+        "proofread": 10
+      },
+      "by_kind": {
+        "Important": 4,
+        "Notable": 6,
+        "Internal Annotations": 3,
+        "Definitions": 2,
+        "Spelling + Grammar": 5
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Incomplete Confidentiality Clause",
+          "description": "The confidentiality provision  appears to be cut off mid-sentence. The clause reads \"no part of the monetary payment is in\" and then stops. This incomplete sentence leaves the confidentiality provision ambiguous and potentially unenforceable. It likely was intended to state that no part of the monetary payment is in exchange for confidentiality (a common tax-related representation). This must be completed to avoid disputes over the enforceability of the entire confidentiality clause.",
+          "revision": "... the monetary payment is in consideration for confidentiality.",
+          "comment": "The confidentiality clause was incomplete and ambiguous as drafted; we completed it with the standard representation that no part of the monetary payment is in consideration for confidentiality, which is necessary to preserve the clause's enforceability and comply with applicable tax characterization requirements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6327,
+            "end_char": 6353,
+            "start_line": 113,
+            "end_line": 113,
+            "match_cover": 0.625,
+            "match_run": 5,
+            "matched_text": "the monetary payment is in",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The sentence ends at “the monetary payment is in,” leaving an operative representation mechanically incomplete and without ascertainable meaning."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Lacks Attorneys' Fees and Costs",
+          "description": "The indemnification provision  requires Releasors to \"protect, indemnify and hold harmless\" Releasees against claims, liens, or subrogation claims. However, it does not expressly include attorneys' fees, costs of defense, and expenses. To maximize protection for American Guarantee, the indemnification should explicitly cover these items so there is no ambiguity if a third-party claim arises.",
+          "revision": "... Releasors do hereby agree to protect, indemnify and hold harmless Releasees against any claim or lien, including all attorneys' fees, costs of defense, and expenses, or any other",
+          "comment": "Explicit inclusion of attorneys' fees, costs of defense, and expenses is standard practice in indemnification provisions and ensures the indemnity obligation is comprehensive and unambiguous under Georgia law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5255,
+            "end_char": 5369,
+            "start_line": 98,
+            "end_line": 99,
+            "match_cover": 0.643,
+            "match_run": 10,
+            "matched_text": "Releasors do hereby agree to protect, indemnify and hold harmless Releases against any claim or lien, or any other",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "Indemnification Against Claims and Liens"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The scope of “protect, indemnify and hold harmless” may require construction as to whether it includes defense costs and attorneys’ fees despite their not being expressly listed."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Lacks Remedies for Breach",
+          "description": "The confidentiality provision  prohibits disclosure of the settlement terms but provides no remedy for breach—such as injunctive relief, liquidated damages, or an express right to recover attorneys' fees for enforcement. Without a remedies provision, American Guarantee may face difficulty enforcing confidentiality if the Releasors disclose the settlement terms. Additionally, there is no carve-out for disclosures to tax advisors, accountants, or in connection with regulatory filings, which could make the clause impractical.",
+          "revision": "... or privy to this settement, except as may be required by law, by court order, or to each Party's respective accountants, tax advisors, or legal counsel. The Parties acknowledge that a breach of this confidentiality provision would cause irreparable harm and that the non-breaching Party shall be entitled to seek injunctive relief, in addition to any other remedies available at law or in equity, including reasonable attorneys' fees incurred in enforcing this provision.",
+          "comment": "We added standard remedies for breach, including injunctive relief and attorneys' fees, and narrowed the restriction with a carve-out for accountants, tax advisors, and legal counsel to make the confidentiality obligation both enforceable and operationally practical for all parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6129,
+            "end_char": 6830,
+            "start_line": 111,
+            "end_line": 129,
+            "match_cover": 0.284,
+            "match_run": 12,
+            "matched_text": "or privy to this settement except as may be required by law. It is further agreed that the confidentiality of the settlement is for the mutual benefit of Releasors and Releasees and that no part of the monetary payment is in In entering into this Release, Parties represent that they have read all th",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "Review of Terms and Advice of Counsel"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of specified remedies and additional disclosure carve-outs is a negotiation or enforcement concern, not an ambiguity, mechanical error, or inconsistency within the instrument."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Mutual Release Lacks Covenant Not to Sue from Releasors' Side",
+          "description": "While Releasors provide a covenant not to sue Releasees , the mutual release granted by Releasees to Releasors  does not include a reciprocal covenant not to sue. Under Georgia law, a release and a covenant not to sue are distinct—a release extinguishes the claim while a covenant not to sue is merely a promise not to bring suit. The asymmetry is favorable to American Guarantee, but the mutual release language in the Releasees-to-Releasors direction should be tightened to ensure it only covers claims \"directly or indirectly related to the Lawsuits\" and does not inadvertently release future unrelated claims.",
+          "revision": "... from any and all claims, damages, loss, whether known or unknown, made or which could have been made, which are directly or indirectly related to the Lawsuits or the incidents underlying or giving rise to the Lawsuits, as part of the consideration for Releasors'",
+          "comment": "We scoped the mutual release from Releasees to Releasors to claims arising from or related to the Lawsuits, consistent with the purpose of the settlement and ensuring neither party inadvertently waives rights unconnected to the underlying disputes.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1262,
+            "end_char": 2087,
+            "start_line": 24,
+            "end_line": 40,
+            "match_cover": 0.977,
+            "match_run": 27,
+            "matched_text": "from any and all claims, damages, loss, whether known or unknown, made or which could have been made, which are directly or indirectly related to the Lawsuits in exchange for the payment set forth above. Additionally, Releasors covenant not to sue Releasees for any claim, damage, or loss whether kno",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The releases and covenant not to sue are expressly asymmetric, but that drafting choice does not create a contradiction or genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Deadline for Dismissal of Lawsuit",
+          "description": "Releasors agree to dismiss Civil Action No. 07-CV-6694-9 with prejudice , but the agreement does not specify a deadline by which the dismissal must be filed. Without a time-bound obligation, American Guarantee has no contractual mechanism to compel prompt dismissal. A specific deadline (e.g., within 10 business days of execution or receipt of payment) should be added.",
+          "revision": "Releasors further agree to dismiss, within ten (10) business days of the execution of this Release, Civil Action No. O7-CV-6694-9 in ...",
+          "comment": "We specified a 10-business-day deadline for the dismissal filing to provide both parties with certainty and finality, which is consistent with standard settlement practice in Georgia courts.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1694,
+            "end_char": 1761,
+            "start_line": 29,
+            "end_line": 29,
+            "match_cover": 0.542,
+            "match_run": 8,
+            "matched_text": "Releasors further agree to dismiss Civil Action No. O7-CV-6694-9 in",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Failure to specify a dismissal deadline is an omitted performance detail, not one of the defined construction defects."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Dismissal Required for Fulton County Action",
+          "description": "The agreement references two lawsuits—one in Fulton County (Civil Action No. 2006-cv-120104)  and one in DeKalb County (Civil Action No. 07-CV-6694-9) —but only requires Releasors to dismiss the DeKalb County action with prejudice . There is no express obligation to dismiss the Fulton County action. If the Fulton County case is still pending, American Guarantee should require its dismissal with prejudice as well.",
+          "revision": "... to dismiss Civil Action No. 2006-cv-120104 in the Superior Court of Fulton County and Civil Action No. O7-CV-6694-9 in the Superior Court ...",
+          "comment": "Both actions arise from the same underlying dispute; requiring dismissal with prejudice of both cases is standard settlement practice and provides complete finality for all parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 300,
+            "end_char": 907,
+            "start_line": 11,
+            "end_line": 20,
+            "match_cover": 0.926,
+            "match_run": 17,
+            "matched_text": "to as “Releasors”) hereby release and forever discharge AMERICAN GUARANTEE AND LIABILITY INSURANCE COMPANY, together with its past or present officer, directors cmmployees, agents, attorneys, insurers, affiliated companies, subcontractors, subsidiaries, parestt | companies, successors and assigns, j",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement expressly requires dismissal of only the DeKalb action; omitting a similar obligation for the Fulton action does not contradict the broader release of claims concerning both lawsuits."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Payment Timing or Method Specified",
+          "description": "The agreement references $350,000 as consideration  but does not specify when payment is due, how it is to be made (e.g., wire transfer, check), or to whom payment should be directed. This lack of specificity could lead to disputes about whether payment was properly tendered, which could jeopardize the enforceability of the release. Consider adding payment timing, method, and payee details.",
+          "revision": "... THOUSAND end 00/100 DOLLARS ($350,000.00), to be paid by wire transfer within ten (10) business days of the full execution of this Release, paid to",
+          "comment": "We specified the payment method and timing to provide certainty of performance; without these terms, disputes over proper tender could undermine the enforceability of the release under Georgia law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 122,
+            "end_char": 755,
+            "start_line": 9,
+            "end_line": 18,
+            "match_cover": 0.429,
+            "match_run": 8,
+            "matched_text": "THOUSAND end 00/100 DOLLARS ($350,000.00) paid to ENTAIRE GLOBAL COMPANIES, INC., ENTAIRE GLOBAL FINANCIAL, INC., JONATHAN D. ROSEN AND WILLIAM R. MUIRHEAD (hereinafter referred to as “Releasors”) hereby release and forever discharge AMERICAN GUARANTEE AND LIABILITY INSURANCE COMPANY, together with ",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Missing payment mechanics are omitted commercial terms rather than an intrinsic textual ambiguity or conflict between provisions."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Representation of Signing Authority for Corporate Entities",
+          "description": "The competency representation  states that the Parties are \"persons over 18 years of age or corporate entities registered to do business in the State of Georgia.\" However, it does not include a representation that the individuals signing on behalf of the corporate Releasors (Entaire Global Companies, Inc. and Entaire Global Financial, Inc.) have actual authority to bind those entities. American Guarantee should require an express representation of signing authority to avoid later challenges to the enforceability of the release.",
+          "revision": "1. That Parties are each petsonspersons over 18 yeersyears of age or corporate entities ...",
+          "comment": "Under Georgia law, a release executed by an individual without authority to bind a corporate entity may be voidable; an express representation of signing authority is standard practice and necessary to ensure the release is fully enforceable against the corporate Releasors.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2575,
+            "end_char": 2650,
+            "start_line": 50,
+            "end_line": 50,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "1. That Parties are each petsons over 18 yeers of age or corporate entities",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "1. Capacity of Parties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lack of an express representation concerning signatory authority is an omitted protection, not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Tax Indemnification or Reporting Allocation",
+          "description": "The agreement does not address tax consequences of the $350,000 settlement payment—there is no provision allocating responsibility for tax reporting (e.g., 1099 issuance), no representation regarding the tax treatment of the payment, and no indemnification of American Guarantee for any tax liability that may arise. Under IRS rules, the payor may have reporting obligations, and absent a clear allocation, disputes could arise. Consider adding a provision clarifying tax responsibilities and indemnifying American Guarantee for any adverse tax consequences.",
+          "revision": "... Satisfaction of any and all claithsclaims, whether specifically stated or not, which were asserted or might have been asserted by the Parties in the Lawsuits. Releasors shall be solely responsible for all tax consequences, if any, arising from the settlement payment and shall indemnify and hold harmless Releasees from any tax liability, penalties, or interest resulting therefrom.",
+          "comment": "Under IRS rules, settlement payments may trigger reporting obligations (e.g., Form 1099), and absent a clear contractual allocation, American Guarantee could face unintended tax exposure; we clarified that Releasors bear responsibility for tax consequences and indemnify Releasees accordingly, which is consistent with standard settlement practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5740,
+            "end_char": 6306,
+            "start_line": 105,
+            "end_line": 113,
+            "match_cover": 0.526,
+            "match_run": 19,
+            "matched_text": "Satisfaction of any and all claiths, whether specifically stated or not, which were asserted or might have been asserted by the Parties in the Lawsuits. IT IS FURTHER UNDERSTOOD AND AGREED thatthe fms ofthis Reeve ani Se terms of the settlement of this claim shall not be used to the detriment of the",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of tax allocation, reporting, and indemnity terms is a negotiation issue and does not make an existing provision internally ambiguous or inconsistent."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Governing Law Clause Lacks Venue/Jurisdiction Provision",
+          "description": "The governing law clause  specifies Georgia law but does not include a venue or jurisdiction provision. If a dispute arises over the interpretation or enforcement of this Release, the parties could be forced to litigate the venue question. American Guarantee should add a consent-to-jurisdiction and venue provision designating a specific Georgia county to avoid forum-shopping by the Releasors.",
+          "revision": "... the laws of the State of Georgia. Any action to enforce this Release shall be brought exclusively in the Superior Court of DeKalb County, Georgia, and the Parties consent to the personal jurisdiction of such court.",
+          "comment": "We have added a consent-to-jurisdiction and exclusive venue clause designating DeKalb County Superior Court, which is consistent with Georgia practice and provides both parties with a defined, neutral forum for dispute resolution.",
+          "group_size": 1,
+          "location": {
+            "start_char": 708,
+            "end_char": 1243,
+            "start_line": 18,
+            "end_line": 24,
+            "match_cover": 0.417,
+            "match_run": 7,
+            "matched_text": "of the incident(s) underlying or giving rise to the following lawsuits: Civil Action No. 2006-cv-120104 in the Superior Court of Fulton County, and Civil Action No. 07-CV-6694-9 in the Superior Court of DeKalb County (hereinafter collectively “the Lawsuits”), and any and all consequences arising fro",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "A governing-law clause can operate without a contractual venue or jurisdiction clause; the omission creates forum risk but no internal construction defect."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Internal annotation in contract terms clause",
+          "description": "The agreement clause  contains an internal annotation \"conzartunl an not 8 mere rsa\" which appears to be a partial drafting note or corrupted text that was never completed or removed. This should be replaced with the standard legal phrase \"contractual and not a mere recital\" to complete the provision properly.",
+          "revision": "the terms of this reement ae conzartunl anagreement are contractual and not 8a mere rsa |recital.",
+          "comment": "We replaced an incomplete and corrupted drafting note with the standard legal phrase 'contractual and not a mere recital' to ensure this clause is properly formed and legally operative under Georgia law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3575,
+            "end_char": 3632,
+            "start_line": 70,
+            "end_line": 70,
+            "match_cover": 0.625,
+            "match_run": 7,
+            "matched_text": "the terms of this reement ae conzartunl an not 8 mere rsa",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 4 — Entire Agreement / Merger"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted text “reement ae conzartunl an not 8 mere rsa” is a mechanical transcription error that obscures the intended operative statement."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete confidentiality provision",
+          "description": "The confidentiality clause  contains incomplete text ending with \"shall not be daclosed 10 aay person not party or privy to this settement\" - this appears to be an unfinished sentence or internal note. The provision should be completed with standard confidentiality language such as \"shall not be disclosed to any person not party or privy to this settlement\" to make the clause complete and enforceable.",
+          "revision": "confidential, and shall not be daclosed 10 aaydisclosed to any person not party or privy to this settementsettlement",
+          "comment": "We clarified the confidentiality provision to correct apparent typographical errors and ensure the clause is complete and enforceable as intended by both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6065,
+            "end_char": 6145,
+            "start_line": 111,
+            "end_line": 111,
+            "match_cover": 0.778,
+            "match_run": 7,
+            "matched_text": "confidential, and shall not be daclosed 10 aay person not party or privy to this",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The confidentiality sentence continues with “except as may be required by law” and is substantively complete; the obvious transcription misspellings do not alter its meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Release",
+          "description": "The term 'Release' is used throughout the document as a defined term (capitalized) but is never formally defined      . The document refers to 'this Release' repeatedly but lacks a clear definition of what constitutes the Release. This creates ambiguity about whether the Release refers to the document itself or to the act of releasing claims.",
+          "revision": "entering into this Releaserelease agreement (\"Release\"), and that the decision to enter into this Release is made without",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3004,
+            "end_char": 3096,
+            "start_line": 56,
+            "end_line": 56,
+            "match_cover": 0.889,
+            "match_run": 13,
+            "matched_text": "entering into this Release, and that the decision to enter into this Release is made without",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Reliance on Own Judgment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "In context, “this Release” plainly refers to the settlement-and-release document being entered into, read, and accepted, so the lack of a formal definition creates no genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete sentence in witness clause",
+          "description": "The witness clause  contains incomplete or garbled text reading \"Paris or tn rnd and repsaciive eps hve\" which appears to be a drafting note or corrupted text. This should read \"Parties or their authorized and respective agents have\" to properly introduce the signature block.",
+          "revision": "IN WITNESS WHEREOF, ParisParties or tn rnd and repsaciive eps hvetheir authorized and respective agents have",
+          "comment": "Corrected garbled/corrupted text in the witness clause to read properly as 'Parties or their authorized and respective agents have,' ensuring the signature block introduction is complete and legally coherent.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6694,
+            "end_char": 6793,
+            "start_line": 122,
+            "end_line": 124,
+            "match_cover": 0.625,
+            "match_run": 6,
+            "matched_text": "IN WITNESS WHEREOF, Paris or tn rnd and repsaciive eps hve hereunto set their hands on the day and",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Releases vs Releasees",
+          "description": "In , the term 'Releases' appears to be a typographical error for 'Releasees', as it is used in a context referring to the defined party Releasees. This inconsistency could create confusion about whether this is a separate defined term or a typo. Modify term(s) to have against ReleasesReleasees and that no other person or party is subrogated",
+          "revision": "",
+          "comment": "",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"other\" in assignment representation",
+          "revision": "... have not assigned to any othecother person or",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2150,
+            "end_char": 2190,
+            "start_line": 42,
+            "end_line": 42,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "have not assigned to any othec person or",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Representation of No Assignment of Claims"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Othec” is an obvious misspelling of “other” and does not change the assignment representation’s meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Spelling errors in representation regarding party capacity",
+          "revision": "1. That Parties are each petsonspersons over 18 yeersyears of age or corporate entities ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2575,
+            "end_char": 2650,
+            "start_line": 50,
+            "end_line": 50,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "1. That Parties are each petsons over 18 yeers of age or corporate entities",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "1. Capacity of Parties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Petsons” and “yeers” are readily understood as “persons” and “years” and do not affect the capacity provision’s meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"judgment\" in reliance representation",
+          "revision": "... rely wholly on their own jadgmentjudgment, and that of their ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2937,
+            "end_char": 2989,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "rely wholly on their own jadgment, and that of their",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Reliance on Own Judgment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Jadgment” is an obvious misspelling of “judgment” that does not alter the reliance provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"warrant\" in assignment representation",
+          "revision": "5. Releasors further represent and werrentwarrant that Releasors have not assigned ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3636,
+            "end_char": 3711,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "5. Releasors further represent and werrent that Releasors have not assigned",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. No Assignment or Subrogation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Werrent” is plainly “warrant” in context and does not change the representation’s meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Spelling errors in releasee reliance paragraph",
+          "revision": "Reteasors onderstundReleasors understand and acknowledge that ReleasesReleasees, in providing the consideration",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3937,
+            "end_char": 4019,
+            "start_line": 77,
+            "end_line": 77,
+            "match_cover": 0.727,
+            "match_run": 4,
+            "matched_text": "Reteasors onderstund and acknowledge that Releases, in providing the consideration",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "Reliance on Releasors' Representations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The identified misspellings are readily resolved from context and do not themselves alter the reliance provision’s operative meaning."
+          }
+        }
+      ]
+    },
+    "releasors_entaire_rosen": {
+      "n_issues": 37,
+      "n_located": 36,
+      "by_tab": {
+        "risks_negotiation": 15,
+        "proofread": 22
+      },
+      "by_kind": {
+        "Important": 8,
+        "Notable": 6,
+        "Minor": 1,
+        "Spelling + Grammar": 18,
+        "Internal Annotations": 1,
+        "Templated Content": 1,
+        "Definitions": 2
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Is One-Sided Against Releasors",
+          "description": "The indemnification provision  requires Releasors to indemnify and hold harmless Releasees against claims or liens, including by specific law firms . However, there is no reciprocal indemnification from Releasees to Releasors. Given that this is a mutual settlement, Entaire should insist on mutual indemnification for third-party claims arising from the Lawsuits, or at minimum narrow this obligation to liens or claims that are solely within Releasors' control (e.g., their own attorneys' liens).",
+          "revision": "... FURTHER UNDERSTOOD AND AGREED that Releasors doeach Party does hereby agree to",
+          "comment": "In a mutual settlement, indemnification obligations should run both ways; we revised this provision to reflect reciprocal protection for each Party against third-party claims or liens arising from their respective conduct in the Lawsuits.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5220,
+            "end_char": 5283,
+            "start_line": 98,
+            "end_line": 98,
+            "match_cover": 0.75,
+            "match_run": 6,
+            "matched_text": "FURTHER UNDERSTOOD AND AGREED that Releasors do hereby agree to",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "Indemnification Against Claims and Liens"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The unilateral indemnity is a one-sided allocation of risk, but asymmetry alone is not an ambiguity or conflict within the contract."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Covenant Not to Sue Is One-Sided",
+          "description": "The covenant not to sue in the opening section  runs only from Releasors to Releasees. While there is a mutual release later , the covenant not to sue—which provides an independent contractual remedy—should be reciprocal. As drafted, Releasees could theoretically bring a new action against Releasors on claims related to the Lawsuits without breaching a covenant. This is disadvantageous to Entaire.",
+          "revision": "Additionally, Releasors covenanteach Party covenants not to",
+          "comment": "We revised the covenant not to sue to run mutually between all Parties, consistent with the mutual release provisions already in the agreement and standard practice in settlement agreements under Georgia law.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Mutual Release from Releasees Appears Incomplete",
+          "description": "The mutual release running from Releasees to Releasors  appears to be cut off mid-sentence. The paragraph beginning \"Likewise, Releasees release Releasors from any and all claims...\" ends at \"as part of the consideration for Releasors'\" without completing the thought. This incomplete sentence could render the mutual release unenforceable, which is critically important to Entaire's interests. The sentence should be completed to clearly state it is part of the consideration for Releasors' execution of this Release.",
+          "revision": "... of the consideration for Releasors' execution of this Release.",
+          "comment": "The mutual release paragraph was incomplete and ended mid-sentence; we completed it to ensure enforceability of the bilateral release, which is fundamental to the settlement's consideration structure.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2063,
+            "end_char": 2479,
+            "start_line": 40,
+            "end_line": 46,
+            "match_cover": 0.667,
+            "match_run": 4,
+            "matched_text": "of the consideration for Releasors’ Releasors further represent and warrant that they have not assigned to any othec person or party all or any portion of the claim whatsoever that ENTAIRE GLOBAL COMPANIES, INC,, ENTAIRE GLOBAL FINANCIAL, INC., JONATHAN D. ROSEN AND WILLIAM R. MUIRHEAD may have or c",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Representation of No Assignment of Claims"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The mutual-release sentence stops after “as part of the consideration for Releasors’,” mechanically omitting the object and leaving the sentence incomplete."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overbroad \"No Matter How Remotely\" Release Language",
+          "description": "The release scope in the broad release provision  extends to claims \"no matter how remotely any such potential claim may be related to the Lawsuits.\" This \"remotely related\" standard is extraordinarily broad and could sweep in claims that have only a tangential connection to the underlying disputes. Since Entaire is a Releasor giving up claims in exchange for $350,000, this language should be narrowed to claims \"directly or indirectly arising out of\" the Lawsuits to avoid inadvertently releasing unrelated claims.",
+          "revision": "... any time in the future, no matter how remotely any such potential claim may bewhich may be directly or indirectly related",
+          "comment": "The original 'no matter how remotely related' standard is overbroad and could extinguish claims entirely unrelated to the underlying disputes; we've revised to 'directly or indirectly related' to reflect a commercially reasonable and legally defensible release scope under Georgia law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5025,
+            "end_char": 5130,
+            "start_line": 92,
+            "end_line": 93,
+            "match_cover": 0.762,
+            "match_run": 14,
+            "matched_text": "any time in the future, no matter how remotely any such potential claim may be related fo the Lawsuits or",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Scope of Release of All Actions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “no matter how remotely” lacks a definite boundary for how attenuated a relationship may be while remaining within the release."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Payment Timing or Method Specified",
+          "description": "The agreement references $350,000 in consideration  but does not specify when, how, or to whom payment is to be made (e.g., wire transfer, check, to counsel's trust account, within a certain number of days). The absence of payment mechanics creates risk that Entaire may execute the release and dismiss the DeKalb County action without actually receiving funds. The payment terms should specify the method, timing, and recipient of payment.",
+          "revision": "HUNDRED AND FIFTY THOUSAND endand 00/100 DOLLARS ($350,000.00), to be paid by wire transfer to Releasors' counsel's trust account within ten (10) business days of execution of this Release, paid to",
+          "comment": "We specified that the $350,000 be paid by wire transfer to Releasors' counsel's trust account within 10 business days of execution to establish clear, enforceable payment mechanics and protect both parties from disputes over timing and method.",
+          "group_size": 1,
+          "location": {
+            "start_char": 104,
+            "end_char": 171,
+            "start_line": 9,
+            "end_line": 9,
+            "match_cover": 0.353,
+            "match_run": 6,
+            "matched_text": "HUNDRED AND FIFTY THOUSAND end 00/100 DOLLARS ($350,000.00) paid to",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of payment timing and method is an omitted commercial term rather than an intrinsic ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Lacks Adequate Carve-Outs",
+          "description": "The confidentiality provision  only permits disclosure \"as may be required by law.\" This is too narrow for Entaire's needs. Standard carve-outs should also include disclosures to accountants, tax advisors, financial advisors, and regulatory bodies, as well as disclosures required in connection with financial reporting. Without these carve-outs, Entaire could inadvertently breach confidentiality by making routine business disclosures.",
+          "revision": "... may be required by law, regulation, or legal process, or as necessary in connection with financial reporting, tax compliance, or disclosures to accountants, tax advisors, financial advisors, auditors, or regulatory bodies. It is further agreed ...",
+          "comment": "We expanded the disclosure carve-outs to include advisors, auditors, and regulatory bodies, as the original language was insufficiently narrow to accommodate standard financial reporting and compliance obligations that any business must fulfill.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6163,
+            "end_char": 6188,
+            "start_line": 112,
+            "end_line": 112,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "as may be required by law",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The narrow “required by law” exception is an operative choice; omitting broader advisor and reporting carve-outs does not create a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Only DeKalb Action Dismissed — Fulton County Action Not Addressed",
+          "description": "Releasors agree to dismiss Civil Action No. 07-CV-6694-9 in DeKalb County with prejudice , but the agreement does not address the disposition of Civil Action No. 2006-cv-120104 in Fulton County . If that action is still pending, it should also be dismissed with prejudice as part of this settlement. If it has already been resolved, the agreement should so state. Leaving it unaddressed creates ambiguity.",
+          "revision": "DeKalb County with prejudice. Likewise, Releasees release Releasors from any and all claims,Releasors further agree to dismiss Civil Action No. O7-CV-6694-9 in the Superior Court of DeKalb County and Civil Action No. 2006-cv-120104 in the Superior Court of Fulton County, each with prejudice.",
+          "comment": "We added Civil Action No. 2006-cv-120104 (Fulton County) to the dismissal provision to ensure complete resolution of all pending litigation between the parties as part of this settlement, consistent with a full and final release of all claims.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1252,
+            "end_char": 1855,
+            "start_line": 24,
+            "end_line": 38,
+            "match_cover": 0.551,
+            "match_run": 17,
+            "matched_text": "Releasees from any and all claims, damages, loss, whether known or unknown, made or which could have been made, which are directly or indirectly related to the Lawsuits in exchange for the payment set forth above. Additionally, Releasors covenant not to sue Releasees for any claim, damage, or loss w",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Releasing claims concerning both lawsuits while expressly requiring dismissal of only one does not necessarily conflict, because a release can resolve claims without imposing a separate filing obligation."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Dismissal Not Conditioned on Receipt of Payment",
+          "description": "The obligation to dismiss the DeKalb County action with prejudice  is not conditioned upon Releasors' actual receipt of the $350,000 settlement payment. As currently drafted, Releasors could be obligated to dismiss the lawsuit before receiving any funds. To protect Entaire, the dismissal obligation should be expressly conditioned on receipt of payment.",
+          "revision": "Releasors further agree, within ten (10) business days of receipt of the settlement payment referenced herein, to dismiss Civil Action No. ...",
+          "comment": "Under Georgia contract law, requiring dismissal prior to receipt of consideration creates an inequitable and unenforceable condition; we have tied the dismissal obligation to actual receipt of payment to reflect proper consideration exchange.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1694,
+            "end_char": 1744,
+            "start_line": 29,
+            "end_line": 29,
+            "match_cover": 0.381,
+            "match_run": 5,
+            "matched_text": "Releasors further agree to dismiss Civil Action No",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The failure to make dismissal expressly conditional on receipt of payment is a sequencing and negotiation concern, not a textual ambiguity or contradictory clause."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Scope Is Overbroad — Includes Government Agency Claims",
+          "description": "The indemnification provision  requires Releasors to hold Releasees harmless against claims by \"any insurance company, government agency, law firm... or any other entity related to the Lawsuits.\" This is extraordinarily broad — it could require Entaire to indemnify the insurer against government regulatory actions or claims by entities Entaire has no control over. The indemnification should be limited to attorney's liens and subrogation claims arising from Releasors' own obligations, not third-party government or insurance company claims that may be unrelated to Releasors' conduct.",
+          "revision": "... lien by any insurance company, government agency, or law firm, inclading,including,",
+          "comment": "We limited the indemnification scope to subrogation claims and attorney's liens, which are the only claims directly arising from Releasors' obligations; extending indemnification to government agency actions or unrelated third-party claims creates a disproportionate and commercially unjustifiable risk allocation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5391,
+            "end_char": 5460,
+            "start_line": 100,
+            "end_line": 100,
+            "match_cover": 0.833,
+            "match_run": 7,
+            "matched_text": "lien by any insurance company, government agency, law firm, inclading",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "Indemnification Against Claims and Liens"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The catch-all “any other entity related to the Lawsuits” follows specified categories such as insurers, agencies, and law firms, leaving its scope subject to list-based construction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Reliance on Releasors' Representations Is One-Sided",
+          "description": "The provision at  states that Releasees \"duly rely upon the truth, accuracy and validity of all promises, representations and warranties of the Releasors.\" This creates a one-sided reliance framework where only the Releasees benefit from the representations and warranties. Since Releasors are also making decisions based on representations (e.g., Releasees' authority to settle, mutual release), there should be reciprocal language acknowledging Releasors' reliance on Releasees' representations as well.",
+          "revision": "Reteasors onderstundReleasors understand and acknowledge that ReleasesReleasees, in providing the consideration herein described, duly rely upon the truth, accuracy and validity of all promises, representations and warranties of the Releasors contained herein. Likewise, Releasees understand and acknowledge that Releasors, in accepting the consideration and executing this Release, duly rely upon the truth, accuracy and validity of all promises, representations and warranties of the Releasees contained herein.",
+          "comment": "We added reciprocal reliance language to reflect that both parties are making decisions based on the other's representations and warranties; under Georgia law, mutual reliance is the appropriate framework in a bilateral release agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3937,
+            "end_char": 4739,
+            "start_line": 77,
+            "end_line": 89,
+            "match_cover": 0.485,
+            "match_run": 13,
+            "matched_text": "Reteasors onderstund and acknowledge that Releases, in providing the consideration herein described, duly rely upon the truth, aocuracy and validity of all promises, representations and warranties of the Releasors contained herein. If IS FURTHER UNDERSTOOD AND AGREED that Parties admnit no liability",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "No Admission of Liability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The reliance provision is one-sided but clear; lack of reciprocal language is a negotiation issue rather than ambiguity or inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Representation of Authority from Releasees",
+          "description": "The non-assignment representation at  and  runs only from Releasors, warranting they have not assigned claims. There is no corresponding representation from Releasees that they have authority to enter into this settlement, have not assigned any counterclaims, and that the person signing on behalf of American Guarantee and Liability Insurance Company has proper corporate authority. This is a standard representation that protects Entaire from later challenges to the settlement's validity.",
+          "revision": "... have not assigned to any othecother person or",
+          "comment": "A mutual authority and non-assignment representation from Releasees is standard in settlement agreements and ensures that the agreement is binding on all parties, reducing the risk of collateral attacks on the settlement's validity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2150,
+            "end_char": 2190,
+            "start_line": 42,
+            "end_line": 42,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "have not assigned to any othec person or",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Representation of No Assignment of Claims"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Missing reciprocal authority and non-assignment representations are omitted protections, not construction defects in the existing language."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Remedy Specified for Confidentiality Breach",
+          "description": "The confidentiality provision  states the terms shall remain confidential but does not specify any remedy for breach. Without a remedy provision (such as injunctive relief or liquidated damages), a breach of confidentiality could be difficult to enforce in practice. Consider adding that the non-breaching party shall be entitled to seek injunctive relief in addition to any other available remedies.",
+          "revision": "... IS FURTHER UNDERSTOOD AND AGREED thatthe fms ofthis Reeve ani Sethat the terms of this Release and the",
+          "comment": "We added an express right to seek injunctive relief for confidentiality breaches, as monetary damages alone may be insufficient to remedy unauthorized disclosure of settlement terms under Georgia law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5897,
+            "end_char": 6219,
+            "start_line": 108,
+            "end_line": 112,
+            "match_cover": 0.833,
+            "match_run": 10,
+            "matched_text": "IS FURTHER UNDERSTOOD AND AGREED thatthe fms ofthis Reeve ani Se terms of the settlement of this claim shall not be used to the detriment of the Parties, shall remain confidential, and shall not be daclosed 10 aay person not party or privy to this settement except as may be required by law. It is fu",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a contractual remedy for breach does not make the confidentiality duty ambiguous; otherwise available remedies are governed by law."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Release Extends to \"Death\" — Confirm Scope Intended",
+          "description": "The broad release provision  states the release covers claims \"even to the extent of death.\" While this is sometimes included in personal injury releases, this settlement appears to involve a commercial insurance dispute. This language seems disproportionate and could inadvertently release wrongful death or survival claims that the individual Releasors (Rosen and Muirhead) might have if something were to arise from the underlying incidents. Entaire should confirm this breadth is intentional and appropriate given the nature of the underlying claims.",
+          "revision": "... giving rise to the Lawsuits, even to the extent of death, or as may",
+          "comment": "The phrase 'even to the extent of death' is typically reserved for personal injury releases and is disproportionate in the context of a commercial insurance dispute; we request removal or limitation to avoid inadvertently extinguishing individual survival or wrongful death claims unrelated to the commercial settlement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4947,
+            "end_char": 5014,
+            "start_line": 91,
+            "end_line": 91,
+            "match_cover": 1.0,
+            "match_run": 14,
+            "matched_text": "giving rise to the Lawsuits, even to the extent of death, or as may",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Scope of Release of All Actions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Even to the extent of death” is unusually broad boilerplate in this setting, but overbreadth or commercial inappropriateness alone is not a defined construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Duplicate Non-Assignment Representation",
+          "description": "The non-assignment representation appears twice in the agreement — once in the opening section  and again as numbered paragraph 5 . These are substantively identical. The duplication is unnecessary and could create confusion if one were later amended but not the other. Consider removing one instance.",
+          "revision": "5. Releasors further represent and werrent that Releasors have not assigned to any[Intentionally omitted as duplicative of the non-assignment representation set forth above.]",
+          "comment": "The non-assignment representation appeared twice in substantively identical form; we removed the duplicate to avoid ambiguity and ensure a single, authoritative reference governs the parties' obligations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3636,
+            "end_char": 3766,
+            "start_line": 72,
+            "end_line": 73,
+            "match_cover": 0.6,
+            "match_run": 13,
+            "matched_text": "5. Releasors further represent and werrent that Releasors have not assigned to any other person or party all or any portion of the",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. No Assignment or Subrogation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The two non-assignment representations are duplicative but substantively consistent, so no conflict or incoherence arises."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Attorneys' Fees Provision for Enforcement",
+          "description": "The Release lacks a provision addressing which party bears attorneys' fees in the event of a dispute over enforcement of this agreement. Under Georgia law, absent a contractual provision, each party typically bears its own fees. Including a prevailing-party attorneys' fees clause would incentivize compliance and protect Entaire if it needs to enforce the settlement terms (e.g., compel payment or enforce confidentiality).",
+          "revision": "... the laws of the State of Georgia. In any action to enforce the terms of this Release, the prevailing party shall be entitled to recover its reasonable attorneys' fees and costs.",
+          "comment": "We added a prevailing-party attorneys' fees provision consistent with Georgia's recognition of contractual fee-shifting; this is standard practice in settlement agreements to incentivize compliance and deter bad-faith breaches by either party.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2509,
+            "end_char": 3056,
+            "start_line": 48,
+            "end_line": 56,
+            "match_cover": 0.355,
+            "match_run": 4,
+            "matched_text": "the foregoing payment, the Parties hereby declare, represent and 1. That Parties are each petsons over 18 yeers of age or corporate entities registered to do business in the State of Georgia and are each fully competent to enter into this agreement, and that each is operating under no present disabi",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "1. Capacity of Parties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Omission of a fee-shifting provision leaves the governing legal default in place and does not create a construction defect."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors in opening clause",
+          "description": "Misspellings: \"thst\" should be \"that\", \"considerstion\" should be \"consideration\"",
+          "revision": "... ALL MEN BY THESE PRESENTS, thstthat in considerstionconsideration of THREE",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 46,
+            "end_char": 103,
+            "start_line": 8,
+            "end_line": 8,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "ALL MEN BY THESE PRESENTS, thst in considerstion of THREE",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Thst” and “considerstion” are obvious misspellings whose intended words and legal effect are clear from context."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"end\" should be \"and\"",
+          "revision": "HUNDRED AND FIFTY THOUSAND endand 00/100 DOLLARS ($350,000.00) paid to",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 104,
+            "end_char": 171,
+            "start_line": 9,
+            "end_line": 9,
+            "match_cover": 0.923,
+            "match_run": 8,
+            "matched_text": "HUNDRED AND FIFTY THOUSAND end 00/100 DOLLARS ($350,000.00) paid to",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“End” is an obvious transcription of “and,” reinforced by the numerical amount, and does not create a genuine uncertainty about the consideration."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete confidentiality clause",
+          "description": "The confidentiality clause    contains incomplete text ending with \"shall remain confidential, and shall not be daclosed 10 aay person not party or privy to this settement\" but the next sentence begins \"except as may be required by law. It is further agreed that the confidentiality of the settlement is for the mutual benefit of Releasors and Releasees and that no part of the monetary payment is in\" - this sentence trails off without completion. This appears to be a drafting note or incomplete text that needs to be finished or removed before finalization.",
+          "revision": "... benefit of Releasors and Releasees and that no part of the monetary payment is in.",
+          "comment": "We revised the confidentiality clause to remove incomplete trailing language that appeared to be an unfinished drafting note, ensuring the provision is clear and enforceable as finalized.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6272,
+            "end_char": 6353,
+            "start_line": 113,
+            "end_line": 113,
+            "match_cover": 1.0,
+            "match_run": 15,
+            "matched_text": "benefit of Releasors and Releasees and that no part of the monetary payment is in",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The clause trails off at “no part of the monetary payment is in,” leaving an operative sentence mechanically incomplete."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Grammar error",
+          "description": "Plural form: \"officer\" should be \"officers\"",
+          "revision": "... its past or present officers, directors",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 422,
+            "end_char": 460,
+            "start_line": 13,
+            "end_line": 13,
+            "match_cover": 0.833,
+            "match_run": 4,
+            "matched_text": "its past or present officer, directors",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Using singular “officer” alongside plural “directors” is a grammatical-number error that can affect whether the release covers one officer or the entire class of officers."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Misspellings: \"cmmployees\" should be \"employees\", \"parestt\" should be \"parent\"",
+          "revision": "cmmployeesemployees, agents, attorneys, insurers, affiliated companies, subcontractors, subsidiaries, paresttparent",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 474,
+            "end_char": 553,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 0.778,
+            "match_run": 7,
+            "matched_text": "agents, attorneys, insurers, affiliated companies, subcontractors, subsidiaries",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Cmmployees” and “parestt” are obvious transcription errors for “employees” and “parent,” and the surrounding affiliate list makes their intended meaning clear."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing date of execution",
+          "description": "Found: \"This day of January, 2008.\" — Unfilled day creates ambiguity about when the release became effective.",
+          "revision": "",
+          "comment": "Insert the specific day of the month to complete the date.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6826,
+            "end_char": 6851,
+            "start_line": 129,
+            "end_line": 129,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "This day of January, 2008",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Release",
+          "description": "The term 'Release' is used as a capitalized defined term throughout the document       but is never formally defined. This creates ambiguity about whether 'Release' refers to this entire document, a specific section, or a particular type of release. The document should clearly define what 'Release' means to avoid confusion.",
+          "revision": "entering into this Releaserelease agreement (\"Release\"), and that the decision to enter into this Release is made without \"Releasors\") hereby releaseRelease and forever discharge AMERICAN GUARANTEE AND",
+          "comment": "",
+          "group_size": 2,
+          "location": {
+            "start_char": 3004,
+            "end_char": 3569,
+            "start_line": 56,
+            "end_line": 69,
+            "match_cover": 0.704,
+            "match_run": 13,
+            "matched_text": "entering into this Release, and that the decision to enter into this Release is made without reliance upon any statement or representation by Releasees, Releasors, or their respective representatives, agents or attomeys, regarding the merits, legal liability or value of this claim or any matters rel",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Reliance on Own Judgment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The repeated contextual references to entering into, reading, and accepting “this Release” make clear that the term denotes this document."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Releases",
+          "description": "The term 'Releasees' is defined and used consistently in capitalized form throughout most of the document. However, there is an inconsistent lowercase usage 'Releases' in the indemnification clause . This should be capitalized to 'Releasees' to match the defined term.",
+          "revision": "protect, indemnify and hold harmless ReleasesReleasees against any claim or lien, or any other Modify term(s) to have against ReleasesReleasees and that no other person or party is subrogated to any of Releasors'",
+          "comment": "",
+          "group_size": 2,
+          "location": {
+            "start_char": 1904,
+            "end_char": 2453,
+            "start_line": 38,
+            "end_line": 46,
+            "match_cover": 0.588,
+            "match_run": 12,
+            "matched_text": "and all claims, damages, loss, whether known or unknown, made or which could have been made, which are directly or indirectly related to the Lawsuits, as part of the consideration for Releasors’ Releasors further represent and warrant that they have not assigned to any othec person or party all or a",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Representation of No Assignment of Claims"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Using “Releases” where the defined party term is “Releasees” is a mechanical error that can change the identity of the beneficiary of the obligation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"imdirectly\" should be \"indirectly\"",
+          "revision": "imdirectlyindirectly related to the Lawsuits or ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1610,
+            "end_char": 1636,
+            "start_line": 28,
+            "end_line": 28,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "related to the Lawsuits or",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Release and Covenant Not to Sue (consideration paragraph)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Imdirectly” is plainly a misspelling of “indirectly” and does not alter the covenant’s scope."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"othec\" should be \"other\"",
+          "revision": "... have not assigned to any othecother person or",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2150,
+            "end_char": 2190,
+            "start_line": 42,
+            "end_line": 42,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "have not assigned to any othec person or",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Representation of No Assignment of Claims"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Othec” is an obvious misspelling of “other” and does not affect construction of the non-assignment representation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Misspellings: \"petsons\" should be \"persons\", \"yeers\" should be \"years\"",
+          "revision": "1. That Parties are each petsonspersons over 18 yeersyears of age or corporate entities ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2575,
+            "end_char": 2650,
+            "start_line": 50,
+            "end_line": 50,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "1. That Parties are each petsons over 18 yeers of age or corporate entities",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "1. Capacity of Parties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The misspellings “petsons” and “yeers” are readily understood and do not change the capacity representation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"jadgment\" should be \"judgment\"",
+          "revision": "... rely wholly on their own jadgmentjudgment, and that of their ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2937,
+            "end_char": 2989,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "rely wholly on their own jadgment, and that of their",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Reliance on Own Judgment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Jadgment” unmistakably means “judgment” in context and has no effect on the provision’s construction."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Misspellings: \"reement\" should be \"agreement\", \"conzartunl\" should be \"contractual\"",
+          "revision": "the terms of this reement ae conzartunl anagreement are contractual and not 8a mere rsarecital",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3575,
+            "end_char": 3702,
+            "start_line": 70,
+            "end_line": 72,
+            "match_cover": 0.6,
+            "match_run": 7,
+            "matched_text": "the terms of this reement ae conzartunl an not 8 mere rsa | 5. Releasors further represent and werrent that Releasors have not",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. No Assignment or Subrogation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The phrase containing “reement,” “conzartunl,” and “not 8 mere rsa” is sufficiently corrupted that the intended entire-agreement statement is mechanically incomplete and uncertain."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"werrent\" should be \"warrant\"",
+          "revision": "5. Releasors further represent and werrentwarrant that Releasors have not assigned ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3636,
+            "end_char": 3711,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "5. Releasors further represent and werrent that Releasors have not assigned",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "5. No Assignment or Subrogation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Werrent” is an obvious misspelling of “warrant” and does not change the representation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Misspellings: \"Reteasors\" should be \"Releasors\", \"onderstund\" should be \"understand\"",
+          "revision": "Reteasors onderstundReleasors understand and acknowledge that Releases, in ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3937,
+            "end_char": 3991,
+            "start_line": 77,
+            "end_line": 77,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "Reteasors onderstund and acknowledge that Releases, in",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "Reliance on Releasors' Representations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Reteasors” and “onderstund” are readily identifiable as “Releasors” and “understand,” without changing the provision’s meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"aocuracy\" should be \"accuracy\"",
+          "revision": "... duly rely upon the truth, aocuracyaccuracy and validity of all promises, ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4038,
+            "end_char": 4101,
+            "start_line": 78,
+            "end_line": 78,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "duly rely upon the truth, aocuracy and validity of all promises",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "Reliance on Releasors' Representations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Aocuracy” is an obvious misspelling of “accuracy” and does not affect the reliance language."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"admnit\" should be \"admit\"",
+          "revision": "... UNDERSTOOD AND AGREED that Parties admnitadmit no liability to each",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4184,
+            "end_char": 4246,
+            "start_line": 81,
+            "end_line": 81,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "UNDERSTOOD AND AGREED that Parties admnit no liability to each",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "No Admission of Liability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Admnit” plainly means “admit,” so the no-admission provision remains understandable."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"inclading\" should be \"including\"",
+          "revision": "... company, government agency, law firm, inclading,including,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5413,
+            "end_char": 5460,
+            "start_line": 100,
+            "end_line": 100,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "company, government agency, law firm, inclading",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "Indemnification Against Claims and Liens"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Inclading” is plainly “including” and does not alter the indemnity list’s meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling: \"oocurrence\" should be \"occurrence\"",
+          "revision": "Lawsuits or any incident or oocurrenceoccurrence underlying or giving rise to ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4894,
+            "end_char": 4961,
+            "start_line": 90,
+            "end_line": 91,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "Lawsuits or any incident or occurrence underlying or giving rise to",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Scope of Release of All Actions"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Oocurrence” is an obvious misspelling of “occurrence” and does not affect the release’s scope."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Misspellings: \"thatthe\" should be \"that the\", \"fms\" unclear",
+          "revision": "... IS FURTHER UNDERSTOOD AND AGREED thatthe fms ofthis Reeve ani Sethat the terms of this Release and the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5897,
+            "end_char": 6219,
+            "start_line": 108,
+            "end_line": 112,
+            "match_cover": 0.833,
+            "match_run": 10,
+            "matched_text": "IS FURTHER UNDERSTOOD AND AGREED thatthe fms ofthis Reeve ani Se terms of the settlement of this claim shall not be used to the detriment of the Parties, shall remain confidential, and shall not be daclosed 10 aay person not party or privy to this settement except as may be required by law. It is fu",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The text “thatthe fms ofthis Reeve ani Se terms” is mechanically corrupted, obscuring what terms are subject to the no-detriment and confidentiality obligations."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors",
+          "description": "Misspellings: \"daclosed\" should be \"disclosed\", \"10 aay\" should be \"to any\"",
+          "revision": "confidential, and shall not be daclosed 10 aaydisclosed to any person not party or privy ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6065,
+            "end_char": 6137,
+            "start_line": 111,
+            "end_line": 111,
+            "match_cover": 0.8,
+            "match_run": 7,
+            "matched_text": "confidential, and shall not be daclosed 10 aay person not party or privy",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Confidentiality and No-Detriment Provision"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Daclosed 10 aay” is readily understood as “disclosed to any” and does not materially change the confidentiality prohibition."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in witness clause",
+          "description": "Misspelling: \"Paris\" should be \"Parties\"",
+          "revision": "IN WITNESS WHEREOF, ParisParties or tn rnd and repsaciive eps hvetheir authorized representatives have",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6694,
+            "end_char": 6748,
+            "start_line": 122,
+            "end_line": 122,
+            "match_cover": 0.643,
+            "match_run": 6,
+            "matched_text": "IN WITNESS WHEREOF, Paris or tn rnd and repsaciive eps",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Release and Covenant Not to Sue (consideration paragraph)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 13,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Mutual Release Lacks Covenant Not to Sue from Releasors' Side",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The releases and covenant not to sue are expressly asymmetric, but that drafting choice does not create a contradiction or genuine ambiguity."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "No Deadline for Dismissal of Lawsuit",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Failure to specify a dismissal deadline is an omitted performance detail, not one of the defined construction defects."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "No Dismissal Required for Fulton County Action",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement expressly requires dismissal of only the DeKalb action; omitting a similar obligation for the Fulton action does not contradict the broader release of claims concerning both lawsuits."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "No Payment Timing or Method Specified",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Missing payment mechanics are omitted commercial terms rather than an intrinsic textual ambiguity or conflict between provisions."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Governing Law Clause Lacks Venue/Jurisdiction Provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "A governing-law clause can operate without a contractual venue or jurisdiction clause; the omission creates forum risk but no internal construction defect."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "No Payment Timing or Method Specified",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of payment timing and method is an omitted commercial term rather than an intrinsic ambiguity or internal inconsistency."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Only DeKalb Action Dismissed — Fulton County Action Not Addressed",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Releasing claims concerning both lawsuits while expressly requiring dismissal of only one does not necessarily conflict, because a release can resolve claims without imposing a separate filing obligation."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Dismissal Not Conditioned on Receipt of Payment",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The failure to make dismissal expressly conditional on receipt of payment is a sequencing and negotiation concern, not a textual ambiguity or contradictory clause."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors in opening clause",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Thst” and “considerstion” are obvious misspellings whose intended words and legal effect are clear from context."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“End” is an obvious transcription of “and,” reinforced by the numerical amount, and does not create a genuine uncertainty about the consideration."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Grammar error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Using singular “officer” alongside plural “directors” is a grammatical-number error that can affect whether the release covers one officer or the entire class of officers."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Cmmployees” and “parestt” are obvious transcription errors for “employees” and “parent,” and the surrounding affiliate list makes their intended meaning clear."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Imdirectly” is plainly a misspelling of “indirectly” and does not alter the covenant’s scope."
+        }
+      ],
+      "risky": true
+    },
+    "neg10": {
+      "clause_id": "neg10",
+      "clause_name": "Indemnification Against Claims and Liens",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Indemnification Lacks Attorneys' Fees and Costs",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The scope of “protect, indemnify and hold harmless” may require construction as to whether it includes defense costs and attorneys’ fees despite their not being expressly listed."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Indemnification Is One-Sided Against Releasors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The unilateral indemnity is a one-sided allocation of risk, but asymmetry alone is not an ambiguity or conflict within the contract."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Indemnification Scope Is Overbroad — Includes Government Agency Claims",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The catch-all “any other entity related to the Lawsuits” follows specified categories such as insurers, agencies, and law firms, leaving its scope subject to list-based construction."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Inclading” is plainly “including” and does not alter the indemnity list’s meaning."
+        }
+      ],
+      "risky": true
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "Review of Terms and Advice of Counsel",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Confidentiality Lacks Remedies for Breach",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of specified remedies and additional disclosure carve-outs is a negotiation or enforcement concern, not an ambiguity, mechanical error, or inconsistency within the instrument."
+        }
+      ],
+      "risky": false
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "Representation of No Assignment of Claims",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Othec” is an obvious misspelling of “other” and does not change the assignment representation’s meaning."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Mutual Release from Releasees Appears Incomplete",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The mutual-release sentence stops after “as part of the consideration for Releasors’,” mechanically omitting the object and leaving the sentence incomplete."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "No Representation of Authority from Releasees",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Missing reciprocal authority and non-assignment representations are omitted protections, not construction defects in the existing language."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Inconsistent capitalization: Releases",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Using “Releases” where the defined party term is “Releasees” is a mechanical error that can change the identity of the beneficiary of the obligation."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Othec” is an obvious misspelling of “other” and does not affect construction of the non-assignment representation."
+        }
+      ],
+      "risky": true
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "1. Capacity of Parties",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "No Representation of Signing Authority for Corporate Entities",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lack of an express representation concerning signatory authority is an omitted protection, not a construction defect."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Multiple spelling errors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Petsons” and “yeers” are readily understood as “persons” and “years” and do not affect the capacity provision’s meaning."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "No Attorneys' Fees Provision for Enforcement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Omission of a fee-shifting provision leaves the governing legal default in place and does not create a construction defect."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The misspellings “petsons” and “yeers” are readily understood and do not change the capacity representation."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "2. Reliance on Own Judgment",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Undefined term: Release",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "In context, “this Release” plainly refers to the settlement-and-release document being entered into, read, and accepted, so the lack of a formal definition creates no genuine ambiguity."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Jadgment” is an obvious misspelling of “judgment” that does not alter the reliance provision."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Undefined term: Release",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The repeated contextual references to entering into, reading, and accepting “this Release” make clear that the term denotes this document."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Jadgment” unmistakably means “judgment” in context and has no effect on the provision’s construction."
+        }
+      ],
+      "risky": false
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "5. No Assignment or Subrogation",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Werrent” is plainly “warrant” in context and does not change the representation’s meaning."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Duplicate Non-Assignment Representation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The two non-assignment representations are duplicative but substantively consistent, so no conflict or incoherence arises."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The phrase containing “reement,” “conzartunl,” and “not 8 mere rsa” is sufficiently corrupted that the intended entire-agreement statement is mechanically incomplete and uncertain."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Werrent” is an obvious misspelling of “warrant” and does not change the representation."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "Reliance on Releasors' Representations",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Multiple spelling errors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The identified misspellings are readily resolved from context and do not themselves alter the reliance provision’s operative meaning."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Reteasors” and “onderstund” are readily identifiable as “Releasors” and “understand,” without changing the provision’s meaning."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Aocuracy” is an obvious misspelling of “accuracy” and does not affect the reliance language."
+        }
+      ],
+      "risky": false
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "No Admission of Liability",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Reliance on Releasors' Representations Is One-Sided",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The reliance provision is one-sided but clear; lack of reciprocal language is a negotiation issue rather than ambiguity or inconsistency."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Admnit” plainly means “admit,” so the no-admission provision remains understandable."
+        }
+      ],
+      "risky": false
+    },
+    "neg9": {
+      "clause_id": "neg9",
+      "clause_name": "Scope of Release of All Actions",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Overbroad \"No Matter How Remotely\" Release Language",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “no matter how remotely” lacks a definite boundary for how attenuated a relationship may be while remaining within the release."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Release Extends to \"Death\" — Confirm Scope Intended",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Even to the extent of death” is unusually broad boilerplate in this setting, but overbreadth or commercial inappropriateness alone is not a defined construction defect."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Oocurrence” is an obvious misspelling of “occurrence” and does not affect the release’s scope."
+        }
+      ],
+      "risky": true
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Paragraph 4 — Entire Agreement / Merger",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Internal annotation in contract terms clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted text “reement ae conzartunl an not 8 mere rsa” is a mechanical transcription error that obscures the intended operative statement."
+        }
+      ],
+      "risky": true
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Confidentiality and No-Detriment Provision",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "releasee_american_guarantee",
+        "releasors_entaire_rosen"
+      ],
+      "n_issues": 8,
+      "judgments": [
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Incomplete Confidentiality Clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The sentence ends at “the monetary payment is in,” leaving an operative representation mechanically incomplete and without ascertainable meaning."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "No Tax Indemnification or Reporting Allocation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of tax allocation, reporting, and indemnity terms is a negotiation issue and does not make an existing provision internally ambiguous or inconsistent."
+        },
+        {
+          "party": "releasee_american_guarantee",
+          "title": "Incomplete confidentiality provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The confidentiality sentence continues with “except as may be required by law” and is substantively complete; the obvious transcription misspellings do not alter its meaning."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Confidentiality Lacks Adequate Carve-Outs",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The narrow “required by law” exception is an operative choice; omitting broader advisor and reporting carve-outs does not create a construction defect."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "No Remedy Specified for Confidentiality Breach",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a contractual remedy for breach does not make the confidentiality duty ambiguous; otherwise available remedies are governed by law."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Incomplete confidentiality clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The clause trails off at “no part of the monetary payment is in,” leaving an operative sentence mechanically incomplete."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The text “thatthe fms ofthis Reeve ani Se terms” is mechanically corrupted, obscuring what terms are subject to the no-detriment and confidentiality obligations."
+        },
+        {
+          "party": "releasors_entaire_rosen",
+          "title": "Multiple spelling errors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Daclosed 10 aay” is readily understood as “disclosed to any” and does not materially change the confidentiality prohibition."
+        }
+      ],
+      "risky": true
+    }
+  }
+}

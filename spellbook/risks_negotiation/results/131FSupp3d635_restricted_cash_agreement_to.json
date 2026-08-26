@@ -1,0 +1,3373 @@
+{
+  "contract_id": "131FSupp3d635_restricted_cash_agreement_to",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 20,
+  "n_issues": 93,
+  "n_located": 87,
+  "n_judged": 79,
+  "n_skipped": 14,
+  "counts": {
+    "cat1": 66,
+    "cat2": 0,
+    "none": 13
+  },
+  "parties": {
+    "company_shell": {
+      "n_issues": 39,
+      "n_located": 38,
+      "by_tab": {
+        "risks_negotiation": 11,
+        "proofread": 28
+      },
+      "by_kind": {
+        "Notable": 6,
+        "Minor": 3,
+        "Important": 2,
+        "Definitions": 2,
+        "Spelling + Grammar": 26
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Position Transfer Triggers Prorated Payment — Costly to Shell",
+          "description": "Section 2.a  requires Shell to make a prorated payment if it transfers the employee to a different position for any reason during the Retention Period. This means Shell must pay even when a reassignment is operationally necessary, undermining the retention incentive. Shell should consider limiting this trigger to involuntary transfers that are materially adverse to the employee, or eliminating proration for lateral or promotional transfers.",
+          "revision": "... different position with the Company for any reason,that is materially adverse to you,",
+          "comment": "The proration trigger has been limited to involuntary transfers that are materially adverse to the employee, which better reflects the purpose of a retention incentive and avoids penalizing Shell for routine workforce management decisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2369,
+            "end_char": 2625,
+            "start_line": 51,
+            "end_line": 54,
+            "match_cover": 0.786,
+            "match_run": 8,
+            "matched_text": "different position with the Company for any reason, the Payment will be prorated bassd on the percentage of the Retention Period that you were employed by the Company or held such initial position, as applicable, This adjusted amount will be payable to you",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The transfer trigger and proration formula are clear; the issue concerns Shell's economic exposure, not an ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Inconsistent Payment Timeline — \"15 days\" vs. \"15 business days\"",
+          "description": "Section 2.a  provides that prorated payment upon termination or position change is due within \"15 days,\" while the Term of Agreement provision  and Section 1  both use \"15 business days.\" This inconsistency could expose Shell to an earlier payment obligation than intended. For Shell's benefit, this should be harmonized to \"15 business days.\"",
+          "revision": "your estate) within 15 business days of such termination or ...",
+          "comment": "We revised this timeline to '15 business days' for consistency with the Term of Agreement provision and Section 1, ensuring a uniform payment standard throughout the contract.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2630,
+            "end_char": 2680,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "your estate) within 15 days of such termination or",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The periods apply to different payment events, so using calendar days for a termination or transfer and business days for ordinary or early completion is not a direct contradiction."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Resignation Forfeiture Does Not Address Constructive Termination Risk",
+          "description": "Section 2.b  provides that resignation results in full forfeiture, but does not address the scenario where an employee resigns claiming constructive termination. An employee could argue that resignation due to materially adverse changes should be treated as a \"Company initiated severance\" under Section 2.a, entitling them to prorated payment. Shell should clarify that voluntary resignation for any reason triggers forfeiture.",
+          "revision": "Retention Period due ta your resignationvoluntary resignation for any reason or retirement (other than",
+          "comment": "We added 'for any reason' to the voluntary resignation forfeiture provision to provide clear, unambiguous delineation between voluntary resignation and Company-initiated severance, reducing the risk of constructive termination disputes under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2837,
+            "end_char": 2903,
+            "start_line": 59,
+            "end_line": 59,
+            "match_cover": 0.714,
+            "match_run": 5,
+            "matched_text": "Retention Period due ta your resignation or retirement (other than",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment b. (Forfeiture on resignation or retirement)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The boundary between a “resignation” and a “Company initiated severance” may be uncertain where the employee alleges constructive discharge."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Forfeiture for Cause Limited to Retention Period",
+          "description": "Section 2.c  limits forfeiture triggers to misconduct discovered \"during the Retention Period.\" If Shell discovers misconduct after the Retention Period ends but before payment is made, this clause may not apply. Shell should extend the forfeiture window to include the period through the date of payment.",
+          "revision": "Retention Periodof the Payment under this Agreement shall be forfeited if during the Retention Period or prior to payment the Company concludes that (i) ...",
+          "comment": "We expanded the forfeiture window through the date of payment to ensure consistent protection against misconduct that comes to light after the Retention Period but before funds are disbursed, which is standard practice for retention arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2837,
+            "end_char": 3262,
+            "start_line": 59,
+            "end_line": 66,
+            "match_cover": 0.792,
+            "match_run": 13,
+            "matched_text": "Retention Period due ta your resignation or retirement (other than retirement in connection with a Company initiated severance), any amount(s) scheduled to be paid shall be forfeited and you waive all rights to afl or part of the Payment. c. Notwithstanding any provision hereof to the contrary, any ",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment b. (Forfeiture on resignation or retirement)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Retention Period limitation is textually clear; extending forfeiture through payment would be a negotiated expansion rather than construction of an ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Vague 409A Leave of Absence Provision",
+          "description": "Section 2.d  states that \"in the case of certain leaves of absences\" the Payment may be accelerated to avoid 409A issues. The phrase \"certain leaves of absences\" is vague and gives Shell no clear guidance on when acceleration is required or permitted. This should reference the specific 409A threshold (typically a leave exceeding six months) to provide Shell with clarity on its obligations and avoid inadvertent 409A violations.",
+          "revision": "... that in the case of certain leaves of absencesabsence exceeding six months (or such other period as may trigger nonqualified deferred compensation treatment), any unpaid amount",
+          "comment": "We revised the leave of absence reference to specify the six-month threshold consistent with Treasury Regulation §1.409A-1(h)(1)(i), which provides a defined trigger for nonqualified deferred compensation treatment and removes ambiguity for both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4297,
+            "end_char": 4628,
+            "start_line": 83,
+            "end_line": 89,
+            "match_cover": 0.5,
+            "match_run": 8,
+            "matched_text": "that in the case of certain leaves of absences, any unpaid amount of the Payment may be paid to you earlier than scheduled so that such amount does not constitute nonqualified deferred compensation under Section 409A of the Internal Revenue Code, yment Not Transferable. You shalt not transfer, assig",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment d. (Leave of absence)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “certain leaves of absences” does not identify which leaves qualify and therefore has an indeterminate boundary."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Lacks Electronic Notice Option for Shell",
+          "description": "Section 5  requires notices to be \"in writing\" but deems them effective only \"when mailed, or delivered in person\" . For Shell's operational convenience, email or other electronic delivery should be explicitly included as an effective method of delivery.",
+          "revision": "given when mailed, or delivered in person, or sent by electronic mail, to the proper address,",
+          "comment": "We added electronic mail as an accepted notice method to reflect standard commercial practice and ensure efficient communications between the parties, consistent with how notices are routinely handled in the industry.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5674,
+            "end_char": 5738,
+            "start_line": 109,
+            "end_line": 109,
+            "match_cover": 0.688,
+            "match_run": 7,
+            "matched_text": "given when mailed, or delivered in person, to the proper address",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause clearly provides mailing and personal delivery; omission of electronic notice is a commercial drafting choice, not a construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Successors Clause Does Not Bind Employee's Successors",
+          "description": "Section 8  states the Agreement inures to the benefit of and binds each \"successor and assign of the Company,\" but does not mention the employee's heirs and successors. While the preamble references \"your heirs and successors,\" this section should be made reciprocal to ensure the employee's obligations (e.g., confidentiality) bind her estate.",
+          "revision": "... and assign of the Company and your heirs and successors.",
+          "comment": "We revised Section 8 to make the successors clause reciprocal, consistent with the preamble's reference to the employee's heirs and successors, and to ensure post-termination obligations such as confidentiality remain enforceable against the employee's estate.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6229,
+            "end_char": 6480,
+            "start_line": 120,
+            "end_line": 126,
+            "match_cover": 0.7,
+            "match_run": 5,
+            "matched_text": "and assign of the Company. 9. Lay, The Agreement shall be construed and interpreted in accordance with the lava of the State of Texas without giving effect to that State’s choice of law principles. 10. Unfunded, This Agreement shall be unfunded, and",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "9. Governing Law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The successors clause's nonreciprocal scope is clear and does not contradict the preamble's reference to the employee's heirs and successors."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Forum Selection or Dispute Resolution Clause",
+          "description": "Section 9  specifies Texas governing law but does not include a forum selection clause. For Shell's benefit, adding an exclusive jurisdiction provision for courts in Harris County, Texas would prevent the employee from litigating disputes in an inconvenient forum.",
+          "revision": "... to that State's choice of law principles. Any dispute arising under this Agreement shall be subject to the exclusive jurisdiction of the state and federal courts located in Harris County, Texas.",
+          "comment": "We have added an exclusive jurisdiction provision consistent with the Texas governing law clause already in the Agreement; designating Harris County courts ensures predictable, efficient dispute resolution in the jurisdiction whose law governs.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6386,
+            "end_char": 6914,
+            "start_line": 123,
+            "end_line": 132,
+            "match_cover": 0.484,
+            "match_run": 4,
+            "matched_text": "to that State’s choice of law principles. 10. Unfunded, This Agreement shall be unfunded, and the Company shall not be required to segregate any assets with respect to Payment benefits under the Agreement, Any liability of the Company to any person with respect to a benefit under this shall be based",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "10. Unfunded"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a forum-selection provision is an omitted negotiating protection, not an ambiguity or inconsistency in the governing-law clause."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Obligation Has No Survival Period",
+          "description": "Section 14  imposes a confidentiality obligation but does not specify that it survives termination or expiration of the Agreement. Once the Retention Period ends and payment is made, the employee may argue the confidentiality obligation lapses. Shell should add survival language.",
+          "revision": "... hold the existence and tho contents of this Agreement in strict confidence, both during and after the term of this Agreement, and pot disctose in any manner or.",
+          "comment": "Survival language is standard for confidentiality provisions; without it, the obligation could be read to lapse at termination, rendering the protection commercially meaningless and creating an unintended disclosure risk.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8289,
+            "end_char": 8397,
+            "start_line": 156,
+            "end_line": 157,
+            "match_cover": 0.643,
+            "match_run": 8,
+            "matched_text": "hold the existence and tho contents of this Agreament in strict confidence and pot disctose in any manner or",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The promise to hold the information in confidence states no temporal boundary, leaving uncertain whether it continues after expiration or payment."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Remedy Limited to Payment Forfeiture",
+          "description": "Section 14  provides that the sole remedy for breach of confidentiality is forfeiture of the Payment. This is a weak remedy for Shell — once the Payment has already been made (after the Retention Period), there is no contractual remedy for a confidentiality breach. Shell should preserve the right to seek injunctive relief and recover damages in addition to forfeiture.",
+          "revision": "receive the. Payidnt. In addition, the Company shall be entitled to seek injunctive relief and recover any damages resulting from such breach.",
+          "comment": "Limiting the sole remedy for a confidentiality breach to payment forfeiture provides no meaningful protection once the Payment has been made; preserving the right to injunctive relief and damages is standard practice for confidentiality obligations and reflects the irreparable harm a breach can cause.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4962,
+            "end_char": 5762,
+            "start_line": 98,
+            "end_line": 111,
+            "match_cover": 0.364,
+            "match_run": 4,
+            "matched_text": "the Company. Notwithstanding any provision of this Agreement, the Company may in its sole discretion terminate your employment before, during, or subsequent to, the termination of this Agreement, with or without cause and with or without notice, 5. Notices, Any notice relating to the Agreement shall",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 14 does not say forfeiture is the sole remedy, and Section 6 expressly preserves any legal right or remedy the Company may have."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Integration / Entire Agreement Clause",
+          "description": "The Agreement lacks an integration clause stating that it constitutes the entire agreement between the parties regarding the subject matter. Without this, the employee could argue that oral promises or prior drafts supplement or modify the Agreement's terms. This is a standard protective provision that Shell should include. Consider adding language to the final acknowledgment .",
+          "revision": "... agree that this Agreement is a contract between thethe entire agreement between the Company and me with respect to the subject matter hereof, superseding all prior agreements and understandings, and is a contract between the Company and me for the reasous stated herein and as such the Company may exercise",
+          "comment": "We incorporated an integration clause to ensure the written Agreement reflects the complete understanding of the parties, consistent with standard practice and Texas contract law principles governing merger and integration.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8854,
+            "end_char": 8987,
+            "start_line": 166,
+            "end_line": 167,
+            "match_cover": 0.48,
+            "match_run": 20,
+            "matched_text": "agree that this Agreement is a contract between the Company and me for the reasous stated herein and as such the Company may exercise",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: IBAS",
+          "description": "The term 'IBAS' appears in  and  and is used as if it were a defined term, but no definition is provided anywhere in the Agreement. This creates ambiguity about what IBAS means and what provisions apply to employees under IBAS terms, which could affect tax withholding calculations.",
+          "revision": "assignment under IBASInternational Business Assignment Services (\"IBAS\") terms, in which case the provisions of IBAS (including",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1392,
+            "end_char": 1468,
+            "start_line": 27,
+            "end_line": 27,
+            "match_cover": 0.75,
+            "match_run": 10,
+            "matched_text": "assignment under IBAS terms, in which case the provisions of IBAS (including",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Withholding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“IBAS” is undefined, leaving uncertain what external terms govern withholding and hypothetical-tax reductions."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: retention period",
+          "description": "The term 'Retention Period' is defined in  but appears in lowercase as 'Reteation Period' in  and . This appears to be an attempt to use the defined term but with incorrect capitalization and a typo ('Reteation' instead of 'Retention'). The term should be consistently capitalized to reference the defined term. Modify term(s) ReteationRetention Period",
+          "revision": "",
+          "comment": "",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"Agreement\"",
+          "description": "Spelling error: \"Agreenvent\" should be \"Agreement\"",
+          "revision": "This AgreenventAgreement shall be effective August I1, 2011",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 310,
+            "end_char": 524,
+            "start_line": 5,
+            "end_line": 13,
+            "match_cover": 0.75,
+            "match_run": 4,
+            "matched_text": "this : and other good and valuable consideration, the receipt and sufficiency of which is acknowledged, you and the Company agree as follows: a Texm of Agreement This Agreenvent shall be effective August I, 2011",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Term of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Agreenvent” is a mechanical misspelling of the operative document name and requires correction to “Agreement.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"earlier\"",
+          "description": "Spelling error: \"earllcr\" should be \"earlier\"",
+          "revision": "earllcrearlier date and filtfull payment made within 15 business ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 752,
+            "end_char": 797,
+            "start_line": 16,
+            "end_line": 16,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "date and filt payment made within 15 business",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Term of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Earllcr” is a mechanical misspelling of “earlier” in the payment-timing provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"during\"",
+          "description": "Spelling error: \"ducing\" should be \"during\"",
+          "revision": "In the event that ducingduring the Reteation Period",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2125,
+            "end_char": 2170,
+            "start_line": 48,
+            "end_line": 48,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "In the event that ducing the Reteation Period",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ducing” is a mechanical misspelling of “during” in the condition introducing the proration events."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"terminates\"",
+          "description": "Spelling error: \"tenninates\" should be \"terminates\"",
+          "revision": "Company tenninatesterminates due to a Company fuitiatedinitiated severance",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1888,
+            "end_char": 2255,
+            "start_line": 42,
+            "end_line": 49,
+            "match_cover": 0.75,
+            "match_run": 4,
+            "matched_text": "Company, in such capacity as the Company may in its sole discretion determine. The Payment may be affected by a change in your duties or position as set forth below. 2. Terms of Payment, Pursuant to the provisions of the Agreement: a. In the event that ducing the Reteation Period (f} your employment",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "General b. — At-will employment / effect on Payment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Tenninates” is a mechanical misspelling of “terminates” in the employment-termination trigger."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"based\"",
+          "description": "Spelling error: \"bassd\" should be \"based\"",
+          "revision": "the Payment will be prorated bassdbased on the percentage",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2421,
+            "end_char": 2473,
+            "start_line": 52,
+            "end_line": 52,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "the Payment will be prorated bassd on the percentage",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Bassd” is a mechanical misspelling of “based” in the proration formula."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"Agreement\"",
+          "description": "Spelling error: \"Agreenient\" should be \"Agreement\"",
+          "revision": "... payable to you under this Agreenient.Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2734,
+            "end_char": 2770,
+            "start_line": 56,
+            "end_line": 56,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "payable to you under this Agreenient",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Agreenient” is a mechanical misspelling of the defined Agreement."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"to\"",
+          "description": "Spelling error: \"ta\" should be \"to\"",
+          "revision": "Retention Period due tato your resignation",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2837,
+            "end_char": 2877,
+            "start_line": 59,
+            "end_line": 59,
+            "match_cover": 0.833,
+            "match_run": 3,
+            "matched_text": "Retention Period due ta your resignation",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment b. (Forfeiture on resignation or retirement)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ta” is a mechanical misspelling of “to” in the causal phrase governing resignation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"affairs\"",
+          "description": "Spelling error: \"affuirs\" should be \"affairs\"",
+          "revision": "... to the business, properties or affuirsaffairs of the Company",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3645,
+            "end_char": 3698,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "to the business, properties or affuirs of the Company",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.c — Forfeiture for failure to meet performance expectations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Affuirs” is a mechanical misspelling of “affairs” in the confidential-information trigger."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"shall\"",
+          "description": "Spelling error: \"shalt\" should be \"shall\"",
+          "revision": "the Retention Period, your employment shaltshall be deemed",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4153,
+            "end_char": 4206,
+            "start_line": 81,
+            "end_line": 81,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "the Retention Period, your employment shalt be deemed",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment d. (Leave of absence)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Shalt” is a mechanical error for “shall” in the leave-of-absence provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"shall\"",
+          "description": "Spelling error: \"shalt\" should be \"shall\"",
+          "revision": "yment Not Transferable. You shaltshall not transfer,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4545,
+            "end_char": 4591,
+            "start_line": 88,
+            "end_line": 88,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "yment Not Transferable. You shalt not transfer",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "3. Payment Not Transferable"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“You shalt not” contains a mechanical grammatical error for “You shall not” in the transfer prohibition."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"writing\"",
+          "description": "Spelling error: \"waiting\" should be \"writing\"",
+          "revision": "5. Notices,. Any notice relating to the Agreement shall be in waitingwriting or in such form",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5209,
+            "end_char": 5293,
+            "start_line": 103,
+            "end_line": 103,
+            "match_cover": 0.938,
+            "match_run": 11,
+            "matched_text": "5. Notices, Any notice relating to the Agreement shall be in waiting or in such form",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“In waiting” is a mechanical error for “in writing” and, as printed, alters the required form of notice."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"Court\"",
+          "description": "Spelling error: \"Coust\" should be \"Court\"",
+          "revision": "at 218 Jaimes CoustCourt, Houston, Texas, 77094.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5519,
+            "end_char": 5561,
+            "start_line": 107,
+            "end_line": 107,
+            "match_cover": 0.857,
+            "match_run": 3,
+            "matched_text": "at 218 Jaimes Coust, Houston, Texas, 77094",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Coust” is a mechanical error for “Court” in the notice address and could affect proper delivery."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"effectively\"",
+          "description": "Spelling error: \"offectively\" should be \"effectively\"",
+          "revision": "... be deemed to have been offectivelyeffectively",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5639,
+            "end_char": 5661,
+            "start_line": 108,
+            "end_line": 108,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "be deemed to have been",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Offectively” is a mechanical misspelling of “effectively” in the deemed-receipt rule."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"Law\"",
+          "description": "Spelling error: \"Lay\" should be \"Law\"",
+          "revision": "9. Lay,Law. The Agreement shall be construed",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6256,
+            "end_char": 6296,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "9. Lay, The Agreement shall be construed",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "9. Governing Law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The heading “Lay” is a mechanical error for “Law.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"laws\"",
+          "description": "Spelling error: \"lava\" should be \"laws\"",
+          "revision": "with the lavalaws of the State of Texas",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6328,
+            "end_char": 6363,
+            "start_line": 123,
+            "end_line": 123,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "with the lava of the State of Texas",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "9. Governing Law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Lava” is a mechanical error for “laws” in the operative governing-law sentence."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"created\"",
+          "description": "Spelling error: \"ereated\" should be \"created\"",
+          "revision": "may be ereatedcreated hereunder; no such",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6733,
+            "end_char": 6766,
+            "start_line": 130,
+            "end_line": 130,
+            "match_cover": 0.833,
+            "match_run": 3,
+            "matched_text": "may be ereated hereunder; no such",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "10. Unfunded"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ereated” is a mechanical misspelling of “created” in the description of contractual obligations."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple errors in severability",
+          "description": "Spelling errors: \"filly\" \"ag\"",
+          "revision": "... provisions hereof, but shall be. fillyfully severable and thig Agreement shall. ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8086,
+            "end_char": 8159,
+            "start_line": 153,
+            "end_line": 153,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "provisions hereof, but shall be. filly severable and thig Agreement shall",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "13. Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The severability language contains mechanical misspellings, including “filly,” “thig,” and “ag,” requiring correction to apply the sentence as intended."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"if\"",
+          "description": "Spelling error: \"ag if\" should be \"as if\"",
+          "revision": "construed and enforced agas if the provisions had not ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8164,
+            "end_char": 8215,
+            "start_line": 154,
+            "end_line": 154,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "construed and enforced ag if the provisions had not",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "13. Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ag if” is a mechanical error for “as if” in the severability provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"agree\"",
+          "description": "Spelling error: \"ageee\" should be \"agree\"",
+          "revision": "14. Confidentiality. You ageeeagree and promise that you will ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8232,
+            "end_char": 8288,
+            "start_line": 156,
+            "end_line": 156,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "14. Confidentiality. You ageee and promise that you will",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ageee” is a mechanical misspelling of “agree” in the confidentiality covenant."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple typos in confidentiality",
+          "description": "Typos: \"Agreament\" \"disctose\" \"or.\"",
+          "revision": "contents of this AgreamentAgreement in strict confidence and pot disctosenot disclose in any manner or.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8316,
+            "end_char": 8397,
+            "start_line": 157,
+            "end_line": 157,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "contents of this Agreament in strict confidence and pot disctose in any manner or",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The confidentiality sentence contains mechanical errors, most importantly “pot disctose” for “not disclose,” which obscures the operative prohibition."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple typos in exceptions",
+          "description": "Typos: \"Agtocment\" \"(ax\"",
+          "revision": "you may disclose this AgtocmentAgreement and the Payiient fo your ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8479,
+            "end_char": 8535,
+            "start_line": 159,
+            "end_line": 159,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "you may disclose this Agtocment and the Payiient fo your",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The disclosure exception contains mechanical misspellings of “Agreement,” “Payment,” “to,” and “tax.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"required\"",
+          "description": "Spelling error: \"requited\" should be \"required\"",
+          "revision": "advisor, or lawyer or as requitedrequired by law.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8560,
+            "end_char": 8600,
+            "start_line": 160,
+            "end_line": 160,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "advisor, or lawyer or as requited by law",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Requited” is a mechanical misspelling of “required” in the legal-disclosure exception."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"Payment\"",
+          "description": "Spelling error: \"Payidnt\" should be \"Payment\"",
+          "revision": "receive the. Payidnt.Payment.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8797,
+            "end_char": 8817,
+            "start_line": 164,
+            "end_line": 164,
+            "match_cover": 0.75,
+            "match_run": 3,
+            "matched_text": "receive the. Payidnt",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Payidnt” is a mechanical misspelling of the defined “Payment.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"understand\"",
+          "description": "Spelling error: \"vinderstand\" should be \"understand\"",
+          "revision": "[I have read and I vinderstandunderstand and agree",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 9054,
+            "end_char": 9220,
+            "start_line": 168,
+            "end_line": 177,
+            "match_cover": 0.625,
+            "match_run": 4,
+            "matched_text": "I have read and T understand arid agive to-all of the tetms and.condifians of the Agreement. Employee Name (Print) Date; OO.r A\\ ; (Signature Date). Date: gf af i",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"reasons\"",
+          "description": "Spelling error: \"reasous\" should be \"reasons\"",
+          "revision": "Company and me for the reasousreasons stated herein",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8906,
+            "end_char": 8950,
+            "start_line": 167,
+            "end_line": 167,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "Company and me for the reasous stated herein",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in \"enforce\"",
+          "description": "Spelling error: \"enforee\" should be \"enforce\"",
+          "revision": "legal means.to.enforee to enforce all provisions",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8988,
+            "end_char": 9025,
+            "start_line": 168,
+            "end_line": 168,
+            "match_cover": 0.75,
+            "match_run": 4,
+            "matched_text": "legal means.to.enforee all provisions",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        }
+      ]
+    },
+    "employee_ryder": {
+      "n_issues": 54,
+      "n_located": 49,
+      "by_tab": {
+        "risks_negotiation": 13,
+        "proofread": 41
+      },
+      "by_kind": {
+        "Notable": 3,
+        "Important": 7,
+        "Minor": 3,
+        "Spelling + Grammar": 33,
+        "Definitions": 2,
+        "Templated Content": 6
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unilateral Early Termination by Company",
+          "description": "The Company has sole discretion to determine that \"services are substantially complete\" before the end of the Retention Period, which effectively gives the Company the unilateral right to end the agreement early. While it states full payment would be made in that scenario, the lack of any objective criteria for what constitutes \"substantially complete\" creates uncertainty for Nicole. Consider adding objective milestones or requiring mutual agreement on early completion.",
+          "revision": "2013 (the \"Retention Period\") uniessunless the Company, in consultation with you, determines prior to that date ...",
+          "comment": "We changed unilateral Company discretion to a consultative process to ensure Nicole has meaningful input before early termination is invoked, consistent with good-faith dealing obligations under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 565,
+            "end_char": 643,
+            "start_line": 14,
+            "end_line": 14,
+            "match_cover": 0.688,
+            "match_run": 5,
+            "matched_text": "2013 (the “Retention Period”) uniess the Company determines prior to that date",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Term of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Services are substantially complete” provides no definite standard for determining when early completion has occurred."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad Forfeiture for Performance Expectations",
+          "description": "Section 2(c)(i) allows forfeiture of the entire Payment if the Company \"concludes\" that Nicole \"failed to meet performance expectations.\" This is extremely one-sided: (1) the Company is the sole judge of whether expectations were met, with no objective standard or process required; (2) there is no requirement for prior notice, warning, or opportunity to cure; and (3) the entire payment is forfeited rather than prorated. This should be narrowed to require written notice and a reasonable cure period before forfeiture, and ideally reference specific, pre-established performance criteria.",
+          "revision": "Retention Period the Company concludes that (i) you failed to meet, after providing you written notice and a reasonable opportunity to cure of no less than 30 days, that (i) you failed to meet documented and previously communicated performance expectations in your assignments and responsibilities, (ii)",
+          "comment": "We revised this clause to require written notice and a reasonable cure period before forfeiture can be triggered, and to tie performance expectations to documented, pre-communicated criteria — this ensures basic procedural fairness and reduces the risk of arbitrary forfeiture, which Texas courts may scrutinize under unconscionability doctrine.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3216,
+            "end_char": 3353,
+            "start_line": 66,
+            "end_line": 67,
+            "match_cover": 0.413,
+            "match_run": 11,
+            "matched_text": "Retention Period the Company concludes that (i) you failed to meet performance expectations in your assignments and responsibilities, (ii",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.c — Forfeiture for failure to meet performance expectations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Performance expectations” is undefined and potentially indeterminate, particularly because no documented or objective expectations are identified."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Code of Conduct Violation — No Materiality Threshold",
+          "description": "Section 2(c)(vi) triggers forfeiture if Nicole violated the Company Code of Conduct \"in any respect\" . Unlike the other forfeiture triggers in this section (clauses iii–v), which include a materiality qualifier (\"in any material respect\"), this clause has no materiality threshold at all. A trivial or inadvertent Code of Conduct violation could result in total forfeiture of the $60,300 Payment. This should be narrowed to require a material violation.",
+          "revision": "... Code of Conduct in any material respect.",
+          "comment": "We added a materiality qualifier to clause (vi) to align it with the other forfeiture triggers in this section; forfeiture of a $60,300 payment should not be triggered by a minor or inadvertent Code of Conduct violation, and consistency with clauses (iii)–(v) reflects standard drafting practice under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3975,
+            "end_char": 4005,
+            "start_line": 76,
+            "end_line": 77,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "Code of Conduct in any respect",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.c — Forfeiture for failure to meet performance expectations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The broad phrase “in any respect” in one enumerated forfeiture trigger contrasts with the express materiality limits in adjacent triggers, raising a list-based scope question about whether trivial violations were intentionally included."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Company Has Sole Discretion Over Agreement Interpretation",
+          "description": "Section 7 grants the Company \"sole and absolute discretion\" to interpret the Agreement, with such interpretation being \"final, binding and conclusive.\" This effectively strips Nicole of the ability to contest the Company's interpretation of any term, including the forfeiture provisions. Under Texas law, this clause may be enforceable, but it is heavily one-sided. Consider revising to provide for neutral dispute resolution or at minimum remove the \"absolute\" qualifier and the \"final, binding and conclusive\" language.",
+          "revision": "... determined by the Company in its sole and absolutegood faith, subject to resolution of any dispute through binding arbitration or a court of competent jurisdiction.",
+          "comment": "We replaced 'sole and absolute discretion' with a good faith standard and arbitration/court review to ensure basic procedural fairness; under Texas law, self-serving interpretation clauses in employment agreements are disfavored and may be challenged as unconscionable.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6012,
+            "end_char": 6242,
+            "start_line": 116,
+            "end_line": 120,
+            "match_cover": 0.48,
+            "match_run": 8,
+            "matched_text": "determined by the Company in its sole and absolute discretion and will be final, binding and conclusive for all purposes. 8. Successors, The Agreement shall inure to the benefit of and be binding upon each successor and assign of",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "7. Interpretation of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Company's sole and final interpretive authority is one-sided but textually explicit; the issue concerns enforceability and negotiating fairness rather than ambiguity."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Termination Without Cause or Notice",
+          "description": "Section 4  allows the Company to terminate Nicole's employment \"with or without cause and with or without notice\" . While at-will employment is standard in Texas, the combination of this provision with the forfeiture clause in Section 2(b)  is problematic — the Company could terminate Nicole without cause just before the end of the Retention Period. If the termination is not characterized as a \"Company initiated severance,\" Nicole could lose her entire Payment. Consider adding language clarifying that any Company-initiated termination during the Retention Period triggers at minimum the prorated payment under Section 2(a).",
+          "revision": "... during, or subsequent to, the termination of this Agreement, with or without cause and with or without notice; provided that any termination of your employment by the Company during the Retention Period shall be treated as a Company initiated severance for purposes of Section 2(a).",
+          "comment": "Without this clarification, the Company could terminate Nicole without cause during the Retention Period and avoid the Payment obligation by declining to characterize the termination as 'Company initiated severance' — this proviso simply ensures consistent treatment of Company-initiated exits.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5097,
+            "end_char": 5582,
+            "start_line": 100,
+            "end_line": 107,
+            "match_cover": 0.543,
+            "match_run": 18,
+            "matched_text": "during, or subsequent to, the termination of this Agreement, with or without cause and with or without notice, 5. Notices, Any notice relating to the Agreement shall be in waiting or in such form as may be acceptable to the Company. All notices to the Company shall be addressed to Michelle Reyes, HR",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Company initiated severance” is undefined, leaving some uncertainty whether every Company-initiated termination under the at-will clause qualifies."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality Breach Triggers Total Forfeiture Without Cure",
+          "description": "Section 14 provides that if Nicole discloses or even \"threatens to disclose\" any information about the Agreement outside of the permitted exceptions, she forfeits the entire Payment . This is harsh — there is no cure period, no materiality threshold, and even a threat of disclosure (which could be ambiguous) triggers total forfeiture. Additionally, the permitted disclosure exceptions are narrow and notably omit disclosure in connection with legal proceedings or government investigations. Consider softening by adding a cure period and broadening permissible disclosures.",
+          "revision": "... and agree that in the éventevent you disclose or",
+          "comment": "The original 'threatens to disclose' language creates an unenforceable and overbroad forfeiture trigger under Texas law; courts disfavor total forfeiture provisions that lack materiality thresholds or cure opportunities, and we've revised accordingly to limit forfeiture to actual disclosure.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8672,
+            "end_char": 8715,
+            "start_line": 161,
+            "end_line": 161,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "and agree that in the évent you disclose or",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “threaten to disclose” has an uncertain boundary and does not specify what conduct amounts to a forfeiture-triggering threat."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Favors Company",
+          "description": "Section 5 states that notices must be \"in writing or in such form as may be acceptable to the Company\" . This gives the Company discretion to accept non-written notice forms for its own convenience while potentially holding Nicole to a stricter standard. The provision should specify acceptable notice methods equally for both parties (e.g., personal delivery, certified mail, email).",
+          "revision": "... the Agreement shall be in waiting or in such formwriting and delivered by personal delivery, certified mail, or email.",
+          "comment": "We specified mutual notice methods — personal delivery, certified mail, or email — to ensure consistent and enforceable standards for both parties, which is standard practice under Texas contract law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5244,
+            "end_char": 5705,
+            "start_line": 103,
+            "end_line": 109,
+            "match_cover": 0.526,
+            "match_run": 9,
+            "matched_text": "the Agreement shall be in waiting or in such form as may be acceptable to the Company. All notices to the Company shall be addressed to Michelle Reyes, HR Account Manager — Commercial/NVBD, Shell Exploration & Production Company. All notices sent to you shall be sent to you at 218 Jaimes Coust, Hous",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Company's authority to accept another notice form is one-sided but clear; mutual notice procedures would be a negotiated revision."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Reservation of Rights Is One-Sided",
+          "description": "Section 6  reserves the Company's legal rights and remedies against Nicole even after forfeiture of the Payment. However, there is no corresponding reservation of Nicole's rights. Forfeiture of the Payment should be explicitly stated as not prejudicing Nicole's legal rights either, to ensure she is not inadvertently waiving claims by accepting forfeiture.",
+          "revision": "... Payment shalt be without prejudice to any legal right or remedy that the Company may have against you or any other person, and shall be without prejudice to any legal right or remedy that you may have against the Company.",
+          "comment": "We revised this clause to make the reservation of rights bilateral; under Texas law, one-sided reservation language in a forfeiture provision could otherwise be read to prejudice the Employee's independent legal claims, which is not an equitable or commercially reasonable outcome.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5781,
+            "end_char": 6037,
+            "start_line": 111,
+            "end_line": 116,
+            "match_cover": 0.65,
+            "match_run": 22,
+            "matched_text": "Payment shalt be without prejudice to any legal right or remedy that the Company may have against you or any other person. 7. Interpretation of Agreement. Any interpretation, construction or application of this Agreement shall be determined by the Company",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "7. Interpretation of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause expressly preserves only the Company's remedies; lack of a reciprocal reservation is an omission, not an ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Successors Provision Binds Only Company — Not Reciprocal",
+          "description": "Section 8  states the Agreement inures to the benefit of the Company's successors and assigns, but does not explicitly confirm that Nicole's rights under the Agreement survive an assignment or change of control. If Shell is acquired or assigns this agreement, Nicole should be assured her entitlement to the Payment carries over. Consider adding language confirming the Agreement also inures to Nicole's benefit.",
+          "revision": "... and be binding upon each successor and assign of the Company, and shall also inure to your benefit and that of your heirs and legal representatives.",
+          "comment": "We revised the successors clause to make it reciprocal, consistent with standard practice under Texas law, so that Nicole's rights under the Agreement are preserved in the event of a change of control or assignment.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6194,
+            "end_char": 6661,
+            "start_line": 119,
+            "end_line": 128,
+            "match_cover": 0.577,
+            "match_run": 11,
+            "matched_text": "and be binding upon each successor and assign of the Company. 9. Lay, The Agreement shall be construed and interpreted in accordance with the lava of the State of Texas without giving effect to that State’s choice of law principles. 10. Unfunded, This Agreement shall be unfunded, and the Company sha",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "10. Unfunded"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause clearly binds and benefits the Company's successors and assigns; making it more expressly reciprocal is a negotiating change, not construction of a defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Unlimited Withholding Discretion",
+          "description": "The withholding provision  allows the Company to withhold \"such amounts as the Company determines necessary to satisfy income and social taxes or any other withholding obligations.\" The phrase \"any other withholding obligations\" is vague and could be used to deduct amounts beyond standard tax withholding, such as alleged debts or overpayments. Consider narrowing to only legally required tax withholdings.",
+          "revision": "... social taxes or any other legally required withholding obligations.",
+          "comment": "We limited the withholding authority to legally required obligations to ensure compliance with Texas payroll law and avoid ambiguity that could permit deductions beyond statutorily mandated withholdings.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1667,
+            "end_char": 1716,
+            "start_line": 30,
+            "end_line": 31,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "social taxes or any other withholding obligations",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Withholding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The catch-all “any other withholding obligations” follows specific references to income and social taxes, leaving uncertain whether its scope is limited to similar legally required withholdings."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Position Transfer Triggers Only Prorated Payment",
+          "description": "Section 2(a)  provides that if Nicole is transferred out of her position for any reason during the Retention Period, the Payment is prorated and \"no additional amount shall be payable\" . This means the Company could reassign Nicole to a different role and cut the retention payment short, even though she remains employed. The purpose of a retention agreement is to retain the employee — if the Company initiates the transfer, Nicole should receive the full Payment rather than a prorated amount.",
+          "revision": "... the Company for any reason other than at your request, the full Payment will be payable to you within 15 days of such change in position. If the transfer is at your request,",
+          "comment": "A Company-initiated transfer effectively ends Nicole's retention arrangement through the Company's own action; limiting her to a prorated payment in that scenario undermines the fundamental purpose of the retention agreement and creates a perverse incentive for the Company to transfer rather than terminate.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2393,
+            "end_char": 2865,
+            "start_line": 51,
+            "end_line": 59,
+            "match_cover": 0.667,
+            "match_run": 5,
+            "matched_text": "the Company for any reason, the Payment will be prorated bassd on the percentage of the Retention Period that you were employed by the Company or held such initial position, as applicable, This adjusted amount will be payable to you (or your estate) within 15 days of such termination or change in po",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause clearly provides only a prorated payment following a transfer; the objection concerns the economic result rather than textual uncertainty."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Benefit Calculation Inclusion",
+          "description": "Section 11  excludes the Payment from all benefit calculations including pension, retirement, profit-sharing, welfare plans, and future salary calculations. While this is common in retention agreements, the breadth of this exclusion — particularly the prohibition on considering the Payment for \"any incentive compensation\"  — is worth noting. Nicole should confirm this does not inadvertently affect other compensation she may be entitled to.",
+          "revision": "... salary purposes or be taken into consideration when calculating any incentive compensation, unless otherwise required by applicable law.",
+          "comment": "We limited the benefit exclusion to base pay and incentive compensation calculations, with a carve-out for applicable law requirements, as a blanket exclusion across all benefit and welfare plans creates disproportionate risk of unintended reduction in Employee's earned entitlements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7342,
+            "end_char": 7749,
+            "start_line": 138,
+            "end_line": 147,
+            "match_cover": 0.722,
+            "match_run": 12,
+            "matched_text": "salary purposes or be taken into consideration when calculating any incentive compensation, SHELL-RYDER-001691 Case 4:14-cv-00726 Document 12-4 Filed in TXSD on 02/13/15 Page 16 of 108 sidment and Tennina fihis Agreement, The Compaiy may amend or terminate this Agreement at any time, excdpt that rio",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "12. Amendment and Termination of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The exclusion from benefit and incentive-compensation calculations is broad but clear and does not conflict with another provision."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Resignation Forfeiture Lacks Constructive Termination Carve-Out",
+          "description": "Section 2(b)  provides for complete forfeiture of the Payment if Nicole resigns or retires during the Retention Period. However, there is no carve-out for constructive termination — situations where the Company's conduct (such as a material reduction in duties, hostile work environment, or material breach of the agreement) effectively forces Nicole to resign. Without such a carve-out, the Company could make conditions intolerable and then claim forfeiture when Nicole resigns. Consider adding language treating resignation for \"good reason\" (e.g., material adverse change in duties, compensation, or working conditions) as equivalent to a Company-initiated severance.",
+          "revision": "... the Company terminate during the Retention Period due to your resignation or retirement (other than retirement in connection with a Company initiated severance, or resignation for good reason, including a material reduction in duties, authority, or compensation),",
+          "comment": "We introduced a constructive termination carve-out because without it, the forfeiture provision could incentivize adverse conduct by the Company — a material reduction in duties, authority, or compensation that forces a resignation should not be treated the same as a voluntary departure under equitable principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2804,
+            "end_char": 3377,
+            "start_line": 58,
+            "end_line": 68,
+            "match_cover": 0.676,
+            "match_run": 14,
+            "matched_text": "the Company terminate during the Retention Period due ta your resignation or retirement (other than retirement in connection with a Company initiated severance), any amount(s) scheduled to be paid shall be forfeited and you waive all rights to afl or part of the Payment. c. Notwithstanding any provi",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.c — Forfeiture for failure to meet performance expectations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The terms “resignation” and “Company initiated severance” have a potentially uncertain boundary when an employee claims she was constructively forced to resign."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in defined term",
+          "description": "Appears to be typo - should be \"I\" not \"Fy\"",
+          "revision": "\"FyI\") and your heirs and successors.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 236,
+            "end_char": 265,
+            "start_line": 5,
+            "end_line": 5,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "and your heirs and successors",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in section heading",
+          "description": "Misspelling of \"Term\"",
+          "revision": "TexmTerm of Agreement",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"Agreement\"",
+          "revision": "This AgreenventAgreement shall be effective August I1, 2011 and continue in ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 310,
+            "end_char": 540,
+            "start_line": 5,
+            "end_line": 13,
+            "match_cover": 0.818,
+            "match_run": 4,
+            "matched_text": "this : and other good and valuable consideration, the receipt and sufficiency of which is acknowledged, you and the Company agree as follows: a Texm of Agreement This Agreenvent shall be effective August I, 2011 and continue in",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Term of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The misspelling “Agreenvent” is a mechanical error in the document name."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"earlier\"",
+          "revision": "earllcrearlier date and filtfull payment made within 15 business ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 752,
+            "end_char": 797,
+            "start_line": 16,
+            "end_line": 16,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "date and filt payment made within 15 business",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Term of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Earllcr” is a mechanical misspelling of “earlier” in the early-payment provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling and grammar errors",
+          "description": "Multiple errors in tax withholding clause",
+          "revision": "sniclilig bes onyincluding from any payment under the Agreement, unless ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1324,
+            "end_char": 1595,
+            "start_line": 26,
+            "end_line": 29,
+            "match_cover": 0.8,
+            "match_run": 6,
+            "matched_text": "sniclilig bes ony payment under the Agreement, unless you are on an assignment under IBAS terms, in which case the provisions of IBAS (including appropriate reductions for hypothetical tax) will be applicable. The Company may withhold from any payment under the Agreement",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Withholding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The heavily garbled tax sentence, including “sniclilig bes ony,” mechanically obscures the description of the employee's tax responsibility."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: IBAS",
+          "description": "The term 'IBAS' is used in  but is never defined in the Agreement. This appears to be a specific program or system related to tax treatment for employees on assignment, but without a definition, it creates ambiguity about what terms and provisions apply. This could lead to disputes about tax withholding and payment calculations.",
+          "revision": "assignment under IBAS (International Business Assignment System) terms, in which case the provisions of IBAS (including",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1392,
+            "end_char": 1468,
+            "start_line": 27,
+            "end_line": 27,
+            "match_cover": 0.75,
+            "match_run": 9,
+            "matched_text": "assignment under IBAS terms, in which case the provisions of IBAS (including",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Withholding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“IBAS” is undefined, making the referenced assignment and tax provisions uncertain."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple spelling errors in retention period clause",
+          "revision": "a. In the event that ducingduring the ReteationRetention Period (f}(i) your employment with the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2122,
+            "end_char": 2199,
+            "start_line": 48,
+            "end_line": 48,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "a. In the event that ducing the Reteation Period (f} your employment with the",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The opening of Section 2(a) contains mechanical errors in “during,” “Retention,” and the numbering of the first enumerated event."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple spelling errors in termination clause",
+          "revision": "Company tenninatesterminates due to a Company fuitiatedinitiated severance or your death",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1888,
+            "end_char": 2269,
+            "start_line": 42,
+            "end_line": 49,
+            "match_cover": 0.818,
+            "match_run": 4,
+            "matched_text": "Company, in such capacity as the Company may in its sole discretion determine. The Payment may be affected by a change in your duties or position as set forth below. 2. Terms of Payment, Pursuant to the provisions of the Agreement: a. In the event that ducing the Reteation Period (f} your employment",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "General b. — At-will employment / effect on Payment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The termination language contains mechanical spelling and enumeration errors, including the misspelling of “terminates.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling and grammar errors",
+          "description": "Multiple errors in transfer provision",
+          "revision": "ot Ci)or (ii) you are transferred out of ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2270,
+            "end_char": 2303,
+            "start_line": 50,
+            "end_line": 50,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "ot Ci) you are transferred out of",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The text “ot Ci)” is a mechanical corruption of “or (ii),” obscuring the conjunction and numbering between the alternative triggers."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"Retention\"",
+          "revision": "ReteationRetention Period for a different position ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2356,
+            "end_char": 2387,
+            "start_line": 51,
+            "end_line": 51,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "Period for a different position",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Retention” is mechanically misspelled in the reference to the defined Retention Period."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"based\"",
+          "revision": "the Payment will be prorated bassdbased on the percentage of the ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2421,
+            "end_char": 2480,
+            "start_line": 52,
+            "end_line": 52,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "the Payment will be prorated bassd on the percentage of the",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Bassd” is a mechanical misspelling of “based” in the proration formula."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"Agreement\"",
+          "revision": "... payable to you under this Agreenient.Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2734,
+            "end_char": 2770,
+            "start_line": 56,
+            "end_line": 56,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "payable to you under this Agreenient",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment a. (Proration)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Agreenient” is a mechanical misspelling of “Agreement.”"
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Numeric placeholder in forfeiture clause",
+          "description": "Found: \"any 1 amount\" — The phrase \"any 1 amount\" contains what appears to be an unfilled numeric placeholder .",
+          "revision": "",
+          "comment": "Insert the specific dollar amount or numerical threshold referenced in this provision.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Isolated section marker",
+          "description": "Found: \"a\" — Standalone letter \"a\" appears to be an incomplete section heading or list marker .",
+          "revision": "",
+          "comment": "Insert the applicable term or value required at this placeholder position.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Incomplete section heading",
+          "description": "Found: \"TH.\" — Fragment \"TH.\" appears to be an incomplete section number or heading .",
+          "revision": "",
+          "comment": "Insert the full title or heading text that 'TH.' abbreviates.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Incomplete clause fragment",
+          "description": "Found: \"Pesiod; and\" — Text \"Pesiod; and\" appears to be an incomplete clause or list item .",
+          "revision": "",
+          "comment": "Insert the correct term for the period referenced in this clause.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Leading colon suggests missing consideration text",
+          "description": "Found: \": and other good and valuable consideration\" — Paragraph begins with colon, suggesting preceding consideration language may be missing or incomplete .",
+          "revision": "",
+          "comment": "Insert the specific monetary amount or initial consideration exchanged between the parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 318,
+            "end_char": 359,
+            "start_line": 7,
+            "end_line": 7,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "and other good and valuable consideration",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing noun after demonstrative \"this\"",
+          "description": "Found: \"under this shall be based\" — Phrase \"under this shall be\" lacks required noun, likely \"Agreement\" omitted from template .",
+          "revision": "",
+          "comment": "Insert the name of the specific agreement or document being referenced.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6662,
+            "end_char": 6687,
+            "start_line": 129,
+            "end_line": 129,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "under this shall be based",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "10. Unfunded"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The phrase “under this shall be based” mechanically omits the noun “Agreement,” leaving the referent grammatically incomplete."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: payment",
+          "description": "In , 'payment' appears in lowercase ('filt payment made') when it should be capitalized as 'Payment' to refer to the specific Restricted Cash Payment defined in . This inconsistency could create ambiguity about whether this refers to the defined Payment or some other payment.",
+          "revision": "earllcr date and filt paymentPayment made within 15 business days from such earlier date without",
+          "comment": "",
+          "group_size": 3,
+          "location": {
+            "start_char": 744,
+            "end_char": 833,
+            "start_line": 16,
+            "end_line": 16,
+            "match_cover": 0.933,
+            "match_run": 10,
+            "matched_text": "earllcr date and filt payment made within 15 business days from such earlier date without",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Term of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The lowercase and garbled reference to “payment” is mechanically inconsistent with the defined “Payment,” creating uncertainty over whether the defined amount is intended."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"affairs\"",
+          "revision": "... to the business, properties or affuirsaffairs of the Company and the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3645,
+            "end_char": 3706,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "to the business, properties or affuirs of the Company and the",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.c — Forfeiture for failure to meet performance expectations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Affuirs” is a mechanical misspelling of “affairs.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"shall\"",
+          "revision": "the Retention Period, your employment shaltshall be deemed to continue",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4153,
+            "end_char": 4218,
+            "start_line": 81,
+            "end_line": 81,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "the Retention Period, your employment shalt be deemed to continue",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "2. Terms of Payment d. (Leave of absence)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Shalt” is a mechanical error for “shall” in the leave provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in transferability clause",
+          "revision": "ymentPayment Not Transferable. You shaltshall not transfer, assign or pledge ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4551,
+            "end_char": 4609,
+            "start_line": 88,
+            "end_line": 88,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "Not Transferable. You shalt not transfer, assign or pledge",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "3. Payment Not Transferable"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The transferability clause contains mechanical errors, including “shalt” and the corrupted preposition governing the manner of transfer."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"in\"",
+          "revision": "isin any manner other than by ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4625,
+            "end_char": 4649,
+            "start_line": 89,
+            "end_line": 89,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "any manner other than by",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "3. Payment Not Transferable"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The transfer prohibition mechanically uses the wrong or corrupted preposition where “in any manner” is intended."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"writing\"",
+          "revision": "5. Notices,. Any notice relating to the Agreement shall be in waitingwriting or in such form",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5209,
+            "end_char": 5293,
+            "start_line": 103,
+            "end_line": 103,
+            "match_cover": 0.938,
+            "match_run": 11,
+            "matched_text": "5. Notices, Any notice relating to the Agreement shall be in waiting or in such form",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“In waiting” is a mechanical error for “in writing,” affecting the stated notice-form requirement."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"effectively\"",
+          "revision": "... be deemed to have been offectivelyeffectively",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5639,
+            "end_char": 5661,
+            "start_line": 108,
+            "end_line": 108,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "be deemed to have been",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "5. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Offectively” is a mechanical misspelling of “effectively” in the notice provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"Law\"",
+          "revision": "9. Lay,Law. The Agreement shall be construed ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6256,
+            "end_char": 6296,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "9. Lay, The Agreement shall be construed",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "9. Governing Law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The heading “Lay” is a mechanical misspelling of “Law.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"laws\"",
+          "revision": "with the lavalaws of the State of Texas ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6328,
+            "end_char": 6363,
+            "start_line": 123,
+            "end_line": 123,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "with the lava of the State of Texas",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "9. Governing Law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Lava” is a mechanical error for “laws” in the governing-law provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"created\"",
+          "revision": "may be ereatedcreated hereunder; no such obligations of ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6733,
+            "end_char": 6781,
+            "start_line": 130,
+            "end_line": 130,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "may be ereated hereunder; no such obligations of",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "10. Unfunded"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ereated” is a mechanical misspelling of “created.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"welfare\"",
+          "revision": "sharing or welforewelfare benefit plan, In addition, the ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7206,
+            "end_char": 7255,
+            "start_line": 137,
+            "end_line": 137,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "sharing or welfore benefit plan, In addition, the",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "11. No Benefit Rights Conferred"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Welfore” is a mechanical misspelling of “welfare” in the list of benefit plans."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"shall\"",
+          "revision": "shaltshall not be added to base ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7291,
+            "end_char": 7311,
+            "start_line": 138,
+            "end_line": 138,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "not be added to base",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "11. No Benefit Rights Conferred"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Shalt” is a mechanical error for “shall” in the benefit-calculation exclusion."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in amendment heading and text",
+          "revision": "sidmentAmendment and Tennina fihisTermination of this Agreement,. The CompaiyCompany may amend or",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4681,
+            "end_char": 5107,
+            "start_line": 89,
+            "end_line": 100,
+            "match_cover": 0.583,
+            "match_run": 4,
+            "matched_text": "and distribution until the Agreement has expired. SHELL-RYDER-001880 Case 4:14-cv-00726 Document 12-4 Filed in TXSD on 02/13/15 Page 15 of 108 No Employment Rights. Nothing in this Agreement shall confer upon you any right to be retained as a director, officer or employee of the Company. Notwithstan",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Employment Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The amendment-and-termination heading and surrounding text contain multiple mechanical corruptions that obscure the provision's identification and wording."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in termination provision",
+          "revision": "... this Agreement at any time, excdptexcept that rio ainendment.or tornmination.no amendment or termination",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7603,
+            "end_char": 7834,
+            "start_line": 146,
+            "end_line": 148,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "this Agreement at any time, excdpt that rio ainendment.or tornmination. shall reduce or diminish the benefits or rights to which you are otherwise entitled under the Agreement immediately prior to any-such anvendment-or termination",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "12. Amendment and Termination of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Errors such as “excdpt,” “rio,” “ainendment,” and “tornmination” mechanically corrupt the exception protecting accrued rights, including its critical negative term."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"amendment\"",
+          "revision": "... Agreement immediately prior to any-such anvendment-oramendment-or termination",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7769,
+            "end_char": 7834,
+            "start_line": 148,
+            "end_line": 148,
+            "match_cover": 0.9,
+            "match_run": 7,
+            "matched_text": "Agreement immediately prior to any-such anvendment-or termination",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "12. Amendment and Termination of Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Anvendment” is a mechanical misspelling of “amendment.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in severability clause",
+          "revision": "... provisions hereof, but shall be. filly fully severable and thigthis Agreement shall. be",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8086,
+            "end_char": 8163,
+            "start_line": 153,
+            "end_line": 153,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "provisions hereof, but shall be. filly severable and thig Agreement shall. be",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "13. Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The severability clause contains multiple mechanical misspellings, including “filly” and “thig.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in confidentiality clause",
+          "revision": "14. Confidentiality. You ageeeagree and promise that you will hold the existence and thothe",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8232,
+            "end_char": 8311,
+            "start_line": 156,
+            "end_line": 156,
+            "match_cover": 0.857,
+            "match_run": 9,
+            "matched_text": "14. Confidentiality. You ageee and promise that you will hold the existence and",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The confidentiality covenant contains multiple mechanical spelling errors, including “ageee” for “agree.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in disclosure provision",
+          "revision": "contents of this AgreamentAgreement in strict confidence and pot disctosenot disclose in any manner or.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8316,
+            "end_char": 8397,
+            "start_line": 157,
+            "end_line": 157,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "contents of this Agreament in strict confidence and pot disctose in any manner or",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The disclosure prohibition contains mechanical errors, particularly “pot disctose” for “not disclose,” that obscure the operative duty."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in disclosure exception",
+          "revision": "you may disclose this AgtocmentAgreement and the Payiient foPayment to your spouse, accountant, (axtax",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8479,
+            "end_char": 8554,
+            "start_line": 159,
+            "end_line": 159,
+            "match_cover": 0.714,
+            "match_run": 4,
+            "matched_text": "you may disclose this Agtocment and the Payiient fo your spouse, accountant",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The disclosure exception contains multiple mechanical corruptions of “Agreement,” “Payment,” “to,” and “tax.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"event\"",
+          "revision": "... and agree that in the éventevent you disclose or",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8672,
+            "end_char": 8715,
+            "start_line": 161,
+            "end_line": 161,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "and agree that in the évent you disclose or",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The accented or corrupted spelling of “event” is a mechanical textual error."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling of \"Payment\"",
+          "revision": "receive the. Payidnt. Payment.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8797,
+            "end_char": 8817,
+            "start_line": 164,
+            "end_line": 164,
+            "match_cover": 0.75,
+            "match_run": 3,
+            "matched_text": "receive the. Payidnt",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "14. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Payidnt” is a mechanical misspelling of the defined “Payment.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in acknowledgment language",
+          "revision": "[I have read and I vinderstandunderstand and agree that this Agreement ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8822,
+            "end_char": 8879,
+            "start_line": 166,
+            "end_line": 166,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "have read and I vinderstand and agree that this Agreement",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Multiple errors in agreement acknowledgment",
+          "revision": "understand arid agive to-alland agree to all of the tetmsterms and.condifians conditions of the Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 9072,
+            "end_char": 9145,
+            "start_line": 169,
+            "end_line": 169,
+            "match_cover": 0.706,
+            "match_run": 4,
+            "matched_text": "understand arid agive to-all of the tetms and.condifians of the Agreement",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Term of Agreement",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Typo in \"Agreement\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Agreenvent” is a mechanical misspelling of the operative document name and requires correction to “Agreement.”"
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"earlier\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Earllcr” is a mechanical misspelling of “earlier” in the payment-timing provision."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Unilateral Early Termination by Company",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Services are substantially complete” provides no definite standard for determining when early completion has occurred."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The misspelling “Agreenvent” is a mechanical error in the document name."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Earllcr” is a mechanical misspelling of “earlier” in the early-payment provision."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Inconsistent capitalization: payment",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The lowercase and garbled reference to “payment” is mechanically inconsistent with the defined “Payment,” creating uncertainty over whether the defined amount is intended."
+        }
+      ],
+      "risky": true
+    },
+    "neg10": {
+      "clause_id": "neg10",
+      "clause_name": "7. Interpretation of Agreement",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "employee_ryder"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "employee_ryder",
+          "title": "Company Has Sole Discretion Over Agreement Interpretation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Company's sole and final interpretive authority is one-sided but textually explicit; the issue concerns enforceability and negotiating fairness rather than ambiguity."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Reservation of Rights Is One-Sided",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause expressly preserves only the Company's remedies; lack of a reciprocal reservation is an omission, not an ambiguity or conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "9. Governing Law",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Successors Clause Does Not Bind Employee's Successors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The successors clause's nonreciprocal scope is clear and does not contradict the preamble's reference to the employee's heirs and successors."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"Law\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The heading “Lay” is a mechanical error for “Law.”"
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"laws\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Lava” is a mechanical error for “laws” in the operative governing-law sentence."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The heading “Lay” is a mechanical misspelling of “Law.”"
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Lava” is a mechanical error for “laws” in the governing-law provision."
+        }
+      ],
+      "risky": true
+    },
+    "neg13": {
+      "clause_id": "neg13",
+      "clause_name": "10. Unfunded",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "No Forum Selection or Dispute Resolution Clause",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a forum-selection provision is an omitted negotiating protection, not an ambiguity or inconsistency in the governing-law clause."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"created\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ereated” is a mechanical misspelling of “created” in the description of contractual obligations."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Successors Provision Binds Only Company — Not Reciprocal",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause clearly binds and benefits the Company's successors and assigns; making it more expressly reciprocal is a negotiating change, not construction of a defect."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Missing noun after demonstrative \"this\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The phrase “under this shall be based” mechanically omits the noun “Agreement,” leaving the referent grammatically incomplete."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ereated” is a mechanical misspelling of “created.”"
+        }
+      ],
+      "risky": true
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "11. No Benefit Rights Conferred",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "employee_ryder"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Welfore” is a mechanical misspelling of “welfare” in the list of benefit plans."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Shalt” is a mechanical error for “shall” in the benefit-calculation exclusion."
+        }
+      ],
+      "risky": true
+    },
+    "neg15": {
+      "clause_id": "neg15",
+      "clause_name": "12. Amendment and Termination of Agreement",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "employee_ryder"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "employee_ryder",
+          "title": "No Benefit Calculation Inclusion",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The exclusion from benefit and incentive-compensation calculations is broad but clear and does not conflict with another provision."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Errors such as “excdpt,” “rio,” “ainendment,” and “tornmination” mechanically corrupt the exception protecting accrued rights, including its critical negative term."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Anvendment” is a mechanical misspelling of “amendment.”"
+        }
+      ],
+      "risky": true
+    },
+    "neg16": {
+      "clause_id": "neg16",
+      "clause_name": "13. Severability",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Multiple errors in severability",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The severability language contains mechanical misspellings, including “filly,” “thig,” and “ag,” requiring correction to apply the sentence as intended."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"if\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ag if” is a mechanical error for “as if” in the severability provision."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The severability clause contains multiple mechanical misspellings, including “filly” and “thig.”"
+        }
+      ],
+      "risky": true
+    },
+    "neg17": {
+      "clause_id": "neg17",
+      "clause_name": "14. Confidentiality",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 12,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Confidentiality Obligation Has No Survival Period",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The promise to hold the information in confidence states no temporal boundary, leaving uncertain whether it continues after expiration or payment."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"agree\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ageee” is a mechanical misspelling of “agree” in the confidentiality covenant."
+        },
+        {
+          "party": "company_shell",
+          "title": "Multiple typos in confidentiality",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The confidentiality sentence contains mechanical errors, most importantly “pot disctose” for “not disclose,” which obscures the operative prohibition."
+        },
+        {
+          "party": "company_shell",
+          "title": "Multiple typos in exceptions",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The disclosure exception contains mechanical misspellings of “Agreement,” “Payment,” “to,” and “tax.”"
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"required\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Requited” is a mechanical misspelling of “required” in the legal-disclosure exception."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"Payment\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Payidnt” is a mechanical misspelling of the defined “Payment.”"
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Confidentiality Breach Triggers Total Forfeiture Without Cure",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “threaten to disclose” has an uncertain boundary and does not specify what conduct amounts to a forfeiture-triggering threat."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The confidentiality covenant contains multiple mechanical spelling errors, including “ageee” for “agree.”"
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The disclosure prohibition contains mechanical errors, particularly “pot disctose” for “not disclose,” that obscure the operative duty."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The disclosure exception contains multiple mechanical corruptions of “Agreement,” “Payment,” “to,” and “tax.”"
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The accented or corrupted spelling of “event” is a mechanical textual error."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Payidnt” is a mechanical misspelling of the defined “Payment.”"
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "Withholding",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Undefined term: IBAS",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“IBAS” is undefined, leaving uncertain what external terms govern withholding and hypothetical-tax reductions."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Unlimited Withholding Discretion",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The catch-all “any other withholding obligations” follows specific references to income and social taxes, leaving uncertain whether its scope is limited to similar legally required withholdings."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling and grammar errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The heavily garbled tax sentence, including “sniclilig bes ony,” mechanically obscures the description of the employee's tax responsibility."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Undefined term: IBAS",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“IBAS” is undefined, making the referenced assignment and tax provisions uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "2. Terms of Payment a. (Proration)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 11,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Position Transfer Triggers Prorated Payment — Costly to Shell",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The transfer trigger and proration formula are clear; the issue concerns Shell's economic exposure, not an ambiguity or internal inconsistency."
+        },
+        {
+          "party": "company_shell",
+          "title": "Inconsistent Payment Timeline — \"15 days\" vs. \"15 business days\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The periods apply to different payment events, so using calendar days for a termination or transfer and business days for ordinary or early completion is not a direct contradiction."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"during\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ducing” is a mechanical misspelling of “during” in the condition introducing the proration events."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"based\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Bassd” is a mechanical misspelling of “based” in the proration formula."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"Agreement\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Agreenient” is a mechanical misspelling of the defined Agreement."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Position Transfer Triggers Only Prorated Payment",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause clearly provides only a prorated payment following a transfer; the objection concerns the economic result rather than textual uncertainty."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The opening of Section 2(a) contains mechanical errors in “during,” “Retention,” and the numbering of the first enumerated event."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling and grammar errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The text “ot Ci)” is a mechanical corruption of “or (ii),” obscuring the conjunction and numbering between the alternative triggers."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Retention” is mechanically misspelled in the reference to the defined Retention Period."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Bassd” is a mechanical misspelling of “based” in the proration formula."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Agreenient” is a mechanical misspelling of “Agreement.”"
+        }
+      ],
+      "risky": true
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "2. Terms of Payment b. (Forfeiture on resignation or retirement)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Resignation Forfeiture Does Not Address Constructive Termination Risk",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The boundary between a “resignation” and a “Company initiated severance” may be uncertain where the employee alleges constructive discharge."
+        },
+        {
+          "party": "company_shell",
+          "title": "Forfeiture for Cause Limited to Retention Period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Retention Period limitation is textually clear; extending forfeiture through payment would be a negotiated expansion rather than construction of an ambiguity."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"to\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ta” is a mechanical misspelling of “to” in the causal phrase governing resignation."
+        }
+      ],
+      "risky": true
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "2. Terms of Payment d. (Leave of absence)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Vague 409A Leave of Absence Provision",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “certain leaves of absences” does not identify which leaves qualify and therefore has an indeterminate boundary."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"shall\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Shalt” is a mechanical error for “shall” in the leave-of-absence provision."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Shalt” is a mechanical error for “shall” in the leave provision."
+        }
+      ],
+      "risky": true
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "3. Payment Not Transferable",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Typo in \"shall\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“You shalt not” contains a mechanical grammatical error for “You shall not” in the transfer prohibition."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The transferability clause contains mechanical errors, including “shalt” and the corrupted preposition governing the manner of transfer."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The transfer prohibition mechanically uses the wrong or corrupted preposition where “in any manner” is intended."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "4. No Employment Rights",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "employee_ryder"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The amendment-and-termination heading and surrounding text contain multiple mechanical corruptions that obscure the provision's identification and wording."
+        }
+      ],
+      "risky": true
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "5. Notices",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 9,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Notice Provision Lacks Electronic Notice Option for Shell",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause clearly provides mailing and personal delivery; omission of electronic notice is a commercial drafting choice, not a construction defect."
+        },
+        {
+          "party": "company_shell",
+          "title": "Confidentiality Remedy Limited to Payment Forfeiture",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 14 does not say forfeiture is the sole remedy, and Section 6 expressly preserves any legal right or remedy the Company may have."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"writing\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“In waiting” is a mechanical error for “in writing” and, as printed, alters the required form of notice."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"Court\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Coust” is a mechanical error for “Court” in the notice address and could affect proper delivery."
+        },
+        {
+          "party": "company_shell",
+          "title": "Typo in \"effectively\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Offectively” is a mechanical misspelling of “effectively” in the deemed-receipt rule."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Termination Without Cause or Notice",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Company initiated severance” is undefined, leaving some uncertainty whether every Company-initiated termination under the at-will clause qualifies."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Notice Provision Favors Company",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Company's authority to accept another notice form is one-sided but clear; mutual notice procedures would be a negotiated revision."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“In waiting” is a mechanical error for “in writing,” affecting the stated notice-form requirement."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Offectively” is a mechanical misspelling of “effectively” in the notice provision."
+        }
+      ],
+      "risky": true
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "General b. — At-will employment / effect on Payment",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Typo in \"terminates\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Tenninates” is a mechanical misspelling of “terminates” in the employment-termination trigger."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The termination language contains mechanical spelling and enumeration errors, including the misspelling of “terminates.”"
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Section 2.c — Forfeiture for failure to meet performance expectations",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_shell",
+        "employee_ryder"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "company_shell",
+          "title": "Typo in \"affairs\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Affuirs” is a mechanical misspelling of “affairs” in the confidential-information trigger."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Overly Broad Forfeiture for Performance Expectations",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Performance expectations” is undefined and potentially indeterminate, particularly because no documented or objective expectations are identified."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Code of Conduct Violation — No Materiality Threshold",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The broad phrase “in any respect” in one enumerated forfeiture trigger contrasts with the express materiality limits in adjacent triggers, raising a list-based scope question about whether trivial violations were intentionally included."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Resignation Forfeiture Lacks Constructive Termination Carve-Out",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The terms “resignation” and “Company initiated severance” have a potentially uncertain boundary when an employee claims she was constructively forced to resign."
+        },
+        {
+          "party": "employee_ryder",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Affuirs” is a mechanical misspelling of “affairs.”"
+        }
+      ],
+      "risky": true
+    }
+  }
+}

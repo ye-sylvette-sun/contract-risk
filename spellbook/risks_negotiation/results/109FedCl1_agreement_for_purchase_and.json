@@ -1,0 +1,3131 @@
+{
+  "contract_id": "109FedCl1_agreement_for_purchase_and",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 39,
+  "n_issues": 84,
+  "n_located": 74,
+  "n_judged": 70,
+  "n_skipped": 14,
+  "counts": {
+    "cat1": 28,
+    "cat2": 7,
+    "none": 35
+  },
+  "parties": {
+    "buyer_united_states": {
+      "n_issues": 38,
+      "n_located": 34,
+      "by_tab": {
+        "risks_negotiation": 20,
+        "proofread": 18
+      },
+      "by_kind": {
+        "Important": 6,
+        "Notable": 11,
+        "Minor": 3,
+        "Definitions": 6,
+        "Templated Content": 4,
+        "Spelling + Grammar": 7,
+        "Section References": 1
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Deferred Payment Lacks Cap on Duration",
+          "description": "The deferred payment mechanism in Section 2   ties the Outstanding Balance repayment to 10% of annual TIF reimbursement received by Buyer. If TIF reimbursements are delayed, reduced, or never materialize, Buyer could owe the Outstanding Balance indefinitely with no outer time limit. From Buyer's perspective, there should be a maximum repayment period after which the Outstanding Balance is extinguished, and a clear statement that Buyer's obligation to pay is limited solely to TIF proceeds actually received.",
+          "revision": "... remaining $1,000,000 (One Million Dollars) (or less dependent upon setoffs as described below) are received (\"Outstanding Balance\"); provided, however, that Buyer's obligation to make payments on the Outstanding Balance shall be limited solely to TIF proceeds actually received by Buyer and shall terminate on the twentieth (20th) anniversary of the Closing Date, at which time any remaining Outstanding Balance shall be deemed satisfied and extinguished. The Outstanding Balance shall accrue interest to the same extent, if",
+          "comment": "We revised this provision to cap Buyer's deferred payment obligation at the 20th anniversary of Closing and limit repayment solely to TIF proceeds actually received, reflecting the fundamental premise that this obligation is contingent on TIF performance and should not create an indefinite unsecured liability.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2441,
+            "end_char": 2642,
+            "start_line": 44,
+            "end_line": 46,
+            "match_cover": 0.385,
+            "match_run": 19,
+            "matched_text": "remaining $1,000,000 (One Million Dollars) (or less dependent upon setoffs as described below) are received (“Outstanding Balance”). The Outstanding Balance shall accrue interest to the same extent, if",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Purchase Price"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an outside payment date creates commercial duration risk, but the TIF-contingent payment mechanism is not textually ambiguous or internally inconsistent."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Short Cure Period for Title Defects",
+          "description": "Section 4  gives Seller only ten (10) business days prior to Closing to cure unpermitted title exceptions. Given the complexity of this transaction — involving street vacations, plat approvals, and a contaminated site — this cure period may be too short. If Seller cannot cure, Buyer's only options are to terminate or accept the defects . Buyer should negotiate a longer cure period (e.g., 30 business days) and the right to extend the Closing Date accordingly.",
+          "revision": "sole expense, shall have ten (10)thirty (30) business days prior to the ...",
+          "comment": "Given the complexity of this transaction, including environmental conditions and regulatory approvals, a 30-business-day cure period is commercially reasonable and ensures Seller has a meaningful opportunity to resolve title exceptions before Buyer is forced to elect between termination and acceptance.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4308,
+            "end_char": 4368,
+            "start_line": 75,
+            "end_line": 75,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "sole expense, shall have ten (10) business days prior to the",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The ten-business-day cure period is clear; the issue concerns whether the negotiated period is commercially adequate."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Outdated ALTA Survey Standards",
+          "description": "Section 5  requires the survey to be prepared in accordance with \"2005 ALTA standards.\" The current ALTA/NSPS survey standards were updated in 2021. Using outdated standards may result in an inadequate survey that fails to identify issues relevant to the transaction. The reference should be updated to the most current ALTA/NSPS standards.",
+          "revision": "with the 2005 ALTAmost current ALTA/NSPS standards and certified as such ...",
+          "comment": "The 2005 ALTA standards have been superseded by the 2021 ALTA/NSPS Minimum Standard Detail Requirements; requiring compliance with current standards ensures the survey meets the professional baseline expected in today's transactions and protects all parties from inadequate survey coverage.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5805,
+            "end_char": 5855,
+            "start_line": 95,
+            "end_line": 95,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "with the 2005 ALTA standards and certified as such",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "5. Survey"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The reference to the 2005 ALTA standards is definite, even if those standards are outdated."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad As-Is Acceptance Including Latent Defects",
+          "description": "Section 6  requires Buyer to accept the Property \"including all faults of every kind and nature whatsoever whether latent or patent and whether now or hereafter existing.\" This is extremely broad and effectively waives all claims for undisclosed defects, even those the Seller knew about. Given that the Seller has disclosed the Property is a \"facility\" under Michigan environmental law (Section 7(d) ), Buyer should at minimum carve out Seller's representations and warranties and any fraud or intentional misrepresentation from this as-is acceptance.",
+          "revision": "... the date of closing of title, including all faults of every kind and nature whatsoever whether latent or patent and whether now or hereafter existing; provided, however, that nothing in this Section 6 shall limit or waive any of Seller's representations, warranties, or covenants set forth in Section 7 of this Agreement, or any claim based on Seller's fraud or intentional misrepresentation.",
+          "comment": "An as-is clause cannot reasonably override express contractual representations and warranties made elsewhere in the same agreement, nor can it insulate a party from liability for fraud or intentional misrepresentation under Michigan law; the carve-out reflects standard market practice and basic principles of contract integrity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6785,
+            "end_char": 7501,
+            "start_line": 111,
+            "end_line": 125,
+            "match_cover": 0.516,
+            "match_run": 25,
+            "matched_text": "the date of closing of title, including all faults of every kind and nature whatsoever whether latent or patent and whether now or hereafter existing. 7. seller's Representations. Seller covenants and represents to Buyer: (a) Seller is the record owner of the Property and has the requisite power and",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "7(b) No knowledge of title or development impediments"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The breadth of the as-is allocation is a negotiation risk, and Section 6 expressly recognizes matters set forth elsewhere in the Agreement, permitting it to be harmonized with Seller's representations."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Seller's Utility Representation May Conflict with Section 26",
+          "description": "Section 7(c)  represents that utilities \"are of sufficient size, capacity and are available for immediate connection at the Property without any special charge, assessment or apparatus for its current use.\" The qualifier \"for its current use\" significantly limits this representation — the Property's current use is not the same as the contemplated Federal Office facilities use. Buyer should modify this to cover the Property's intended use, or at least remove the \"current use\" limitation.",
+          "revision": "... water utilities have been installed within the adjacent public right of ways and are of sufficient size, capacity and are available for immediate connection at the Property without any special charge, assessment or apparatus.",
+          "comment": "The utility representation should extend to the Property's intended use under this Agreement; limiting it to 'current use' renders the representation commercially meaningless for Buyer's purposes and inconsistent with the parties' understood transaction objectives.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7796,
+            "end_char": 8020,
+            "start_line": 130,
+            "end_line": 133,
+            "match_cover": 1.0,
+            "match_run": 34,
+            "matched_text": "water utilities have been installed within the adjacent public right of ways and are of sufficient size, capacity and are available for immediate connection at the Property without any special charge, assessment or apparatus",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "7(c) Utilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 7(c) limits utility sufficiency to the Property's current use, while Section 26 repeats the representation without that limitation, creating conflicting scopes for the utility assurance."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Seller's Environmental Reps Limited to \"Actual Knowledge\"",
+          "description": "Section 7(e)  limits Seller's environmental representations to \"the best of Seller's actual knowledge,\" which is the narrowest possible knowledge qualifier. This means Seller bears no responsibility for information it should have known through reasonable inquiry. For a property disclosed as a \"facility\" under Michigan environmental law with known asbestos, Buyer should negotiate a broader knowledge standard that includes constructive knowledge.",
+          "revision": "... the best of Seller's actual knowledge after reasonable inquiry:",
+          "comment": "Under Michigan environmental law, limiting representations on a disclosed facility to 'actual knowledge' alone is commercially unreasonable; the added 'reasonable inquiry' standard reflects market-standard practice and ensures representations are grounded in diligent investigation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8590,
+            "end_char": 8627,
+            "start_line": 143,
+            "end_line": 144,
+            "match_cover": 0.556,
+            "match_run": 3,
+            "matched_text": "the best of Seller’s actual knowledge",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "7(e) Environmental representations to best of knowledge"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Actual knowledge” is a clear knowledge standard; the concern is that it is too favorable to Seller, not that it requires construction."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Buyer Bears 50% of Escrow Closing Fees",
+          "description": "Section 8(b)  provides that Seller and Buyer shall each pay 50% of closing escrow fees. Given that the title insurance is already at Seller's cost (Section 4), this is a moderate point, but in many commercial real estate transactions the seller bears a larger share of closing costs. Consider negotiating Seller to bear the full escrow fee or at minimum clarifying which specific costs are split.",
+          "revision": "... pay 50% of any Closing escrow fees and the charges of the Title Company for such closing; provided, however, that such fees shall not include the cost of the owner's title insurance policy, which shall be borne solely by Seller.",
+          "comment": "We added express language confirming that the owner's title insurance policy cost is excluded from the escrow fee split to avoid ambiguity, consistent with Section 4's allocation of that cost to Seller.",
+          "group_size": 1,
+          "location": {
+            "start_char": 12048,
+            "end_char": 12596,
+            "start_line": 225,
+            "end_line": 234,
+            "match_cover": 0.575,
+            "match_run": 17,
+            "matched_text": "pay 50% of any Closing escrow fees and the charges of the Title Company for such closing. 9, Prorations. All real estate taxes, expenses and charges in connection with ownership and use of the Property shall be prorated at Closing. To the extent that information for any such proration is not availab",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "9. Prorations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 8(b)'s split of Title Company closing charges could encompass costs that Section 4 assigns solely to Seller, creating overlap between the two cost-allocation provisions."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Specific Performance Deadline Limits Buyer's Remedy",
+          "description": "Section 10  requires Buyer to commence a suit for specific performance within ninety (90) days of Seller's default. This is a very short window that could expire before Buyer even discovers the full extent of Seller's non-compliance, particularly in complex transactions involving government approvals, street vacations, and environmental issues. The standard statute of limitations should apply, or at minimum this should be extended to one year.",
+          "revision": "performance is commenced within ninety (90) daysone (1) year after the date of Seller's ...",
+          "comment": "A 90-day window for commencing specific performance is unreasonably short in complex transactions involving regulatory approvals, street vacations, and environmental matters, where the full extent of a seller's default may not be apparent within that period; one year better reflects market practice and Michigan's equitable principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 12783,
+            "end_char": 12858,
+            "start_line": 237,
+            "end_line": 237,
+            "match_cover": 0.786,
+            "match_run": 6,
+            "matched_text": "performance is commenced within ninety (90) days after the date of Seller's",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The ninety-day filing deadline is definite; its shortness is a negotiation concern."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Buyer's Default Cure Period Too Short",
+          "description": "Section 10  gives Buyer only five (5) days to cure a default after receiving written notice. For a complex $9M transaction involving government approvals and environmental issues, this cure period is unreasonably short. A 30-day cure period would be more appropriate and is market-standard for commercial real estate transactions.",
+          "revision": "Agreement within five (5)thirty (30) days of receipt by Buyer ...",
+          "comment": "A 30-day cure period is market-standard for commercial real estate transactions of this size and complexity, particularly where curing a default may require third-party coordination, regulatory approvals, or environmental compliance steps.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13023,
+            "end_char": 13073,
+            "start_line": 240,
+            "end_line": 240,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "Agreement within five (5) days of receipt by Buyer",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The five-day cure period is clear, notwithstanding whether it is commercially sufficient."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Liquidated Damages Cap Undermined by Catch-All Remedy",
+          "description": "Section 10  establishes a $50,000 liquidated damages cap for Buyer's default, but then  provides that \"the parties may seek any other remedy available at law or in equity.\" This catch-all effectively nullifies the liquidated damages cap, exposing Buyer to unlimited liability for default. As Buyer, the liquidated damages provision should be Seller's sole and exclusive remedy for Buyer's default.",
+          "revision": "... any other remedy available at law or in equity; provided, however, that with respect to any default by Buyer, Seller's sole and exclusive remedy shall be limited to the liquidated damages described above.",
+          "comment": "The liquidated damages cap is commercially meaningless if Seller retains the right to pursue unlimited remedies in equity or at law; we revised this to ensure the cap functions as the exclusive remedy for Buyer's default, consistent with standard practice and the parties' agreed risk allocation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13972,
+            "end_char": 14123,
+            "start_line": 251,
+            "end_line": 255,
+            "match_cover": 0.424,
+            "match_run": 9,
+            "matched_text": "any other remedy available at law or in equity. 11. Risk of Loss. The risk of loss or damage to the Property, if any, including but not limited to the",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "11. Risk of Loss"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 10's $50,000 liquidated-damages limitation conflicts with the same section's authorization for the parties to seek any other legal or equitable remedy."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Risk of Loss Lacks Buyer Termination Right",
+          "description": "Section 11  provides that if the Property suffers injury beyond ordinary wear and tear, Seller may either repair the damage or \"make an appropriate deduction from the purchase price.\" Buyer has no right to terminate if damage is material or if the repair/deduction is inadequate. Buyer should have the option to terminate in case of material damage, and the price deduction should be mutually agreed upon rather than unilaterally determined by Seller.",
+          "revision": "... delivery of the deed or make an appropriate deduction from the purchase price provided in Section 2. In the event of material damage to the Property, Buyer may elect to terminate this Agreement by written notice to Seller within ten (10) days of receiving notice of such damage, in which case neither party shall have any further obligations hereunder.",
+          "comment": "We added a Buyer termination right in the event of material damage, as the current provision allows Seller to unilaterally impose a price deduction with no Buyer recourse — an unreasonable allocation of risk that is inconsistent with standard Michigan real estate purchase agreement practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14406,
+            "end_char": 15070,
+            "start_line": 260,
+            "end_line": 270,
+            "match_cover": 0.695,
+            "match_run": 17,
+            "matched_text": "delivery of the deed or make an appropriate deduction from the purchase price provided in Section 2. 12. Condemnation. In the event of any taking by the exercise of the power of eminent domain of a substantial portion of the Property prior to Closing (such portion as would impair or otherwise affect",
+            "clause": {
+              "clause_id": "neg23",
+              "label": "NEGATIVE",
+              "clause_name": "12. Condemnation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “appropriate deduction” is vague because it supplies no standard for determining the amount of the casualty-related price reduction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Condemnation — No Price Reduction if Buyer Doesn't Terminate",
+          "description": "Section 12  provides that if a substantial portion of the Property is condemned and Buyer does not terminate within 10 days, Buyer \"shall remain obligated to purchase the Property with no reduction in the Purchase Price.\" While Buyer receives the condemnation award, this provision is unfavorable because the condemnation award may not fully compensate Buyer for the diminished value or usability of the Property. Buyer should receive a reduction in the Purchase Price equal to the diminution in value not covered by the condemnation award.",
+          "revision": "... to purchase the Property with no reduction inthe Purchase Price reduced by the difference, if any, between the diminution in the Property's fair market value caused by such condemnation and the condemnation award received by or assigned to Buyer. In the event of any taking of an insubstantial portion of the",
+          "comment": "The original language required Buyer to pay the full Purchase Price regardless of whether the condemnation award fully compensates for the loss in value; we revised this to ensure the Purchase Price reflects actual value received, which is a commercially balanced and equitable allocation of condemnation risk.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15423,
+            "end_char": 15550,
+            "start_line": 274,
+            "end_line": 275,
+            "match_cover": 0.412,
+            "match_run": 12,
+            "matched_text": "to purchase the Property with no reduction in the Purchase Price. In the event of any taking of an insubstantial portion of the",
+            "clause": {
+              "clause_id": "neg23",
+              "label": "NEGATIVE",
+              "clause_name": "12. Condemnation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The requirement to close without a purchase-price reduction is express; whether the condemnation award is adequate is a commercial risk."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Inconsistent Terminology — \"Optionee\" in Repair Obligation",
+          "description": "Continuing the terminology issue from Section 13 , \"Optionee\" should be replaced with \"Buyer\" and \"Optionor\" with \"Seller\" for consistency with the defined terms in this Agreement.",
+          "revision": "thereto. OptioneeBuyer shall provide OptionorSeller reasonable notice prior to entering ...",
+          "comment": "Replaced 'Optionee' and 'Optionor' with 'Buyer' and 'Seller' respectively to align with the defined terms used consistently throughout this Agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 16873,
+            "end_char": 16949,
+            "start_line": 294,
+            "end_line": 294,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "thereto. Optionee shall provide Optionor reasonable notice prior to entering",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "13. Buyer's Right to Enter and Inspect the Property"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Using “Optionee” and “Optionor” instead of the Agreement's defined parties appears to be a drafting carryover and creates uncertainty about which entities owe the entry-related duties."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Brokerage Representation Lacks Indemnification",
+          "description": "Section 15  contains mutual representations that no brokerage commissions are payable, but lacks a mutual indemnification obligation. If a broker surfaces claiming a commission based on one party's actions, the other party would have no contractual right to be held harmless. An indemnification provision should be added to protect Buyer against any brokerage claims arising from Seller's dealings.",
+          "revision": "... to the other that no commission or other amount is payable to any other person or entity for brokerage or similar services performed hereunder. Each party agrees to indemnify, defend, and hold harmless the other party from and against any claims, losses, or expenses (including reasonable attorneys' fees) arising from a breach of this representation.",
+          "comment": "A bare brokerage representation without a corresponding indemnification obligation leaves the non-breaching party without a contractual remedy if a broker asserts a commission claim; this addition reflects standard market practice and ensures each party bears the risk of its own brokerage arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 17933,
+            "end_char": 18461,
+            "start_line": 324,
+            "end_line": 334,
+            "match_cover": 0.564,
+            "match_run": 24,
+            "matched_text": "to the other that no commission or other amount is payable to any other person or entity for brokerage or similar services performed hereunder. 16, Other Acts. Buyer and Seller each hereby agree to perform such other acts, and to execute, acknowledge, and/or deliver such other instruments, documents",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "16. Other Acts"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an indemnity is an omitted protection, not an ambiguity, mechanical error, or internal conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Governing Law Should Specify Michigan Explicitly",
+          "description": "Section 20  states the Agreement shall be construed \"in accordance with the laws of the state in which the Property is located.\" While the Property is in Michigan, it would be clearer and more protective to explicitly name Michigan as the governing law, and to include a venue/jurisdiction clause specifying Michigan courts. This eliminates any ambiguity about which state's law applies.",
+          "revision": "... This Agreement shall be construed and enforced in accordance with the laws of the State of Michigan, without regard to conflicts of law principles. Any action arising hereunder shall be brought exclusively in a court of competent jurisdiction in the State of Michigan. This Agreement shall be binding upon and inure to the benefit of the parties hereto",
+          "comment": "We specified Michigan as the governing law and added an exclusive Michigan venue clause to provide clear, unambiguous jurisdictional terms consistent with the Property's location and standard commercial practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19335,
+            "end_char": 19528,
+            "start_line": 349,
+            "end_line": 351,
+            "match_cover": 0.517,
+            "match_run": 15,
+            "matched_text": "This Agreement shall be construed and enforced in accordance with the laws of the state in which the Property is located and shall be binding upon and inure to the benefit of the parties hereto",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "20. Applicable Law and Parties Bound"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Property is expressly located in Michigan, so “the state in which the Property is located” identifies Michigan without genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Survival of Reps Tied to Vague Completion Milestone",
+          "description": "Section 23  provides that representations and warranties survive Closing \"until fulfilled, up to and including the time of completion of any improvements to be built thereon and the written acceptance of occupancy\" by the GSA. This survival period is vague and potentially very short (if improvements are completed quickly) or indefinitely long (if improvements are never built). Buyer should negotiate a fixed survival period (e.g., 3-5 years post-Closing) to ensure predictability and adequate protection.",
+          "revision": "... Closing and remain in effect until fulfilled, up to and includingfor a period of five (5) years following the Closing Date or, if later, until the time of",
+          "comment": "The original survival trigger tied to GSA occupancy acceptance creates unacceptable ambiguity — it could lapse before defects are discoverable or extend indefinitely if improvements are never built. A fixed five-year period is consistent with market practice in Michigan commercial real estate transactions and provides clear certainty for both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 20395,
+            "end_char": 20472,
+            "start_line": 371,
+            "end_line": 371,
+            "match_cover": 0.464,
+            "match_run": 10,
+            "matched_text": "Closing and remain in effect until fulfilled, up to and including the time of",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "23. No Merger"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “until fulfilled, up to and including” does not clearly establish whether occupancy acceptance is a maximum endpoint, a minimum survival point, or merely one possible fulfillment milestone."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Amendment Requires Government/GSA Consent",
+          "description": "Section 24  states that the Agreement \"may be amended only by written instrument, executed by the Buyer, Seller and the Government, acting by GSA, its designated agent.\" This gives a third party (U.S. Government/GSA) veto power over any amendments to this bilateral Purchase and Sale Agreement. This is highly unusual and could prevent Buyer from negotiating changes or extensions with Seller. This requirement should be limited to amendments that affect the Government's rights under the Option Agreement, not all amendments to this Agreement.",
+          "revision": "... instrument, executed by the Buyer, and Seller; provided, however, that any amendment that materially affects the rights or obligations of the Government under the Option shall also require the written consent of the Government, acting by GSA, its designated agent.",
+          "comment": "We limited Government/GSA consent to amendments materially affecting the Government's Option rights, which is the appropriate scope; requiring Government consent for all amendments to a bilateral Purchase and Sale Agreement goes well beyond protecting any legitimate third-party interest and creates an unworkable amendment mechanism.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21555,
+            "end_char": 21652,
+            "start_line": 387,
+            "end_line": 388,
+            "match_cover": 0.35,
+            "match_run": 8,
+            "matched_text": "instrument, executed by the Buyer, Seller and the Government, acting by GSA, its designated agent",
+            "clause": {
+              "clause_id": "neg35",
+              "label": "NEGATIVE",
+              "clause_name": "24. Prior Agreements"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The requirement for Government/GSA execution is clear; the concern is the breadth of the third party's consent right."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Recording Restriction Disadvantages Buyer",
+          "description": "Section 25  prohibits Buyer from recording this Agreement or any memorandum thereof. This is entirely one-sided against Buyer. Recording a memorandum of agreement is a standard protective measure that puts third parties on notice of Buyer's equitable interest in the Property and prevents Seller from conveying to another party. This prohibition should be deleted or at minimum modified to allow Buyer to record a memorandum.",
+          "revision": "... this Agreement or any memorandum or short form hereof without Seller's prior written consent, which shall not be unreasonably withheld.",
+          "comment": "Under Michigan's recording laws, a buyer holds an equitable interest in property upon contract execution, and recording a memorandum of agreement is a standard mechanism to protect that interest against subsequent conveyances or encumbrances — an outright prohibition is commercially unreasonable and one-sided.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21696,
+            "end_char": 22199,
+            "start_line": 390,
+            "end_line": 398,
+            "match_cover": 0.55,
+            "match_run": 9,
+            "matched_text": "this Agreement or any memorandum or short form hereof. 26. Utilities/Utilities Relocations and Costs. Gas, electricity, telephone, sewer, and water utilities have been installed within the adjacent public right of ways and are of sufficient size, capacity and are available for immediate connection a",
+            "clause": {
+              "clause_id": "neg37",
+              "label": "NEGATIVE",
+              "clause_name": "26. Utilities/Utilities Relocations and Costs"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The prohibition on recording is unambiguous, even if it is commercially one-sided."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Utility Costs Entirely on Buyer Post-Closing",
+          "description": "Section 26  places all utility termination and relocation costs solely on Buyer after closing. Given that these costs can be substantial and may relate to pre-existing infrastructure that benefits the Seller's prior use of the property, Buyer should negotiate a cap on these costs or require Seller to share in utility relocation expenses that relate to conditions existing prior to Closing.",
+          "revision": "... and relocations are the sole responsibility of Buyer, and Buyer shall assume all costs associated therewith after closing; provided, however, that Seller shall be responsible for any utility termination or relocation costs arising from Seller's acts or omissions prior to Closing.",
+          "comment": "Under Michigan law, costs arising from a party's own conduct should remain with that party; this revision ensures Seller retains responsibility for utility disruptions or relocations directly attributable to Seller's pre-Closing acts or omissions, which is consistent with equitable risk allocation principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22130,
+            "end_char": 22710,
+            "start_line": 397,
+            "end_line": 412,
+            "match_cover": 0.585,
+            "match_run": 17,
+            "matched_text": "and relocations are the sole responsibility of Buyer, and Buyer shall assume all costs associated therewith after 8 closing. 27 Counterparts. This agreement may be executed in any number of counterparts, any one of which shall be considered an original; and all of which, taken together shall be deem",
+            "clause": {
+              "clause_id": "neg39",
+              "label": "NEGATIVE",
+              "clause_name": "28. Tax Incentive Financing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 26 clearly allocates post-closing utility termination and relocation costs to Buyer; the proposed cap or sharing arrangement is a negotiation point."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Seller's Cooperation Obligation on TIF Is Vague",
+          "description": "Section 28  states Seller \"will cooperate with the Buyer to secure all necessary government approvals for an approved Brownfield Plan.\" This cooperation obligation is vague and lacks specifics about the scope, timing, or consequences if Seller fails to cooperate. Given that the TIF reimbursement is integral to the payment structure (including the deferred $1M), Buyer should require more specific cooperation obligations and a remedy if Seller's failure to cooperate delays or prevents TIF approval.",
+          "revision": "... will cooperate with the Buyer to securein good faith and in a timely manner to secure all necessary government approvals for an approved Brownfield Plan and any other",
+          "comment": "We added 'good faith and in a timely manner' to align the cooperation standard with Michigan's implied covenant norms and to protect Buyer's ability to secure TIF financing, which is integral to the agreed payment structure.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22498,
+            "end_char": 22618,
+            "start_line": 409,
+            "end_line": 410,
+            "match_cover": 0.679,
+            "match_run": 14,
+            "matched_text": "will cooperate with the Buyer to secure all necessary government approvals for an approved Brownfield Plan and any other",
+            "clause": {
+              "clause_id": "neg39",
+              "label": "NEGATIVE",
+              "clause_name": "28. Tax Incentive Financing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Cooperate” is vague as to the acts, timing, effort level, and expense required of Seller in obtaining the Brownfield and related approvals."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Optionee",
+          "description": "The term 'Optionee' is used in Section 13  and  but is never defined anywhere in this Agreement. The context suggests 'Optionee' refers to the Buyer (who has been assigned the Option referenced in Section 24), but without a clear definition this creates ambiguity about party obligations regarding insurance and notice requirements.",
+          "revision": "For purposes of Section 13 only, \"Optionee\" means the Buyer.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Optionor",
+          "description": "The term 'Optionor' is used in Section 13  and  but is never defined anywhere in this Agreement. The context suggests 'Optionor' refers to the Seller (who granted the Option that has been assigned to the Buyer), but without a clear definition this creates ambiguity about whose approval is required for insurance and who is entitled to receive notice.",
+          "revision": "For purposes of Section 13 only, \"Optionor\" means the Seller.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Incomplete definition: Title Company",
+          "description": "The term 'Title Company' is defined in Section 4   as 'Chicago Title Insurance Company, the office in (\"Title Company\")' but the definition is incomplete—it references an office location that is left blank. This creates uncertainty about which specific office of Chicago Title Insurance Company is designated to handle this transaction.",
+          "revision": "in [INSERT OFFICE LOCATION] (\"Title Company\") at Sellers sole cost and expanse. If the Title",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4077,
+            "end_char": 4144,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.8,
+            "match_run": 11,
+            "matched_text": "in (\"Title Company\") at Sellers sole cost and expanse. If the Title",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The blank following “the office in” is a mechanical omission that leaves the designated Chicago Title office unidentified."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: purchase price",
+          "description": "The term 'Purchase Price' is defined in Section 2  but later appears in lowercase as 'purchase price' in Section 11 . Since 'Purchase Price' is a defined term with specific meaning in this Agreement ($9,000,000), it should be consistently capitalized throughout.",
+          "revision": "make an appropriate deduction from the purchase pricePurchase Price provided in Section 2.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 14430,
+            "end_char": 14505,
+            "start_line": 261,
+            "end_line": 261,
+            "match_cover": 0.923,
+            "match_run": 7,
+            "matched_text": "make an appropriate deduction from the purchase price provided in Section 2",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "11. Risk of Loss"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase usage still clearly refers to the purchase price specified in Section 2 and does not change the provision's meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: seller",
+          "description": "In Section 7 , the heading reads 'seller's Representations' with 'seller' in lowercase. Since 'Seller' is a defined term referring to 1200 6th Street LLC, it should be capitalized consistently throughout the Agreement, including in section headings.",
+          "revision": "7. sellerSeller's Representations. Seller covenants and represents to Buyer:",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6937,
+            "end_char": 7006,
+            "start_line": 115,
+            "end_line": 115,
+            "match_cover": 0.889,
+            "match_run": 7,
+            "matched_text": "7. seller's Representations. Seller covenants and represents to Buyer",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "7. Seller's Representations — introduction and closing warranty"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase capitalization in a heading does not create uncertainty about the identity of Seller."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: property",
+          "description": "In Section 11 , the term appears in lowercase as 'the property shall suffer injury' when referring to the defined term Property. Since 'Property' is a defined term with specific meaning (the 10.89-acre parcel at 1200 6th Street), it should be consistently capitalized.",
+          "revision": "(d) Seller has disclosed that the propertyProperty is a \"facility\" as defined by MCL Modify term(s) portion as would impair or otherwise affect the intended use of the Real Property",
+          "comment": "",
+          "group_size": 10,
+          "location": {
+            "start_char": 14261,
+            "end_char": 14745,
+            "start_line": 257,
+            "end_line": 265,
+            "match_cover": 0.548,
+            "match_run": 14,
+            "matched_text": "Seller. In case the property shall suffer injury beyond the ordinary wear and tear, the Seller shall repair the damage before the date set for delivery of the deed or make an appropriate deduction from the purchase price provided in Section 2. 12. Condemnation. In the event of any taking by the exer",
+            "clause": {
+              "clause_id": "neg22",
+              "label": "NEGATIVE",
+              "clause_name": "11. Risk of Loss"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Context makes clear that lowercase “property” refers to the defined Property, so the capitalization does not affect meaning."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled execution date",
+          "description": "Found: \"this day of ,\" — Missing date leaves agreement execution date unspecified and unenforceable.",
+          "revision": "",
+          "comment": "Insert the specific day, month, and year the agreement is executed.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled buyer name and entity type",
+          "description": "Found: \"and , a ,\" — Missing buyer name and entity type leaves counterparty unidentifiable and contract unenforceable.",
+          "revision": "",
+          "comment": "Insert the party's full legal name, entity type, and jurisdiction of formation.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelled \"parcel!\" should be \"parcel\"",
+          "revision": "that certain parcel! of real estate located at ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 555,
+            "end_char": 601,
+            "start_line": 19,
+            "end_line": 19,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "that certain parcel! of real estate located at",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "1. Purchase and Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The exclamation mark is a typographical blemish, but “parcel of real estate” remains unmistakable and its meaning is unchanged."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Two-word phrase \"made apart\" should be \"made a part\"",
+          "revision": "... A attached hereto and made aparta part hereof",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 712,
+            "end_char": 751,
+            "start_line": 21,
+            "end_line": 21,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "A attached hereto and made apart hereof",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "1. Purchase and Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Writing “made apart” instead of “made a part” changes the literal meaning from incorporation of Exhibit A to separation from the Agreement."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelled \"ail\" should be \"all\"",
+          "revision": "including any and ailall rights, privileges, easements and appurtenances",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 847,
+            "end_char": 916,
+            "start_line": 23,
+            "end_line": 23,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "including any and ail rights, privileges, easements and appurtenances",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "1. Purchase and Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ail” is an erroneous word in the enumerated conveyance language and disrupts the intended reference to all listed rights."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled option agreement date",
+          "description": "Found: \"Agreement dated between 1200 Sixth Street\" — Missing date prevents identification of the controlling option agreement governing permitted exceptions.",
+          "revision": "",
+          "comment": "Insert the effective date of the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3668,
+            "end_char": 3709,
+            "start_line": 64,
+            "end_line": 64,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "Agreement dated between 1200 Sixth Street",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "3. Deed"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The omitted date is a mechanical blank that impairs precise identification of the Real Estate Option Agreement governing the permitted exceptions."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelled \"expanse\" should be \"expense\"",
+          "revision": "at Sellers sole cost and expanseexpense",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4098,
+            "end_char": 4122,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "at Sellers sole cost and",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Expanse” is the wrong word for the intended allocation of cost and expense."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation error",
+          "description": "Period misplaced in \"Purchase. Price\" should be single word",
+          "revision": "... the amount of the Purchase. Price",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5229,
+            "end_char": 5262,
+            "start_line": 86,
+            "end_line": 86,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "the amount of the Purchase. Price",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The inserted period mechanically splits the defined phrase “Purchase Price” and disrupts the sentence identifying the policy amount."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelled \"teason\" should be \"reason\"",
+          "revision": "... has no knowledge of any teasonreason why the local governmental",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7205,
+            "end_char": 7262,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "has no knowledge of any teason why the local governmental",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "7(b) No knowledge of title or development impediments"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Teason” is a mechanical misspelling of “reason” in the operative representation."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Missing Schedule A attachment",
+          "description": "The Seller's Representations section  references \"Schedule A attached\" to list exceptions to environmental compliance, but Schedule A is not included in the ATTACHMENTS section at the end of the document. Only Exhibit A  and Exhibit B  are listed as attachments. This creates an incomplete reference that could cause confusion about what exceptions apply.",
+          "revision": "Schedule A attached[VERIFY: Schedule A not found in attachments - should this be Exhibit B (Permitted Exceptions)?]",
+          "comment": "Schedule A referenced in the Seller's Representations section does not appear in the Attachments section of this agreement, creating an ambiguous and potentially unenforceable exception carve-out under Michigan contract law. We request confirmation that Exhibit B is the intended reference, or that Schedule A be added as a named attachment.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23062,
+            "end_char": 23120,
+            "start_line": 431,
+            "end_line": 432,
+            "match_cover": 0.294,
+            "match_run": 4,
+            "matched_text": "A — Legal Description (2) Exhibit B — Permitted Exceptions",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Grammar error",
+          "description": "Incorrect verb \"shall]\" should be \"shall\"",
+          "revision": "Seller and Buyer shall] execute such other documentation",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 11078,
+            "end_char": 11134,
+            "start_line": 208,
+            "end_line": 208,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "Seller and Buyer shall] execute such other documentation",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "8(a)(iv) Other documentation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The stray closing bracket in “shall] execute” is a mechanical drafting error in an operative obligation."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled option agreement day",
+          "description": "Found: \"Agreement dated , August, 2006\" — Missing day of execution prevents precise identification of referenced option agreement.",
+          "revision": "",
+          "comment": "Insert the specific day of the month for the agreement date in August 2006.",
+          "group_size": 1,
+          "location": {
+            "start_char": 20915,
+            "end_char": 20945,
+            "start_line": 379,
+            "end_line": 379,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "Agreement dated , August, 2006",
+            "clause": {
+              "clause_id": "neg35",
+              "label": "NEGATIVE",
+              "clause_name": "24. Prior Agreements"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The missing day is a mechanical omission that prevents exact identification of the referenced August 2006 Option Agreement."
+          }
+        }
+      ]
+    },
+    "seller_1200_sixth_street": {
+      "n_issues": 46,
+      "n_located": 40,
+      "by_tab": {
+        "risks_negotiation": 18,
+        "proofread": 28
+      },
+      "by_kind": {
+        "Important": 7,
+        "Minor": 6,
+        "Notable": 5,
+        "Definitions": 9,
+        "Templated Content": 3,
+        "Spelling + Grammar": 12,
+        "Internal Annotations": 2,
+        "Section References": 2
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Deferred Balance Lacks Payment Deadline",
+          "description": "The deferred $1,000,000 \"Outstanding Balance\" is payable solely from 10% of the Buyer's TIF reimbursement, with no outside date by which it must be fully paid  . If TIF funds are delayed, reduced, or never received, Seller has no guaranteed repayment timeline. This is a significant risk to Seller. Adding a hard maturity date protects Seller from indefinite non-payment.",
+          "revision": "... financing reimbursement received by Buyer, provided that in no event shall the Outstanding Balance remain unpaid later than ten (10) years following the Closing Date, and the full Outstanding Balance (together with accrued interest) shall become immediately due and payable at such time regardless of TIF reimbursement status. For",
+          "comment": "Without a maturity date, Seller bears the full risk of TIF delays or shortfalls with no guaranteed repayment timeline; a 10-year outside date is a reasonable and commercially standard protection that balances the TIF-contingent payment structure against Seller's right to certainty of repayment.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2129,
+            "end_char": 3096,
+            "start_line": 40,
+            "end_line": 56,
+            "match_cover": 0.327,
+            "match_run": 5,
+            "matched_text": "financing reimbursement received by Buyer, For example, the anticipated annual Tax Incremental Financing [TIF] amount is approximately $2,000,000 of which an estimated $200,000 shall be paid to 1200 6\"\" Street, LLC, annually, and shall become due and payable within thirty (30) days of receipt of sam",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Purchase Price"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lack of a hard maturity date creates payment risk for Seller, but it does not make the stated TIF-contingent payment obligation ambiguous."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Undefined \"Setoffs\" Against Outstanding Balance",
+          "description": "The Agreement repeatedly references \"deductions\" and \"setoffs\" that may reduce the Outstanding Balance owed to Seller   , but these setoffs are never defined anywhere in the Agreement. This creates significant ambiguity that could be exploited by Buyer to reduce payments to Seller. Seller should insist on a clear, exhaustive definition of what constitutes a permissible setoff, or remove the setoff references entirely.",
+          "revision": "... dependent upon setoffs as described below)below and identified in a schedule to be attached hereto prior to Closing) are received (\"Outstanding",
+          "comment": "Permissible setoffs must be clearly identified and agreed upon prior to Closing; open-ended setoff rights create unacceptable payment uncertainty for Seller and are inconsistent with a defined purchase price obligation.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2493,
+            "end_char": 2562,
+            "start_line": 45,
+            "end_line": 45,
+            "match_cover": 0.409,
+            "match_run": 6,
+            "matched_text": "dependent upon setoffs as described below) are received (“Outstanding",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Purchase Price"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Setoffs as described below” has no corresponding description, leaving the permissible grounds and amounts of setoff indeterminate."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Seller Bears All Title Insurance Costs",
+          "description": "Section 4 places the entire cost of title insurance on Seller . While this is sometimes market, in many commercial transactions the cost is split or borne by Buyer. Given the $9M purchase price, this could be a meaningful expense. Consider specifying that Buyer pays for any extended coverage or endorsements beyond a standard policy.",
+          "revision": "... at Sellers sole cost and expanseexpense. Buyer shall bear the cost of any extended coverage or additional endorsements requested by Buyer or its lender. If the Title",
+          "comment": "We revised the cost allocation to reflect market practice: Seller bears the cost of a standard owner's policy, while Buyer or its lender bears the cost of any extended coverage or additional endorsements they elect or require.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4098,
+            "end_char": 4144,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.296,
+            "match_run": 5,
+            "matched_text": "at Sellers sole cost and expanse. If the Title",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The allocation of the title-policy cost to Seller is clear; the issue seeks a different commercial allocation for enhanced coverage and endorsements."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Seller's Title Cure Period May Be Insufficient",
+          "description": "Section 4 gives Seller only ten (10) business days before Closing to cure unpermitted title exceptions . Depending on the nature of the exception (e.g., old liens, judgment liens, boundary disputes), ten business days may be insufficient to resolve the issue. This could force Buyer into a termination or waiver scenario. Seller should negotiate for at least thirty (30) business days or a reasonable extension right to cure title defects.",
+          "revision": "sole expense, shall have ten (10)thirty (30) business days prior to the ...",
+          "comment": "Thirty business days reflects a commercially reasonable cure period for title defects, which may require court filings, lien releases, or third-party cooperation that cannot realistically be completed in ten business days.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4308,
+            "end_char": 4368,
+            "start_line": 75,
+            "end_line": 75,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "sole expense, shall have ten (10) business days prior to the",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The ten-business-day cure period is definite, even if insufficient for some title defects."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Seller Obligation to Deliver Survey at Seller's Cost",
+          "description": "Section 5 requires Seller to deliver an updated ALTA survey to Buyer , but does not specify who bears the cost. Combined with the certification requirements to Buyer, its lender, and the Title Company, this could be a significant expense. Seller should clarify that the survey cost is borne by Buyer, or at minimum is shared.",
+          "revision": "... Seller will deliver to Buyer, at Buyer's sole cost and expense, an updated final plat of ...",
+          "comment": "The survey is obtained for Buyer's benefit and to satisfy Buyer's lender requirements; it is commercially standard for the benefiting party to bear the associated cost.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5482,
+            "end_char": 5536,
+            "start_line": 91,
+            "end_line": 91,
+            "match_cover": 0.625,
+            "match_run": 5,
+            "matched_text": "Seller will deliver to Buyer, an updated final plat of",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "5. Survey"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision's failure expressly to allocate survey cost is an omitted commercial term, not a named lexical ambiguity or internal contradiction raised by the issue."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Outdated ALTA Survey Standards Reference",
+          "description": "Section 5 references \"2005 ALTA standards\" for the survey . The current ALTA/NSPS survey standards were updated in 2021. Using outdated standards could result in a survey that does not meet current title insurance requirements, potentially creating issues at closing that Seller would need to address.",
+          "revision": "with the 20052021 ALTA/NSPS standards and certified as such ...",
+          "comment": "We revised the survey standard reference to the 2021 ALTA/NSPS standards, which reflect the current requirements for title insurance and are the applicable industry benchmark for survey certifications at closing.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5805,
+            "end_char": 5855,
+            "start_line": 95,
+            "end_line": 95,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "with the 2005 ALTA standards and certified as such",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "5. Survey"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The 2005 standards are specifically identified; obsolescence does not make the reference ambiguous."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Seller's Representations Survive Indefinitely",
+          "description": "Section 7's closing language states that Seller's representations \"will continue to be true and correct on each day hereafter\"  — i.e., in perpetuity. This is an extraordinarily broad survival commitment that exposes Seller to indefinite liability. Representations should survive for a defined period (e.g., 12–24 months post-Closing), which is market standard for commercial real estate transactions. This is compounded by the anti-merger clause in Section 23 , which explicitly preserves representations post-Closing.",
+          "revision": "correct on each day hereafter through the date that is twenty-four (24) months following the Closing Date.",
+          "comment": "We limited the survival period to 24 months post-Closing, consistent with market practice for commercial real estate transactions; an indefinite survival obligation creates disproportionate and open-ended exposure for Seller.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9991,
+            "end_char": 10351,
+            "start_line": 172,
+            "end_line": 184,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "correct on each day hereafter. 8. Closing and Obligations at Closing. (a) Subject to any termination of this Agreement permitted hereunder by Buyer or Seller, closing (\"Closing\") shall take place at the office of the Title Company on a mutually agreeable date, but, in no event later than ninety (90)",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "8(a) Closing and Obligations at Closing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 7 says the representations continue to be true “on each day hereafter,” while Section 23 ties their survival to fulfillment and the improvement/occupancy milestone, leaving conflicting survival periods."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Seller Only Gets 5 Days to Cure Default",
+          "description": "Section 10 gives Seller only five (5) days to cure a default after written notice . This is an extremely short cure period for a commercial real estate transaction, especially given the complexity of the obligations (title clearance, survey delivery, plat approvals, etc.). A 30-day cure period is more market-standard and would better protect Seller from losing rights due to minor or curable defaults.",
+          "revision": "Agreement within five (5)thirty (30) days of receipt by Seller ...",
+          "comment": "A 5-day cure period is commercially unreasonable for a transaction of this complexity; 30 days is market-standard for commercial real estate and reflects the time realistically required to address title, survey, and plat-related defaults.",
+          "group_size": 1,
+          "location": {
+            "start_char": 12545,
+            "end_char": 12596,
+            "start_line": 234,
+            "end_line": 234,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "Agreement within five (5) days of receipt by Seller",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The five-day cure period is unambiguous; its adequacy is a negotiation issue."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Uncapped Actual Damages Against Seller",
+          "description": "Section 10 allows Buyer to sue Seller for uncapped \"actual damages\" upon Seller's default  , while Seller's remedy for Buyer's default is limited to $50,000 liquidated damages. This asymmetry is heavily unfavorable to Seller. Seller should negotiate either a cap on Buyer's damages or parity in available remedies.",
+          "revision": "actual damagesor refusal to comply with the terms of this Agreement, or (b) may sue Seller for actual damages not to exceed the Purchase Price. If Buyer fails or ...",
+          "comment": "We introduced a cap on actual damages equal to the Purchase Price to establish proportionate and symmetrical remedy exposure for both parties, consistent with standard Michigan real estate practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 12870,
+            "end_char": 12981,
+            "start_line": 238,
+            "end_line": 239,
+            "match_cover": 0.724,
+            "match_run": 17,
+            "matched_text": "refusal to comply with the terms of this Agreement, or (b) may sue Seller for actual damages. If Buyer fails or",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The asymmetry between Buyer's actual-damages remedy and Seller's remedies is explicit rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Buyer's Default Remedy Allows Suit Beyond Liquidated Damages",
+          "description": "Section 10 provides that Seller's remedy for Buyer's default is liquidated damages capped at $50,000 , but the final sentence states \"the parties may seek any other remedy available at law or in equity\" . While the \"other remedy\" carve-out theoretically helps Seller, the liquidated damages provision at only $50,000 on a $9M transaction is extremely low (typically 5-10% of purchase price is market). This $50,000 cap may be viewed as a penalty or, conversely, as an inadequate deterrent for Buyer breach. Seller should negotiate a substantially higher liquidated damages amount.",
+          "revision": "... damages not to exceed $500,000, either a $500,000 fetterletter of credit or cash",
+          "comment": "The original $50,000 liquidated damages cap represents less than 1% of the $9M purchase price, well below the 5–10% range that Michigan courts and market practice recognize as a reasonable pre-estimate of damages; we revised the cap to $500,000 to reflect a commercially appropriate and enforceable liquidated damages provision.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13199,
+            "end_char": 13271,
+            "start_line": 242,
+            "end_line": 242,
+            "match_cover": 0.8,
+            "match_run": 4,
+            "matched_text": "damages not to exceed $50,000, either a $50,000 fetter of credit or cash",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The general authorization of any legal or equitable remedy conflicts with the apparent $50,000 liquidated-damages limitation for Buyer's default."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Risk of Loss — No Seller Termination Right or Repair Cap",
+          "description": "Section 11 requires Seller to either repair damage beyond ordinary wear and tear or make an \"appropriate deduction\" from the purchase price  . Seller has no right to terminate if the damage is substantial, and the repair obligation is uncapped. Seller should have the option to terminate if damage exceeds a material threshold (e.g., exceeds a stated dollar amount or insurance proceeds).",
+          "revision": "... for delivery of the deed, or make an appropriate deduction from the purchase price provided in Section 2, or in the event the cost of repair exceeds $250,000, Seller may elect to terminate this Agreement upon written notice to Buyer.",
+          "comment": "We added a Seller termination right where repair costs exceed $250,000 to protect against scenarios where damage is so substantial that neither repair nor a negotiated deduction is commercially feasible — a standard risk-allocation mechanism in Michigan purchase agreements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14402,
+            "end_char": 14908,
+            "start_line": 260,
+            "end_line": 268,
+            "match_cover": 0.756,
+            "match_run": 18,
+            "matched_text": "for delivery of the deed or make an appropriate deduction from the purchase price provided in Section 2. 12. Condemnation. In the event of any taking by the exercise of the power of eminent domain of a substantial portion of the Property prior to Closing (such portion as would impair or otherwise af",
+            "clause": {
+              "clause_id": "neg23",
+              "label": "NEGATIVE",
+              "clause_name": "12. Condemnation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Although the requested termination right and cap are omitted protections, the existing alternative of an “appropriate deduction” is itself vague as to amount and standard."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Missing Indemnification for Property Entry",
+          "description": "Section 13 allows Buyer and its agents to enter the Property for inspections , and requires repair of damage , but does not include an indemnification obligation from Buyer to Seller for claims arising from such entry. Seller should require Buyer to indemnify and hold Seller harmless for all claims arising from Buyer's access to the Property.",
+          "revision": "thereto. Optionee shall indemnify, defend, and hold harmless Optionor from and against any and all claims, liabilities, damages, costs, and expenses (including reasonable attorneys' fees) arising out of or related to entry onto the Property by Optionee or its representatives. Optionee shall provide Optionor reasonable notice prior ...",
+          "comment": "We added an indemnification obligation from Optionee to Optionor to properly allocate risk — since Buyer controls the inspections and the conduct of its representatives, it is appropriate for Buyer to bear responsibility for any resulting claims or liabilities.",
+          "group_size": 1,
+          "location": {
+            "start_char": 16586,
+            "end_char": 16937,
+            "start_line": 290,
+            "end_line": 294,
+            "match_cover": 0.298,
+            "match_run": 7,
+            "matched_text": "Optionee shall require any of said parties to maintain insurance in amounts and coverages reasonably acceptable to Optionor. Said parties shall promptly repair and restore the Property to the same condition as existed immediately prior to such entry if such entry resulted in any damage thereto. Opti",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "13. Buyer's Right to Enter and Inspect the Property"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an entry indemnity is an omitted risk-allocation protection, not an ambiguity or inconsistency."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Restriction on Buyer's Assignment",
+          "description": "Section 20 references \"permitted assigns\"  but the Agreement contains no restriction on Buyer's right to assign. Given that the deferred Outstanding Balance depends on Buyer's receipt of TIF reimbursements, Seller has a strong interest in controlling who the Buyer is. An unrestricted assignment could leave Seller's $1M balance unpaid. Seller should require prior written consent for any Buyer assignment.",
+          "revision": "... legal representatives, successors and permitted assigns; provided, however, that Buyer shall not assign this Agreement without the prior written consent of Seller, which consent shall not be unreasonably withheld.",
+          "comment": "Because the Outstanding Balance is contingent on TIF reimbursements that depend on Buyer's active pursuit of those funds, Seller requires prior written consent to any assignment to protect against the risk of an assignee who lacks the capacity or incentive to secure reimbursement; consent will not be unreasonably withheld.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19560,
+            "end_char": 20049,
+            "start_line": 355,
+            "end_line": 365,
+            "match_cover": 0.379,
+            "match_run": 6,
+            "matched_text": "legal representatives, successors and permitted assigns. 21. Attorney's Fees. In the event either party elects to file any action in order to enforce the terms of this Agreement, or for a declaration of rights hereunder, the prevailing party, as determined by the court in such action, shall be entit",
+            "clause": {
+              "clause_id": "neg32",
+              "label": "NEGATIVE",
+              "clause_name": "21. Attorney's Fees"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “permitted assigns” is undefined, and the Agreement supplies no consent or other mechanism establishing which assignments are permitted."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Anti-Merger Survival Period is Indefinite",
+          "description": "Section 23 provides that obligations, representations, and warranties survive Closing \"until fulfilled, up to and including the time of completion of any improvements to be built thereon and the written acceptance of occupancy\" by GSA   . This creates an open-ended survival period tied to project completion, which could be years or decades. If the project is never completed, these obligations may survive indefinitely. From Seller's perspective, tying the survival of Seller's representations to Buyer's construction timeline is problematic — Seller has no control over when Buyer completes improvements. A fixed survival period would better protect Seller.",
+          "revision": "... Closing and remain in effect until fulfilled, up to and including the time offor a period of twenty-four (24) months following the Closing Date; provided, however, that claims asserted in writing prior to expiration of such period shall survive until resolved.",
+          "comment": "A fixed 24-month survival period is standard market practice and provides certainty for both parties; tying Seller's representations to an indeterminate construction completion date creates open-ended exposure that is commercially unreasonable and inconsistent with Michigan conveyancing norms.",
+          "group_size": 1,
+          "location": {
+            "start_char": 20395,
+            "end_char": 20571,
+            "start_line": 371,
+            "end_line": 373,
+            "match_cover": 0.405,
+            "match_run": 13,
+            "matched_text": "Closing and remain in effect until fulfilled, up to and including the time of completion of any improvements to be built thereon and the written acceptance of occupancy of such",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "23. No Merger"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Until fulfilled, up to and including” leaves the endpoint of survival uncertain, particularly if improvements are delayed or never completed."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Amendment Requires Government Consent",
+          "description": "Section 24 requires that any amendment to the Agreement must be \"executed by the Buyer, Seller and the Government, acting by GSA\"  . This gives a third party (GSA) veto power over any amendments between Buyer and Seller. While GSA may have a legitimate interest given the federal facilities context, this could significantly hamper Seller's ability to negotiate modifications post-execution. Seller should consider whether this is necessary or whether GSA's consent should be limited to amendments that affect GSA's interests under the Option.",
+          "revision": "... instrument, executed by the Buyer, and Seller; provided that any amendment that materially affects the Government's rights under the Option shall also require the consent of the Government, acting by GSA, its designated agent.",
+          "comment": "GSA's consent right should be scoped to amendments that materially affect its interests under the Option; requiring GSA approval for all amendments gives a third party disproportionate control over a private bilateral agreement and could unnecessarily impede routine modifications.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21555,
+            "end_char": 21652,
+            "start_line": 387,
+            "end_line": 388,
+            "match_cover": 0.412,
+            "match_run": 8,
+            "matched_text": "instrument, executed by the Buyer, Seller and the Government, acting by GSA, its designated agent",
+            "clause": {
+              "clause_id": "neg35",
+              "label": "NEGATIVE",
+              "clause_name": "24. Prior Agreements"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "GSA's consent right is clearly stated; whether it should be narrowed is a negotiation matter."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Recording Restriction Lacks Remedies",
+          "description": "Section 25 prohibits Buyer from recording the Agreement or any memorandum thereof , but provides no remedy if Buyer violates this prohibition. Adding a consequence (e.g., constituting a default, entitling Seller to damages, or providing automatic termination right) would give the provision teeth.",
+          "revision": "2526. No Recording. Buyer shall not record this Agreement or any memorandum or short form hereof. Any such recording by Buyer shall constitute a default under this Agreement.",
+          "comment": "Under Michigan law, an unenforceable prohibition provides no practical protection; designating unauthorized recording as a default ensures Seller has a clear contractual remedy if Buyer clouds title prematurely.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21659,
+            "end_char": 22199,
+            "start_line": 390,
+            "end_line": 398,
+            "match_cover": 0.643,
+            "match_run": 15,
+            "matched_text": "No Recording. Buyer shall not record this Agreement or any memorandum or short form hereof. 26. Utilities/Utilities Relocations and Costs. Gas, electricity, telephone, sewer, and water utilities have been installed within the adjacent public right of ways and are of sufficient size, capacity and are",
+            "clause": {
+              "clause_id": "neg37",
+              "label": "NEGATIVE",
+              "clause_name": "26. Utilities/Utilities Relocations and Costs"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The recording prohibition is clear, and the absence of a specially stated remedy is not a construction defect; Section 10 also generally addresses noncompliance."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Redundant Utility Representation Missing Qualifier",
+          "description": "Section 26  repeats the utility representation from Section 7(c)  nearly verbatim, but omits the \"for its current use\" qualifier found in Section 7(c) . This could inadvertently broaden Seller's warranty to cover future uses. Seller should add the same qualifier for consistency.",
+          "revision": "... special charge, assessment or apparatus for its current use. All public and",
+          "comment": "We added the 'for its current use' qualifier to maintain consistency with Section 7(c) and to clarify that Seller's representation is limited to the Property's current use, which is the appropriate scope for a seller's warranty.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7981,
+            "end_char": 8286,
+            "start_line": 133,
+            "end_line": 138,
+            "match_cover": 0.833,
+            "match_run": 9,
+            "matched_text": "special charge, assessment or apparatus for its current use. (d) Seller has disclosed that the property is a “facility” as defined by MCL 324.20101 et seq. due to the property's historic uses described in the environmental reports Seller provided to Buyer. Seller also represents that it has provided",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "7(d) Environmental disclosure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 7(c) limits the utility representation to current use, while Section 26 states substantially the same assurance without that qualifier, creating inconsistent warranty scope."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Buyer Obligation to Pursue TIF Financing",
+          "description": "Section 28 requires Seller to cooperate with Buyer on Brownfield Plan approvals  , but there is no corresponding obligation on Buyer to diligently pursue or maintain TIF financing. Since the Outstanding Balance is payable solely from TIF reimbursements, Buyer could effectively avoid paying the remaining $1M by not pursuing TIF approval. Seller should require Buyer to use commercially reasonable efforts to obtain and maintain TIF financing.",
+          "revision": "applicable grant and/or loan programs. Buyer shall use commercially reasonable efforts to obtain and maintain TIF financing and all related governmental approvals necessary to generate TIF reimbursements. In the event the ...",
+          "comment": "Because the Outstanding Balance is exclusively payable from TIF reimbursements, Buyer must bear a corresponding obligation to diligently pursue and maintain TIF financing — without this, Seller would have no practical remedy for recovery of the remaining purchase price balance.",
+          "group_size": 1,
+          "location": {
+            "start_char": 13264,
+            "end_char": 13499,
+            "start_line": 242,
+            "end_line": 245,
+            "match_cover": 0.344,
+            "match_run": 4,
+            "matched_text": "or cash equivalent (at Buyer’s option) which the Buyer is required to obtain or place in escrow, upon the execution of this Agreement and within ten (10) business days of Award and Assignment of the Option to Purchase. In the event the",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an affirmative Buyer covenant to pursue TIF is a substantive omission, not an ambiguity or conflict in the existing language."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Purchase Price",
+          "description": "The term 'Purchase Price' is used throughout the Agreement as a defined term (capitalized consistently in , , , , and ), but it is never formally defined. Section 2 describes 'the total purchase price for the Property' but does not include a parenthetical definition. The defined term should be formally introduced to ensure clarity.",
+          "revision": "$9,000,000 (Nine Million Dollars) (\"Purchase Price\"). At Closing, the sum of $8,000,000 (Eight make an appropriate deduction from the purchase pricePurchase Price provided in Section 2.",
+          "comment": "",
+          "group_size": 2,
+          "location": {
+            "start_char": 1706,
+            "end_char": 2266,
+            "start_line": 35,
+            "end_line": 42,
+            "match_cover": 0.567,
+            "match_run": 9,
+            "matched_text": "9,000,000 (Nine Million Dollars). At Closing, the sum of $8,000,000 (Eight Million Dollars) shall be due and payable to the Seller plus or minus any standard deductions and prorations (customary closing expenses incurred by the Seller inclusive of utility and real estate tax prorations). The remaini",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Purchase Price"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 2 states the total purchase price as $9,000,000, so the capitalized term is readily identifiable despite the absence of parenthetical defined-term formatting."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Real Property",
+          "description": "The term 'Real Property' appears in  capitalized as a defined term, but it is never formally defined in the Agreement. The document uses 'Property' as the defined term for the real estate being sold. 'Real Property' should either be defined separately if it has a distinct meaning, or this usage should be changed to 'Property' to maintain consistency. Modify term(s) the intended use of the Real Property",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Optionee",
+          "description": "The term 'Optionee' is used in Section 13 ( and ) as a defined term, but it is never formally defined in the Agreement. In context, 'Optionee' appears to refer to the Buyer, but this should be clarified. The term should either be formally defined or replaced with 'Buyer' for consistency. Modify term(s) OptioneeBuyer shall require any of said parties to",
+          "revision": "",
+          "comment": "",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Optionor",
+          "description": "The term 'Optionor' is used in Section 13 () as a defined term, but it is never formally defined in the Agreement. In context, 'Optionor' appears to refer to the Seller. For consistency with the rest of the Agreement, this should be changed to 'Seller'. Modify term(s) maintain insurance in amounts and coverages reasonably acceptable to Optionor.Seller.",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: agreement",
+          "description": "The defined term 'Agreement' appears in lowercase as 'agreement' in  and . Since 'Agreement' is a defined term referring to this specific Purchase and Sale Agreement, it should be consistently capitalized throughout.",
+          "revision": "5, Survey. Provided this agreementAgreement shall have been executed by Seller and",
+          "comment": "",
+          "group_size": 2,
+          "location": {
+            "start_char": 5401,
+            "end_char": 5474,
+            "start_line": 90,
+            "end_line": 90,
+            "match_cover": 0.917,
+            "match_run": 7,
+            "matched_text": "5, Survey. Provided this agreement shall have been executed by Seller and",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "5. Survey"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase “agreement” plainly refers to this Agreement in context and does not alter meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: property",
+          "description": "The defined term 'Property' appears in lowercase as 'property' in multiple locations including , , , , , , and . Since 'Property' is a defined term referring to the specific real estate being sold, it should be consistently capitalized throughout.",
+          "revision": "(d) Seller has disclosed that the propertyProperty is a \"facility\" as defined by MCL",
+          "comment": "",
+          "group_size": 9,
+          "location": {
+            "start_char": 8044,
+            "end_char": 8119,
+            "start_line": 135,
+            "end_line": 135,
+            "match_cover": 0.929,
+            "match_run": 7,
+            "matched_text": "d) Seller has disclosed that the property is a “facility” as defined by MCL",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "7(d) Environmental disclosure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase references plainly concern the defined real estate and do not create genuine uncertainty."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: seller in paragraph 115",
+          "description": "The defined term 'Seller' appears in lowercase as 'seller' in the section heading . Since 'Seller' is a defined term, it should be consistently capitalized throughout.",
+          "revision": "7. sellerSeller's Representations. Seller covenants and represents to Buyer:",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6937,
+            "end_char": 7006,
+            "start_line": 115,
+            "end_line": 115,
+            "match_cover": 0.889,
+            "match_run": 7,
+            "matched_text": "7. seller's Representations. Seller covenants and represents to Buyer",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "7. Seller's Representations — introduction and closing warranty"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase heading does not affect the identity or obligations of the defined Seller."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Incorrect reference to Option in Section 13",
+          "description": "Section 13  references 'this Option including any extension periods', but the document is titled and defined as an 'Agreement' for purchase and sale, not an 'Option'. The 'Option' is a separate document referenced in Section 24. This should likely refer to 'this Agreement' instead. Modify term(s) procurement process of the Buyer, shall have the right during the period of this OptionAgreement including any extension periods subject to the rights, interests, and uses",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Incomplete definition: Title Company",
+          "description": "The definition of 'Title Company' in  appears incomplete: 'Chicago Title Insurance Company, the office in (\"Title Company\")'. The phrase 'the office in' is followed by a blank, suggesting a location was meant to be specified but is missing. Modify term(s) the Property issued by Chicago Title Insurance Company, the office in (\"Title Company\") at Sellers sole cost and expanse. If the Title",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3545,
+            "end_char": 4079,
+            "start_line": 62,
+            "end_line": 72,
+            "match_cover": 0.389,
+            "match_run": 11,
+            "matched_text": "the Property free from any and all liens or encumbrances, subject only to those items identified in the Real Estate Option Agreement dated between 1200 Sixth Street, LLC and GSA as permitted exceptions (\"Permitted Exceptions\"). 4. Title. No Later than thirty (30) days following the date of this Agre",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The blank after “the office in” is a mechanical omission that leaves the selected Chicago Title office unidentified."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled execution date",
+          "description": "Found: \"this day of , by and between\" — Missing day and month leaves the contract undated and potentially unenforceable.",
+          "revision": "",
+          "comment": "Insert the specific day and month of contract execution.",
+          "group_size": 1,
+          "location": {
+            "start_char": 134,
+            "end_char": 162,
+            "start_line": 5,
+            "end_line": 5,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "this day of , by and between",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error in address",
+          "description": "Extra space before period in address",
+          "revision": "Allen . Park, Michigan, 48101 (\"Seller\"),",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 259,
+            "end_char": 297,
+            "start_line": 8,
+            "end_line": 8,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "Allen . Park, Michigan, 48101 (\"Seller",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled buyer identity",
+          "description": "Found: \"and , a ,\" — Unnamed buyer leaves the purchaser unidentified and the counterparty unknown.",
+          "revision": "",
+          "comment": "Insert the second party's full legal name, entity type, and jurisdiction of formation.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled buyer address",
+          "description": "Found: \"whose address is (\"Buyer\")\" — Missing buyer address impairs notice delivery under the agreement.",
+          "revision": "",
+          "comment": "Insert the Buyer's full legal name and complete street address before the defined term.",
+          "group_size": 1,
+          "location": {
+            "start_char": 218,
+            "end_char": 234,
+            "start_line": 6,
+            "end_line": 6,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "whose address is",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: parcel!",
+          "description": "Exclamation mark instead of period after parcel",
+          "revision": "ownership to that certain parcel! of real estate",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 542,
+            "end_char": 590,
+            "start_line": 19,
+            "end_line": 19,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "ownership to that certain parcel! of real estate",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "1. Purchase and Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The stray exclamation mark does not change the readily apparent phrase “parcel of real estate.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error: made apart",
+          "description": "Should be \"a part\" (two words)",
+          "revision": "... A attached hereto and made aparta part hereof, together with all",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 712,
+            "end_char": 770,
+            "start_line": 21,
+            "end_line": 21,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "A attached hereto and made apart hereof, together with all",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "1. Purchase and Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The spacing error changes “a part,” which incorporates Exhibit A, into the materially different phrase “apart.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo: ail instead of all",
+          "description": "Typo: should be \"all rights\"",
+          "revision": "including any and ailall rights, privileges, easements and appurtenances, ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 847,
+            "end_char": 916,
+            "start_line": 23,
+            "end_line": 23,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "including any and ail rights, privileges, easements and appurtenances",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "1. Purchase and Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Ail” is an erroneous word that disrupts the intended conveyance of all listed rights and appurtenances."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete date reference in Title section",
+          "description": "The reference to the Real Estate Option Agreement in the Deed section  contains an incomplete date field (\"dated between\") without any actual date. This appears to be a placeholder that was not filled in during drafting and should be completed with the actual date of the Option Agreement.",
+          "revision": "dated [INSERT DATE] between",
+          "comment": "Placeholder date field was incomplete; updated to a clear bracketed insert prompt to ensure the actual execution date of the Option Agreement is inserted before finalization.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Capitalization error: No Later",
+          "description": "Should be \"No later\" (lowercase l)",
+          "revision": "4. Title. No Laterlater than thirty (30) days",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3775,
+            "end_char": 3815,
+            "start_line": 68,
+            "end_line": 68,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "4. Title. No Later than thirty (30) days",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Capitalizing “Later” does not change the deadline's meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: expanse",
+          "description": "Should be \"expense\" not \"expanse\"",
+          "revision": "... at Sellers sole cost and expanseexpense. If the Title",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4098,
+            "end_char": 4144,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "at Sellers sole cost and expanse. If the Title",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Expanse” is the wrong word in the operative cost allocation and should be “expense.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation: space before period",
+          "description": "Extra space before period in \"Purchase. Price\"",
+          "revision": "... the amount of the Purchase. Price",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5229,
+            "end_char": 5262,
+            "start_line": 86,
+            "end_line": 86,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "the amount of the Purchase. Price",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "4. Title"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The period inserted between “Purchase” and “Price” mechanically breaks the defined phrase and sentence."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Grammar error: as a prepared",
+          "description": "Should be \"as prepared\" (remove \"a\")",
+          "revision": "... Street and Abbott Street, as a prepared in accordance",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5751,
+            "end_char": 5804,
+            "start_line": 94,
+            "end_line": 94,
+            "match_cover": 1.0,
+            "match_run": 9,
+            "matched_text": "Street and Abbott Street, as a prepared in accordance",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "5. Survey"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The extra article in “as a prepared” is a grammatical drafting error that corrupts the survey-standard clause."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: teason",
+          "description": "Should be \"reason\" not \"teason\"",
+          "revision": "... has no knowledge of any teasonreason why the local governmental",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7205,
+            "end_char": 7262,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "has no knowledge of any teason why the local governmental",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "7(b) No knowledge of title or development impediments"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Teason” is a mechanical misspelling of “reason” in Seller's representation."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid Schedule A reference",
+          "description": "The Seller's Representations section  references \"Schedule A attached,\" but Schedule A is not listed in the attachments . The attachments only include Exhibit A (Legal Description) and Exhibit B (Permitted Exceptions). This reference should either be corrected to refer to Exhibit B (Permitted Exceptions) if that was the intended reference, or Schedule A needs to be added to the attachments.",
+          "revision": "Except as otherwise indicated on Schedule A attached[VERIFY: Schedule A - not listed in attachments]",
+          "comment": "The reference to 'Schedule A' does not correspond to any document listed in the attachments; we have flagged this for clarification and request confirmation of whether Exhibit B (Permitted Exceptions) was the intended reference to ensure the Seller's representations are clearly bounded.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8479,
+            "end_char": 8551,
+            "start_line": 142,
+            "end_line": 143,
+            "match_cover": 0.6,
+            "match_run": 8,
+            "matched_text": "Except as otherwise indicated on Schedule A attached, or as described in",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "7(e) Environmental representations to best of knowledge"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "Section 7(e) refers to an attached Schedule A, but the instrument's attachment list contains no Schedule A, leaving the exception to the environmental representations without an identifiable document."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Grammar error: shall]",
+          "description": "Extra closing bracket after \"shall\"",
+          "revision": "Seller and Buyer shall] execute such other documentation as ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 11078,
+            "end_char": 11137,
+            "start_line": 208,
+            "end_line": 208,
+            "match_cover": 1.0,
+            "match_run": 9,
+            "matched_text": "Seller and Buyer shall] execute such other documentation as",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "8(a)(iv) Other documentation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The stray bracket in “shall] execute” is a mechanical error in the operative documentation covenant."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Incorrect subsection self-reference",
+          "description": "In the Closing and Obligations section , the text refers to \"This Section 8(a)(v)\" but this text appears within subsection (iv) . The actual subsection (v) appears later  and deals with possession of the Property, not the obligations regarding Title Company documentation. This self-reference should be corrected to \"This Section 8(a)(iv)\".",
+          "revision": "This Section 8(a)(v)8(a)(iv) shall",
+          "comment": "Corrected internal cross-reference from 'Section 8(a)(v)' to 'Section 8(a)(iv)' to accurately reflect the subsection in which this obligation appears.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11465,
+            "end_char": 11491,
+            "start_line": 215,
+            "end_line": 215,
+            "match_cover": 0.667,
+            "match_run": 5,
+            "matched_text": "This Section 8(a)(v) shall",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "8(a)(iv) Other documentation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The clause mechanically cites Section 8(a)(v), which concerns possession, rather than Section 8(a)(iv), where the limitation actually appears."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: fetter",
+          "description": "Should be \"letter\" not \"fetter\"",
+          "revision": "... exceed $50,000, either a $50,000 fetterletter of credit or cash",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 13214,
+            "end_char": 13271,
+            "start_line": 242,
+            "end_line": 242,
+            "match_cover": 0.917,
+            "match_run": 7,
+            "matched_text": "exceed $50,000, either a $50,000 fetter of credit or cash",
+            "clause": {
+              "clause_id": "neg21",
+              "label": "NEGATIVE",
+              "clause_name": "10. Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Fetter of credit” is a mechanical misspelling that, literally read, fails to identify the required letter-of-credit instrument."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Extra space in notice timing",
+          "description": "Extra space before hyphen in \"the-\"",
+          "revision": "after they are deposited in the-the United States mail as provided ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17702,
+            "end_char": 17765,
+            "start_line": 320,
+            "end_line": 320,
+            "match_cover": 0.917,
+            "match_run": 6,
+            "matched_text": "after they are deposited in the- United States mail as provided",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "14. Notices"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The stray hyphen in “the- United States mail” does not create uncertainty about the prescribed mailing method or notice timing."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete date reference in Prior Agreements section",
+          "description": "The Prior Agreements section  references \"that certain Real Estate Option Agreement dated , August, 2006\" with a missing day designation before \"August\". This appears to be an incomplete date field that should be filled in with the specific date of the Option Agreement.",
+          "revision": "dated ,[DAY], August, 2006,",
+          "comment": "Corrected incomplete date field by inserting a placeholder for the missing day designation to ensure the date reference is complete and unambiguous.",
+          "group_size": 1,
+          "location": {
+            "start_char": 20883,
+            "end_char": 20945,
+            "start_line": 378,
+            "end_line": 379,
+            "match_cover": 1.0,
+            "match_run": 9,
+            "matched_text": "that certain Real Estate Option Agreement dated , August, 2006",
+            "clause": {
+              "clause_id": "neg35",
+              "label": "NEGATIVE",
+              "clause_name": "24. Prior Agreements"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The missing day in the date is a mechanical omission that prevents exact identification of the incorporated Option Agreement."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "1. Purchase and Sale",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The exclamation mark is a typographical blemish, but “parcel of real estate” remains unmistakable and its meaning is unchanged."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Writing “made apart” instead of “made a part” changes the literal meaning from incorporation of Exhibit A to separation from the Agreement."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ail” is an erroneous word in the enumerated conveyance language and disrupts the intended reference to all listed rights."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Spelling error: parcel!",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The stray exclamation mark does not change the readily apparent phrase “parcel of real estate.”"
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Spacing error: made apart",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The spacing error changes “a part,” which incorporates Exhibit A, into the materially different phrase “apart.”"
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Typo: ail instead of all",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Ail” is an erroneous word that disrupts the intended conveyance of all listed rights and appurtenances."
+        }
+      ],
+      "risky": true
+    },
+    "neg10": {
+      "clause_id": "neg10",
+      "clause_name": "7(c) Utilities",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Seller's Utility Representation May Conflict with Section 26",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 7(c) limits utility sufficiency to the Property's current use, while Section 26 repeats the representation without that limitation, creating conflicting scopes for the utility assurance."
+        }
+      ],
+      "risky": true
+    },
+    "neg11": {
+      "clause_id": "neg11",
+      "clause_name": "7(d) Environmental disclosure",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Redundant Utility Representation Missing Qualifier",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 7(c) limits the utility representation to current use, while Section 26 states substantially the same assurance without that qualifier, creating inconsistent warranty scope."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Inconsistent capitalization: property",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase references plainly concern the defined real estate and do not create genuine uncertainty."
+        }
+      ],
+      "risky": true
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "7(e) Environmental representations to best of knowledge",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Seller's Environmental Reps Limited to \"Actual Knowledge\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Actual knowledge” is a clear knowledge standard; the concern is that it is too favorable to Seller, not that it requires construction."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Invalid Schedule A reference",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "Section 7(e) refers to an attached Schedule A, but the instrument's attachment list contains no Schedule A, leaving the exception to the environmental representations without an identifiable document."
+        }
+      ],
+      "risky": true
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "8(a) Closing and Obligations at Closing",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Seller's Representations Survive Indefinitely",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 7 says the representations continue to be true “on each day hereafter,” while Section 23 ties their survival to fulfillment and the improvement/occupancy milestone, leaving conflicting survival periods."
+        }
+      ],
+      "risky": true
+    },
+    "neg17": {
+      "clause_id": "neg17",
+      "clause_name": "8(a)(iv) Other documentation",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Grammar error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The stray closing bracket in “shall] execute” is a mechanical drafting error in an operative obligation."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Grammar error: shall]",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The stray bracket in “shall] execute” is a mechanical error in the operative documentation covenant."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Incorrect subsection self-reference",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The clause mechanically cites Section 8(a)(v), which concerns possession, rather than Section 8(a)(iv), where the limitation actually appears."
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "2. Purchase Price",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Deferred Payment Lacks Cap on Duration",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an outside payment date creates commercial duration risk, but the TIF-contingent payment mechanism is not textually ambiguous or internally inconsistent."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Deferred Balance Lacks Payment Deadline",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lack of a hard maturity date creates payment risk for Seller, but it does not make the stated TIF-contingent payment obligation ambiguous."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Undefined \"Setoffs\" Against Outstanding Balance",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Setoffs as described below” has no corresponding description, leaving the permissible grounds and amounts of setoff indeterminate."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Undefined term: Purchase Price",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 2 states the total purchase price as $9,000,000, so the capitalized term is readily identifiable despite the absence of parenthetical defined-term formatting."
+        }
+      ],
+      "risky": true
+    },
+    "neg20": {
+      "clause_id": "neg20",
+      "clause_name": "9. Prorations",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Buyer Bears 50% of Escrow Closing Fees",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 8(b)'s split of Title Company closing charges could encompass costs that Section 4 assigns solely to Seller, creating overlap between the two cost-allocation provisions."
+        }
+      ],
+      "risky": true
+    },
+    "neg21": {
+      "clause_id": "neg21",
+      "clause_name": "10. Default",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 7,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Specific Performance Deadline Limits Buyer's Remedy",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The ninety-day filing deadline is definite; its shortness is a negotiation concern."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Buyer's Default Cure Period Too Short",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The five-day cure period is clear, notwithstanding whether it is commercially sufficient."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Seller Only Gets 5 Days to Cure Default",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The five-day cure period is unambiguous; its adequacy is a negotiation issue."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Uncapped Actual Damages Against Seller",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The asymmetry between Buyer's actual-damages remedy and Seller's remedies is explicit rather than a construction defect."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Buyer's Default Remedy Allows Suit Beyond Liquidated Damages",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The general authorization of any legal or equitable remedy conflicts with the apparent $50,000 liquidated-damages limitation for Buyer's default."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "No Buyer Obligation to Pursue TIF Financing",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an affirmative Buyer covenant to pursue TIF is a substantive omission, not an ambiguity or conflict in the existing language."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Spelling error: fetter",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Fetter of credit” is a mechanical misspelling that, literally read, fails to identify the required letter-of-credit instrument."
+        }
+      ],
+      "risky": true
+    },
+    "neg22": {
+      "clause_id": "neg22",
+      "clause_name": "11. Risk of Loss",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Liquidated Damages Cap Undermined by Catch-All Remedy",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 10's $50,000 liquidated-damages limitation conflicts with the same section's authorization for the parties to seek any other legal or equitable remedy."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Inconsistent capitalization: purchase price",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase usage still clearly refers to the purchase price specified in Section 2 and does not change the provision's meaning."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Inconsistent capitalization: property",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Context makes clear that lowercase “property” refers to the defined Property, so the capitalization does not affect meaning."
+        }
+      ],
+      "risky": true
+    },
+    "neg23": {
+      "clause_id": "neg23",
+      "clause_name": "12. Condemnation",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Risk of Loss Lacks Buyer Termination Right",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “appropriate deduction” is vague because it supplies no standard for determining the amount of the casualty-related price reduction."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Condemnation — No Price Reduction if Buyer Doesn't Terminate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The requirement to close without a purchase-price reduction is express; whether the condemnation award is adequate is a commercial risk."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Risk of Loss — No Seller Termination Right or Repair Cap",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Although the requested termination right and cap are omitted protections, the existing alternative of an “appropriate deduction” is itself vague as to amount and standard."
+        }
+      ],
+      "risky": true
+    },
+    "neg24": {
+      "clause_id": "neg24",
+      "clause_name": "13. Buyer's Right to Enter and Inspect the Property",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Inconsistent Terminology — \"Optionee\" in Repair Obligation",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Using “Optionee” and “Optionor” instead of the Agreement's defined parties appears to be a drafting carryover and creates uncertainty about which entities owe the entry-related duties."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Missing Indemnification for Property Entry",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an entry indemnity is an omitted risk-allocation protection, not an ambiguity or inconsistency."
+        }
+      ],
+      "risky": true
+    },
+    "neg25": {
+      "clause_id": "neg25",
+      "clause_name": "14. Notices",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Extra space in notice timing",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The stray hyphen in “the- United States mail” does not create uncertainty about the prescribed mailing method or notice timing."
+        }
+      ],
+      "risky": false
+    },
+    "neg27": {
+      "clause_id": "neg27",
+      "clause_name": "16. Other Acts",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Brokerage Representation Lacks Indemnification",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an indemnity is an omitted protection, not an ambiguity, mechanical error, or internal conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "3. Deed",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Unfilled option agreement date",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The omitted date is a mechanical blank that impairs precise identification of the Real Estate Option Agreement governing the permitted exceptions."
+        }
+      ],
+      "risky": true
+    },
+    "neg31": {
+      "clause_id": "neg31",
+      "clause_name": "20. Applicable Law and Parties Bound",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Governing Law Should Specify Michigan Explicitly",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Property is expressly located in Michigan, so “the state in which the Property is located” identifies Michigan without genuine ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg32": {
+      "clause_id": "neg32",
+      "clause_name": "21. Attorney's Fees",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "No Restriction on Buyer's Assignment",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “permitted assigns” is undefined, and the Agreement supplies no consent or other mechanism establishing which assignments are permitted."
+        }
+      ],
+      "risky": true
+    },
+    "neg34": {
+      "clause_id": "neg34",
+      "clause_name": "23. No Merger",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Survival of Reps Tied to Vague Completion Milestone",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “until fulfilled, up to and including” does not clearly establish whether occupancy acceptance is a maximum endpoint, a minimum survival point, or merely one possible fulfillment milestone."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Anti-Merger Survival Period is Indefinite",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Until fulfilled, up to and including” leaves the endpoint of survival uncertain, particularly if improvements are delayed or never completed."
+        }
+      ],
+      "risky": true
+    },
+    "neg35": {
+      "clause_id": "neg35",
+      "clause_name": "24. Prior Agreements",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Amendment Requires Government/GSA Consent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The requirement for Government/GSA execution is clear; the concern is the breadth of the third party's consent right."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Unfilled option agreement day",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The missing day is a mechanical omission that prevents exact identification of the referenced August 2006 Option Agreement."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Amendment Requires Government Consent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "GSA's consent right is clearly stated; whether it should be narrowed is a negotiation matter."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Incomplete date reference in Prior Agreements section",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The missing day in the date is a mechanical omission that prevents exact identification of the incorporated Option Agreement."
+        }
+      ],
+      "risky": true
+    },
+    "neg37": {
+      "clause_id": "neg37",
+      "clause_name": "26. Utilities/Utilities Relocations and Costs",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "No Recording Restriction Disadvantages Buyer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The prohibition on recording is unambiguous, even if it is commercially one-sided."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "No Recording Restriction Lacks Remedies",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The recording prohibition is clear, and the absence of a specially stated remedy is not a construction defect; Section 10 also generally addresses noncompliance."
+        }
+      ],
+      "risky": false
+    },
+    "neg39": {
+      "clause_id": "neg39",
+      "clause_name": "28. Tax Incentive Financing",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Utility Costs Entirely on Buyer Post-Closing",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 26 clearly allocates post-closing utility termination and relocation costs to Buyer; the proposed cap or sharing arrangement is a negotiation point."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Seller's Cooperation Obligation on TIF Is Vague",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Cooperate” is vague as to the acts, timing, effort level, and expense required of Seller in obtaining the Brownfield and related approvals."
+        }
+      ],
+      "risky": true
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "4. Title",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 10,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Short Cure Period for Title Defects",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The ten-business-day cure period is clear; the issue concerns whether the negotiated period is commercially adequate."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Incomplete definition: Title Company",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The blank following “the office in” is a mechanical omission that leaves the designated Chicago Title office unidentified."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Expanse” is the wrong word for the intended allocation of cost and expense."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Punctuation error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The inserted period mechanically splits the defined phrase “Purchase Price” and disrupts the sentence identifying the policy amount."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Seller Bears All Title Insurance Costs",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The allocation of the title-policy cost to Seller is clear; the issue seeks a different commercial allocation for enhanced coverage and endorsements."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Seller's Title Cure Period May Be Insufficient",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The ten-business-day cure period is definite, even if insufficient for some title defects."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Incomplete definition: Title Company",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The blank after “the office in” is a mechanical omission that leaves the selected Chicago Title office unidentified."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Capitalization error: No Later",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Capitalizing “Later” does not change the deadline's meaning."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Spelling error: expanse",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Expanse” is the wrong word in the operative cost allocation and should be “expense.”"
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Punctuation: space before period",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The period inserted between “Purchase” and “Price” mechanically breaks the defined phrase and sentence."
+        }
+      ],
+      "risky": true
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "5. Survey",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Outdated ALTA Survey Standards",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The reference to the 2005 ALTA standards is definite, even if those standards are outdated."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Seller Obligation to Deliver Survey at Seller's Cost",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision's failure expressly to allocate survey cost is an omitted commercial term, not a named lexical ambiguity or internal contradiction raised by the issue."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Outdated ALTA Survey Standards Reference",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The 2005 standards are specifically identified; obsolescence does not make the reference ambiguous."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Inconsistent capitalization: agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase “agreement” plainly refers to this Agreement in context and does not alter meaning."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Grammar error: as a prepared",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The extra article in “as a prepared” is a grammatical drafting error that corrupts the survey-standard clause."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "7. Seller's Representations — introduction and closing warranty",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Inconsistent capitalization: seller",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase capitalization in a heading does not create uncertainty about the identity of Seller."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Inconsistent capitalization: seller in paragraph 115",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase heading does not affect the identity or obligations of the defined Seller."
+        }
+      ],
+      "risky": false
+    },
+    "neg9": {
+      "clause_id": "neg9",
+      "clause_name": "7(b) No knowledge of title or development impediments",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "buyer_united_states",
+        "seller_1200_sixth_street"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "buyer_united_states",
+          "title": "Overly Broad As-Is Acceptance Including Latent Defects",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The breadth of the as-is allocation is a negotiation risk, and Section 6 expressly recognizes matters set forth elsewhere in the Agreement, permitting it to be harmonized with Seller's representations."
+        },
+        {
+          "party": "buyer_united_states",
+          "title": "Spelling error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Teason” is a mechanical misspelling of “reason” in the operative representation."
+        },
+        {
+          "party": "seller_1200_sixth_street",
+          "title": "Spelling error: teason",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Teason” is a mechanical misspelling of “reason” in Seller's representation."
+        }
+      ],
+      "risky": true
+    }
+  }
+}

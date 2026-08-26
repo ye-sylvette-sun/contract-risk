@@ -1,0 +1,491 @@
+You are a precise contract-construction analyst.
+
+You are given the full text of one contract and a list of provisions taken
+verbatim from it, and you judge each provision for two independent kinds of
+construction risk.
+
+### The two categories
+
+**CATEGORY 1 — an intrinsic textual defect, visible in the provision itself.**
+
+- **1.1 Lexical ambiguity or vagueness.** A specific word or phrase genuinely
+  carries more than one reasonable meaning, or is so vague its boundary cannot
+  be applied. You must be able to *name* the term.
+- **1.2 Mechanical error.** A mistake in writing, grammar, spelling or
+  punctuation that changes what the provision means.
+- **1.3 General-vs-specific / list scope.** A general catch-all sits against
+  enumerated specifics, leaving the catch-all's reach uncertain (ejusdem
+  generis, expressio unius); or the provision is so one-sidedly drafted that a
+  genuine ambiguity would be construed against its drafter.
+
+**CATEGORY 2 — the defect arises from the provision's RELATIONSHIP to the rest
+of the instrument.** You must consult the other provisions of the contract.
+
+- **2.1 Conflicting clauses.** This provision directly contradicts another
+  operative provision of the same contract.
+- **2.2 Whole-instrument incoherence.** The provision cannot be reconciled with
+  the contract read as a whole; harmonising every provision still leaves a
+  genuine internal inconsistency.
+- **2.3 Recitals vs operative text.** A recital and an operative term point in
+  different directions.
+
+**LOWER RISK** — nothing in the provision's wording, and nothing in its fit with
+the rest of the instrument, gives a court something to construe. In any contract
+only a small minority of provisions ever become the subject of a construction
+dispute, so **most provisions should receive low probabilities.**
+
+### What makes a provision risky here
+
+A provision is risky when a court would have something to construe: the two
+sides could read it differently and the dispute would turn on the words. It is
+**not** about whether the provision is important, complex, or commercially
+significant. A long, carefully drafted limitation of liability is usually lower
+risk. A short phrase like `Free land` can be high risk.
+
+### What "lower risk" does and does not mean
+
+This matters for how you read the worked examples below, and it is the one place
+this task is easy to get wrong.
+
+The high-risk examples are provisions a federal court **did** construe. That is
+direct evidence: two parties read the same words differently and a judge had to
+decide between them.
+
+The lower-risk examples are provisions no court construed **in that case**. That
+is much weaker evidence, and it is **not** evidence that the provision is sound.
+It may be perfectly drafted, or it may carry a latent defect that no one had
+occasion to fight over — a dispute has to be worth the cost of litigating, and
+most defects never are. Nothing in this task tells you that any provision is
+free of risk.
+
+So do not treat a lower-risk example as a model of good drafting to be matched.
+Treat the pair as one end of a scale against the other: what did a court
+actually find worth arguing about, and what, in the same document, did nobody
+reach for? Your probabilities express **how likely this provision is to be one a
+court would have something to construe** — not a verdict that it is sound.
+
+### Calibration
+
+- A definite, consistent provision has **both** probabilities low, however
+  important it is. Being litigated is not itself a defect.
+- Put `prob_cat1` at or above 0.5 only with specific textual evidence — name the
+  ambiguous term, or the general-vs-specific tension.
+- Put `prob_cat2` at or above 0.5 only after checking the other provisions and
+  finding a specific conflict or incoherence — **name the other provision**. If
+  you did not find one, `prob_cat2` stays low.
+- The provisions were **sampled neutrally**. Do not assume any fixed number of
+  them are risky, and do not spread your probabilities to fill a quota. Judge
+  each one independently.
+- Use the whole range. A provision you cannot rule out, but cannot point to
+  anything specific in, belongs in the middle — not pinned near zero because you
+  found no proof. A defect that is real but cannot be named is still a defect,
+  and courts construe those too.
+
+### The worked examples
+
+One worked pair per risk type. Each pair is two real provisions from the same contract: one a federal court construed — so it is KNOWN to be high risk, and the court's own words about it follow — and one no court construed in that case, which makes it LOWER RISK on the evidence available and nothing stronger than that.
+
+Each example is introduced with the full count for its contract: how many of its provisions a court construed, and how many it did not. That ratio is what a real contract looks like — the construed provisions are always a small minority. Read it as the base rate to expect, NOT as a quota to reproduce: the contract you are judging may have more such provisions, or none at all.
+
+
+================ Category 1.1 — lexical ambiguity or vagueness ================
+From 99 F.Supp.3d 585, contract 99FSupp3d585_asset_purchase_and_product.
+In this contract a court construed 3 provisions; the other 95 it did not.
+
+HIGH RISK — "Section 9.1 — Dispute Resolution; Mediation"  (risk type: 1.1). A federal court construed this provision.
+"""
+9.1 Dispute Resolution; Mediation. Any dispute, controversy or claim arising out of or relating to this Agreement, or the breach, termination, or invalidity thereof (each, a “Dispute”) shall first be referred by the Parties to their respective senior-level executives, or their designecs, {or attempted resolution through good faith negotiations. In the event that such persons cannot resolve the Dispute within thirty (30) days following either Party’s written request to initiate such negotiations, cither Party may, by written notice to the other, require that the Dispute be Teferred to non-binding mediation administered by the American Arbitration Association (the “AAA”) in accordance with its then-current Commercial Mediation Rules. The presiding mediator shall have experience with disputes involving the technology that is the subjcct matter of this Agreement, The mediation shall be conducted in the English language and all mediation sessions shall be held in Philadelphia, Pennsylvania. The Parties shall each be responsible for one-half of any fees or other amounts payable to the AAA or the mediator, and each Party shal} bear its own attorneys’ fees and other expenses in connection with the mediation, If efforts at mediation are unsuccessful in resolving the Dispute within thirly (30) days after the first mediation session, either Party may pursue any and all legal or equitable remedies available to it, subject to the remaining provisions of this Agreement. The Parties agree that the procedures set forth in this paragraph shall be the sole and exclusive means of resolving any and all Disputes. Notwithstanding the foregoing and subject to the remaining provisions of this Agreement, either 3 20en 1-PR/1256533.9 Party may seek injunctive or other equitable relief in a court of competent jurisdiction pending the outcome of any negotiations or mediation conducted hereunder.
+"""
+
+What the court said about it, verbatim from the opinion in 99 F.Supp.3d 585:
+"""
+The Defendants contend that the Complaint should be dismissed in its entirety for failure to comply with the 2004 Agreement’s dispute resolution and mediation clause. L.P./Inc. Mot. to Dismiss at 12-13. The clause provides that “[a]ny dispute, controversy or claim arising out of or relating to this Agreement, or the breach, termination, or invalidity thereof shall first be referred by the parties to their senior-level executives for attempted resolution through good-faith negotiations.” Compl. Ex. A § 9.1 (emphasis added). Should negotiations fail, thirty days after making a written request to initiate those negotiations, “either Party may, by written notice to the other, require that the Dispute be referred to non-binding mediation administered by the American Arbitration Association.” Id. (emphasis added). The Defendants assert that Skold did not refer a dispute to a senior-level executive for negotiations and failed to make a written request that the dispute be referred to nonbinding mediation. L.P./Inc. Mot. to Dismiss at 12-13. Skold responds that the language of the mediation clause is permissive (“either Party may ... require”) and also argues that, in any event, Inc. has waived its right to invoke the clause because it participated in litigation over the dispute in the cancellation action before the TTAB. See Pl.’s L.P./Inc. Opp’n at 14-15.
+The dispute resolution clause in the 2004 Agreement contains two clauses, one of which is mandatory (the parties shall refer the matter to senior executives to attempt to negotiate a resolution) and the other which is permissive (the parties may refer the matter to nonbinding mediation). Given the voluntary nature of the latter, this Court agrees with Skold that he was not required to refer this dispute to mediation before bringing suit here against Inc.
+L.P. and S.A., who are not parties to the 2004 Agreement, also contend that the dispute resolution clause requires their dismissal from this action. In essence, they urge this Court to accept the contention that a nonparty to an agreement should be permitted to force a signatory party to engage in negotiations pursuant to a permissive mediation clause in that agreement as a condition precedent to filing suit but cite no relevant case or statute in support of this contention. See United States v. Benish, 5 F.3d 20, 26 (3d Cir.1993) (rejecting a party’s claim where the party “provided] no legal support for his argument or any persuasive reason” for the court to find in his favor). The Court sees no persuasive reason to dismiss Skold’s entire Complaint based on this unsupported argument. Accordingly, the motion to dismiss the Complaint against L.P. and S.A. on this ground shall be denied.
+Regarding Inc.: although Skold did fail to bring in a senior-level executive to try to resolve the dispute — as he was required to do under the dispute resolution provision — Inc.’s participation in the TTAB proceedings waived any rights it may have had to seek to have the parties’ executives negotiate an end to the dispute. See, e.g., LBL Skysystems (USA), Inc. v. APG-Am., Inc., No. 02-5379, 2005 WL 2140240, at *30 (E.D.Pa. Aug. 31, 2005) (holding that a “party that engages in discovery and files pretrial motions waives a contract’s alternative dispute resolution provision”); Smith v. IMG Worldwide, Inc., 360 F.Supp.2d 681, 687 (E.D.Pa.2005) (finding that a party’s engaging in motion practice and providing “substantial discovery” constituted waiver of contractual alternative dispute resolution provision).
+Viewing the four years’ worth of docket entries in the TTAB action, the Court considers that Inc. did not file a motion to stay the TTAB proceedings pending executive-level negotiations and instead filed, inter alia, motions to dismiss, a protective order, multiple summary judgment motions (one of which was partially granted in its favor), and a final brief in preparation for trial. See, e.g., Sköld v. Galderma Labs., Inc., Cancellation No. 92052897, 2012 WL 5902083 (T.T.A.B. Nov. 8, 2012) (granting Inc.’s motion for partial summary judgment on Skold’s abandonment claim). See also generally Registrant’s Trial Brief, Sköld v. Galderma Labs., Inc., Cancellation No. 92052897 (T.T.A.B. Aug. 13, 2014), Docket No. 81. This four-year history of litigation in the cancellation action — from filing nearly through trial — is, on its face, inconsistent with the notion that Inc. was willing to engage in the good-faith executive-level negotiations required by the dispute resolution provision.
+Moreover, the Court can look to the TTAB’s grant of partial summary judgment in favor of Inc. and dismissing Skold’s abandonment claim as a concrete example of an instance where Inc.’s conduct inconsistent with the dispute resolution clause caused prejudice to Skold, not to mention the expenditure of time, cost, and resources attendant to maintaining a multi-year trademark cancellation action. The Defendants have undisputedly accepted the judicial process and have demonstrated that fact by: (1) Inc.’s failure to raise the issue of good-faith negotiations promptly before the TTAB; (2) Inc.’s engaging in discovery in the TTAB action; (3) Inc.’s filing of several pretrial motions in the TTAB action, none of which raise the issue of negotiation; and (4) the Defendants’ decision to wait until the case was ready to proceed to trial before the TTAB and until a Complaint was filed in this Court before asserting Skold’s failure to negotiate as grounds for a motion to dismiss. See St. Clair Area Sch. Dist. Bd. of Educ. v. E.I. Assocs., 733 A.2d 677, 682 n. 6 (Pa.Commw.Ct.1999) (“The key to determining whether [an alternative dispute resolution procedure] has been waived is whether the party, by virtue of its conduct, has accepted the judicial process.”). Inc. cannot now attempt to stand on the alternative dispute resolution clause as a reason for dismissal. Its right to invoke the clause has been waived.
+"""
+
+LOWER RISK — "4.8 Maintenance of Records; Audit", from the same contract. No court construed it in this case. That is the only thing known about it: it is not established to be sound, only never fought over.
+"""
+4.8 Maintenance of Records; Audit. For a period of two (2) years after the date of the invoice, CollaGenex shal] maintain, and shall require ils respective Affiliates to maintain, complete and accurate books and records in connection with the sale of Products hereunder, as necessary lo allow the accurate calculation consistent with generally accepted accounting principles of the royalties and Sublicense Income payments duc to Skold, including any records required to cajculate any royalty adjustments hereunder. Once per calendar year, Skold shall have the right to engage an independent accounting firm reasonably acceptable to CollaGenex, which shall have the right to examine in confidence the relevant CollaGenex records as may be reasonably necessary to determine and/or verify the amount of royalties and Sublicense Income payments due hereunder. Such examination shall be conducted, and CoJlaGenex shall make its records available, during normal business hours, after at least fifteen (15) days prior written notice to CollaGenex, as applicable, and shall take place at the facility(ies) where such records are maintained. Each such examination shall be limited to pertinent books and records for any year ending not more than twenty-four (24) months prior to the date of request; provided that Skold shall not be permitted to audit the same period of time more than once. Before permitting such independent accounting lirm to have access to such books and records, CollaGenex may require such independent accounting firm and its personnel involved in such audit, to signa confidentiality agreement (in form and substance reasonably acceptable to CollaGenex) as to any confidential information which is to be provided to such accounting firm or to which such accounting firm will have access, while conducting the audit under this paragraph. The Skold independent accounting firm will prepare and provide to each Party a writlen report stating whether the royalties and Sublicense Income payment reports submitted and royaltics and Subliccnse Income payments paid are correct or incorrect and the details concerning any discrepancies. Such accounting firm may not reveal to Skold any information leamed in the course of such audit other than the amount of any such discrepancies. Skold agrees to hold in stnct confidence all information disclosed to it, except to the extent necessary for Skold to enforce its rights under this Agreement or if disclosure is required by law. In the event there was an underpayment by CollaGenex hereunder, CollaGenex shall promptly (but in no event later than thirty (30) days after such Party’s receipt of the independent auditor’s report so correctly concluding) make payment to Skold of any shortfall. In the event that there was an overpayment by CollaGenex hereunder, Skold shall promptly (but in no event later than thirty (30) days after Skold’s receipt of the independent auditor’s report so correctly concluding) refund to CollaGenex or credit to future royalties, at ColljaGenex’s election, the excess amount. Skold shall bear the full cost of such audit unless such audit discloses an underreporting by CollaGenex of more than ten percent (10%) of the aggregate amount of royalties and Sublicense Income payments in any twelve (12) month period, in which case, CollaGenex shall bear the full cost of such audit.
+"""
+
+================ Category 1.3 — general-vs-specific / list scope ================
+From 93 F.Supp.3d 375, contract 93FSupp3d375_personal_deposit_account_agreement.
+In this contract a court construed 4 provisions; the other 251 it did not.
+
+HIGH RISK — "Part I — International ACH and Wire Transactions (NACHA Operating Rules)"  (risk type: 1.3). A federal court construed this provision.
+"""
+International ACH and Wire Transactions If your Account receives incoming ACH transactions (either credits or debits) or wire transfers initiated from outside of the United States, both you and we are subject to the Operating Rules and Guidelines of the National Automated Clearing House Association (“NACHA”) or the rules of any wire transfer system involved, and the laws enforced by the Office of Foreign Assets Control (“OFAC”). Under such rules and laws, we may temporarily suspend processing of a transaction for greater scrutiny or verification against the OFAC list of blocked parties, which may result in delayed settlement, posting and/or availability of funds. If we determine there is a violation, or if we cannot satisfactorily resolve a suspected or potential violation, the subject funds will be blocked as required by law. If you believe you have adequate grounds to seek the return of any blocked funds, it is your sole responsibility to pursue the matter with the appropriate governmental authorities. Please see the OFAC website for procedures and form required to seek a release of blocked funds.
+"""
+
+What the court said about it, verbatim from the opinion in 93 F.Supp.3d 375:
+"""
+The bulk of Plaintiffs’ breach claim centers around their argument that TD’s conduct violated the NACHA Rules, which Plaintiffs claim were incorporated into the Account Agreement. See Compl. at ¶ 166-67. In order to address this claim we must first determine whether the NACHA rules were in fact incorporated. In support of this point, Plaintiffs cite to page 16 of the Account Agreement, which states in relevant part:
+International ACH and Wire Transactions
+If your Account receives incoming ACH transactions (either credits or debits) or wire transfers initiated from outside of the United States, both you and we are subject to the Operating Rules and Guidelines of the National Automated Clearing House Association (“NACHA”) or the rules of any wire transfer system involved....
+As TD points out, this provision does not refer to all ACH transactions, but rather only to those initiated from outside of the United States. Motion to Dismiss at 18 (Doc. No. 23). Thus to the extent that an ACH transaction was initiated within the United States, we see nothing in the Account Agreement that would obligate TD to follow the NACHA rules for processing that transaction.
+TD argues further that Plaintiffs “have not alleged that any of the ACH debits at issue were initiated outside of the United States,” Doc. No. 23 at 18 n. 12 (emphasis in original), and thus this portion of the breach claim should be dismissed in its entirety. We disagree. The Plaintiffs state in the Complaint that many payday lenders are based offshore or on Native American reservations. Compl. at ¶ 4. Though the Complaint fails to state whether Plaintiffs’ specific lenders are based outside of the United States, at this stage the Complaint does not require “detailed factual allegations.” Iqbal, 556 U.S. at 678, 129 S.Ct. 1937. Again, the touchstone is plausibility. Ethypharm, 707 F.3d at 231 n. 14. Taking the Plaintiffs’ allegations as true, the Complaint raises a plausible claim that some number of the loans originated outside of the United States. The Account Agreement provides that the parties must abide by the NACHA rules for the processing of those transactions.
+"""
+
+LOWER RISK — "Our Liability", from the same contract. No court construed it in this case. That is the only thing known about it: it is not established to be sound, only never fought over.
+"""
+Our Liability If we do not complete a transfer to or from your Account on time or in the correct amount according to our Agreement with you, we will be liable for losses or damages. However, there are some exceptions. We will NOT be liable for instance: 1) If, through no fault of ours, you do not have enough money in your Account to make the transfer. 2) If the transfer would go over the credit limit on your overdraft line. 3) If the automated teller machine where you are conducting the transfer does not have enough cash. 4) If the terminal or system was not working properly and you knew about the breakdown when you started the transfer. 5) If circumstances beyond our control prevent the transfer, despite reasonable precautions we have taken. Such circumstances include telecommunications and power outages or interruptions, postal strikes, delays caused by payees, fires and floods. 6) If the funds are subject to legal process or other encumbrances restricting such transfer. 7) If the transfer would result in your daily withdrawal limit being exceeded. 8) If the Bank has reason to believe that you or someone else is using the automated teller machine or other electronic banking service for fraudulent or illegal purposes. 9) If you do not give proper, complete or correct instructions for the transfer, or you do not follow the procedures in this Agreement or any other Agreement with us for requesting the transfer. 10) If your ATM or Visa Debit Card and/or your PIN has been reported lost or stolen, or we have canceled your PIN, your card, or otherwise terminated this Agreement. There may be other exceptions stated in our Agreement with you.
+"""
+
+================ Category 2.2 — whole-instrument incoherence ================
+From 779 F.Supp.2d 416, contract 779FSupp2d416_lovejoy_inc_kamco_industrial.
+In this contract a court construed 3 provisions; the other 18 it did not.
+
+HIGH RISK — "Paragraph 16 — Term and Termination"  (risk type: 2.2). A federal court construed this provision.
+"""
+16. This agreement shall commence and become effective January 1, 2004, and shall continue in force for a one (1) year period, and shall be automatically renewed for additional one (1) year periads thereafter unless terminated by written notice from either party to the other party not less than GB/EQ ADVd OOWY> éSTSES/eTs S@:-PT 6882/20/ Ta sixty (60) days prior to the end of the initial or any subsequent ope (1) year term. This Agreement may also be terminated: a) By the Company immediately upon written notice to the Representative by registered or certified mail if there is a change of fifty (50%) percent or more of the present ownership or control of the Representative’s business without Company's written consent. b) By the Representative immediately upon written notice to the Company by registered or certified mail in the event the Company sells substantially all of the assets of its business or there is a change of fifty (50%) percent or more of its present ownership, or it is toerged with another firm, corporation or business and the Company is not the surviving company. c) By either party: i. In the event of the other party’s unreasonable and repeated failure to perform the terms and conditions of this agreement, written notice of the fatlure is mailed to or served upon that party, the failure is not cured within thirty (30) days after receipt of such notice, and written notice of termination is mailed via certified or registered to, or served upon that party, or ii. Upon immediate written notice to the other party in the event that party has filed or has filed against it a petition in bankruptcy (which is not dismissed within thirty (30) days after it is filed) or that party makes an assignment for the benefit of creditors, or iii. By mutual woitten agreement.
+"""
+
+What the court said about it, verbatim from the opinion in 779 F.Supp.2d 416:
+"""
+The more significant problem with Love-joy’s argument that it had an “unfettered” right to redefine the House Accounts is that this interpretation would nullify portions of the Agreement’s termination provision. PL’s Opp. Br. at 17. Under the termination provision, the Agreement became effective January 1, 2004, and:
+shall continue in force for a one (1) year period, and shall be automatically renewed for additional one (1) year periods thereafter unless terminated by written notice from either party to the other party not less than sixty (60) days prior to the end of the initial or any subsequent one (1) year term.
+Agreement ¶ 16. The Agreement also provides for termination by either party under certain additional circumstances, including (1) a change of 50% or more of the ownership of the other party; (2) the other party’s unreasonable and repeated failure to perform the terms and conditions of the Agreement; or (3) the other party’s filing of a bankruptcy petition. Id. Finally, the Agreement expressly contemplates that the parties could terminate the Agreement at any time by “mutual written agreement.” Id.
+The termination provision, on its face, provides a comprehensive account of the ways in which the Agreement may be terminated. There is no indication in the Agreement that the parties contemplated that the House Accounts provision would constitute an additional means for terminating all of Lovejoy’s obligations under the Agreement. Under Lovejoy’s construction of the House Accounts provision, however, Lovejoy could, at any time and without Kamco’s consent, redefine every single account in Kamco’s territory as a House Account. This interpretation would allow Lovejoy to escape from all of its obligations under the Agreement and all of the restrictions in the termination provision.
+This reading is inconsistent with Pennsylvania law, which, as noted above, forbids courts from “interpreting] one provision of a contract in a manner which results in another portion being annulled,” LJL Transp., 962 A.2d at 648 (citation omitted), and requires that “[t]he whole instrument ... be taken together in arriving at contractual intent,” Duquesne Univ., 777 A.2d at 429 (citation omitted). For example, the termination provision permits the parties to terminate the agreement at any time by “mutual written agreement.” Agreement ¶ 16. Lovejoy’s interpretation of the House Accounts provision, however, would allow it — without obtaining Kamco’s consent— to terminate all of its obligations under the Agreement at any time simply by redefining all of Kamco’s accounts as House Accounts. In other words, the “mutual” termination provision would never apply to Lovejoy.
+Similarly, Lovejoy’s reading of the House Accounts provision would allow it to escape the effects of the 60 day notice requirement, under which the Agreement automatically renews for a full year unless either party provides notice of its intention to terminate the Agreement 60 days before the end of an annual term. Id. The evident purpose of this provision is to permit both parties to make business plans in reliance on the contract’s continued existence for a one year period. This purpose would obviously be frustrated if one party maintained a unilateral right to opt out of all of its obligations under the contract at any time — which is precisely how Lovejoy construes the House Accounts provision.
+This court’s conclusion that Lovejoy’s reading of the House Accounts provision is inconsistent with the parties’ intent is reinforced by the fact that the Agreement contains a non-compete provision. The noncompetition provision states that Kamco could not, without Lovejoy’s permission, sell any product which is directly competitive with any Lovejoy product that Kamco was supposed to sell on Lovejoy’s behalf. Id. ¶ 2. If, as Lovejoy suggests, the House Accounts provision granted Lovejoy the “unfettered” right to redefine all or substantially all accounts as House Accounts, then Lovejoy would have the unilateral power to deprive Kamco of all of the benefits it was to receive under the contract while simultaneously barring Kamco from selling any product made by a Lovejoy competitor. Such a result would plainly seem to be contrary to Kamco’s “reasonable expectations” when it entered the Agreement. Duquesne Light Co. v. Westinghouse Elec. Corp., 66 F.3d 604, 617 (3d Cir.1995).
+The inconsistency between the termination provision and the House Accounts provision disappears if the House Accounts provision is read to contain an implied covenant of good faith governing Lovejoy’s exercise of discretion in its designation of House Accounts. Good faith duties are implied “where it is clear that an obligation is within the contemplation of the parties at the time of contracting or is necessary to carry out their intentions.” Slater v. Pearle Vision Center, Inc., 376 Pa.Super. 580, 546 A.2d 676, 679 (1988); see also Duquesne Light, 66 F.3d at 617 (noting that “courts generally utilize the good faith duty as an interpretive tool to determine the parties’ justifiable expectations”). This court finds that, reading the Agreement as a whole, Kamco possessed a justifiable expectation that, at a minimum, Lovejoy would not use its discretion under the House Accounts provision to deprive Kamco of its benefits under the Agreement by redefining all or substantially all of Kamco’s accounts as House Accounts. Reading the House Accounts provision in this manner allows the termination provision to have its intended effect: If one of the parties wishes to put an end to its obligations to the other party, it must follow one of the enumerated ways of terminating the Agreement.
+"""
+
+LOWER RISK — "8. Payment of Commissions", from the same contract. No court construed it in this case. That is the only thing known about it: it is not established to be sound, only never fought over.
+"""
+8. Commissions due the Representative are payable based on invoices to the customer, and will be paid forty-five (45) days from the conclusion of the month in which shipment took place. If orders are returned to and accepted by the Company for credit, commissions paid or credited to the Representative for such orders shall be deducted from the amount of other commissions due, if that amount is sufficient, otherwise, commissions paid on such retummed-for-credit orders shall be refunded to the Company. Accounts listed for collection will be written off and commissions deducted. When collection is made, the Representative will receive commission based on the net amount collected.
+"""
+
+### The contract to judge
+
+- **contract_id:** 109FedCl1_real_estate_option_agreement
+- **Filed in:** 109 Fed.Cl. 1
+
+The contract to judge is the Word document open in front of you. Read it
+in full before you begin.
+
+Work in this order.
+
+1. **Read the examples first.** For each one, read the provision and then the
+   court's own words about it. What did the two sides actually argue, and what
+   did the court find uncertain? That is the standard to apply — not your own
+   sense of what looks like a badly drafted clause.
+2. **Read the contract.** You need it for Category 2: a conflict cannot be seen
+   from one provision alone.
+3. **Judge each listed provision**, in the order given.
+
+For each provision return two **independent** probabilities:
+
+- `prob_cat1` in [0, 1] — that it carries a Category 1 risk.
+- `prob_cat2` in [0, 1] — that it carries a Category 2 risk.
+
+Give both to **two decimal places**, on a 0.01 grid — 0.03, 0.17, 0.62. Do not
+round to the nearest 0.05 or 0.1: the fine distinctions between provisions are
+what the number is for.
+
+They are independent: a provision may carry neither, one, or both, and they need
+not sum to 1. Most provisions should have both well below 0.5.
+
+Reason about the two categories **separately**:
+
+- `reasoning_cat1` — assess ONLY the provision's own wording. Name the ambiguous
+  term or the general-vs-specific tension, or say what makes the wording
+  definite. Justify `prob_cat1`.
+- `reasoning_cat2` — assess ONLY the provision's fit with the rest of this
+  contract. Name the specific other provision you checked, or say that it is
+  consistent with the whole. Justify `prob_cat2`.
+
+Only the two categories are wanted. Do not report a fine subtype.
+
+Keep each reasoning to two sentences. You are producing a judgment, not a
+memorandum.
+
+### The format of your answer
+
+Write your answer as a single JSON object and nothing else -- no preamble, no
+commentary before or after it. It must validate against this JSON Schema:
+
+```json
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "judgments"
+  ],
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "description": "One judgment per provision id listed in the document, in the order given.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "clause_id",
+          "reasoning_cat1",
+          "reasoning_cat2",
+          "prob_cat1",
+          "prob_cat2"
+        ],
+        "properties": {
+          "clause_id": {
+            "type": "string",
+            "description": "The provision id, copied exactly from the square brackets."
+          },
+          "reasoning_cat1": {
+            "type": "string",
+            "description": "Two sentences on the provision's own wording. Name the ambiguous term or the general-vs-specific tension, or say why the wording is definite."
+          },
+          "reasoning_cat2": {
+            "type": "string",
+            "description": "Two sentences on its fit with the rest of the contract. Name the specific other provision you checked, or say it is consistent with the whole."
+          },
+          "prob_cat1": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Probability of a Category 1 risk (intrinsic textual defect), to two decimal places on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1."
+          },
+          "prob_cat2": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Probability of a Category 2 risk (relational defect), to two decimal places on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1."
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+Include exactly one entry for EVERY id listed below, in the order given, and no
+ids that are not listed.
+
+### The provisions to judge
+
+Each is quoted verbatim from the open document, under its id in square
+brackets.
+
+
+[c001] "Preamble and Recitals"
+"""
+This Real Estate Option Agreement is made and entered into the ist day of August 2006 (‘Effective Date”), by and between 1200 6" Street LLC,("Optionor”), a Limited Liability Company, whose address is 16630 Southfield Road, Allen Park, Michigan, 48101 and the United States of America, acting by and through the U.S. General Services Administration (‘Optionee”) whose address is 230 S. Dearborn Street, Suite 3600, Chicago, Illinois, 60604. WHEREAS, the Optionee desires to locate certain Federal facilities for office space containing approximately 266,200 square feet of rentable space with onsite parking facilities within the City of Detroit; and WHEREAS, the Optionee has determined that the most efficient manner to establish the location of these Federal facilities is to identify a parcel of real property appropriate for the unique requirements of these facilities, and then to proceed to conduct a lease procurement for the construction and leasehold of these Federal facilities on such parcel of real property; and WHEREAS, the Optionor desires the Optionee to locate these Federal facilities upon certain real property owned by the Optionor, and the Optionee has determined such real property owned by the Optionor to be the most advantageous site for location of these Federal facilities, all factors considered; and WHEREAS, Optionee requires a no-cost assignable option to purchase this certain real property in order to proceed with its plans to implement its lease procurement process: NOW THEREFORE, in consideration of the above recitals, the mutual obligations of the parties hereto, TEN AND NO/100 DOLLARS ($10.00) and other good and valuable consideration, the receipt and sufficiency of which are hereby acknowledged, the parties agree as follows:
+"""
+
+[c002] "1. Grant of Option"
+"""
+1. Grant of Option. The Optionor hereby grants to the Optionee the exclusive and irrevocable option (‘Option’) to purchase certain real property situated in the City of Detroit, County of Wayne, State of Michigan containing approximately 10.89 acres which is commonly known as 1200 6" Street (“Property”) and is more particularly described in the Agreement for Purchase and Sale of Real Property which is attached hereto and made a part hereof as Exhibit 1, together with all improvements, easements, and appurtenances to the Property for the price and within the time specified in this Option. This Option shall be fully assignable at any time prior to closing to Optionee’s developer (“Developer”).
+"""
+
+[c003] "Paragraph 2 — Term of Option (exercise by written notice)"
+"""
+2. Term of Option. This Option shall continue in effect for a period of not less than one (1) year from the Effective Date of this Option and may be exercised in accordance with its terms at any time on or before its expiration inclusive of any extension period provided for herein, by serving written notice on the Optionor in the manner prescribed in Section 20. The giving of such notice shall result in Exhibit 1 becoming a binding contract of purchase and sale between the parties, effective on the date of the receipt of notice of exercise of this Option as provided in Section 20. This Option may be extended at the election of Optionee for an additional thirty (30) days by giving notice as provided in Section 20 of this Option.
+"""
+
+[c004] "3. Purchase Price"
+"""
+3. Purchase Price. The total purchase price for the Property shall be $9,000,000 (Nine Million Dollars), hereinafter the “Purchase Price". At the closing on the Property (“Closing”), the sum of $8,000,000 (Eight Million Dollars) shall be due and payable plus or minus any standard deductions and prorations (Customary closing expenses incurred by the Optionor inclusive of utility and real estate tax prorations). The remaining balance less any deductions identified below shall be paid at a rate of 10% of the annual tax incremental financing reimbursement received by Developer. For example, the anticipated annual Tax Incremental Financing [TIF] amount is approximately $2,000,000, of which an estimated $200,000 shall be paid to Optionor annually, and shall become due and payable within thirty (30) days of receipt of same until the remaining $1,000,000 (or less, dependent upon deductions as described below) are received (‘Outstanding Balance”). The Outstanding Balance shall accrue interest to the same extent, if any, that either the City of Detroit or the State of Michigan pay interest to the Developer on the outstanding incurred eligible expenses and which shall be paid in accordance with Exhibit 1. In the event the sale is consummated, and subject to repayment of the Outstanding Balance owed to Optionor (less any deductions) the tax incrementa! reimbursement shall belong to the Developer.
+"""
+
+[c005] "4. Conveyance"
+"""
+4. Conveyance. Upon payment of the Purchase Price, less the Outstanding Balance, Optionor shall convey good and marketable indefeasible fee simple title to the Property to the Developer by warranty deed, free and clear of all liens and encumbrances whatsoever, subject only to those items (‘Permitted Exceptions”) set forth in Exhibit 1, and subject to any standard deductions, prorations and or adjustments as provided for herein.
+"""
+
+[c006] "5. Survey"
+"""
+5. Survey. No later than thirty (30) days after the effective date of this Option, the Optionor shall deliver to Optionee, at Optionor’s expense, a topographical metes and bounds land title survey of the Property in accordance with the 2005 Minimum Standard Detail Requirements for ALTA/ACSM Land Title Surveys including such Table A items as Optionee may elect, the same shall be attached hereto and made a part hereof as Exhibit 2. Optionor shall provide Optionee an updated topographical boundary survey of the Property which shall reflect the City of Detroit’s final approved plat of vacation and or dedication of right of way necessary to affect the Optionee’s desired street closures by December 31, 2006. Additionally, the updated topographical boundary survey shall describe all of the immediate contiguous properties created as a result of vacating Sixth Street and Abbott Street for the purpose of combining the Property as a single metes and bounds legal description that shall be identified as one (1) tax parcel. The surveyor’s certificate shall be certified to the Developer’s title company so that the Owner’s Title Insurance Policy for the Property that will be obtained by the Developer at closing will contain a survey endorsement based on the final topographical boundary survey and plat.
+"""
+
+[c007] "6. Title Insurance"
+"""
+6 Title Insurance. No later than thirty (30) days after the effective date of this Option, the Optionor shall deliver to Optionee, at Optionor’s expense, a Preliminary Title Commitment for an Owner’s Title Insurance Policy to issue to Optionee or its Assignee, at or as soon as possible after Closing, its ALTA Form B Owner's title insurance policy, without standard exceptions, in the amount of the purchase price, insuring title to the Property to be in good and marketable condition, free and clear of any liens and encumbrances. Seller shall furnish Purchaser with the aforesaid title commitment and legible copies of all items shown in such commitment as soon as possible, but in no event later than thirty (30) days following the Effective Date.
+"""
+
+[c008] "6. Title Defects (second paragraph)"
+"""
+If the title is not in the condition required hereunder, Optionee shall notify Optionor in writing of such defect(s) within twenty-one (21) days after receipt of the title insurance commitment and copies of all items shown therein. In the event Optionor is unable or unwilling to cure such defects within twenty-one (21) days after receipt of such notice, Optionee shall have the option of either (1) waiving such defect(s) and proceeding with the closing; (2) allow Optionor to attempt to resolve the exceptions and encumbrances objected by Optionee, during the term of the Option, such as in the case of those encumbrances which will require the action of the City of Detroit; or (3) if the defect can be cured by the payment of dollars, deducting the amount required to cure such defect from the purchase price and the proceeds due Optionor at Closing or, at Optionor's discretion, the obtaining by Optionor of a surety bond over such lien or title defect. Those title conditions not objected to by Optionee pursuant to this . paragraph or accepted by Optionee are hereinafter called “Permitted Exceptions.”
+"""
+
+[c009] "7(a). Optionor's Representation - Ownership"
+"""
+7, Optionor’s Representations. Optionor represents that: (a) It is the record owner of the Property and has the requisite power and authority to enter into and fully carry out this Option and the sale of the Property contemplated herein.
+"""
+
+[c010] "7(b). Optionor's Representation - Development and Title"
+"""
+(b) It has no knowledge of any reason why the local governmental authorities would not allow the Property to be developed for the Federal office facilities contemplated herein; that possession of the land has been peaceable and undisturbed; that Optionor’s title to the Property has never been disputed or questioned to its knowledge; nor does Optionor know of any facts by reason of which said possession or title might be disturbed or questioned, or by reason of which any claim to the Property, or any part thereof might arise or be set up adverse to Optionor.
+"""
+
+[c011] "7(c). Optionor's Representation - Utilities"
+"""
+(c) Electricity, telephone, sewer, and water utilities have been installed within the adjacent public right of ways and are of sufficient size, capacity and are available for immediate connection at the Property without any special charge, assessment or apparatus for its current use.
+"""
+
+[c012] "7(d). Optionor's Representation - Environmental Disclosure"
+"""
+(d) Optionor has disclosed that the property is a “facility” as defined by MCL 324.20101 et seq. due to the property’s historic uses described in the environmental reports Optionor provided to Optionee. Optionor also represents that it has provided all environmental information that it has with respect to the environmental condition of the Property including the existence of asbestos containing materials located in existing structures.
+"""
+
+[c013] "7(e)(1). Compliance with Environmental Laws"
+"""
+(e) Except as otherwise indicated on Schedule A attached hereto, or as described in paragraph 7 (d) of this agreement, to the best of Optionor’s actual knowledge: (1) that since Optionor acquired an interest in the property, Optionor has been in compliance with all federal, state and local laws, rules, regulations, ordinances, codes and orders governing, establishing, limiting or otherwise affecting the discharge or disposal of hazardous substances or hazardous waste;
+"""
+
+[c014] "7(e)(2). No Storage or Disposal of Hazardous Substances"
+"""
+(2) that the property has not been used since the time Optionor acquired any interest in the property for storage, disposal, deposit, treatment, or recycling of toxic, dangerous or hazardous substances;
+"""
+
+[c015] "7(e)(3). No Activities Subjecting Owner to Liability"
+"""
+(3) that in the event that any subsequent purchaser of the property avails itself of the available statutory exemptions from environmental liability, there are no activities on the property which would subject an owner thereof to damages, penalties, injunctive relief or clean-up costs under any federal, state or local law or under any civil action respecting hazardous substances on the property. The exemptions include that owner's obligations to comply with its due care requirements as stated in MCL 324.20107a, its obtaining a Baseline Environmental Site Assessment under MCL 324.20101 et seq. and compliance with the All Appropriate Inquiry exemption as defined and contained in CERCLA, as amended.
+"""
+
+[c016] "7. Continuing Truth of Representations"
+"""
+Optionor represents and warrants to the Optionee that the above representations are true and correct as of the date hereof and will continue to be true and correct on each day hereafter until and including any exercise of this Option.
+"""
+
+[c017] "8. Due Care Activities"
+"""
+8. Due Care Activities. Optionee shall provide Optionor with the results of the Phase II Environmental Site Assessment being conducted by Wight & Company (‘Phase II) for the purpose of estimating the total costs of due care activities referenced in MCL 324.20107a (hereinafter referred to as “Due Care” activities) for inclusion in the Brownfield Plans as “Eligible Activities” as defined by State of Michigan’s Act 381 of 1996, as amended. It is the responsibility of the Optionee to estimate the appropriate costs for the Eligible Activities. The parties shall reasonably cooperate in the determination of the most cost effective and appropriate Due Care activities to help ensure that those costs are approvable by the appropriate governmental authorities. To this extent, the parties shall use their best efforts to obtain the maximum allowable reimbursable costs for the Eligible Activities.
+"""
+
+[c018] "8. Limitation of Liability for Unapproved Due Care Costs"
+"""
+In the event the governmental authorities do not approve all of the costs and activities necessary to achieve Due Care both during pre and post construction of the proposed federal facility, then Optionor shall be responsible for the unapproved amount not to exceed $500,000 (Five Hundred Thousand Dollars) (“Limitation of Liability”). The actual amount, up to the Limitation of Liability, shall be deducted from the Outstanding Balance due to Optionor.
+"""
+
+[c019] "9. Closing Date"
+"""
+9. Closing Date. The Closing on the Property shall be no later than 90 days after exercise of this Option by Optionee or its Developer. The Closing shall take place at the location provided in the attached Agreement for Purchase and Sale of the Property.
+"""
+
+[c020] "10. Possession"
+"""
+10. Possession. Possession of the Property shall be delivered to the Optionee or its assignee on the date of Closing, unless a different possession date is agreed to between the parties. Optionee will have an opportunity to inspect the Property and that the Property will be conveyed in “as is” condition except as otherwise provided for in the Option Agreement and the Agreement for Purchase and Sale of the Property.
+"""
+
+[c021] "11. Optionee's Right to Enter and Inspect the Property"
+"""
+11. Optionee's Right to Enter and Inspect the Property. The Optionee’s authorized or designated representatives or agents, or offerors participating in the lease procurement process of the Optionee, shall have the right during the period of this Option including any extension periods subject to the rights, interests, and uses made of the Property by the Optionor, to enter upon the Property for the purpose of inspecting same and making test borings, plans, topographical and boundary surveys, environmental assessments, and any other due diligence matters deemed reasonably prudent in connection with the contemplated use of the Property as a leasehold for Federal facilities. Optionee shall require any of said parties to maintain insurance in amounts and coverages reasonably acceptable to Optionor. Said parties shall promptly repair and restore the Property to the same condition as existed immediately prior to such entry if such entry resulted in any damage thereto. Optionee shall provide Optionor reasonable notice prior to entering the Property.
+"""
+
+[c022] "12. Government Approvals"
+"""
+12.__ Government Approvals. Optionor and Optionee acknowledge that the Property requires governmental approvals for Optionee’s intended use which may include, but not be limited to: governmental approvals of what is known as a Brownfield Plan (“BP”); street vacations; utility relocation; rezoning; site plan approval; special use permit; and variances. Optionor shall be responsible, at Optionor’s expense, for acquiring the necessary governmental approvals to affect vacations of Sixth Street and Abbott Street, and any zoning variances.
+"""
+
+[c023] "12. Street Vacation Process"
+"""
+Immediately upon the effective date of this Option, Optionor shall commence the process of vacating Sixth Street and Abbott Street and removing any encumbrances to title objected to by Optionee. Optionor shall make application with the City of Detroit within thirty (30) days of the effective date of this Option for said street vacations. The parties shall as soon as practical determine whether any land must be acquired at a cost to the parties to relocate or construct any other public roads. In the event that said costs will be required and the parties cannot agree to the allocation of those costs within sixty (60) days of a final determination of those costs, then Optionee may terminate this Option.
+"""
+
+[c024] "12. Traffic Study"
+"""
+In the event that the City of Detroit requires Optionor to retain a certified traffic consultant to prepare a traffic engineering study as part of its required submittal to affect the City of Detroit's approval for those street vacations described above, then Optionor shall cause the preparation of such a study to occur. Optionor shall bear all costs for any traffic studies necessary to obtain the vacation of Sixth Street and Abbott Street and/or dedication of alternative public right of ways, except that in the event Developer does not execute the Purchase and Sale Agreement identified in the Option and purchase the Site, then Optionee will use its best efforts to secure funds to reimburse Optionor for reasonable documented expenses to obtain such traffic studies (attorney's fees excluded), in an amount not to exceed $50,000.
+"""
+
+[c025] "12. Optionor's Support and Consent for Approvals"
+"""
+Optionor agrees to provide its support and written consent when required so as to allow Optionee the ability to seek and obtain any and all necessary governmental approvals prior to closing. Prior to closing on the Property, Optionor shall consult with Optionee and shall obtain Optionee’s written approval when Optionor is obtaining any governmental approvals on the Optionee’s behalf that affect the Property.
+"""
+
+[c026] "12. Drafting the Brownfield Plan"
+"""
+Immediately upon execution of the Option, Optionor shall commence drafting the Brownfield Plan and other documents required by the governmental! authorities with the cooperation and assistance of Optionee. Optionee shall determine and supply the list of “Eligible Activities” with the assistance of the Optionor, and their estimated costs associated for the Eligible Activities that Optionee desires to include in the Brownfield Plan. The costs, while estimated, must be reasonable and necessary to affect Optionee’s intended use.
+"""
+
+[c027] "12. Approval of Brownfield Plans"
+"""
+Optionor shall submit all draft Brownfield Plans to Optionee for written approval prior to their submittal to the City of Detroit and/or the State of Michigan. After Optionee has provided such written approval, Optionor shall take all steps necessary to obtain approval of the Brownfield Plan for the project prior to Optionee by no later than December 1, 2006. This deadline may be extended by the Optionor for four (4) additional thirty (30) day periods so long as the delays are not caused by the Optionor.
+"""
+
+[c028] "12. Reduced Eligible Activity Costs"
+"""
+In the event that the City of Detroit approves an amount less than the agreed upon costs for Eligible Activities, that amount (up to the Limitation of Liability) shall be deducted from the Outstanding Balance. In no event shall the Optionor be responsible for the failure of Optionee or Developer to comply with the Brownfield process or for any shortfalls in anticipated reimbursement due to the fault of either Optionee or its Developer. Any costs or expenses which may or will be reimbursed pursuant to State of Michigan’s Act 381 shall be the responsibility of Optionee or its Developer.
+"""
+
+[c029] "12. Retention of Outstanding Balance Pending Approval"
+"""
+In the event that the Brownfield Plan has not been approved prior to Closing, the Outstanding Balance shall be retained by Optionee until such time as the necessary governmental approvals are obtained.
+"""
+
+[c030] "13. Assignment; Disclosure"
+"""
+13. Assignment; Disclosure. This Option may be assigned by the Optionee, without the consent of the Optionor. The Optionee shall provide the Optionor with a copy of the fully executed assignment instrument prior to any closing of sale under this Option and a copy of Exhibit 1, executed by the Developer. This Option shall be subject to further assignment only with the prior written consent of the original Optionee. The Optionee shall’ make any and all evaluations it deems necessary in it sole discretion as to the financial ability or condition of the Developer to proceed with a project for the construction and lease of Federal office and related facilities contemplated for the Property.
+"""
+
+[c031] "Paragraph 14 — Failure to Exercise Option"
+"""
+14. Failure to Exercise Option. If Optionee elects not to exercise the rights, option, or fee simple interests granted herein and to complete the purchase within the time and in the manner provided herein, then this Option shall terminate without further action or obligation on the part of either party.
+"""
+
+[c032] "15. Parties"
+"""
+15. Parties. Nothing contained in this Option shall constitute the parties hereto as partners with one another or agents for one another, As the context may indicate, any term used herein shall include the singular, plural, ferninine, masculine or neuter gender, as the case may be. The words “herein”, “hereunder” and “hereof” and other equivalent words refer to this Option as an entirety and not solely to the particular portion I which such word is used, except if otherwise expressly limited.
+"""
+
+[c033] "16. Additional Documents"
+"""
+16. Additional Documents. Optionee and the Optionor shall each execute and deliver any other additional instruments and documents, and do all acts as may be necessary to implement and effectuate the intent of this Option and to carry out the general purpose of the Option; and each shall upon the request of the other, join in any instrument or document in recordable form as may be necessary to release rights hereunder should this Option terminate or otherwise, to correct the public records. All such documents shall be in the form and substance satisfactory to the parties and their respective counsel.
+"""
+
+[c034] "17. Counterparts"
+"""
+17. Counterparts. This Option may be executed in any number of counterparts, any one of which shall be considered an original, and all of which, taken together shall be deemed to be one original.
+"""
+
+[c035] "18. Prior Agreements"
+"""
+18. Prior Agreements. The parties agree and acknowledge that this Option cancels and supersedes all prior agreements, whether written, oral, or both; is entire in itself; and that this Option, Exhibit 1, and a Memorandum of Option (Exhibit 3) executed on the same date as this Option are the only agreements between the parties hereto respecting the Option and the Property; that all agreements and undertakings between the parties are embodied in this Option and Exhibit 1. No promises, covenants, or representations of any kind, other than those expressly contained herein or in Exhibit 1, have been made to induce any party hereto to enter into this Option. This Option may be amended only by written instrument executed by Optionee and Optionor.
+"""
+
+[c036] "19. Disputes"
+"""
+19. Disputes. This contract is subject to the Contract Disputes Act of 1978 (41 U.S.C. sections 601-613) (‘Act’). Except as provided in the Act, all disputes arising under or relating to this Option shall be resolved under this Act. The Contracting Officer for purposes of this Option shall be Mr. Forrest Hudson, General Services Administration, Region 5, Office of Property Development.
+"""
+
+[c037] "Paragraph 20 — Notices"
+"""
+20. Notices. All notices or communications required under this Option or which either party desires to give to the other shall be sent by certified or registered, return receipt requested, postage prepaid, United States mail, personal delivery, or recognized, private, overnight courier which maintains evidence of delivery and in the case of a notice or communication to the Optionee, is addressed as follows: General Services Administration, Attn: Mr. Forrest Hudson, Office of Property Development, 230 S.-Dearborn Street, Suite 3600, Chicago, Illinois, 60604; and in the case of a notice or communication to the Optionor, is addressed as follows; Mr. Sam Danou, 1200 6" Street LLC, 16630 Southfield Road, Allen Park, MI, 48101, or is addressed in such other way as the parties may from time to time direct by written notice to the other. Notices shall be deemed to have been received on the second (2"°) business day after they are deposited in the United States mail as provided above and one (1) business day after deposit with a recognized, private overnight courier as provided above.
+"""
+
+[c038] "21. Time of the Essence"
+"""
+21. Time of the Essence. Optionor and Optionee mutually agree that time is of the essence throughout the term of this Agreement and every provision hereof in which time is an element. No extension of time for performance of any obligations or acts shall be deemed an extension of time for performance of any other obligations or acts. If any date for performance of any terms, conditions or provisions hereof shall fall on a Saturday, Sunday, or legal holiday, then the time of such performance shall be extended to the next business day thereafter.
+"""
+
+[c039] "22. Authority of Optionor"
+"""
+22. Authority of Optionor. Concurrently with the execution of this Option, Optionor shall furnish to the Optionee a certified copy of the resolution, or if the Optionor is a general or limited partnership, the written approval of the general partner(s) authorizing the Optionor to consummate this transaction together with a certified copy of the partnership or limited partnership agreement. The Optionor shall further provide such other instruments as the Optionee shall deem appropriate in its reasonable judgment to evidence the authority of the Optionor to consummate this transaction.
+"""
+
+[c040] "Exhibit 3, Memorandum - Preamble"
+"""
+This Memorandum of Real Estate Option Agreement (Memorandum of Option Agreement”) is made and entered into the 1% day of August 2006 (“Effective Date”), by and between 1200 6™ Street LLC,(Optionor”), a Limited Liability Company, whose address is 16630 Southfield Road, Allen Park, Michigan, 48101 and the United States of America, acting by and through the U.S. General Services Administration (‘Optionee”) whose address is 230 S, Dearborn Street, Suite 3600, Chicago, Illinois, 60604.
+"""
+
+[c041] "Exhibit 3, 1. Grant of Option"
+"""
+1. Grant of Option. In accordance with the Real Estate Option Agreement between the Optionor and Optionee dated August 1, 2006, Optionor granted to the Optionee the exclusive and irrevocable option (‘Option’) to purchase certain real property situated in the City of Detroit, County of Wayne, State of Michigan containing 10.89 acres which is commonly known as 1200 6" Street (“Property”) and is more particularly described in Attachment A attached hereto and made a part hereof, together with all improvements, easements,.and appurtenances to the Property for the price and within the time specified in this Option. This Option is fully assignable at any time prior to closing to Optionee’s developer (“Developer”).
+"""
+
+[c042] "Exhibit 3, 2. Term of Option"
+"""
+2. Term of Option. This Option shall continue in effect for a period of not less than one (1) year from the Effective Date of this Option and may be exercised in accordance with its terms at any time on or before its expiration inclusive of any extension period provided for herein, by serving written notice on the Optionor in the manner prescribed in Section 20 of the Real Estate Option Agreement. The giving of such notice shall result in Exhibit 1 of the Real Estate Option Agreement becoming a binding contract of purchase and sale between the parties, effective on the date of the receipt of notice of exercise of the Option as provided in said Section 20. The Option may be extended at the election of Optionee for an additional thirty (30) days by giving notice as provided in Section 20 of the Real Estate Option Agreement.
+"""
+
+[c043] "Exhibit 3, 3. Purpose of Memorandum of Option Agreement"
+"""
+3. PURPOSE OF MEMORANDUM OF OPTION AGREEMENT. This Memorandum of Real Estate Option Agreement is prepared for the purpose of recording to give public notice that the Optionee or its assignee has the right to purchase the Property.
+"""
+
+Return one judgment for every provision id listed here, in this order, and
+nothing else.

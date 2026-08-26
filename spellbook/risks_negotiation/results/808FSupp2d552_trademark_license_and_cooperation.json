@@ -1,0 +1,3166 @@
+{
+  "contract_id": "808FSupp2d552_trademark_license_and_cooperation",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 68,
+  "n_issues": 95,
+  "n_located": 81,
+  "n_judged": 59,
+  "n_skipped": 36,
+  "counts": {
+    "cat1": 16,
+    "cat2": 2,
+    "none": 41
+  },
+  "parties": {
+    "licensee_peter_morton": {
+      "n_issues": 45,
+      "n_located": 36,
+      "by_tab": {
+        "risks_negotiation": 18,
+        "proofread": 27
+      },
+      "by_kind": {
+        "Important": 5,
+        "Notable": 8,
+        "Minor": 5,
+        "Internal Annotations": 17,
+        "Templated Content": 2,
+        "Section References": 1,
+        "Definitions": 7
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "One-Sided Indemnification",
+          "description": "Section 7  provides only a one-way indemnification from Licensee (Morton) to Licensor. There is no reciprocal indemnification from Licensor to Licensee — for example, for breaches of Licensor's representations regarding ownership of the marks, or for third-party IP claims arising from the marks themselves. Morton should insist on mutual indemnification, particularly given that Licensor warrants it owns the licensed rights.",
+          "revision": "Licensee hereby indemnifies LicensorEach party (the \"Indemnifying Party\") hereby indemnifies the other party (the \"Indemnified Party\") and undertakes to defend Licensorthe Indemnified Party against, and",
+          "comment": "We revised this provision to reflect mutual indemnification obligations, consistent with market practice where each party bears responsibility for its own representations — including Licensor's warranty of ownership over the licensed marks.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25256,
+            "end_char": 25339,
+            "start_line": 470,
+            "end_line": 470,
+            "match_cover": 0.36,
+            "match_run": 4,
+            "matched_text": "Licensee hereby indemnifies Licensor and undertakes to defend Licensor against, and",
+            "clause": {
+              "clause_id": "neg38",
+              "label": "NEGATIVE",
+              "clause_name": "7. INDEMNIFICATION"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue concerns commercial asymmetry and the absence of reciprocal indemnification, not ambiguity, mechanical error, or conflict within the agreement."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Perpetual Non-Attack Obligation",
+          "description": "Section 3(b)  requires Licensee to agree \"during the Term of this Agreement or thereafter, never to attack\" Licensor's rights in the marks. Since the license is perpetual, this non-attack clause binds Morton forever. Morton should negotiate a carve-out allowing challenges in the event Licensor materially breaches the agreement or the marks are found to have been fraudulently registered.",
+          "revision": "... of this Agreement or thereafter (except in connection with a material breach by Licensor of this Agreement), never to attack or ...",
+          "comment": "A perpetual, unconditional non-attack obligation with no carve-out for material breach by Licensor is commercially unreasonable; we've limited the restriction to circumstances where Licensor is itself performing its obligations under the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 30344,
+            "end_char": 31109,
+            "start_line": 560,
+            "end_line": 568,
+            "match_cover": 0.571,
+            "match_run": 4,
+            "matched_text": "of this Agreement by Licensee or any assignee or sublicensee of Licensee. Accordingly, the parties hereto agree that Licensor shall be entitled to obtain from a court of competent jurisdiction an injunction or restraining order or obtain a decree for specific performance of the terms of this Agreeme",
+            "clause": {
+              "clause_id": "neg45",
+              "label": "NEGATIVE",
+              "clause_name": "11(a). Injunctive Relief"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The perpetual non-attack obligation is substantively broad but textually clear; the absence of requested carve-outs is a negotiation issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Arbitration Costs Not Shifted to Losing Party",
+          "description": "Section 5(a)  requires arbitration fees and costs to be \"shared equally by the parties.\" This means Morton bears half the costs even if he prevails. Morton should negotiate for the arbitrator to have discretion to award costs to the prevailing party, or at minimum shift fees to the non-prevailing party.",
+          "revision": "... of the American Arbitration Association with all fees and costs to be allocated by the arbitrator(s), who shall have the discretion to award fees and costs to the prevailing party. The arbitration",
+          "comment": "We revised the cost allocation provision to grant the arbitrator discretion over fees and costs, which is standard practice and ensures the prevailing party is not penalized by mandatory equal cost-sharing.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21005,
+            "end_char": 21703,
+            "start_line": 401,
+            "end_line": 411,
+            "match_cover": 0.788,
+            "match_run": 12,
+            "matched_text": "of the American Arbitration Association with all fees and costs to be shared equally by the parties to the arbitration. The arbitration forum shall alternate between California and New York with the first arbitration, if any, to take place in New York. (b) The arbitrator(s) shall have the power to a",
+            "clause": {
+              "clause_id": "neg33",
+              "label": "NEGATIVE",
+              "clause_name": "5(b). Arbitrator powers"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Equal sharing of arbitration fees and costs is unambiguous, and the absence of prevailing-party cost shifting creates no construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Injunctive Relief Without Bond Primarily Favors Licensor",
+          "description": "Section 11(a)  provides that Licensor can obtain injunctive relief \"without bond\" for any breach by Licensee. While the clause does grant Morton reciprocal injunctive relief for Licensor's breach of the Nevada exclusivity, the \"without bond\" waiver should apply equally. More importantly, the general injunctive relief entitlement covers any breach by Licensee but only a narrow breach by Licensor. Morton should seek broader reciprocal injunctive relief rights — for example, covering breaches of the exclusivity of Morton's license in the Morton Territories.",
+          "revision": "... applicable and appropriate, without bond. Further, in the event of a breach by Licensor of the prohibition in clause 3(a) that Licensor shall not, directly or indirectly, own, operate, manage, sublicense or franchise a Hard Rock",
+          "comment": "We revised this clause to ensure that the 'without bond' entitlement and the scope of injunctive relief are reciprocal; where Licensor can seek injunctive relief for any breach by Licensee, Licensee should have equivalent rights for material breaches by Licensor, including violations of the territorial exclusivity granted under clause 3(a), which is a core commercial protection.",
+          "group_size": 1,
+          "location": {
+            "start_char": 30651,
+            "end_char": 30879,
+            "start_line": 563,
+            "end_line": 565,
+            "match_cover": 1.0,
+            "match_run": 37,
+            "matched_text": "applicable and appropriate, without bond. Further, in the event of a breach by Licensor of the prohibition in clause 3(a) that Licensor shall not, directly or indirectly, own, operate, manage, sublicense or franchise a Hard Rock",
+            "clause": {
+              "clause_id": "neg45",
+              "label": "NEGATIVE",
+              "clause_name": "11(a). Injunctive Relief"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The differing scope of the parties' injunctive-relief rights is explicit rather than ambiguous or internally contradictory."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Licensor Has Full Control of Joint Proceedings",
+          "description": "Section 6(d)  provides that \"Licensor will always have full control of any joint proceedings\" while costs are \"borne equally.\" Morton shares costs equally but has no control over the proceedings. Morton should have consent rights over any settlement that could adversely affect his rights in the Morton Territories.",
+          "revision": "control of any joint proceedings, provided that Licensor shall not settle any such proceeding in a manner that materially adversely affects Licensee's rights under this Agreement without Licensee's prior written consent, and the cost thereof will ...",
+          "comment": "Where costs are shared equally, it is commercially reasonable that Licensee retain veto rights over any settlement that would materially and adversely affect its licensed rights; this aligns with standard joint enforcement frameworks under New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 24852,
+            "end_char": 24910,
+            "start_line": 461,
+            "end_line": 461,
+            "match_cover": 0.278,
+            "match_run": 5,
+            "matched_text": "control of any joint proceedings and the cost thereof will",
+            "clause": {
+              "clause_id": "neg37",
+              "label": "NEGATIVE",
+              "clause_name": "6(d). Notice of infringement and enforcement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Licensor's control of joint proceedings and equal cost sharing are clearly stated; the absence of Licensee consent rights is a commercial concern only."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "All Goodwill Inures Solely to Licensor",
+          "description": "Section 3(c)  provides that all goodwill generated by Licensee's use of the marks \"inures to the sole benefit of Licensor.\" Given this is a perpetual, royalty-free license where Morton is actively building brand value, the clause should be narrowed to clarify that only goodwill in the marks themselves (not in Morton's business operations generally) inures to Licensor.",
+          "revision": "... Marks and all associated goodwill in the Hard Rock Hotel Marks and the Hard Rock Casino Marks generated thereby, inures to the ...",
+          "comment": "We clarified that only goodwill in the Hard Rock Hotel Marks and Hard Rock Casino Marks inures to Licensor, since a blanket goodwill assignment extending beyond the licensed marks themselves is commercially unreasonable and inconsistent with standard trademark licensing practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 16343,
+            "end_char": 16613,
+            "start_line": 326,
+            "end_line": 332,
+            "match_cover": 0.864,
+            "match_run": 12,
+            "matched_text": "Marks and all associated goodwill generated thereby, inures to the sole benefit of Licensor in accordance with its rights in the Hard Rock Hotel Marks and the Hard Rock Casino Marks. (d) Licensee agrees not to use any word, words, term or terms in conjunction with the",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "3(c). Goodwill inures to Licensor"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “all associated goodwill generated thereby” can reasonably raise a scope question as to whether it covers only goodwill in the licensed marks or broader goodwill generated by Licensee's operations."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Qualified Ownership Representation",
+          "description": "Section 2(a)  contains Licensor's representation that it owns the licensed rights, but qualifies this \"subject only to whatever actions or inactions may have been taken or not taken by Morton regarding ownership of the rights.\" This qualification is vague and could undermine the value of the warranty — if there is a defect in the marks' ownership, Licensor can point to Morton's prior actions as a carve-out. Morton should request that this qualifier be either removed or narrowed to specific, identified matters.",
+          "revision": "... by Licensor subject only to whatever actions or inactions may have been taken or notthe matters set forth on Schedule [__] regarding ownership of the rights in the Hard Rock Hotel Marks or Hard Rock",
+          "comment": "The original qualifier was insufficiently definite to provide meaningful warranty protection — we replaced it with a schedule of identified matters so both parties have clear notice of any known ownership exceptions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8659,
+            "end_char": 8835,
+            "start_line": 201,
+            "end_line": 202,
+            "match_cover": 0.824,
+            "match_run": 14,
+            "matched_text": "by Licensor subject only to whatever actions or inactions may have been taken or not taken by Morton regarding ownership of the rights in the Hard Rock Hotel Marks or Hard Rock",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2(a) — Grant of Licensed Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The qualifier “whatever actions or inactions may have been taken or not taken by Morton” is indefinite as to which conduct and ownership defects fall within the exception."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "First Offer Right Triggered Too Broadly",
+          "description": "Section 9(c)  requires Morton to negotiate in good faith with Licensor before pursuing any \"sale, assignment, or conveyance of all or substantially all of his assets and/or rights\" related to the marks. The trigger is broad — \"all or substantially all\" of \"assets and/or rights\" could capture internal reorganizations, transfers to affiliates, or estate planning transfers. Morton should carve out transfers to affiliates, family members, or trusts for estate planning purposes.",
+          "revision": "... proposes to initiate the sale, assignment, or conveyance of all or substantially all of his assets and/or rights in connection",
+          "comment": "We narrowed the first offer right trigger to exclude transfers to affiliates, family members, or trusts for estate planning purposes, as these transactions do not represent a commercial disposition that warrants Licensor's right of first negotiation under market practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 28500,
+            "end_char": 28626,
+            "start_line": 531,
+            "end_line": 532,
+            "match_cover": 1.0,
+            "match_run": 21,
+            "matched_text": "proposes to initiate the sale, assignment, or conveyance of all or substantially all of his assets and/or rights in connection",
+            "clause": {
+              "clause_id": "neg44",
+              "label": "NEGATIVE",
+              "clause_name": "9(c). First Offer Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The trigger “all or substantially all of his assets and/or rights in connection with” has uncertain boundaries, particularly regarding reorganizations and partial or affiliated transfers."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Broad Prohibition on Internet Merchandise Sales",
+          "description": "Section 2(b)(v)  restricts Internet-sold Licensed Products to bearing only the \"Internet address as the Licensed Products' location\" and prohibits cross-selling between Internet and retail channels. This rigid separation of Internet and retail merchandise could limit Morton's business flexibility and revenue potential as e-commerce grows. Morton should seek to relax this restriction or add a mechanism for the parties to revisit it periodically.",
+          "revision": "... through the Internet that bear the Internet address as the Licensed Products' location, and may also sell through the Internet Licensed Products bearing the geographic location of the applicable Hard Rock Hotel/Casino or Hard Rock Casino. Licensed Products sold through",
+          "comment": "We revised this provision to permit online sales of location-branded merchandise, reflecting the commercial reality that e-commerce and retail channels are increasingly integrated and that an absolute cross-channel prohibition would unnecessarily limit Licensee's ability to serve customers online.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10595,
+            "end_char": 11317,
+            "start_line": 230,
+            "end_line": 241,
+            "match_cover": 0.415,
+            "match_run": 8,
+            "matched_text": "the Hard Rock Casino Marks in the Morton Territories, then Licensor shall permit Licensee to prepare the necessary documentation to effectuate such registrations or otherwise protect Licensor’s trademark rights and execute such documentation at Licensee’s request to enable Licensee to make the filin",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iv). Sale locations for Licensed Products"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Internet-merchandise restrictions and channel separation are express and coherent; the issue concerns commercial flexibility rather than construction."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Licensor Best Efforts Standard May Be Insufficient",
+          "description": "Section 2(b)(iii)  requires Licensor to use \"best efforts\" to maintain and protect trademark registrations. While \"best efforts\" is a high standard (favorable to Morton), the clause only triggers Licensee's fallback right to file on Licensor's behalf if Licensor's failure \"would be reasonably likely to affect\" the marks in the Morton Territories . This qualifying language could create disputes about the threshold. Consider changing to \"could reasonably be expected to affect\" for a lower, more protective threshold.",
+          "revision": "do so and the failure would be reasonably likelycould reasonably be expected to affect the Hard Rock ...",
+          "comment": "We lowered the triggering threshold to 'could reasonably be expected to affect' to provide a more protective and commercially reasonable standard, reducing the risk of protracted disputes over whether Licensor's failure has risen to a sufficiently certain level of harm.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10503,
+            "end_char": 10575,
+            "start_line": 229,
+            "end_line": 229,
+            "match_cover": 0.765,
+            "match_run": 8,
+            "matched_text": "do so and the failure would be reasonably likely to affect the Hard Rock",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iii). Registration rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “would be reasonably likely to affect” leaves a fact-sensitive threshold for when Licensee's step-in right arises and therefore presents some vagueness risk."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Notice Address Mismatch — Licensor Entity",
+          "description": "Section 12  directs notices for Licensor to \"Hard Rock Cafe International (DEL), Inc.\" rather than the contracting party \"Rank Licensing, Inc.\" While these may be related entities, this mismatch could create issues about whether notice was properly given to the Licensor under the agreement. Morton should request clarification or confirmation that notice to Hard Rock Cafe International (DEL), Inc. constitutes effective notice to Rank Licensing, Inc.",
+          "revision": "In the case of Licensor: Rank Licensing, Inc. c/o Hard Rock Cafe International (DEL), ...",
+          "comment": "We revised the notice address to align with the contracting party, Rank Licensing, Inc., to ensure effective notice under the agreement; Hard Rock Cafe International (DEL), Inc. is retained as the care-of address to reflect the operational relationship.",
+          "group_size": 1,
+          "location": {
+            "start_char": 32456,
+            "end_char": 32514,
+            "start_line": 591,
+            "end_line": 591,
+            "match_cover": 0.667,
+            "match_run": 5,
+            "matched_text": "In the case of Licensor: Hard Rock Cafe International (DEL",
+            "clause": {
+              "clause_id": "neg47",
+              "label": "NEGATIVE",
+              "clause_name": "12. NOTICES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 12 directs notices for “Licensor” to Hard Rock Cafe International (DEL), Inc., while Section 1(n) identifies Rank Licensing, Inc. as Licensor, creating an internal entity mismatch."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Mail Order Prohibition Overly Restrictive",
+          "description": "Section 2(b)(iv)  prohibits Licensee from selling Licensed Products \"through mail order.\" This blanket prohibition prevents Morton from using catalog or direct-mail sales channels, which could unnecessarily limit revenue opportunities, especially given that Internet sales are already permitted under Section 2(b)(v).",
+          "revision": "... Licensed Products through mail order, except in connection with mailings to guests or customers of a Hard Rock Hotel/Casino or Hard Rock Casino.",
+          "comment": "A blanket prohibition on all mail order sales is disproportionately restrictive where Internet sales are already permitted; we limited the carve-out to mailings directed at Hard Rock Hotel/Casino guests and customers, which aligns the restriction with the licensor's legitimate brand control interests.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11013,
+            "end_char": 11160,
+            "start_line": 237,
+            "end_line": 239,
+            "match_cover": 0.542,
+            "match_run": 9,
+            "matched_text": "Licensed Products shall be sold by Licensee only in a retail establishment located in or contiguous to a Hard Rock Hotel/Casino or Hard Rock Casino",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iv). Sale locations for Licensed Products"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The mail-order prohibition is explicit; its restrictiveness and lack of a requested exception are negotiation issues."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Licensee's Injunctive Relief Limited to Nevada Exclusivity",
+          "description": "Section 11(a)  grants Licensee injunctive relief only for Licensor's breach of the Nevada hotel prohibition in clause 3(a). However, Morton's exclusive license in the entire Morton Territories is equally critical. If Licensor were to license or operate competing Hard Rock Hotel/Casinos within the Morton Territories in breach of Section 2(a)'s exclusivity, Morton should also be entitled to injunctive relief. The clause should be expanded to cover breaches of the exclusivity grant.",
+          "revision": "... breach by Licensor of the exclusive license granted in clause 2(a) or the prohibition in clause 3(a) that ...",
+          "comment": "We broadened the injunctive relief provision to include breaches of the exclusive license in Section 2(a), as monetary damages would be inadequate to remedy the harm from a competing Hard Rock Hotel/Casino operating within Morton's exclusive territories.",
+          "group_size": 1,
+          "location": {
+            "start_char": 30720,
+            "end_char": 30777,
+            "start_line": 564,
+            "end_line": 564,
+            "match_cover": 0.55,
+            "match_run": 7,
+            "matched_text": "breach by Licensor of the prohibition in clause 3(a) that",
+            "clause": {
+              "clause_id": "neg45",
+              "label": "NEGATIVE",
+              "clause_name": "11(a). Injunctive Relief"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 11(a)'s express Nevada remedy does not state that it is Licensee's exclusive remedy, and the issue merely seeks broader express protection."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Duplicate \"operation\" in Grant Clause",
+          "description": "Section 2(a)  contains \"development, operation, ownership, management, operation of and promotion\" — the word \"operation\" appears twice. This appears to be a drafting error.",
+          "revision": "development, operation, ownership, management, operation of and promotion ofHotel/Casinos and Hard Rock Casinos. Licensee shall not use or exploit the Hard Rock Hotel",
+          "comment": "Removed duplicate instance of 'operation' in the grant clause to correct a drafting error and ensure clean, unambiguous language.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8124,
+            "end_char": 8301,
+            "start_line": 195,
+            "end_line": 196,
+            "match_cover": 0.958,
+            "match_run": 15,
+            "matched_text": "development, operation, ownership, management, operation of and promotion of Hard Rock Hotel/Casinos and Hard Rock Casinos. Licensee shall not use or exploit the Hard Rock Hotel",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2(a) — Grant of Licensed Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Although “operation” is duplicated, the repetition does not materially change or obscure the meaning of the permitted-activity list."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Licensor's Standalone Merchandise Restriction Too Narrow",
+          "description": "Section 2(b)(iv)  restricts Licensor from opening standalone merchandise outlets only \"where there is both a Hard Rock Hotel/Casino or Hard Rock Casino and a Hard Rock Cafe restaurant.\" This means Licensor can open standalone merchandise outlets in Morton's Territories wherever there is a Hard Rock Hotel/Casino but no Hard Rock Cafe. Morton should seek a broader restriction preventing Licensor from opening any standalone merchandise outlets in the Morton Territories, not just where both facilities coexist.",
+          "revision": "... Morton's Territories where there is both a Hard Rock",
+          "comment": "We expanded the restriction to prevent Licensor from opening standalone merchandise outlets wherever any Hard Rock facility exists in Morton's Territories, as the prior formulation created an unintended carve-out that would undermine the exclusivity protections negotiated for Licensee.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11399,
+            "end_char": 11442,
+            "start_line": 242,
+            "end_line": 242,
+            "match_cover": 0.889,
+            "match_run": 8,
+            "matched_text": "Territories where there is both a Hard Rock",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iv). Sale locations for Licensed Products"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The condition requiring both specified facilities is textually clear; the resulting commercial carve-out is not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Exhibit E Designations Subject to Permanent Cessation",
+          "description": "Section 2(b)(viii)  requires that after 18 months, Licensee \"shall forever cease displaying such designations or selling such merchandise\" for the Exhibit E items. The word \"forever\" combined with \"without the express written consent of Licensor\" gives Licensor significant leverage. Morton should negotiate for the ability to continue using Exhibit E designations with Licensor's consent (not to be unreasonably withheld), or extend the sunset period.",
+          "revision": "... express written consent of Licensor (which shall not be unreasonably withheld), Licensee shall forever cease ...",
+          "comment": "We revised the consent condition to require that Licensor not unreasonably withhold approval, consistent with standard commercial practice and New York's implied covenant of good faith and fair dealing.",
+          "group_size": 1,
+          "location": {
+            "start_char": 12827,
+            "end_char": 12969,
+            "start_line": 269,
+            "end_line": 272,
+            "match_cover": 0.6,
+            "match_run": 5,
+            "matched_text": "express written consent of Licensor, Licensee shall not replace the word \"Hotel\" or \"Casino\" with any other designation. (vii) Licensee shall",
+            "clause": {
+              "clause_id": "neg20",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(vi). Logo usage"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision clearly requires cessation after 18 months unless Licensor gives express written consent; “forever” is broad but not ambiguous in this context."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Notice Provision for Email or Electronic Communication",
+          "description": "Section 12  limits permitted notice methods to hand-delivery, certified/registered mail, telecopier, or air courier. There is no provision for email or other modern electronic communication methods. While this may have been standard in 1996, Morton should consider updating the notice provisions to include email as a permitted method of notice, especially for time-sensitive communications.",
+          "revision": "... prepaid, return receipt requested, telecopier, electronic mail, or air courier to the ...",
+          "comment": "We included electronic mail as an accepted notice method to reflect modern commercial practice and ensure timely delivery of notices, particularly for time-sensitive matters.",
+          "group_size": 1,
+          "location": {
+            "start_char": 32143,
+            "end_char": 32211,
+            "start_line": 585,
+            "end_line": 585,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "prepaid, return receipt requested, telecopier, or air courier to the",
+            "clause": {
+              "clause_id": "neg47",
+              "label": "NEGATIVE",
+              "clause_name": "12. NOTICES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The omission of email as an authorized notice method is a modernization or negotiation concern, not a textual ambiguity or internal conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "\"Best Efforts\" Standard for Trademark Protection Is Mutual",
+          "description": "Section 6(a)  requires both Licensor and Licensee to use \"best efforts\" to protect the marks. Under New York law, \"best efforts\" is the highest standard of performance obligation. While this is favorable in binding Licensor, it imposes an equally high burden on Morton. Consider changing to \"commercially reasonable efforts\" for the Licensee's obligation while retaining \"best efforts\" for Licensor.",
+          "revision": "(a) Licensor agrees to use its best efforts, and Licensee agrees to use their bestcommercially reasonable efforts, to protect the Hard",
+          "comment": "We revised Licensee's standard to 'commercially reasonable efforts' to reflect the well-established New York distinction between these standards; retaining 'best efforts' for Licensor ensures strong trademark protection obligations on the licensing side while applying a commercially appropriate standard for Licensee.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22812,
+            "end_char": 22888,
+            "start_line": 433,
+            "end_line": 433,
+            "match_cover": 0.571,
+            "match_run": 5,
+            "matched_text": "a) Licensor and Licensee agree to use their best efforts to protect the Hard",
+            "clause": {
+              "clause_id": "pos7",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 6(a) — Best Efforts to Protect the Marks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Best efforts” is a context-dependent performance standard whose precise required level of effort may require judicial construction."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier on title page",
+          "description": "The title page  contains an internal document version identifier \"(200D7C58.V 1)\" that appears to be a file tracking code used during drafting. This should be removed before finalization to avoid exposing internal document management systems.",
+          "revision": "(200D7C58.V 1)",
+          "comment": "Removed internal document version tracking code from the title page to avoid exposing internal file management metadata in the executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 135,
+            "end_char": 147,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V 1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier after Table of Contents",
+          "description": "A document version identifier \"(200D7C58.V1J)\" appears at the bottom of the Table of Contents section . This is an internal tracking code that should be removed.",
+          "revision": "(200D7C58.V1J) -1-",
+          "comment": "Removed internal document version tracking code that is not appropriate for the final executed version of the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1607,
+            "end_char": 1623,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in exhibit list",
+          "description": "The exhibit list section  contains the internal version identifier \"(200D7C58.V 15)\" which should be removed before finalization.",
+          "revision": "(200D7C58.V 15)",
+          "comment": "Removed internal version identifier from the exhibit list to ensure the finalized document does not contain draft tracking metadata.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1679,
+            "end_char": 1692,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V 15",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier at page break",
+          "description": "The Definitions section contains a version identifier \"(200D7C58.V 1)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V 1) -|-",
+          "comment": "Removed internal document version tracking code that is not appropriate for the finalized agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 135,
+            "end_char": 147,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V 1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Malformed page reference backslash-one",
+          "description": "Found: \"\\1\" — Backslash-one appears to be corrupted page reference artifact in table of contents.",
+          "revision": "",
+          "comment": "Insert the page number where the Noncontravention section begins.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Corrupted definition page reference",
+          "description": "Found: \"Ce ek te ee\" — Garbled text in definitions list suggests OCR error or corrupted page reference.",
+          "revision": "",
+          "comment": "Insert the full legal name or identifying label for this section header.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Grant section",
+          "description": "The Grant section contains a version identifier \"(200D7C58.V1J)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V1J) -2-",
+          "comment": "Removed internal document version identifier from the Grant section; this tracking code is not intended to appear in the final executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7739,
+            "end_char": 7755,
+            "start_line": 186,
+            "end_line": 186,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -2",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Restrictions section",
+          "description": "The Restrictions subsection contains a version identifier \"(200D7C58. VL)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58. VL) -4-",
+          "comment": "Removed internal document version identifier and tracking code that should not appear in the final executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14960,
+            "end_char": 14976,
+            "start_line": 304,
+            "end_line": 304,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58. VL) -4",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3(a) — Reservation of All Rights Not Specifically Granted"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The version identifier is nonoperative document metadata and does not alter the meaning of any contractual provision."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Quality section",
+          "description": "The Quality section contains a version identifier \"(200D7C58.V1J)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V1J) -5-",
+          "comment": "Removed internal version tracking identifier from the document; this code is not substantive contract language and should not appear in the finalized agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 18628,
+            "end_char": 18644,
+            "start_line": 365,
+            "end_line": 365,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -5",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Arbitration section",
+          "description": "The Arbitration section contains a version identifier \"(200D7C58.V 13)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V 13) -6§-",
+          "comment": "Removed internal document version identifier from the Arbitration section; tracking codes should not appear in the executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22461,
+            "end_char": 22478,
+            "start_line": 424,
+            "end_line": 424,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "200D7C58.V 13) -6",
+            "clause": {
+              "clause_id": "pos6",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5(d) — Exclusion of Validity Disputes from Arbitration"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The version identifier is nonoperative document metadata and creates no construction issue."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Joint Cooperation section",
+          "description": "The Joint Cooperation section contains a version identifier \"(200D7C58.V1F}\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V1F} -7-",
+          "comment": "Removed internal document version tracking code that should not appear in the finalized agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25899,
+            "end_char": 25915,
+            "start_line": 483,
+            "end_line": 483,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1F} -7",
+            "clause": {
+              "clause_id": "pos8",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8(a)(1) — Promotional Cooperation, Reference to Other Party's Facilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The version tracking code is nonoperative and does not affect contractual meaning."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Term and Options section",
+          "description": "The Term and Options section contains a version identifier \"(200D7C58.V 13)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V 13) -8-",
+          "comment": "Removed internal document version identifier to clean up the final contract text.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29464,
+            "end_char": 29481,
+            "start_line": 543,
+            "end_line": 543,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "200D7C58.V 13) -8",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Notices section",
+          "description": "The Notices section contains a version identifier \"(200D7C58.V1J)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V1J) -9-",
+          "comment": "Removed internal document version tracking code from the Notices section for clean execution copy.",
+          "group_size": 1,
+          "location": {
+            "start_char": 32652,
+            "end_char": 32668,
+            "start_line": 598,
+            "end_line": 598,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -9",
+            "clause": {
+              "clause_id": "neg47",
+              "label": "NEGATIVE",
+              "clause_name": "12. NOTICES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The footer identifier is nonoperative document metadata rather than a meaning-changing mechanical defect."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid clause reference - OCR error",
+          "description": "The Table of Contents entry for Exhibit E  refers to \"Clause 2(b)(vili)\" which appears to be an OCR error or typo. The correct Roman numeral for 8 is \"viii\" not \"vili\". This should reference Section 2(b)(viii) , which covers the designations identified on Exhibit E.",
+          "revision": "Clause 2(b)(vili)2(b)(viii) designations",
+          "comment": "Corrected OCR/typographic error in Roman numeral: 'vili' changed to 'viii' to accurately reference Section 2(b)(viii).",
+          "group_size": 1,
+          "location": {
+            "start_char": 1840,
+            "end_char": 1870,
+            "start_line": 66,
+            "end_line": 66,
+            "match_cover": 0.625,
+            "match_run": 4,
+            "matched_text": "Clause 2(b)(vili) designations",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Morton Parties",
+          "description": "The term 'Morton Parties' is used in the Noncontravention section  but is never formally defined in this document. The section states that certain actions will not constitute a violation of 'any contract, agreement, indenture, lease, promissory note, license or other commitment to which any of the Morton Parties or the Rank Parties is a party or by which it is bound.' Without a clear definition, it is unclear who is included within 'Morton Parties' - whether this refers only to Peter A. Morton (the Licensee) or includes affiliated entities, related parties, or other persons associated with Morton.",
+          "revision": "(o) Morton Parties. The term \"Morton Parties\" as used herein shall mean Licensee and his affiliates, successors, and assigns.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2805,
+            "end_char": 3180,
+            "start_line": 89,
+            "end_line": 100,
+            "match_cover": 0.579,
+            "match_run": 5,
+            "matched_text": "Morton Territories (as defined below); NOW, THEREFORE, in consideration of the above recitals, and for other good and valuable consideration the receipt and sufficiency of which is hereby acknowledged, the parties hereto agree as follows: 1. DEFINITIONS. (a) Hard Rock Marks. The term \"Hard Rock Mark",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Recitals"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Morton Parties” is undefined, leaving uncertain whether Section 21 covers only Peter A. Morton or also affiliates and related persons."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Rank Parties",
+          "description": "The term 'Rank Parties' is used in the Noncontravention section  but is never formally defined in this document. The section states that certain actions will not constitute a violation of 'any contract, agreement, indenture, lease, promissory note, license or other commitment to which any of the Morton Parties or the Rank Parties is a party or by which it is bound.' Without a clear definition, it is unclear who is included within 'Rank Parties' - whether this refers only to Rank Licensing, Inc. (the Licensor) or includes affiliated entities, parent companies, or other persons associated with Rank.",
+          "revision": "(p) Rank Parties. The term \"Rank Parties\" as used herein shall mean Licensor and its affiliates, successors, and assigns.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3013,
+            "end_char": 3180,
+            "start_line": 94,
+            "end_line": 100,
+            "match_cover": 0.526,
+            "match_run": 5,
+            "matched_text": "parties hereto agree as follows: 1. DEFINITIONS. (a) Hard Rock Marks. The term \"Hard Rock Marks\" as used herein shall mean and refer to the name “Hard Rock Cafe\" and",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "1(a). Hard Rock Marks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Rank Parties” is undefined, leaving uncertain which entities or persons are covered by the noncontravention representation."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Waiver section",
+          "description": "The Waiver of Terms section contains a version identifier \"(200D7C58.V 1)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V 1) -l1-",
+          "comment": "Removed internal document version identifier and tracking code, which should not appear in the final executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 37679,
+            "end_char": 37696,
+            "start_line": 709,
+            "end_line": 709,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "200D7C58.V 1) -l1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in Amendment section",
+          "description": "The Amendment section contains a version identifier \"(200D7C58.V1J)\" at a page break . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V1J) -12-",
+          "comment": "Removed internal version tracking code to clean up the document for finalization.",
+          "group_size": 1,
+          "location": {
+            "start_char": 37899,
+            "end_char": 37916,
+            "start_line": 718,
+            "end_line": 718,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -12",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document identifier on signature page",
+          "description": "The signature page  contains an internal document identifier \"(200D8136)\" that appears to be a file tracking code. This should be removed before finalization.",
+          "revision": "(200D8136)",
+          "comment": "Removed internal file tracking code '(200D8136)' from the signature page to ensure the executed document is clean and does not contain internal administrative identifiers.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version identifier in List of Definitions",
+          "description": "The List of Definitions section contains a version identifier \"(200D7C58.V1J)\" at the bottom . This internal tracking code should be removed.",
+          "revision": "(200D7C58.V1J) ~14-",
+          "comment": "Removed internal document version tracking code that is not appropriate for inclusion in the executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 39324,
+            "end_char": 39341,
+            "start_line": 765,
+            "end_line": 765,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) ~14",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document identifier in Exhibit A",
+          "description": "Exhibit A  contains an internal document identifier \"(50063CE7)\" that appears to be a file tracking code. This should be removed before finalization.",
+          "revision": "(50063CE7)",
+          "comment": "Removed internal file tracking code \"(50063CE7)\" from Exhibit A prior to finalization, as document identifiers should not appear in executed agreements.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document identifier in Exhibit B",
+          "description": "Exhibit B  contains an internal document identifier \"(50063CE7)\" that appears to be a file tracking code. This should be removed before finalization.",
+          "revision": "(50063CE7)",
+          "comment": "Removed internal file tracking code \"(50063CE7)\" from Exhibit B prior to finalization, as it is an internal document identifier not intended for inclusion in the executed agreement.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term: License Agreement vs Agreement",
+          "description": "In the Arbitration section , the document refers to itself as 'this License Agreement,' but throughout the rest of the document, the defined term for this contract is 'Agreement' as established in the opening recital . The document should use 'Agreement' consistently when referring to itself. This inconsistency could create confusion about whether 'License Agreement' refers to this document or to some other agreement. Modify term(s) the validity of this License Agreement",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent use of Notice vs Notices",
+          "description": "In the Notices section , the term 'Notices' (plural) is formally defined as referring to 'All notices, requests, demands and other communications.' However, in , the singular form 'Notice' is used capitalized ('Such Notice shall be deemed given'). When a singular notice is referenced, it should either use the defined term 'Notices' or use lowercase 'notice' to indicate it's not invoking the defined term. Using the capitalized singular 'Notice' when only 'Notices' (plural) is defined creates inconsistency. Modify term(s) Such Notices shall be deemed given",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term: Morton's Territories vs Morton Territories",
+          "description": "The defined term established in Section 1(k)  is 'Morton Territories' (without an apostrophe). However, in , the term appears as 'Morton's Territories' (with a possessive apostrophe). This inconsistent usage deviates from the formally defined term and should be corrected to match the definition. Modify term(s) Licensor shall not open a stand alone merchandise outlet in Morton's Territories",
+          "revision": "",
+          "comment": "",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Parties",
+          "description": "Throughout the document, 'parties' is used in lowercase when referring to the parties to this Agreement (e.g., 'the parties hereto' in , , , , ). However, in the Enforceability section , 'Parties' is capitalized ('all of the Parties hereto'). Since 'Parties' is not established as a defined term in this Agreement, it should be lowercase to match the usage pattern throughout the rest of the document.",
+          "revision": "... agreements of all of the Partiesparties hereto",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 36761,
+            "end_char": 36800,
+            "start_line": 689,
+            "end_line": 689,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "agreements of all of the Parties hereto",
+            "clause": {
+              "clause_id": "neg55",
+              "label": "NEGATIVE",
+              "clause_name": "20. ENFORCEABILITY"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Capitalizing “Parties” once does not reasonably change its evident reference to the parties to the agreement."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Unused defined term: Effective Date",
+          "description": "The term 'Effective Date' is formally defined in Section 9  as 'the date first set forth above,' but this defined term is never used anywhere else in the document. The document refers to dates in other ways ('as of June 7, 1996', 'the date of this Agreement') but never uses the defined term 'Effective Date' after establishing it. Consider either using this defined term where appropriate or removing the formal definition and simply stating 'This Agreement shall commence and be effective as of the date first set forth above and shall be a license granted in perpetuity.' Remove definition (a) Term. This Agreement shall commence and be effective as of the date first set forth above (the \"Effective Date\") and shall be a license granted in perpetuity.",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        }
+      ]
+    },
+    "licensor_rank_licensing": {
+      "n_issues": 50,
+      "n_located": 45,
+      "by_tab": {
+        "risks_negotiation": 23,
+        "proofread": 27
+      },
+      "by_kind": {
+        "Important": 5,
+        "Notable": 10,
+        "Minor": 8,
+        "Internal Annotations": 19,
+        "Section References": 1,
+        "Spelling + Grammar": 1,
+        "Definitions": 6
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Perpetual License with No Termination Right",
+          "description": "Section 9(a)  grants the license \"in perpetuity\" with no termination for cause provision anywhere in the Agreement. This is extremely unfavorable to Rank Licensing — Licensor has permanently granted away the Hard Rock Hotel and Casino Marks in the Morton Territories with no ability to terminate even if Licensee materially breaches. At minimum, the perpetual term should be conditioned on ongoing compliance, with a termination right for uncured material breach.",
+          "revision": "... a license granted in perpetuity; provided, however, that Licensor shall have the right to terminate this Agreement upon written notice if Licensee commits a material breach of any obligation hereunder and fails to cure such breach within sixty (60) days after receipt of written notice from Licensor specifying the breach in reasonable detail.",
+          "comment": "A perpetual license with no termination right creates an irrevocable disposition of valuable IP with zero protection against material breach; the 60-day cure period provides Licensee ample opportunity to remedy any default before termination rights are triggered, which is consistent with standard licensing practice under New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29099,
+            "end_char": 30158,
+            "start_line": 538,
+            "end_line": 558,
+            "match_cover": 0.302,
+            "match_run": 5,
+            "matched_text": "a third party on such terms and conditions as Licensee shall determine in its sole discretion. If Licensee has not agreed to consummate a Transaction within six months of the initiation of such good faith negotiations, then, if Licensee again initiates a Transfer Proposal, Licensee will again initia",
+            "clause": {
+              "clause_id": "pos10",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 10 — Sublicense and Franchise Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The perpetual term and lack of a termination-for-cause right are clear omissions and commercial risks, not construction defects."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Unrestricted Sublicense/Franchise Rights Without Licensor Consent",
+          "description": "Section 10  grants Licensee the right to sublicense or franchise \"any or all\" rights without requiring Licensor's prior written consent or approval. This is a significant concern for Rank Licensing because it allows Morton to transfer use of the Hard Rock Hotel and Casino Marks to unknown third parties whose operations, reputation, and financial capacity Licensor cannot vet. At minimum, sublicensing and franchising should require Licensor's prior written consent, not to be unreasonably withheld.",
+          "revision": "Licensee shall have the right, subject to Licensor's prior written consent (not to be unreasonably withheld, conditioned or delayed), to sublicense or franchise any ...",
+          "comment": "Sublicensing and franchising of licensed marks to unknown third parties without Licensor's approval creates unacceptable reputational and quality control risks; we've added a consent requirement (not to be unreasonably withheld, conditioned, or delayed) to reflect standard practice in trademark licensing arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29523,
+            "end_char": 29583,
+            "start_line": 548,
+            "end_line": 548,
+            "match_cover": 0.417,
+            "match_run": 5,
+            "matched_text": "Licensee shall have the right to sublicense or franchise any",
+            "clause": {
+              "clause_id": "pos10",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 10 — Sublicense and Franchise Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The unrestricted right to sublicense or franchise is expressly granted; the absence of a consent requirement is a negotiation issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Lacks Defense Procedure and Cost Allocation",
+          "description": "Section 7  provides a one-way indemnification from Licensee to Licensor, which is favorable to Rank Licensing. However, the clause lacks standard procedural protections: no mention of attorneys' fees, costs, or expenses in the scope of covered losses. Adding \"costs and expenses (including reasonable attorneys' fees)\" would strengthen enforceability for Licensor.",
+          "revision": "hold Licensor harmless from, any suits, loss and damageand all suits, claims, losses, damages, liabilities, costs and expenses (including reasonable attorneys' fees) arising out of any service ...",
+          "comment": "We added costs, expenses, and reasonable attorneys' fees to the indemnification scope, which is standard market practice and ensures the indemnifying party bears the full economic cost of covered claims.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25340,
+            "end_char": 25422,
+            "start_line": 471,
+            "end_line": 471,
+            "match_cover": 0.481,
+            "match_run": 8,
+            "matched_text": "hold Licensor harmless from, any suits, loss and damage arising out of any service",
+            "clause": {
+              "clause_id": "neg38",
+              "label": "NEGATIVE",
+              "clause_name": "7. INDEMNIFICATION"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The omission of express attorneys' fees and detailed defense procedures concerns the desired scope of protection, not ambiguity or inconsistency identified by the issue."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Weak First Offer Rights — No Matching Right",
+          "description": "Section 9(c)  provides Licensor with only a right of first negotiation (30 days) but no right of first refusal or matching right. After the 30-day window, Licensee can sell to any third party on any terms per Licensee's sole discretion  — potentially at terms far more favorable than what was offered to Licensor. For Rank Licensing's protection, Licensor should have a right to match any bona fide third-party offer before a transaction closes.",
+          "revision": "... entitled to pursue such proposed Transaction with a third party; provided, however, that if Licensee receives a bona fide third-party offer that Licensee intends to accept, Licensee shall first notify Licensor in writing of the material terms thereof and Licensor shall have fifteen (15) business days to elect to consummate the Transaction on substantially the same terms.",
+          "comment": "A right of first negotiation alone provides insufficient protection; the added matching right is a standard protective mechanism ensuring Licensor has a meaningful opportunity to participate in any Transaction on market terms before a third party can close.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29049,
+            "end_char": 29794,
+            "start_line": 537,
+            "end_line": 551,
+            "match_cover": 0.379,
+            "match_run": 10,
+            "matched_text": "entitled to pursue such proposed Transaction with a third party on such terms and conditions as Licensee shall determine in its sole discretion. If Licensee has not agreed to consummate a Transaction within six months of the initiation of such good faith negotiations, then, if Licensee again initiat",
+            "clause": {
+              "clause_id": "neg44",
+              "label": "NEGATIVE",
+              "clause_name": "9(c). First Offer Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause clearly provides only negotiation rights and permits a later third-party transaction; the absence of a matching right is not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Mandatory Consent to All Registration Requests",
+          "description": "Section 2(b)(iii)  requires Licensor to consent to any registration request by Licensee without discretion. This could force Licensor to file registrations it deems unnecessary, overly broad, or strategically harmful to its overall trademark portfolio. Licensor should retain reasonable discretion.",
+          "revision": "shallLicensor shall not unreasonably withhold consent to any request by ...",
+          "comment": "Licensor must retain reasonable discretion over trademark registration decisions to protect the integrity of its overall portfolio strategy; the 'not unreasonably withhold' standard is a well-recognized market norm that fairly balances both parties' interests.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9819,
+            "end_char": 10102,
+            "start_line": 221,
+            "end_line": 224,
+            "match_cover": 0.6,
+            "match_run": 5,
+            "matched_text": "shall retain the sole right to apply for the registration or renewal of trademarks and service marks or other proprietary rights for the Hard Rock Hotel Marks and the Hard Rock Casino Marks in the Morton Territories and anywhere in the world. Licensor shall consent to any request by",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iii). Registration rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Licensor shall consent to any request” is mandatory and textually clear; the lack of discretion is a substantive negotiation concern."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Ownership Warranty Broadly Qualified by Morton's Prior Actions",
+          "description": "Section 2(a)  contains a representation that Licensor owns the licensed rights, but qualifies it \"subject only to whatever actions or inactions may have been taken or not taken by Morton.\" This is an extraordinarily broad carve-out that could effectively gut the ownership warranty. If Morton had previously taken actions that undermined Licensor's rights, Licensor's warranty would be meaningless. Consider narrowing this qualifier by requiring Morton to disclose known prior actions and limiting the carve-out to specifically disclosed matters.",
+          "revision": "... by Licensor subject only to whateverthose actions or inactions which have been disclosed to Licensee in writing and which may have been taken or ...",
+          "comment": "An unqualified carve-out for any and all of Morton's prior actions renders the ownership warranty commercially meaningless; limiting the carve-out to specifically disclosed matters is standard practice and ensures Licensee receives meaningful assurance of title.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8659,
+            "end_char": 8739,
+            "start_line": 201,
+            "end_line": 201,
+            "match_cover": 0.542,
+            "match_run": 5,
+            "matched_text": "by Licensor subject only to whatever actions or inactions may have been taken or",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2(a) — Grant of Licensed Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The exception for “whatever actions or inactions may have been taken or not taken by Morton” is indefinite as to the conduct and ownership defects encompassed."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Arbitration Costs Shared Equally",
+          "description": "Section 5(a)  requires all arbitration fees and costs to be \"shared equally by the parties.\" For quality control disputes that Licensor initiates to protect its trademark rights, equal cost-sharing may discourage Licensor from enforcing quality standards. Consider providing that the non-prevailing party bears all fees and costs.",
+          "revision": "... fees and costs to be shared equallyborne by the parties tonon-prevailing party as determined by the arbitrationarbitrator(s). The arbitration",
+          "comment": "A loser-pays fee structure is standard in trademark quality control disputes and appropriately aligns cost risk with the merits of each party's position, encouraging good-faith compliance rather than deterring legitimate enforcement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21316,
+            "end_char": 22014,
+            "start_line": 407,
+            "end_line": 416,
+            "match_cover": 0.619,
+            "match_run": 4,
+            "matched_text": "and all remedies and relief whatsoever that is deemed appropriate under the circumstances, including without limitation, money damages and equitable relief including without limitation, temporary, preliminary and permanent injunctions. The discovery process and the procedure whereby the evidence (or",
+            "clause": {
+              "clause_id": "neg33",
+              "label": "NEGATIVE",
+              "clause_name": "5(b). Arbitrator powers"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Mandatory equal cost sharing is clear, and replacing it with loser-pays allocation would change the bargain rather than resolve a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Broad Nevada Restriction on Licensor for Hard Rock Hotels",
+          "description": "Section 3(a)  prohibits Licensor from directly or indirectly owning, operating, managing, sublicensing, or franchising a Hard Rock Hotel anywhere in Nevada — not just a Hard Rock Hotel/Casino, but any Hard Rock Hotel including non-casino hotels. Nevada is one of the most commercially significant hospitality markets in the world, and this restriction is perpetual. Consider narrowing to Hard Rock Hotel/Casinos only, so Licensor retains the ability to operate standalone Hard Rock Hotels in Nevada.",
+          "revision": "Rock Hotel/Casino in the State of Nevada. ...",
+          "comment": "The original restriction sweeps too broadly by prohibiting all Hard Rock Hotels in Nevada, regardless of casino operations; we limited this to Hard Rock Hotel/Casinos to reflect the clear commercial purpose of the restriction and preserve Licensor's ability to operate non-casino hospitality properties in the state.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15151,
+            "end_char": 15387,
+            "start_line": 308,
+            "end_line": 311,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "Rock Hotel Marks anywhere in the world for a Hotel facility that does not include a Casino, except, however, Licensor cannot, directly or indirectly, own, operate, manage, sublicense or franchise a Hard Rock Hotel in the State of Nevada",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3(a) — Reservation of All Rights Not Specifically Granted"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Nevada prohibition expressly covers a Hard Rock Hotel, not merely a Hotel/Casino; its breadth is commercially significant but unambiguous."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Worldwide Advertising Rights Exceed Territorial License",
+          "description": "Section 2(a)  allows Licensee to promote, advertise, market, and broadcast \"anywhere in the world.\" This worldwide right effectively extends Licensee's trademark usage far beyond the Morton Territories, potentially creating consumer confusion, diluting Licensor's control, and interfering with other licensees' operations. Consider adding a non-interference qualifier.",
+          "revision": "anywhere in the world; provided that such activities shall not materially interfere with Licensor's or its other licensees' use of the Hard Rock Marks outside the Morton Territories. Licensor represents and warrants ...",
+          "comment": "While Licensee retains broad worldwide promotional rights, this proviso ensures that such activities do not materially interfere with Licensor's or its other licensees' established operations outside the Morton Territories, which is a standard safeguard in multi-territory licensing arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8257,
+            "end_char": 8615,
+            "start_line": 196,
+            "end_line": 200,
+            "match_cover": 0.469,
+            "match_run": 5,
+            "matched_text": "shall not use or exploit the Hard Rock Hotel Marks or the Hard Rock Casino Marks outside the Morton Territories, except, however, Licensee may engage in the promotion, advertising or marketing (not including the sale of merchandise) and broadcasting of the Hard Rock Hotel/Casinos and Hard Rock Casin",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2(a) — Grant of Licensed Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The worldwide promotional right is an express exception to the territorial restriction and can be harmonized with it without contradiction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Notice Address for Licensor References Wrong Entity",
+          "description": "Section 12  directs notices for Licensor to \"Hard Rock Cafe International (DEL), Inc.\" rather than Rank Licensing, Inc. — the entity identified as Licensor throughout the Agreement . If these are different legal entities, notices sent to the wrong entity may not be effective, potentially depriving Licensor of critical notice rights.",
+          "revision": "In the case of Licensor: Hard Rock Cafe International (DEL)Rank Licensing, Inc.",
+          "comment": "We aligned the notice address with the contracting entity identified throughout the Agreement; under New York law, notices directed to a different legal entity may not satisfy contractual notice requirements and could create enforceability issues.",
+          "group_size": 1,
+          "location": {
+            "start_char": 32456,
+            "end_char": 32520,
+            "start_line": 591,
+            "end_line": 591,
+            "match_cover": 0.846,
+            "match_run": 10,
+            "matched_text": "In the case of Licensor: Hard Rock Cafe International (DEL), Inc",
+            "clause": {
+              "clause_id": "neg47",
+              "label": "NEGATIVE",
+              "clause_name": "12. NOTICES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The notice clause identifies a different entity as the recipient for “Licensor” than the Rank Licensing, Inc. entity defined as Licensor in Section 1(n)."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Licensee Obligation to Actively Develop or Operate",
+          "description": "Section 9(b)  provides a royalty-free, fully-paid license with no minimum development or use obligation. Combined with the perpetual term and exclusive territorial rights, Licensee could warehouse the marks in the Morton Territories indefinitely without opening a single facility. Consider conditioning the royalty-free status on Licensee's active and continuous use of the marks.",
+          "revision": "royalty free and fully paid so long as Licensee maintains active and continuous use of the Hard Rock Hotel Marks and/or Hard Rock Casino Marks in the Morton Territories, it being understood and ...",
+          "comment": "The royalty-free status is tied to active and continuous use to ensure the marks are commercially exploited in the Morton Territories, which protects the integrity and value of the Hard Rock brand under New York law's requirement of genuine trademark use.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9635,
+            "end_char": 10038,
+            "start_line": 217,
+            "end_line": 223,
+            "match_cover": 0.529,
+            "match_run": 8,
+            "matched_text": "and Hard Rock Casinos. (iii) _ Licensee shall not develop, use, or exploit any Hard Rock Marks not expressly provided herein without the express written consent of Licensor. Licensor shall retain the sole right to apply for the registration or renewal of trademarks and service marks or other proprie",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iii). Registration rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an active-development or minimum-use covenant is a contractual omission, not an ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Best Efforts Standard for Trademark Protection Is Vague",
+          "description": "Section 6(a)  requires both Licensor and Licensee to use \"best efforts\" to protect the Hard Rock Hotel Marks and Casino Marks. The \"best efforts\" standard is the highest effort standard under New York law and could expose Licensor to claims that it failed to pursue every possible avenue to protect the marks. Consider replacing with \"commercially reasonable efforts\" to provide Licensor with more appropriate flexibility.",
+          "revision": "... Licensee agree to use their bestcommercially reasonable efforts to protect the Hard",
+          "comment": "We revised this to 'commercially reasonable efforts' to align with the standard market practice in licensing agreements; 'best efforts' under New York law imposes an exceptionally high burden that is disproportionate to the parties' trademark protection obligations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22828,
+            "end_char": 22888,
+            "start_line": 433,
+            "end_line": 433,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "Licensee agree to use their best efforts to protect the Hard",
+            "clause": {
+              "clause_id": "pos7",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 6(a) — Best Efforts to Protect the Marks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The term “best efforts” is context dependent and may require construction to determine the precise conduct demanded of Licensor."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Best Efforts Standard for Trademark Registrations",
+          "description": "Section 2(b)(iii)  requires Licensor to use \"best efforts\" to maintain, protect, and preserve trademark registrations. Under New York law, \"best efforts\" is the most demanding effort standard. Consider replacing with \"commercially reasonable efforts\" for appropriate flexibility.",
+          "revision": "bestcommercially reasonable efforts to maintain, protect and ...",
+          "comment": "'Commercially reasonable efforts' is the market-standard obligation for trademark maintenance under New York law, ensuring Licensor acts diligently while retaining the flexibility to make reasonable business judgments about the scope and cost of enforcement activities.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10247,
+            "end_char": 10279,
+            "start_line": 226,
+            "end_line": 226,
+            "match_cover": 0.714,
+            "match_run": 5,
+            "matched_text": "efforts to maintain, protect and",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iii). Registration rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Best efforts” does not specify concrete trademark-maintenance actions or limits and therefore presents some vagueness regarding the required performance."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Costs of Remedial Trademark Filings Not Allocated",
+          "description": "Section 2(b)(iii)  allows Licensee to prepare and file trademark documentation on Licensor's behalf if Licensor fails to maintain registrations. The provision is silent on cost allocation. Consider specifying that Licensee bears the costs of such remedial filings.",
+          "revision": "... to prepare the necessary documentation, at Licensee's sole cost and expense, to effectuate such registrations",
+          "comment": "Where Licensee elects to exercise its step-in right to prepare and file trademark documentation, it is commercially appropriate that Licensee bear those costs, as the filing is undertaken for Licensee's benefit and at Licensee's election.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10685,
+            "end_char": 10756,
+            "start_line": 231,
+            "end_line": 231,
+            "match_cover": 0.6,
+            "match_run": 5,
+            "matched_text": "to prepare the necessary documentation to effectuate such registrations",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iii). Registration rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Silence concerning the costs of Licensee's remedial filings is an omitted allocation term, not a contradiction or intrinsic textual defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Licensor Authority Representation from Licensee",
+          "description": "Section 19  provides a representation from Licensor that it has all necessary power and authority to execute and perform this Agreement. However, there is no corresponding representation from Licensee (Peter A. Morton). Given the significant rights being granted and the binding nature of the obligations, Licensor should receive a reciprocal authority and capacity representation from Licensee.",
+          "revision": "LicensorEach party hereto has all necessary power and ...",
+          "comment": "A mutual authority representation is standard practice in commercial licensing agreements; requiring both parties to warrant their capacity ensures balanced and enforceable commitments under New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 36345,
+            "end_char": 36529,
+            "start_line": 677,
+            "end_line": 682,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "hereto and their respective heirs, executors, administrators, successors, transferees, and assigns as the case may be. 19. AUTHORITY OF LICENSOR. Licensor has all necessary power and",
+            "clause": {
+              "clause_id": "neg53",
+              "label": "NEGATIVE",
+              "clause_name": "18. BINDING EFFECT"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a reciprocal authority representation from Licensee is an asymmetry, not a construction issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Internet Sales Channel Creates Unrestricted Global Reach",
+          "description": "Section 2(b)(v)  allows Licensee to sell Licensed Products through the Internet, with the Internet address as the product's location. Internet sales are inherently global, meaning Licensee could effectively sell branded merchandise worldwide — far beyond the Morton Territories. While the products bear an \"Internet\" location designation rather than a geographic one, this still constitutes a commercial exploitation of the marks outside the licensed territories. Consider limiting Internet sales to customers located within the Morton Territories or requiring geographic restrictions.",
+          "revision": "... Licensed Products through the Internet to customers located within the Morton Territories that bear",
+          "comment": "Internet sales are inherently global and, without a territorial restriction on purchasers, would constitute commercial exploitation of the licensed marks outside the Morton Territories; we've limited online sales to customers within the licensed territories to maintain the integrity of the territorial grant.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11666,
+            "end_char": 12415,
+            "start_line": 252,
+            "end_line": 264,
+            "match_cover": 0.571,
+            "match_run": 5,
+            "matched_text": "Licensed Products through the Internet that bear the Internet address as the Licensed Products’ location. Licensed Products sold through the Internet and bearing the Internet designation shall not be sold in the retail establishments described in subparagraph 2(b)(iv) above nor shall the Licensed Pr",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(v). Internet sales"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 2(b)(v) authorizes a sales channel but does not expressly override Section 2(a)'s territorial limitation, so the provisions can be harmonized without a genuine conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Duplicate \"operation\" in Grant Clause",
+          "description": "Section 2(a)  lists \"development, operation, ownership, management, operation of and promotion\" — the word \"operation\" appears twice, which appears to be a drafting error. One instance should likely be removed or replaced with another term (e.g., \"construction\").",
+          "revision": "development, operation, ownership, management, operation of and ...",
+          "comment": "Removed duplicate 'operation' from the list of permitted activities to correct an apparent drafting error.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8124,
+            "end_char": 8187,
+            "start_line": 195,
+            "end_line": 195,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "development, operation, ownership, management, operation of and",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2(a) — Grant of Licensed Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The repeated word “operation” is a harmless duplication that does not change the scope or meaning of the grant."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Right to Approve Licensed Products Before Sale",
+          "description": "Section 4(c)  only requires Licensee to furnish samples \"during such inspections\" rather than requiring pre-approval of new Licensed Products before they are introduced to market. This is a significant weakness in Licensor's quality control. Consider requiring prior written approval for new product categories.",
+          "revision": "(c) Licensee shall not introduce any new Licensed Product category without Licensor's prior written approval (not to be unreasonably withheld). Licensee shall also furnish or render to Licensor ...",
+          "comment": "Pre-approval of new Licensed Product categories is a standard licensor control right that protects brand consistency and quality; the reasonableness qualifier ensures this right is exercised in good faith and does not unreasonably restrict Licensee's commercial activity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 18649,
+            "end_char": 18696,
+            "start_line": 368,
+            "end_line": 368,
+            "match_cover": 0.286,
+            "match_run": 5,
+            "matched_text": "c) Licensee shall furnish or render to Licensor",
+            "clause": {
+              "clause_id": "neg29",
+              "label": "NEGATIVE",
+              "clause_name": "4(c). Samples"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 4(c)'s inspection-related sample obligation is clear; the absence of a pre-sale approval right is a commercial omission."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Survivability Clause Does Not Identify Surviving Provisions",
+          "description": "Section 16  uses a generic survivability standard (\"by its nature, must survive\") without identifying which specific provisions survive termination. This creates ambiguity. Key provisions that should expressly survive include Sections 3, 6, 7, 11, and 14.",
+          "revision": "... the termination of this Agreement (including, without limitation, Sections 3, 6, 7, 11 and 14), shall",
+          "comment": "We identified specific sections that survive termination to provide clarity and certainty for both parties, consistent with standard drafting practice under New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7491,
+            "end_char": 8262,
+            "start_line": 180,
+            "end_line": 196,
+            "match_cover": 0.5,
+            "match_run": 4,
+            "matched_text": "the Hard Rock Hotel Marks or the Hard Rock Casino Marks and offered for sale or sold by Licensee. (n) Licensor. The term \"Licensor\" as used herein shall mean Rank Licensing, Inc., a Florida Corporation or its successors, assigns or transferees. (200D7C58.V1J) -2- 2. GRANT. (a) Licensed Rights. On an",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2(a) — Grant of Licensed Rights"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The standard covering provisions that “by [their] nature, must survive” is inherently open-ended and may require construction to identify which obligations continue."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Consent Requirement for Assignment by Licensee",
+          "description": "Section 18  provides that the Agreement binds successors, transferees, and assigns but contains no restriction on Licensee's ability to assign. Licensee could assign the perpetual, royalty-free, exclusive trademark license to any third party without Licensor's consent. This is a critical gap for Rank Licensing.",
+          "revision": "... as the case may be; provided, however, that Licensee shall not assign this Agreement or any of its rights or obligations hereunder without Licensor's prior written consent, which consent shall not be unreasonably withheld.",
+          "comment": "We have included a standard consent-to-assign clause to protect Licensor's legitimate interest in controlling who holds an exclusive, perpetual trademark license; the 'not unreasonably withheld' qualifier ensures this is not unduly restrictive.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15670,
+            "end_char": 16465,
+            "start_line": 314,
+            "end_line": 328,
+            "match_cover": 0.294,
+            "match_run": 4,
+            "matched_text": "the world. (b) Licensee recognizes the value of the goodwill associated with the Hard Rock Hotel Marks and Hard Rock Casino Marks and acknowledges that the Hard Rock Hotel Marks and the Hard Rock Casino Marks have acquired secondary meaning. Licensee agrees, during the Term of this Agreement or ther",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "3(b). Goodwill and no attack"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue identifies the absence of an assignment-consent restriction, which is a negotiation gap rather than ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Consent to Jurisdiction or Waiver of Jury Trial",
+          "description": "Section 14  provides for claims to be prosecuted in New York courts but lacks express consent to personal jurisdiction and venue, and no waiver of jury trial. Without these, Licensee (a California individual) could challenge jurisdiction or demand a jury trial.",
+          "revision": "... courts located in New York. Each party hereby irrevocably consents to the exclusive jurisdiction and venue of such courts, waives any objection based on improper venue or forum non conveniens, and WAIVES ANY RIGHT TO TRIAL BY JURY IN ANY ACTION ARISING OUT OF OR RELATING TO THIS AGREEMENT.",
+          "comment": "Express consent to exclusive jurisdiction and venue in New York courts, along with a jury trial waiver, reflects standard practice for commercial agreements of this type and ensures efficient and predictable dispute resolution for both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 34053,
+            "end_char": 34560,
+            "start_line": 632,
+            "end_line": 641,
+            "match_cover": 0.265,
+            "match_run": 8,
+            "matched_text": "in Licensee’s activities, all as provided in this Agreement, are retained solely because of the necessity of protecting Licensor’s interest in trademarks, properties, and property rights generally, and specifically to protect the goodwill and good name of Licensor and the Hard Rock Marks. 14. APPLIC",
+            "clause": {
+              "clause_id": "neg48",
+              "label": "NEGATIVE",
+              "clause_name": "13. RELATIONSHIP OF THE PARTIES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lack of express jurisdictional consent and a jury-trial waiver is an omission, not an intrinsic or whole-instrument construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Errant Comma in Enforceability Clause",
+          "description": "Section 20  contains a misplaced comma (\"This Agreement constitutes, the valid and binding agreements\") that creates a grammatical error and could arguably affect interpretation.",
+          "revision": "This Agreement constitutes, the valid and binding agreements ...",
+          "comment": "Removed errant comma after 'constitutes' to correct a grammatical error and ensure the enforceability clause reads clearly and without ambiguity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 36711,
+            "end_char": 36771,
+            "start_line": 689,
+            "end_line": 689,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "This Agreement constitutes, the valid and binding agreements",
+            "clause": {
+              "clause_id": "neg55",
+              "label": "NEGATIVE",
+              "clause_name": "20. ENFORCEABILITY"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The comma after “constitutes” is grammatically errant but does not change the evident meaning of the enforceability statement."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Licensee Has No Reporting or Accounting Obligations",
+          "description": "Despite the grant of exclusive rights to use the Hard Rock marks for hotel/casino operations and merchandise sales, there is no provision requiring Licensee to provide Licensor with periodic reports on the use of the marks, the number and location of facilities opened, merchandise sales volumes, or sublicenses/franchises granted. Without reporting requirements, Licensor has limited visibility into how its marks are being used. Consider adding at minimum an annual reporting obligation covering the status and scope of Licensee's use of the licensed marks, and requiring copies of all sublicense or franchise agreements (the latter is partially addressed in Section 10  but only requires providing \"a copy\" with no timing requirement).",
+          "revision": "... sublicense or franchise to Licensor within thirty (30) days of execution thereof. Licensee shall also provide Licensor with an annual written report summarizing the status of all Hard Rock Hotel/Casinos and Hard Rock Casinos operated, under development, or sublicensed or franchised under this Agreement.",
+          "comment": "As exclusive mark licensor, Rank Licensing requires baseline visibility into the scope and status of licensed use; these reporting obligations are standard in trademark licensing arrangements and are necessary to support Licensor's quality control and brand protection duties under New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9136,
+            "end_char": 9879,
+            "start_line": 209,
+            "end_line": 221,
+            "match_cover": 0.356,
+            "match_run": 8,
+            "matched_text": "or exploitation of the Hard Rock Casino Marks in connection with a Casino facility as defined herein, that does not include a Hotel. (ii) Licensee shall not develop, own, operate or manage any restaurant in any Hard Rock Hotel/Casino or Hard Rock Casino, or anywhere else that is confusingly similar ",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(ii). Restaurant restriction"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of reporting and accounting obligations is a substantive contractual omission rather than a construction risk."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker",
+          "description": "The title page  contains a document version reference \"(200D7C58.V 1)\" which appears to be an internal document management identifier or version control marker. This should be removed before finalization as it is an internal tracking notation not intended for the final agreement.",
+          "revision": "(200D7C58.V 1)",
+          "comment": "Removed internal document version control marker not intended to appear in the final executed agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 135,
+            "end_char": 147,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V 1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1J) -1-\" which appears to be an internal document management identifier with version control notation. This should be removed as it's not appropriate for a final executed agreement.",
+          "revision": "(200D7C58.V1J) -1-",
+          "comment": "Removed internal document management identifier and version control notation from footer to ensure the executed agreement does not contain drafting artifacts.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1607,
+            "end_char": 1623,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V 15)\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V 15)",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized version does not expose internal versioning metadata.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1679,
+            "end_char": 1692,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V 15",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V 1) -|-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V 1) -|-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized document does not contain draft version tracking metadata.",
+          "group_size": 1,
+          "location": {
+            "start_char": 135,
+            "end_char": 147,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V 1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1J) -2-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1J) -2-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized version does not contain drafting metadata.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7739,
+            "end_char": 7755,
+            "start_line": 186,
+            "end_line": 186,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -2",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1}) -3-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1}) -3-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized version does not contain draft version markers or internal reference codes.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11445,
+            "end_char": 11461,
+            "start_line": 244,
+            "end_line": 244,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1}) -3",
+            "clause": {
+              "clause_id": "neg18",
+              "label": "NEGATIVE",
+              "clause_name": "2(b)(iv). Sale locations for Licensed Products"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The footer marker is nonoperative document metadata and does not affect contractual meaning."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Incorrect section number in Table of Contents",
+          "description": "The Table of Contents lists \"3. ARBITRATION\"  but this should be \"5. ARBITRATION\" to match the actual section numbering in the document body .",
+          "revision": "35. ARBITRATION",
+          "comment": "Corrected section number in Table of Contents to match the actual section numbering in the document body.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58. VL) -4-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58. VL) -4-",
+          "comment": "Removed internal document management identifier from footer to ensure a clean, finalized version of the agreement is presented for execution.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14960,
+            "end_char": 14976,
+            "start_line": 304,
+            "end_line": 304,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58. VL) -4",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3(a) — Reservation of All Rights Not Specifically Granted"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The footer marker is nonoperative document metadata and creates no construction defect."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1J) -5-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1J) -5-",
+          "comment": "Removed internal document management identifier from footer to ensure a clean, finalized version of the agreement is presented to all parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 18628,
+            "end_char": 18644,
+            "start_line": 365,
+            "end_line": 365,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -5",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Extra space before comma",
+          "description": "Remove space before comma",
+          "revision": "... Licensor in any manner whatsoever , nor",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 33262,
+            "end_char": 33301,
+            "start_line": 623,
+            "end_line": 623,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "Licensor in any manner whatsoever , nor",
+            "clause": {
+              "clause_id": "neg48",
+              "label": "NEGATIVE",
+              "clause_name": "13. RELATIONSHIP OF THE PARTIES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The extra space before the comma is typographical but does not alter punctuation function or contractual meaning."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V 13) -6§-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V 13) -6§-",
+          "comment": "Removed internal document management identifier from footer to ensure a clean final version is presented to counterparty.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22461,
+            "end_char": 22478,
+            "start_line": 424,
+            "end_line": 424,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "200D7C58.V 13) -6",
+            "clause": {
+              "clause_id": "pos6",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5(d) — Exclusion of Validity Disputes from Arbitration"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The footer version marker is nonoperative and has no effect on the arbitration provisions' meaning."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1F} -7-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1F} -7-",
+          "comment": "Removed internal document management identifier from footer to ensure the document is clean and professional before finalization.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25899,
+            "end_char": 25915,
+            "start_line": 483,
+            "end_line": 483,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1F} -7",
+            "clause": {
+              "clause_id": "pos8",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8(a)(1) — Promotional Cooperation, Reference to Other Party's Facilities"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The document tracking code is nonoperative and does not affect the agreement's construction."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Hard Rock",
+          "description": "The term \"Hard Rock\" is used as a capitalized term throughout the agreement    , but it is never formally defined. While \"Hard Rock Marks\" is defined , the standalone term \"Hard Rock\" appears in multiple contexts without its own definition. This creates ambiguity about what exactly \"Hard Rock\" refers to when used alone versus as part of other defined terms.",
+          "revision": "(aa) Hard Rock. The term \"Hard Rock\" as used herein shall mean and refer to the Hard Rock brand, including any facility, complex, or development operating under the Hard Rock Marks, Hard Rock Hotel Marks, or Hard Rock Casino Marks.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2709,
+            "end_char": 3708,
+            "start_line": 87,
+            "end_line": 107,
+            "match_cover": 0.6,
+            "match_run": 9,
+            "matched_text": "Hard Rock Hotel Marks or the Hard Rock Casino Marks in the Hotel/Casinos or Casinos all in the Morton Territories (as defined below); NOW, THEREFORE, in consideration of the above recitals, and for other good and valuable consideration the receipt and sufficiency of which is hereby acknowledged, the",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "1(a). Hard Rock Marks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The standalone expression “Hard Rock” is not separately defined, creating some uncertainty in usages such as a “Hard Rock” complex or designation as compared with the defined Hard Rock Marks."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V 13) -8-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V 13) -8-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized version does not contain draft version control metadata.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29464,
+            "end_char": 29481,
+            "start_line": 543,
+            "end_line": 543,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "200D7C58.V 13) -8",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1J) -9-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1J) -9-",
+          "comment": "Removed internal document management identifier from footer to ensure a clean final version is presented to counterparty.",
+          "group_size": 1,
+          "location": {
+            "start_char": 32652,
+            "end_char": 32668,
+            "start_line": 598,
+            "end_line": 598,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -9",
+            "clause": {
+              "clause_id": "neg47",
+              "label": "NEGATIVE",
+              "clause_name": "12. NOTICES"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The footer version marker is nonoperative metadata and does not alter the notice clause."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1)) -10-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1)) -10-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized version does not contain draft reference markers.",
+          "group_size": 1,
+          "location": {
+            "start_char": 35081,
+            "end_char": 35098,
+            "start_line": 652,
+            "end_line": 652,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1)) -10",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Purchase and Sale Agreement",
+          "description": "The term \"Purchase and Sale Agreement\" is referenced in the Integration section  as part of the entire understanding between parties, but this agreement is never defined. Without a definition, it is unclear which specific agreement is being referenced, when it was executed, or what its relationship is to this License Agreement.",
+          "revision": "(o) Purchase and Sale Agreement. The term \"Purchase and Sale Agreement\" as used herein shall mean that certain Purchase and Sale Agreement by and between the parties hereto dated as of [INSERT DATE].",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4515,
+            "end_char": 5252,
+            "start_line": 119,
+            "end_line": 135,
+            "match_cover": 0.394,
+            "match_run": 5,
+            "matched_text": "and servicemarks or any other Hard Rock Marks or all other rights pertaining thereto, except as expressly provided herein. (d) Hotel. The term \"Hotel\" as used herein shall mean a facility which is an all-inclusive place for lodging, with indoor corridors and offering a variety of amenities. (200D7C5",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1(e). Casino"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Purchase and Sale Agreement” is not identified by date, parties, or other particulars, leaving uncertainty as to which external agreement is incorporated into the entire understanding."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V 1) -l1-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V 1) -l1-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized version does not contain draft tracking metadata.",
+          "group_size": 1,
+          "location": {
+            "start_char": 37679,
+            "end_char": 37696,
+            "start_line": 709,
+            "end_line": 709,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "200D7C58.V 1) -l1",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1J) -12-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1J) -12-",
+          "comment": "Removed internal document management identifier from footer to ensure the finalized document does not contain version control artifacts intended for internal use only.",
+          "group_size": 1,
+          "location": {
+            "start_char": 37899,
+            "end_char": 37916,
+            "start_line": 718,
+            "end_line": 718,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) -12",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Morton Parties",
+          "description": "The term \"Morton Parties\" is used in the Noncontravention section  but is never defined in the agreement. Since only Peter A. Morton is identified as \"Licensee,\" it is unclear who else, if anyone, is included within \"Morton Parties.\" This ambiguity could affect the scope of the noncontravention representation.",
+          "revision": "(p) Morton Parties. The term \"Morton Parties\" as used herein shall mean Licensee and his affiliates, successors, and assigns.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2805,
+            "end_char": 3180,
+            "start_line": 89,
+            "end_line": 100,
+            "match_cover": 0.579,
+            "match_run": 5,
+            "matched_text": "Morton Territories (as defined below); NOW, THEREFORE, in consideration of the above recitals, and for other good and valuable consideration the receipt and sufficiency of which is hereby acknowledged, the parties hereto agree as follows: 1. DEFINITIONS. (a) Hard Rock Marks. The term \"Hard Rock Mark",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Recitals"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term “Morton Parties” leaves the persons and entities covered by Section 21's representation uncertain."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker",
+          "description": "The signature page  contains \"(200D8136)\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D8136)",
+          "comment": "Removed internal document management identifier before finalization to ensure a clean execution copy.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in footer",
+          "description": "The footer notation  contains \"(200D7C58.V1J) ~14-\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(200D7C58.V1J) ~14-",
+          "comment": "Removed internal document management identifier from footer to ensure clean final version for execution.",
+          "group_size": 1,
+          "location": {
+            "start_char": 39324,
+            "end_char": 39341,
+            "start_line": 765,
+            "end_line": 765,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "200D7C58.V1J) ~14",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Rank Parties",
+          "description": "The term \"Rank Parties\" is used in the Noncontravention section  but is never defined in the agreement. While \"Licensor\" is defined as Rank Licensing, Inc. , it is unclear who else, if anyone, is included within \"Rank Parties.\" This ambiguity could affect the scope of the noncontravention representation.",
+          "revision": "(q) Rank Parties. The term \"Rank Parties\" as used herein shall mean Licensor and its affiliates, successors, and assigns.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3013,
+            "end_char": 3180,
+            "start_line": 94,
+            "end_line": 100,
+            "match_cover": 0.526,
+            "match_run": 5,
+            "matched_text": "parties hereto agree as follows: 1. DEFINITIONS. (a) Hard Rock Marks. The term \"Hard Rock Marks\" as used herein shall mean and refer to the name “Hard Rock Cafe\" and",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "1(a). Hard Rock Marks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term “Rank Parties” leaves uncertain whether Section 21 covers only Licensor or also parents, affiliates, and related persons."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in exhibit",
+          "description": "Exhibit A  contains \"(50063CE7)\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(50063CE7)",
+          "comment": "Removed internal document management identifier \"(50063CE7)\" from Exhibit A prior to finalization.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Document version marker in exhibit",
+          "description": "Exhibit B  contains \"(50063CE7)\" which appears to be an internal document management identifier. This should be removed before finalization.",
+          "revision": "(50063CE7)",
+          "comment": "Removed internal document management identifier \"(50063CE7)\" from Exhibit B prior to finalization to ensure a clean execution copy.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: License Agreements",
+          "description": "The term \"License Agreements\" is referenced in the Integration section  as part of prior agreements being superseded, but this term is never defined. It is unclear which specific license agreements are being referenced or what their terms were. This ambiguity could create confusion about what prior obligations are being extinguished.",
+          "revision": "(r) License Agreements. The term \"License Agreements\" as used herein shall mean those certain license agreements referenced in the 1985 Morton-Tigrett Settlement Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3815,
+            "end_char": 3966,
+            "start_line": 110,
+            "end_line": 112,
+            "match_cover": 0.375,
+            "match_run": 5,
+            "matched_text": "The term \"Hard Rock Hotel Marks\" as used herein shall mean the trademarks, tradenames and servicemarks set forth in Exhibit A hereto, together with the",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "1(b). Hard Rock Hotel Marks"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The reference to prior “License Agreements” does not specifically identify the agreements being extinguished, creating uncertainty over the superseded obligations."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term: Morton's Territories",
+          "description": "In the restrictions section , the term appears as \"Morton's Territories\" (possessive form) rather than the defined term \"Morton Territories.\" The defined term should be used consistently throughout the agreement without adding possessive forms that alter the term. Modify term(s) Morton'sthe Morton Territories",
+          "revision": "",
+          "comment": "",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Recitals",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Undefined term: Morton Parties",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Morton Parties” is undefined, leaving uncertain whether Section 21 covers only Peter A. Morton or also affiliates and related persons."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Undefined term: Morton Parties",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term “Morton Parties” leaves the persons and entities covered by Section 21's representation uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg16": {
+      "clause_id": "neg16",
+      "clause_name": "2(b)(ii). Restaurant restriction",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Licensee Has No Reporting or Accounting Obligations",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of reporting and accounting obligations is a substantive contractual omission rather than a construction risk."
+        }
+      ],
+      "risky": false
+    },
+    "neg17": {
+      "clause_id": "neg17",
+      "clause_name": "2(b)(iii). Registration rights",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Licensor Best Efforts Standard May Be Insufficient",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “would be reasonably likely to affect” leaves a fact-sensitive threshold for when Licensee's step-in right arises and therefore presents some vagueness risk."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Mandatory Consent to All Registration Requests",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Licensor shall consent to any request” is mandatory and textually clear; the lack of discretion is a substantive negotiation concern."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "No Licensee Obligation to Actively Develop or Operate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an active-development or minimum-use covenant is a contractual omission, not an ambiguity or internal inconsistency."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Best Efforts Standard for Trademark Registrations",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Best efforts” does not specify concrete trademark-maintenance actions or limits and therefore presents some vagueness regarding the required performance."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Costs of Remedial Trademark Filings Not Allocated",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Silence concerning the costs of Licensee's remedial filings is an omitted allocation term, not a contradiction or intrinsic textual defect."
+        }
+      ],
+      "risky": true
+    },
+    "neg18": {
+      "clause_id": "neg18",
+      "clause_name": "2(b)(iv). Sale locations for Licensed Products",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Broad Prohibition on Internet Merchandise Sales",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Internet-merchandise restrictions and channel separation are express and coherent; the issue concerns commercial flexibility rather than construction."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "Mail Order Prohibition Overly Restrictive",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The mail-order prohibition is explicit; its restrictiveness and lack of a requested exception are negotiation issues."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "Licensor's Standalone Merchandise Restriction Too Narrow",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The condition requiring both specified facilities is textually clear; the resulting commercial carve-out is not a construction defect."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Document version marker in footer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The footer marker is nonoperative document metadata and does not affect contractual meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg19": {
+      "clause_id": "neg19",
+      "clause_name": "2(b)(v). Internet sales",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Internet Sales Channel Creates Unrestricted Global Reach",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 2(b)(v) authorizes a sales channel but does not expressly override Section 2(a)'s territorial limitation, so the provisions can be harmonized without a genuine conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "1(a). Hard Rock Marks",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Undefined term: Rank Parties",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Rank Parties” is undefined, leaving uncertain which entities or persons are covered by the noncontravention representation."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Undefined term: Hard Rock",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The standalone expression “Hard Rock” is not separately defined, creating some uncertainty in usages such as a “Hard Rock” complex or designation as compared with the defined Hard Rock Marks."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Undefined term: Rank Parties",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term “Rank Parties” leaves uncertain whether Section 21 covers only Licensor or also parents, affiliates, and related persons."
+        }
+      ],
+      "risky": true
+    },
+    "neg20": {
+      "clause_id": "neg20",
+      "clause_name": "2(b)(vi). Logo usage",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Exhibit E Designations Subject to Permanent Cessation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision clearly requires cessation after 18 months unless Licensor gives express written consent; “forever” is broad but not ambiguous in this context."
+        }
+      ],
+      "risky": false
+    },
+    "neg24": {
+      "clause_id": "neg24",
+      "clause_name": "3(b). Goodwill and no attack",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "No Consent Requirement for Assignment by Licensee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue identifies the absence of an assignment-consent restriction, which is a negotiation gap rather than ambiguity or conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg25": {
+      "clause_id": "neg25",
+      "clause_name": "3(c). Goodwill inures to Licensor",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "All Goodwill Inures Solely to Licensor",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “all associated goodwill generated thereby” can reasonably raise a scope question as to whether it covers only goodwill in the licensed marks or broader goodwill generated by Licensee's operations."
+        }
+      ],
+      "risky": true
+    },
+    "neg29": {
+      "clause_id": "neg29",
+      "clause_name": "4(c). Samples",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "No Right to Approve Licensed Products Before Sale",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 4(c)'s inspection-related sample obligation is clear; the absence of a pre-sale approval right is a commercial omission."
+        }
+      ],
+      "risky": false
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "1(b). Hard Rock Hotel Marks",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Undefined term: License Agreements",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The reference to prior “License Agreements” does not specifically identify the agreements being extinguished, creating uncertainty over the superseded obligations."
+        }
+      ],
+      "risky": true
+    },
+    "neg33": {
+      "clause_id": "neg33",
+      "clause_name": "5(b). Arbitrator powers",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Arbitration Costs Not Shifted to Losing Party",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Equal sharing of arbitration fees and costs is unambiguous, and the absence of prevailing-party cost shifting creates no construction defect."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Arbitration Costs Shared Equally",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Mandatory equal cost sharing is clear, and replacing it with loser-pays allocation would change the bargain rather than resolve a construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg37": {
+      "clause_id": "neg37",
+      "clause_name": "6(d). Notice of infringement and enforcement",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Licensor Has Full Control of Joint Proceedings",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Licensor's control of joint proceedings and equal cost sharing are clearly stated; the absence of Licensee consent rights is a commercial concern only."
+        }
+      ],
+      "risky": false
+    },
+    "neg38": {
+      "clause_id": "neg38",
+      "clause_name": "7. INDEMNIFICATION",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "One-Sided Indemnification",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue concerns commercial asymmetry and the absence of reciprocal indemnification, not ambiguity, mechanical error, or conflict within the agreement."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Indemnification Lacks Defense Procedure and Cost Allocation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The omission of express attorneys' fees and detailed defense procedures concerns the desired scope of protection, not ambiguity or inconsistency identified by the issue."
+        }
+      ],
+      "risky": false
+    },
+    "neg44": {
+      "clause_id": "neg44",
+      "clause_name": "9(c). First Offer Rights",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "First Offer Right Triggered Too Broadly",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The trigger “all or substantially all of his assets and/or rights in connection with” has uncertain boundaries, particularly regarding reorganizations and partial or affiliated transfers."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Weak First Offer Rights — No Matching Right",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause clearly provides only negotiation rights and permits a later third-party transaction; the absence of a matching right is not a construction defect."
+        }
+      ],
+      "risky": true
+    },
+    "neg45": {
+      "clause_id": "neg45",
+      "clause_name": "11(a). Injunctive Relief",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Perpetual Non-Attack Obligation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The perpetual non-attack obligation is substantively broad but textually clear; the absence of requested carve-outs is a negotiation issue."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "Injunctive Relief Without Bond Primarily Favors Licensor",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The differing scope of the parties' injunctive-relief rights is explicit rather than ambiguous or internally contradictory."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "Licensee's Injunctive Relief Limited to Nevada Exclusivity",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 11(a)'s express Nevada remedy does not state that it is Licensee's exclusive remedy, and the issue merely seeks broader express protection."
+        }
+      ],
+      "risky": false
+    },
+    "neg47": {
+      "clause_id": "neg47",
+      "clause_name": "12. NOTICES",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Notice Address Mismatch — Licensor Entity",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 12 directs notices for “Licensor” to Hard Rock Cafe International (DEL), Inc., while Section 1(n) identifies Rank Licensing, Inc. as Licensor, creating an internal entity mismatch."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "No Notice Provision for Email or Electronic Communication",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The omission of email as an authorized notice method is a modernization or negotiation concern, not a textual ambiguity or internal conflict."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "Document version identifier in Notices section",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The footer identifier is nonoperative document metadata rather than a meaning-changing mechanical defect."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Notice Address for Licensor References Wrong Entity",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The notice clause identifies a different entity as the recipient for “Licensor” than the Rank Licensing, Inc. entity defined as Licensor in Section 1(n)."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Document version marker in footer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The footer version marker is nonoperative metadata and does not alter the notice clause."
+        }
+      ],
+      "risky": true
+    },
+    "neg48": {
+      "clause_id": "neg48",
+      "clause_name": "13. RELATIONSHIP OF THE PARTIES",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "No Consent to Jurisdiction or Waiver of Jury Trial",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lack of express jurisdictional consent and a jury-trial waiver is an omission, not an intrinsic or whole-instrument construction defect."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Extra space before comma",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The extra space before the comma is typographical but does not alter punctuation function or contractual meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg53": {
+      "clause_id": "neg53",
+      "clause_name": "18. BINDING EFFECT",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "No Licensor Authority Representation from Licensee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a reciprocal authority representation from Licensee is an asymmetry, not a construction issue."
+        }
+      ],
+      "risky": false
+    },
+    "neg55": {
+      "clause_id": "neg55",
+      "clause_name": "20. ENFORCEABILITY",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Inconsistent capitalization: Parties",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Capitalizing “Parties” once does not reasonably change its evident reference to the parties to the agreement."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Errant Comma in Enforceability Clause",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The comma after “constitutes” is grammatically errant but does not change the evident meaning of the enforceability statement."
+        }
+      ],
+      "risky": false
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "1(e). Casino",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Undefined term: Purchase and Sale Agreement",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Purchase and Sale Agreement” is not identified by date, parties, or other particulars, leaving uncertainty as to which external agreement is incorporated into the entire understanding."
+        }
+      ],
+      "risky": true
+    },
+    "pos10": {
+      "clause_id": "pos10",
+      "clause_name": "Paragraph 10 — Sublicense and Franchise Rights",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Perpetual License with No Termination Right",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The perpetual term and lack of a termination-for-cause right are clear omissions and commercial risks, not construction defects."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Unrestricted Sublicense/Franchise Rights Without Licensor Consent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The unrestricted right to sublicense or franchise is expressly granted; the absence of a consent requirement is a negotiation issue."
+        }
+      ],
+      "risky": false
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Paragraph 2(a) — Grant of Licensed Rights",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Qualified Ownership Representation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The qualifier “whatever actions or inactions may have been taken or not taken by Morton” is indefinite as to which conduct and ownership defects fall within the exception."
+        },
+        {
+          "party": "licensee_peter_morton",
+          "title": "Duplicate \"operation\" in Grant Clause",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Although “operation” is duplicated, the repetition does not materially change or obscure the meaning of the permitted-activity list."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Ownership Warranty Broadly Qualified by Morton's Prior Actions",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The exception for “whatever actions or inactions may have been taken or not taken by Morton” is indefinite as to the conduct and ownership defects encompassed."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Worldwide Advertising Rights Exceed Territorial License",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The worldwide promotional right is an express exception to the territorial restriction and can be harmonized with it without contradiction."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Duplicate \"operation\" in Grant Clause",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The repeated word “operation” is a harmless duplication that does not change the scope or meaning of the grant."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Survivability Clause Does Not Identify Surviving Provisions",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The standard covering provisions that “by [their] nature, must survive” is inherently open-ended and may require construction to identify which obligations continue."
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Paragraph 3(a) — Reservation of All Rights Not Specifically Granted",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Document version identifier in Restrictions section",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The version identifier is nonoperative document metadata and does not alter the meaning of any contractual provision."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Broad Nevada Restriction on Licensor for Hard Rock Hotels",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Nevada prohibition expressly covers a Hard Rock Hotel, not merely a Hotel/Casino; its breadth is commercially significant but unambiguous."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Document version marker in footer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The footer marker is nonoperative document metadata and creates no construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "pos6": {
+      "clause_id": "pos6",
+      "clause_name": "Paragraph 5(d) — Exclusion of Validity Disputes from Arbitration",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Document version identifier in Arbitration section",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The version identifier is nonoperative document metadata and creates no construction issue."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Document version marker in footer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The footer version marker is nonoperative and has no effect on the arbitration provisions' meaning."
+        }
+      ],
+      "risky": false
+    },
+    "pos7": {
+      "clause_id": "pos7",
+      "clause_name": "Paragraph 6(a) — Best Efforts to Protect the Marks",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "\"Best Efforts\" Standard for Trademark Protection Is Mutual",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Best efforts” is a context-dependent performance standard whose precise required level of effort may require judicial construction."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Best Efforts Standard for Trademark Protection Is Vague",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The term “best efforts” is context dependent and may require construction to determine the precise conduct demanded of Licensor."
+        }
+      ],
+      "risky": true
+    },
+    "pos8": {
+      "clause_id": "pos8",
+      "clause_name": "Paragraph 8(a)(1) — Promotional Cooperation, Reference to Other Party's Facilities",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "licensee_peter_morton",
+        "licensor_rank_licensing"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "licensee_peter_morton",
+          "title": "Document version identifier in Joint Cooperation section",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The version tracking code is nonoperative and does not affect contractual meaning."
+        },
+        {
+          "party": "licensor_rank_licensing",
+          "title": "Document version marker in footer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The document tracking code is nonoperative and does not affect the agreement's construction."
+        }
+      ],
+      "risky": false
+    }
+  }
+}

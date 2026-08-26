@@ -1,0 +1,2424 @@
+{
+  "contract_id": "982FSupp2d518_2003_mta",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 12,
+  "n_issues": 69,
+  "n_located": 58,
+  "n_judged": 58,
+  "n_skipped": 11,
+  "counts": {
+    "cat1": 15,
+    "cat2": 0,
+    "none": 43
+  },
+  "parties": {
+    "provider_st_jude": {
+      "n_issues": 36,
+      "n_located": 29,
+      "by_tab": {
+        "risks_negotiation": 12,
+        "proofread": 24
+      },
+      "by_kind": {
+        "Important": 5,
+        "Notable": 6,
+        "Minor": 1,
+        "Spelling + Grammar": 19,
+        "Internal Annotations": 1,
+        "Definitions": 4
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Missing Pre-Publication Review Right",
+          "description": "Section 6  states that publications from the collaborative research \"be jointly published in accordance with academic standards,\" but does not give St. Jude any right to review manuscripts prior to submission. Without a pre-publication review period, Recipient could publish results that inadvertently disclose St. Jude's proprietary information or jeopardize patent filings. Standard MTA practice includes a 30–60 day review period for the provider to review manuscripts and request removal of confidential information or delay publication to allow patent filings.",
+          "revision": "... result from the collaborative research study between St. Jude and Recipient Scientist using the Material shall first be submitted to St. Jude for review at least thirty (30) days prior to submission for publication, and shall be jointly",
+          "comment": "We inserted a 30-day pre-publication review period, which is standard MTA practice, to allow St. Jude to identify any inadvertent disclosure of confidential information and to preserve the ability to file patent applications before public disclosure.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3211,
+            "end_char": 4104,
+            "start_line": 58,
+            "end_line": 86,
+            "match_cover": 0.526,
+            "match_run": 15,
+            "matched_text": "result from the collaborative research study between St. Jude and Recipient Scientist using the Material be jointly published in accordance with academic standards. 7. The transfer of the Material grants te Recipient no rights In the Material other than those specifically set forth in the Agreement.",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an express pre-publication review period is a negotiation gap, not an ambiguity, mechanical defect, or inconsistency within the instrument."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Grant-Back License Too Narrow for St. Jude",
+          "description": "Section 8  grants St. Jude only a \"non-exclusive, royalty-free license to use for non-commercial purposes\" inventions arising from use of the Material. Given that St. Jude is providing its proprietary Material, this grant-back is quite limited. St. Jude should negotiate for at least a non-exclusive, royalty-free license for all purposes (including commercial), or alternatively secure an option to negotiate a commercial license. Without broader rights, Recipient could develop commercially valuable inventions based on St. Jude's proprietary construct and St. Jude would have no path to commercial use of those downstream inventions.",
+          "revision": "royalty-free license to use for non-commercial purposesall purposes, including non-commercial research and commercial purposes, any inventions that arise",
+          "comment": "As the provider of the proprietary Material that forms the basis of any downstream inventions, St. Jude requires a grant-back license broad enough to encompass commercial use; restricting it to non-commercial purposes creates an inequitable result where the Recipient could commercialize inventions built entirely on St. Jude's contributed IP while St. Jude is barred from doing so.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4784,
+            "end_char": 4865,
+            "start_line": 94,
+            "end_line": 94,
+            "match_cover": 0.619,
+            "match_run": 8,
+            "matched_text": "royalty-free license to use for non-commercial purposes any inventions that arise",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The boundary of the phrase “non-commercial purposes” is genuinely uncertain, particularly for research connected with later licensing or commercial development."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Affirmative Indemnification from Recipient",
+          "description": "Section 10  provides that Recipient \"assumes all liability for damages\" from its use of the Materials, and limits St. Jude's liability . However, it lacks an affirmative indemnification obligation requiring Recipient to indemnify, defend, and hold harmless St. Jude against third-party claims arising from Recipient's use, storage, or disposal of the Materials. Simply \"assuming liability\" is weaker than a true indemnification commitment. St. Jude should strengthen this to include an express indemnification and defense obligation.",
+          "revision": "... or disposal of the Materials, and shall indemnify, defend, and hold harmless St. Jude and its corporate affiliates and their respective boards of Governors, Directors, officers, staff, representatives and agents from and against any and all Claims arising therefrom. St. Jude",
+          "comment": "A mere assumption of liability does not obligate Recipient to defend or indemnify St. Jude against third-party claims; we added an express indemnification and defense commitment to reflect the parties' intent that Recipient bear all risks arising from its handling of the Materials.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5710,
+            "end_char": 6506,
+            "start_line": 104,
+            "end_line": 112,
+            "match_cover": 0.634,
+            "match_run": 12,
+            "matched_text": "or disposal of the Materials. St. Jude and corporate affiliates of St. Jude and their respective boards of Governors, Directors, officers. staff, representatives and agents will not be Uableto the Recipient for any damages, expenses (Including without limitation legai expenses), losses, claims, dema",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision lacks an express duty to indemnify or defend, but that is an omitted protection rather than a textual ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Certification of Destruction Required",
+          "description": "Section 7  requires Recipient to \"destroy all unused Materials\" upon termination, but does not require Recipient to certify or confirm destruction in writing. Without a written certification requirement, St. Jude has no way to verify that its proprietary Material has actually been destroyed. St. Jude should require written confirmation of destruction.",
+          "revision": "the agreement, Recipient shall destroyalldestroy all unused Materials and provide written certification of such destruction to St. Jude within ten (10) days of termination.",
+          "comment": "Without written confirmation of destruction, St. Jude has no means to verify that its proprietary Materials have been properly disposed of, creating ongoing IP and biosafety risk; this certification requirement is standard practice in material transfer agreements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4074,
+            "end_char": 4509,
+            "start_line": 86,
+            "end_line": 91,
+            "match_cover": 0.583,
+            "match_run": 4,
+            "matched_text": "the agreement, Recipient shall destroyall unused Materials. a. Recipient shall not commercialize any product that contains Material without the prior written approval of St. Jude. The Recipient is free to file patent application(s) claiming Inventions made by Recipient through use of the Material bu",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Requiring destruction without requiring written certification is a verification gap, not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Consequences for Late Patent Notification",
+          "description": "Section 8  requires Recipient to notify St. Jude within sixty (60) days of filing a patent application that contains or incorporates the Material. However, the provision does not specify any consequences for Recipient's failure to provide timely notice, nor does it require St. Jude's prior consent before filing. Consider requiring prior written notice (e.g., 30 days before filing) rather than post-filing notice, and adding a remedy for failure to comply.",
+          "revision": "notify St. Jude within sixty (60) days ofat least thirty (30) days prior to filing any patent application which ...",
+          "comment": "We require pre-filing notice to allow St. Jude adequate time to assess IP ownership and exercise any applicable rights before a patent application is filed, which is a standard protection for material providers under Tennessee law and UBMTA principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4468,
+            "end_char": 4545,
+            "start_line": 91,
+            "end_line": 91,
+            "match_cover": 0.632,
+            "match_run": 7,
+            "matched_text": "notify St. Jude within sixty (60) days of filing any patent application which",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a specified contractual consequence or pre-filing consent right is a remedies and negotiation issue, not an internal ambiguity or inconsistency."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Termination Clause Lacks Survival Provision",
+          "description": "Section 7  provides for termination on 30 days' written notice but does not specify which provisions survive termination. Key protections for St. Jude — including the warranty disclaimer (Section 9), liability limitations (Section 10), the grant-back license (Section 8), the prohibition on commercialization without St. Jude's consent (Section 8), and the publication obligations (Section 6) — should expressly survive termination or expiration. Without a survival clause, Recipient could argue these obligations terminate along with the agreement.",
+          "revision": "... either party to the other. Sections 1, 6, 8, 9, and 10 shall survive termination or expiration of this Agreement. Upon termination of",
+          "comment": "We included an express survival provision to clarify that Sections 1, 6, 8, 9, and 10 continue in effect post-termination, consistent with standard practice for research material transfer agreements and necessary to preserve St. Jude's core IP and liability protections.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3734,
+            "end_char": 3780,
+            "start_line": 63,
+            "end_line": 63,
+            "match_cover": 0.348,
+            "match_run": 5,
+            "matched_text": "either party to the other. Upon termination of",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement's silence about survival may affect post-termination rights, but the issue identifies an omitted provision rather than a conflicting clause or intrinsically ambiguous term."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Confidentiality Obligations on Recipient",
+          "description": "The agreement transfers proprietary biological material and accompanying know-how and data  to Recipient but contains no confidentiality or non-disclosure obligations. This is a significant omission from St. Jude's perspective. Without confidentiality protections, Recipient is free to disclose St. Jude's proprietary information, know-how, and data to third parties (beyond the publication context addressed in Section 6). Consider adding a confidentiality obligation to protect St. Jude's proprietary information associated with the Material.",
+          "revision": "... accompanying know-how or data ('Material\"). Recipient shall treat all non-public information relating to the Material as confidential and shall not disclose such information to any third party without St. Jude's prior written consent. Legal title to the",
+          "comment": "We introduced a confidentiality obligation to protect St. Jude's non-public proprietary information associated with the Material, which is standard practice in material transfer agreements involving sensitive biological materials and accompanying know-how.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1456,
+            "end_char": 1518,
+            "start_line": 40,
+            "end_line": 40,
+            "match_cover": 0.256,
+            "match_run": 6,
+            "matched_text": "accompanying know-how or data ('Material\"). Legal title to the",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Material\" (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a confidentiality covenant is a substantive omission, not a textual defect or conflict with another provision."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Reporting or Progress Update Obligation",
+          "description": "Despite being styled as a \"Collaboration and Materials Transfer Agreement,\" the agreement contains no obligation for Recipient to provide St. Jude with periodic updates, progress reports, or research results from the collaborative study. Section 3  limits use to creating a lentiviral chimeric T-cell receptor construct for pre-clinical studies, but St. Jude has no contractual right to receive the results of those studies. Consider adding a reporting obligation to ensure St. Jude receives the benefit of the collaboration.",
+          "revision": "... used to create a lentiviral chimeric, T-cell receptor construct to be used in pre-clinical studies, and Recipient Scientist shall provide St. Jude with periodic written reports of research results at least annually.",
+          "comment": "As the provider of biological material under a collaboration agreement, St. Jude has a legitimate interest in receiving periodic updates on research conducted using that material; annual written reporting is a standard obligation in collaborative research arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2565,
+            "end_char": 3484,
+            "start_line": 50,
+            "end_line": 61,
+            "match_cover": 0.647,
+            "match_run": 17,
+            "matched_text": "used to create a lentiviral chimeric, T-cell receptor construct to be used in pre-clinical studies. 4. The Material may not be used in humans and will be stored, used, and disposed of in accordance with applicable law and regulations, The Material will not be used for any commercial purpose. 5. St. ",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "6. Publications"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Calling the project a collaboration does not itself impose a reporting obligation, so the missing reporting right is a negotiation gap rather than an inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Governing Law or Dispute Resolution",
+          "description": "The agreement does not contain any governing law or dispute resolution provision. Given that St. Jude is based in Tennessee and Recipient is in Pennsylvania, the absence of a choice-of-law clause creates uncertainty about which state's law governs. St. Jude should include a provision specifying Tennessee law as the governing law. Consider adding governing law language near the end of Section 7 .",
+          "revision": "... set forth in the Agreement. This Agreement shall be governed by and construed in accordance with the laws of the State of Tennessee, without regard to its conflicts of law provisions. Thls agreement may be ...",
+          "comment": "We included a Tennessee governing law provision reflecting that St. Jude is headquartered in Tennessee and is the party providing the biological material subject to this agreement.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No St. Jude Right to Audit or Inspect Use",
+          "description": "Section 2  requires the Material to remain \"under the immediate and direct control of Recipient Scientist,\" but St. Jude has no right to audit, inspect, or verify compliance with the Material use restrictions. Given the proprietary nature of the Material and the strict limitations on its use (pre-clinical only, no human use, no commercialization), St. Jude should have the right to verify compliance upon reasonable notice.",
+          "revision": "... direct control of Redplent Scientist. St. Jude shall have the right, upon reasonable prior written notice, to inspect and audit Recipient's use, storage, and handling of the Material to verify compliance with this Agreement.",
+          "comment": "Given the strict use restrictions (pre-clinical only, no human use, no commercialization), St. Jude requires audit rights to verify compliance; this is standard practice for proprietary biological material transfers and is limited to reasonable prior written notice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2441,
+            "end_char": 3065,
+            "start_line": 49,
+            "end_line": 55,
+            "match_cover": 0.353,
+            "match_run": 5,
+            "matched_text": "direct control of Redplent Scientist. 3. Recipient Scientist agrees that the Material will only be used to create a lentiviral chimeric, T-cell receptor construct to be used in pre-clinical studies. 4. The Material may not be used in humans and will be stored, used, and disposed of in accordance wit",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Human or Commercial Use"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an audit or inspection right is an omitted enforcement mechanism, not a construction issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Right to Terminate for Breach",
+          "description": "Section 7  only allows termination upon thirty (30) days' written notice. It does not provide for immediate termination in the event of a material breach by Recipient (e.g., unauthorized use, unauthorized transfer, commercialization without consent, or use in humans). Given the sensitive nature of the Material and the serious consequences of misuse, St. Jude should have the right to terminate immediately upon material breach.",
+          "revision": "... agreement may be terminated • upon thirty (30) clays written notice by either party to the other, or immediately by St. Jude upon written notice in the event of a material breach of this Agreement by Recipient. Upon termination of",
+          "comment": "Given the sensitive nature of the biological Material and the serious regulatory and ethical consequences of misuse, St. Jude requires the ability to terminate immediately upon material breach rather than being bound by a 30-day notice period that could allow harm to continue.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3635,
+            "end_char": 3780,
+            "start_line": 62,
+            "end_line": 63,
+            "match_cover": 0.487,
+            "match_run": 16,
+            "matched_text": "agreement may be terminated • upon thirty (30) clays written notice by either party to the other. Upon termination of",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The thirty-day termination mechanism is clear; the absence of an additional immediate breach-termination right is a negotiation issue."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Commercialization Approval Lacks Standards or Timeline",
+          "description": "Section 8  states that Recipient shall not commercialize any product containing the Material without St. Jude's prior written approval, but does not establish any standards or process. While this gives St. Jude broad discretion (favorable), it would be clearer to specify that approval is in St. Jude's sole discretion and subject to a separate commercialization agreement with royalty terms.",
+          "revision": "... contains Material without the prior written approval of St. Jude, which may be granted or withheld in St. Jude's sole discretion and which, if granted, shall be subject to the parties entering into a separate written commercialization agreement on mutually acceptable terms.",
+          "comment": "We specified that commercialization approval is in St. Jude's sole discretion and subject to a separate written agreement to ensure any commercial use of proprietary biological material is governed by appropriate licensing terms, consistent with standard practice for research material transfers.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4207,
+            "end_char": 4895,
+            "start_line": 88,
+            "end_line": 95,
+            "match_cover": 0.357,
+            "match_run": 10,
+            "matched_text": "contains Material without the prior written approval of St. Jude. The Recipient is free to file patent application(s) claiming Inventions made by Recipient through use of the Material but agrees to notify St. Jude within sixty (60) days of filing any patent application which claims subject matter th",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Prior written approval” does not state whether St. Jude may withhold approval arbitrarily or is subject to an implied reasonableness or good-faith standard, creating a construction question about the approval right."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in title",
+          "description": "Title: \"Meterials\" should be \"Materials\"",
+          "revision": "Collaboration and MeterialsMaterials Transfer Agreement",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in salutation",
+          "description": "\"Deer\" should be \"Dear\"",
+          "revision": "DeerDear Dr. June;",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation error",
+          "description": "Missing comma after \"Dr\" in opening paragraph",
+          "revision": "... governs an arrangement whereby Dr,. Dario Campana of St.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 708,
+            "end_char": 762,
+            "start_line": 32,
+            "end_line": 32,
+            "match_cover": 1.0,
+            "match_run": 9,
+            "matched_text": "governs an arrangement whereby Dr, Dario Campana of St",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble / Purpose"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The punctuation in “Dr, Dario Campana” is an obvious typographical irregularity that does not create uncertainty about the identified person or the provision's meaning."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Internal comment in warranty section",
+          "description": "The warranty disclaimer provision  contains what appears to be an internal comment or marker \"i14 11\" embedded within the warranty language. This should be removed before finalization.",
+          "revision": "... it Is provided WITHOUT ANY i14 11",
+          "comment": "Removed internal draft marker 'i14 11' that was inadvertently embedded in the warranty disclaimer language; no substantive change to the provision.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5134,
+            "end_char": 5167,
+            "start_line": 97,
+            "end_line": 97,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "it Is provided WITHOUT ANY i14 11",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. No Warranties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The unexplained marker “i14 11” is mechanically embedded within the operative warranty disclaimer and disrupts the phrase “WITHOUT ANY WARRANTIES,” requiring it to be treated or construed as extraneous text."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: agreement",
+          "description": "The term 'Agreement' is defined in the introductory paragraph  but appears in lowercase as 'agreement' in clause 7 . This creates ambiguity about whether the reference is to this specific Agreement or a generic agreement. The term should be consistently capitalized throughout the document.",
+          "revision": "Those specifically set forth in the Agreement. Thls agreementAgreement may be terminated •",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3583,
+            "end_char": 3662,
+            "start_line": 62,
+            "end_line": 62,
+            "match_cover": 0.917,
+            "match_run": 8,
+            "matched_text": "those specifically set forth in the Agreement. Thls agreement may be terminated",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase “agreement” plainly refers to the only agreement being terminated; capitalization does not create a reasonable alternative referent."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 1: \"anti-CD19-BB-.\" should be \"anti-CD19-BB-z\"",
+          "revision": "... to Recipient Scientist is the anti-CD19-BB-.;anti-CD19-BB-z",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1253,
+            "end_char": 1295,
+            "start_line": 38,
+            "end_line": 38,
+            "match_cover": 0.667,
+            "match_run": 8,
+            "matched_text": "to Recipient Scientist is the anti-CD19-BB",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Material\" (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted identifier “anti-CD19-BB-.” appears in the definition of the transferred biological material, and replacing the intended final character with punctuation can change which construct is covered."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term form: Materials vs Material",
+          "description": "The term is defined as 'Material' (singular) in clause 1 , but appears as 'Materials' (plural) in clause 7 . While the variants list shows 'Materials' as an accepted form, the defined term is singular and should be used consistently throughout the document to avoid confusion. Modify term(s) the agreement, Recipient shall destroyall unused Materials.Material.",
+          "revision": "",
+          "comment": "",
+          "group_size": 4,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 1: \"proprie tary\" should be \"proprietary\"",
+          "revision": "... applications, trade secrets or other proprie taryproprietary rights of St. Jude,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1903,
+            "end_char": 1971,
+            "start_line": 44,
+            "end_line": 44,
+            "match_cover": 0.909,
+            "match_run": 6,
+            "matched_text": "applications, trade secrets or other proprie tary rights of St. Jude",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Material\" (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The split word “proprie tary” remains unmistakably readable as “proprietary” and does not alter the scope of the rights referenced."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Section 2: \"persone\" should be \"persons\"",
+          "revision": "... use by Recipient Scientist or persone dIrectlypersons directly supervised by",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2111,
+            "end_char": 2171,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 0.9,
+            "match_run": 6,
+            "matched_text": "use by Recipient Scientist or persone dIrectly supervised by",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Restriction on Use and Transfer"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Persone” is an obvious misspelling of “persons” in context and does not create a reasonable competing meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 2: \"net\" should be \"not\"",
+          "revision": "Recipient Scientist. The Material may netnot be transferred or taken to any etherother",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2200,
+            "end_char": 2272,
+            "start_line": 47,
+            "end_line": 47,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "Recipient Scientist. The Material may net be transferred or taken to any",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Restriction on Use and Transfer"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Substituting “net” for “not” mechanically corrupts the operative prohibition and, if read literally, removes the intended negative term."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 5: \"unresteicted rig ht\" should be \"unrestricted right\"",
+          "revision": "St. Jude retains the unresteicted rig htunrestricted right to distribute the Material to ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2995,
+            "end_char": 3065,
+            "start_line": 55,
+            "end_line": 55,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "St. Jude retains the unresteicted rig ht to distribute the Material to",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. St. Jude's Right to Distribute"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Unresteicted rig ht” is an obvious misspelling and spacing artifact for “unrestricted right,” with no reasonable alternative meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing word",
+          "description": "Section 6: missing \"will\" between \"Material\" and \"be\"",
+          "revision": "... Recipient Scientist using the Material         will be jointly",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3305,
+            "end_char": 3363,
+            "start_line": 59,
+            "end_line": 59,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "Recipient Scientist using the Material be jointly",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "6. Publications"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Although awkward, “agrees that [publications] be jointly published” can operate as a mandative construction and clearly states the publication obligation; adding “will” would not materially change it."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 7: \"te\" should be \"to\"",
+          "revision": "... transfer of the Material grants teto Recipient no rights Inin the Material other than",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3473,
+            "end_char": 3554,
+            "start_line": 61,
+            "end_line": 61,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "transfer of the Material grants te Recipient no rights In the Material other than",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Te” is an obvious typographical error for “to” and does not create uncertainty about the grant language."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Section 7: \"Thls\" should be \"This\"",
+          "revision": "... set forth in the Agreement. ThlsThis agreement may be terminated •",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3602,
+            "end_char": 3662,
+            "start_line": 62,
+            "end_line": 62,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "set forth in the Agreement. Thls agreement may be terminated",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Thls” is plainly a typographical rendering of “This” and does not affect the termination provision's meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term form: Redplent Scientist",
+          "description": "The term 'Recipient Scientist' is defined in the introductory paragraph , but appears as 'Redplent Scientist' in clause 2 . This appears to be a typographical error that creates an inconsistent reference to the defined term. The term should match the defined form 'Recipient Scientist'. Modify term(s) the immediate and direct control of RedplentRecipient Scientist.",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 7: \"clays\" should be \"days\"",
+          "revision": "upon thirty (30) claysdays written notice by either party ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3693,
+            "end_char": 3746,
+            "start_line": 63,
+            "end_line": 63,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "upon thirty (30) clays written notice by either party",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Thirty (30) clays” mechanically substitutes a different word for the intended time unit “days,” corrupting the stated notice period even though the intended correction is apparent."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 7 termination: \"destroyall\" should be \"destroy all\"",
+          "revision": "the agreement, Recipient shall destroyalldestroy all unused Materials.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4074,
+            "end_char": 4132,
+            "start_line": 86,
+            "end_line": 86,
+            "match_cover": 0.75,
+            "match_run": 4,
+            "matched_text": "the agreement, Recipient shall destroyall unused Materials",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “destroyall” does not obscure the command to destroy all unused Materials or change its scope."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent term form: Redpient",
+          "description": "The term 'Recipient' is defined in the introductory paragraph  as the University of Pennsylvania, but appears as 'Redpient' in the signature instructions . This appears to be a typographical error that creates an inconsistent reference to the defined term. The term should match the defined form 'Recipient'. Modify term(s) of RedpientRecipient sign and return a copy of this letter to Esther Allay In the Office of Technology",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 9: \"FORA\" should be \"FOR A\"",
+          "revision": "WARRANTIES OF MERCHANTABILITY AND FITNESS FORAFOR A PARTICULAR USE. /",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5271,
+            "end_char": 5332,
+            "start_line": 99,
+            "end_line": 99,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "WARRANTIES OF MERCHANTABILITY AND FITNESS FORA PARTICULAR USE",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. No Warranties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“FORA PARTICULAR USE” is plainly readable as “FOR A PARTICULAR USE”; the missing space does not affect the disclaimer."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 9: \"WARRANTYTHAT\" should be \"WARRANTY THAT\"",
+          "revision": "... NO REPRESENTATION AND PROVIDES NO WARRANTYTHATWARRANTY THAT",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5373,
+            "end_char": 5677,
+            "start_line": 100,
+            "end_line": 104,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "NO REPRESENTATION AND PROVIDES NO WARRANTYTHAT THE USE OF THE MATERIAL WILL NOT iNFRINGE ANY PATENT OR OTHER PROPRIEJARYBIGHT--. 10. Except to the extent prohibited by taw, the Recipient assumes all Rability for damages that",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. No Warranties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “WARRANTYTHAT” does not change the readily intelligible warranty disclaimer."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Section 9: \"PROPRIEJARYBIGHT\" should be \"PROPRIETARY RIGHT\"",
+          "revision": "PROPRIEJARYBIGHT--.PROPRIETARY RIGHT.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Section 10: \"Uableto\" should be \"liable to\"",
+          "revision": "... and agents will not be Uabletoliable to the Recipient",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5914,
+            "end_char": 6370,
+            "start_line": 106,
+            "end_line": 110,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "and agents will not be Uableto the Recipient for any damages, expenses (Including without limitation legai expenses), losses, claims, demands, suit brother actions (colleottvely hereinafter nelaims\") made by the Recipient, or made against the Recipient byany other party, due to or arising from the u",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Uableto” is an obvious scanning or typographical error for “liable to” and supplies no reasonable alternative meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Section 10: \"byany\" should be \"by any\"",
+          "revision": "... or made against the Recipient byanyby any other party, due to or ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6200,
+            "end_char": 6258,
+            "start_line": 109,
+            "end_line": 109,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "or made against the Recipient byany other party, due to or",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “byany” does not alter the clear reference to claims made by any other party."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Section 10: \"odent\" should be \"extent\"",
+          "revision": "... the Recipient, except to the odentextent",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6342,
+            "end_char": 6370,
+            "start_line": 110,
+            "end_line": 110,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "the Recipient, except to the",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "In the phrase “except to the odent,” the nonword is unmistakably a corruption of “extent” and does not create a genuine alternative construction."
+          }
+        }
+      ]
+    },
+    "recipient_june_upenn": {
+      "n_issues": 33,
+      "n_located": 29,
+      "by_tab": {
+        "risks_negotiation": 14,
+        "proofread": 19
+      },
+      "by_kind": {
+        "Important": 6,
+        "Notable": 6,
+        "Minor": 2,
+        "Internal Annotations": 3,
+        "Definitions": 4,
+        "Spelling + Grammar": 12
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad \"Material\" Definition Captures UPenn Derivatives",
+          "description": "The definition of \"Material\" in Clause 1  includes \"progeny, portions, unmodified derivatives and any accompanying know-how or data.\" This is overly broad and could be read to encompass materials developed by UPenn using the original construct. The term \"unmodified derivatives\" is ambiguous — it could capture materials that UPenn creates through its own research efforts. From UPenn's perspective, the definition should be narrowed to cover only the original material as provided by St. Jude, and expressly exclude modifications or derivatives created by UPenn.",
+          "revision": "chirnerio T-eellchimeric T-cell receptor construct, Includingand any progeny, portions, unmodifiedunmodified progeny and portions thereof, excluding any modifications or derivatives created by Recipient (\"Material\"). For clarity, materials created by Recipient through use of the Material (\"Modifications\") shall not be considered Material under this Agreement.",
+          "comment": "We revised the definition to clearly distinguish between the original construct provided by St. Jude and materials independently developed by Recipient, reflecting standard practice in academic material transfer agreements and protecting each party's intellectual property interests.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Pre-Clinical Use Limitation Is Unnecessarily Restrictive",
+          "description": "Clause 3  restricts use of the Material solely to creating a lentiviral chimeric T-cell receptor construct for \"pre-clinical studies.\" This is very narrow and could prevent UPenn from progressing any promising findings toward clinical application without renegotiating the agreement. Given this is a collaboration agreement (not just a standard MTA), UPenn should negotiate broader permitted uses or at least include a pathway to clinical use.",
+          "revision": "chimeric, T-cell receptor construct to be used in pre-clinical studies and, subject to mutual written agreement of the parties, subsequent clinical studies.",
+          "comment": "Given the collaborative nature of this agreement, we added a pathway to clinical studies by mutual written consent to reflect the parties' shared interest in advancing promising findings while preserving Provider's oversight and approval rights at each stage.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2621,
+            "end_char": 3053,
+            "start_line": 51,
+            "end_line": 55,
+            "match_cover": 0.625,
+            "match_run": 12,
+            "matched_text": "chimeric, T-cell receptor construct to be used in pre-clinical studies. 4. The Material may not be used in humans and will be stored, used, and disposed of in accordance with applicable law and regulations, The Material will not be used for any commercial purpose. 5. St. Jude retains the unresteicte",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Human or Commercial Use"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The pre-clinical limitation is narrow but clear and is consistent with the separate prohibition on human use."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "St. Jude Veto Over Commercialization Is One-Sided",
+          "description": "Clause 8  requires UPenn to obtain St. Jude's \"prior written approval\" before commercializing any product containing the Material. This effectively gives St. Jude an absolute veto over UPenn's commercialization efforts, with no obligation on St. Jude to negotiate in good faith, no timeline for response, and no standard for withholding approval. UPenn should negotiate that such approval not be unreasonably withheld, conditioned, or delayed.",
+          "revision": "written approval of St. Jude, such approval not to be unreasonably withheld, conditioned, or delayed. The Recipient is free ...",
+          "comment": "An unfettered approval right with no standard for withholding creates an unworkable commercialization pathway for UPenn; limiting approval to a reasonableness standard is consistent with market practice and protects both parties' legitimate interests in successful technology transfer.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4264,
+            "end_char": 4315,
+            "start_line": 89,
+            "end_line": 89,
+            "match_cover": 0.474,
+            "match_run": 5,
+            "matched_text": "written approval of St. Jude. The Recipient is free",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The unqualified term “approval” leaves room to dispute whether St. Jude has absolute discretion or must exercise the approval right reasonably or in good faith."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Royalty-Free Grant-Back License to St. Jude Is Overly Generous",
+          "description": "Clause 8  requires UPenn to grant St. Jude a non-exclusive, royalty-free license to use \"any inventions that arise from the use of the Materials\" for non-commercial purposes. This grant-back is very broad — it captures all inventions arising from use of the Material, potentially including inventions primarily resulting from UPenn's own intellectual contributions. UPenn should narrow this to inventions that directly incorporate the Material, and limit it to non-commercial research purposes specifically.",
+          "revision": "... license to use for non-commercial research purposes any inventions that arisedirectly incorporate the Materials.",
+          "comment": "We limited the grant-back license to inventions that directly incorporate the Materials and to non-commercial research use, ensuring the license is proportionate to St. Jude's contribution of the Materials rather than capturing inventions primarily resulting from UPenn's own intellectual efforts.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4797,
+            "end_char": 4916,
+            "start_line": 94,
+            "end_line": 95,
+            "match_cover": 0.8,
+            "match_run": 6,
+            "matched_text": "license to use for non-commercial purposes any inventions that arise from the use of the Materials",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The causal phrase “inventions that arise from the use of the Materials” has an uncertain boundary and may or may not encompass inventions primarily attributable to UPenn's independent contributions."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "One-Sided Liability Assumption Unfairly Burdens UPenn",
+          "description": "Clause 10  states that \"the Recipient assumes all liability for damages that may arise from its use, storage or disposal of the Materials.\" This is extraordinarily broad — UPenn would bear liability even for damages caused by defects in the Material as provided by St. Jude. The \"except to the extent prohibited by law\" qualifier is insufficient protection. UPenn should limit its assumption of liability to damages caused by its own negligence or willful misconduct, not assume blanket liability.",
+          "revision": "... to the extent prohibited by tawlaw, the Recipient assumes all Rabilityliability for",
+          "comment": "We revised this clause to limit UPenn's liability to damages caused by its own acts or omissions, which reflects standard risk allocation principles — a provider of Materials should retain liability for defects inherent in those Materials rather than shifting that exposure entirely to the Recipient.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5572,
+            "end_char": 5643,
+            "start_line": 103,
+            "end_line": 103,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "to the extent prohibited by taw, the Recipient assumes all Rability for",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The scope of damages that “may arise from” Recipient's use, storage, or disposal is causally vague, including whether it reaches harm attributable to an inherent defect in the supplied Material."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Broad Exculpation of St. Jude From All Damages",
+          "description": "Clause 10  provides that St. Jude, its affiliates, and a long list of related persons \"will not be liable to the Recipient for any damages, expenses... losses, claims\" arising from use of the Materials. While the carve-out for gross negligence/willful misconduct at  is helpful, the baseline exculpation is still very broad. UPenn should negotiate to also carve out St. Jude's liability for breach of this Agreement and for any negligent acts by St. Jude in preparing or providing the Material.",
+          "revision": "... and agents will not be Uabletoliable to the Recipient",
+          "comment": "We limited the scope of exculpated persons to those with a direct operational relationship to this Agreement; St. Jude should also bear liability for its own breach of contract and for negligence in preparing or providing the Materials, which are standard carve-outs in research agreements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5914,
+            "end_char": 6370,
+            "start_line": 106,
+            "end_line": 110,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "and agents will not be Uableto the Recipient for any damages, expenses (Including without limitation legai expenses), losses, claims, demands, suit brother actions (colleottvely hereinafter nelaims\") made by the Recipient, or made against the Recipient byany other party, due to or arising from the u",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “due to or arising from the use, storage or disposal” leaves a genuine causal-scope question about claims also attributable to St. Jude's breach or negligence in preparing or supplying the Material."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Destruction Obligation on Termination Without Carve-Out for Ongoing Research",
+          "description": "Clause 7  requires Recipient to \"destroy all unused Materials\" upon termination. This obligation is problematic because: (1) there is no wind-down period allowing UPenn to complete ongoing experiments; (2) there is no carve-out for Materials already incorporated into derivatives or products; and (3) there is no exception for Materials that must be retained for regulatory or legal compliance. UPenn should negotiate a reasonable wind-down period and appropriate carve-outs.",
+          "revision": "the agreement, Recipient shall destroyalldestroy all unused Materials within sixty (60) days, provided that Recipient may retain samples as reasonably required for regulatory compliance or to complete ongoing experiments commenced prior to termination.",
+          "comment": "We modified the destruction obligation to include a 60-day wind-down period and limited carve-outs for regulatory compliance and ongoing experiments, which reflects standard academic research practice and avoids placing UPenn in breach of applicable regulatory retention requirements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4074,
+            "end_char": 4807,
+            "start_line": 86,
+            "end_line": 94,
+            "match_cover": 0.424,
+            "match_run": 4,
+            "matched_text": "the agreement, Recipient shall destroyall unused Materials. a. Recipient shall not commercialize any product that contains Material without the prior written approval of St. Jude. The Recipient is free to file patent application(s) claiming Inventions made by Recipient through use of the Material bu",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Unused Materials” is vague as applied to material committed to ongoing experiments, incorporated into derivatives, or retained solely for regulatory compliance."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Short Termination Notice Period With No Cause Requirement",
+          "description": "Clause 7  allows either party to terminate on just 30 days' written notice, with no cause required. While mutual termination-for-convenience is common, a 30-day window is short for a research collaboration — UPenn may have committed significant resources and time. Consider extending to 60 or 90 days to allow orderly wind-down of research activities.",
+          "revision": "upon thirty (30) claysdays written notice by either party ...",
+          "comment": "A 30-day termination notice period is unusually short for a research collaboration where both parties commit significant resources; a longer notice period ensures orderly wind-down and is consistent with standard practice in sponsored research agreements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3693,
+            "end_char": 3746,
+            "start_line": 63,
+            "end_line": 63,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "upon thirty (30) clays written notice by either party",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The thirty-day no-cause termination period is commercially unfavorable but textually clear."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No IP Ownership Provision for UPenn Inventions",
+          "description": "Clause 8 addresses patent filing rights and grant-back licenses but never explicitly confirms that UPenn owns inventions made solely by its researchers. While UPenn's right to file patents is mentioned , the clause should affirmatively state that inventions conceived solely by Recipient Scientist belong to UPenn, and joint inventions are jointly owned — consistent with standard academic collaboration practice. The current ambiguity, combined with the broad \"Material\" definition, could be used by St. Jude to claim ownership of UPenn-developed innovations.",
+          "revision": "... through use of the Material but. Inventions conceived solely by Recipient personnel shall be owned by Recipient, and inventions conceived jointly by personnel of both parties shall be jointly owned. Recipient agrees to",
+          "comment": "We clarified IP ownership to reflect standard academic collaboration norms: solely-conceived inventions vest in the inventing party, and joint inventions are jointly owned — this resolves ambiguity that could otherwise lead to disputed ownership claims.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Restriction on Material Transfer Prevents Exclusivity",
+          "description": "Clause 5  expressly reserves St. Jude's \"unrestricted right to distribute the Material to other commercial or noncommercial entities.\" While this is standard for basic MTAs, this is styled as a \"Collaboration\" agreement. The unrestricted right to share the Material with competitors — including commercial entities — could undermine UPenn's research advantage and any IP position developed through the collaboration. UPenn should consider negotiating at minimum a notice requirement, or a limited exclusivity period for the specific field of use.",
+          "revision": "St. Jude retains the unresteicted rig htright to distribute the Material to other commercial ornoncommercial entities for research purposes. Distribution to commercial entities shall require prior written notice to Recipient.",
+          "comment": "We revised the distribution provision to restrict commercial transfers and require prior written notice, as unrestricted commercial distribution to third parties is inconsistent with the collaborative nature of this agreement and could undermine the Recipient's legitimate interest in protecting its research position.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2995,
+            "end_char": 3749,
+            "start_line": 55,
+            "end_line": 63,
+            "match_cover": 0.6,
+            "match_run": 7,
+            "matched_text": "St. Jude retains the unresteicted rig ht to distribute the Material to other commercial or noncommercial entities. 6. Recipient agrees that any publications that result from the collaborative research study between St. Jude and Recipient Scientist using the Material be jointly published in accordanc",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The unrestricted distribution right is an express operative allocation and does not contradict the agreement's description of the parties' own study as collaborative."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Publication Clause Lacks Pre-Publication Review Period",
+          "description": "Clause 6  provides for joint publication \"in accordance with academic standards\" but does not include any pre-publication review period. This is a significant gap — without a review period, either party could inadvertently publish results that would destroy patentability of the other's inventions. UPenn should add a standard 30-day review right before any publication, allowing either party to delay publication to file patent applications.",
+          "revision": "... Recipient Scientist using the Material         shall be jointly",
+          "comment": "We have incorporated a standard 30-day pre-publication review period, which is consistent with academic research practice and protects both parties' ability to preserve patent rights before any public disclosure of results.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3305,
+            "end_char": 3363,
+            "start_line": 59,
+            "end_line": 59,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "Recipient Scientist using the Material be jointly",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "6. Publications"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of a specified pre-publication review period is a missing protection, not an intrinsic ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "60-Day Patent Filing Notification Deadline Is Short",
+          "description": "Clause 8  requires UPenn to notify St. Jude within 60 days of filing any patent application claiming subject matter containing the Material. This is a relatively tight deadline for a university technology licensing office. Missing this deadline could be characterized as a breach. UPenn should negotiate a longer notification window (e.g., 90 or 120 days) or clarify that failure to notify within the period is not a material breach.",
+          "revision": "notify St. Jude within sixty (60)ninety (90) days of filing any patent ...",
+          "comment": "We extended the notification period to 90 days to reflect the practical realities of university technology transfer operations; a 60-day window creates an unreasonable risk of technical breach due to administrative processing timelines rather than any failure of intent.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4468,
+            "end_char": 4527,
+            "start_line": 91,
+            "end_line": 91,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "notify St. Jude within sixty (60) days of filing any patent",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The sixty-day post-filing notice deadline is definite; concern that it is too short is purely a negotiation issue."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Surviving Obligations After Termination",
+          "description": "Clause 7  addresses termination but does not specify which obligations survive termination. Key provisions that should survive include: the warranty disclaimer (Clause 9), liability provisions (Clause 10), the grant-back license (Clause 8), IP ownership, and publication rights. Without a survival clause, there is uncertainty about the parties' post-termination rights and obligations.",
+          "revision": "... set forth in the Agreement. ThlsThis agreement may be terminated •",
+          "comment": "We clarified that material provisions survive termination to ensure both parties retain their post-termination rights and obligations, which is standard practice and necessary for enforceability of core protections under Tennessee law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3602,
+            "end_char": 3662,
+            "start_line": 62,
+            "end_line": 62,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "set forth in the Agreement. Thls agreement may be terminated",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Silence concerning survival creates a potential substantive gap, but the issue does not identify a conflicting provision, whole-instrument inconsistency, or ambiguous term within the termination clause."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Human Use Prohibition May Conflict With Future Clinical Plans",
+          "description": "Clause 4  flatly prohibits the Material from being \"used in humans.\" Combined with the pre-clinical-only restriction in Clause 3, this creates a hard barrier to any future clinical translation. If UPenn's collaborative research yields promising results, it would need to negotiate an entirely new agreement before any clinical use. UPenn should consider adding language that allows the parties to negotiate in good faith an amendment permitting clinical use upon completion of successful pre-clinical studies.",
+          "revision": "... not be used in humans without prior written agreement of both parties, and will be stored, used, ...",
+          "comment": "We modified the outright prohibition on human use to require prior written agreement of both parties, which preserves Provider's consent rights while allowing the parties to negotiate a clinical use pathway if pre-clinical studies yield favorable results.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2738,
+            "end_char": 2784,
+            "start_line": 52,
+            "end_line": 52,
+            "match_cover": 0.588,
+            "match_run": 5,
+            "matched_text": "not be used in humans and will be stored, used",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "4. No Human or Commercial Use"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The no-human-use prohibition and the pre-clinical-only restriction point in the same direction; the lack of a future clinical pathway is a negotiation limitation, not a conflict."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Inventorship annotation found",
+          "description": "Internal annotation regarding inventorship determination found in the patent rights clause . The text \"INVT.IVTOITSHir tm,Lt. ls. PVTtlf/11 / 16`E'7„.. 1/9\" appears to be a drafting note or corrupted internal comment that should be removed before finalization.",
+          "revision": "INVT.IVTOITSHir tm,Lt. ls. PVTtlf/11 / 16`E'7„.. 1/9",
+          "comment": "Removed internal drafting annotation or corrupted text artifact from the patent rights clause to ensure the document is clean and suitable for finalization.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4918,
+            "end_char": 4970,
+            "start_line": 95,
+            "end_line": 95,
+            "match_cover": 1.0,
+            "match_run": 11,
+            "matched_text": "INVT.IVTOITSHir tm,Lt. ls. PVTtlf/11 / 16`E'7„.. 1/9",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted inventorship annotation is mechanically embedded in the patent provision and makes it uncertain whether an additional inventorship rule was intended to be operative."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Internal note in warranty section",
+          "description": "Internal annotation found in the warranty disclaimer section . The text \"C C410 WC, TO tr'S p -rrmr LA W\" appears to be an internal drafting note or reference that should be removed before finalization.",
+          "revision": "C C410 WC, TO tr'S p -rrmr LA W",
+          "comment": "Removed internal drafting notation from warranty section to ensure the document is clean and finalized for execution.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5028,
+            "end_char": 5059,
+            "start_line": 96,
+            "end_line": 96,
+            "match_cover": 1.0,
+            "match_run": 9,
+            "matched_text": "C C410 WC, TO tr'S p -rrmr LA W",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted text resembling a note about U.S. patent law is embedded beside the patent terms, creating uncertainty over whether it is extraneous or part of an intended operative statement."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Warranty disclaimer annotation",
+          "description": "Internal annotation or drafting note found in the warranty disclaimer language . The text \"i14 11\" appears to be an internal marker or corrupted comment that should be removed.",
+          "revision": "... it Is provided WITHOUT ANY i14 11",
+          "comment": "Removed internal drafting marker 'i14 11' that appeared to be a corrupted annotation or formatting artifact not intended for the final document.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5134,
+            "end_char": 5167,
+            "start_line": 97,
+            "end_line": 97,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "it Is provided WITHOUT ANY i14 11",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. No Warranties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The marker “i14 11” mechanically interrupts the operative phrase “WITHOUT ANY WARRANTIES” and must be construed or disregarded as an accidental artifact."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: agreement",
+          "description": "The term 'Agreement' is defined in the opening paragraph  but appears in lowercase as 'agreement' in clause 7  when referencing the defined term. This should be capitalized to maintain consistency and clarity that it refers to the defined term.",
+          "revision": "the Agreement. Thls agreementAgreement may be terminated •",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3615,
+            "end_char": 3662,
+            "start_line": 62,
+            "end_line": 62,
+            "match_cover": 0.857,
+            "match_run": 3,
+            "matched_text": "the Agreement. Thls agreement may be terminated",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Despite lowercase capitalization, “agreement” has no reasonable referent other than this instrument."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: materials",
+          "description": "The term 'Material' is formally defined in clause 1  but appears in lowercase plural form as 'unused Materials' in clause 7 . This should be 'unused Material' to maintain consistency with the defined term. Modify term(s) the agreement, Recipient shall destroyall unused Materials.Material.",
+          "revision": "",
+          "comment": "",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Persons misspelled as persone",
+          "revision": "... use by Recipient Scientist or persone dIrectlypersons directly supervised by",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2111,
+            "end_char": 2171,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 0.9,
+            "match_run": 6,
+            "matched_text": "use by Recipient Scientist or persone dIrectly supervised by",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Restriction on Use and Transfer"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Persone” is an obvious misspelling of “persons” and does not materially change the restriction."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Not misspelled as net, other misspelled as ether",
+          "revision": "The Material may netnot be transferred or taken to any etherother",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2221,
+            "end_char": 2272,
+            "start_line": 47,
+            "end_line": 47,
+            "match_cover": 0.818,
+            "match_run": 6,
+            "matched_text": "The Material may net be transferred or taken to any",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Restriction on Use and Transfer"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The substitution of “net” for “not” mechanically corrupts the operative prohibition; “ether” for “other” further distorts the stated scope of prohibited laboratory transfers."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: redplent",
+          "description": "The term 'Recipient' is defined in the opening paragraph  but appears with inconsistent capitalization as 'Redplent' in clause 2 . This should be 'Recipient' to maintain consistency with the defined term. Modify term(s) the immediate and direct control of RedplentRecipient Scientist.",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: claims",
+          "description": "The term 'Claims' is defined inline in clause 10  but appears in lowercase as 'claims' in the same paragraph  when referencing the defined term. This should be capitalized to maintain consistency.",
+          "revision": "claimsClaims, demands, suit brother actions (colleottvely hereinafter nelaimsnClaims\") made by the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6090,
+            "end_char": 6167,
+            "start_line": 108,
+            "end_line": 108,
+            "match_cover": 0.818,
+            "match_run": 6,
+            "matched_text": "demands, suit brother actions (colleottvely hereinafter nelaims\") made by the",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase occurrence of “claims” appears within the list that is being collectively defined, so capitalization does not create a distinct meaning or inconsistent defined-term usage."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Grammar error",
+          "description": "Missing auxiliary verb will before be",
+          "revision": "... Recipient Scientist using the Material         will be jointly",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3305,
+            "end_char": 3363,
+            "start_line": 59,
+            "end_line": 59,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "Recipient Scientist using the Material be jointly",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "6. Publications"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Agrees that [publications] be jointly published” is an intelligible mandative formulation; omission of “will” does not materially alter the obligation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "To misspelled as te",
+          "revision": "... transfer of the Material grants teto Recipient no rights Inin the Material other than",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3473,
+            "end_char": 3554,
+            "start_line": 61,
+            "end_line": 61,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "transfer of the Material grants te Recipient no rights In the Material other than",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Te” is plainly a typographical error for “to” and creates no reasonable alternative reading."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space between destroy and all",
+          "revision": "the agreement, Recipient shall destroyalldestroy all unused Materials.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4074,
+            "end_char": 4132,
+            "start_line": 86,
+            "end_line": 86,
+            "match_cover": 0.75,
+            "match_run": 4,
+            "matched_text": "the agreement, Recipient shall destroyall unused Materials",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "7. No Other Rights; Termination"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “destroyall” does not alter or obscure the destruction obligation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space in FOR A",
+          "revision": "WARRANTIES OF MERCHANTABILITY AND FITNESS FORAFOR A PARTICULAR USE.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5271,
+            "end_char": 5332,
+            "start_line": 99,
+            "end_line": 99,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "WARRANTIES OF MERCHANTABILITY AND FITNESS FORA PARTICULAR USE",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. No Warranties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “FORA” is cosmetic and does not change the fitness-for-a-particular-use disclaimer."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space in WARRANTY THAT",
+          "revision": "... NO REPRESENTATION AND PROVIDES NO WARRANTYTHATWARRANTY THAT",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5373,
+            "end_char": 5677,
+            "start_line": 100,
+            "end_line": 104,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "NO REPRESENTATION AND PROVIDES NO WARRANTYTHAT THE USE OF THE MATERIAL WILL NOT iNFRINGE ANY PATENT OR OTHER PROPRIEJARYBIGHT--. 10. Except to the extent prohibited by taw, the Recipient assumes all Rability for damages that",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. No Warranties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “WARRANTYTHAT” does not affect the disclaimer's intelligible meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Liability misspelled as Rability",
+          "revision": "... to the extent prohibited by tawlaw, the Recipient assumes all Rabilityliability for",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5572,
+            "end_char": 5643,
+            "start_line": 103,
+            "end_line": 103,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "to the extent prohibited by taw, the Recipient assumes all Rability for",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Rability” is an obvious scanning or spelling corruption of “liability” in context and does not create a competing interpretation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Liable misspelled as Uable",
+          "revision": "Directors, officers., staff, representatives and agents will not be Uabletoliable to the Recipient",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5870,
+            "end_char": 6370,
+            "start_line": 106,
+            "end_line": 110,
+            "match_cover": 0.846,
+            "match_run": 9,
+            "matched_text": "Directors, officers. staff, representatives and agents will not be Uableto the Recipient for any damages, expenses (Including without limitation legai expenses), losses, claims, demands, suit brother actions (colleottvely hereinafter nelaims\") made by the Recipient, or made against the Recipient bya",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Uable” is unmistakably a corruption of “liable,” so the spelling error does not change the exculpatory provision's meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space in by any",
+          "revision": "... or made against the Recipient byanyby any other party, due to or ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6200,
+            "end_char": 6258,
+            "start_line": 109,
+            "end_line": 109,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "or made against the Recipient byany other party, due to or",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “byany” does not affect the clear phrase “by any other party.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Extent misspelled as odent",
+          "revision": "... the Recipient, except to the odentextent",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6342,
+            "end_char": 6370,
+            "start_line": 110,
+            "end_line": 110,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "the Recipient, except to the",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Liability and Indemnity"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The phrase “except to the odent” can only reasonably be read as “except to the extent,” making the misspelling non-substantive."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Recipient misspelled as Redpient",
+          "revision": "of RedpientRecipient sign and return a copy of this letter to Esther Allay Inin the Office of Technology",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6322,
+            "end_char": 6712,
+            "start_line": 110,
+            "end_line": 114,
+            "match_cover": 0.889,
+            "match_run": 11,
+            "matched_text": "of the Materials by the Recipient, except to the odent such Claims are solely caused by the gross negligence or willful misconduct of St. Jude. If Recipient Scientist and Recipient agree to the above, please sign and have an authorized official of Redpient sign and return a copy of this letter to Es",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Execution Instruction"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Redpient” is an obvious misspelling of the repeatedly defined and identified Recipient and does not create uncertainty about who must sign."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Preamble / Purpose",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Punctuation error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The punctuation in “Dr, Dario Campana” is an obvious typographical irregularity that does not create uncertainty about the identified person or the provision's meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "2. Restriction on Use and Transfer",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Persone” is an obvious misspelling of “persons” in context and does not create a reasonable competing meaning."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Substituting “net” for “not” mechanically corrupts the operative prohibition and, if read literally, removes the intended negative term."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Persone” is an obvious misspelling of “persons” and does not materially change the restriction."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The substitution of “net” for “not” mechanically corrupts the operative prohibition; “ether” for “other” further distorts the stated scope of prohibited laboratory transfers."
+        }
+      ],
+      "risky": true
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "4. No Human or Commercial Use",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "No St. Jude Right to Audit or Inspect Use",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an audit or inspection right is an omitted enforcement mechanism, not a construction issue."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Pre-Clinical Use Limitation Is Unnecessarily Restrictive",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The pre-clinical limitation is narrow but clear and is consistent with the separate prohibition on human use."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "No Human Use Prohibition May Conflict With Future Clinical Plans",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The no-human-use prohibition and the pre-clinical-only restriction point in the same direction; the lack of a future clinical pathway is a negotiation limitation, not a conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "5. St. Jude's Right to Distribute",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Unresteicted rig ht” is an obvious misspelling and spacing artifact for “unrestricted right,” with no reasonable alternative meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "6. Publications",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "No Reporting or Progress Update Obligation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Calling the project a collaboration does not itself impose a reporting obligation, so the missing reporting right is a negotiation gap rather than an inconsistency."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Missing word",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Although awkward, “agrees that [publications] be jointly published” can operate as a mandative construction and clearly states the publication obligation; adding “will” would not materially change it."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Publication Clause Lacks Pre-Publication Review Period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a specified pre-publication review period is a missing protection, not an intrinsic ambiguity or conflict."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Grammar error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Agrees that [publications] be jointly published” is an intelligible mandative formulation; omission of “will” does not materially alter the obligation."
+        }
+      ],
+      "risky": false
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "7. No Other Rights; Termination",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 14,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Missing Pre-Publication Review Right",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an express pre-publication review period is a negotiation gap, not an ambiguity, mechanical defect, or inconsistency within the instrument."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Termination Clause Lacks Survival Provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement's silence about survival may affect post-termination rights, but the issue identifies an omitted provision rather than a conflicting clause or intrinsically ambiguous term."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "No Right to Terminate for Breach",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The thirty-day termination mechanism is clear; the absence of an additional immediate breach-termination right is a negotiation issue."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Inconsistent capitalization: agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase “agreement” plainly refers to the only agreement being terminated; capitalization does not create a reasonable alternative referent."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Te” is an obvious typographical error for “to” and does not create uncertainty about the grant language."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Thls” is plainly a typographical rendering of “This” and does not affect the termination provision's meaning."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Thirty (30) clays” mechanically substitutes a different word for the intended time unit “days,” corrupting the stated notice period even though the intended correction is apparent."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “destroyall” does not obscure the command to destroy all unused Materials or change its scope."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Short Termination Notice Period With No Cause Requirement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The thirty-day no-cause termination period is commercially unfavorable but textually clear."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "No Restriction on Material Transfer Prevents Exclusivity",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The unrestricted distribution right is an express operative allocation and does not contradict the agreement's description of the parties' own study as collaborative."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "No Surviving Obligations After Termination",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Silence concerning survival creates a potential substantive gap, but the issue does not identify a conflicting provision, whole-instrument inconsistency, or ambiguous term within the termination clause."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Inconsistent capitalization: agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Despite lowercase capitalization, “agreement” has no reasonable referent other than this instrument."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Te” is plainly a typographical error for “to” and creates no reasonable alternative reading."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “destroyall” does not alter or obscure the destruction obligation."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "9. No Warranties",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Internal comment in warranty section",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The unexplained marker “i14 11” is mechanically embedded within the operative warranty disclaimer and disrupts the phrase “WITHOUT ANY WARRANTIES,” requiring it to be treated or construed as extraneous text."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“FORA PARTICULAR USE” is plainly readable as “FOR A PARTICULAR USE”; the missing space does not affect the disclaimer."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “WARRANTYTHAT” does not change the readily intelligible warranty disclaimer."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Warranty disclaimer annotation",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The marker “i14 11” mechanically interrupts the operative phrase “WITHOUT ANY WARRANTIES” and must be construed or disregarded as an accidental artifact."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “FORA” is cosmetic and does not change the fitness-for-a-particular-use disclaimer."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “WARRANTYTHAT” does not affect the disclaimer's intelligible meaning."
+        }
+      ],
+      "risky": true
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "10. Liability and Indemnity",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 11,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "No Affirmative Indemnification from Recipient",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision lacks an express duty to indemnify or defend, but that is an omitted protection rather than a textual ambiguity or conflict."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Uableto” is an obvious scanning or typographical error for “liable to” and supplies no reasonable alternative meaning."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “byany” does not alter the clear reference to claims made by any other party."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "In the phrase “except to the odent,” the nonword is unmistakably a corruption of “extent” and does not create a genuine alternative construction."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "One-Sided Liability Assumption Unfairly Burdens UPenn",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The scope of damages that “may arise from” Recipient's use, storage, or disposal is causally vague, including whether it reaches harm attributable to an inherent defect in the supplied Material."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Broad Exculpation of St. Jude From All Damages",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “due to or arising from the use, storage or disposal” leaves a genuine causal-scope question about claims also attributable to St. Jude's breach or negligence in preparing or supplying the Material."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Inconsistent capitalization: claims",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase occurrence of “claims” appears within the list that is being collectively defined, so capitalization does not create a distinct meaning or inconsistent defined-term usage."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Rability” is an obvious scanning or spelling corruption of “liability” in context and does not create a competing interpretation."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Uable” is unmistakably a corruption of “liable,” so the spelling error does not change the exculpatory provision's meaning."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “byany” does not affect the clear phrase “by any other party.”"
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The phrase “except to the odent” can only reasonably be read as “except to the extent,” making the misspelling non-substantive."
+        }
+      ],
+      "risky": true
+    },
+    "neg9": {
+      "clause_id": "neg9",
+      "clause_name": "Execution Instruction",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "recipient_june_upenn"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Redpient” is an obvious misspelling of the repeatedly defined and identified Recipient and does not create uncertainty about who must sign."
+        }
+      ],
+      "risky": false
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Paragraph 1 — Definition of \"Material\" (2003 MTA)",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "No Confidentiality Obligations on Recipient",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a confidentiality covenant is a substantive omission, not a textual defect or conflict with another provision."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted identifier “anti-CD19-BB-.” appears in the definition of the transferred biological material, and replacing the intended final character with punctuation can change which construct is covered."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The split word “proprie tary” remains unmistakably readable as “proprietary” and does not alter the scope of the rights referenced."
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Paragraph 8 — Commercialization and patent notification (2003 MTA)",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 10,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Grant-Back License Too Narrow for St. Jude",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The boundary of the phrase “non-commercial purposes” is genuinely uncertain, particularly for research connected with later licensing or commercial development."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "No Certification of Destruction Required",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Requiring destruction without requiring written certification is a verification gap, not a construction defect."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "No Consequences for Late Patent Notification",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of a specified contractual consequence or pre-filing consent right is a remedies and negotiation issue, not an internal ambiguity or inconsistency."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Commercialization Approval Lacks Standards or Timeline",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Prior written approval” does not state whether St. Jude may withhold approval arbitrarily or is subject to an implied reasonableness or good-faith standard, creating a construction question about the approval right."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "St. Jude Veto Over Commercialization Is One-Sided",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The unqualified term “approval” leaves room to dispute whether St. Jude has absolute discretion or must exercise the approval right reasonably or in good faith."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Royalty-Free Grant-Back License to St. Jude Is Overly Generous",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The causal phrase “inventions that arise from the use of the Materials” has an uncertain boundary and may or may not encompass inventions primarily attributable to UPenn's independent contributions."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Destruction Obligation on Termination Without Carve-Out for Ongoing Research",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Unused Materials” is vague as applied to material committed to ongoing experiments, incorporated into derivatives, or retained solely for regulatory compliance."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "60-Day Patent Filing Notification Deadline Is Short",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The sixty-day post-filing notice deadline is definite; concern that it is too short is purely a negotiation issue."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Inventorship annotation found",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted inventorship annotation is mechanically embedded in the patent provision and makes it uncertain whether an additional inventorship rule was intended to be operative."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Internal note in warranty section",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted text resembling a note about U.S. patent law is embedded beside the patent terms, creating uncertainty over whether it is extraneous or part of an intended operative statement."
+        }
+      ],
+      "risky": true
+    }
+  }
+}

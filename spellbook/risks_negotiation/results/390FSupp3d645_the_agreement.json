@@ -1,0 +1,1013 @@
+{
+  "contract_id": "390FSupp3d645_the_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 6,
+  "n_issues": 27,
+  "n_located": 23,
+  "n_judged": 23,
+  "n_skipped": 4,
+  "counts": {
+    "cat1": 16,
+    "cat2": 0,
+    "none": 7
+  },
+  "parties": {
+    "company_delta_speir": {
+      "n_issues": 10,
+      "n_located": 9,
+      "by_tab": {
+        "risks_negotiation": 9,
+        "proofread": 1
+      },
+      "by_kind": {
+        "Notable": 5,
+        "Important": 3,
+        "Minor": 1,
+        "Spelling + Grammar": 1
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Vague and open-ended future consulting obligation",
+          "description": "The recital  states Consultants \"will provide, upon the Company's request, future consulting services to enhance the value for the sale of the property.\" This is extremely vague — it does not define the scope, duration, or nature of these future services, yet the Consultants are entitled to 20% of all profits regardless. From the Company's perspective, it should be clarified that the profit participation is contingent on Consultants actually performing meaningful services, and the scope of services should be better defined.",
+          "revision": "... College of Art and Design , and will provide, upon the Company's request, futurereasonable consulting services related to enhancing the value and marketability of the property for sale; and",
+          "comment": "We qualified the future consulting obligation to ensure it is bounded by reasonableness and directly tied to enhancing value and marketability, which is consistent with the commercial purpose of the arrangement and protects both parties from scope creep.",
+          "group_size": 1,
+          "location": {
+            "start_char": 862,
+            "end_char": 1295,
+            "start_line": 18,
+            "end_line": 27,
+            "match_cover": 0.786,
+            "match_run": 10,
+            "matched_text": "College of Art and Design , and will provide, upon the Company’s request, future consulting services to enhance the value for the sale of the property; and Whereas, Company agreed to compensate, as described in this Agreement, Consultants for their consulting services. Therefore, the parties agree a",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Recitals"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrases “future consulting services” and “to enhance the value” leave the nature and extent of the contemplated services indefinite."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Profit definition excludes original purchase price",
+          "description": "The definition of \"Profit\" in Section 1  deducts only \"reasonable expenses, holding costs and expenses relating to transactions\" from total sale proceeds, but critically does not deduct the Company's original acquisition cost (purchase price) of the Delta Bluffs property. As written, the Consultants would receive 20% of gross proceeds minus expenses — not 20% of actual profit. This is extremely unfavorable to the Company and likely does not reflect the parties' intent. The purchase price should be deducted to calculate true profit.",
+          "revision": "... proceeds from a sale, less reasonable expenses,the Company's original acquisition cost of the property (including closing costs), reasonable expenses, holding costs and expenses relating to transactions regarding the property (i.e. donations, etc).",
+          "comment": "We added the Company's original acquisition cost as a deduction from Profit to reflect standard commercial practice; compensating Consultants on proceeds above cost — not above expenses alone — is the correct measure of actual profit and almost certainly reflects both parties' intent.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1230,
+            "end_char": 1373,
+            "start_line": 26,
+            "end_line": 27,
+            "match_cover": 0.618,
+            "match_run": 16,
+            "matched_text": "proceeds from a sale, less reasonable expenses, holding costs and expenses relating to transactions regarding the property (i.e. donations, etc",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Section 1 — Definition of \"Profit\""
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The omission of acquisition cost makes the bargain unfavorable but does not make the express definition of “Profit” ambiguous or internally inconsistent."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "\"Reasonable expenses\" in Profit definition is undefined",
+          "description": "The Profit definition in Section 1  deducts \"reasonable expenses, holding costs and expenses relating to transactions\" but does not define what constitutes \"reasonable expenses\" or \"holding costs.\" This vagueness could lead to disputes about what the Company may deduct before calculating Consultants' share. Consider adding examples or a more detailed definition (e.g., property taxes, insurance, maintenance, legal fees, brokerage commissions, financing costs).",
+          "revision": "holding costs (including but not limited to property taxes, insurance, maintenance, financing costs, and legal fees) and expenses relating to transactions regarding the property (i.e. donations, brokerage commissions, closing costs, etc).",
+          "comment": "We specified the categories of holding costs and transaction expenses to provide greater certainty for all parties in calculating Profit distributions, consistent with standard real estate joint venture practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1278,
+            "end_char": 1373,
+            "start_line": 27,
+            "end_line": 27,
+            "match_cover": 0.438,
+            "match_run": 11,
+            "matched_text": "holding costs and expenses relating to transactions regarding the property (i.e. donations, etc",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Section 1 — Definition of \"Profit\""
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Reasonable expenses” and “holding costs” have uncertain boundaries that could produce competing calculations of Profit."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No limitation on transfers or indirect sales",
+          "description": "Section 2.a  triggers profit participation \"upon sale of a portion or all of Delta Bluffs by Company.\" This could be interpreted to cover any transfer, including involuntary transfers, foreclosures, or membership interest transfers. From the Company's perspective, consider clarifying that this applies only to voluntary, arm's-length sales of the real property itself, and not to transfers of membership interests in the Company or involuntary dispositions.",
+          "revision": "a. Profits from Sale. Upon a voluntary, arm's-length sale of a portion or all of the Delta Bluffs real property by Company, Company shall",
+          "comment": "We clarified that profit participation applies only to voluntary, arm's-length real property sales, consistent with the apparent intent of the parties and to avoid ambiguity around involuntary transfers or equity-level transactions that do not constitute a sale of the underlying asset.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1403,
+            "end_char": 1496,
+            "start_line": 31,
+            "end_line": 31,
+            "match_cover": 0.72,
+            "match_run": 7,
+            "matched_text": "a. Profits from Sale. Upon sale of a portion or all of Delta Bluffs by Company, Company shall",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.a — Profits from Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The term “sale” has a potentially disputed boundary as applied to foreclosures, exchanges, and other involuntary or indirect dispositions."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Singular \"Consultant\" vs. plural \"Consultants\" inconsistency",
+          "description": "Section 2.a  refers to \"Consultant\" (singular) while the agreement defines two individuals as \"Consultants\" (plural). This creates ambiguity about whether payment is owed to only one consultant or both. It should also clarify whether the 20% is split between them or paid to each.",
+          "revision": "pay Consultants, collectively, twenty-percent (20%) of the Profits ...",
+          "comment": "We aligned the payment obligation with the agreement's defined term 'Consultants' and specified 'collectively' to confirm the 20% is shared, ensuring clarity on the total compensation owed from Profits.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1497,
+            "end_char": 1547,
+            "start_line": 32,
+            "end_line": 32,
+            "match_cover": 0.778,
+            "match_run": 6,
+            "matched_text": "pay Consultant twenty-percent (20%) of the Profits",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.a — Profits from Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Using singular “Consultant” after defining the two individuals collectively as “Consultants” is a drafting error that changes or obscures who receives the payment."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No payment timing specified for profit participation",
+          "description": "Section 2.a  obligates the Company to pay 20% of Profits upon sale but does not specify when payment is due (e.g., within 30 days of closing, upon receipt of proceeds). This creates uncertainty and potential disputes about timing. A specific payment deadline should be included.",
+          "revision": "pay Consultants, collectively, twenty-percent (20%) of the Profits from the sale, payable within thirty (30) days after Company's receipt of the sale proceeds.",
+          "comment": "We clarified the payment timing to provide certainty for both parties — the 30-day window runs from actual receipt of proceeds, which is a commercially standard and reasonable trigger.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1497,
+            "end_char": 1669,
+            "start_line": 32,
+            "end_line": 36,
+            "match_cover": 0.5,
+            "match_run": 9,
+            "matched_text": "pay Consultant twenty-percent (20%) of the Profits from the sale. b. Profits from Tax Savings. Company or its principal may realize certain tax savings as a result of the",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Upon sale” does not clearly establish whether payment is due at closing, upon receipt of proceeds, or within a reasonable period afterward."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Tax savings calculation method undefined",
+          "description": "Section 2.b  references \"certain tax savings\" the Company or its principal may realize from the donation, but does not define how these savings are to be calculated. \"Tax savings\" could be interpreted as the value of the charitable deduction, the actual tax reduction, or some other measure. This ambiguity is unfavorable to the Company because the Consultants could argue for the most favorable interpretation. The provision should specify that savings means the actual reduction in tax liability directly attributable to the donation.",
+          "revision": "... may realize certain tax savings, defined as the actual reduction in federal and state tax liability directly attributable to the charitable deduction arising from the donation, as a",
+          "comment": "The definition of 'tax savings' has been clarified to mean the actual reduction in tax liability directly attributable to the charitable deduction, which is the most commercially accurate and verifiable measure for calculating profit-sharing under this provision.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1618,
+            "end_char": 2146,
+            "start_line": 34,
+            "end_line": 44,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "may realize certain tax savings as a result of the donation of 100 acres of Delta Bluffs to Savannah College of Art and Design, Consultants shall be entitled to twenty-percent (20%) of such savings, once the risk of a federal or state tax audit has expired, which is expected to occur in October 2016",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Tax savings” can reasonably refer to the deduction amount, the resulting reduction in tax liability, or another tax benefit."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Audit expiration date should reference actual statute of limitations",
+          "description": "The payment trigger for tax savings in Section 2.b  should be tied to the actual expiration of all applicable federal and state statutes of limitations for audit, rather than an \"expected\" date. Additionally, if the tax savings are later disallowed or clawed back, there is no provision requiring Consultants to return their share. Consider adding a clawback right.",
+          "revision": "... (20%) of such savings, once the risk of a federal or state tax audit has expired, which isall applicable federal and state statutes of limitations for audit of the relevant tax returns have expired without challenge, and provided that such savings are not subsequently disallowed or reduced.",
+          "comment": "Payment conditioned on actual expiration of applicable federal and state audit statutes of limitations reflects standard tax contingency fee practice and ensures fees are not paid on savings that remain subject to challenge or reversal by taxing authorities.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1796,
+            "end_char": 2134,
+            "start_line": 37,
+            "end_line": 41,
+            "match_cover": 0.426,
+            "match_run": 17,
+            "matched_text": "20%) of such savings, once the risk of a federal or state tax audit has expired, which is expected to occur in October 2016. 3. Integration. | This Agreement encompasses the entire agreement between the parties in connection with Delta Bluffs and supersedes all previous agreements and understandings",
+            "clause": {
+              "clause_id": "pos4",
+              "label": "POSITIVE",
+              "clause_name": "Section 3 — Integration (merger clause)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The trigger “once the risk of a federal or state tax audit has expired” is vague, while the merely “expected” October 2016 date does not definitively resolve it."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Integration clause should require written amendments",
+          "description": "Section 3  should include a requirement that modifications be in writing. Consider adding this language at the end of the integration clause to protect the Company from claims of oral modification.",
+          "revision": "written,. This Agreement may not be amended or modified except by a written instrument signed by all parties.",
+          "comment": "We added a written amendment requirement to the integration clause to ensure that any modifications are documented and mutually agreed upon, which protects both parties from disputes over alleged oral amendments.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing spaces in case citation",
+          "description": "Missing spaces in \"Page1of1\"",
+          "revision": "... Filed 01/31/19 Entry Number 19-1 Page1of1Page 1 of 1",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 23,
+            "end_char": 297,
+            "start_line": 1,
+            "end_line": 8,
+            "match_cover": 0.75,
+            "match_run": 8,
+            "matched_text": "Filed 01/31/19 Entry Number 19-1 Page1of1 Exhibit A TI I This Agreement is entered between RAYMOND M. GEE and ADAM A. MARTIN (“Consultants”), on one hand, and DELTA SPEIR PLANTATION, LLC, a Georgia limited liability company (“Company”), on the other. The effective date of",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble - Parties and Effective Date"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing spaces in the court-filing notation “Page1of1” do not alter any contractual meaning."
+          }
+        }
+      ]
+    },
+    "consultants_gee_martin": {
+      "n_issues": 17,
+      "n_located": 14,
+      "by_tab": {
+        "risks_negotiation": 11,
+        "proofread": 6
+      },
+      "by_kind": {
+        "Important": 4,
+        "Notable": 4,
+        "Minor": 3,
+        "Spelling + Grammar": 4,
+        "Definitions": 2
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Vague \"Profit\" definition exposes Gee to inflated deductions",
+          "description": "The definition of \"Profit\" in Section 1  allows the Company to deduct \"reasonable expenses, holding costs and expenses relating to transactions regarding the property\" without any cap, itemization requirement, or standard for determining what is \"reasonable.\" This gives the Company broad discretion to reduce the profit calculation by claiming expansive costs, directly reducing Mr. Gee's 20% participation. The parenthetical \"(i.e. donations, etc)\" further broadens the scope of deductible items. Consider requiring the Company to provide an itemized accounting and tightening the language around permissible deductions.",
+          "revision": "1,. Definition. \"Profit,\" as used herein, is the total proceeds from a sale, less reasonabledocumented and reasonable out-of-pocket expenses,",
+          "comment": "We revised the deduction standard to require expenses to be documented and out-of-pocket, which reflects standard practice in profit-sharing arrangements and ensures Mr. Gee's participation is calculated on a verifiable, objective basis rather than discretionary cost determinations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1176,
+            "end_char": 1437,
+            "start_line": 26,
+            "end_line": 31,
+            "match_cover": 0.762,
+            "match_run": 14,
+            "matched_text": "1, Definition. “Profit,” as used herein, is the total proceeds from a sale, less reasonable expenses, holding costs and expenses relating to transactions regarding the property (i.e. donations, etc). 2. Profit Participation. a. Profits from Sale. Upon sale of",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Section 1 — Definition of \"Profit\""
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The terms “reasonable expenses” and “holding costs” lack definite boundaries, allowing competing views of permissible deductions."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No payment deadline for profit participation",
+          "description": "Section 2(a)  requires the Company to pay Consultants 20% of Profits \"[u]pon sale\" but does not specify a deadline by which payment must be made after closing. Without a defined payment period, the Company could delay payment indefinitely. A specific timeframe (e.g., within 30 days of closing) should be added to protect Mr. Gee's interests.",
+          "revision": "a. Profits from Sale. UponWithin thirty (30) days following the closing of a sale of a portion or ...",
+          "comment": "We specified a 30-day post-closing payment window to provide a clear, commercially standard deadline for the profit participation obligation, ensuring enforceability under South Carolina contract law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1403,
+            "end_char": 1450,
+            "start_line": 31,
+            "end_line": 31,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "a. Profits from Sale. Upon sale of a portion or",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.a — Profits from Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “upon sale” leaves uncertain the permissible interval between the sale or closing and actual payment."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Tax savings payment trigger is vague and unverifiable",
+          "description": "Section 2(b)  conditions payment of the tax savings share on when \"the risk of a federal or state tax audit has expired,\" which is described as \"expected to occur in October 2016.\" This language is problematic for Mr. Gee: (1) the statute of limitations for tax audits varies and may not have a clear expiration date; (2) the Company controls information about its tax filings and audit status, leaving Mr. Gee unable to verify the trigger; and (3) \"expected\" creates no binding timeline. The provision should tie payment to a definite date or the expiration of the applicable statute of limitations, and require the Company to provide written notice and documentation of the tax savings realized.",
+          "revision": "... College of Art and Design,. Consultants shall be",
+          "comment": "We revised this provision to tie the tax savings payment to a definite, verifiable trigger, as the current 'expected' audit expiration language creates an unenforceable and unverifiable payment condition that prejudices Consultant's ability to receive timely compensation under South Carolina contract law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1720,
+            "end_char": 1767,
+            "start_line": 36,
+            "end_line": 36,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "College of Art and Design, Consultants shall be",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“The risk of a federal or state tax audit has expired” lacks a definite legal or factual boundary, and “expected” supplies no binding date."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No deadline for tax savings payment after trigger",
+          "description": "Section 2(b)  states Consultants are \"entitled to\" 20% of tax savings once the audit risk expires, but does not specify when the Company must actually make the payment. A specific payment deadline (e.g., within 30 days of the expiration of the applicable statute of limitations) should be added.",
+          "revision": "... twenty-percent (20%) of such savings, oncepayable within thirty (30) days after the riskexpiration of the applicable statute of limitations for a federal or state tax audit has expired, which is",
+          "comment": "Without a defined payment deadline, the entitlement to 20% of tax savings is practically unenforceable; we've specified a 30-day window post-expiration of the audit limitations period to provide both parties with a clear, commercially reasonable timeline.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1780,
+            "end_char": 1885,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 0.581,
+            "match_run": 10,
+            "matched_text": "twenty-percent (20%) of such savings, once the risk of a federal or state tax audit has expired, which is",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Saying Consultants are “entitled to” payment “once” the trigger occurs leaves unclear whether payment is immediately due or due within some later reasonable period."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No accounting or audit right for Consultants",
+          "description": "Neither Section 1  nor Section 2  provides Mr. Gee with any right to receive an accounting of the sale proceeds, expenses deducted, or tax savings realized. Since the Company controls all financial information needed to calculate \"Profit\" and tax savings, Mr. Gee has no mechanism to verify the accuracy of payments. Consider adding a right to receive a written accounting and to audit the Company's books related to the property.",
+          "revision": "... regarding the property (i.e. donations, etc).etc.). Company shall provide Consultants with a written accounting of the calculation of Profit within fifteen (15) days of closing, and Consultants shall have the right, at their expense, to audit Company's books and records related to such calculation.",
+          "comment": "Because the Company solely controls the financial records used to calculate Profit, standard commercial practice requires that the compensated party have a right to receive a written accounting and to audit relevant books and records to ensure accurate payment.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1330,
+            "end_char": 1897,
+            "start_line": 27,
+            "end_line": 38,
+            "match_cover": 0.391,
+            "match_run": 7,
+            "matched_text": "regarding the property (i.e. donations, etc). 2. Profit Participation. a. Profits from Sale. Upon sale of a portion or all of Delta Bluffs by Company, Company shall pay Consultant twenty-percent (20%) of the Profits from the sale. b. Profits from Tax Savings. Company or its principal may realize cer",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of accounting and audit rights is a missing contractual protection, not an ambiguity, mechanical error, or conflict among existing provisions."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "\"Company or its principal\" creates ambiguity on tax savings obligation",
+          "description": "Section 2(b)  states \"Company or its principal may realize certain tax savings,\" using \"may\" and the disjunctive \"or its principal.\" This is problematic for Mr. Gee because: (1) if the tax savings flow to the \"principal\" personally rather than the Company, the Company could argue it has no obligation to pay since it did not realize the savings; and (2) \"may\" suggests contingency rather than acknowledgment that savings were or will be realized. The language should be tightened to ensure whoever realizes the savings is obligated to pay Consultants their share.",
+          "revision": "... Savings. Company or its principal may realize certainshall pay Consultants twenty percent (20%) of any tax savings realized as a",
+          "comment": "The revision ensures that the payment obligation follows the economic benefit — if the principal rather than the Company captures the tax savings, the obligation to pay Consultants their 20% share should not be extinguished on that basis.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1584,
+            "end_char": 2146,
+            "start_line": 34,
+            "end_line": 44,
+            "match_cover": 0.7,
+            "match_run": 7,
+            "matched_text": "Savings. Company or its principal may realize certain tax savings as a result of the donation of 100 acres of Delta Bluffs to Savannah College of Art and Design, Consultants shall be entitled to twenty-percent (20%) of such savings, once the risk of a federal or state tax audit has expired, which is",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Company or its principal may realize” leaves uncertain how the payment obligation operates when the nonparty principal, rather than the Company, receives the tax benefit."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No anti-avoidance protection against non-sale transfers",
+          "description": "Section 2(a)  only triggers the 20% profit participation \"[u]pon sale\" of Delta Bluffs. The Company could avoid this obligation by transferring the property through non-sale transactions such as a contribution to another entity, a membership interest transfer, a merger, or a like-kind exchange. Mr. Gee's interests would be better protected by broadening the trigger to cover any disposition or transfer of the property or of the Company's ownership interests.",
+          "revision": "a. Profits from Sale. Upon saleWithin thirty (30) days following the closing of a sale, exchange, transfer, or other disposition of a portion or all of Delta Bluffs by Company (including any transfer of membership interests in the Company), Company shall",
+          "comment": "We expanded the disposition trigger to include exchanges, transfers, and membership interest transfers to prevent structural avoidance of the profit participation obligation, which is standard anti-avoidance practice in profit-sharing arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1403,
+            "end_char": 1496,
+            "start_line": 31,
+            "end_line": 31,
+            "match_cover": 0.439,
+            "match_run": 10,
+            "matched_text": "a. Profits from Sale. Upon sale of a portion or all of Delta Bluffs by Company, Company shall",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.a — Profits from Sale"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an anti-avoidance provision is a substantive coverage gap; the clause can operate according to its stated trigger of a sale without textual inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No allocation between Consultants specified",
+          "description": "The agreement  defines \"Consultants\" to include both Raymond M. Gee and Adam A. Martin collectively, and entitles \"Consultants\" to 20% of Profits , but nowhere specifies how that 20% is split between them. This ambiguity could lead to disputes between Mr. Gee and Mr. Martin, or allow the Company to pay the full 20% to Mr. Martin alone. Consider specifying each Consultant's individual share (e.g., 10% each, or some other agreed split).",
+          "revision": "... and ADAM A. MARTIN (each a \"Consultant\" and collectively \"Consultants\"), on",
+          "comment": "We have flagged that the agreement does not specify each Consultant's individual share of the 20% Profits entitlement; an explicit allocation between Mr. Gee and Mr. Martin is necessary to avoid ambiguity and ensure each party's right is enforceable independently.",
+          "group_size": 1,
+          "location": {
+            "start_char": 131,
+            "end_char": 169,
+            "start_line": 6,
+            "end_line": 6,
+            "match_cover": 0.545,
+            "match_run": 4,
+            "matched_text": "and ADAM A. MARTIN (“Consultants”), on",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble - Parties and Effective Date"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The collective phrase “Consultants shall be entitled to twenty-percent” does not state how the collective entitlement is allocated between Gee and Martin."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Future consulting services are undefined and discretionary",
+          "description": "The recital  states that Consultants \"will provide, upon the Company's request, future consulting services to enhance the value for the sale of the property.\" This is entirely at the Company's discretion (\"upon the Company's request\") with no defined scope, compensation for future services beyond the profit share, or limit on the time or effort required. Mr. Gee could be called upon to provide extensive additional services with no additional compensation. Consider clarifying the scope of future obligations or specifying that the profit participation constitutes full compensation for all services.",
+          "revision": "... College of Art and Design , and will provide, upon the Company's reasonable request, future consulting services",
+          "comment": "We added 'reasonable' to qualify the Company's request for future consulting services to ensure Mr. Gee's ongoing obligations are proportionate and not indefinite or unlimited in scope, which is consistent with fair dealing principles under South Carolina law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 862,
+            "end_char": 962,
+            "start_line": 18,
+            "end_line": 18,
+            "match_cover": 0.875,
+            "match_run": 10,
+            "matched_text": "College of Art and Design , and will provide, upon the Company’s request, future consulting services",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Recitals"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Future consulting services” requested “to enhance the value” provides no definite boundary for the type, duration, or amount of work required."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Integration clause lacks no-oral-modification protection",
+          "description": "Section 3  contains a basic integration clause but does not include a requirement that modifications or amendments be in writing. Under South Carolina law, oral modifications can be enforceable absent such a clause. Without a no-oral-modification provision, the Company could later claim the agreement was orally modified to reduce Mr. Gee's profit share or add conditions.",
+          "revision": "3. Integration. | This Agreement encompasses the entire ...",
+          "comment": "We strengthened the integration clause to require that any modifications be in writing, consistent with standard South Carolina contract practice and to ensure certainty and enforceability of the parties' agreed terms.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1922,
+            "end_char": 1977,
+            "start_line": 40,
+            "end_line": 40,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "3. Integration. | This Agreement encompasses the entire",
+            "clause": {
+              "clause_id": "pos4",
+              "label": "POSITIVE",
+              "clause_name": "Section 3 — Integration (merger clause)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "A no-oral-modification requirement is an omitted protection, not a defect requiring construction of the existing integration clause."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Integration clause should preserve this Agreement's obligations",
+          "description": "Section 3  states the Agreement \"supersedes all previous agreements and understandings between the parties.\" While standard, this broad supersession language could inadvertently extinguish other favorable arrangements Mr. Gee may have with the Company. Consider narrowing the scope to supersede only prior agreements \"relating to the subject matter hereof\" or \"in connection with Delta Bluffs.\"",
+          "revision": "... and understandings between the parties relating to the subject matter hereof, whether oral or",
+          "comment": "We limited the integration clause to supersede only prior agreements relating to the subject matter hereof, which is standard practice and ensures unrelated arrangements between the parties remain intact.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2079,
+            "end_char": 2134,
+            "start_line": 41,
+            "end_line": 41,
+            "match_cover": 0.571,
+            "match_run": 5,
+            "matched_text": "and understandings between the parties, whether oral or",
+            "clause": {
+              "clause_id": "pos4",
+              "label": "POSITIVE",
+              "clause_name": "Section 3 — Integration (merger clause)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The sentence leaves some scope uncertainty over whether “in connection with Delta Bluffs” limits only what the Agreement encompasses or also the prior agreements it supersedes."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing space after section number",
+          "description": "Space needed after comma following section number",
+          "revision": "1,. Definition.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing comma after abbreviation",
+          "description": "Missing comma after i.e. and period after etc",
+          "revision": "... transactions regarding the property (i.e., donations, etc).etc.).",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1317,
+            "end_char": 1373,
+            "start_line": 27,
+            "end_line": 27,
+            "match_cover": 0.889,
+            "match_run": 8,
+            "matched_text": "transactions regarding the property (i.e. donations, etc",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Section 1 — Definition of \"Profit\""
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The punctuation omissions in the parenthetical do not materially change the meaning of the Profit definition."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent usage: Consultant vs. Consultants",
+          "description": "The term is defined as 'Consultants' (plural)  but incorrectly appears in singular form 'Consultant' in the Profit Participation clause . This creates ambiguity about whether the profit share applies to both consultants collectively or to each individually. See Definition Modify term(s) pay Consultants twenty-percent",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Profits",
+          "description": "The term 'Profit' is formally defined in the Definition section , but in the subsection heading  it appears as 'Profits from Tax Savings' where 'Profits' should be capitalized as 'Profit' to match the defined term, or the entire phrase should use the singular defined form consistently. Modify term(s) b. ProfitsProfit from Tax Savings.",
+          "revision": "",
+          "comment": "",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Run-on sentence with comma splice",
+          "description": "Comma splice between independent clauses",
+          "revision": "... College of Art and Design,. Consultants shall be",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1720,
+            "end_char": 1767,
+            "start_line": 36,
+            "end_line": 36,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "College of Art and Design, Consultants shall be",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Section 2.b — Profits from Tax Savings"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The comma splice omits the conjunction or conditional link between realization of tax savings and the Consultants’ entitlement, obscuring the intended logical relationship."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Extra space after period",
+          "description": "Double space after Integration period",
+          "revision": "3. Integration. | This Agreement encompasses the entire ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1922,
+            "end_char": 1977,
+            "start_line": 40,
+            "end_line": 40,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "3. Integration. | This Agreement encompasses the entire",
+            "clause": {
+              "clause_id": "pos4",
+              "label": "POSITIVE",
+              "clause_name": "Section 3 — Integration (merger clause)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The extra space after the heading is typographical and has no effect on contractual meaning."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Preamble - Parties and Effective Date",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_delta_speir",
+        "consultants_gee_martin"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "company_delta_speir",
+          "title": "Missing spaces in case citation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing spaces in the court-filing notation “Page1of1” do not alter any contractual meaning."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "No allocation between Consultants specified",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The collective phrase “Consultants shall be entitled to twenty-percent” does not state how the collective entitlement is allocated between Gee and Martin."
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "Recitals",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_delta_speir",
+        "consultants_gee_martin"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "company_delta_speir",
+          "title": "Vague and open-ended future consulting obligation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrases “future consulting services” and “to enhance the value” leave the nature and extent of the contemplated services indefinite."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Future consulting services are undefined and discretionary",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Future consulting services” requested “to enhance the value” provides no definite boundary for the type, duration, or amount of work required."
+        }
+      ],
+      "risky": true
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Section 1 — Definition of \"Profit\"",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_delta_speir",
+        "consultants_gee_martin"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "company_delta_speir",
+          "title": "Profit definition excludes original purchase price",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The omission of acquisition cost makes the bargain unfavorable but does not make the express definition of “Profit” ambiguous or internally inconsistent."
+        },
+        {
+          "party": "company_delta_speir",
+          "title": "\"Reasonable expenses\" in Profit definition is undefined",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Reasonable expenses” and “holding costs” have uncertain boundaries that could produce competing calculations of Profit."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Vague \"Profit\" definition exposes Gee to inflated deductions",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The terms “reasonable expenses” and “holding costs” lack definite boundaries, allowing competing views of permissible deductions."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Missing comma after abbreviation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The punctuation omissions in the parenthetical do not materially change the meaning of the Profit definition."
+        }
+      ],
+      "risky": true
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Section 2.a — Profits from Sale",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_delta_speir",
+        "consultants_gee_martin"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "company_delta_speir",
+          "title": "No limitation on transfers or indirect sales",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The term “sale” has a potentially disputed boundary as applied to foreclosures, exchanges, and other involuntary or indirect dispositions."
+        },
+        {
+          "party": "company_delta_speir",
+          "title": "Singular \"Consultant\" vs. plural \"Consultants\" inconsistency",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Using singular “Consultant” after defining the two individuals collectively as “Consultants” is a drafting error that changes or obscures who receives the payment."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "No payment deadline for profit participation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “upon sale” leaves uncertain the permissible interval between the sale or closing and actual payment."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "No anti-avoidance protection against non-sale transfers",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an anti-avoidance provision is a substantive coverage gap; the clause can operate according to its stated trigger of a sale without textual inconsistency."
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Section 2.b — Profits from Tax Savings",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_delta_speir",
+        "consultants_gee_martin"
+      ],
+      "n_issues": 7,
+      "judgments": [
+        {
+          "party": "company_delta_speir",
+          "title": "No payment timing specified for profit participation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Upon sale” does not clearly establish whether payment is due at closing, upon receipt of proceeds, or within a reasonable period afterward."
+        },
+        {
+          "party": "company_delta_speir",
+          "title": "Tax savings calculation method undefined",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Tax savings” can reasonably refer to the deduction amount, the resulting reduction in tax liability, or another tax benefit."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Tax savings payment trigger is vague and unverifiable",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“The risk of a federal or state tax audit has expired” lacks a definite legal or factual boundary, and “expected” supplies no binding date."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "No deadline for tax savings payment after trigger",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Saying Consultants are “entitled to” payment “once” the trigger occurs leaves unclear whether payment is immediately due or due within some later reasonable period."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "No accounting or audit right for Consultants",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of accounting and audit rights is a missing contractual protection, not an ambiguity, mechanical error, or conflict among existing provisions."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "\"Company or its principal\" creates ambiguity on tax savings obligation",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Company or its principal may realize” leaves uncertain how the payment obligation operates when the nonparty principal, rather than the Company, receives the tax benefit."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Run-on sentence with comma splice",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The comma splice omits the conjunction or conditional link between realization of tax savings and the Consultants’ entitlement, obscuring the intended logical relationship."
+        }
+      ],
+      "risky": true
+    },
+    "pos4": {
+      "clause_id": "pos4",
+      "clause_name": "Section 3 — Integration (merger clause)",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_delta_speir",
+        "consultants_gee_martin"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "company_delta_speir",
+          "title": "Audit expiration date should reference actual statute of limitations",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The trigger “once the risk of a federal or state tax audit has expired” is vague, while the merely “expected” October 2016 date does not definitively resolve it."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Integration clause lacks no-oral-modification protection",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "A no-oral-modification requirement is an omitted protection, not a defect requiring construction of the existing integration clause."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Integration clause should preserve this Agreement's obligations",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The sentence leaves some scope uncertainty over whether “in connection with Delta Bluffs” limits only what the Agreement encompasses or also the prior agreements it supersedes."
+        },
+        {
+          "party": "consultants_gee_martin",
+          "title": "Extra space after period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The extra space after the heading is typographical and has no effect on contractual meaning."
+        }
+      ],
+      "risky": true
+    }
+  }
+}

@@ -1,0 +1,3578 @@
+{
+  "contract_id": "122FSupp3d1157_broker_dealer_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 42,
+  "n_issues": 89,
+  "n_located": 85,
+  "n_judged": 83,
+  "n_skipped": 6,
+  "counts": {
+    "cat1": 39,
+    "cat2": 6,
+    "none": 38
+  },
+  "parties": {
+    "broker_dealer_goldman_sachs": {
+      "n_issues": 50,
+      "n_located": 47,
+      "by_tab": {
+        "risks_negotiation": 15,
+        "proofread": 35
+      },
+      "by_kind": {
+        "Important": 5,
+        "Notable": 8,
+        "Minor": 2,
+        "Definitions": 23,
+        "Spelling + Grammar": 7,
+        "Section References": 5
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "BD Warranty Lacks Standard Enforceability Qualifications",
+          "description": "In Section 1.4, BD's representation that the agreement constitutes a valid and binding agreement enforceable in accordance with its terms lacks customary enforceability qualifications. Standard practice is to include exceptions for bankruptcy, insolvency, reorganization, and similar laws affecting creditors' rights generally, as well as general principles of equity. Without these qualifications, the representation is overbroad and could be technically breached in scenarios outside BD's control.",
+          "revision": "... enforceable against it in accordance with its terms, subject to applicable bankruptcy, insolvency, reorganization, moratorium, and similar laws affecting creditors' rights generally and to general principles of equity.",
+          "comment": "We qualified the enforceability representation with customary bankruptcy, insolvency, and equity carve-outs, which is standard practice in New York-governed agreements and ensures the representation accurately reflects the legal limits on contract enforcement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4468,
+            "end_char": 5057,
+            "start_line": 109,
+            "end_line": 122,
+            "match_cover": 0.357,
+            "match_run": 8,
+            "matched_text": "enforceable against it in accordance with its terms. SECTION 2. THE AUCTION . 2.1 Purpose; Incorporation by Reference of Auction Procedures and Settlement Procedures. (a) The Auction Procedures will be followed by the Auction Agent for the purpose of determining the Auction Rates for each series of ",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(a) Purpose of Auction Procedures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of customary insolvency and equitable-enforcement qualifications creates negotiation and representation risk, not textual ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unilateral Company Right to Prohibit BD Bidding for Own Account",
+          "description": "Section 2.1(d)  grants the Company a unilateral right to prohibit all Broker-Dealers from submitting Bids in Auctions for their own accounts, with no requirement for advance notice, good cause, or consent from BD. This could materially impair Goldman's ability to support auction liquidity and manage its own inventory. Consider requiring reasonable advance notice (e.g., 10 Business Days) and limiting this right to circumstances where there is a reasonable basis for the restriction.",
+          "revision": "... BD and all other Broker-Dealers given at least ten (10) Business Days in advance, prohibit",
+          "comment": "Unilateral prohibition without advance notice could materially disrupt a Broker-Dealer's inventory management and market-making operations; requiring 10 Business Days' notice aligns this provision with reasonable commercial practice and allows BD to adjust accordingly.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5979,
+            "end_char": 6070,
+            "start_line": 135,
+            "end_line": 136,
+            "match_cover": 0.438,
+            "match_run": 6,
+            "matched_text": "BD and all other Broker-Dealers, prohibit all of the Broker-Dealers from submitting Bids in",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(d) Participation for own accounts"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Company's unilateral prohibition right is clearly stated; the lack of advance notice, cause, or BD consent is a commercial allocation rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Broad Auction Agent Disclosure Exception for Self-Protection",
+          "description": "Section 2.2(b)  allows the Auction Agent to disclose BD's confidential customer information if \"failure to do so would expose the Auction Agent to loss, liability, claim, damage or expense for which it has not received indemnity satisfactory to it.\" This exception is extremely broad — virtually any potential claim could trigger disclosure. Goldman's customer information could be disclosed based solely on the Auction Agent's subjective determination. Consider narrowing this to require a good faith, reasonable belief standard and prior notice to BD.",
+          "revision": "... and is authorized to disclose any such information if (a) it is ordered to do so by a court of competent jurisdiction or a regulatory, judicial or quasi-judicial agency or authority having the authority to compel such disclosure, (b) it is advised by its counsel that its failure to do so would be unlawful or (c) failure to do so would expose the Auction Agent to loss, liability, claim, damage or expense for which it has not received indemnity satisfactory to it; provided, further, that in the case of clause (c), the Auction Agent shall provide BD with reasonable prior written notice before making any such disclosure.",
+          "comment": "The indemnity-based disclosure carve-out in clause (c) is exceptionally broad, as any potential exposure could justify unilateral disclosure of Goldman's customer information; we added a prior written notice requirement to preserve Goldman's right to remedy the indemnity concern or seek judicial protection before disclosure is made.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7571,
+            "end_char": 8607,
+            "start_line": 165,
+            "end_line": 180,
+            "match_cover": 0.843,
+            "match_run": 83,
+            "matched_text": "and is authorized to disclose any such information if (a) it is ordered to do so by a court of competent jurisdiction or a regulatory, judicial or quasi-judicial agency or authority having the authority to compel such disclosure, (b) it is advised by its counsel that its failure to do so would be un",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(b) List of Existing Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The disclosure exception is broad but intelligible, and its reliance on indemnity satisfactory to the Auction Agent does not create a genuine textual ambiguity."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Auction Schedule Changes Directed Solely by Company",
+          "description": "Section 2.3(a)  allows the auction schedule to be changed \"at the written direction of the Company\" without BD's consent. Such changes could materially affect Goldman's operational capacity. Consider requiring BD's prior consent or at minimum adequate advance notice.",
+          "revision": "... written direction of the Company to reflect then currently, with the prior written consent of BD (not to be unreasonably withheld), to reflect then currently accepted market practices for similar auctions.",
+          "comment": "Auction schedule changes can significantly affect BD's operational capacity and regulatory obligations; requiring BD's consent (on a not-to-be-unreasonably-withheld standard) reflects standard market practice for shared auction mechanics.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8672,
+            "end_char": 8777,
+            "start_line": 181,
+            "end_line": 182,
+            "match_cover": 0.484,
+            "match_run": 10,
+            "matched_text": "written direction of the Company to reflect then currently accepted market practices for similar auctions",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Company-directed schedule-change mechanism is clear; the absence of BD consent or greater notice is negotiation risk only."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "BD Obligation to Achieve \"Lowest Possible\" Interest Rate",
+          "description": "Section 2.3(b)  requires BD to contact Potential Owners \"for the purpose of implementing the Auctions (and thereby achieving the lowest possible interest rate on the Series 2004 Auction Bonds).\" The parenthetical imposes an outcome-based standard that may conflict with BD's duties to its customers and could create liability exposure if rates are not minimized. This language should be softened.",
+          "revision": "achieving the lowest possibleBD agrees, for the purpose of implementing the Auctions (and thereby seeking to achieve competitive interest rates on the Series 2004 Auction ...",
+          "comment": "The original 'lowest possible interest rate' language imposes an outcome-based obligation inconsistent with BD's role as auction agent; we revised this to reflect a process-based standard aligned with market practice and BD's regulatory duties to its customers.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10828,
+            "end_char": 11462,
+            "start_line": 218,
+            "end_line": 225,
+            "match_cover": 0.68,
+            "match_run": 10,
+            "matched_text": "the close of business (by 12:00 Noon in the accepted and rejected and Series 2004 Auction case of a daily Auction Period) Bonds allocated as provided in Section 204 of Exhibit B of the Indenture. Auction Agent gives notice of the Auction results as set forth in Section 2.4(a) hereof. (b) BD agrees, ",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase \"lowest possible interest rate\" is vague as to the universe of possible rates and whether it states an enforceable result obligation or merely the purpose of contacting Potential Owners."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Fee Adjustment Requires Company Approval with No Standard for Approval",
+          "description": "Section 2.5(a)  provides that the Broker-Dealer Fee Rate \"may be adjusted from time to time with the approval of the Company upon a written request of the Broker-Dealer delivered to the Company.\" The Company has unfettered discretion to deny any fee increase. There is no obligation on the Company to consider the request in good faith or to respond within any time period. Goldman should consider adding that the Company's approval shall not be unreasonably withheld and that the Company shall respond within a specified number of days.",
+          "revision": "... Rate may be adjusted from time to time with the approval of the Company (such approval not to be unreasonably withheld) upon a written request of the Broker-Dealer delivered to the Company, and the Company shall respond to any such request within thirty (30) days of receipt.",
+          "comment": "Without a reasonableness standard and response deadline, Goldman has no enforceable right to seek fee adjustments — these modifications align with standard market practice and ensure the approval mechanism is commercially operable.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15079,
+            "end_char": 15587,
+            "start_line": 284,
+            "end_line": 291,
+            "match_cover": 0.646,
+            "match_run": 14,
+            "matched_text": "Rate may be adjusted from time to time with the approval of the Company upon a written request of the Broker-Dealer delivered to the Company. (b) While the Series 2004 Auction Bonds are in an Auction Period other than a daily Auction Period, on each Interest Payment Date following each Auction Date,",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Company approval is an express condition to a fee adjustment, and the absence of a reasonableness standard or response deadline does not make that condition ambiguous."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Auction Agent's Fee Calculation is Conclusive Absent Manifest Error",
+          "description": "Section 2.5(b)  provides that the Broker-Dealer Fee calculation by the Auction Agent is \"conclusive absent manifest error.\" This gives BD no ability to audit or dispute fee calculations except in cases of \"manifest error,\" which is a very high bar. Goldman should have the right to review and verify fee calculations.",
+          "revision": "... by the Auction Agent, which shall be conclusive absent manifest error; provided that the Auction Agent shall provide BD with reasonable supporting detail for such calculations and BD may dispute any calculation by written notice to the Auction Agent within thirty (30) days of receipt thereof.",
+          "comment": "The 'conclusive absent manifest error' standard without any audit or dispute right is commercially unreasonable; we added a supporting detail requirement and a 30-day dispute window to ensure basic transparency and accountability in fee calculations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 18339,
+            "end_char": 18940,
+            "start_line": 333,
+            "end_line": 340,
+            "match_cover": 0.457,
+            "match_run": 11,
+            "matched_text": "by the Auction Agent, which shall be conclusive absent manifest error. Such amounts shall be communicated by the Auction Agent to the Company by 4:00 p.m. on the Business Day immediately preceding each Interest Payment Date. On or before 10:00 a.m. on each Interest Payment Date, the Company shall pa",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The \"conclusive absent manifest error\" standard clearly imposes a narrow challenge threshold; the lack of audit and dispute rights is commercial risk, not construction risk."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Uncapped Settlement Backstop Obligation for BD",
+          "description": "Section 2.6(a) imposes an obligation on BD to \"promptly deliver\" funds when a Potential Owner fails to pay. This creates an uncapped backstop/guaranty obligation on Goldman for customer settlement failures. Consider qualifying this as a commercially reasonable efforts obligation.",
+          "revision": "... to any Auction, BD shall use commercially reasonable efforts to promptly deliver such funds to ...",
+          "comment": "An unconditional prompt delivery obligation effectively makes BD a guarantor of Potential Owner payment obligations; we revised to a commercially reasonable efforts standard to reflect BD's role as intermediary rather than principal obligor.",
+          "group_size": 1,
+          "location": {
+            "start_char": 20044,
+            "end_char": 20099,
+            "start_line": 356,
+            "end_line": 356,
+            "match_cover": 0.667,
+            "match_run": 5,
+            "matched_text": "to any Auction, BD shall promptly deliver such funds to",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "2.6(a) Settlement failures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "BD's obligation to deliver funds upon a customer's failure is unconditional and clear, even if commercially onerous or functionally equivalent to a guaranty."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Corresponding Liability Limitation for BD",
+          "description": "The agreement contains extensive liability protections for the Auction Agent (Section 3.1(a)-(e)     ) and liability disclaimers for the Company (Section 2.6(b) ), but provides no comparable limitation of liability or exculpation for BD. This asymmetry is unfavorable to Goldman. Consider adding language in Section 3.1(a) to clarify that BD likewise owes no fiduciary duties to the Auction Agent, the Company, or the Issuer, or adding a separate BD liability limitation provision.",
+          "revision": "Broker-Dealer Agreement against the Auction AgentThe Auction Agent is acting solely as agent of the Trustee and owes no duties, fiduciary or otherwise, to any other Person by reason of this Broker-Dealer Agreement or in the Auction Agreement, and no implied duties, fiduciary or otherwise, shall be read into this Broker-Dealer Agreement against the Auction Agent. BD is acting solely as an independent contractor and owes no duties, fiduciary or otherwise, to the Auction Agent, the Trustee, the Issuer, or the Company by reason of this Broker-Dealer Agreement, except as expressly set forth herein.",
+          "comment": "Market practice requires equivalent liability protections for all principals acting in a limited agency or contractor capacity; we have added a parallel exculpation for BD consistent with the existing Auction Agent liability framework in Section 3.1(a).",
+          "group_size": 1,
+          "location": {
+            "start_char": 21533,
+            "end_char": 22517,
+            "start_line": 381,
+            "end_line": 398,
+            "match_cover": 0.653,
+            "match_run": 52,
+            "matched_text": "the Auction Procedures or otherwise. SECTION 3. THE AUCTION AGENT. 3.1 Duties and Responsibilities of the Auction Agent. (a) The Auction Agent is acting solely as agent of the Trustee and owes no duties, fiduciary or otherwise, to any other Person by reason of this Broker-Dealer Agreement or in the ",
+            "clause": {
+              "clause_id": "neg30",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(b) Only express duties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lack of parallel liability protection for BD is an asymmetrical allocation of risk, not an ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Force Majeure Protection Only for Auction Agent, Not BD",
+          "description": "Section 3.1(e)  provides force majeure protection exclusively for the Auction Agent. No comparable provision exists for BD. Goldman could be held liable for failures to perform auction duties caused by events beyond its control. A parallel force majeure provision should cover BD as well.",
+          "revision": "TheNeither the Auction Agent shall notnor BD shall be responsible or liable for any failure or delay in the performance of its obligations under this Broker-Dealer Agreement arising out of or caused, directly or indirectly, by circumstances beyond its reasonable control, including without limitation: acts of God; earthquakes; fires; floods; wars; civil or military disturbances; sabotage; epidemics; riots; interruptions, loss or malfunctions of utilities or communications serv1ce;",
+          "comment": "We revised this provision to apply force majeure protections equally to both the Auction Agent and BD, reflecting standard market practice that neither party should bear liability for circumstances beyond its reasonable control.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23669,
+            "end_char": 24129,
+            "start_line": 413,
+            "end_line": 417,
+            "match_cover": 0.941,
+            "match_run": 60,
+            "matched_text": "The Auction Agent shall not be responsible or liable for any failure or delay in the performance of its obligations under this Broker-Dealer Agreement arising out of or caused, directly or indirectly, by circumstances beyond its reasonable control, including without limitation: acts of God; earthqua",
+            "clause": {
+              "clause_id": "neg33",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(e) Force majeure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The force-majeure protection unambiguously applies only to the Auction Agent; the absence of reciprocal protection for BD is negotiation risk."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Lacks Email as Effective Delivery Method",
+          "description": "Section 5.3  provides that notices are effective \"if given by telecopier\" or \"if given by any other means, when delivered at the address specified herein.\" While e-mail addresses are listed for the parties, the notice provision does not explicitly recognize email as a valid method of giving notice. Given that telecopier/fax is largely obsolete, Goldman should ensure email is expressly recognized as an effective notice method.",
+          "revision": "... such telecopy is transmitted to the telecopy number specified herein, (ii) if given by electronic mail, when sent to the e-mail address specified herein, or (iii) if given by any other means, when delivered at the",
+          "comment": "We revised the notice provision to expressly recognize email as an effective delivery method, consistent with modern commercial practice and the fact that both parties have already designated email addresses for notice purposes.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25364,
+            "end_char": 25491,
+            "start_line": 444,
+            "end_line": 445,
+            "match_cover": 0.568,
+            "match_run": 10,
+            "matched_text": "such telecopy is transmitted to the telecopy number specified herein or (ii) if given by any other means, when delivered at the",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "5.3 Notices (addresses and effectiveness)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Because email addresses are listed but notices by \"any other means\" become effective when delivered at the specified \"address,\" the terms leave uncertain whether an email address and email delivery are included."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Company Omitted from Successors and Assigns Provision",
+          "description": "Section 5.5  states the agreement shall be binding upon and enforceable by the successors and assigns of BD, the Bond Insurer, and the Auction Agent — but omits the Company. Since the Company has significant obligations (e.g., payment of Broker-Dealer fees under Section 2.5), this gap could undermine Goldman's ability to enforce fee payment against a successor entity.",
+          "revision": "assigns of BD, the Company, the Bond Insurer and the Auction ...",
+          "comment": "We've included the Company in the successors and assigns clause to ensure all parties with material obligations under this Agreement — including fee payment obligations — are equally bound upon any succession or assignment.",
+          "group_size": 1,
+          "location": {
+            "start_char": 26300,
+            "end_char": 26347,
+            "start_line": 457,
+            "end_line": 457,
+            "match_cover": 0.818,
+            "match_run": 6,
+            "matched_text": "assigns of BD, the Bond Insurer and the Auction",
+            "clause": {
+              "clause_id": "neg35",
+              "label": "NEGATIVE",
+              "clause_name": "5.5 Benefits; Successors and Assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "Omitting the Company from the successors-and-assigns language sits uneasily with the Company's material payment and approval obligations elsewhere, leaving uncertainty about whether those obligations bind a successor."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Assignment Requires Bond Insurer Consent but Not BD Consent",
+          "description": "Section 5.5  states the agreement \"shall not be assigned without the consent of the Bond Insurer\" but does not require BD's consent for assignment. This means the Auction Agent could assign its obligations to a less creditworthy or less capable successor without Goldman's approval. Goldman should require that its consent (not to be unreasonably withheld) also be obtained for any assignment.",
+          "revision": "... assigned without the consent of the Bond Insurer and BD (such consent not to be unreasonably withheld, conditioned or delayed).",
+          "comment": "We added BD's consent as a condition to assignment because Goldman, as a party with direct operational and credit exposure to the Auction Agent, has a legitimate interest in approving any successor; the consent standard is expressly limited to not being unreasonably withheld, conditioned, or delayed.",
+          "group_size": 1,
+          "location": {
+            "start_char": 26828,
+            "end_char": 27050,
+            "start_line": 462,
+            "end_line": 468,
+            "match_cover": 0.6,
+            "match_run": 8,
+            "matched_text": "assigned without the consent of the Bond Insurer. 5.6 Amendment; Waiver. (a) This Broker-Dealer Agreement shall not be deemed or construed to be modified, amended, rescinded, canceled or",
+            "clause": {
+              "clause_id": "neg36",
+              "label": "NEGATIVE",
+              "clause_name": "5.6(a) Amendment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The assignment restriction clearly requires only Bond Insurer consent; the absence of a BD consent right is a negotiated allocation, not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Forum Selection Limited to Federal Court Only",
+          "description": "Section 5.9  provides that all actions shall be brought in the United States District Court in the County of New York. Limiting jurisdiction exclusively to federal court is problematic because federal subject matter jurisdiction may not always exist. The clause should include state courts as a fallback.",
+          "revision": "... hereby shall be brought in the United States District Court in the County of New York or, if such court lacks subject matter jurisdiction, in any state court of competent jurisdiction located in the County of New York and that, in connection with any such",
+          "comment": "We broadened the forum selection clause to include state courts of competent jurisdiction in New York as an alternative, ensuring enforceability where federal subject matter jurisdiction does not exist — a standard fallback consistent with New York market practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 28631,
+            "end_char": 28753,
+            "start_line": 498,
+            "end_line": 499,
+            "match_cover": 0.467,
+            "match_run": 13,
+            "matched_text": "hereby shall be brought in the United States District Court in the County ofNew York and that, in connection with any such",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Section 5.9 — Governing Law; Jurisdiction; Waiver of Trial by Jury"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Possible absence of federal subject-matter jurisdiction concerns enforceability and forum availability, not ambiguity or inconsistency within the agreement."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No-Implied-Duties Clause Protects Only the Company",
+          "description": "Section 5.10  provides that nothing in the agreement \"shall be deemed to imply any duties, covenants or obligations on the part of the Company not otherwise expressly set forth herein or therein.\" This protection runs only in favor of the Company. Goldman should seek reciprocal protection — BD should likewise not have implied duties beyond those expressly stated.",
+          "revision": "... in this Broker-Dealer Agreement, the Indenture or the Auction Agreement shall be deemed to imply any duties, covenants or obligations on the part of the Company or BD not otherwise expressly set forth herein or therein.",
+          "comment": "We added BD as a covered party under Section 5.10 to establish a reciprocal and balanced limitation on implied duties, which reflects standard market practice and ensures neither party bears obligations beyond those expressly enumerated.",
+          "group_size": 1,
+          "location": {
+            "start_char": 29096,
+            "end_char": 29308,
+            "start_line": 504,
+            "end_line": 506,
+            "match_cover": 0.946,
+            "match_run": 27,
+            "matched_text": "in this Broker-Dealer Agreement, the Indenture or the Auction Agreement shall be deemed to imply any duties, covenants or obligations on the part of the Company not otherwise expressly set forth herein or therein",
+            "clause": {
+              "clause_id": "neg40",
+              "label": "NEGATIVE",
+              "clause_name": "5.10 No Implied Duties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 5.10 clearly protects only the Company from implied duties; the lack of reciprocity for BD is negotiation risk."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Agent Member",
+          "description": "The term 'Agent Member' is used multiple times throughout the document (e.g., in Section 2.6  ) but is never formally defined. This term appears to refer to a specific role or entity in the settlement process for auction bonds, but without a clear definition, parties may have different interpretations of who qualifies as an Agent Member and what their responsibilities are.",
+          "revision": "Order fails to instruct its Agent Member (meaning the member of the Depository Trust Company or other securities depository through which Series 2004 Auction Bonds are held) to deliver Series 2004 Auction Bonds subject to such",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 14833,
+            "end_char": 15673,
+            "start_line": 282,
+            "end_line": 292,
+            "match_cover": 0.472,
+            "match_run": 5,
+            "matched_text": "to the Auction Agent for the benefit of the Broker-Dealer and represents compensation for the services of the Broker-Dealer in facilitating Auctions for the benefit of the beneficial owners of the Series 2004 Auction Bonds. The Broker-Dealer Fee Rate may be adjusted from time to time with the approv",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined technical term \"Agent Member\" leaves uncertain which settlement intermediary is referenced and who must give delivery instructions."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: All Hold Rate",
+          "description": "The term 'All Hold Rate' is referenced in Section 2.2(a)  and in the Auction schedule  as a key piece of information that the Auction Agent must communicate to Broker-Dealers before each auction. However, this term is never defined in the document, making it unclear how this rate is calculated or what it represents in the auction process. This is a critical auction parameter that needs clear definition.",
+          "revision": "\"All Hold Rate\" means the interest rate that would result if all Existing Owners submitted Hold Orders for all of their Series 2004 Auction Bonds in an Auction.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5986,
+            "end_char": 6437,
+            "start_line": 135,
+            "end_line": 140,
+            "match_cover": 0.429,
+            "match_run": 5,
+            "matched_text": "all other Broker-Dealers, prohibit all of the Broker-Dealers from submitting Bids in Auctions for their own accounts, provided that Broker-Dealers may continue to submit Hold Orders and Sell Orders. Notwithstanding the foregoing, if BD is an affiliate of the Company it may not submit Bids to purchas",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(d) Participation for own accounts"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"All Hold Rate\" does not itself identify the applicable rate or its calculation, requiring construction by reference to the auction framework."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Date",
+          "description": "The term 'Auction Date' is used extensively throughout the document (e.g., in Sections 2.2 , 2.3 , and 2.4 ) to specify when various auction-related activities must occur. However, this critical timing term is never formally defined, leaving uncertainty about which specific dates qualify as Auction Dates and how they are determined.",
+          "revision": "\"Auction Date\" means each date on which an Auction is scheduled to be conducted for the Series 2004 Auction Bonds, as determined in accordance with the Indenture and the Auction Procedures.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 14360,
+            "end_char": 15142,
+            "start_line": 274,
+            "end_line": 285,
+            "match_cover": 0.484,
+            "match_run": 6,
+            "matched_text": "Auction Agent shall deliver to BD after receipt all notices and certificates which the Auction Agent is required to deliver to BD pursuant to Section 2 of the Auction Agreement at the times and in the manner set forth in the Auction Agreement. 2.5 Compensation. (a) The initial Broker-Dealer Fee Rate",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(a) Broker-Dealer Fee Rate"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Auction Date\" leaves the triggering dates for several time-sensitive duties uncertain on the face of this agreement."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Index",
+          "description": "The term 'Auction Index' is referenced in Section 2.2(a)  as information that must be communicated to Broker-Dealers before each auction. This appears to be a key reference rate or benchmark for the auction process, but it is never defined in the document, creating ambiguity about what index is being referenced and how it affects the auction.",
+          "revision": "\"Auction Index\" means the interest rate index or benchmark used in connection with the Auctions for the Series 2004 Auction Bonds, as specified in the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 14360,
+            "end_char": 14989,
+            "start_line": 274,
+            "end_line": 283,
+            "match_cover": 0.462,
+            "match_run": 6,
+            "matched_text": "Auction Agent shall deliver to BD after receipt all notices and certificates which the Auction Agent is required to deliver to BD pursuant to Section 2 of the Auction Agreement at the times and in the manner set forth in the Auction Agreement. 2.5 Compensation. (a) The initial Broker-Dealer Fee Rate",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(a) Broker-Dealer Fee Rate"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Auction Index\" does not identify the applicable benchmark or how it is selected."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Period",
+          "description": "The term 'Auction Period' is used throughout the document, including in Sections 2.1 , 2.5 , and multiple references to specific auction period types (seven days, 28 days, etc. in Section 2.5(b) ). This term is central to understanding the interest rate determination process but is never formally defined in this agreement.",
+          "revision": "\"Auction Period\" means the period for which the Auction Rate on the Series 2004 Auction Bonds is determined by an Auction, as specified in the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 10943,
+            "end_char": 11780,
+            "start_line": 219,
+            "end_line": 229,
+            "match_cover": 0.615,
+            "match_run": 7,
+            "matched_text": "Auction Period) Bonds allocated as provided in Section 204 of Exhibit B of the Indenture. Auction Agent gives notice of the Auction results as set forth in Section 2.4(a) hereof. (b) BD agrees, for the purpose of implementing the Auctions (and thereby achieving the lowest possible interest rate on t",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(b) BD to contact Potential Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Auction Period\" leaves the relevant duration and boundaries uncertain, including for fee calculations."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Procedures",
+          "description": "The term 'Auction Procedures' is referenced throughout the document, including in Section 2.1   and Section 2.6 . The document states that the Auction Procedures are 'incorporated herein by reference in their entirety' , but the term itself is never defined to identify what document or provisions constitute the Auction Procedures.",
+          "revision": "\"Auction Procedures\" means the procedures for conducting Auctions set forth in Exhibit B to the Indenture, as amended or supplemented from time to time.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Rate",
+          "description": "The term 'Auction Rate' is used in Section 2.1  and referenced in the recitals  as the interest rate determined by the auction process. While there is a reference to how it is determined ('the rate per annum that the Auction Agent determines to have resulted from the implementation of the Auction Procedures'), this is not a formal definition in this agreement.",
+          "revision": "\"Auction Rate\" means the interest rate per annum on the Series 2004 Auction Bonds for an Auction Period, as determined in accordance with the Auction Procedures and the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2476,
+            "end_char": 3116,
+            "start_line": 70,
+            "end_line": 82,
+            "match_cover": 0.586,
+            "match_run": 6,
+            "matched_text": "Auction Bonds\"; and WHEREAS, BD is to perform certain duties set forth herein; and WHEREAS, the Trust Indenture dated as of May I, 2004 authorizing the issuance of the Series 2004 Auction Bonds (the \"Indenture\") provides that, except as provided therein, the interest rate on the Series 2004 Auction ",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Indenture Auction Rate)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The recital substantively explains the Auction Rate as the rate determined by the Auction Agent through implementation of the incorporated Auction Procedures, so the lack of a separate formal definition does not itself create ambiguity."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Authorized Officer",
+          "description": "The term 'Authorized Officer' is used in Section 5.3  in connection with communications on behalf of the Auction Agent. This term is not defined in this agreement, creating uncertainty about who is authorized to act on behalf of the Auction Agent for purposes of notices and communications.",
+          "revision": "\"Authorized Officer\" means, with respect to the Auction Agent, any officer or employee of the Auction Agent authorized to act on behalf of the Auction Agent in connection with this Broker-Dealer Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 21327,
+            "end_char": 21865,
+            "start_line": 379,
+            "end_line": 388,
+            "match_cover": 0.515,
+            "match_run": 4,
+            "matched_text": "with respect to the failure of an Existing Owner, a Potential Owner or its respective Agent Member to deliver Series 2004 Auction Bonds or to pay for Series 2004 Auction Bonds sold or purchased pursuant to the Auction Procedures or otherwise. SECTION 3. THE AUCTION AGENT. 3.1 Duties and Responsibili",
+            "clause": {
+              "clause_id": "neg28",
+              "label": "NEGATIVE",
+              "clause_name": "2.6(b) No responsibility for delivery failures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Without a definition of \"Authorized Officer,\" it is uncertain which Auction Agent personnel may validly give communications."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: BD Officer",
+          "description": "The term 'BD Officer' is used in Section 5.3  to specify who can give communications on behalf of BD (the Broker-Dealer). However, this term is never defined, leaving ambiguity about which individuals are authorized to bind BD or give notices under this agreement.",
+          "revision": "\"BD Officer\" means any officer or authorized employee of BD authorized to act on behalf of BD in connection with this Broker-Dealer Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 25463,
+            "end_char": 25716,
+            "start_line": 445,
+            "end_line": 449,
+            "match_cover": 0.375,
+            "match_run": 4,
+            "matched_text": "means, when delivered at the address specified herein. Communications shall be given on behalf of BD by a BD Officer and on behalf of the Auction Agent by an Authorized Officer. 5.4 Entire Agreement. This Broker-Dealer Agreement",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "5.3 Notices (addresses and effectiveness)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Without a definition of \"BD Officer,\" it is uncertain which BD personnel may validly give communications under Section 5.3."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Bids",
+          "description": "The term 'Bids' is used extensively throughout the document, including in Sections 2.1(d)   and Section 2.5(b)  . While the document references 'Submitted Bids' and discusses bidding procedures, the basic term 'Bids' (or 'Bid') is never formally defined to specify what constitutes a valid bid in the auction process.",
+          "revision": "\"Bid\" means an order submitted by a Broker-Dealer in an Auction to purchase Series 2004 Auction Bonds at a specified interest rate, as more fully described in the Auction Procedures.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3164,
+            "end_char": 4064,
+            "start_line": 82,
+            "end_line": 103,
+            "match_cover": 0.419,
+            "match_run": 4,
+            "matched_text": "a) of the Auction Agreement, the Company has requested and directed the Auction Agent to execute and deliver this Broker-Dealer Agreement; and WHEREAS, the Auction Procedures require the participation of one or more Broker- Dealers; NOW, THEREFORE, the Auction Agent, as agent for the Trustee, BD, fo",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "1.3(f) References to Bonds"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The technical auction term \"Bids\" is not defined locally, leaving its scope relative to Hold Orders and Sell Orders uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Bond Insurer",
+          "description": "The term 'Bond Insurer' is used in multiple important contexts throughout the document, including in Section 2.5  (right to pay Broker-Dealer fees) and Section 5.5   (as a third-party beneficiary with consent rights). Despite its significant role in the agreement, this term is never defined, leaving uncertainty about which entity has these important rights and obligations.",
+          "revision": "\"Bond Insurer\" means the entity, if any, that has issued an insurance policy or surety bond insuring the payment of principal and interest on the Series 2004 Auction Bonds, as identified in the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3113,
+            "end_char": 3802,
+            "start_line": 82,
+            "end_line": 99,
+            "match_cover": 0.412,
+            "match_run": 5,
+            "matched_text": "the Auction Agreement, and pursuant to Section 2.6(a) of the Auction Agreement, the Company has requested and directed the Auction Agent to execute and deliver this Broker-Dealer Agreement; and WHEREAS, the Auction Procedures require the participation of one or more Broker- Dealers; NOW, THEREFORE, ",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Appointment of Auction Agent)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The unidentified term \"Bond Insurer\" leaves uncertain which entity possesses the agreement's payment, beneficiary, consent, and assignment rights."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Broker-Dealer",
+          "description": "The term 'Broker-Dealer' is used throughout the document, including references to BD acting as 'a Broker-Dealer'  and the document states that the definition is 'contained in the Indenture' . However, the term is not defined in this Broker-Dealer Agreement itself. While BD is a party to this agreement, the general term 'Broker-Dealer' (which may include other entities) should be defined for clarity.",
+          "revision": "\"Broker-Dealer\" means BD and any other broker or dealer that meets the requirements specified in the Indenture and has executed a broker-dealer agreement with the Auction Agent substantially in the form of this Agreement.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 19147,
+            "end_char": 20058,
+            "start_line": 342,
+            "end_line": 356,
+            "match_cover": 0.528,
+            "match_run": 5,
+            "matched_text": "Broker-Dealer transfers any such Series 2004 Auction Bonds to another Person other than through an Auction, the Broker-Dealer for the Series 2004 Auction Bonds so transferred shall continue to be the Broker-Dealer with respect to such Series 2004 Auction Bonds; provided, however, that if the transfe",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement expressly points to the definition of \"Broker-Dealer\" in the Indenture, providing an identified source for the term."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Business Day",
+          "description": "The term 'Business Day' is used in multiple time-sensitive provisions, including Section 2.2(c) , Section 2.3 , Section 2.4 , and Section 2.5(b) . This term is critical for determining deadlines and timing of various obligations but is never defined in this agreement, potentially leading to disputes about what constitutes a Business Day.",
+          "revision": "\"Business Day\" means any day other than (i) a Saturday or Sunday, (ii) a day on which banking institutions in New York, New York are authorized or obligated by law or executive order to close, or (iii) a day on which the New York Stock Exchange is closed.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Closing Date",
+          "description": "The term 'Closing Date' is referenced in Section 2.2(b)  as a date on which certain obligations begin. This appears to refer to the initial closing date for the bond issuance, but the term is never defined, creating potential ambiguity about which specific date is meant.",
+          "revision": "\"Closing Date\" means May 12, 2004, the date of initial issuance and delivery of the Series 2004 Auction Bonds.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2617,
+            "end_char": 2686,
+            "start_line": 75,
+            "end_line": 76,
+            "match_cover": 0.526,
+            "match_run": 6,
+            "matched_text": "May I, 2004 authorizing the issuance of the Series 2004 Auction Bonds",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Indenture Auction Rate)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Closing Date\" may refer to the agreement closing, the bond issuance closing, or potentially separate series closings."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Existing Owners",
+          "description": "The term 'Existing Owners' is used extensively throughout the document, including in the recitals , Section 2.2(b) , Section 2.3(b) , and multiple times in Section 2.5     . This is a fundamental term for the auction process, distinguishing between current bondholders and potential purchasers, yet it is never formally defined.",
+          "revision": "\"Existing Owner\" means a person who is the beneficial owner of Series 2004 Auction Bonds on the date of an Auction.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3501,
+            "end_char": 4037,
+            "start_line": 90,
+            "end_line": 103,
+            "match_cover": 0.524,
+            "match_run": 5,
+            "matched_text": "Existing Owners and the Potential Owners of the Series 2004 Auction Bonds, and the Company agree as follows: (e) Each reference to the \"purchase,\" \"sale\" or \"holding\" of Series 2004 Auction Bonds shall refer to beneficial ownership interests in Series 2004 Auction Bonds unless the context clearly re",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.3(e) References to purchase, sale or holding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined technical term \"Existing Owners\" leaves uncertain which beneficial holders qualify for the rights and order treatment assigned to that class."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Potential Owners",
+          "description": "The term 'Potential Owners' is used throughout the document alongside 'Existing Owners,' including in the recitals , Section 2.3(b)    , Section 2.4(c) , and Section 2.5(b)  . This term is critical for understanding who can participate in auctions as potential purchasers, but is never formally defined.",
+          "revision": "\"Potential Owner\" means any person, including a person that is not an Existing Owner, that may be interested in purchasing Series 2004 Auction Bonds through a Broker-Dealer in an Auction.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17693,
+            "end_char": 18234,
+            "start_line": 325,
+            "end_line": 331,
+            "match_cover": 0.516,
+            "match_run": 4,
+            "matched_text": "Potential Owner submitted by such Broker-Dealer and were purchased by such Potential Owner as a result of such Auction, (4) deemed to be the subject of a Hold Order by an Existing Owner that were acquired by such Existing Owner from such Broker- Dealer and (5) if an Auction was not held for any Auct",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Potential Owners\" leaves the eligible purchaser class and its boundary relative to Existing Owners uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Hold Order",
+          "description": "The term 'Hold Order' is used in multiple places, including Section 2.1(d)   and extensively in Section 2.5(b)    . This appears to be a type of order in the auction process where an Existing Owner wishes to retain their bonds, but the term is never formally defined in this agreement.",
+          "revision": "\"Hold Order\" means an order submitted by a Broker-Dealer on behalf of an Existing Owner in an Auction indicating that such Existing Owner wishes to continue holding Series 2004 Auction Bonds at any Auction Rate determined in such Auction, as more fully described in the Auction Procedures.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17444,
+            "end_char": 18008,
+            "start_line": 322,
+            "end_line": 328,
+            "match_cover": 0.375,
+            "match_run": 4,
+            "matched_text": "Hold Order submitted by such Broker-Dealer, (2) the subject of a Submitted Bid of an Existing Owner submitted by such Broker-Dealer and continued to be held by such Existing Owner as a result of such Auction, (3) the subject of a Submitted Bid of a Potential Owner submitted by such Broker-Dealer and",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The technical term \"Hold Order\" is not defined, leaving the requirements and effect of that order type uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Sell Orders",
+          "description": "The term 'Sell Orders' is used in Section 2.1(d)   alongside 'Hold Orders' and 'Bids.' This appears to be another type of order in the auction process, presumably where an Existing Owner wishes to sell their bonds, but the term is never formally defined in this agreement.",
+          "revision": "\"Sell Order\" means an order submitted by a Broker-Dealer on behalf of an Existing Owner in an Auction to sell Series 2004 Auction Bonds, as more fully described in the Auction Procedures.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 21202,
+            "end_char": 21883,
+            "start_line": 376,
+            "end_line": 389,
+            "match_cover": 0.424,
+            "match_run": 4,
+            "matched_text": "a). (b) The Auction Agent, the Trustee, the Company and the Issuer shall have no responsibility or liability with respect to the failure of an Existing Owner, a Potential Owner or its respective Agent Member to deliver Series 2004 Auction Bonds or to pay for Series 2004 Auction Bonds sold or purchas",
+            "clause": {
+              "clause_id": "neg28",
+              "label": "NEGATIVE",
+              "clause_name": "2.6(b) No responsibility for delivery failures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The technical term \"Sell Orders\" is not defined, leaving the requirements and effect of that order type uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Initial Periods",
+          "description": "The term 'Initial Periods' is referenced in Section 2.1(a)  in the context of auction procedures being followed 'after the Initial Periods for each series of the Series 2004 Auction Bonds.' This term appears to refer to an initial interest rate period before regular auctions begin, but is never formally defined.",
+          "revision": "\"Initial Period\" means, with respect to each series of Series 2004 Auction Bonds, the initial interest rate period for such series commencing on the Closing Date and ending on the first Auction Date for such series, as specified in the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4088,
+            "end_char": 4551,
+            "start_line": 103,
+            "end_line": 112,
+            "match_cover": 0.317,
+            "match_run": 8,
+            "matched_text": "to each series of Series 2004 Auction Bonds. 1.4 Warranties of BD. BD hereby represents and warrants that this Broker- Dealer Agreement has been duly authorized, executed and delivered by BD and that, assuming the due authorization, execution and delivery hereof by the Auction Agent, this Broker-Dea",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "1.4 Warranties of BD"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Initial Periods\" leaves uncertain when the incorporated auction procedures begin to apply to each series."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Interest Payment Date",
+          "description": "The term 'Interest Payment Date' is used extensively in Section 2.5 regarding broker-dealer fee payments    . This term is critical for determining when payments are due but is never formally defined in this agreement, creating potential ambiguity about payment timing.",
+          "revision": "\"Interest Payment Date\" means each date on which interest is payable on the Series 2004 Auction Bonds, as specified in the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2752,
+            "end_char": 2882,
+            "start_line": 77,
+            "end_line": 78,
+            "match_cover": 0.409,
+            "match_run": 6,
+            "matched_text": "interest rate on the Series 2004 Auction Bonds shall be the Auction Rate which shall be, except as otherwise provided therein, the",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Indenture Auction Rate)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Interest Payment Date\" leaves the contractual payment deadlines uncertain on the face of this agreement."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Orders",
+          "description": "The term 'Orders' (and 'Order') is used extensively throughout the document, including in Sections 2.1(d), 2.3(c)    , and 2.4  . While this appears to be a general term encompassing Bids, Hold Orders, and Sell Orders, it is never formally defined as the umbrella term for these auction instructions.",
+          "revision": "\"Order\" means any Bid, Hold Order, or Sell Order submitted by a Broker-Dealer in an Auction.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 17444,
+            "end_char": 17651,
+            "start_line": 322,
+            "end_line": 324,
+            "match_cover": 0.471,
+            "match_run": 3,
+            "matched_text": "Hold Order submitted by such Broker-Dealer, (2) the subject of a Submitted Bid of an Existing Owner submitted by such Broker-Dealer and continued to be held by such Existing Owner as a result of such Auction",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined umbrella term \"Orders\" leaves uncertain whether and under what conditions it encompasses Bids, Hold Orders, and Sell Orders."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Outstanding",
+          "description": "The term 'Outstanding' is used in Section 2.5(b)   in the context of 'Outstanding Series 2004 Auction Bonds.' This term is important for determining which bonds are subject to fee calculations but is never formally defined in this agreement.",
+          "revision": "\"Outstanding\" means, when used with reference to Series 2004 Auction Bonds, all such bonds that have been authenticated and delivered under the Indenture, except those bonds that have been canceled, redeemed, or paid at maturity, as more fully set forth in the Indenture.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2306,
+            "end_char": 3116,
+            "start_line": 69,
+            "end_line": 82,
+            "match_cover": 0.372,
+            "match_run": 4,
+            "matched_text": "with the Series 2004A Bonds, the Series 2004B Bonds and the Series 2004C Bonds, the \"Series 2004 Bonds\"), being sometimes referred to together herein as the \"Series 2004 Auction Bonds\"; and WHEREAS, BD is to perform certain duties set forth herein; and WHEREAS, the Trust Indenture dated as of May I,",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Indenture Auction Rate)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined technical term \"Outstanding\" can carry differing bond-law meanings, affecting which bonds enter the fee calculation."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Persons",
+          "description": "The term 'Persons' is used in multiple contexts throughout the document, including Section 2.1(c) , Section 2.2(b) , Section 2.3(b) , and Section 3.1(d) . While 'Person' is a common legal term, it is capitalized and used as a defined term in this document but never actually defined.",
+          "revision": "\"Person\" means any individual, corporation, partnership, limited liability company, trust, unincorporated organization, association, joint venture, government or agency or political subdivision thereof, or other entity.",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error - \"Tmstee\"",
+          "description": "Misspelling of \"Trustee\" with lowercase m instead of ru",
+          "revision": "NATIONAL ASSOCIATION (the \"TmsteeTrustee\"), pursuant to authority granted ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1125,
+            "end_char": 1191,
+            "start_line": 53,
+            "end_line": 53,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "NATIONAL ASSOCIATION (the \"Tmstee\"), pursuant to authority granted",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error - \"bas\"",
+          "description": "Misspelling of \"has\" as \"bas\"",
+          "revision": "... Wells Fargo Bank, National Association bashas been appointed as Auction",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3022,
+            "end_char": 3090,
+            "start_line": 81,
+            "end_line": 81,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "Wells Fargo Bank, National Association bas been appointed as Auction",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Appointment of Auction Agent)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "\"Bas\" is an obvious typographical corruption of \"has\" and does not create a reasonable alternative reading or change the understood recital."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error - \"refened\"",
+          "description": "Misspelling of \"referred\" with single r",
+          "revision": "... of such procedures is hereinafter refenedreferred to as an \"Auction.\"",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4968,
+            "end_char": 5027,
+            "start_line": 120,
+            "end_line": 120,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "of such procedures is hereinafter refened to as an \"Auction",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(a) Purpose of Auction Procedures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "\"Refened\" is an obvious misspelling of \"referred\" that does not alter the provision's understood meaning."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid reference to Section 2.l(d)",
+          "description": "The document references \"this Section 2.l(d)\" , but this appears to contain a typographical error. The lowercase letter \"l\" should be the number \"1\" to match the standard section numbering convention used throughout the document. This should be \"Section 2.1(d)\".",
+          "revision": "with this Section 2.l(d).1(d).",
+          "comment": "Corrected typographical error in section cross-reference: 'Section 2.l(d)' updated to 'Section 2.1(d)' to replace the erroneous lowercase letter 'l' with the numeral '1', consistent with the document's standard numbering convention.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6576,
+            "end_char": 6599,
+            "start_line": 142,
+            "end_line": 142,
+            "match_cover": 0.75,
+            "match_run": 6,
+            "matched_text": "with this Section 2.l(d",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(d) Participation for own accounts"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase \"l\" in \"2.l(d)\" is an obvious typographical substitution for the numeral 1, and the self-reference remains readily identifiable."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Punctuation - spacing in time",
+          "description": "Inconsistent spacing in time notation \"3:00p.m.\"",
+          "revision": "Not later than 3:00p00 p.m. on the Business Day ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8058,
+            "end_char": 8101,
+            "start_line": 172,
+            "end_line": 172,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "Not later than 3:00p.m. on the Business Day",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(c) Notice of change in principal amount"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in \"3:00p.m.\" does not alter the stated time or create uncertainty."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error in time",
+          "description": "Missing space between time and colon",
+          "revision": "9:30 a.m.-1 :00 p.m. (11 :00 a.m. in the case ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 9987,
+            "end_char": 10032,
+            "start_line": 208,
+            "end_line": 208,
+            "match_cover": 1.0,
+            "match_run": 15,
+            "matched_text": "9:30 a.m.-1 :00 p.m. (11 :00 a.m. in the case",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The irregular spacing around the colon in the time notation does not change the schedule's meaning."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid reference to Section 202",
+          "description": "The document references \"Section 202 ofExhibit B of the Indenture\" , but this appears to use an inconsistent numbering format. Other references in the same table use the format \"Section 203(b)\"  and \"Section 204\" , suggesting the section numbering within Exhibit B uses a three-digit format (203, 204) rather than (202). This should be verified for consistency.",
+          "revision": "Section 2022.02 ofExhibit B of the",
+          "comment": "The cross-reference has been corrected to 'Section 2.02 of Exhibit B' to conform to the section numbering convention used throughout the Indenture and ensure the reference is accurate and enforceable.",
+          "group_size": 1,
+          "location": {
+            "start_char": 9828,
+            "end_char": 10261,
+            "start_line": 196,
+            "end_line": 210,
+            "match_cover": 0.714,
+            "match_run": 4,
+            "matched_text": "Section 2.2(a). - 4- Time Event 9:30 a.m.-1 :00 p.m. (11 :00 a.m. in the case of Auction Agent assembles information a daily Auction Period) communicated to it by Broker-Dealers as provided in Section 202 ofExhibit B of the",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The numbering of sections within Exhibit B need not follow this agreement's decimal format, and the supplied text does not establish that Section 202 is an incorrect reference."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid reference to Section 203(b)",
+          "description": "The document references \"Section 203(b) of Exhibit B of the Indenture\"  in the auction schedule table. Based on the pattern of other section references in this document which use decimal notation (e.g., \"Section 2.1\", \"Section 2.2\", \"Section 2.3\"), this should likely be \"Section 2.03(b)\" to maintain consistency with standard decimal section numbering.",
+          "revision": "to Section 203(b)2.03(b) of Exhibit B of the ...",
+          "comment": "Corrected section reference from '203(b)' to '2.03(b)' to align with the decimal notation convention used consistently throughout the document.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10665,
+            "end_char": 10702,
+            "start_line": 215,
+            "end_line": 215,
+            "match_cover": 0.75,
+            "match_run": 6,
+            "matched_text": "to Section 203(b) of Exhibit B of the",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The use of \"203(b)\" may be the actual numbering convention of Exhibit B; inconsistency with this agreement's numbering does not demonstrate a mechanical error."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error in time notation",
+          "description": "Space before colon in \"11 :30\"",
+          "revision": "(by 11 :30 a.m. in the case ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 10613,
+            "end_char": 10639,
+            "start_line": 215,
+            "end_line": 215,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "by 11 :30 a.m. in the case",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The space before the colon in \"11 :30\" is merely typographical and does not change the time."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid reference to Section 204",
+          "description": "The document references \"Section 204 of Exhibit B of the Indenture\" in the auction schedule table . Based on the pattern of other section references in this document which use decimal notation (e.g., \"Section 2.1\", \"Section 2.2\", \"Section 2.3\"), and the adjacent references to \"Section 2.02\" and \"Section 2.03(b)\", this should likely be \"Section 2.04\" to maintain consistency with standard decimal section numbering.",
+          "revision": "as provided in Section 2042.04 of",
+          "comment": "Corrected section reference from '204' to '2.04' for consistency with the decimal notation used throughout the document (e.g., Sections 2.02, 2.03(b)).",
+          "group_size": 1,
+          "location": {
+            "start_char": 10164,
+            "end_char": 10257,
+            "start_line": 209,
+            "end_line": 210,
+            "match_cover": 0.714,
+            "match_run": 4,
+            "matched_text": "as provided in Section 202 ofExhibit B of",
+            "clause": {
+              "clause_id": "neg16",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(a) Auction schedule"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The supplied contract does not establish that Exhibit B uses \"2.04\" rather than \"204,\" so no erroneous cross-reference or construction defect is shown."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error in time",
+          "description": "Missing space in \"3:00p.m.\"",
+          "revision": "... received by it after 3:00p00 p.m. on",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 13337,
+            "end_char": 13369,
+            "start_line": 248,
+            "end_line": 248,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "received by it after 3:00p.m. on",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "2.3(d) Notices of transfers and failures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in \"3:00p.m.\" does not affect the deadline's meaning."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid reference to Section 3.2(d)",
+          "description": "The document references \"Section 3.2(d)\"  regarding the Auction Agent acting through agents or attorneys. However, the document does not contain a Section 3.2. The visible sections show Section 3.1 (Duties and Responsibilities of the Auction Agent) but no Section 3.2 is present in the document. This reference should be verified and corrected to point to the actual section that addresses agents or attorneys, or Section 3.2 may be missing from the document.",
+          "revision": "as provided in Section 3.2(d)[VERIFY: 3.2(d) - section not found] hereof, shall",
+          "comment": "The reference to Section 3.2(d) appears to be a broken cross-reference, as no such section exists in the current document; we request that this be corrected to cite the accurate provision governing the Auction Agent's authority to act through agents or attorneys to ensure contractual clarity and enforceability.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22515,
+            "end_char": 22558,
+            "start_line": 398,
+            "end_line": 398,
+            "match_cover": 0.562,
+            "match_run": 7,
+            "matched_text": "as provided in Section 3.2(d) hereof, shall",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(c) Liability standard"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The reference to nonexistent Section 3.2(d) is a broken cross-reference that leaves uncertain what authority or protection for acting through agents and attorneys was intended."
+          }
+        }
+      ]
+    },
+    "company_presbyterian": {
+      "n_issues": 39,
+      "n_located": 38,
+      "by_tab": {
+        "risks_negotiation": 17,
+        "proofread": 22
+      },
+      "by_kind": {
+        "Notable": 7,
+        "Minor": 6,
+        "Important": 4,
+        "Definitions": 16,
+        "Spelling + Grammar": 4,
+        "Section References": 1,
+        "Templated Content": 1
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "BD Warranties Lack Key Regulatory Representations",
+          "description": "Section 1.4  contains only a bare representation that the agreement has been duly authorized. Notably absent are representations that BD is duly registered as a broker-dealer with the SEC and applicable state regulators, and is in compliance with applicable securities laws. These are standard for broker-dealer agreements and protect the Company.",
+          "revision": "... hereby represents and warrants that (i) this Broker-",
+          "comment": "Representations confirming broker-dealer registration with the SEC and applicable state regulators, and compliance with securities laws, are standard in agreements of this type and protect both parties from regulatory risk.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4175,
+            "end_char": 4222,
+            "start_line": 106,
+            "end_line": 106,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "hereby represents and warrants that this Broker",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "1.4 Warranties of BD"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of additional regulatory representations is an omitted protection for the Company, not an ambiguity or inconsistency in the warranty actually given."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Monitoring of BD Self-Dealing",
+          "description": "Section 2.1(d)  disclaims any Auction Agent duty to monitor BD's compliance with self-dealing restrictions. This leaves the Company without a practical mechanism to detect potential auction rate manipulation. Consider adding a BD certification obligation.",
+          "revision": "... with respect to monitoring compliance; provided, however, that BD shall certify to the Company on a quarterly basis its compliance",
+          "comment": "Given the Auction Agent's express disclaimer of any monitoring duty, a quarterly BD compliance certification is a reasonable and proportionate safeguard to protect the Company's interest in auction integrity under New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19361,
+            "end_char": 19803,
+            "start_line": 344,
+            "end_line": 350,
+            "match_cover": 0.45,
+            "match_run": 3,
+            "matched_text": "with respect to such Series 2004 Auction Bonds; provided, however, that if the transfer was effected by, or if the transferee is, another Person who has met the requirements specified in the defmition of\"Broker- Dealer\" contained in the Series 2004 Auction Bonds and executed a Broker-Dealer Agreemen",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The Auction Agent's monitoring disclaimer is clear, and the absence of a substitute BD certification obligation is negotiation risk only."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Broad Confidentiality Exception for Auction Agent",
+          "description": "Section 2.2(b)  allows the Auction Agent to disclose confidential owner information if \"failure to do so would expose the Auction Agent to loss, liability, claim, damage or expense for which it has not received indemnity satisfactory to it.\" This exception is very broad — the Auction Agent could unilaterally determine any situation exposes it to potential liability and disclose sensitive information. Consider adding a reasonableness qualifier.",
+          "revision": "to do so would reasonably be expected to expose the Auction Agent to material loss, liability, claim, damage or ...",
+          "comment": "We added 'reasonably expected' and 'material' qualifiers to this exception to prevent unilateral and subjective determinations by the Auction Agent from effectively nullifying the confidentiality protections, which is consistent with market-standard drafting.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7851,
+            "end_char": 7969,
+            "start_line": 168,
+            "end_line": 169,
+            "match_cover": 0.842,
+            "match_run": 5,
+            "matched_text": "to do so would be unlawful or (c) failure to do so would expose the Auction Agent to loss, liability, claim, damage or",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(b) List of Existing Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The confidentiality exception is broad but operative and intelligible; the absence of materiality or reasonableness qualifiers does not itself create construction risk."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "BD's Best Efforts Obligation Lacks Enforcement Mechanism",
+          "description": "Section 2.3(b)  states BD will contact Potential Owners for \"achieving the lowest possible interest rate.\" This parenthetical reads as aspirational rather than a binding obligation. Consider strengthening to a \"commercially reasonable efforts\" standard for clearer enforceability.",
+          "revision": "... the Series 2004 Auction Bonds), using commercially reasonable efforts to contact",
+          "comment": "We replaced the aspirational 'lowest possible interest rate' language with a 'commercially reasonable efforts' standard, which is a well-recognized and objective benchmark under New York law that creates clear, mutual expectations for BD's performance obligations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2459,
+            "end_char": 2521,
+            "start_line": 70,
+            "end_line": 73,
+            "match_cover": 0.545,
+            "match_run": 5,
+            "matched_text": "the \"Series 2004 Auction Bonds\"; and WHEREAS, BD is to",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Series 2004 Bonds)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase \"achieving the lowest possible interest rate\" is uncertain as to whether it is merely aspirational or imposes a binding performance standard on BD."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unilateral Fee Adjustment Mechanism Favors Broker-Dealer",
+          "description": "Section 2.5(a)  provides that the Broker-Dealer Fee Rate may be adjusted only upon a written request of the Broker-Dealer. While this requires Company approval, the Company has no express right to initiate a fee reduction. The provision should be reciprocal, allowing either party to initiate fee adjustment discussions.",
+          "revision": "time to time withupon the approvalmutual written agreement of the Company uponand the Broker-Dealer, whether initiated by a written request of the Broker-Dealer or the Company.",
+          "comment": "We amended this provision to make fee adjustment initiation reciprocal, reflecting standard commercial practice where either contracting party may request a renegotiation of pricing terms.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15105,
+            "end_char": 15219,
+            "start_line": 285,
+            "end_line": 286,
+            "match_cover": 0.571,
+            "match_run": 7,
+            "matched_text": "time to time with the approval of the Company upon a written request of the Broker-Dealer delivered to the Company",
+            "clause": {
+              "clause_id": "neg24",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(a) Broker-Dealer Fee Rate"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision clearly permits a fee adjustment only following a Broker-Dealer request and Company approval; lack of reciprocal initiation rights is negotiation risk."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Auction Agent Fee Calculation Deemed Conclusive",
+          "description": "The Broker-Dealer Fee calculation by the Auction Agent is stated to be \"conclusive absent manifest error\" . This is a high bar for the Company to challenge erroneous fee calculations. The Company should have the right to review and dispute fee calculations within a reasonable period. Consider adding a dispute mechanism.",
+          "revision": "... be conclusive absent manifest error; provided, however, that the Company shall have the right to review such calculation and to dispute any errors therein by written notice to the Auction Agent within five (5) Business Days of receipt thereof. Such amounts shall be ...",
+          "comment": "We introduced a written dispute mechanism within five Business Days of receipt to ensure the Company retains a meaningful right to contest fee calculations, which is standard market practice and consistent with New York contract law principles of good faith dealing.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19340,
+            "end_char": 20293,
+            "start_line": 344,
+            "end_line": 358,
+            "match_cover": 0.395,
+            "match_run": 5,
+            "matched_text": "be the Broker-Dealer with respect to such Series 2004 Auction Bonds; provided, however, that if the transfer was effected by, or if the transferee is, another Person who has met the requirements specified in the defmition of\"Broker- Dealer\" contained in the Series 2004 Auction Bonds and executed a B",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The manifest-error standard clearly limits challenges to the Auction Agent's calculation; the absence of a broader dispute mechanism is not a construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Bond Insurer Backup Payment - Subrogation Risk",
+          "description": "Section 2.5  provides the Bond Insurer may pay the Broker-Dealer fee if the Company does not. This creates potential subrogation or reimbursement exposure for the Company without specifying consequences. Consider clarifying that this does not create additional obligations beyond those in the other transaction documents.",
+          "revision": "... fee if such fee is not paid by the Company as provided in this Section; provided that such payment shall not create any additional reimbursement obligation of the Company to the Bond Insurer beyond those set forth in the other transaction documents.",
+          "comment": "The proviso is necessary to ensure that the Bond Insurer's backup payment right does not inadvertently create implied reimbursement or subrogation obligations for the Company beyond those expressly allocated in the transaction documents, consistent with standard structured finance practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 19818,
+            "end_char": 20433,
+            "start_line": 350,
+            "end_line": 360,
+            "match_cover": 0.452,
+            "match_run": 15,
+            "matched_text": "fee if such fee is not paid by the Company as provided in this Section. 2.6 Settlement. (a) If any Potential Owner on whose behalf BD has submitted an Order fails to deliver funds with respect to any Auction, BD shall promptly deliver such funds to the party entitled to receive such funds. If any Ex",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "2.6(a) Settlement failures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Possible reimbursement or subrogation consequences arise from background law and omitted protections, not from an ambiguity or conflict in the stated backup-payment right."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad Auction Agent Liability Exclusion",
+          "description": "Section 3.1(a)  states the Auction Agent owes \"no duties, fiduciary or otherwise, to any other Person\" . This broad disclaimer could negate any duty the Auction Agent owes to the Company, despite the Company paying fees and relying on proper auction conduct. A carve-out should preserve the Auction Agent's express contractual obligations to the Company.",
+          "revision": "duties, fiduciary or otherwise (other than its express obligations hereunder), to any other Person ...",
+          "comment": "The disclaimer as drafted would extinguish all duties owed to the Company, including those expressly undertaken in this Agreement; the carve-out preserves only the Auction Agent's bargained-for contractual obligations, which is consistent with standard market practice for broker-dealer arrangements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21772,
+            "end_char": 21823,
+            "start_line": 388,
+            "end_line": 388,
+            "match_cover": 0.571,
+            "match_run": 4,
+            "matched_text": "duties, fiduciary or otherwise, to any other Person",
+            "clause": {
+              "clause_id": "neg29",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(a) Auction Agent solely agent of Trustee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The statement that the Auction Agent owes no duties to any other Person is in tension with its express obligations to BD and the Company elsewhere, including auction and notice duties; Section 3.1(b)'s recognition of express duties heightens that conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Inconsistent Auction Agent Liability Standard",
+          "description": "Section 3.1(c)  uses a \"negligence or misconduct\" standard but then  states the Auction Agent is not liable for errors of judgment \"unless the Auction Agent shall have been negligent in ascertaining the pertinent facts.\" The combined effect creates ambiguity — it's unclear whether ordinary negligence in judgment (as opposed to fact-finding) gives rise to liability. Consider clarifying to a consistent \"gross negligence or willful misconduct\" standard, which is more market for auction agent agreements.",
+          "revision": "... Auction Agent shall have been negligentgrossly negligent or engaged in willful misconduct in ascertaining",
+          "comment": "We updated the liability standard for errors of judgment to gross negligence or willful misconduct, which is consistent with prevailing market standards for auction agent agreements and removes the internal inconsistency between the two liability provisions in Section 3.1(c).",
+          "group_size": 1,
+          "location": {
+            "start_char": 22794,
+            "end_char": 22849,
+            "start_line": 401,
+            "end_line": 401,
+            "match_cover": 0.571,
+            "match_run": 5,
+            "matched_text": "Auction Agent shall have been negligent in ascertaining",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(c) Liability standard"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The general liability rule for negligence or misconduct conflicts with the more specific error-of-judgment sentence, which appears to impose liability only for negligence in ascertaining pertinent facts."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Issuer Notice Address Names Wrong Entity",
+          "description": "The Issuer is defined as \"New Mexico Hospital Equipment Loan Council\" , but the Issuer notice address  directs communications to \"HOSPITAL SERVICES CORPORATION\" at 2121 Osuna N.E. This appears to be a different entity than the defined Issuer. If this is an administrative agent for the Council, it should be clarified; otherwise, this is an error that could result in ineffective notice to the Issuer.",
+          "revision": "If to the Issuer addressed:           HOSPITAL SERVICES CORPORATIONNEW MEXICO HOSPITAL EQUIPMENT LOAN COUNCIL",
+          "comment": "The notice address has been updated to reflect the defined Issuer, 'New Mexico Hospital Equipment Loan Council,' as required for notices to be legally effective; directing notices to a different, undefined entity creates ambiguity and potential enforceability issues.",
+          "group_size": 1,
+          "location": {
+            "start_char": 24668,
+            "end_char": 24851,
+            "start_line": 434,
+            "end_line": 436,
+            "match_cover": 0.615,
+            "match_run": 7,
+            "matched_text": "If to the Issuer addressed: HOSPITAL SERVICES CORPORATION 2121 Osuna N.E. Albuquerque, New Mexico",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "5.3 Notices (addresses and effectiveness)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The notice clause labels the addressee as the \"Issuer\" but names Hospital Services Corporation, conflicting with the recital's definition of the Issuer as the New Mexico Hospital Equipment Loan Council."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Notice Provision Does Not Address Email Delivery",
+          "description": "The notice provision  addresses telecopier and general delivery but does not expressly cover email, despite email addresses being listed for each party . Email should be expressly addressed as a valid notice method with a specified effective time.",
+          "revision": "... such telecopy is transmitted to the telecopy number specified herein, (ii) if given by electronic mail, when sent to the e-mail address specified herein, or (iii) if given by any other means, when delivered at the",
+          "comment": "We added electronic mail as an express notice method with a defined effective time, consistent with modern commercial practice and the fact that email addresses are already specified for both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 25364,
+            "end_char": 25491,
+            "start_line": 444,
+            "end_line": 445,
+            "match_cover": 0.568,
+            "match_run": 10,
+            "matched_text": "such telecopy is transmitted to the telecopy number specified herein or (ii) if given by any other means, when delivered at the",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "5.3 Notices (addresses and effectiveness)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Listing email addresses while making delivery by \"any other means\" effective at the specified \"address\" leaves uncertain whether email is an authorized and effective notice method."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Company Excluded from Successors and Assigns Provision",
+          "description": "Section 5.5  states the agreement is binding upon and enforceable by the successors and assigns of BD, the Bond Insurer and the Auction Agent — but notably omits the Company. The Company should be added to ensure its contractual rights under this Agreement survive succession events.",
+          "revision": "assigns of the Company, BD, the Bond Insurer and ...",
+          "comment": "We have added the Company to Section 5.5 to ensure parity among all parties; omitting the Company from the successors and assigns provision creates an asymmetry that leaves its contractual rights unprotected upon any succession event.",
+          "group_size": 1,
+          "location": {
+            "start_char": 26300,
+            "end_char": 26335,
+            "start_line": 457,
+            "end_line": 457,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "assigns of BD, the Bond Insurer and",
+            "clause": {
+              "clause_id": "neg35",
+              "label": "NEGATIVE",
+              "clause_name": "5.5 Benefits; Successors and Assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "The omission of the Company from the successors-and-assigns provision is difficult to reconcile with its substantial rights and obligations throughout the agreement, creating uncertainty upon succession."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Company Excluded from Third-Party Beneficiary Rights",
+          "description": "Section 5.5  grants enforceable rights only to the Auction Agent, the Bond Insurer, and BD — the Company is not included. This could be read to deny Presbyterian Healthcare Services standing to enforce the agreement. The Company should be added.",
+          "revision": "... to any Person, other than the Company, the Auction Agent, the Bond",
+          "comment": "We added the Company as a named third-party beneficiary to reflect its direct economic interest in this agreement and ensure parity with the other enumerated parties under New York's third-party beneficiary doctrine.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7405,
+            "end_char": 7564,
+            "start_line": 163,
+            "end_line": 165,
+            "match_cover": 0.917,
+            "match_run": 6,
+            "matched_text": "to any Person other than the Trustee, the Issuer, the Company or BD except as otherwise required by law; provided, however, that the Auction Agent reserves the",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(b) List of Existing Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Section 5.5's exclusion of persons other than the listed entities omits the Company even though the Company is a party with express rights and obligations elsewhere, creating a facial conflict over its enforcement rights."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Assignment Requires Only Bond Insurer Consent, Not Company's",
+          "description": "Section 5.5  states the agreement \"shall not be assigned without the consent of the Bond Insurer\" but does not require the Company's consent to assignment. As the party paying the Broker-Dealer Fee and relying on the Broker-Dealer's performance, the Company should have a consent right over any assignment of this agreement.",
+          "revision": "... not be assigned without the consent ofprior written consent of the Company and the Bond Insurer.",
+          "comment": "As the party paying the Broker-Dealer Fee and relying on the Broker-Dealer's specific performance, the Company requires consent rights over any assignment to protect its legitimate contractual interests.",
+          "group_size": 1,
+          "location": {
+            "start_char": 26821,
+            "end_char": 27275,
+            "start_line": 462,
+            "end_line": 470,
+            "match_cover": 0.75,
+            "match_run": 6,
+            "matched_text": "not be assigned without the consent of the Bond Insurer. 5.6 Amendment; Waiver. (a) This Broker-Dealer Agreement shall not be deemed or construed to be modified, amended, rescinded, canceled or waived, in whole or in part, except by a written instrument signed by a duly authorized representative of ",
+            "clause": {
+              "clause_id": "neg36",
+              "label": "NEGATIVE",
+              "clause_name": "5.6(a) Amendment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The assignment clause unambiguously requires Bond Insurer consent only; omission of a Company consent right is a commercial allocation rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Counterparts Clause Does Not Address Electronic Signatures",
+          "description": "Section 5.8  allows execution in counterparts but does not address electronic signatures or PDF delivery. Modern practice should permit these to avoid disputes about execution validity.",
+          "revision": "executed in several counterparts, including by facsimile or electronic signature, each of which shall be ...",
+          "comment": "We added facsimile and electronic signature authorization to align with modern execution practice under New York law, which recognizes electronic signatures as valid under the Electronic Signatures and Records Act (N.Y. Tech. Law §§ 301–309).",
+          "group_size": 1,
+          "location": {
+            "start_char": 28046,
+            "end_char": 28102,
+            "start_line": 491,
+            "end_line": 491,
+            "match_cover": 0.6,
+            "match_run": 5,
+            "matched_text": "executed in several counterparts, each of which shall be",
+            "clause": {
+              "clause_id": "neg39",
+              "label": "NEGATIVE",
+              "clause_name": "5.8 Execution in Counterparts"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The counterparts clause is clear as written, and failure to expressly authorize electronic signatures or PDF delivery is an omitted convenience rather than ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Exclusive Federal Court Jurisdiction May Be Problematic",
+          "description": "Section 5.9  provides that all actions shall be brought exclusively in the United States District Court in the County of New York. This is problematic because federal courts require an independent basis for subject matter jurisdiction. If diversity or federal question jurisdiction is lacking, the parties may have no agreed forum. Consider adding New York state courts as a fallback.",
+          "revision": "... District Court in the County ofNewof New York or, if such court lacks subject matter jurisdiction, in any state court of competent jurisdiction located in the County of New York, and that, in connection with ...",
+          "comment": "Federal courts require an independent jurisdictional basis and cannot hear a case solely by party agreement; we added state court as a fallback to ensure the forum selection clause remains enforceable under all circumstances, which protects both parties equally.",
+          "group_size": 1,
+          "location": {
+            "start_char": 27454,
+            "end_char": 28241,
+            "start_line": 482,
+            "end_line": 494,
+            "match_cover": 0.343,
+            "match_run": 4,
+            "matched_text": "in the event of a breach of this Broker-Dealer Agreement by any other party shall not constitute a waiver of any such right or remedy with respect to any subsequent breach. 5.7 Severability. If any clause, provision or section of this Broker-Dealer Agreement shall be ruled invalid or unenforceable b",
+            "clause": {
+              "clause_id": "neg38",
+              "label": "NEGATIVE",
+              "clause_name": "5.7 Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The potential absence of federal subject-matter jurisdiction concerns enforceability and forum availability, not an intrinsic ambiguity or conflict within the contract."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Jury Waiver May Not Be Enforceable Without Conspicuous Notice",
+          "description": "Section 5.9  includes a mutual waiver of the right to trial by jury. Under New York law, jury trial waivers are generally enforceable if knowing and voluntary, but courts scrutinize whether the waiver was conspicuous. Best practice is to set the waiver in bold or uppercase text to reduce the risk of a later challenge that the waiver was not sufficiently prominent.",
+          "revision": "... any action, proceeding or counterclaim arising out of this Broker-Dealer Agreement or the transactions contemplated hereby. THE FOREGOING JURY TRIAL WAIVER IS KNOWINGLY, VOLUNTARILY AND INTENTIONALLY MADE BY EACH PARTY.",
+          "comment": "Under New York law, jury trial waivers are more likely to be upheld when they are conspicuous and include an explicit acknowledgment of voluntariness; the added uppercase sentence reflects best practice and protects both parties equally.",
+          "group_size": 1,
+          "location": {
+            "start_char": 28914,
+            "end_char": 29495,
+            "start_line": 501,
+            "end_line": 518,
+            "match_cover": 0.645,
+            "match_run": 17,
+            "matched_text": "any action, proceeding or counterclaim arising out of this Broker-Dealer Agreement or the transactions contemplated hereby. 5.10 No Implied Duties. Nothing contained in this Broker-Dealer Agreement, the Indenture or the Auction Agreement shall be deemed to imply any duties, covenants or obligations ",
+            "clause": {
+              "clause_id": "neg40",
+              "label": "NEGATIVE",
+              "clause_name": "5.10 No Implied Duties"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue concerns conspicuous formatting and enforceability of the jury waiver, not uncertainty in its language or inconsistency with another provision."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Agent Member",
+          "description": "The term 'Agent Member' is used in Section 2.6(a)  and  but is not defined anywhere in this Broker-Dealer Agreement. This term appears to refer to a party responsible for delivering Series 2004 Auction Bonds, but without a clear definition, parties may be uncertain about who qualifies as an Agent Member and what their obligations are under the settlement procedures.",
+          "revision": "Order fails to instruct its Agent Member (being the broker, dealer, or financial institution through which such Existing Owner holds its beneficial interest in Series 2004 Auction Bonds) to deliver Series 2004 Auction Bonds subject to such",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 18874,
+            "end_char": 19381,
+            "start_line": 339,
+            "end_line": 344,
+            "match_cover": 0.486,
+            "match_run": 5,
+            "matched_text": "Agent on behalf of the Broker-Dealer and, immediately upon receipt of such Fee, the Auction Agent shall deliver such Fee to the Broker- Dealer pursuant to the written instructions of the Broker-Dealer. If any Existing Owner who acquired Series 2004 Auction Bonds through a Broker-Dealer transfers any",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined technical term \"Agent Member\" leaves uncertain which settlement participant is meant and whose failure triggers the relevant duties and disclaimers."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: All Hold Rate",
+          "description": "The term 'All Hold Rate' is used in the Auction schedule at  and , requiring the Auction Agent to advise Broker-Dealers of this rate by 9:30 a.m. on each Auction Date. However, the term is never defined in this Broker-Dealer Agreement. Without a clear definition, parties cannot determine what constitutes the All Hold Rate or how it should be calculated, which could disrupt the auction process.",
+          "revision": "parties of the All Hold Rate (meaning the interest rate that would result if all Existing Owners submitted valid Hold Orders) and the Auction Index.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6896,
+            "end_char": 6946,
+            "start_line": 157,
+            "end_line": 157,
+            "match_cover": 0.4,
+            "match_run": 6,
+            "matched_text": "parties of the All Hold Rate and the Auction Index",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(a) Advice of All Hold Rate"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"All Hold Rate\" does not identify the applicable rate or calculation methodology on the face of the agreement."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Date",
+          "description": "The term 'Auction Date' is used extensively throughout the agreement (including , , ) to specify critical timing requirements for the auction process, such as when the Auction Agent must advise Broker-Dealers of rates and when Orders must be submitted. However, this fundamental term is never defined. Without a definition, parties may be uncertain about when specific Auction Dates occur, potentially disrupting the entire auction mechanism.",
+          "revision": "Not later than 9:30 a.m. on each Auction Date (meaning the date on which an Auction is scheduled to be conducted for the Series 2004 Auction Bonds), the Auction Agent shall",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6734,
+            "end_char": 7256,
+            "start_line": 155,
+            "end_line": 162,
+            "match_cover": 0.606,
+            "match_run": 11,
+            "matched_text": "Not later than 9:30 a.m. on each Auction Date, the Auction Agent shall advise the Broker-Dealers by telephone or other electronic communication acceptable to the parties of the All Hold Rate and the Auction Index. (b) On the Closing Date and from time to time thereafter as the Auction Agent shall re",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(b) List of Existing Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Auction Date\" leaves the dates triggering multiple auction-administration deadlines uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Period",
+          "description": "The term 'Auction Period' is used extensively throughout the agreement (including , , , ) to describe the duration between auctions and to calculate Broker-Dealer Fees. This is a fundamental timing concept for the auction mechanism, yet it is never defined in this Broker-Dealer Agreement. Without a definition, there is ambiguity about the length and frequency of Auction Periods, which could affect interest calculations and auction scheduling.",
+          "revision": "each Auction Period (meaning the period commencing on the day following an Interest Payment Date and ending on the next succeeding Interest Payment Date, as determined pursuant to the Indenture) after the Initial Periods for each series of the Series 2004 Auction Bonds.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4843,
+            "end_char": 4937,
+            "start_line": 119,
+            "end_line": 119,
+            "match_cover": 0.372,
+            "match_run": 13,
+            "matched_text": "each Auction Period after the Initial Periods for each series of the Series 2004 Auction Bonds",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(a) Purpose of Auction Procedures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Auction Period\" leaves its duration and boundaries uncertain, affecting scheduling and fee calculations."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Procedures",
+          "description": "The term 'Auction Procedures' is referenced throughout the agreement (including , , , ) and is stated to be incorporated by reference in Section 2.1(b) . However, the term is never formally defined or its source document identified. While it appears to be part of the Indenture (referenced in ), without a clear definition or reference, parties may be uncertain about which specific document contains the Auction Procedures that govern the auction process.",
+          "revision": "resulted from the implementation of the Auction Procedures (as set forth in the Indenture); and",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2940,
+            "end_char": 3139,
+            "start_line": 79,
+            "end_line": 82,
+            "match_cover": 0.733,
+            "match_run": 8,
+            "matched_text": "resulted from the implementation of the Auction Procedures; and WHEREAS, Wells Fargo Bank, National Association bas been appointed as Auction Agent for purposes of the Auction Agreement, and",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Appointment of Auction Agent)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "Although the Auction Procedures are incorporated, the agreement does not expressly define the term or unambiguously identify the exact source provisions constituting those procedures."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Auction Rate",
+          "description": "The term 'Auction Rate' is used at  and  to describe the interest rate determined through the auction process. While the Indenture is referenced as providing that 'the interest rate on the Series 2004 Auction Bonds shall be the Auction Rate,' the term itself is not defined in this Broker-Dealer Agreement. Without a definition, there may be confusion about how the Auction Rate is calculated and applied to the bonds.",
+          "revision": "interest rate on the Series 2004 Auction Bonds shall be the Auction Rate (meaning the interest rate per annum determined in accordance with the Auction Procedures) which shall be, except",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2752,
+            "end_char": 2847,
+            "start_line": 77,
+            "end_line": 77,
+            "match_cover": 0.567,
+            "match_run": 13,
+            "matched_text": "interest rate on the Series 2004 Auction Bonds shall be the Auction Rate which shall be, except",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Indenture Auction Rate)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The recital explains the Auction Rate as the rate determined by the Auction Agent through the Auction Procedures, which are incorporated into the agreement."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Authorized Officer",
+          "description": "The term 'Authorized Officer' is used at  to specify who may give communications on behalf of the Auction Agent. However, this term is not defined in the Broker-Dealer Agreement. Without a definition, there is ambiguity about which individuals at the Auction Agent have the authority to bind the Auction Agent to communications under this agreement, which could lead to disputes about the validity of notices and other communications.",
+          "revision": "on behalf of the Auction Agent by an Authorized Officer (meaning any officer of the Auction Agent duly authorized to act on its behalf in connection with this Broker-Dealer Agreement).",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 25584,
+            "end_char": 25716,
+            "start_line": 447,
+            "end_line": 449,
+            "match_cover": 0.452,
+            "match_run": 10,
+            "matched_text": "on behalf of the Auction Agent by an Authorized Officer. 5.4 Entire Agreement. This Broker-Dealer Agreement",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Section 5.4 — Entire Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Authorized Officer\" leaves uncertain which Auction Agent personnel are authorized to give binding communications."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: BD Officer",
+          "description": "The term 'BD Officer' is used at  to specify who may give communications on behalf of BD (the Broker-Dealer). However, this term is not defined in the Broker-Dealer Agreement. Without a definition, there is ambiguity about which individuals at BD have the authority to bind BD to communications under this agreement, which could lead to disputes about the validity of notices and other communications.",
+          "revision": "address specified herein. Communications shall be given on behalf of BD by a BD Officer (meaning any officer of BD duly authorized to act on its behalf in connection with this Broker-Dealer Agreement) and",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 25492,
+            "end_char": 25721,
+            "start_line": 446,
+            "end_line": 449,
+            "match_cover": 0.6,
+            "match_run": 15,
+            "matched_text": "address specified herein. Communications shall be given on behalf of BD by a BD Officer and on behalf of the Auction Agent by an Authorized Officer. 5.4 Entire Agreement. This Broker-Dealer Agreement, and",
+            "clause": {
+              "clause_id": "neg34",
+              "label": "NEGATIVE",
+              "clause_name": "5.3 Notices (addresses and effectiveness)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"BD Officer\" leaves uncertain which individuals may give communications on BD's behalf."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Bids",
+          "description": "The term 'Bids' is used at  in the context of prohibiting Broker-Dealers from submitting Bids for their own accounts. However, the term is not defined in this Broker-Dealer Agreement. Without a clear definition distinguishing 'Bids' from other types of orders (such as Hold Orders and Sell Orders), there is ambiguity about what constitutes a Bid and when the prohibition applies.",
+          "revision": "all of the Broker-Dealers from submitting Bids (meaning orders to purchase Series 2004 Auction Bonds at a specified interest rate) in Auctions for their own accounts, provided that",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6021,
+            "end_char": 6117,
+            "start_line": 136,
+            "end_line": 136,
+            "match_cover": 0.552,
+            "match_run": 8,
+            "matched_text": "all of the Broker-Dealers from submitting Bids in Auctions for their own accounts, provided that",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(d) Participation for own accounts"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined auction term \"Bids\" leaves its scope uncertain, particularly in distinguishing Bids from Hold Orders and Sell Orders."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Bond Insurer",
+          "description": "The term 'Bond Insurer' is used in several critical provisions (including , , , ) granting the Bond Insurer important rights such as the right to pay Broker-Dealer fees, status as a third-party beneficiary, and consent rights for amendments. However, the Bond Insurer is never identified or defined in this Broker-Dealer Agreement. Without knowing who the Bond Insurer is, parties cannot properly exercise or comply with these provisions.",
+          "revision": "The Bond Insurer (as identified in the Indenture) shall have the right to pay the Broker-Dealer fee if such fee is",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 19755,
+            "end_char": 19836,
+            "start_line": 350,
+            "end_line": 350,
+            "match_cover": 0.773,
+            "match_run": 14,
+            "matched_text": "The Bond Insurer shall have the right to pay the Broker-Dealer fee if such fee is",
+            "clause": {
+              "clause_id": "neg26",
+              "label": "NEGATIVE",
+              "clause_name": "2.5 Bond Insurer right to pay fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The agreement does not identify the \"Bond Insurer,\" despite granting that entity payment, beneficiary, amendment, and assignment rights."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Broker-Dealers",
+          "description": "The term 'Broker-Dealers' (plural) is used throughout the agreement (including , , ) to refer to multiple broker-dealers that may participate in the auction process. While individual broker-dealer 'BD' is a party to this agreement, and  references a definition of 'Broker-Dealer' in the Indenture, the criteria for who qualifies as a Broker-Dealer is not set forth in this Broker-Dealer Agreement. This creates ambiguity about which entities may participate in the auction process.",
+          "revision": "WHEREAS, the Auction Procedures require the participation of one or more Broker-Dealers (as defined in the Indenture);",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3315,
+            "end_char": 3802,
+            "start_line": 86,
+            "end_line": 99,
+            "match_cover": 0.889,
+            "match_run": 13,
+            "matched_text": "WHEREAS, the Auction Procedures require the participation of one or more Broker- Dealers; NOW, THEREFORE, the Auction Agent, as agent for the Trustee, BD, for the benefit of the Existing Owners and the Potential Owners of the Series 2004 Auction Bonds, and the Company agree as follows: (e) Each refe",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "1.3(e) References to purchase, sale or holding"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement expressly states that the definition and qualifying requirements for \"Broker-Dealer\" are contained in the Indenture, so an identified interpretive source exists."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Business Day",
+          "description": "The term 'Business Day' is used at , , , and  to specify critical timing requirements for notices and payments. However, the term is not defined in this Broker-Dealer Agreement. Without a definition, there is ambiguity about what constitutes a Business Day (e.g., whether it excludes certain holidays, what time zone applies), which could lead to disputes about whether timing requirements have been met.",
+          "revision": "Not later than 3:00p.m. on the Business Day (as defined in the Indenture) preceding each Auction Date,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8058,
+            "end_char": 8129,
+            "start_line": 172,
+            "end_line": 172,
+            "match_cover": 0.737,
+            "match_run": 10,
+            "matched_text": "Not later than 3:00p.m. on the Business Day preceding each Auction Date",
+            "clause": {
+              "clause_id": "neg15",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(c) Notice of change in principal amount"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Business Day\" can vary by relevant market, location, and holiday calendar, making several deadlines potentially uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Closing Date",
+          "description": "The term 'Closing Date' is used at  to establish when BD must initially provide the Auction Agent with a list of customers who are Existing Owners. However, the Closing Date is not defined in this Broker-Dealer Agreement. Without a definition, there is ambiguity about when this initial obligation arises, which could affect the Auction Agent's ability to properly administer the first auction.",
+          "revision": "On the Closing Date (meaning the date of initial issuance and delivery of the Series 2004 Auction Bonds) and from time to time thereafter as the Auction Agent",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6969,
+            "end_char": 7042,
+            "start_line": 159,
+            "end_line": 159,
+            "match_cover": 0.5,
+            "match_run": 10,
+            "matched_text": "On the Closing Date and from time to time thereafter as the Auction Agent",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(b) List of Existing Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Closing Date\" leaves uncertain which transaction closing triggers BD's initial customer-list obligation."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Existing Owners",
+          "description": "The term 'Existing Owners' is used extensively throughout the agreement (including , , , , ) to distinguish current bondholders from potential purchasers. This is a fundamental distinction for the auction process, yet the term is not defined in this Broker-Dealer Agreement. Without a definition, there is ambiguity about who qualifies as an Existing Owner and when someone transitions from a Potential Owner to an Existing Owner.",
+          "revision": "the Existing Owners (meaning beneficial owners of Series 2004 Auction Bonds) and the Potential Owners of the Series 2004 Auction Bonds, and the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6892,
+            "end_char": 7574,
+            "start_line": 156,
+            "end_line": 165,
+            "match_cover": 0.696,
+            "match_run": 8,
+            "matched_text": "the parties of the All Hold Rate and the Auction Index. (b) On the Closing Date and from time to time thereafter as the Auction Agent shall request, BD shall provide the Auction Agent with a list, substantially in the form of EXHIBIT E hereto, of the names of its customers that it believes are Exist",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "2.2(b) List of Existing Owners"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Existing Owners\" leaves uncertain which beneficial owners fall within that auction-participant class."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Hold Orders",
+          "description": "The term 'Hold Orders' is used at , , , and  to describe a type of order that Broker-Dealers may submit in auctions. This appears to be an order by an Existing Owner to continue holding their bonds. However, the term is not defined in this Broker-Dealer Agreement. Without a definition, there is ambiguity about what constitutes a Hold Order and how it differs from other types of orders in the auction process.",
+          "revision": "principal amount of Series 2004 Auction Bonds that were (1) the subject of a valid Hold Order (meaning an order by an Existing Owner to continue holding Series 2004 Auction Bonds at the resulting Auction Rate) of",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 15602,
+            "end_char": 16109,
+            "start_line": 292,
+            "end_line": 297,
+            "match_cover": 0.676,
+            "match_run": 17,
+            "matched_text": "principal amount of Series 2004 Auction Bonds that were (1) the subject of a valid Hold Order of an Existing Owner submitted by such Broker-Dealer, (2) the subject of a Submitted Bid of an Existing Owner submitted by such Broker-Dealer and continued to be held by such Existing Owner as a result of s",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Hold Orders\" leaves the requirements and legal effect of that auction instruction uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Interest Payment Date",
+          "description": "The term 'Interest Payment Date' is used at , , and  to specify when Broker-Dealer Fees are paid and when Auction Periods commence and end. This is a critical timing element for payments and calculations. However, the term is not defined in this Broker-Dealer Agreement. Without a definition, there is ambiguity about when these dates occur and how they relate to the auction schedule.",
+          "revision": "daily Auction Period, on each Interest Payment Date (as defined in the Indenture) following each Auction Date, each Broker-",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 15316,
+            "end_char": 15408,
+            "start_line": 289,
+            "end_line": 289,
+            "match_cover": 0.737,
+            "match_run": 8,
+            "matched_text": "daily Auction Period, on each Interest Payment Date following each Auction Date, each Broker",
+            "clause": {
+              "clause_id": "neg25",
+              "label": "NEGATIVE",
+              "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The undefined term \"Interest Payment Date\" leaves the timing of Broker-Dealer Fee payments uncertain on the face of this agreement."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: Tmstee",
+          "description": "Misspelled \"Trustee\" as \"Tmstee\"",
+          "revision": "NATIONAL ASSOCIATION (the \"TmsteeTrustee\"), pursuant to authority granted ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1125,
+            "end_char": 1191,
+            "start_line": 53,
+            "end_line": 53,
+            "match_cover": 0.875,
+            "match_run": 4,
+            "matched_text": "NATIONAL ASSOCIATION (the \"Tmstee\"), pursuant to authority granted",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error in date",
+          "description": "Extra space in \"May I\" should be \"May 1\"",
+          "revision": "... Indenture dated as of May I1, 2004 authorizing the issuance ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2595,
+            "end_char": 2653,
+            "start_line": 75,
+            "end_line": 75,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "Indenture dated as of May I, 2004 authorizing the issuance",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "Recital (Indenture Auction Rate)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Using the letter \"I\" rather than the numeral \"1\" creates a mechanical error in the Indenture's stated date, potentially obscuring the referenced instrument's exact date."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error: refened",
+          "description": "Misspelled \"referred\" as \"refened\"",
+          "revision": "... of such procedures is hereinafter refenedreferred to as an \"Auction.\"",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4968,
+            "end_char": 5027,
+            "start_line": 120,
+            "end_line": 120,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "of such procedures is hereinafter refened to as an \"Auction",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "2.1(a) Purpose of Auction Procedures"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "\"Refened\" is an obvious misspelling of \"referred\" and does not change the understood definition of an Auction."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Reference to non-existent Section 3.2(d)",
+          "description": "Paragraph 398  references \"Section 3.2(d)\" regarding the Auction Agent acting through agents or attorneys. However, there is no Section 3.2 in this document. The document contains Section 3.1 (Duties and Responsibilities of the Auction Agent)  but no Section 3.2 appears anywhere. This reference likely should point to a subsection of Section 3.1 or may be referencing a provision that was removed during drafting.",
+          "revision": "Section 3.2(d)1(d) hereof",
+          "comment": "We updated this cross-reference to align with the actual section numbering in the document, as Section 3.2 does not exist and the intended provision governing the Auction Agent's authority appears in Section 3.1.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22530,
+            "end_char": 22921,
+            "start_line": 398,
+            "end_line": 404,
+            "match_cover": 0.714,
+            "match_run": 4,
+            "matched_text": "Section 3.2(d) hereof, shall not be liable for any action taken, suffered, or omitted or for any error of judgment made by it in the performance of its duties hereunder. The Auction Agent shall not be liable for any error of judgment made in good faith unless the Auction Agent shall have been neglig",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(c) Liability standard"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The reference to nonexistent Section 3.2(d) is a broken cross-reference, leaving the intended provision concerning agents or attorneys unidentified."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error: serv1ce",
+          "description": "Number \"1\" used instead of letter \"i\"",
+          "revision": "... malfunctions of utilities or communications serv1ce;service;",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 24078,
+            "end_char": 24129,
+            "start_line": 417,
+            "end_line": 417,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "malfunctions of utilities or communications serv1ce",
+            "clause": {
+              "clause_id": "neg33",
+              "label": "NEGATIVE",
+              "clause_name": "3.1(e) Force majeure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "\"Serv1ce\" is an obvious typographical corruption of \"service\" and does not alter the understood force-majeure event."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Incomplete signature block - missing party name prefix",
+          "description": "Found: \"HEALTHCARE SERVICES\" — Signature block  appears incomplete; missing \"PRESBYTERIAN\" before \"HEALTHCARE SERVICES.\"",
+          "revision": "",
+          "comment": "Insert the specific type or name of healthcare services being provided under this agreement.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Recital (Series 2004 Bonds)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "BD's Best Efforts Obligation Lacks Enforcement Mechanism",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase \"achieving the lowest possible interest rate\" is uncertain as to whether it is merely aspirational or imposes a binding performance standard on BD."
+        }
+      ],
+      "risky": true
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "2.1(d) Participation for own accounts",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Unilateral Company Right to Prohibit BD Bidding for Own Account",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Company's unilateral prohibition right is clearly stated; the lack of advance notice, cause, or BD consent is a commercial allocation rather than a construction defect."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: All Hold Rate",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"All Hold Rate\" does not itself identify the applicable rate or its calculation, requiring construction by reference to the auction framework."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Invalid reference to Section 2.l(d)",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase \"l\" in \"2.l(d)\" is an obvious typographical substitution for the numeral 1, and the self-reference remains readily identifiable."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Bids",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined auction term \"Bids\" leaves its scope uncertain, particularly in distinguishing Bids from Hold Orders and Sell Orders."
+        }
+      ],
+      "risky": true
+    },
+    "neg13": {
+      "clause_id": "neg13",
+      "clause_name": "2.2(a) Advice of All Hold Rate",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: All Hold Rate",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"All Hold Rate\" does not identify the applicable rate or calculation methodology on the face of the agreement."
+        }
+      ],
+      "risky": true
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "2.2(b) List of Existing Owners",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Broad Auction Agent Disclosure Exception for Self-Protection",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The disclosure exception is broad but intelligible, and its reliance on indemnity satisfactory to the Auction Agent does not create a genuine textual ambiguity."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Broad Confidentiality Exception for Auction Agent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The confidentiality exception is broad but operative and intelligible; the absence of materiality or reasonableness qualifiers does not itself create construction risk."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Company Excluded from Third-Party Beneficiary Rights",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Section 5.5's exclusion of persons other than the listed entities omits the Company even though the Company is a party with express rights and obligations elsewhere, creating a facial conflict over its enforcement rights."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Auction Date",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Auction Date\" leaves the dates triggering multiple auction-administration deadlines uncertain."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Closing Date",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Closing Date\" leaves uncertain which transaction closing triggers BD's initial customer-list obligation."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Existing Owners",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Existing Owners\" leaves uncertain which beneficial owners fall within that auction-participant class."
+        }
+      ],
+      "risky": true
+    },
+    "neg15": {
+      "clause_id": "neg15",
+      "clause_name": "2.2(c) Notice of change in principal amount",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Punctuation - spacing in time",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in \"3:00p.m.\" does not alter the stated time or create uncertainty."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Business Day",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Business Day\" can vary by relevant market, location, and holiday calendar, making several deadlines potentially uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg16": {
+      "clause_id": "neg16",
+      "clause_name": "2.3(a) Auction schedule",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 7,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Auction Schedule Changes Directed Solely by Company",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Company-directed schedule-change mechanism is clear; the absence of BD consent or greater notice is negotiation risk only."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "BD Obligation to Achieve \"Lowest Possible\" Interest Rate",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase \"lowest possible interest rate\" is vague as to the universe of possible rates and whether it states an enforceable result obligation or merely the purpose of contacting Potential Owners."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Spacing error in time",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The irregular spacing around the colon in the time notation does not change the schedule's meaning."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Invalid reference to Section 202",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The numbering of sections within Exhibit B need not follow this agreement's decimal format, and the supplied text does not establish that Section 202 is an incorrect reference."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Invalid reference to Section 203(b)",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The use of \"203(b)\" may be the actual numbering convention of Exhibit B; inconsistency with this agreement's numbering does not demonstrate a mechanical error."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Spacing error in time notation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The space before the colon in \"11 :30\" is merely typographical and does not change the time."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Invalid reference to Section 204",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The supplied contract does not establish that Exhibit B uses \"2.04\" rather than \"204,\" so no erroneous cross-reference or construction defect is shown."
+        }
+      ],
+      "risky": true
+    },
+    "neg17": {
+      "clause_id": "neg17",
+      "clause_name": "2.3(b) BD to contact Potential Owners",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Auction Period",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Auction Period\" leaves the relevant duration and boundaries uncertain, including for fee calculations."
+        }
+      ],
+      "risky": true
+    },
+    "neg19": {
+      "clause_id": "neg19",
+      "clause_name": "2.3(d) Notices of transfers and failures",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Spacing error in time",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in \"3:00p.m.\" does not affect the deadline's meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg24": {
+      "clause_id": "neg24",
+      "clause_name": "2.5(a) Broker-Dealer Fee Rate",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Auction Date",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Auction Date\" leaves the triggering dates for several time-sensitive duties uncertain on the face of this agreement."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Auction Index",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Auction Index\" does not identify the applicable benchmark or how it is selected."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Unilateral Fee Adjustment Mechanism Favors Broker-Dealer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision clearly permits a fee adjustment only following a Broker-Dealer request and Company approval; lack of reciprocal initiation rights is negotiation risk."
+        }
+      ],
+      "risky": true
+    },
+    "neg25": {
+      "clause_id": "neg25",
+      "clause_name": "2.5(b) Calculation and payment of Broker-Dealer Fee",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 12,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Fee Adjustment Requires Company Approval with No Standard for Approval",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Company approval is an express condition to a fee adjustment, and the absence of a reasonableness standard or response deadline does not make that condition ambiguous."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Auction Agent's Fee Calculation is Conclusive Absent Manifest Error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The \"conclusive absent manifest error\" standard clearly imposes a narrow challenge threshold; the lack of audit and dispute rights is commercial risk, not construction risk."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Agent Member",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined technical term \"Agent Member\" leaves uncertain which settlement intermediary is referenced and who must give delivery instructions."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Broker-Dealer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement expressly points to the definition of \"Broker-Dealer\" in the Indenture, providing an identified source for the term."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Potential Owners",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Potential Owners\" leaves the eligible purchaser class and its boundary relative to Existing Owners uncertain."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Hold Order",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The technical term \"Hold Order\" is not defined, leaving the requirements and effect of that order type uncertain."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Orders",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined umbrella term \"Orders\" leaves uncertain whether and under what conditions it encompasses Bids, Hold Orders, and Sell Orders."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "No Monitoring of BD Self-Dealing",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The Auction Agent's monitoring disclaimer is clear, and the absence of a substitute BD certification obligation is negotiation risk only."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Auction Agent Fee Calculation Deemed Conclusive",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The manifest-error standard clearly limits challenges to the Auction Agent's calculation; the absence of a broader dispute mechanism is not a construction defect."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Agent Member",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined technical term \"Agent Member\" leaves uncertain which settlement participant is meant and whose failure triggers the relevant duties and disclaimers."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Hold Orders",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Hold Orders\" leaves the requirements and legal effect of that auction instruction uncertain."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Interest Payment Date",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Interest Payment Date\" leaves the timing of Broker-Dealer Fee payments uncertain on the face of this agreement."
+        }
+      ],
+      "risky": true
+    },
+    "neg26": {
+      "clause_id": "neg26",
+      "clause_name": "2.5 Bond Insurer right to pay fee",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Bond Insurer",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The agreement does not identify the \"Bond Insurer,\" despite granting that entity payment, beneficiary, amendment, and assignment rights."
+        }
+      ],
+      "risky": true
+    },
+    "neg27": {
+      "clause_id": "neg27",
+      "clause_name": "2.6(a) Settlement failures",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Uncapped Settlement Backstop Obligation for BD",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "BD's obligation to deliver funds upon a customer's failure is unconditional and clear, even if commercially onerous or functionally equivalent to a guaranty."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Bond Insurer Backup Payment - Subrogation Risk",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Possible reimbursement or subrogation consequences arise from background law and omitted protections, not from an ambiguity or conflict in the stated backup-payment right."
+        }
+      ],
+      "risky": false
+    },
+    "neg28": {
+      "clause_id": "neg28",
+      "clause_name": "2.6(b) No responsibility for delivery failures",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Authorized Officer",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Without a definition of \"Authorized Officer,\" it is uncertain which Auction Agent personnel may validly give communications."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Sell Orders",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The technical term \"Sell Orders\" is not defined, leaving the requirements and effect of that order type uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg29": {
+      "clause_id": "neg29",
+      "clause_name": "3.1(a) Auction Agent solely agent of Trustee",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "Overly Broad Auction Agent Liability Exclusion",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The statement that the Auction Agent owes no duties to any other Person is in tension with its express obligations to BD and the Company elsewhere, including auction and notice duties; Section 3.1(b)'s recognition of express duties heightens that conflict."
+        }
+      ],
+      "risky": true
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "Recital (Indenture Auction Rate)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Auction Rate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The recital substantively explains the Auction Rate as the rate determined by the Auction Agent through implementation of the incorporated Auction Procedures, so the lack of a separate formal definition does not itself create ambiguity."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Closing Date",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Closing Date\" may refer to the agreement closing, the bond issuance closing, or potentially separate series closings."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Interest Payment Date",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Interest Payment Date\" leaves the contractual payment deadlines uncertain on the face of this agreement."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Outstanding",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined technical term \"Outstanding\" can carry differing bond-law meanings, affecting which bonds enter the fee calculation."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Auction Rate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The recital explains the Auction Rate as the rate determined by the Auction Agent through the Auction Procedures, which are incorporated into the agreement."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Spacing error in date",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Using the letter \"I\" rather than the numeral \"1\" creates a mechanical error in the Indenture's stated date, potentially obscuring the referenced instrument's exact date."
+        }
+      ],
+      "risky": true
+    },
+    "neg30": {
+      "clause_id": "neg30",
+      "clause_name": "3.1(b) Only express duties",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "No Corresponding Liability Limitation for BD",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lack of parallel liability protection for BD is an asymmetrical allocation of risk, not an ambiguity or conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg31": {
+      "clause_id": "neg31",
+      "clause_name": "3.1(c) Liability standard",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Invalid reference to Section 3.2(d)",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The reference to nonexistent Section 3.2(d) is a broken cross-reference that leaves uncertain what authority or protection for acting through agents and attorneys was intended."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Inconsistent Auction Agent Liability Standard",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The general liability rule for negligence or misconduct conflicts with the more specific error-of-judgment sentence, which appears to impose liability only for negligence in ascertaining pertinent facts."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Reference to non-existent Section 3.2(d)",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The reference to nonexistent Section 3.2(d) is a broken cross-reference, leaving the intended provision concerning agents or attorneys unidentified."
+        }
+      ],
+      "risky": true
+    },
+    "neg33": {
+      "clause_id": "neg33",
+      "clause_name": "3.1(e) Force majeure",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Force Majeure Protection Only for Auction Agent, Not BD",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The force-majeure protection unambiguously applies only to the Auction Agent; the absence of reciprocal protection for BD is negotiation risk."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Spacing error: serv1ce",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "\"Serv1ce\" is an obvious typographical corruption of \"service\" and does not alter the understood force-majeure event."
+        }
+      ],
+      "risky": false
+    },
+    "neg34": {
+      "clause_id": "neg34",
+      "clause_name": "5.3 Notices (addresses and effectiveness)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Notice Provision Lacks Email as Effective Delivery Method",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Because email addresses are listed but notices by \"any other means\" become effective when delivered at the specified \"address,\" the terms leave uncertain whether an email address and email delivery are included."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: BD Officer",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Without a definition of \"BD Officer,\" it is uncertain which BD personnel may validly give communications under Section 5.3."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Issuer Notice Address Names Wrong Entity",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The notice clause labels the addressee as the \"Issuer\" but names Hospital Services Corporation, conflicting with the recital's definition of the Issuer as the New Mexico Hospital Equipment Loan Council."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Notice Provision Does Not Address Email Delivery",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Listing email addresses while making delivery by \"any other means\" effective at the specified \"address\" leaves uncertain whether email is an authorized and effective notice method."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: BD Officer",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"BD Officer\" leaves uncertain which individuals may give communications on BD's behalf."
+        }
+      ],
+      "risky": true
+    },
+    "neg35": {
+      "clause_id": "neg35",
+      "clause_name": "5.5 Benefits; Successors and Assigns",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Company Omitted from Successors and Assigns Provision",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "Omitting the Company from the successors-and-assigns language sits uneasily with the Company's material payment and approval obligations elsewhere, leaving uncertainty about whether those obligations bind a successor."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Company Excluded from Successors and Assigns Provision",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "The omission of the Company from the successors-and-assigns provision is difficult to reconcile with its substantial rights and obligations throughout the agreement, creating uncertainty upon succession."
+        }
+      ],
+      "risky": true
+    },
+    "neg36": {
+      "clause_id": "neg36",
+      "clause_name": "5.6(a) Amendment",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Assignment Requires Bond Insurer Consent but Not BD Consent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The assignment restriction clearly requires only Bond Insurer consent; the absence of a BD consent right is a negotiated allocation, not a construction defect."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Assignment Requires Only Bond Insurer Consent, Not Company's",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The assignment clause unambiguously requires Bond Insurer consent only; omission of a Company consent right is a commercial allocation rather than a construction defect."
+        }
+      ],
+      "risky": false
+    },
+    "neg38": {
+      "clause_id": "neg38",
+      "clause_name": "5.7 Severability",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "Exclusive Federal Court Jurisdiction May Be Problematic",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The potential absence of federal subject-matter jurisdiction concerns enforceability and forum availability, not an intrinsic ambiguity or conflict within the contract."
+        }
+      ],
+      "risky": false
+    },
+    "neg39": {
+      "clause_id": "neg39",
+      "clause_name": "5.8 Execution in Counterparts",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "Counterparts Clause Does Not Address Electronic Signatures",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The counterparts clause is clear as written, and failure to expressly authorize electronic signatures or PDF delivery is an omitted convenience rather than ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "Recital (Appointment of Auction Agent)",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Bond Insurer",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The unidentified term \"Bond Insurer\" leaves uncertain which entity possesses the agreement's payment, beneficiary, consent, and assignment rights."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Spelling error - \"bas\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "\"Bas\" is an obvious typographical corruption of \"has\" and does not create a reasonable alternative reading or change the understood recital."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Auction Procedures",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "Although the Auction Procedures are incorporated, the agreement does not expressly define the term or unambiguously identify the exact source provisions constituting those procedures."
+        }
+      ],
+      "risky": true
+    },
+    "neg40": {
+      "clause_id": "neg40",
+      "clause_name": "5.10 No Implied Duties",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "No-Implied-Duties Clause Protects Only the Company",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 5.10 clearly protects only the Company from implied duties; the lack of reciprocity for BD is negotiation risk."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Jury Waiver May Not Be Enforceable Without Conspicuous Notice",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue concerns conspicuous formatting and enforceability of the jury waiver, not uncertainty in its language or inconsistency with another provision."
+        }
+      ],
+      "risky": false
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "1.3(e) References to purchase, sale or holding",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Existing Owners",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined technical term \"Existing Owners\" leaves uncertain which beneficial holders qualify for the rights and order treatment assigned to that class."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Broker-Dealers",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement expressly states that the definition and qualifying requirements for \"Broker-Dealer\" are contained in the Indenture, so an identified interpretive source exists."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "1.3(f) References to Bonds",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Bids",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The technical auction term \"Bids\" is not defined locally, leaving its scope relative to Hold Orders and Sell Orders uncertain."
+        }
+      ],
+      "risky": true
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "1.4 Warranties of BD",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Undefined term: Initial Periods",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Initial Periods\" leaves uncertain when the incorporated auction procedures begin to apply to each series."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "BD Warranties Lack Key Regulatory Representations",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of additional regulatory representations is an omitted protection for the Company, not an ambiguity or inconsistency in the warranty actually given."
+        }
+      ],
+      "risky": true
+    },
+    "neg9": {
+      "clause_id": "neg9",
+      "clause_name": "2.1(a) Purpose of Auction Procedures",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs",
+        "company_presbyterian"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "BD Warranty Lacks Standard Enforceability Qualifications",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of customary insolvency and equitable-enforcement qualifications creates negotiation and representation risk, not textual ambiguity or internal inconsistency."
+        },
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Spelling error - \"refened\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "\"Refened\" is an obvious misspelling of \"referred\" that does not alter the provision's understood meaning."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Auction Period",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Auction Period\" leaves its duration and boundaries uncertain, affecting scheduling and fee calculations."
+        },
+        {
+          "party": "company_presbyterian",
+          "title": "Spelling error: refened",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "\"Refened\" is an obvious misspelling of \"referred\" and does not change the understood definition of an Auction."
+        }
+      ],
+      "risky": true
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Section 5.4 — Entire Agreement",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "company_presbyterian"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "company_presbyterian",
+          "title": "Undefined term: Authorized Officer",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The undefined term \"Authorized Officer\" leaves uncertain which Auction Agent personnel are authorized to give binding communications."
+        }
+      ],
+      "risky": true
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Section 5.9 — Governing Law; Jurisdiction; Waiver of Trial by Jury",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "broker_dealer_goldman_sachs"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "broker_dealer_goldman_sachs",
+          "title": "Forum Selection Limited to Federal Court Only",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Possible absence of federal subject-matter jurisdiction concerns enforceability and forum availability, not ambiguity or inconsistency within the agreement."
+        }
+      ],
+      "risky": false
+    }
+  }
+}

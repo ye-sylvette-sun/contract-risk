@@ -1,0 +1,3432 @@
+{
+  "contract_id": "982FSupp2d518_2007_mta",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 13,
+  "n_issues": 94,
+  "n_located": 88,
+  "n_judged": 86,
+  "n_skipped": 8,
+  "counts": {
+    "cat1": 31,
+    "cat2": 1,
+    "none": 54
+  },
+  "parties": {
+    "provider_st_jude": {
+      "n_issues": 28,
+      "n_located": 26,
+      "by_tab": {
+        "risks_negotiation": 11,
+        "proofread": 17
+      },
+      "by_kind": {
+        "Important": 3,
+        "Notable": 8,
+        "Section References": 2,
+        "Definitions": 3,
+        "Spelling + Grammar": 12
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Duplicate Section Numbering (Two Section 5s)",
+          "description": "The contract contains two sections both numbered \"5\" — one addressing ownership/IP rights  and one addressing warranties/disclaimers . This creates ambiguity in the survival clause , which references \"Sections 5, 5 and 7.\" The second Section 5 (warranties disclaimer) should be renumbered as Section 6, and all subsequent sections renumbered accordingly.",
+          "revision": "56.     The Materials previdedprovided are experimental in nature, and ...",
+          "comment": "Renumbered to resolve duplicate Section 5 numbering; subsequent sections renumbered accordingly to eliminate ambiguity in cross-references, including the survival clause.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5059,
+            "end_char": 5113,
+            "start_line": 97,
+            "end_line": 97,
+            "match_cover": 0.778,
+            "match_run": 5,
+            "matched_text": "The Materials previded are experimental in nature, and",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The duplicate section number is a mechanical numbering error that makes the survival reference to two Section 5s uncertain."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Insurance Aggregate Amount Discrepancy",
+          "description": "In Section 8, the aggregate insurance amount text says \"Three Million\" but the parenthetical dollar figure states \"$1,000,000\" instead of \"$3,000,000.\" This discrepancy weakens St. Jude's insurance protection and could be construed against St. Jude as the drafter. The parenthetical figure should be corrected to match the written-out amount.",
+          "revision": "... claim and Three Million ($13,000,000) dollars aggregate.",
+          "comment": "The parenthetical dollar figure has been corrected to '$3,000,000' to align with the written-out 'Three Million' aggregate amount, as the prior discrepancy created an ambiguity that did not reflect the parties' agreed coverage level.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6669,
+            "end_char": 6723,
+            "start_line": 117,
+            "end_line": 117,
+            "match_cover": 0.889,
+            "match_run": 4,
+            "matched_text": "claim and Three Million ($1,000,000) dollars aggregate",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "8. Liability Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Three Million” conflicts with “$1,000,000” in the same provision, an apparent transcription error that changes the required aggregate coverage."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Require Prior Written Consent Before Patent Filing",
+          "description": "Section 5 currently only requires Recipient to \"contact\" St. Jude regarding ownership interests before filing a patent application or commercializing a product. For stronger IP protection, Recipient should be required to obtain St. Jude's prior written consent before filing any patent application that includes the Materials or derivatives.",
+          "revision": "... the use of the Materials., Recipient agrees to obtain St. Jude's prior written consent before filing any such patent application and to contact St.",
+          "comment": "We revised this to require prior written consent before patent filing to ensure St. Jude's IP interests in the Materials are protected before any public disclosure or patent prosecution occurs, which is standard practice for academic research institutions providing proprietary materials.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4339,
+            "end_char": 4810,
+            "start_line": 89,
+            "end_line": 94,
+            "match_cover": 0.625,
+            "match_run": 8,
+            "matched_text": "the use of the Materials. Recipient agrees to contact St. Jude to determine c ■wnership interests, if any, St. Jude may have in such patent application or commercial Re:Lela:I. Ownerehip shall farm inventorship according to US patent law, Further, Rectpient shall not publish or disclose the results ",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause clearly requires contact rather than prior consent; the issue seeks a stronger substantive protection, not construction of the existing text."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Weak IP Ownership Determination Mechanism",
+          "description": "Section 5  only requires Recipient to \"contact St. Jude to determine ownership interests\" if Recipient files a patent or commercializes a product derived from the Materials. This is merely a procedural obligation with no teeth — there is no requirement that the parties actually reach agreement, no dispute resolution mechanism, and no consequence for Recipient's failure to contact St. Jude. Consider strengthening to require Recipient to negotiate in good faith and not file any patent application without St. Jude's prior written consent.",
+          "revision": "... a portion of the Materials, Isis derived from the Materials, or whiehwhich could not",
+          "comment": "We strengthened the triggering language to ensure that any invention incorporating, derived from, or enabled by the Materials is subject to St. Jude's ownership determination rights, protecting St. Jude's legitimate IP interests and ensuring compliance with its obligations as a federally funded research institution under the Bayh-Dole Act.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4220,
+            "end_char": 4297,
+            "start_line": 88,
+            "end_line": 88,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "a portion of the Materials, Is derived from the Materials, or whieh could not",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an agreement mechanism, dispute procedure, or sanction is a negotiation concern rather than an ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Indemnification Lacks Negligence/Willful Misconduct Scope",
+          "description": "Section 7  requires Recipient to indemnify St. Jude for claims \"arising out of or related to Recipient's acceptance, use and disposal of the Materials.\" While broad, it does not expressly cover claims arising from Recipient's negligence, willful misconduct, or breach of this MTA. Adding these triggers would strengthen St. Jude's protection and remove any ambiguity about the scope of the indemnification obligation.",
+          "revision": "expenees)expenses), arising Outout of or reertedrelated to ReciplenfeRecipient's acceptance, use an dand disposal of the",
+          "comment": "Expressly identifying negligence, willful misconduct, and breach as indemnification triggers reflects standard practice in research material transfer agreements and ensures the clause functions as intended without ambiguity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6213,
+            "end_char": 6300,
+            "start_line": 112,
+            "end_line": 112,
+            "match_cover": 0.688,
+            "match_run": 3,
+            "matched_text": "expenees), arising Out of or reerted to Reciplenfe acceptance, use an d disposal of the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The nexus phrase “arising out of or related to” may require construction as to whether it reaches negligence, willful misconduct, or contractual breach."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Termination Only for Cause — No Convenience Right",
+          "description": "Section 10  only permits St. Jude to terminate for Recipient's breach (with a 30-day cure period). St. Jude should reserve the right to terminate for convenience upon written notice, which is standard in MTAs. This would allow St. Jude to recall the Materials if circumstances change (e.g., new IP considerations, safety concerns, or change in institutional priorities).",
+          "revision": "10.   St. Jude may temenateterminate this MTA for convenience upon thirty (30) days' prior written notice to Recipient, or if Recipient breaches any term endand fails to cure",
+          "comment": "We added a termination-for-convenience right, which is standard in material transfer agreements, to ensure St. Jude retains appropriate institutional control over its proprietary materials in the event of unforeseen circumstances such as safety concerns or IP developments.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7097,
+            "end_char": 7182,
+            "start_line": 124,
+            "end_line": 124,
+            "match_cover": 0.5,
+            "match_run": 5,
+            "matched_text": "10. St. Jude may temenate this MTA if Recipient breaches any term end fails to cure",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Section 10 unambiguously permits termination only for an uncured breach; the requested convenience right is an omitted commercial right."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Publication Review Period Lacks Patent Filing Extension",
+          "description": "Section 5  provides St. Jude with a 30-day pre-publication review period to check for disclosure of proprietary information. However, it does not give St. Jude the right to delay publication for an additional period (typically 60–90 days) to file patent applications if the review reveals patentable subject matter. This is a standard MTA protection that St. Jude should include.",
+          "revision": "disclosure to St. Jude at least thirty (30) ...",
+          "comment": "The 30-day review window alone is insufficient to evaluate patentability and prepare patent filings; a pre-filing extension is standard MTA practice and protects both parties' interests in any resulting intellectual property.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4794,
+            "end_char": 4835,
+            "start_line": 94,
+            "end_line": 94,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "disclosure to St Jude at least thirty (30",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The provision clearly supplies a 30-day review period and no patent-filing extension; adding one is a negotiated enhancement."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Right to Remove Proprietary Information from Publications",
+          "description": "Section 5 allows St. Jude to \"review\" proposed publications for proprietary information disclosure , but does not expressly give St. Jude the right to require Recipient to remove or redact any proprietary information identified during the review. The review right is meaningless without a corresponding obligation on Recipient to act on St. Jude's findings.",
+          "revision": "... to allow St. Jude to revieW et...1th publiottionreview such publication or discieSuredisclosure for the",
+          "comment": "We specified that the review right extends to St. Jude's proprietary information, as a review period serves no protective purpose unless the reviewed materials are clearly defined; this is standard in material transfer agreements to protect the provider's confidential interests.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4910,
+            "end_char": 4980,
+            "start_line": 95,
+            "end_line": 95,
+            "match_cover": 0.733,
+            "match_run": 8,
+            "matched_text": "to allow St. Jude to revieW et...1th publiottion or discieSure for the",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The term “review” does not clearly establish whether St. Jude may merely comment or may require redaction, so the practical scope of that right may require construction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Reporting Obligation on Material Use or Safety Issues",
+          "description": "Section 3  limits the use of Materials to producing a lentiviral vector for a Phase I clinical trial, but neither Section 3 nor any other provision requires Recipient to report back to St. Jude on any adverse events, safety issues, or regulatory actions related to the use of the Materials in the clinical trial. Given that these Materials will be used in human subjects research, St. Jude should require prompt notification of any such events to protect its own risk profile and IP interests. Consider adding a reporting obligation to the permitted use clause.",
+          "revision": "allowing Recipient to uaeuse Materials to produce a molecular ...",
+          "comment": "Given that the Materials will be used in a Phase I clinical trial involving human subjects, St. Jude requires a reporting obligation for adverse events, safety findings, and regulatory actions as a standard condition of access — this is consistent with NIH policy and responsible materials transfer practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2390,
+            "end_char": 2448,
+            "start_line": 47,
+            "end_line": 47,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "allowing Recipient to uae Materials to produce a molecular",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The contract simply omits the proposed reporting obligation; that omission does not make the permitted-use clause ambiguous or inconsistent."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Insurance Requirement Potentially Inadequate for Clinical Trial Use",
+          "description": "Section 8  requires only $1 million per claim and $3 million aggregate liability insurance. Given that the Materials will be used in a Phase I clinical trial involving human subjects (ex vivo autologous cell modification), these amounts may be inadequate to cover potential personal injury or death claims. St. Jude should consider requiring higher minimums (e.g., $5 million per claim / $10 million aggregate) commensurate with clinical trial risk, and should also require that St. Jude be named as an additional insured.",
+          "revision": "ReCiplent shaltRecipient shall maintain liability Insuranceinsurance on an occurrence basis, or ecleirne meeeclaims made",
+          "comment": "Given that the Materials will be used in a Phase I clinical trial involving ex vivo autologous cell modification in human subjects, the existing coverage limits are commercially inadequate to address the elevated risk profile; higher minimums and additional insured status for St. Jude are standard practice in clinical trial agreements of this nature.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6463,
+            "end_char": 6543,
+            "start_line": 115,
+            "end_line": 115,
+            "match_cover": 0.643,
+            "match_run": 6,
+            "matched_text": "ReCiplent shalt maintain liability Insurance on an occurrence basis, or ecleirne",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "8. Liability Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The adequacy of the stated insurance limits and the absence of additional-insured status are commercial risk questions, not construction defects."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Obligation to Destroy Derivatives Upon Termination",
+          "description": "Section 10  requires Recipient to \"cease use of the Materials and all progeny thereof, and return all Materials and progeny to St. Jude\" upon termination. However, it does not address derivatives, modifications, or products made from the Materials. Recipient should also be required to destroy (and certify destruction of) any derivatives or products incorporating the Materials that cannot be returned.",
+          "revision": "... cease use of the Materials and, all progeny and derivatives",
+          "comment": "We extended the post-termination cessation obligation to derivatives to ensure that St. Jude's materials are not effectively retained through incorporation into downstream products, which is standard practice in academic material transfer agreements.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7325,
+            "end_char": 7393,
+            "start_line": 126,
+            "end_line": 127,
+            "match_cover": 0.9,
+            "match_run": 8,
+            "matched_text": "cease use of the Materials and all progeny thereof, and",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The return obligation expressly covers Materials and progeny, while the requested treatment of other derivatives or products is an additional substantive obligation."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid section reference to \"section 8\"",
+          "description": "The insurance notification provision  references \"section 8\" , but the document actually uses numbered clauses rather than lettered sections. The reference should be to \"Section 8\" to maintain consistency with the numbered structure used throughout the document (Sections 1-10).",
+          "revision": "sectionSection 8",
+          "comment": "Corrected capitalization of section reference for consistency with the numbered clause structure used throughout the document.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid section reference - \"Sections 5, 5aed 7\"",
+          "description": "The termination provision  states that \"Sections 5, 5aed 7 shall survive termination or expiration of this MTA.\" The reference \"5aed 7\" appears to be a typographical error. Based on the document structure, this should likely read \"Sections 5, 6, and 7\" to indicate that those three sections survive termination. Section 5  covers ownership and publication obligations, Section 6  covers warranties, and Section 7  covers indemnification - all provisions that would logically survive termination.",
+          "revision": "Sections 5, 5aed6, and 7",
+          "comment": "Corrected typographical error in section cross-reference from '5aed 7' to '5, 6, and 7' to accurately reflect the intended surviving provisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7439,
+            "end_char": 7523,
+            "start_line": 127,
+            "end_line": 128,
+            "match_cover": 0.917,
+            "match_run": 6,
+            "matched_text": "Sections 5, 5aed 7 shall survive termiriation or expiration of this MTA",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Sections 5, 5aed 7” contains a typographical and numbering error that materially obscures which provisions survive."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Agreement",
+          "description": "The term 'Agreement' is used in capitalized form  as a defined term but is never formally defined in this Materials Transfer Agreement. The document refers to 'this Agreement' when discussing license provisions, which creates ambiguity about the scope of what 'Agreement' encompasses. This should be defined, likely in the opening paragraph or as an inline definition where first used.",
+          "revision": "this AgreementMaterials Transfer Agreement (\"Agreement\"), no express or Implied lloenses or other rights are provided to the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1474,
+            "end_char": 1556,
+            "start_line": 35,
+            "end_line": 35,
+            "match_cover": 0.824,
+            "match_run": 13,
+            "matched_text": "this Agreement, no express or Implied lloenses or other rights are provided to the",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "In context, “this Agreement” plainly refers to the present MTA, and no competing agreement is identified."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling and punctuation errors",
+          "description": "Typo in \"St. Judd\" and missing opening parenthesis",
+          "revision": "St. Jude Children's Research Hospital cSt. Judd'(\"St. Jude\") agrees to provide you ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 579,
+            "end_char": 650,
+            "start_line": 25,
+            "end_line": 25,
+            "match_cover": 0.846,
+            "match_run": 7,
+            "matched_text": "St. Jude Children's Research Hospital cSt. Judd') agrees to provide you",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble — Agreement to Provide Materials"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The malformed parenthetical “cSt. Judd')” is a spelling and punctuation error in the identification of the contracting party."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Misspellings in \"collectively\" and \"Recipient\"",
+          "revision": "... of the University of Pennsylvania (collectiveiy(collectively referred to herein as \"RecipionflRecipient\"), with",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 690,
+            "end_char": 777,
+            "start_line": 26,
+            "end_line": 26,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "of the University of Pennsylvania (collectiveiy referred to herein as \"Recipionfl, with",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble — Agreement to Provide Materials"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The misspelled quoted label “Recipionfl” and malformed punctuation impair the attempted definition of “Recipient.”"
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: MTA",
+          "description": "The term 'MTA' is used as a defined term in the termination clause  and survival clause , and also appears in the general provisions , , and . However, 'MTA' is never formally defined in the document. While it likely stands for 'Materials Transfer Agreement,' this should be explicitly defined to avoid ambiguity.",
+          "revision": "Materials Transfer Agreement (\"MTA\")",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 307,
+            "end_char": 335,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 0.75,
+            "match_run": 3,
+            "matched_text": "Materials Transfer Agreement",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling in \"materials\"",
+          "revision": "1.        The biological materielsmaterials to be provided to Recipient are the anti-CD19-138;anti-CD19-BBζ",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 950,
+            "end_char": 1034,
+            "start_line": 30,
+            "end_line": 30,
+            "match_cover": 0.765,
+            "match_run": 10,
+            "matched_text": "1. The biological materiels to be provided to Recipient are the anti-CD19-138",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Materiels” is an obvious misspelling of “materials” and does not create a reasonable alternative meaning in context."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Unused definition: ALSAC",
+          "description": "The term 'ALSAC' is defined in the indemnification clause  as 'the American Lebanese Syrian Associated Charities (ALSAC)' but is never referenced again after its definition. The defined term should either be used in subsequent text or the parenthetical definition should be removed since it serves no purpose. Remove definition Lebanese Syrian Associated Charities (ALSAC) and their respective corporate",
+          "revision": "",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling in \"licenses\"",
+          "revision": "this Agreement, no express or Implied lloensesimplied licenses or other rights are provided ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1474,
+            "end_char": 1549,
+            "start_line": 35,
+            "end_line": 35,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "this Agreement, no express or Implied lloenses or other rights are provided",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Lloenses” is readily understood as “licenses” and does not alter the provision's meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space after \"sent\"",
+          "revision": "Recipient acknowledges and agrees that (I)(i) the Materials may netnot be taken or senttosent to",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2823,
+            "end_char": 3061,
+            "start_line": 51,
+            "end_line": 53,
+            "match_cover": 0.812,
+            "match_run": 6,
+            "matched_text": "Recipient acknowledges and agrees that (I) the Materials may net be taken or sentto anotherinstitution without written permission from St. Jude and (II) the Materials may riot be provided to",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “sentto” is typographical but does not affect the intelligibility or scope of the restriction."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space after \"another\"",
+          "revision": "anotherinstitutionanother institution without written permission from St. Jude and (II)(ii) the Materials may",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2950,
+            "end_char": 3017,
+            "start_line": 52,
+            "end_line": 52,
+            "match_cover": 0.786,
+            "match_run": 8,
+            "matched_text": "without written permission from St. Jude and (II) the Materials may",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “anotherinstitution” does not change the readily apparent meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors",
+          "description": "Misspellings in \"thereof\", \"patent\", and \"a\"",
+          "revision": "thereefthereof. If Recipient files a pateetpatent application or commercializes 2a product which",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4123,
+            "end_char": 4196,
+            "start_line": 87,
+            "end_line": 87,
+            "match_cover": 0.75,
+            "match_run": 4,
+            "matched_text": "If Recipient files a pateet application or commercializes 2 product which",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The substitution of “2” for “a” in “commercializes 2 product” is a mechanical error that facially affects the quantity and grammar of the trigger."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling in \"which\"",
+          "revision": "... a portion of the Materials, Isis derived from the Materials, or whiehwhich could not",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4220,
+            "end_char": 4297,
+            "start_line": 88,
+            "end_line": 88,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "a portion of the Materials, Is derived from the Materials, or whieh could not",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Whieh” is an obvious misspelling of “which” that does not change the clause's meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling in \"provided\"",
+          "revision": "5.     The Materials previdedprovided are experimental in nature, and ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5052,
+            "end_char": 5113,
+            "start_line": 97,
+            "end_line": 97,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "5. The Materials previded are experimental in nature, and",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Previded” is plainly “provided” and creates no genuine construction issue."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling in \"terminate\"",
+          "revision": "10.   St. Jude may temenateterminate this MTA if Recipient breaches any term endand fails to cure",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7097,
+            "end_char": 7182,
+            "start_line": 124,
+            "end_line": 124,
+            "match_cover": 0.875,
+            "match_run": 7,
+            "matched_text": "10. St. Jude may temenate this MTA if Recipient breaches any term end fails to cure",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Temenate” is plainly “terminate” and does not change the operative termination condition."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error",
+          "description": "Misspelling in \"progeny\"",
+          "revision": "... and return all Materials and progeay te SLprogeny to St. Jude,. Sections 5, 5aed6 and 7 shall",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7390,
+            "end_char": 7463,
+            "start_line": 127,
+            "end_line": 127,
+            "match_cover": 0.706,
+            "match_run": 7,
+            "matched_text": "and return all Materials and progeay te SL Jude, Sections 5, 5aed 7 shall",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Progeay” is readily identifiable as “progeny” from the surrounding text and defined subject matter."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Word choice error",
+          "description": "Should be \"to the extent\" not \"lathe\"",
+          "revision": "... in full force and effect latheto the extent permitted by",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8049,
+            "end_char": 8099,
+            "start_line": 135,
+            "end_line": 135,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "in full force and effect lathe extent permitted by",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Lathe extent” is a mechanical word-joining or transcription error that obscures the intended severability phrase “to the extent.”"
+          }
+        }
+      ]
+    },
+    "recipient_june_upenn": {
+      "n_issues": 66,
+      "n_located": 62,
+      "by_tab": {
+        "risks_negotiation": 11,
+        "proofread": 55
+      },
+      "by_kind": {
+        "Notable": 5,
+        "Important": 4,
+        "Minor": 2,
+        "Section References": 1,
+        "Definitions": 3,
+        "Spelling + Grammar": 51
+      },
+      "issues": [
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad \"Materials\" Definition",
+          "description": "The definition of \"Materials\" in Section 1  is extremely broad, encompassing \"any progeny, portions, unmodified derivatives and any accompanying know-how or data.\" From Penn's perspective, including \"progeny\" and \"portions\" within the definition means that anything Penn generates using the construct could itself be classified as \"Materials\" subject to St. Jude's ownership and control. Consider narrowing to the specific construct as delivered, and treating progeny/derivatives separately so Penn retains rights in its own innovations.",
+          "revision": "The biological materielsmaterials to be provided to Recipient are the anti-CD19-138;anti-CD19-BB-ζ",
+          "comment": "We limited the Materials definition to the specific construct as delivered, as the original language was broad enough to encumber Penn's own research outputs and innovations that arise from independent scientific work, which is inconsistent with standard MTA practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 960,
+            "end_char": 1034,
+            "start_line": 30,
+            "end_line": 30,
+            "match_cover": 0.75,
+            "match_run": 10,
+            "matched_text": "The biological materiels to be provided to Recipient are the anti-CD19-138",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The scientific terms “progeny” and “unmodified derivatives” may require construction to determine which recipient-generated materials fall within the defined term “Materials.”"
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly Broad \"But For\" Ownership Reach-Through",
+          "description": "Section 5  contains a sweeping reach-through clause requiring Penn to contact St. Jude to determine ownership interests in any patent or commercial product that \"could not have been produced but for the use of the Materials.\" This \"but for\" standard is extraordinarily broad and could encompass inventions that are only tangentially related to the Materials. Penn should negotiate to limit this to inventions that directly incorporate or are derived from the Materials, rather than any invention that was somehow enabled by the Materials.",
+          "revision": "Recipient acknowledges St Jude's ownership of the Materials and any progeny thereof. If Recipient files a patent application or commercializes a product which contains a portion of the Materials, Is or is derived from the Materials, or whieh could notRecipient agrees to contact St.",
+          "comment": "We revised the reach-through standard to cover inventions that directly incorporate or are derived from the Materials, which is the appropriate and commercially recognized scope; the original 'but for' standard was overbroad and could improperly encumber Penn's independent research and IP.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4024,
+            "end_char": 4395,
+            "start_line": 86,
+            "end_line": 89,
+            "match_cover": 0.864,
+            "match_run": 11,
+            "matched_text": "Recipient acknowledges St Jude's ownership of the Materials and any progeny thereef. If Recipient files a pateet application or commercializes 2 product which contains a portion of the Materials, Is derived from the Materials, or whieh could not have been produced but for the use of the Materials. R",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The “but for” formulation states a recognizable causation test; the complaint is that its reach is commercially broad, not that it has competing textual meanings."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Unlimited Pre-Publication Review with No Constraint on St. Jude",
+          "description": "Section 5  requires Penn to submit proposed publications to St. Jude at least 30 days before submission. However, the clause does not specify what happens if St. Jude objects — it only says the review is to check for \"disclosure of St. Jude proprietary information,\" but there is no express limitation confirming that St. Jude may only require removal of proprietary information (not block publication entirely). Penn should clarify that St. Jude's review right is limited to redacting confidential information, and that St. Jude cannot unreasonably delay or prevent publication.",
+          "revision": "research using the MaterieleMaterials without submitting the proposed pubIireationpublication or",
+          "comment": "We revised this provision to expressly limit St. Jude's review right to the removal of proprietary information, consistent with standard academic publication rights and the principle that review clauses should not function as veto rights over legitimate scholarly output.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4703,
+            "end_char": 4779,
+            "start_line": 93,
+            "end_line": 93,
+            "match_cover": 0.8,
+            "match_run": 4,
+            "matched_text": "research using the Materiele without submitting the proposed pubIireation or",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The word “review” is unclear as to whether it permits only inspection and comment or also confers authority to demand redaction or delay publication."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Unlimited One-Sided Indemnification",
+          "description": "Section 7  imposes a sweeping, uncapped indemnification obligation on Penn covering \"any and all claims, demands or legal causes of action of any nature whatsoever\" arising from Penn's use of the Materials, including personal injury or death. This is entirely one-sided — St. Jude has no reciprocal indemnification obligation. Given that St. Jude disclaims all warranties (including non-infringement) in Section 6, Penn could face liability for defects in materials it did not create. Penn should seek (1) mutual indemnification, or at minimum (2) an exception for claims arising from St. Jude's negligence, willful misconduct, or IP infringement.",
+          "revision": "... harmless St. Jude and the AmerioanAmerican",
+          "comment": "We revised the indemnification provision to exclude claims arising from St. Jude's own negligence, willful misconduct, or IP infringement, as a one-sided obligation covering such claims is inequitable — particularly where St. Jude simultaneously disclaims all warranties including non-infringement under Section 6.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5709,
+            "end_char": 5734,
+            "start_line": 106,
+            "end_line": 106,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "harmless St. Jude and the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “arising out of or related to Recipient's” activities may require construction where a claim is also caused by St. Jude's conduct; the warranty disclaimer does not directly contradict the indemnity."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Insurance Aggregate Amount Appears Incorrect",
+          "description": "Section 8  states insurance of \"not less than One Million ($1,000,000) dollars per claim and Three Million ($1,000,000) dollars aggregate.\" The parenthetical for the aggregate amount says \"$1,000,000\" but the written-out amount says \"Three Million,\" creating an internal inconsistency. This should be corrected to \"$3,000,000\" for the aggregate to match the written-out figure.",
+          "revision": "ReCiplent shaltRecipient shall maintain liability Insuranceinsurance on an occurrence basis, or ecleirne meeeclaims made including tail coverage, in the amount of not less than One Million ($1,000,000) dollars per claim and Three Million ($3,000,000) dollars aggregate.",
+          "comment": "Corrected internal inconsistency where the parenthetical aggregate amount read \"$1,000,000\" but the written-out figure stated \"Three Million\"; updated to \"$3,000,000\" to align both expressions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6463,
+            "end_char": 6723,
+            "start_line": 115,
+            "end_line": 117,
+            "match_cover": 0.8,
+            "match_run": 8,
+            "matched_text": "ReCiplent shalt maintain liability Insurance on an occurrence basis, or ecleirne meee including tail coverage. in the amount of not lees than One Million ($1, 00e,000) dollars per claim and Three Million ($1,000,000) dollars aggregate",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "8. Liability Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The written aggregate amount of “Three Million” and the numerical amount “$1,000,000” are mechanically inconsistent."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unilateral Termination Right Favors St. Jude Only",
+          "description": "Section 10  grants St. Jude the right to terminate upon breach by Penn, but Penn has no reciprocal termination right if St. Jude breaches. Penn should have at least a matching right to terminate for St. Jude's uncured breach, or a right to terminate for convenience with reasonable notice.",
+          "revision": "St. JudeEither party may temenateterminate this MTA if Recipientthe other party breaches any term endand fails to cure",
+          "comment": "We revised the termination provision to grant both parties a mutual right to terminate upon uncured breach, reflecting standard bilateral contract principles and ensuring neither party is locked into the agreement without recourse if the other party defaults.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6763,
+            "end_char": 7182,
+            "start_line": 119,
+            "end_line": 124,
+            "match_cover": 0.611,
+            "match_run": 3,
+            "matched_text": "St Jude, upon request, wile a Certificate of insurance from ite insurer (i) stating that the insurance coverage set forth In section 8 is in lull force and effect, and (ie premising te provide St. Jude with Thirty (30) days prior written notice of cancellation or reduetion in coverage. 10. St. Jude ",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. Certificate of Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The unilateral termination right is explicit; lack of reciprocity is a negotiation concern rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Sole Responsibility for Compliance Without Provider Cooperation",
+          "description": "Section 2  places \"sole responsibility\" on Penn for all receipt, storage, handling, disposition, transfer and uses of the Materials in compliance with all applicable laws. While Penn should certainly comply with applicable law, taking \"sole\" responsibility may be inappropriate where St. Jude's actions in preparing or shipping the Materials contribute to a compliance issue. Consider replacing \"sole responsibility\" with \"responsibility\" to avoid implying that St. Jude bears no responsibility for its own conduct in connection with the Materials.",
+          "revision": "Recipient accepts sole responsibility for any and all receipt, storage, handling.,",
+          "comment": "The term 'sole responsibility' is overbroad where both parties have obligations in connection with the Materials; each party should bear responsibility for its own conduct under applicable law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1822,
+            "end_char": 1902,
+            "start_line": 40,
+            "end_line": 40,
+            "match_cover": 1.0,
+            "match_run": 11,
+            "matched_text": "Recipient accepts sole responsibility for any and all receipt, storage, handling",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "2. Compliance with Laws"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Sole responsibility” clearly allocates the listed compliance responsibilities to Recipient; the proposed limitation for St. Jude's conduct would be a substantive amendment."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Warranty of Title or Right to Transfer Materials",
+          "description": "Section 6  contains a comprehensive warranty disclaimer from St. Jude, including disclaiming warranties of merchantability, fitness, and non-infringement. Critically, St. Jude provides no warranty that it has the right or authority to transfer the Materials, or that the Materials are free of third-party encumbrances. Penn is being asked to use these materials in a GMP clinical trial setting — if St. Jude lacks rights to transfer, Penn could face significant liability. Penn should request that St. Jude at minimum represent that it has the right to provide the Materials under this MTA.",
+          "revision": "The Materials previdedprovided are experimental in nature, and ...",
+          "comment": "A minimum representation that St. Jude has the legal right to provide the Materials is standard in MTA practice and is particularly critical here given the GMP clinical context; without it, Penn assumes unquantifiable legal exposure from potential third-party IP or regulatory claims.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5059,
+            "end_char": 5113,
+            "start_line": 97,
+            "end_line": 97,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "The Materials previded are experimental in nature, and",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement omits a warranty of title or authority to transfer, which is a negotiated protection rather than an ambiguity in the disclaimer."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No Term or Duration Specified",
+          "description": "The MTA does not specify a term or duration. Section 10  references \"termination or expiration\" but there is no expiration date or stated term. This creates ambiguity about when Penn's obligations (including the restrictive use limitations and indemnification) end. Penn should consider adding a defined term or at least linking the agreement duration to the completion of the Phase I clinical trial referenced in Section 3.",
+          "revision": "survive termiriationtermination or expiration of this MTA.",
+          "comment": "Without a defined term, the agreement's obligations—including use restrictions and indemnification—lack a clear endpoint, creating legal ambiguity for both parties. Linking the duration to the Phase I clinical trial milestone or establishing an explicit term would provide commercial certainty and is standard practice for MTAs.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7477,
+            "end_char": 7523,
+            "start_line": 128,
+            "end_line": 128,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "survive termiriation or expiration of this MTA",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "Section 10 contemplates “expiration,” but no term or expiration mechanism appears elsewhere in the instrument, leaving that concept without a coherent contractual trigger."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Use Restriction Limited to Phase I Only",
+          "description": "Section 3  restricts use of the Materials to producing a lentiviral vector clone for a Phase I clinical trial only. This is very narrow and would require a new agreement or amendment for any subsequent phases, additional trials, or even preclinical research. Penn should consider broadening this to cover \"clinical trials\" generally, or at least Phase I/II, to avoid needing to renegotiate mid-program.",
+          "revision": "... further agrees that the Materials ereare provided for the sole purpose ...",
+          "comment": "Restricting use to Phase I only creates unnecessary administrative burden; broadening the permitted use to cover clinical trials generally, or at minimum Phase I/II, is standard practice and avoids the need to renegotiate as the program advances.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2295,
+            "end_char": 2362,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "further agrees that the Materials ere provided for the sole purpose",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The limitation to a Phase I trial is express and narrow but not ambiguous or inconsistent."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "No Governing Law or Dispute Resolution Provision",
+          "description": "The MTA contains no governing law clause or dispute resolution mechanism. Given that St. Jude is located in Tennessee and Penn is in Pennsylvania, the absence of a governing law provision creates uncertainty about which state's law applies. Penn should seek to include a provision specifying governing law — ideally Pennsylvania law — and a dispute resolution mechanism.",
+          "revision": "... in full force and effect latheto the extent permitted by",
+          "comment": "Without a governing law clause, any dispute between parties in different states creates unnecessary uncertainty; we propose including a governing law and dispute resolution provision to ensure clarity and enforceability under a mutually agreed jurisdiction.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8049,
+            "end_char": 8099,
+            "start_line": 135,
+            "end_line": 135,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "in full force and effect lathe extent permitted by",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of governing-law and dispute-resolution clauses creates litigation uncertainty but is not an intrinsic defect or conflict within the instrument."
+          }
+        },
+        {
+          "kind": "Section References",
+          "tab": "proofread",
+          "title": "Invalid section reference in survival clause",
+          "description": "The termination clause  states \"Sections 5, 5aed 7 shall survive termination\" but there is no Section 6 in the document. The document has a numbering error where two different sections are both numbered as Section 5 - one addressing ownership/patent matters  and another addressing warranties . The reference \"5aed 7\" appears to be a typographical error for \"5, 6 and 7\", but since Section 6 does not exist due to the duplicate Section 5 numbering, this reference is invalid. The survival provision likely intends to reference the ownership provision (first Section 5) , the warranties provision (second Section 5) , and the indemnification provision (Section 7) .",
+          "revision": "Sections 5, 5aed6 and 7",
+          "comment": "The original reference 'Sections 5, 5aed 7' contained a typographical error and was rendered invalid by duplicate Section 5 numbering; we have corrected the reference to Sections 5, 6, and 7 (following renumbering) to accurately capture the survival of ownership, warranties, and indemnification provisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7439,
+            "end_char": 7484,
+            "start_line": 127,
+            "end_line": 128,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "Sections 5, 5aed 7 shall survive",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The duplicate Section 5 numbering and corrupted phrase “5aed” mechanically obscure the intended survival cross-reference."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Agreement",
+          "description": "The term 'Agreement' is used in  but is never formally defined in this document. While it likely refers to this Materials Transfer Agreement, the term should be explicitly defined to avoid ambiguity about what constitutes the 'Agreement' being referenced.",
+          "revision": "agree to the following terms and conditions (this \"Agreement\"):",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 890,
+            "end_char": 1478,
+            "start_line": 28,
+            "end_line": 35,
+            "match_cover": 0.889,
+            "match_run": 7,
+            "matched_text": "agree to the following terms and conditions: 1. The biological materiels to be provided to Recipient are the anti-CD19-138; chimeric receptor construct, including any progeny, portions, unmoditteci derivatives and any accompanying know..how or data (\"Materials\"). The Recipient acknowledges that the ",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Agreement” is reasonably and unambiguously understood from context as this MTA."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in adverb",
+          "description": "Typo: \"collectiveiy\" should be \"collectively\"",
+          "revision": "(collectiveiy(collectively referred to herein as",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 725,
+            "end_char": 759,
+            "start_line": 26,
+            "end_line": 26,
+            "match_cover": 0.833,
+            "match_run": 4,
+            "matched_text": "collectiveiy referred to herein as",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble — Agreement to Provide Materials"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Collectiveiy” is an obvious misspelling that does not affect the collective definition."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: MTA",
+          "description": "The term 'MTA' is used multiple times in the termination and modification provisions , , , , and , but it is never formally defined. While the document heading indicates this is a 'Materials Transfer Agreement,' the abbreviation 'MTA' should be explicitly defined for clarity.",
+          "revision": "Materials Transfer Agreement (\"MTA\")",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 307,
+            "end_char": 335,
+            "start_line": 15,
+            "end_line": 15,
+            "match_cover": 0.75,
+            "match_run": 3,
+            "matched_text": "Materials Transfer Agreement",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: materials",
+          "description": "The defined term 'Materials' appears in lowercase as 'materials' in . This should be capitalized to match the defined term and maintain consistency throughout the document.",
+          "revision": "materialsMaterials developed at St. Jude.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 794,
+            "end_char": 815,
+            "start_line": 27,
+            "end_line": 27,
+            "match_cover": 0.8,
+            "match_run": 4,
+            "matched_text": "developed at St. Jude",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "Preamble — Agreement to Provide Materials"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase pre-definition reference to materials is naturally generic and does not conflict with the subsequently defined term “Materials.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors in materials definition",
+          "description": "Typos: \"materiels\" and \"unmoditteci\"",
+          "revision": "The biological materielsmaterials to be provided to Recipient ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 960,
+            "end_char": 1012,
+            "start_line": 30,
+            "end_line": 30,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "The biological materiels to be provided to Recipient",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Although “materiels” is harmless, the corrupted word “unmoditteci” appears in the operative definition and mechanically obscures the intended category of derivatives."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in derivatives",
+          "description": "Typo: \"unmoditteci\" should be \"unmodified\"",
+          "revision": "... construct, including any progeny, portions, unmoditteciunmodified",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1078,
+            "end_char": 1120,
+            "start_line": 31,
+            "end_line": 31,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "construct, including any progeny, portions",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Unmoditteci” is a corrupted term within the definition of Materials and may affect the definition's substantive scope."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in licenses",
+          "description": "Typo: \"lloenses\" should be \"licenses\"",
+          "revision": "... Agreement, no express or Implied lloenseslicenses or other rights are provided ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1479,
+            "end_char": 1549,
+            "start_line": 35,
+            "end_line": 35,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "Agreement, no express or Implied lloenses or other rights are provided",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Lloenses” is plainly a misspelling of “licenses” and creates no reasonable competing meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in are",
+          "description": "Typo: \"ere\" should be \"are\"",
+          "revision": "... further agrees that the Materials ereare provided for the sole purpose ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2295,
+            "end_char": 2362,
+            "start_line": 46,
+            "end_line": 46,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "further agrees that the Materials ere provided for the sole purpose",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Ere” is plainly intended as “are” in context and does not change the provision's meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in use",
+          "description": "Typo: \"uae\" should be \"use\"",
+          "revision": "allowing Recipient to uaeuse Materials to produce a molecular ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2390,
+            "end_char": 2448,
+            "start_line": 47,
+            "end_line": 47,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "allowing Recipient to uae Materials to produce a molecular",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Uae” is readily understood as “use” and does not affect the permitted-use restriction."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors in GMP clause",
+          "description": "Typos: \"appilcation\" and \"aurologcus\"",
+          "revision": "... in compliance with GMP for appilcationapplication in ex viva aurologcusvivo autologous",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2521,
+            "end_char": 2570,
+            "start_line": 48,
+            "end_line": 48,
+            "match_cover": 0.727,
+            "match_run": 5,
+            "matched_text": "in compliance with GMP for appilcation in ex viva",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted technical phrase “appilcation in ex viva aurologcus” mechanically obscures the precise clinical application authorized by the clause."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in quantities",
+          "description": "Typo: \"qUantitles\" should be \"quantities\"",
+          "revision": "cell modification In qUantitlesquantities sufficient .to complete a Phase ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2606,
+            "end_char": 2669,
+            "start_line": 49,
+            "end_line": 49,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "cell modification In qUantitles sufficient .to complete a Phase",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“QUantitles” is an obvious misspelling of “quantities” that does not alter the requirement."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in not",
+          "description": "Typo: \"net\" should be \"not\"",
+          "revision": "... that (I) the Materials may netnot be taken or sentto",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2857,
+            "end_char": 2906,
+            "start_line": 51,
+            "end_line": 51,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "that (I) the Materials may net be taken or sentto",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Net” is a valid but unintended word substituted for “not,” and if read literally it changes or destroys the prohibition."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing space in sent to",
+          "description": "Missing space: \"sentto\" should be \"sent to\"",
+          "revision": "may netnot be taken or senttosent to",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2880,
+            "end_char": 3061,
+            "start_line": 51,
+            "end_line": 53,
+            "match_cover": 0.714,
+            "match_run": 3,
+            "matched_text": "may net be taken or sentto anotherinstitution without written permission from St. Jude and (II) the Materials may riot be provided to",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The missing space in “sentto” does not obscure the intended phrase “sent to.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing space in another institution",
+          "description": "Missing space: \"anotherinstitution\" should be two words",
+          "revision": "anotherinstitutionanother institution without written permission from St. ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2950,
+            "end_char": 2984,
+            "start_line": 52,
+            "end_line": 52,
+            "match_cover": 0.714,
+            "match_run": 5,
+            "matched_text": "without written permission from St",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Anotherinstitution” remains readily understandable as “another institution” and does not alter the restriction."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in obligations",
+          "description": "Typo: \"obligatons\" should be \"obligations\"",
+          "revision": "subject to consulting or licensing obligatonsobligations to another party (other than ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3147,
+            "end_char": 3221,
+            "start_line": 54,
+            "end_line": 54,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "subject to consulting or licensing obligatons to another party (other than",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Obligatons” is plainly “obligations” and does not change the provision's meaning."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in acknowledge",
+          "description": "Typo: \"acknowtedge\" should be \"acknowledge\"",
+          "revision": "... of the Materials, and will acknowtedgeacknowledge S.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3566,
+            "end_char": 3606,
+            "start_line": 59,
+            "end_line": 59,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "of the Materials, and will acknowtedge S",
+            "clause": {
+              "clause_id": "neg3",
+              "label": "NEGATIVE",
+              "clause_name": "4. Publications and Acknowledgment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Acknowtedge” is an obvious misspelling of “acknowledge” and the obligation remains clear."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in patent",
+          "description": "Typo: \"pateet\" should be \"patent\"",
+          "revision": "If Recipient files a pateetpatent application or commercializes 2 product ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4123,
+            "end_char": 4190,
+            "start_line": 87,
+            "end_line": 87,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "If Recipient files a pateet application or commercializes 2 product",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Pateet” is plainly intended to mean “patent” and does not itself create a construction issue."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in article",
+          "description": "Should be \"a\" not \"2\"",
+          "revision": "commercializes 2a product which",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Corrupted text in ownership",
+          "description": "Corrupted: \"c ■wnership\" should be \"ownership\"",
+          "revision": "Jude to determine c ■wnershipownership interests, if any, St. Jude ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4411,
+            "end_char": 4468,
+            "start_line": 90,
+            "end_line": 90,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "Jude to determine c ■wnership interests, if any, St. Jude",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted text “c ■wnership” mechanically obscures the operative subject—St. Jude's ownership interests."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in Recipient",
+          "description": "Typo: \"Rectpient\" should be \"Recipient\"",
+          "revision": "US patent law, Further, RectpientRecipient shall not publish or disclose ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4605,
+            "end_char": 4668,
+            "start_line": 92,
+            "end_line": 92,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "US patent law, Further, Rectpient shall not publish or disclose",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Rectpient” is an obvious misspelling of the defined party name and creates no competing referent."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in Materials",
+          "description": "Typo: \"Materiele\" should be \"Materials\"",
+          "revision": "research using the MaterieleMaterials without submitting the proposed pubIireation ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4703,
+            "end_char": 4776,
+            "start_line": 93,
+            "end_line": 93,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "research using the Materiele without submitting the proposed pubIireation",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Materiele” is readily understood as the defined “Materials” and does not alter the publication obligation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in publication",
+          "description": "Typo: \"pubIireation\" should be \"publication\"",
+          "revision": "the proposed pubIireationpublication or",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors in review clause",
+          "description": "Typos: \"revieW et...1th publiottion\" and \"discieSure\"",
+          "revision": "... to allow St. Jude to revieW et...1th publiottionreview such publication or discieSuredisclosure for the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4910,
+            "end_char": 4980,
+            "start_line": 95,
+            "end_line": 95,
+            "match_cover": 0.733,
+            "match_run": 8,
+            "matched_text": "to allow St. Jude to revieW et...1th publiottion or discieSure for the",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The severely corrupted phrase “revieW et...1th publiottion” obscures what St. Jude is entitled to review and therefore affects the operative review right."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in information",
+          "description": "Typo: \"infonnation\" should be \"information\"",
+          "revision": "disclosure of St. Jude proprietary infonnation. .information. .",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4995,
+            "end_char": 5041,
+            "start_line": 96,
+            "end_line": 96,
+            "match_cover": 0.857,
+            "match_run": 6,
+            "matched_text": "disclosure of St. Jude proprietary infonnation",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Infonnation” is an obvious misspelling of “information” and does not affect scope."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in provided",
+          "description": "Typo: \"previded\" should be \"provided\"",
+          "revision": "The Materials previdedprovided are experimental in nature, and ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5059,
+            "end_char": 5113,
+            "start_line": 97,
+            "end_line": 97,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "The Materials previded are experimental in nature, and",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Previded” is plainly “provided” and leaves the disclaimer intelligible."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in MERCHANTABILITY",
+          "description": "Typo: \"MERCHANTASILITY\" should be \"MERCHANTABILITY\"",
+          "revision": "WARRANTIES OF MERCHANTASILITYMERCHANTABILITY AND FITNE$S FOR A PARTICULAR ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5227,
+            "end_char": 5285,
+            "start_line": 99,
+            "end_line": 99,
+            "match_cover": 0.889,
+            "match_run": 6,
+            "matched_text": "WARRANTIES OF MERCHANTASILITY AND FITNE$S FOR A PARTICULAR",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The misspelling of the legally recognized warranty of “MERCHANTABILITY” may facially affect which implied warranty is disclaimed, notwithstanding the evident intended correction."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in FITNESS",
+          "description": "Corrupted: \"FITNE$S\" should be \"FITNESS\"",
+          "revision": "AND FITNE$SFITNESS FOR A PARTICULAR USE.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5257,
+            "end_char": 5289,
+            "start_line": 99,
+            "end_line": 99,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "AND FITNE$S FOR A PARTICULAR USE",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted legal term “FITNE$S” is a mechanical error in identifying the warranty being disclaimed."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in JUDelE",
+          "description": "Corrupted: \"JUDelE\" should be \"JUDE\"",
+          "revision": "... IN NO EVENT SHALL ST. JUDelE UABLEJUDE BE LIABLE FOR",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5477,
+            "end_char": 5515,
+            "start_line": 102,
+            "end_line": 102,
+            "match_cover": 0.7,
+            "match_run": 6,
+            "matched_text": "IN NO EVENT SHALL ST. JUDelE UABLE FOR",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "5. (second) Disclaimer of Warranties and Damages"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“ST. JUDelE UABLE” corrupts both the party name and the phrase “BE LIABLE,” mechanically impairing the operative limitation of liability."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in Amerioan",
+          "description": "Typo: \"Amerioan\" should be \"American\"",
+          "revision": "... harmless St. Jude and the AmerioanAmerican",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5709,
+            "end_char": 5734,
+            "start_line": 106,
+            "end_line": 106,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "harmless St. Jude and the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The misspelling of “American” occurs within the formal name of an indemnified entity and therefore may affect identification of that beneficiary."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in trustees",
+          "description": "Typo: \"trt.isteete tenet:tore\" should be \"trustees, directors\"",
+          "revision": "affiliates and Boards of Governors, trt.isteete tenet:toretrustees, directors, officers, medical and",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 5846,
+            "end_char": 5927,
+            "start_line": 108,
+            "end_line": 108,
+            "match_cover": 0.846,
+            "match_run": 8,
+            "matched_text": "affiliates and Boards of Governors, trt.isteete tenet:tore, officers, medical and",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted phrase “trt.isteete tenet:tore” makes part of the list of indemnified persons unintelligible and alters the ascertainable scope of the indemnity."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in successors",
+          "description": "Typo: \"seccessors\" should be \"successors\"",
+          "revision": "seccessorssuccessors, heirs and assigns againat ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6045,
+            "end_char": 6070,
+            "start_line": 110,
+            "end_line": 110,
+            "match_cover": 0.8,
+            "match_run": 4,
+            "matched_text": "heirs and assigns againat",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Seccessors” is plainly “successors” and does not create uncertainty about the listed beneficiaries."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in against",
+          "description": "Typo: \"againat\" should be \"against\"",
+          "revision": "heirs and assigns againatagainst any and all claims, demands ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6045,
+            "end_char": 6098,
+            "start_line": 110,
+            "end_line": 110,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "heirs and assigns againat any and all claims, demands",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Againat” is an obvious misspelling of “against” and leaves the indemnity structure clear."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in causes",
+          "description": "Typo: \"cateees\" should be \"causes\"",
+          "revision": "cateeescauses of action of any nature ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6129,
+            "end_char": 6152,
+            "start_line": 111,
+            "end_line": 111,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "of action of any nature",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The phrase “legal cateees of action” is readily understood as “legal causes of action” in context."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in limitation",
+          "description": "Typo: \"[Imitation\" should be \"limitation\"",
+          "revision": "(including without [Imitationlimitation legal",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in expenses",
+          "description": "Typo: \"expenees\" should be \"expenses\"",
+          "revision": "expenees)expenses), arising Out of or ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6213,
+            "end_char": 6241,
+            "start_line": 112,
+            "end_line": 112,
+            "match_cover": 0.833,
+            "match_run": 4,
+            "matched_text": "expenees), arising Out of or",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Expenees” is plainly “expenses” and does not affect the scope of covered costs."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in related",
+          "description": "Typo: \"reerted\" should be \"related\"",
+          "revision": "arising Out of or reertedrelated to Reciplenfe acceptance, use an ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6224,
+            "end_char": 6282,
+            "start_line": 112,
+            "end_line": 112,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "arising Out of or reerted to Reciplenfe acceptance, use an",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Reerted” is readily understood as “related” in the conventional phrase “arising out of or related to.”"
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error in and",
+          "description": "Should be \"and\" not \"an d\"",
+          "revision": "acceptance, use an dand disposal of the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6264,
+            "end_char": 6300,
+            "start_line": 112,
+            "end_line": 112,
+            "match_cover": 0.857,
+            "match_run": 3,
+            "matched_text": "acceptance, use an d disposal of the",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "7. Indemnification"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The inserted space in “an d” does not obscure the conjunction “and” or alter the covered activities."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling errors in insurance clause",
+          "description": "Typos: \"ReCiplent\" \"ecleirne meee\" multiple amounts",
+          "revision": "ReCiplentRecipient shalt maintain liability Insurance on an occurrence basis, or ecleirne meeeclaims made",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6473,
+            "end_char": 6543,
+            "start_line": 115,
+            "end_line": 115,
+            "match_cover": 0.769,
+            "match_run": 10,
+            "matched_text": "shalt maintain liability Insurance on an occurrence basis, or ecleirne",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "8. Liability Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The phrase describing claims-made coverage is severely corrupted as “ecleirne meee,” mechanically obscuring which insurance forms satisfy the requirement."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in less",
+          "description": "Typo: \"lees\" should be \"less\"",
+          "revision": "... in the amount of not leesless than One Million ($1, 00e,000)",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6587,
+            "end_char": 6642,
+            "start_line": 116,
+            "end_line": 116,
+            "match_cover": 0.917,
+            "match_run": 6,
+            "matched_text": "in the amount of not lees than One Million ($1, 00e,000",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "8. Liability Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Lees” is plainly “less,” and the written-out “One Million” independently makes the threshold understandable."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo in dollar amount",
+          "description": "Should be $1,000,000 not \"00e,000\"",
+          "revision": "($1, 00e000,000)",
+          "comment": "",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Inconsistent aggregate amount",
+          "description": "Should be $3,000,000 not $1,000,000",
+          "revision": "... claim and Three Million ($13,000,000) dollars aggregate.",
+          "comment": "We corrected a typographical inconsistency between the written and numeric expressions of the aggregate cap to ensure the provision accurately reflects the agreed $3,000,000 aggregate limit.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6669,
+            "end_char": 6723,
+            "start_line": 117,
+            "end_line": 117,
+            "match_cover": 0.889,
+            "match_run": 4,
+            "matched_text": "claim and Three Million ($1,000,000) dollars aggregate",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "8. Liability Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Three Million” and “$1,000,000” state inconsistent aggregate limits within the same sentence."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in Retipient",
+          "description": "Typo: \"Retipient\" should be \"Recipient\"",
+          "revision": "RetipientRecipient shall provide St Jude, upon ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6749,
+            "end_char": 6776,
+            "start_line": 119,
+            "end_line": 119,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "shall provide St Jude, upon",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. Certificate of Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Retipient” is an obvious misspelling of the defined party “Recipient” and creates no competing referent."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in with",
+          "description": "Typo: \"wile\" should be \"with\"",
+          "revision": "upon request, wilewith a Certificate of insurance from",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6772,
+            "end_char": 6822,
+            "start_line": 119,
+            "end_line": 119,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "upon request, wile a Certificate of insurance from",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. Certificate of Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Grammar and context make clear that “wile” was intended to be “with,” without creating a reasonable alternative obligation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in ii",
+          "description": "Typo: \"ie\" should be \"(ii)\"",
+          "revision": "and effect, and (ie(ii) premising te provide St. Jude ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6941,
+            "end_char": 6990,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "and effect, and (ie premising te provide St. Jude",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. Certificate of Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The malformed marker “(ie” can be read as an erroneous list label or abbreviation and mechanically obscures the structure of the two certificate requirements."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in to",
+          "description": "Typo: \"te\" should be \"to\"",
+          "revision": "premising teto provide St. Jude with Thirty ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 6961,
+            "end_char": 7002,
+            "start_line": 121,
+            "end_line": 121,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "premising te provide St. Jude with Thirty",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "9. Certificate of Insurance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Te” is plainly “to” and does not change the notice obligation."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in temenate",
+          "description": "Typo: \"temenate\" should be \"terminate\"",
+          "revision": "St. Jude may temenateterminate this MTA if Recipient breaches ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7103,
+            "end_char": 7155,
+            "start_line": 124,
+            "end_line": 124,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "St. Jude may temenate this MTA if Recipient breaches",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Temenate” is an obvious misspelling of “terminate” and leaves the operative right clear."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in and",
+          "description": "Typo: \"end\" should be \"and\"",
+          "revision": "breaches any term endand fails to cure",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7147,
+            "end_char": 7182,
+            "start_line": 124,
+            "end_line": 124,
+            "match_cover": 0.857,
+            "match_run": 3,
+            "matched_text": "breaches any term end fails to cure",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "Substituting “end” for “and” corrupts the conjunction joining breach and failure to cure, which are the conditions for termination."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Multiple spelling errors in return clause",
+          "description": "Typos: \"progeay\" \"te\" \"5aed\"",
+          "revision": "... and return all Materials and progeay te SLprogeny to St. Jude, Sections 5, 5aed6 and 7 shall",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7390,
+            "end_char": 7463,
+            "start_line": 127,
+            "end_line": 127,
+            "match_cover": 0.706,
+            "match_run": 7,
+            "matched_text": "and return all Materials and progeay te SL Jude, Sections 5, 5aed 7 shall",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The return sentence contains several mechanical errors, most materially “5aed,” which obscures the survival cross-reference."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in termination",
+          "description": "Typo: \"termiriation\" should be \"termination\"",
+          "revision": "survive termiriationtermination or expiration of this MTA.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7477,
+            "end_char": 7523,
+            "start_line": 128,
+            "end_line": 128,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "survive termiriation or expiration of this MTA",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "10. Termination and Survival"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Termiriation” is plainly “termination” and does not alter the survival provision."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in Thie",
+          "description": "Typo: \"Thie\" should be \"This\"",
+          "revision": "ThieThis MTA may only be modified ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7544,
+            "end_char": 7568,
+            "start_line": 130,
+            "end_line": 130,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "MTA may only be modified",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Thie” is an obvious misspelling of “This” and does not affect the modification clause."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in shall",
+          "description": "Typo: \"shalt\" should be \"shall\"",
+          "revision": "... party of any breach hereunder shaltshall In",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7681,
+            "end_char": 7719,
+            "start_line": 131,
+            "end_line": 131,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "party of any breach hereunder shalt In",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Shalt” is plainly intended as “shall” and does not change the no-waiver rule."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in ereach",
+          "description": "Typo: \"ereach\" should be \"breach\"",
+          "revision": "... a waiver of any subsequent ereachbreach. in the event",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7765,
+            "end_char": 7812,
+            "start_line": 132,
+            "end_line": 132,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "a waiver of any subsequent ereach. in the event",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Ereach” is an obvious misspelling of “breach” and the no-waiver provision remains clear."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in re",
+          "description": "Typo: \"re oourt\" should be \"a court\"",
+          "revision": "... this MTA is held by re oourta court of competent jurisdiction to be",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7848,
+            "end_char": 7908,
+            "start_line": 133,
+            "end_line": 133,
+            "match_cover": 0.846,
+            "match_run": 6,
+            "matched_text": "this MTA is held by re oourt of competent jurisdiction to be",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The conventional phrase “court of competent jurisdiction” makes the intended correction of “re oourt” apparent without substantive uncertainty."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling error in lathe",
+          "description": "Typo: \"lathe\" should be \"to the\"",
+          "revision": "... in full force and effect latheto the extent permitted by",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 8049,
+            "end_char": 8099,
+            "start_line": 135,
+            "end_line": 135,
+            "match_cover": 0.8,
+            "match_run": 5,
+            "matched_text": "in full force and effect lathe extent permitted by",
+            "clause": {
+              "clause_id": "neg9",
+              "label": "NEGATIVE",
+              "clause_name": "Modification, Waiver and Severability"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Lathe extent” is a mechanical corruption of “to the extent” that impairs the final qualification in the severability clause."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "Preamble — Agreement to Provide Materials",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling and punctuation errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The malformed parenthetical “cSt. Judd')” is a spelling and punctuation error in the identification of the contracting party."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The misspelled quoted label “Recipionfl” and malformed punctuation impair the attempted definition of “Recipient.”"
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in adverb",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Collectiveiy” is an obvious misspelling that does not affect the collective definition."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Inconsistent capitalization: materials",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase pre-definition reference to materials is naturally generic and does not conflict with the subsequently defined term “Materials.”"
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "2. Compliance with Laws",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "recipient_june_upenn"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "recipient_june_upenn",
+          "title": "Sole Responsibility for Compliance Without Provider Cooperation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Sole responsibility” clearly allocates the listed compliance responsibilities to Recipient; the proposed limitation for St. Jude's conduct would be a substantive amendment."
+        }
+      ],
+      "risky": false
+    },
+    "neg3": {
+      "clause_id": "neg3",
+      "clause_name": "4. Publications and Acknowledgment",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "recipient_june_upenn"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in acknowledge",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Acknowtedge” is an obvious misspelling of “acknowledge” and the obligation remains clear."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "5. (second) Disclaimer of Warranties and Damages",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 7,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Duplicate Section Numbering (Two Section 5s)",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The duplicate section number is a mechanical numbering error that makes the survival reference to two Section 5s uncertain."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Previded” is plainly “provided” and creates no genuine construction issue."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "No Warranty of Title or Right to Transfer Materials",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement omits a warranty of title or authority to transfer, which is a negotiated protection rather than an ambiguity in the disclaimer."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in provided",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Previded” is plainly “provided” and leaves the disclaimer intelligible."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in MERCHANTABILITY",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The misspelling of the legally recognized warranty of “MERCHANTABILITY” may facially affect which implied warranty is disclaimed, notwithstanding the evident intended correction."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Typo in FITNESS",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted legal term “FITNE$S” is a mechanical error in identifying the warranty being disclaimed."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Typo in JUDelE",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“ST. JUDelE UABLE” corrupts both the party name and the phrase “BE LIABLE,” mechanically impairing the operative limitation of liability."
+        }
+      ],
+      "risky": true
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "7. Indemnification",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 10,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Indemnification Lacks Negligence/Willful Misconduct Scope",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The nexus phrase “arising out of or related to” may require construction as to whether it reaches negligence, willful misconduct, or contractual breach."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Unlimited One-Sided Indemnification",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “arising out of or related to Recipient's” activities may require construction where a claim is also caused by St. Jude's conduct; the warranty disclaimer does not directly contradict the indemnity."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in Amerioan",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The misspelling of “American” occurs within the formal name of an indemnified entity and therefore may affect identification of that beneficiary."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in trustees",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted phrase “trt.isteete tenet:tore” makes part of the list of indemnified persons unintelligible and alters the ascertainable scope of the indemnity."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in successors",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Seccessors” is plainly “successors” and does not create uncertainty about the listed beneficiaries."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in against",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Againat” is an obvious misspelling of “against” and leaves the indemnity structure clear."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in causes",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The phrase “legal cateees of action” is readily understood as “legal causes of action” in context."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in expenses",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Expenees” is plainly “expenses” and does not affect the scope of covered costs."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in related",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Reerted” is readily understood as “related” in the conventional phrase “arising out of or related to.”"
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spacing error in and",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The inserted space in “an d” does not obscure the conjunction “and” or alter the covered activities."
+        }
+      ],
+      "risky": true
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "8. Liability Insurance",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Insurance Aggregate Amount Discrepancy",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Three Million” conflicts with “$1,000,000” in the same provision, an apparent transcription error that changes the required aggregate coverage."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Insurance Requirement Potentially Inadequate for Clinical Trial Use",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The adequacy of the stated insurance limits and the absence of additional-insured status are commercial risk questions, not construction defects."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Insurance Aggregate Amount Appears Incorrect",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The written aggregate amount of “Three Million” and the numerical amount “$1,000,000” are mechanically inconsistent."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling errors in insurance clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The phrase describing claims-made coverage is severely corrupted as “ecleirne meee,” mechanically obscuring which insurance forms satisfy the requirement."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in less",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Lees” is plainly “less,” and the written-out “One Million” independently makes the threshold understandable."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Inconsistent aggregate amount",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Three Million” and “$1,000,000” state inconsistent aggregate limits within the same sentence."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "9. Certificate of Insurance",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "recipient_june_upenn"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "recipient_june_upenn",
+          "title": "Unilateral Termination Right Favors St. Jude Only",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The unilateral termination right is explicit; lack of reciprocity is a negotiation concern rather than a construction defect."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in Retipient",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Retipient” is an obvious misspelling of the defined party “Recipient” and creates no competing referent."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in with",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Grammar and context make clear that “wile” was intended to be “with,” without creating a reasonable alternative obligation."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in ii",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The malformed marker “(ie” can be read as an erroneous list label or abbreviation and mechanically obscures the structure of the two certificate requirements."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in to",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Te” is plainly “to” and does not change the notice obligation."
+        }
+      ],
+      "risky": true
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "10. Termination and Survival",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 11,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Termination Only for Cause — No Convenience Right",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Section 10 unambiguously permits termination only for an uncured breach; the requested convenience right is an omitted commercial right."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "No Obligation to Destroy Derivatives Upon Termination",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The return obligation expressly covers Materials and progeny, while the requested treatment of other derivatives or products is an additional substantive obligation."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Invalid section reference - \"Sections 5, 5aed 7\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Sections 5, 5aed 7” contains a typographical and numbering error that materially obscures which provisions survive."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Temenate” is plainly “terminate” and does not change the operative termination condition."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Progeay” is readily identifiable as “progeny” from the surrounding text and defined subject matter."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "No Term or Duration Specified",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "Section 10 contemplates “expiration,” but no term or expiration mechanism appears elsewhere in the instrument, leaving that concept without a coherent contractual trigger."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Invalid section reference in survival clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The duplicate Section 5 numbering and corrupted phrase “5aed” mechanically obscure the intended survival cross-reference."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in temenate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Temenate” is an obvious misspelling of “terminate” and leaves the operative right clear."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in and",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Substituting “end” for “and” corrupts the conjunction joining breach and failure to cure, which are the conditions for termination."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Multiple spelling errors in return clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The return sentence contains several mechanical errors, most materially “5aed,” which obscures the survival cross-reference."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in termination",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Termiriation” is plainly “termination” and does not alter the survival provision."
+        }
+      ],
+      "risky": true
+    },
+    "neg9": {
+      "clause_id": "neg9",
+      "clause_name": "Modification, Waiver and Severability",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 7,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Word choice error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Lathe extent” is a mechanical word-joining or transcription error that obscures the intended severability phrase “to the extent.”"
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "No Governing Law or Dispute Resolution Provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of governing-law and dispute-resolution clauses creates litigation uncertainty but is not an intrinsic defect or conflict within the instrument."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in Thie",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Thie” is an obvious misspelling of “This” and does not affect the modification clause."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in shall",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Shalt” is plainly intended as “shall” and does not change the no-waiver rule."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in ereach",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Ereach” is an obvious misspelling of “breach” and the no-waiver provision remains clear."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in re",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The conventional phrase “court of competent jurisdiction” makes the intended correction of “re oourt” apparent without substantive uncertainty."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in lathe",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Lathe extent” is a mechanical corruption of “to the extent” that impairs the final qualification in the severability clause."
+        }
+      ],
+      "risky": true
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Paragraph 1 — Definition of \"Materials\" (2007 MTA)",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 8,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Undefined term: Agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "In context, “this Agreement” plainly refers to the present MTA, and no competing agreement is identified."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Materiels” is an obvious misspelling of “materials” and does not create a reasonable alternative meaning in context."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Lloenses” is readily understood as “licenses” and does not alter the provision's meaning."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Overly Broad \"Materials\" Definition",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The scientific terms “progeny” and “unmodified derivatives” may require construction to determine which recipient-generated materials fall within the defined term “Materials.”"
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Undefined term: Agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Agreement” is reasonably and unambiguously understood from context as this MTA."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling errors in materials definition",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "Although “materiels” is harmless, the corrupted word “unmoditteci” appears in the operative definition and mechanically obscures the intended category of derivatives."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in derivatives",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Unmoditteci” is a corrupted term within the definition of Materials and may affect the definition's substantive scope."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in licenses",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Lloenses” is plainly a misspelling of “licenses” and creates no reasonable competing meaning."
+        }
+      ],
+      "risky": true
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Paragraph 3 — Sole purpose of Materials (2007 MTA)",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 12,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "No Reporting Obligation on Material Use or Safety Issues",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The contract simply omits the proposed reporting obligation; that omission does not make the permitted-use clause ambiguous or inconsistent."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “sentto” is typographical but does not affect the intelligibility or scope of the restriction."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spacing error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “anotherinstitution” does not change the readily apparent meaning."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Use Restriction Limited to Phase I Only",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The limitation to a Phase I trial is express and narrow but not ambiguous or inconsistent."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in are",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Ere” is plainly intended as “are” in context and does not change the provision's meaning."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in use",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Uae” is readily understood as “use” and does not affect the permitted-use restriction."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling errors in GMP clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted technical phrase “appilcation in ex viva aurologcus” mechanically obscures the precise clinical application authorized by the clause."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in quantities",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“QUantitles” is an obvious misspelling of “quantities” that does not alter the requirement."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in not",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Net” is a valid but unintended word substituted for “not,” and if read literally it changes or destroys the prohibition."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Missing space in sent to",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The missing space in “sentto” does not obscure the intended phrase “sent to.”"
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Missing space in another institution",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Anotherinstitution” remains readily understandable as “another institution” and does not alter the restriction."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in obligations",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Obligatons” is plainly “obligations” and does not change the provision's meaning."
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Paragraph 5 — Ownership, patent applications and commercialization (2007 MTA)",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "provider_st_jude",
+        "recipient_june_upenn"
+      ],
+      "n_issues": 14,
+      "judgments": [
+        {
+          "party": "provider_st_jude",
+          "title": "Require Prior Written Consent Before Patent Filing",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause clearly requires contact rather than prior consent; the issue seeks a stronger substantive protection, not construction of the existing text."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Weak IP Ownership Determination Mechanism",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an agreement mechanism, dispute procedure, or sanction is a negotiation concern rather than an ambiguity or internal inconsistency."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Publication Review Period Lacks Patent Filing Extension",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The provision clearly supplies a 30-day review period and no patent-filing extension; adding one is a negotiated enhancement."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "No Right to Remove Proprietary Information from Publications",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The term “review” does not clearly establish whether St. Jude may merely comment or may require redaction, so the practical scope of that right may require construction."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling errors",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The substitution of “2” for “a” in “commercializes 2 product” is a mechanical error that facially affects the quantity and grammar of the trigger."
+        },
+        {
+          "party": "provider_st_jude",
+          "title": "Spelling error",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Whieh” is an obvious misspelling of “which” that does not change the clause's meaning."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Overly Broad \"But For\" Ownership Reach-Through",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The “but for” formulation states a recognizable causation test; the complaint is that its reach is commercially broad, not that it has competing textual meanings."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Unlimited Pre-Publication Review with No Constraint on St. Jude",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The word “review” is unclear as to whether it permits only inspection and comment or also confers authority to demand redaction or delay publication."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in patent",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Pateet” is plainly intended to mean “patent” and does not itself create a construction issue."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Corrupted text in ownership",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted text “c ■wnership” mechanically obscures the operative subject—St. Jude's ownership interests."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in Recipient",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Rectpient” is an obvious misspelling of the defined party name and creates no competing referent."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in Materials",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Materiele” is readily understood as the defined “Materials” and does not alter the publication obligation."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling errors in review clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The severely corrupted phrase “revieW et...1th publiottion” obscures what St. Jude is entitled to review and therefore affects the operative review right."
+        },
+        {
+          "party": "recipient_june_upenn",
+          "title": "Spelling error in information",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Infonnation” is an obvious misspelling of “information” and does not affect scope."
+        }
+      ],
+      "risky": true
+    }
+  }
+}

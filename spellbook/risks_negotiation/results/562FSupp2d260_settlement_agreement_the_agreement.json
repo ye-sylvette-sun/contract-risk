@@ -1,0 +1,1260 @@
+{
+  "contract_id": "562FSupp2d260_settlement_agreement_the_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 8,
+  "n_issues": 35,
+  "n_located": 30,
+  "n_judged": 29,
+  "n_skipped": 6,
+  "counts": {
+    "cat1": 10,
+    "cat2": 0,
+    "none": 19
+  },
+  "parties": {
+    "argus_research_group": {
+      "n_issues": 19,
+      "n_located": 15,
+      "by_tab": {
+        "risks_negotiation": 11,
+        "proofread": 8
+      },
+      "by_kind": {
+        "Important": 4,
+        "Notable": 7,
+        "Spelling + Grammar": 1,
+        "Definitions": 3,
+        "Templated Content": 4
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Overly broad \"derogation\" language in Clause 2",
+          "description": "The tail end of Clause 2  includes the sweeping phrase \"or do any act or thing in derogation thereof,\" which is vague and could be read to prevent Argus Research Group from even using its own ARGUS mark in ways that Petroleum Argus might claim derogate from their rights. This should be narrowed or deleted to protect our client's freedom of action.",
+          "revision": "therein or do any act or thing in derogation thereof.",
+          "comment": "The phrase 'or do any act or thing in derogation thereof' is overbroad and undefined, creating uncertainty that could unreasonably restrict Argus Research Group's lawful use of its own marks; we narrowed the clause to the specific obligations already enumerated.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2953,
+            "end_char": 3005,
+            "start_line": 63,
+            "end_line": 63,
+            "match_cover": 1.0,
+            "match_run": 10,
+            "matched_text": "therein or do any act or thing in derogation thereof",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "The phrase “do any act or thing in derogation thereof” is a general catch-all following specific prohibitions on opposing, cancelling, contesting, and challenging. Its reach relative to those enumerated acts is uncertain."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Same overly broad \"derogation\" language in Clause 3",
+          "description": "Clause 3  contains the same vague \"or do any act or thing in derogation thereof\" catch-all as Clause 2, this time extending to the ENERGY ARGUS marks. This language should be removed for the same reasons — it could be weaponized to constrain Argus Research Group's legitimate use of its own marks.",
+          "revision": "exclusive rights therein or do any act or thing in derogation thereof.",
+          "comment": "We removed the 'derogation' catch-all as it is overly broad and undefined; obligations relating to the ENERGY ARGUS marks should be governed by the specific covenants in this agreement and applicable trademark law, not an open-ended catch-all provision.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2936,
+            "end_char": 3005,
+            "start_line": 62,
+            "end_line": 63,
+            "match_cover": 1.0,
+            "match_run": 12,
+            "matched_text": "exclusive rights therein or do any act or thing in derogation thereof",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.3",
+            "reason": "As in Clause 2, the broad “any act or thing in derogation” catch-all follows specific prohibited actions, creating a list-scope question about whether it reaches conduct beyond similar trademark challenges."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No breach carve-out for Petroleum Argus exceeding scope",
+          "description": "Clauses 2 and 3   permanently waive Argus Research Group's right to challenge Petroleum Argus's marks, but there is no carve-out if Petroleum Argus expands its use beyond the agreed goods/services. Consider adding a proviso such as: \"provided that Petroleum Argus Ltd. does not use the mark PETROLEUM ARGUS in connection with goods or services beyond those set forth in the amended application.\" Without this, our client has no contractual remedy if Petroleum Argus encroaches into asset management or investment advisory services.",
+          "revision": "for PETROLEUM ARGUS (SN 75/337,886) owned by Petroleum Argus Ltd. or otherwiseArgus Research Group, Inc. will not oppose or seek to cancel the trademark application for PETROLEUM ARGUS (SN 75/337,886) owned by Petroleum Argus Ltd. or otherwise contest or challenge Petroleum Argus' rights in the mark PETROLEUM ARGUS as shown in that application for the goods and services as set forth in that application as amended pursuant to",
+          "comment": "We limited the non-challenge covenant to the goods and services as set forth in the amended application, which is consistent with the agreed commercial scope of the coexistence and ensures neither party is exposed to unchecked encroachment beyond the negotiated boundaries.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2453,
+            "end_char": 2803,
+            "start_line": 49,
+            "end_line": 52,
+            "match_cover": 0.806,
+            "match_run": 31,
+            "matched_text": "Argus Research Group, Inc. will not oppose or seek to cancel the trademark application for PETROLEUM ARGUS (SN 75/337,886) owned by Petroleum Argus Ltd. or otherwise contest or challenge Petroleum Argus’ rights in the mark PETROLEUM ARGUS as shown in that application for the goods and services as se",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "This issue seeks an additional protective carve-out for conduct beyond the agreed scope. The absence of that negotiated protection is not itself an ambiguity, mechanical error, or conflict among existing provisions."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Vague territorial scope in governing law clause",
+          "description": "Clause 4  states \"This provision extends to the United States, its territories and possessions,\" which is unclear. A governing law clause does not need a geographic \"extension\" — what is likely intended is that the agreement applies with respect to trademark rights throughout the U.S., territories, and possessions. The language should be clarified or, if the intent is simply New York governing law, this sentence may be unnecessary and potentially confusing.",
+          "revision": "York's conflicts of law principles. This provision extends toThe terms of this agreement shall apply throughout the United States, its territories ...",
+          "comment": "The revised language accurately reflects the intended territorial scope of the agreement's operative terms, avoiding confusion between a governing law clause and a geographic extension provision.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3702,
+            "end_char": 3791,
+            "start_line": 74,
+            "end_line": 74,
+            "match_cover": 0.571,
+            "match_run": 7,
+            "matched_text": "conflicts of law principles. This provision extends to the United States, its territories",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "4. Governing law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“This provision extends” is vague because both the referent of “this provision” and the legal effect of “extends” are unclear in a governing-law clause."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Agreement to agree on confidentiality is unenforceable",
+          "description": "Clause 8  states \"The parties will agree to keep the terms of this agreement confidential\" — this is phrased as an agreement to agree in the future, rather than a binding obligation. Under New York law, agreements to agree are generally unenforceable. The language should be revised to create an immediate binding obligation. Additionally, the exceptions are too narrow — the carve-out should also cover disclosures required by applicable law, regulation, or legal process (not just court orders and rules of civil procedure).",
+          "revision": "The parties will agree toshall keep the terms of this ...",
+          "comment": "Under New York law, an agreement to agree on future confidentiality terms is unenforceable; we revised the clause to impose an immediate binding obligation and broadened the exceptions to include disclosures required by applicable law, regulation, or legal process, which is standard market practice.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4108,
+            "end_char": 4156,
+            "start_line": 84,
+            "end_line": 84,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "The parties will agree to keep the terms of this",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "8. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “will agree to keep” can be read either as imposing a present confidentiality commitment or merely promising a future agreement. That lexical and temporal uncertainty requires construction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Narrow confidentiality exceptions",
+          "description": "Clause 8  limits confidentiality exceptions to \"Court order and/or state and federal rules of civil procedure.\" This is too narrow — it should also encompass disclosures required by applicable law, regulation, governmental authority, subpoena, or other legal process. This protects Argus Research Group from a breach claim if it must disclose the agreement terms for regulatory or compliance reasons.",
+          "revision": "by Court order, subpoena, applicable law or regulation, and/or state and federal rules ...",
+          "comment": "We broadened the permitted disclosure exceptions to include subpoenas, applicable law, and regulation, which reflects standard market practice and protects both parties from liability when disclosure is legally compelled outside of formal court orders.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4199,
+            "end_char": 4244,
+            "start_line": 85,
+            "end_line": 85,
+            "match_cover": 0.643,
+            "match_run": 6,
+            "matched_text": "by Court order and/or state and federal rules",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "8. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue concerns omitted disclosure exceptions and proposes broader protection. The existing exception is narrow but not textually ambiguous or inconsistent with another provision."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unrestricted assignment could bind Argus Research Group to unknown parties",
+          "description": "Clause 5  makes the agreement binding on \"successors, licensees and assigns\" without requiring consent to assignment. Petroleum Argus could assign its rights — along with the broad non-challenge covenants — to a third party who might be a direct competitor of Argus Research Group. Consider adding a consent requirement for assignments.",
+          "revision": "licensees and assigns; provided, however, that neither party may assign this agreement without the prior written consent of the other party, except in connection with a sale of all or substantially all of the assigning party's assets.",
+          "comment": "We revised the assignment clause to require mutual prior written consent, consistent with market practice for agreements containing material restrictive covenants, while preserving each party's ability to assign in connection with a sale of all or substantially all of its assets.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3897,
+            "end_char": 3930,
+            "start_line": 77,
+            "end_line": 78,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "successors, licensees and assigns",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "5. Successors and assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The absence of an assignment-consent requirement is a negotiation risk, not a construction defect. The clause plainly states that the Agreement binds successors, licensees, and assigns."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No time limit for Petroleum Argus to file the amendment",
+          "description": "Clause 1  requires Petroleum Argus to amend its application but specifies no deadline for doing so. Without a time limit, Petroleum Argus could delay the amendment indefinitely while maintaining the broader original filing, potentially prejudicing Argus Research Group. Consider adding a deadline (e.g., within 30 days of execution).",
+          "revision": "Petroleum Argus Limited shall, within thirty (30) days of the execution of this agreement, amend the identification of goods ...",
+          "comment": "We introduced a 30-day deadline to ensure timely performance of this obligation; without a defined timeframe, the amendment commitment lacks enforceability and creates unnecessary uncertainty for both parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1014,
+            "end_char": 1077,
+            "start_line": 28,
+            "end_line": 28,
+            "match_cover": 0.474,
+            "match_run": 5,
+            "matched_text": "Petroleum Argus Limited shall amend the identification of goods",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause omits a performance deadline, but no stated word or phrase is ambiguous and no other provision supplies a conflicting deadline. This is principally an omitted business term."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Clause 3 non-challenge scope should be frozen to current registrations",
+          "description": "Clause 3  extends Argus Research Group's non-challenge covenant to the ENERGY ARGUS & Design registrations, which were not part of the opposition proceeding in the Background . This is a significant additional concession. If retained, the scope should be frozen to the goods/services as currently registered, to prevent Petroleum Argus from expanding the registrations and claiming the waiver covers the broader scope.",
+          "revision": "... set forth in the registrations as of the date of this agreement or Petroleum Argus' ownership thereof ...",
+          "comment": "We limited the non-challenge commitment to the current registered goods and services to ensure the covenant is bounded in scope; any post-agreement expansion of the registrations should not benefit from a waiver that was not negotiated with that broader scope in mind.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2751,
+            "end_char": 2931,
+            "start_line": 52,
+            "end_line": 62,
+            "match_cover": 0.647,
+            "match_run": 5,
+            "matched_text": "set forth in that application as amended pursuant to -1- paragraph 1 of this agreement or Petroleum Argus’ ownership thereof",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue seeks to prevent future expansion through an additional limitation. The current covenant refers to the goods and services set forth in the registrations and does not contain a textual contradiction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No dispute resolution mechanism",
+          "description": "Clause 7  addresses attorneys' fees but the agreement contains no dispute resolution mechanism (e.g., forum selection, arbitration, or mediation). Given the cross-border nature of this agreement between a U.S. company and a UK company, a forum selection clause designating New York courts (consistent with the governing law in Clause 4) would protect Argus Research Group from having to litigate disputes in the UK.",
+          "revision": "... own costs in attorneys' fees. Any dispute arising out of or relating to this agreement shall be subject to the exclusive jurisdiction of the state and federal courts located in New York, New York.",
+          "comment": "We have designated New York courts as the exclusive forum for disputes to ensure consistency with the New York governing law clause and provide a predictable, neutral venue given the cross-border nature of this agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3285,
+            "end_char": 3699,
+            "start_line": 68,
+            "end_line": 74,
+            "match_cover": 0.441,
+            "match_run": 3,
+            "matched_text": "in the mark ENERGY ARGUS as shown in the registrations for the goods and services as set forth in the registrations or Petroleum Argus’ ownership thereof and exclusive rights therein or do any act or thing in derogation thereof. 4. This agreement and the performance of shall be governed by and be co",
+            "clause": {
+              "clause_id": "pos3",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 3 — Covenant Not to Oppose ENERGY ARGUS & Design Registrations"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "A missing forum-selection or dispute-resolution clause is an omitted negotiated term, not an intrinsic ambiguity or an inconsistency within the instrument."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Financial information services description is overly broad",
+          "description": "The Class 36 description  covers \"Financial information services regarding the energy industry in the nature of conveying pricing information about fuel and energy products.\" The term \"financial information services\" is quite broad and could potentially overlap with Argus Research Group's financial research and advisory services. Consider tightening this to \"energy commodity pricing information services\" or similar language to create a clearer boundary with Argus Research Group's core business.",
+          "revision": "FinancialEnergy commodity pricing information services regarding the energy ...",
+          "comment": "We revised the Class 36 description to more precisely reflect the actual nature of the services — commodity pricing data — and to avoid undue breadth that could create unnecessary conflicts with third-party financial information providers.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1865,
+            "end_char": 2182,
+            "start_line": 39,
+            "end_line": 44,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "pricing, developments in the oil industry, and related topics such as oil drilling, technology and infrastructure and not including information concerning asset management and investment advice relating to stocks and bonds, in Class 16. Financial information services regarding the energy",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Financial information services” has a potentially uncertain boundary even with the following energy-pricing description, particularly as to services overlapping financial research. The issue therefore has some connection to lexical vagueness."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Incomplete sentence",
+          "description": "Missing subject after \"and the performance of\"",
+          "revision": "This agreement and the performance ofthereof shall be governed by and ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3522,
+            "end_char": 3584,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "This agreement and the performance of shall be governed by and",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "4. Governing law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“The performance of shall be governed” is grammatically incomplete because the object after “of” is missing. That mechanical omission obscures what performance is governed by New York law."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: PETROLEUM ARGUS",
+          "description": "The term 'PETROLEUM ARGUS' is used throughout the agreement    as a capitalized term referring to a trademark, but it is never formally defined. While the context makes clear it refers to a trademark application, the document would benefit from a clear definition to distinguish the trademark from the party 'Petroleum Argus Limited' and to clarify when the term refers to the mark itself versus the application or registration.",
+          "revision": "application filed by Petroleum Argus Limited to register the mark PETROLEUM ARGUS (\"PETROLEUM ARGUS\") in the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 551,
+            "end_char": 1053,
+            "start_line": 18,
+            "end_line": 28,
+            "match_cover": 0.938,
+            "match_run": 12,
+            "matched_text": "application filed by Petroleum Argus Limited to register the mark PETROLEUM ARGUS in the United States Patent and Trademark Office in International Classes 9, 16 and 36 (App. No. 75/337,886) as published in the United States Patent and Trademark Office on November 14, 2000. The parties have agreed t",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Although PETROLEUM ARGUS is not formally defined, the surrounding text expressly identifies it as the mark in the specified application. Capitalization without a definitions section does not create a genuine ambiguity here."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled date placeholder",
+          "description": "Found: \"August ___, 2001\" — Missing day of month renders execution date incomplete and uncertain. See 2 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the specific day of the month for the August 2001 date.",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled signature line",
+          "description": "Found: \" By:\" — Absent signature leaves authority and binding effect unverified.",
+          "revision": "",
+          "comment": "Insert the authorized signatory's name, title, and signature for the executing party.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled signatory name",
+          "description": "Found: \" Name:\" — Missing signatory name prevents verification of authority and accountability. See 2 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the full legal name of the authorized signatory.",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled signatory title",
+          "description": "Found: \" Title:\" — Absent title prevents confirmation of signatory's authority to bind the entity. See 2 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the title or job title of the signatory executing this agreement.",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: ENERGY ARGUS",
+          "description": "The term 'ENERGY ARGUS' appears in Section 3   as a capitalized term referring to trademark registrations, but it is never formally defined. Similar to PETROLEUM ARGUS, this term should be defined to clarify that it refers to the trademark itself rather than any other entity or concept.",
+          "revision": "for ENERGY ARGUS (\"ENERGY ARGUS\") & Design (Reg. No. 2,387,568) and ENERGY ARGUS & Design",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2721,
+            "end_char": 3175,
+            "start_line": 52,
+            "end_line": 66,
+            "match_cover": 0.933,
+            "match_run": 12,
+            "matched_text": "for the goods and services as set forth in that application as amended pursuant to -1- paragraph 1 of this agreement or Petroleum Argus’ ownership thereof and exclusive rights therein or do any act or thing in derogation thereof. 3. Argus Research Group, Inc. will not oppose or seek to cancel the tr",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The context identifies ENERGY ARGUS as the mark shown in the two specified registrations. The lack of a formal definition does not leave its referent genuinely uncertain."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: 'agreement' should be 'Agreement'",
+          "description": "In Section 2 , the term appears as lowercase 'agreement' but should be capitalized as 'Agreement' to match the defined term established in the opening paragraphs .",
+          "revision": "paragraph 1 of this agreementAgreement or Petroleum Argus' ownership thereof and exclusive rights",
+          "comment": "",
+          "group_size": 6,
+          "location": {
+            "start_char": 2864,
+            "end_char": 2952,
+            "start_line": 62,
+            "end_line": 62,
+            "match_cover": 0.846,
+            "match_run": 5,
+            "matched_text": "paragraph 1 of this agreement or Petroleum Argus’ ownership thereof and exclusive rights",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase “agreement” still unmistakably refers to this instrument. The capitalization inconsistency does not alter meaning or create a construction issue."
+          }
+        }
+      ]
+    },
+    "petroleum_argus": {
+      "n_issues": 16,
+      "n_located": 15,
+      "by_tab": {
+        "risks_negotiation": 12,
+        "proofread": 4
+      },
+      "by_kind": {
+        "Important": 4,
+        "Notable": 5,
+        "Minor": 3,
+        "Templated Content": 1,
+        "Definitions": 3
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Missing word in governing law clause",
+          "description": "The governing law provision  contains a drafting error — \"the performance of shall be governed\" is missing the object. This should read \"the performance of this agreement\" or similar. As drafted, the clause is grammatically incomplete and could create ambiguity about what is being governed.",
+          "revision": "This agreement and the performance ofthereof shall be governed by and ...",
+          "comment": "Corrected grammatical error in the governing law clause — inserted missing object 'thereof' to clarify that both the agreement and its performance are governed by New York law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3522,
+            "end_char": 3584,
+            "start_line": 72,
+            "end_line": 72,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "This agreement and the performance of shall be governed by and",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "4. Governing law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The words “performance of” lack an object, making the sentence mechanically and grammatically incomplete. Inserting “this agreement” or “thereof” would materially clarify the governing-law provision."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Weak confidentiality obligation — \"will agree to\" language",
+          "description": "The confidentiality clause  uses \"will agree to keep\" rather than a present, binding commitment. The phrase \"will agree to\" is an agreement to agree in the future, which is generally unenforceable. For Petroleum Argus Limited's protection, this should be a firm, immediate obligation.",
+          "revision": "The parties will agree to keep the terms ...",
+          "comment": "Under New York law, 'will agree to' language constitutes an unenforceable agreement to agree; we revised to a present-tense obligation to ensure the confidentiality commitment is immediately binding upon execution.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4108,
+            "end_char": 4148,
+            "start_line": 84,
+            "end_line": 84,
+            "match_cover": 1.0,
+            "match_run": 8,
+            "matched_text": "The parties will agree to keep the terms",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "8. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“Will agree to keep” is reasonably susceptible to a present-obligation reading and a future-agreement reading. That uncertainty concerns the operative force of the confidentiality promise."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Covenant not to oppose narrowly limited to specific application",
+          "description": "Clause 2  limits Argus Research Group's covenant not to oppose to the specific trademark application (SN 75/337,886) only \"for the goods and services as set forth in that application as amended.\" If Petroleum Argus Limited later files a new application for the same PETROLEUM ARGUS mark covering similar oil/energy goods and services, this covenant would not apply. Consider broadening to cover the mark generally for oil and energy-related goods and services.",
+          "revision": "... owned by Petroleum Argus Ltd., or any subsequent application by Petroleum Argus Ltd. for the mark PETROLEUM ARGUS for goods and services within the oil and energy industry, or otherwise",
+          "comment": "We expanded the covenant not to oppose to cover future PETROLEUM ARGUS applications in the oil and energy industry, as limiting it to a single application number would leave Petroleum Argus Limited exposed to opposition on any new filings covering substantially the same mark and commercial field — a commercially unreasonable outcome given the intent of this agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2576,
+            "end_char": 3160,
+            "start_line": 50,
+            "end_line": 66,
+            "match_cover": 0.633,
+            "match_run": 6,
+            "matched_text": "owned by Petroleum Argus Ltd. or otherwise contest or challenge Petroleum Argus’ rights in the mark PETROLEUM ARGUS as shown in that application for the goods and services as set forth in that application as amended pursuant to -1- paragraph 1 of this agreement or Petroleum Argus’ ownership thereof ",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The covenant is expressly tied to the identified application and its amended goods and services. The request to cover future applications would broaden the bargain rather than resolve a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Unclear geographic scope of governing law clause",
+          "description": "The sentence \"This provision extends to the United States, its territories and possessions\" in the governing law clause  is ambiguous. It is unclear what \"this provision\" refers to — the choice of law, the exclusion of conflicts principles, or something else. For a settlement involving international parties and a UK-organized entity, this vagueness could lead to disputes. Consider clarifying.",
+          "revision": "... conflicts of law principles. This provision extends toagreement shall govern the rights and obligations of the parties throughout the United States, its territories ...",
+          "comment": "The revision clarifies that the geographic scope applies to the agreement as a whole, eliminating ambiguity as to the referent of 'this provision' and reducing the risk of interpretive disputes in cross-border enforcement proceedings.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3702,
+            "end_char": 3791,
+            "start_line": 74,
+            "end_line": 74,
+            "match_cover": 0.522,
+            "match_run": 7,
+            "matched_text": "conflicts of law principles. This provision extends to the United States, its territories",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "4. Governing law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “This provision” has an uncertain referent, and “extends” does not explain whether geographic scope attaches to the choice of law, the conflicts exclusion, or the Agreement generally."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No breach remedy or injunctive relief provision",
+          "description": "Clause 6  states this is the entire agreement but does not address remedies for breach. If Argus Research Group were to breach its covenants not to oppose (Clauses 2 and 3), Petroleum Argus Limited would benefit from an express acknowledgment that breach would cause irreparable harm entitling it to injunctive relief. Consider adding this concept to the entire agreement clause.",
+          "revision": "... writing signed by both parties. Each party acknowledges that a breach of this agreement may cause irreparable harm to the other party, entitling such party to seek injunctive relief in addition to all other remedies available at law or in equity.",
+          "comment": "This addition reflects standard New York contract practice: where a party's covenants are unique and monetary damages would be inadequate, an express irreparable harm acknowledgment preserves the non-breaching party's right to seek injunctive relief without requiring separate proof of that threshold.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3998,
+            "end_char": 4220,
+            "start_line": 80,
+            "end_line": 85,
+            "match_cover": 0.22,
+            "match_run": 5,
+            "matched_text": "writing signed by both parties. 7. Both parties will pay all their own costs in attorneys’ fees. 8. The parties will agree to keep the terms of this agreement confidential except as required by Court order and/or",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "8. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lack of an express injunctive-relief or irreparable-harm provision is an omitted remedy term. It neither makes an existing provision ambiguous nor conflicts with another clause."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Confidentiality exception too narrow",
+          "description": "The confidentiality clause  only carves out disclosures required by \"Court order and/or state and federal rules of civil procedure.\" Petroleum Argus Limited, as a UK company, may also need to disclose under non-US legal requirements, regulatory obligations, or stock exchange rules. The exception should be broadened to cover disclosures required by applicable law or regulation generally.",
+          "revision": "The parties will agree to keep the terms of this agreement confidential except as required by applicable law, regulation, Court order and/or state and federal rules of civil procedure.",
+          "comment": "We expanded the exception to reflect that both parties may have disclosure obligations under applicable law or regulation beyond US court orders, ensuring the clause does not inadvertently expose either party to regulatory non-compliance.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4108,
+            "end_char": 4263,
+            "start_line": 84,
+            "end_line": 85,
+            "match_cover": 0.9,
+            "match_run": 16,
+            "matched_text": "The parties will agree to keep the terms of this agreement confidential except as required by Court order and/or state and federal rules of civil procedure",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "8. Confidentiality"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue requests broader exceptions for non-US law and regulatory obligations. The existing exception may be commercially inadequate, but its narrowness is not a construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No obligation on Argus Research Group to withdraw opposition",
+          "description": "The Background section  notes that Argus Research Group has requested extensions of time to oppose the PETROLEUM ARGUS application. However, the Terms only state that Argus Research Group \"will not oppose\" going forward. There is no express obligation for Argus Research Group to withdraw any pending opposition or extension requests. If any opposition or extension is currently pending, Petroleum Argus Limited should require an affirmative withdrawal obligation.",
+          "revision": "Argus Research Group, Inc. will withdraw any pending opposition or extension of time to oppose and will not oppose or seek to ...",
+          "comment": "A forward-looking non-opposition commitment does not address any currently pending opposition or extension requests; an affirmative withdrawal obligation is necessary to give Petroleum Argus Limited the trademark protection this agreement is intended to confer.",
+          "group_size": 1,
+          "location": {
+            "start_char": 2453,
+            "end_char": 2506,
+            "start_line": 49,
+            "end_line": 49,
+            "match_cover": 0.455,
+            "match_run": 6,
+            "matched_text": "Argus Research Group, Inc. will not oppose or seek to",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The recital says Argus Research requested extensions of time to oppose, while the operative clause prohibits an opposition; those statements do not point in opposite directions. Any affirmative withdrawal obligation is an omitted term rather than a recital-operative conflict."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Class 9 missing from amended goods description",
+          "description": "The application was originally filed in International Classes 9, 16, and 36 . The amended identification in Clause 1 specifies Class 16  and Class 36  but does not explicitly designate a class for the electronic publications described in the first sub-paragraph . Since electronic downloadable publications typically fall in Class 9, the class designation should be added to avoid any ambiguity that could cause the USPTO to reject the amendment.",
+          "revision": "... network on a subscription basis, in Class 9.",
+          "comment": "The original application included Class 9, and downloadable electronic publications fall within Class 9 under USPTO classification guidelines; the explicit class designation has been added to avoid a potential office action rejecting the amended identification for omitting a covered class.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1682,
+            "end_char": 2118,
+            "start_line": 36,
+            "end_line": 42,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "network on a subscription basis. Printed publications, namely, journals, newsletters, reports, newspapers, pamphlets, periodicals, magazines, and manuals reporting oil pricing, developments in the oil industry, and related topics such as oil drilling, technology and infrastructure and not including ",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The first goods paragraph evidently corresponds to downloadable electronic publications, but unlike the next two paragraphs it omits the class designation. Given the recital’s express reference to Classes 9, 16, and 36, this is a mechanical omission affecting the amendment’s form and scope."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Binding on \"licensees\" is unusual and potentially unenforceable",
+          "description": "Clause 5  states the agreement is binding on \"licensees.\" A settlement agreement generally cannot bind third-party licensees who are not parties to it. Consider replacing \"licensees\" with \"affiliates\" or adding language requiring each party to ensure its licensees comply with the terms.",
+          "revision": "... benefit of the parties, their affiliates, successors,",
+          "comment": "We revised this clause to reference 'affiliates' rather than 'licensees,' as settlement agreements bind only parties and those in privity with them; purporting to bind independent third-party licensees would be unenforceable under applicable New York contract principles.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3867,
+            "end_char": 3907,
+            "start_line": 77,
+            "end_line": 77,
+            "match_cover": 0.857,
+            "match_run": 5,
+            "matched_text": "benefit of the parties, their successors",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "5. Successors and assigns"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Whether nonparty licensees can legally be bound is an enforceability and privity issue, not an ambiguity or internal inconsistency in the contract’s wording."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "No consent-to-registration or cooperation clause",
+          "description": "Clause 2  only requires Argus Research Group not to oppose or challenge the PETROLEUM ARGUS mark, but does not require affirmative cooperation — such as filing a consent agreement with the USPTO if the examiner requires one. Given that the whole purpose of the agreement is to clear the path to registration, Petroleum Argus Limited should require affirmative cooperation.",
+          "revision": "... or thing in derogation thereof. Argus Research Group, Inc. shall, upon request, execute and deliver any documents reasonably necessary to facilitate the registration of the PETROLEUM ARGUS mark, including any consent agreement required by the United States Patent and Trademark Office.",
+          "comment": "We added this obligation because the agreement's commercial purpose is to facilitate registration of the PETROLEUM ARGUS mark; passive non-opposition is insufficient if the USPTO requires an affirmative consent agreement as a condition of allowance, which is standard practice where similar marks coexist.",
+          "group_size": 1,
+          "location": {
+            "start_char": 111,
+            "end_char": 681,
+            "start_line": 10,
+            "end_line": 19,
+            "match_cover": 0.439,
+            "match_run": 7,
+            "matched_text": "Argus Research Group, Inc., a corporation incorporated under the laws of Delaware with offices at 61 Broadway, New York, New York, and Petroleum Argus Limited, a corporation organized under the laws of the United Kingdom with offices at 93 Shepperton Road, London NI 3DF, England. Background to Agree",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Inconsistent \"worldwide\" qualifier between electronic and printed publications",
+          "description": "The electronic publications description  covers \"reporting oil pricing worldwide\" while the parallel printed publications description  covers only \"reporting oil pricing\" without the \"worldwide\" qualifier. This inconsistency could create ambiguity about scope. For consistency, consider aligning the two descriptions — either add \"worldwide\" to the print class or remove it from the electronic class.",
+          "revision": "... and manuals reporting oil pricing worldwide, developments in the oil",
+          "comment": "We added 'worldwide' to the print publications description to mirror the scope already used in the electronic publications class, ensuring consistent and unambiguous trademark coverage across both formats.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1315,
+            "end_char": 1390,
+            "start_line": 32,
+            "end_line": 33,
+            "match_cover": 1.0,
+            "match_run": 10,
+            "matched_text": "and manuals reporting oil pricing worldwide, developments in the oil",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The electronic and printed publication descriptions can be reconciled as intentionally having different geographic scopes. The inclusion of “worldwide” in only one description does not itself create a contradiction or ambiguous term."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Governing law justification is non-standard",
+          "description": "The governing law clause  states New York law applies \"where the agreement was prepared.\" This is an unusual and potentially weak basis for a choice-of-law provision. Under New York law, choice-of-law clauses are generally enforceable based on party agreement, not because of where the contract was drafted. The \"where prepared\" language could invite a challenge if circumstances change. Consider simply stating the parties' agreement to be governed by New York law.",
+          "revision": "... the State of New York where the agreement was prepared without recourse to New",
+          "comment": "The revised language grounds the New York choice-of-law provision in the parties' mutual agreement, which is the legally recognized basis for enforceability under New York law and eliminates potential ambiguity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3616,
+            "end_char": 3694,
+            "start_line": 73,
+            "end_line": 73,
+            "match_cover": 1.0,
+            "match_run": 14,
+            "matched_text": "the State of New York where the agreement was prepared without recourse to New",
+            "clause": {
+              "clause_id": "neg1",
+              "label": "NEGATIVE",
+              "clause_name": "4. Governing law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Where the agreement was prepared” is an unusual and potentially unnecessary explanation, but it does not contradict the clear selection of New York law. The issue concerns legal drafting quality rather than construction ambiguity."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled date placeholder",
+          "description": "Found: \"August ___, 2001\" — Missing specific date renders the agreement's effective date ambiguous. See 2 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the specific day of the month for the execution date.",
+          "group_size": 2,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: PETROLEUM ARGUS",
+          "description": "The term 'PETROLEUM ARGUS' is used throughout the agreement as a capitalized term but lacks a formal definition. While it is clearly a trademark being discussed, the agreement should clarify whether this term refers to the trademark itself or has another specific meaning within the contract. See references in the Background section  and Terms of Agreement  .",
+          "revision": "application filed by Petroleum Argus Limited to register the mark PETROLEUM ARGUS (\"PETROLEUM ARGUS\") in the",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 551,
+            "end_char": 1053,
+            "start_line": 18,
+            "end_line": 28,
+            "match_cover": 0.938,
+            "match_run": 12,
+            "matched_text": "application filed by Petroleum Argus Limited to register the mark PETROLEUM ARGUS in the United States Patent and Trademark Office in International Classes 9, 16 and 36 (App. No. 75/337,886) as published in the United States Patent and Trademark Office on November 14, 2000. The parties have agreed t",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The text expressly calls PETROLEUM ARGUS a mark and links it to a particular application. A formal definition would improve drafting but is not necessary to identify the term’s meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: ENERGY ARGUS",
+          "description": "The term 'ENERGY ARGUS' appears in the agreement as a capitalized term but is never formally defined. It is referenced in the context of trademark registrations  , but the agreement does not clarify what this term means within the contract context.",
+          "revision": "for ENERGY ARGUS (\"ENERGY ARGUS\") & Design (Reg. No. 2,387,568) and ENERGY ARGUS & Design",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 2721,
+            "end_char": 3175,
+            "start_line": 52,
+            "end_line": 66,
+            "match_cover": 0.933,
+            "match_run": 12,
+            "matched_text": "for the goods and services as set forth in that application as amended pursuant to -1- paragraph 1 of this agreement or Petroleum Argus’ ownership thereof and exclusive rights therein or do any act or thing in derogation thereof. 3. Argus Research Group, Inc. will not oppose or seek to cancel the tr",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "ENERGY ARGUS is clearly used as the trademark appearing in the two identified registrations. Its lack of a formal definition does not create a genuine interpretive uncertainty."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: agreement",
+          "description": "The defined term 'Agreement' appears in lowercase form as 'agreement' in multiple locations      . For consistency and clarity, all references to the defined term should use the capitalized form 'Agreement'.",
+          "revision": "paragraph 1 of this agreementAgreement or Petroleum Argus' ownership thereof and exclusive rights",
+          "comment": "",
+          "group_size": 5,
+          "location": {
+            "start_char": 2864,
+            "end_char": 2952,
+            "start_line": 62,
+            "end_line": 62,
+            "match_cover": 0.846,
+            "match_run": 5,
+            "matched_text": "paragraph 1 of this agreement or Petroleum Argus’ ownership thereof and exclusive rights",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lowercase references to “agreement” plainly denote this Agreement. The capitalization inconsistency is stylistic and does not change legal meaning."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg1": {
+      "clause_id": "neg1",
+      "clause_name": "4. Governing law",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "argus_research_group",
+        "petroleum_argus"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "argus_research_group",
+          "title": "Vague territorial scope in governing law clause",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“This provision extends” is vague because both the referent of “this provision” and the legal effect of “extends” are unclear in a governing-law clause."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Incomplete sentence",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“The performance of shall be governed” is grammatically incomplete because the object after “of” is missing. That mechanical omission obscures what performance is governed by New York law."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Missing word in governing law clause",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The words “performance of” lack an object, making the sentence mechanically and grammatically incomplete. Inserting “this agreement” or “thereof” would materially clarify the governing-law provision."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Unclear geographic scope of governing law clause",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “This provision” has an uncertain referent, and “extends” does not explain whether geographic scope attaches to the choice of law, the conflicts exclusion, or the Agreement generally."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Governing law justification is non-standard",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Where the agreement was prepared” is an unusual and potentially unnecessary explanation, but it does not contradict the clear selection of New York law. The issue concerns legal drafting quality rather than construction ambiguity."
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "5. Successors and assigns",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "argus_research_group",
+        "petroleum_argus"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "argus_research_group",
+          "title": "Unrestricted assignment could bind Argus Research Group to unknown parties",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The absence of an assignment-consent requirement is a negotiation risk, not a construction defect. The clause plainly states that the Agreement binds successors, licensees, and assigns."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Binding on \"licensees\" is unusual and potentially unenforceable",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Whether nonparty licensees can legally be bound is an enforceability and privity issue, not an ambiguity or internal inconsistency in the contract’s wording."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "8. Confidentiality",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "argus_research_group",
+        "petroleum_argus"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "argus_research_group",
+          "title": "Agreement to agree on confidentiality is unenforceable",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “will agree to keep” can be read either as imposing a present confidentiality commitment or merely promising a future agreement. That lexical and temporal uncertainty requires construction."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Narrow confidentiality exceptions",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue concerns omitted disclosure exceptions and proposes broader protection. The existing exception is narrow but not textually ambiguous or inconsistent with another provision."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Weak confidentiality obligation — \"will agree to\" language",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Will agree to keep” is reasonably susceptible to a present-obligation reading and a future-agreement reading. That uncertainty concerns the operative force of the confidentiality promise."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "No breach remedy or injunctive relief provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lack of an express injunctive-relief or irreparable-harm provision is an omitted remedy term. It neither makes an existing provision ambiguous nor conflicts with another clause."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Confidentiality exception too narrow",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue requests broader exceptions for non-US law and regulatory obligations. The existing exception may be commercially inadequate, but its narrowness is not a construction defect."
+        }
+      ],
+      "risky": true
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Paragraph 1 — Amendment of PETROLEUM ARGUS Identification of Goods and Services",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "argus_research_group",
+        "petroleum_argus"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "argus_research_group",
+          "title": "No time limit for Petroleum Argus to file the amendment",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause omits a performance deadline, but no stated word or phrase is ambiguous and no other provision supplies a conflicting deadline. This is principally an omitted business term."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Financial information services description is overly broad",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“Financial information services” has a potentially uncertain boundary even with the following energy-pricing description, particularly as to services overlapping financial research. The issue therefore has some connection to lexical vagueness."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Undefined term: PETROLEUM ARGUS",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Although PETROLEUM ARGUS is not formally defined, the surrounding text expressly identifies it as the mark in the specified application. Capitalization without a definitions section does not create a genuine ambiguity here."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Class 9 missing from amended goods description",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The first goods paragraph evidently corresponds to downloadable electronic publications, but unlike the next two paragraphs it omits the class designation. Given the recital’s express reference to Classes 9, 16, and 36, this is a mechanical omission affecting the amendment’s form and scope."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Inconsistent \"worldwide\" qualifier between electronic and printed publications",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The electronic and printed publication descriptions can be reconciled as intentionally having different geographic scopes. The inclusion of “worldwide” in only one description does not itself create a contradiction or ambiguous term."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Undefined term: PETROLEUM ARGUS",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The text expressly calls PETROLEUM ARGUS a mark and links it to a particular application. A formal definition would improve drafting but is not necessary to identify the term’s meaning."
+        }
+      ],
+      "risky": true
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Paragraph 2 — Covenant Not to Oppose PETROLEUM ARGUS Application",
+      "label": "POSITIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "argus_research_group",
+        "petroleum_argus"
+      ],
+      "n_issues": 10,
+      "judgments": [
+        {
+          "party": "argus_research_group",
+          "title": "Overly broad \"derogation\" language in Clause 2",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "The phrase “do any act or thing in derogation thereof” is a general catch-all following specific prohibitions on opposing, cancelling, contesting, and challenging. Its reach relative to those enumerated acts is uncertain."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Same overly broad \"derogation\" language in Clause 3",
+          "category": "cat1",
+          "subcategory": "1.3",
+          "reason": "As in Clause 2, the broad “any act or thing in derogation” catch-all follows specific prohibited actions, creating a list-scope question about whether it reaches conduct beyond similar trademark challenges."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "No breach carve-out for Petroleum Argus exceeding scope",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "This issue seeks an additional protective carve-out for conduct beyond the agreed scope. The absence of that negotiated protection is not itself an ambiguity, mechanical error, or conflict among existing provisions."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Clause 3 non-challenge scope should be frozen to current registrations",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue seeks to prevent future expansion through an additional limitation. The current covenant refers to the goods and services set forth in the registrations and does not contain a textual contradiction."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Undefined term: ENERGY ARGUS",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The context identifies ENERGY ARGUS as the mark shown in the two specified registrations. The lack of a formal definition does not leave its referent genuinely uncertain."
+        },
+        {
+          "party": "argus_research_group",
+          "title": "Inconsistent capitalization: 'agreement' should be 'Agreement'",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase “agreement” still unmistakably refers to this instrument. The capitalization inconsistency does not alter meaning or create a construction issue."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Covenant not to oppose narrowly limited to specific application",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The covenant is expressly tied to the identified application and its amended goods and services. The request to cover future applications would broaden the bargain rather than resolve a construction defect."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "No obligation on Argus Research Group to withdraw opposition",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The recital says Argus Research requested extensions of time to oppose, while the operative clause prohibits an opposition; those statements do not point in opposite directions. Any affirmative withdrawal obligation is an omitted term rather than a recital-operative conflict."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Undefined term: ENERGY ARGUS",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "ENERGY ARGUS is clearly used as the trademark appearing in the two identified registrations. Its lack of a formal definition does not create a genuine interpretive uncertainty."
+        },
+        {
+          "party": "petroleum_argus",
+          "title": "Inconsistent capitalization: agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lowercase references to “agreement” plainly denote this Agreement. The capitalization inconsistency is stylistic and does not change legal meaning."
+        }
+      ],
+      "risky": true
+    },
+    "pos3": {
+      "clause_id": "pos3",
+      "clause_name": "Paragraph 3 — Covenant Not to Oppose ENERGY ARGUS & Design Registrations",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "argus_research_group"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "argus_research_group",
+          "title": "No dispute resolution mechanism",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "A missing forum-selection or dispute-resolution clause is an omitted negotiated term, not an intrinsic ambiguity or an inconsistency within the instrument."
+        }
+      ],
+      "risky": false
+    }
+  }
+}

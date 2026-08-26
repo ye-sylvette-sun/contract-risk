@@ -1,0 +1,3022 @@
+{
+  "contract_id": "226FSupp3d719_vine_agreement",
+  "model": "gpt-5.6-sol",
+  "n_clauses": 33,
+  "n_issues": 83,
+  "n_located": 73,
+  "n_judged": 69,
+  "n_skipped": 14,
+  "counts": {
+    "cat1": 22,
+    "cat2": 5,
+    "none": 42
+  },
+  "parties": {
+    "cab_pls_loan_store": {
+      "n_issues": 42,
+      "n_located": 38,
+      "by_tab": {
+        "risks_negotiation": 16,
+        "proofread": 26
+      },
+      "by_kind": {
+        "Important": 1,
+        "Notable": 5,
+        "Minor": 10,
+        "Internal Annotations": 3,
+        "Spelling + Grammar": 3,
+        "Definitions": 9,
+        "Templated Content": 11
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Incorrect Entity Name in Arbitration Opt-Out Provision",
+          "description": "The arbitration opt-out provision  directs customers to send opt-out notices to \"PLS Financial Services,\" but the contracting entity throughout the Agreement is \"PLS Loan Store of Texas, Inc.\" This mismatch could cause confusion and, more importantly, could give customers an argument that their opt-out was improperly directed (or that PLS cannot enforce the arbitration clause because the opt-out mechanism was defective). The entity name should be corrected to match.",
+          "revision": "... of this Agreement at PLS Financial Services,Loan Store of Texas, Inc., Attn: Legal Department, One South ...",
+          "comment": "The entity name in the opt-out provision has been aligned with the contracting party throughout the Agreement to ensure the arbitration opt-out mechanism is legally effective and unambiguous.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10550,
+            "end_char": 10812,
+            "start_line": 100,
+            "end_line": 101,
+            "match_cover": 0.706,
+            "match_run": 10,
+            "matched_text": "of the claim and relief requested and a reasonable opportunity of not less than 60 days to cure the claim. Any notice to us or to Lender must be sent by certified mail, return receipt requested, to PLS Loan Store of Texas, Inc., Attn: Legal Department, One South",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "Pre-Suit Notice Regarding Legal Compliance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The opt-out provision names “PLS Financial Services,” while the agreement defines the contracting CAB as “PLS Loan Store of Texas, Inc.” That inconsistent entity identification creates a conflict requiring construction."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Ambiguous Prepayment Refund Scope",
+          "description": "The prepayment refund language   states the customer is entitled to a refund \"based on a prorated daily basis for the final period with respect to payment in full.\" The phrase \"for the final period\" is vague—it's unclear whether this means only the final installment period or the entire remaining term. Clarifying this protects PLS from disputes over refund calculations.",
+          "revision": "prorated daily basis for the final period with respect toremaining portion of the final installment period in which payment in full is made. Under any loan that ...",
+          "comment": "We revised the prepayment refund language to precisely define the calculation period as the remaining portion of the final installment period in which full payment is made, ensuring a clear and administrable refund methodology.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4407,
+            "end_char": 4501,
+            "start_line": 45,
+            "end_line": 45,
+            "match_cover": 0.593,
+            "match_run": 9,
+            "matched_text": "prorated daily basis for the final period with respect to payment in full. Under any loan that",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "The phrase “for the final period” has an uncertain temporal scope and could mean the installment period in which prepayment occurs or the remaining loan term."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Tension Between \"Irrevocable\" LOC and Automatic Revocation",
+          "description": "The LOC section describes PLS's letter of credit as \"irrevocable\" , yet states it \"shall be automatically revoked\" if the customer exercises the cancellation right . While both provisions make business sense, the use of \"irrevocable\" followed by a revocation mechanism could be challenged. Consider clarifying that the LOC is irrevocable except upon the customer's timely exercise of the cancellation right under this Agreement.",
+          "revision": "... to issue our irrevocable LOC (subject to automatic revocation upon timely cancellation as set forth below) in favor of the third ...",
+          "comment": "We revised the LOC characterization to expressly carve out the automatic revocation trigger, ensuring the irrevocability language accurately reflects the instrument's conditioned nature and avoiding ambiguity that could be exploited in a dispute.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3282,
+            "end_char": 3764,
+            "start_line": 34,
+            "end_line": 39,
+            "match_cover": 0.524,
+            "match_run": 5,
+            "matched_text": "to you by the Lender. Our CAB fee is earned in advance at the inception of the loan, and is payable as part of the scheduled payments with the Joan payments, subject to a partial rebate of the CAB Fee as set forth below in the event of prepayment in full. On the payday installment loan of $___ you h",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "Calling the LOC “irrevocable” conflicts facially with the operative provision automatically revoking it upon timely cancellation, even though the latter could be construed as an exception."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Collection Expenses Could Be Broader",
+          "description": "The Collection Expenses clause   entitles PLS to \"reasonable attorneys' fees\" and \"all costs and disbursements,\" but does not explicitly include pre-litigation collection costs or agency fees. Consider broadening to ensure comprehensive cost recovery for PLS.",
+          "revision": "... actually filed, and all costs, collection agency fees, and disbursements. A person may ...",
+          "comment": "We expanded the cost recovery language to expressly capture collection agency fees and related disbursements incurred prior to formal legal proceedings, reflecting a more complete and accurate enumeration of recoverable collection costs under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11321,
+            "end_char": 11382,
+            "start_line": 107,
+            "end_line": 107,
+            "match_cover": 0.769,
+            "match_run": 5,
+            "matched_text": "actually filed, and all costs and disbursements. A person may",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "Collection Expenses"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue seeks broader recovery rights for additional collection expenses. It identifies a commercial omission, not ambiguous or conflicting contract language."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Arbitration Fee Advance Cap May Be Too Low",
+          "description": "The arbitration cost provision   caps PLS's obligation to advance arbitration fees at $1,000. While this limits PLS's exposure, if this amount is insufficient to cover actual filing and administrative fees in complex cases, the arbitration clause could be challenged as unconscionable for effectively denying the customer access to a forum. Consider whether this cap is adequate under current AAA and JAMS fee schedules to ensure the arbitration clause remains enforceable.",
+          "revision": "... the arbitration, up to $10001,000; the arbitrator will decide ...",
+          "comment": "The $1,000 cap on fee advances is intended to provide a reasonable cost ceiling for PLS while still ensuring customer access to arbitration; however, we are open to discussing whether this amount should be indexed to applicable AAA or JAMS fee schedules to ensure the clause remains enforceable.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15661,
+            "end_char": 15717,
+            "start_line": 150,
+            "end_line": 150,
+            "match_cover": 0.8,
+            "match_run": 4,
+            "matched_text": "the arbitration, up to $1000; the arbitrator will decide",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Arbitration Excludes Rules of Evidence — Potential Enforceability Risk",
+          "description": "The arbitration procedure  states that \"the arbitrator will not apply federal or state rules of civil procedure or evidence.\" While exclusion of procedural rules is common, categorically excluding rules of evidence could be challenged as procedurally unconscionable, particularly in a consumer context. Consider softening to \"will not be strictly bound by\" rather than a blanket exclusion, which preserves PLS's flexibility while reducing enforceability risk.",
+          "revision": "... however, the arbitrator will not applybe strictly bound by federal or state rules of civil procedure or evidence,. Unless the arbitrator determines that ...",
+          "comment": "A categorical exclusion of all rules of evidence in a consumer arbitration raises procedural unconscionability concerns; we revised to 'not strictly bound by' to reflect standard arbitral practice while preserving the arbitrator's discretion.",
+          "group_size": 1,
+          "location": {
+            "start_char": 16588,
+            "end_char": 16719,
+            "start_line": 157,
+            "end_line": 157,
+            "match_cover": 0.826,
+            "match_run": 14,
+            "matched_text": "however, the arbitrator will not apply federal or state rules of civil procedure or evidence, Unless the arbitrator determines that",
+            "clause": {
+              "clause_id": "neg17",
+              "label": "NEGATIVE",
+              "clause_name": "Arbitration Procedure"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "A possible unconscionability or enforceability challenge based on excluding evidentiary rules is a legal-policy risk, not an intrinsic ambiguity or internal inconsistency."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Default Trigger for Lender Obligations May Be Overly Broad",
+          "description": "The DEFAULT clause   triggers default under this Agreement if the customer fails to \"perform your obligations to the Lender.\" While this cross-default is beneficial to PLS, it could be challenged as overly broad because it doesn't specify which lender obligations trigger default. Consider specifying \"payment obligations\" or \"material obligations\" to the Lender to reduce the risk of the clause being struck as unconscionable.",
+          "revision": "... you fail to perform your material obligations to the Lender. If ...",
+          "comment": "We revised the cross-default trigger to reference 'material obligations' to the Lender to ensure the clause is proportionate and enforceable, reducing exposure to an unconscionability challenge under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7515,
+            "end_char": 7623,
+            "start_line": 74,
+            "end_line": 74,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "you fail to perform your other promises to us; or (3) you fail to perform your obligations to the Lender. If",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Your obligations to the Lender” broadly but clearly encompasses the customer's lender obligations. The concern is overbreadth or unconscionability, not competing meanings."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Bankruptcy Warranty May Be Unenforceable",
+          "description": "The signing provision  requires the customer to warrant they have \"no intention to file a petition for relief under the United States Bankruptcy Code.\" This forward-looking component is likely unenforceable under federal bankruptcy law, as courts hold that pre-petition waivers of bankruptcy rights are void as against public policy. Consider removing the intention language to avoid regulatory scrutiny while keeping the warranty about current bankruptcy status.",
+          "revision": "... under any proceeding in bankruptcy, and have no intention to file a petition for relief under the United States Bankruptcy Code",
+          "comment": "The forward-looking bankruptcy intention warranty is unenforceable under federal bankruptcy law, as pre-petition waivers of bankruptcy rights are void as against public policy; we've limited the warranty to current bankruptcy status to ensure the provision is legally sound.",
+          "group_size": 1,
+          "location": {
+            "start_char": 22817,
+            "end_char": 22944,
+            "start_line": 223,
+            "end_line": 223,
+            "match_cover": 1.0,
+            "match_run": 21,
+            "matched_text": "under any proceeding in bankruptcy, and have no intention to file a petition for relief under the United States Bankruptcy Code",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "Acknowledgments and Certifications by Signing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue concerns enforceability under federal bankruptcy policy rather than ambiguity, mechanical error, or conflict within the instrument."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Data Sharing Authorization Lacks Service Provider Coverage",
+          "description": "The information sharing provision   authorizes PLS to share customer information with \"the third party lender or our affiliates,\" but does not include service providers, successors, or assigns. Given that PLS may assign the Agreement  and uses third-party service providers for operations, the sharing authorization should be broadened to include service providers and assignees to avoid data-sharing gaps.",
+          "revision": "... with the third party lender or our affiliates, our affiliates, our service providers, or our successors and assigns, for the duration of ...",
+          "comment": "We expanded the permitted sharing parties to include service providers and successors/assigns to ensure the authorization covers PLS's actual operational relationships and is consistent with the agreement's assignment provisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23348,
+            "end_char": 23414,
+            "start_line": 226,
+            "end_line": 226,
+            "match_cover": 0.545,
+            "match_run": 8,
+            "matched_text": "with the third party lender or our affiliates, for the duration of",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "Acknowledgments and Certifications by Signing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The authorization's failure to include service providers, successors, and assigns is a desired expansion of rights, not a construction defect."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Redundant Entity Name in Cancellation Notice Address",
+          "description": "The cancellation notice address  contains a redundant repetition of \"PLS Loan Store of Texas, Inc.\" — it appears twice in the same address line. This is likely a drafting error and could confuse customers attempting to exercise cancellation rights. Since proper cancellation procedures protect PLS from disputes about whether adequate notice was provided, the address should be cleaned up.",
+          "revision": "... Texas, Inc., Attention: CAB Cancellation, PLS Loan Store of Texas, Inc., One South Wacker",
+          "comment": "Removed duplicate entity name in the cancellation notice address to correct an apparent drafting error and ensure customers can clearly identify the correct mailing address.",
+          "group_size": 1,
+          "location": {
+            "start_char": 24366,
+            "end_char": 24455,
+            "start_line": 256,
+            "end_line": 256,
+            "match_cover": 1.0,
+            "match_run": 14,
+            "matched_text": "Texas, Inc., Attention: CAB Cancellation, PLS Loan Store of Texas, Inc., One South Wacker",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "Notice of Cancellation — How to Cancel"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Repeating the same entity name in the address is untidy but does not change the recipient or otherwise alter the provision's meaning."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Same Redundancy in Second Notice of Cancellation",
+          "description": "The second copy of the Notice of Cancellation  contains the same redundant repetition of the entity name in the mailing address.",
+          "revision": "... Texas, Inc., Attention: CAB Cancellation, PLS Loan Store of Texas, Inc., One South Wacker",
+          "comment": "Corrected redundant repetition of the entity name in the mailing address for consistency with standard formatting.",
+          "group_size": 1,
+          "location": {
+            "start_char": 24366,
+            "end_char": 24455,
+            "start_line": 256,
+            "end_line": 256,
+            "match_cover": 1.0,
+            "match_run": 14,
+            "matched_text": "Texas, Inc., Attention: CAB Cancellation, PLS Loan Store of Texas, Inc., One South Wacker",
+            "clause": {
+              "clause_id": "neg31",
+              "label": "NEGATIVE",
+              "clause_name": "Notice of Cancellation — How to Cancel"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The duplicate entity name in the second cancellation form is redundant formatting that does not change the address or substantive meaning."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Interstate Commerce Declaration Lacks Factual Basis",
+          "description": "The interstate commerce clause  simply states \"you agree that this Agreement involves interstate commerce for all purposes.\" This conclusory statement, without any factual recital supporting the interstate commerce nexus, could be challenged. Strengthening the language with a brief factual basis (e.g., referencing that PLS is headquartered in Illinois and arranges credit in Texas) would better support FAA preemption and the arbitration clause's enforceability.",
+          "revision": "Interstate Commerce: You agree and acknowledge that this Agreement involves interstate commerce for all purposes, including because PLS Loan Store of Texas, Inc. is headquartered in Illinois and provides credit access services in Texas.",
+          "comment": "We added factual recitals supporting the interstate commerce nexus — specifically PLS's Illinois domicile and cross-state credit access operations in Texas — to ensure the arbitration clause is properly grounded under FAA preemption standards as required by binding precedent.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11600,
+            "end_char": 12051,
+            "start_line": 109,
+            "end_line": 115,
+            "match_cover": 0.618,
+            "match_run": 9,
+            "matched_text": "Interstate Commerce: You agree that this Agreement involves interstate commerce for all purposes. Assignment: We may transfer any of our rights, titles and interests under this Agreement at our discretion. You may not transfer your rights under this Agreement without our prior written consent. Misce",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "Assignment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The lack of supporting facts presents a potential evidentiary or enforceability concern, not textual ambiguity or inconsistency within the contract."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Entire Agreement Clause Lacks Survival Language",
+          "description": "The Entire Agreement provision   requires modifications to be \"in writing and signed by you and us,\" but does not address electronic signatures or electronic modifications. Given that PLS likely conducts some business electronically, consider adding language confirming that electronic signatures and electronic written modifications satisfy this requirement, consistent with ESIGN and Texas UETA.",
+          "revision": "... be effective unless in writing and signed(including electronic writing) and signed (including by electronic signature) by you and us. If ...",
+          "comment": "We clarified that electronic writings and electronic signatures satisfy the written modification requirement, consistent with the federal ESIGN Act and Texas Uniform Electronic Transactions Act, which govern electronic commerce in this jurisdiction.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21880,
+            "end_char": 21939,
+            "start_line": 214,
+            "end_line": 214,
+            "match_cover": 0.571,
+            "match_run": 7,
+            "matched_text": "be effective unless in writing and signed by you and us. If",
+            "clause": {
+              "clause_id": "neg26",
+              "label": "NEGATIVE",
+              "clause_name": "Entire Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause's failure expressly to address electronic writings and signatures is an omitted clarification, not an ambiguity or conflict."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Comma Splice Creates Ambiguity in Loan Disclaimer",
+          "description": "In the description of services , a comma splice (\"receive a loan, All credit decisions\") joins two independent sentences, creating potential ambiguity about whether the disclaimer about loan approval is a separate obligation or a qualification. This should be two distinct sentences for clarity.",
+          "revision": "... will actually receive a loan,. All credit decisions shall be ...",
+          "comment": "Corrected comma splice by splitting into two distinct sentences to eliminate ambiguity about whether the loan approval disclaimer is a separate obligation or a qualification of the preceding clause.",
+          "group_size": 1,
+          "location": {
+            "start_char": 1669,
+            "end_char": 1728,
+            "start_line": 20,
+            "end_line": 20,
+            "match_cover": 1.0,
+            "match_run": 10,
+            "matched_text": "will actually receive a loan, All credit decisions shall be",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Description of Our Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The comma splice is a grammatical error, but the two independent propositions remain readily separable and their meaning is not changed."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Pre-Suit Notice Lacks Lender's Address",
+          "description": "The pre-suit notice provision    requires the customer to provide notice to both PLS and \"Lender\" before initiating claims, but only provides PLS's mailing address. The Lender (DSI Lending Resources, Inc.) has no address listed for notice purposes, which could lead to arguments that the notice requirement is incomplete or unenforceable as to Lender claims. Consider adding language that notice to PLS constitutes notice to Lender.",
+          "revision": "... Loan Store of Texas, Inc.,. (on behalf of itself and Lender), Attn: Legal Department, One South ...",
+          "comment": "We clarified that notice to PLS satisfies the pre-suit notice requirement for both PLS and Lender, ensuring the provision is complete and enforceable without requiring a separate notice address for each party.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10752,
+            "end_char": 10812,
+            "start_line": 101,
+            "end_line": 101,
+            "match_cover": 0.625,
+            "match_run": 5,
+            "matched_text": "Loan Store of Texas, Inc., Attn: Legal Department, One South",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "Pre-Suit Notice Regarding Legal Compliance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause states that notice to either PLS or Lender must be sent to the listed PLS address. Not providing a separate lender address may be operationally undesirable but is not textually ambiguous."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Lender Identification Incomplete",
+          "description": "The Agreement identifies the lender as \"DSI Lending Resources, Inc.\"  but does not provide any additional identifying information such as the Lender's address, state of incorporation, or license number. Under Texas Finance Code Chapter 393, customers should have adequate information to identify the third-party lender. Adding the Lender's address would strengthen the Agreement's enforceability and reduce potential regulatory concerns.",
+          "revision": "... is DSI Lending Resources, Inc., located at [Lender Address].",
+          "comment": "Texas Finance Code Chapter 393 requires that customers be provided adequate information to identify the third-party lender; including the Lender's address strengthens enforceability and reduces regulatory exposure.",
+          "group_size": 1,
+          "location": {
+            "start_char": 666,
+            "end_char": 746,
+            "start_line": 12,
+            "end_line": 14,
+            "match_cover": 0.667,
+            "match_run": 5,
+            "matched_text": "is DSI Lending Resources, Inc. Description of Our Services: We are not a lender",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Description of Our Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "DSI Lending Resources, Inc. is expressly identified by name. Omission of additional corporate or licensing details is a disclosure concern, not a construction defect."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete sentence with annotation marker",
+          "description": "The COMPLIANCE section  contains an incomplete sentence that ends with \"maximum peepee\" which appears to be a drafting note or corrupted text. The full sentence reads: \"otherwise refund it and the rate or amount involved will automatically be reduced to the maximug peepee\". This should be completed to read \"maximum permitted by law\" or similar standard language.",
+          "revision": "maximug peepeemaximum permitted by law",
+          "comment": "Corrected corrupted/placeholder drafting text 'maximug peepee' to read 'maximum permitted by law' — standard compliance language consistent with applicable Texas usury and consumer lending regulations.",
+          "group_size": 1,
+          "location": {
+            "start_char": 8143,
+            "end_char": 8159,
+            "start_line": 79,
+            "end_line": 79,
+            "match_cover": 0.6,
+            "match_run": 3,
+            "matched_text": "permitted by law",
+            "clause": {
+              "clause_id": "neg8",
+              "label": "NEGATIVE",
+              "clause_name": "Notices and Waivers"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted phrase “maximug peepee” is a mechanical drafting error that replaces the intended legal limitation with nonsensical text and obscures the sentence's meaning."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete sentence fragment",
+          "description": "The COMPLIANCE section  contains an incomplete sentence that appears to be cut off mid-thought: \"law, for purposes of determining our compliance with law, we may calculate charges by amortiz#\". This sentence fragment ends abruptly with \"amortiz#\" which appears to be either corrupted text or a drafting placeholder. The full sentence should likely read \"by amortizing, prorating, allocating and spreading\" based on similar language elsewhere in the document .",
+          "revision": "... we may calculate charges by amortiz#amortizing, prorating, allocating and spreading.",
+          "comment": "We restored the complete and intended language for the charge calculation methodology in the Compliance section, replacing what appears to be a drafting artifact or corrupted placeholder with the standard formulation used elsewhere in the agreement.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10183,
+            "end_char": 10255,
+            "start_line": 96,
+            "end_line": 96,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "may calculate charges by amortizing, prorating, allocating and spreading",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "Compliance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The text ending in “amortiz#” is mechanically truncated and leaves the charge-calculation sentence incomplete, notwithstanding the complete parallel language elsewhere."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo - \"Joan\" should be \"loan\"",
+          "description": "Incorrect word \"Joan\" in payment terms section",
+          "revision": "... the scheduled payments with the Joanloan payments, subject to",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3393,
+            "end_char": 3450,
+            "start_line": 35,
+            "end_line": 35,
+            "match_cover": 0.889,
+            "match_run": 5,
+            "matched_text": "the scheduled payments with the Joan payments, subject to",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Joan payments” is an erroneous substitution for “loan payments,” literally changing the referenced type of payment to nonsensical language."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Handwriting annotation in signature block",
+          "description": "The signature block  contains what appears to be a handwritten or informal annotation \"2 ball Vibha\" after \"Customer Name:\". This appears to be a drafting note or placeholder text that should be removed, leaving only \"Customer Name:\" as a blank field to be filled in.",
+          "revision": "Customer Name: 2 ball Vibha\"",
+          "comment": "Removed informal annotation 'ball Vibha' from the signature block — this appears to be a drafting note or placeholder and should not appear in the final document.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23780,
+            "end_char": 23807,
+            "start_line": 236,
+            "end_line": 236,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "Customer Name: 2 ball Vibha",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing space before dollar amount",
+          "description": "Missing space between \"of\" and \"$\" in",
+          "revision": "... CAB fee for this transaction ofSof $",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3836,
+            "end_char": 3864,
+            "start_line": 39,
+            "end_line": 39,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "CAB fee for this transaction",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The corrupted text “ofS” fails clearly to present the intended dollar sign and amount field for the CAB fee, mechanically obscuring the financial disclosure."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spelling - \"unlgyuful\" should be \"unlawful\"",
+          "description": "Misspelled word in LOC compliance provision",
+          "revision": "... of lawful amounts. If an unlgyufulunlawful excess occurs, we will apply ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 7058,
+            "end_char": 7121,
+            "start_line": 65,
+            "end_line": 65,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "of lawful amounts. If an unlgyuful excess occurs, we will apply",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "LOC and Obligation to Reimburse"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Unlgyuful” is a corrupted spelling of “unlawful” that turns an operative condition into a nonexistent word, although the intended word is inferable."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Amount Financed",
+          "description": "The term 'Amount Financed' appears capitalized in the cost and payment terms section  but is never formally defined in the document. This financial term is critical to understanding the loan structure and should be defined to clarify what is included in or excluded from this amount.",
+          "revision": "payable in _ payments with interest of 10.00% per annum charged by the Lender, the Amount Financed (meaning the principal amount of credit provided to you) is $ , the Finance Charge is $",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3599,
+            "end_char": 3726,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 0.71,
+            "match_run": 17,
+            "matched_text": "payable in _ payments with interest of 10.00% per annum charged by the Lender, the Amount Financed is $ , the Finance Charge is",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Amount Financed” is a standard consumer-credit concept and is used as the label for a transaction-specific amount. Capitalization without a bespoke definition does not itself create genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Finance Charge",
+          "description": "The term 'Finance Charge' appears capitalized throughout the cost and payment terms section   but lacks a formal definition. As a key financial term in a credit agreement, it should be clearly defined to specify what charges and fees are included in this calculation.",
+          "revision": "The Finance Charge (meaning the total dollar amount the credit will cost you, including interest and the CAB fee) consists of the interest paid or to be paid to the Lender, in the amount of $_ and our CAB fee for this transaction ofS",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3705,
+            "end_char": 3868,
+            "start_line": 37,
+            "end_line": 39,
+            "match_cover": 0.651,
+            "match_run": 24,
+            "matched_text": "the Finance Charge is $ The Finance Charge consists of the interest paid or to be paid to the Lender, in the amount of $_ and our CAB fee for this transaction ofS",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The agreement expressly states that the Finance Charge consists of lender interest and the CAB fee. The alleged lack of definition therefore does not create a construction issue."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Annual Percentage Rate",
+          "description": "The term 'Annual Percentage Rate' appears capitalized in the cost and payment terms section  but is not defined in the Agreement. This is a fundamental consumer credit term that should be clearly defined, especially given that the document also uses the abbreviation 'APR'.",
+          "revision": "The Annual Percentage Rate (meaning the cost of your credit as a yearly rate, also referred to as 'APR') is %, payments commencing on , in the amount of $ , followed by regular payments of $",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3870,
+            "end_char": 3980,
+            "start_line": 41,
+            "end_line": 41,
+            "match_cover": 0.531,
+            "match_run": 13,
+            "matched_text": "The Annual Percentage Rate is %, payments commencing on , in the amount of $ , followed by regular payments of",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Annual Percentage Rate” is a standard statutory credit term whose absence from a definitions section does not make its meaning genuinely uncertain."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled customer name",
+          "description": "Found: \"Customer:\" — Customer identity is not specified, leaving the counterparty to the agreement unidentified.",
+          "revision": "",
+          "comment": "Insert the full legal name of the customer entering the agreement.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled transaction number",
+          "description": "Found: \"Transaction Number:\" — Transaction cannot be uniquely identified without a transaction number for record-keeping purposes. See 3 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the unique transaction number assigned to this agreement.",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled customer number",
+          "description": "Found: \"Customer Number:\" — Customer account reference is missing, hindering identification and recordkeeping for this customer.",
+          "revision": "",
+          "comment": "Insert the unique customer identification number assigned to this agreement.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled customer address",
+          "description": "Found: \"Address:\" — Customer's address is omitted, preventing proper notice and potentially affecting venue and jurisdiction.",
+          "revision": "",
+          "comment": "Insert the full mailing address for payday installment payments.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing annualized rate percentage",
+          "description": "Found: \"based upon °% annualized rate\" — The CAB fee annualized rate is unfilled, rendering the finance charge calculation indeterminate.",
+          "revision": "",
+          "comment": "Insert the specific annualized percentage rate applied to the financed amount.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3217,
+            "end_char": 3246,
+            "start_line": 34,
+            "end_line": 34,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "based upon °% annualized rate",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The annualized-rate field is unfilled, mechanically omitting the percentage needed to calculate the CAB fee."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled loan principal amount",
+          "description": "Found: \"loan of $___ you have applied for\" — Principal loan amount is blank, making the entire payment schedule and obligations unenforceable.",
+          "revision": "",
+          "comment": "Insert the total dollar amount of the payday installment loan applied for.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3564,
+            "end_char": 3597,
+            "start_line": 36,
+            "end_line": 36,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "loan of $___ you have applied for",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The blank principal field omits the transaction's loan amount and consequently leaves a central payment obligation incomplete."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled number of payments",
+          "description": "Found: \"payable in _ payments\" — Payment schedule is incomplete without the number of installments, rendering repayment terms ambiguous.",
+          "revision": "",
+          "comment": "Insert the total number of scheduled payments for the loan.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3599,
+            "end_char": 3620,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "payable in _ payments",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The blank installment-count field is a mechanical omission that prevents the payment schedule from specifying how many payments are due."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing Amount Financed",
+          "description": "Found: \"Amount Financed is $ ,\" — Amount Financed is blank, violating Truth in Lending Act disclosure requirements for consumer credit.",
+          "revision": "",
+          "comment": "Insert the total dollar amount financed by the Lender.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3682,
+            "end_char": 3700,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "Amount Financed is",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The Amount Financed field is blank, mechanically omitting the dollar value to which the surrounding payment terms refer."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing Finance Charge",
+          "description": "Found: \"Finance Charge is $\" — Finance Charge is unfilled, preventing required TILA disclosure of total cost of credit.",
+          "revision": "",
+          "comment": "Insert the total dollar amount of the finance charge payable by the borrower.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3709,
+            "end_char": 3726,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "Finance Charge is",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The Finance Charge field is unfilled, leaving the stated total cost of credit mechanically incomplete."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled lender interest amount",
+          "description": "Found: \"amount of $_ and our CAB fee\" — Interest component of Finance Charge is blank, obscuring the cost breakdown required by TILA.",
+          "revision": "",
+          "comment": "Insert the total dollar amount of interest to be paid to the Lender.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3815,
+            "end_char": 3843,
+            "start_line": 39,
+            "end_line": 39,
+            "match_cover": 1.0,
+            "match_run": 6,
+            "matched_text": "amount of $_ and our CAB fee",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The lender-interest component contains an unfilled dollar field, mechanically omitting part of the stated Finance Charge breakdown."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Missing first payment date and amount",
+          "description": "Found: \"payments commencing on , in the amount of $ ,\" — First payment date and amount are blank, leaving repayment schedule unenforceable and ambiguous.",
+          "revision": "",
+          "comment": "Insert the start date and initial payment amount for the loan schedule.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3903,
+            "end_char": 3944,
+            "start_line": 41,
+            "end_line": 41,
+            "match_cover": 1.0,
+            "match_run": 7,
+            "matched_text": "payments commencing on , in the amount of",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The first payment date and amount are both blank, leaving the commencement of the repayment schedule mechanically incomplete."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Total of Payments",
+          "description": "The term 'Total of Payments' appears capitalized in the cost and payment terms section  but lacks a formal definition. This financial term should be defined to clarify whether it includes all fees, charges, and principal.",
+          "revision": "each, with a final payment of $ on , and the Total of Payments (meaning the amount you will have paid after you have made all payments as scheduled) is $ . Payments will be applied first to the CAB fee, then to",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3983,
+            "end_char": 4107,
+            "start_line": 42,
+            "end_line": 42,
+            "match_cover": 0.615,
+            "match_run": 12,
+            "matched_text": "each, with a final payment of $ on , and the Total of Payments is $ . Payments will be applied first to the CAB fee, then to",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Total of Payments” is a standard credit-disclosure label used for the stated aggregate payment amount. No competing contractual meaning is identified."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: State Allowed Returned Item Fee",
+          "description": "The term 'State Allowed Returned Item Fee' appears capitalized in the payment terms sections   but is never defined. This term should be defined to specify the exact amount or how it is calculated under applicable Texas law.",
+          "revision": "the reimbursement is paid, a return item fee of $30 (or the State Allowed Returned Item Fee (meaning the maximum returned item fee permitted under Texas law), whichever is greater) for any check, ACH debit,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4957,
+            "end_char": 5096,
+            "start_line": 50,
+            "end_line": 50,
+            "match_cover": 0.714,
+            "match_run": 17,
+            "matched_text": "the reimbursement is paid, a return item fee of $30 (or the State Allowed Returned Item Fee, whichever is greater) for any check, ACH debit",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "Other Fees and Charges"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Read with the Texas governing-law clause, “State Allowed Returned Item Fee” objectively refers to the returned-item fee allowed by applicable Texas law. The absence of a fixed amount does not make it genuinely indeterminate."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Credit Services Agreement",
+          "description": "The term 'Credit Services Agreement' appears capitalized in multiple sections      but is never formally defined. While it may refer to 'this Agreement,' the document should clarify whether 'Credit Services Agreement' is synonymous with 'Agreement' or represents a distinct concept.",
+          "revision": "GOVERNING LAW: This Credit Services Agreement (meaning this Agreement) will be governed by the laws of the State of Texas, except that the Arbitration Agreement and",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 20585,
+            "end_char": 20724,
+            "start_line": 199,
+            "end_line": 199,
+            "match_cover": 0.885,
+            "match_run": 18,
+            "matched_text": "GOVERNING LAW: This Credit Services Agreement will be governed by the laws of the State of Texas, except that the Arbitration Agreement and",
+            "clause": {
+              "clause_id": "neg23",
+              "label": "NEGATIVE",
+              "clause_name": "Governing Law"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The document is titled “Credit Services Agreement” and initially defines it as the “Agreement,” so the governing-law reference plainly identifies this instrument."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Notice of Cancellation",
+          "description": "The term 'Notice of Cancellation' appears capitalized in the signing acknowledgment section   but is not formally defined. The document references two notices of cancellation that should be defined or clarified within the Agreement itself.",
+          "revision": "COMPLETED; (3) TWO NOTICES OF CANCELLATION (meaning the forms attached to this Agreement that explain your right to cancel within three days): (b) you certify that you have read, understood and agree to all of the terms and",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 22388,
+            "end_char": 22512,
+            "start_line": 220,
+            "end_line": 220,
+            "match_cover": 0.579,
+            "match_run": 16,
+            "matched_text": "COMPLETED; (3) TWO NOTICES OF CANCELLATION: (b) you certify that you have read, understood and agree to all of the terms and",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "Acknowledgments and Certifications by Signing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The two attached forms are each headed “Notice of Cancellation,” making the acknowledgment's reference clear without a separate formal definition."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: agreement",
+          "description": "The term 'agreement' appears in lowercase form in the definition of 'Claim'    , but the defined term 'Agreement' is consistently capitalized elsewhere in the document. For consistency with the defined term, these instances should be capitalized when referring to the Credit Services Agreement. See Definition",
+          "revision": "Definition of Claim. \"Claim\" means any dispute, claim or controversy between you and us and/or Lender arising from or relating to: (a) the current credit services agreementAgreement, loan, agreementAgreement, or obligation;",
+          "comment": "",
+          "group_size": 3,
+          "location": {
+            "start_char": 12478,
+            "end_char": 12682,
+            "start_line": 123,
+            "end_line": 124,
+            "match_cover": 0.938,
+            "match_run": 27,
+            "matched_text": "Definition of Claim. \"Claim\" means any dispute, claim or controversy between you and us and/or Lender arising from or relating to: (a) the current credit services agreement, loan, agreement, or obligation",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Definition of Claim — Arbitration Agreement and Limitation on Class Participation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase “credit services agreement” appears within a broad list covering current agreements, loans, and obligations. The capitalization choice does not create a genuine ambiguity."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: arbitration agreement",
+          "description": "The term 'arbitration agreement' appears in lowercase form in the definition of 'Claim' , but the defined term 'Arbitration Agreement and Limitation on Class Participation' is capitalized elsewhere in the document. For consistency, this reference should be capitalized.",
+          "revision": "equitable relief or (e) the validity of this arbitration agreementArbitration Agreement. For purposes of this arbitration agreementArbitration Agreement, \"Claim\" does not include: (i) any dispute, claim or",
+          "comment": "",
+          "group_size": 6,
+          "location": {
+            "start_char": 12945,
+            "end_char": 13108,
+            "start_line": 126,
+            "end_line": 126,
+            "match_cover": 0.926,
+            "match_run": 10,
+            "matched_text": "equitable relief or (e) the validity of this arbitration agreement. For purposes of this arbitration agreement, “Claim” does not include: (i) any dispute, claim or",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Definition of Claim — Arbitration Agreement and Limitation on Class Participation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "In context, lowercase “this arbitration agreement” plainly refers to the arbitration provision being stated. The capitalization inconsistency is stylistic only."
+          }
+        }
+      ]
+    },
+    "customer_vine": {
+      "n_issues": 41,
+      "n_located": 35,
+      "by_tab": {
+        "risks_negotiation": 18,
+        "proofread": 23
+      },
+      "by_kind": {
+        "Important": 5,
+        "Notable": 8,
+        "Minor": 5,
+        "Spelling + Grammar": 3,
+        "Internal Annotations": 4,
+        "Definitions": 7,
+        "Templated Content": 9
+      },
+      "issues": [
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Payment Waterfall Disadvantages Lender",
+          "description": "The payment application order in the Cost and Payment Terms section  provides that payments are applied first to the CAB fee before interest, late charges, and principal. This waterfall is unfavorable to DSI Lending Resources as the lender because the CAB's fee takes priority over all amounts owed to the lender. DSI should negotiate for at least parity, or ideally for interest and principal to be paid before or concurrently with the CAB fee, to reduce DSI's credit exposure.",
+          "revision": "... will be applied first to accrued interest, then to the CAB fee, then to late charges, returned item fees and principal in that order.",
+          "comment": "We restructured the payment application order to prioritize accrued interest before the CAB fee, which better reflects the lender's primacy in the credit relationship and is more consistent with standard lending practice in Texas.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4062,
+            "end_char": 4178,
+            "start_line": 42,
+            "end_line": 43,
+            "match_cover": 0.833,
+            "match_run": 10,
+            "matched_text": "will be applied first to the CAB fee, then to interest, late charges, returned item fees and principal in that order",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The payment waterfall expressly states the order of application. Its commercial disadvantage to the lender is a negotiation issue, not a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "LOC 10-Day Default Waiting Period Delays Lender Recovery",
+          "description": "The LOC provision  conditions CAB's payment on the LOC upon the loan being in default for at least 10 days. This waiting period delays DSI's ability to draw on the LOC and recover funds. DSI should negotiate to shorten this period (e.g., to 5 days) or eliminate it entirely, to expedite recovery upon borrower default.",
+          "revision": "... been in default at least 105 days from its due date. ...",
+          "comment": "We shortened the default waiting period to 5 days to reduce DSI's exposure to uncured defaults and ensure timely access to LOC proceeds, which is consistent with prudent lender protection under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6257,
+            "end_char": 6307,
+            "start_line": 60,
+            "end_line": 60,
+            "match_cover": 0.909,
+            "match_run": 5,
+            "matched_text": "been in default at least 10 days from its due date",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "LOC and Obligation to Reimburse"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The ten-day waiting period is definite and internally consistent. The desire for faster LOC recovery is purely commercial."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "LOC Described as \"Irrevocable\" but Subject to Automatic Revocation",
+          "description": "The LOC is described as \"irrevocable\" , yet the agreement states it \"shall be automatically revoked and shall have no further effect\" if the customer exercises the right to cancel . While the cancellation right is standard under Texas law, describing the LOC as both \"irrevocable\" and subject to \"automatic revocation\" creates an internal inconsistency. DSI should ensure the language clarifies that the LOC is irrevocable except upon cancellation of the agreement within the statutory cancellation period, to avoid any ambiguity about DSI's security.",
+          "revision": "... LOC shall be automatically revoked, as permitted under the statutory cancellation period, and shall have no",
+          "comment": "The revision aligns the LOC's irrevocability with Texas statutory cancellation rights, making clear that revocation is only available during the prescribed cancellation period and not at any other time.",
+          "group_size": 1,
+          "location": {
+            "start_char": 6501,
+            "end_char": 6553,
+            "start_line": 61,
+            "end_line": 61,
+            "match_cover": 0.562,
+            "match_run": 5,
+            "matched_text": "LOC shall be automatically revoked and shall have no",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "LOC and Obligation to Reimburse"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The operative description of the LOC as “irrevocable” conflicts facially with its automatic revocation upon timely cancellation, requiring the cancellation provision to be construed as an exception."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Default Remedies Limited to CAB — No Express Lender Remedies",
+          "description": "The DEFAULT section   limits default remedies to the CAB (\"we shall have the right to seek collection\" and \"we may exercise any other right\"). DSI Lending Resources is not expressly granted parallel default remedies in this section. The language should acknowledge the Lender's independent right to pursue remedies upon borrower default to avoid any argument that the customer's obligations to DSI are limited under this agreement.",
+          "revision": "... and you agree that we shalland Lender shall each have the right to take ...",
+          "comment": "We added DSI Lending Resources as a named party entitled to exercise default remedies, reflecting the dual-party structure of this transaction and ensuring the Lender's independent enforcement rights are preserved under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7723,
+            "end_char": 7773,
+            "start_line": 75,
+            "end_line": 75,
+            "match_cover": 0.786,
+            "match_run": 5,
+            "matched_text": "and you agree that we shall have the right to take",
+            "clause": {
+              "clause_id": "neg7",
+              "label": "NEGATIVE",
+              "clause_name": "Default"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The default clause's failure to grant the Lender parallel remedies is an omission of desired rights, not an ambiguity or conflict with another provision."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "No Separate Notice Address for Lender in Pre-Suit Provision",
+          "description": "The pre-suit notice provision  requires the customer to send notice to PLS Loan Store of Texas at its Chicago address, but does not provide a separate notice address for DSI Lending Resources, Inc. Despite stating \"Any notice to us or to Lender\" , only the CAB's address is listed. DSI should have its own notice address specified to ensure it receives timely notice of any compliance claims directly.",
+          "revision": "... One South Wacker Drive, Suite 3600, Chicago, IL 60606, and to DSI Lending Resources, Inc. at [INSERT DSI ADDRESS].",
+          "comment": "Because this agreement expressly contemplates notices directed to both the CAB and the Lender, DSI Lending Resources, Inc. must have its own notice address specified to ensure proper receipt and response to any compliance or legal claims.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10803,
+            "end_char": 10927,
+            "start_line": 101,
+            "end_line": 102,
+            "match_cover": 0.579,
+            "match_run": 9,
+            "matched_text": "One South Wacker Drive, Suite 3600, Chicago, IL 60606. Any corrective action shall relieve us and Lender of any liability to",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "Pre-Suit Notice Regarding Legal Compliance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The clause directs notices to PLS or Lender to the one stated address. A separate DSI address might be preferable, but its omission does not create an internal construction conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Assignment Right Does Not Expressly Cover Lender",
+          "description": "The assignment provision  grants only the CAB (\"We\") the right to transfer rights under the agreement. DSI Lending Resources, as the Lender, is not expressly granted assignment rights in this clause. While DSI's assignment rights may exist under a separate loan agreement, it would strengthen DSI's position to be expressly included here, particularly since this agreement governs the LOC and customer reimbursement obligations that benefit DSI.",
+          "revision": "Assignment: We mayand Lender may each transfer any of our respective rights, titles and interests under ...",
+          "comment": "We revised the assignment provision to expressly include Lender's assignment rights, as DSI Lending Resources holds a direct economic interest in the LOC and reimbursement obligations governed by this Agreement and should have co-equal assignment authority.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11699,
+            "end_char": 11772,
+            "start_line": 111,
+            "end_line": 111,
+            "match_cover": 0.75,
+            "match_run": 5,
+            "matched_text": "Assignment: We may transfer any of our rights, titles and interests under",
+            "clause": {
+              "clause_id": "neg14",
+              "label": "NEGATIVE",
+              "clause_name": "Assignment"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The assignment clause clearly grants assignment rights to PLS and not expressly to DSI. Expanding it to cover DSI is a negotiation objective."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "DSI Not Identified as Party or Third-Party Beneficiary",
+          "description": "The introductory definitions  identify DSI Lending Resources, Inc. as the lender from whom credit is obtained, but DSI is not a signatory and is not expressly designated as a third-party beneficiary. Yet the agreement purports to bind and benefit DSI in multiple provisions — the jury trial waiver , arbitration , and compliance . Without express third-party beneficiary status, the enforceability of provisions purporting to benefit DSI may be questionable.",
+          "revision": "... is DSI Lending Resources, Inc., which is an intended third-party beneficiary of this Agreement.",
+          "comment": "Under Texas law, a third party may only enforce contract provisions if the contracting parties intended to directly benefit that third party; this designation ensures DSI's enforceability rights are unambiguous across the agreement's material provisions.",
+          "group_size": 1,
+          "location": {
+            "start_char": 666,
+            "end_char": 957,
+            "start_line": 12,
+            "end_line": 15,
+            "match_cover": 0.533,
+            "match_run": 5,
+            "matched_text": "is DSI Lending Resources, Inc. Description of Our Services: We are not a lender or fiduciary. For the CAB fee set forth below, we will attempt to (1) obtain a loan in the amount and for the term set forth below from DSI Lending Resources, Inc., a third party lender, with a contract rate of",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Description of Our Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.2",
+            "reason": "DSI is not a signatory or expressly designated beneficiary, yet multiple operative provisions purport to confer rights on or impose arbitration and waiver terms involving “Lender.” Reading those provisions together raises a whole-instrument question about DSI's contractual status and enforcement rights."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Arbitration Opt-Out Notice Uses Wrong Entity Name and Excludes Lender",
+          "description": "The arbitration opt-out provision  directs the customer to send notice to \"PLS Financial Services\" rather than the correct entity \"PLS Loan Store of Texas, Inc.\" This is an entity name mismatch that could create confusion. Additionally, since the arbitration agreement binds the Lender , DSI has a legitimate interest in being notified of any opt-out. The provision should use the correct entity name and require a copy to DSI.",
+          "revision": "... out, you must write us and Lender within 30 days of the date of this Agreement at PLS Financial Services,Loan Store of Texas, Inc., Attn: Legal Department, One South ...",
+          "comment": "The opt-out notice provision has been updated to reflect the correct legal entity name and to require concurrent notice to DSI, as the arbitration agreement expressly binds the Lender and DSI has a direct interest in being informed of any opt-out election affecting its arbitration rights.",
+          "group_size": 1,
+          "location": {
+            "start_char": 17822,
+            "end_char": 17950,
+            "start_line": 168,
+            "end_line": 168,
+            "match_cover": 0.767,
+            "match_run": 13,
+            "matched_text": "out, you must write us within 30 days of the date of this Agreement at PLS Financial Services, Attn: Legal Department, One South",
+            "clause": {
+              "clause_id": "neg19",
+              "label": "NEGATIVE",
+              "clause_name": "Opting Out of Arbitration"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat2",
+            "subcategory": "2.1",
+            "reason": "The opt-out provision's use of “PLS Financial Services” conflicts with the agreement's identification of “PLS Loan Store of Texas, Inc.” as the contracting CAB. The additional failure to require notice to DSI is merely an omission, but the entity mismatch is the closer construction defect."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "LOC Coverage Omits Attorneys' Fees and Collection Costs",
+          "description": "The LOC coverage  is limited to \"principal, interest, returned item fee, and late fee.\" However, the agreement elsewhere  makes the customer responsible to the Lender for \"attorneys' fees, and costs of collection.\" The LOC should also cover these amounts to provide DSI with more complete security against borrower default.",
+          "revision": "... principal, interest, returned item fee, and late fee, attorneys' fees, and costs of collection, as applicable, on",
+          "comment": "The LOC coverage has been updated to match the full scope of the borrower's repayment obligations under the agreement, including attorneys' fees and collection costs, which are standard recoverable amounts under Texas law in a lending default scenario.",
+          "group_size": 1,
+          "location": {
+            "start_char": 5880,
+            "end_char": 5951,
+            "start_line": 57,
+            "end_line": 57,
+            "match_cover": 0.647,
+            "match_run": 8,
+            "matched_text": "principal, interest, returned item fee, and late fee, as applicable, on",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "LOC and Obligation to Reimburse"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The LOC may secure only a defined subset of the customer's broader lender obligations without contradiction. Adding attorneys' fees and collection costs would expand security rather than resolve ambiguity."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Collection Expenses Clause Only Benefits CAB",
+          "description": "The Collection Expenses provision  states \"You agree to pay our reasonable attorneys' fees if this Agreement is referred to an attorney for collection.\" The possessive \"our\" limits this to the CAB's attorneys' fees. DSI Lending Resources should also be entitled to recover its reasonable attorneys' fees and costs if it pursues collection. This is especially important because the customer's obligations to the Lender are referenced throughout this agreement.",
+          "revision": "... You agree to pay our and Lender's reasonable attorneys' fees if this Agreement or the loan is referred to an attorney ...",
+          "comment": "We expanded the collection expenses provision to include Lender's reasonable attorneys' fees, as DSI Lending Resources holds direct obligations under this agreement and must have equal recourse to recover collection costs under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11168,
+            "end_char": 11260,
+            "start_line": 106,
+            "end_line": 106,
+            "match_cover": 0.714,
+            "match_run": 5,
+            "matched_text": "You agree to pay our reasonable attorneys’ fees if this Agreement is referred to an attorney",
+            "clause": {
+              "clause_id": "neg12",
+              "label": "NEGATIVE",
+              "clause_name": "Collection Expenses"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Our” is defined to refer to PLS, so the clause clearly benefits the CAB. Failure to grant DSI the same recovery right is a substantive omission, not ambiguity."
+          }
+        },
+        {
+          "kind": "Important",
+          "tab": "risks_negotiation",
+          "title": "Modification Requires Only Customer and CAB Signatures — Lender Excluded",
+          "description": "The Entire Agreement provision  states that no modification is effective unless \"in writing and signed by you and us.\" Since DSI Lending Resources has rights referenced throughout this agreement (arbitration, jury waiver, compliance, default), modifications between the CAB and customer alone could alter provisions affecting the Lender without DSI's consent. The modification clause should require Lender consent for any amendment that affects Lender's rights.",
+          "revision": "... writing and signed by you and us, us, and Lender to the extent such modification affects Lender's rights. If any provision of ...",
+          "comment": "Because DSI Lending Resources holds substantive rights throughout this agreement — including arbitration rights and default remedies — any modification affecting those provisions should require Lender's written consent to be enforceable against it under Texas contract law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 21903,
+            "end_char": 21956,
+            "start_line": 214,
+            "end_line": 214,
+            "match_cover": 0.5,
+            "match_run": 7,
+            "matched_text": "writing and signed by you and us. If any provision of",
+            "clause": {
+              "clause_id": "neg26",
+              "label": "NEGATIVE",
+              "clause_name": "Entire Agreement"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The modification clause unambiguously requires signatures from the customer and PLS. Whether DSI should also have consent rights is a legal or commercial concern, not an internal textual inconsistency."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Reimbursement Interest Rate May Be Below Market for Default",
+          "description": "The reimbursement obligation  requires the customer to reimburse the CAB for amounts paid on the LOC \"plus 10% per annum.\" In a default/reimbursement scenario, this rate mirrors the contract rate but may not adequately compensate for the increased risk. Consider whether a higher default interest rate (to the extent permitted by law) would better protect DSI's interests, since the LOC payout occurs precisely when the borrower has already defaulted.",
+          "revision": "... the letter of credit, plus 10%the maximum rate permitted by applicable law per annum until",
+          "comment": "We revised the reimbursement rate to the maximum permitted by applicable law to reflect the heightened credit risk at the time of a LOC draw, which occurs only upon borrower default — a standard adjustment for post-default obligations under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4910,
+            "end_char": 4956,
+            "start_line": 49,
+            "end_line": 49,
+            "match_cover": 0.562,
+            "match_run": 6,
+            "matched_text": "the letter of credit, plus 10% per annum until",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "Other Fees and Charges"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The 10% reimbursement rate is definite. Whether it is economically adequate for post-default risk is a negotiation question."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Ambiguous Allocation of Arbitration Fee Advance Between CAB and Lender",
+          "description": "The arbitration provision   states \"we or Lender, as applicable, will advance all or part of the arbitration filing, administrative, and/or hearing fees.\" The phrase \"as applicable\" does not specify when the Lender (DSI) versus the CAB bears this advance obligation. This ambiguity could result in DSI being required to front arbitration costs in disputes that primarily involve the CAB's services. Consider clarifying that the CAB bears primary responsibility for fee advances.",
+          "revision": "... the arbitration, up to $1000 (with CAB bearing primary responsibility for such advances); the arbitrator will decide ...",
+          "comment": "We clarified that the CAB bears primary responsibility for arbitration fee advances to reflect that consumer-facing disputes typically arise from the CAB's credit access services, ensuring the party closest to the underlying transaction shoulders the initial cost.",
+          "group_size": 1,
+          "location": {
+            "start_char": 15661,
+            "end_char": 15717,
+            "start_line": 150,
+            "end_line": 150,
+            "match_cover": 0.529,
+            "match_run": 5,
+            "matched_text": "the arbitration, up to $1000; the arbitrator will decide",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Arbitrator Selection Fallback Controlled by CAB",
+          "description": "The arbitration provision    gives the customer 20 days to select an arbitrator, after which \"we shall be entitled to select one,\" and if parties cannot agree, \"we may ask any court of competent jurisdiction to appoint an arbitrator.\" Since \"we\" means the CAB (not the Lender), DSI has no express role in arbitrator selection even in disputes involving the Lender. DSI should be included in the selection/fallback process.",
+          "revision": "... association) reasonably satisfactory to us and Lender. If you do not",
+          "comment": "We revised arbitrator selection to require approval by both the CAB and DSI Lending Resources, Inc., as Lender, since DSI is a principal party to transactions governed by this agreement and should have an equal role in selecting a neutral arbitrator.",
+          "group_size": 1,
+          "location": {
+            "start_char": 14652,
+            "end_char": 14709,
+            "start_line": 138,
+            "end_line": 138,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "association) reasonably satisfactory to us. If you do not",
+            "clause": {
+              "clause_id": "pos2",
+              "label": "POSITIVE",
+              "clause_name": "Starting an Arbitration/Costs — election to arbitrate any Claim"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The selection mechanism clearly gives the stated fallback authority to PLS. DSI's lack of a role is an omitted right rather than a construction defect."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "Information Sharing Authorization Limited to \"Duration of Services\"",
+          "description": "The information sharing provision   authorizes sharing credit information with the Lender or affiliates only \"for the duration of the services or any subsequent services.\" This time limitation could prevent DSI from accessing or using borrower information after the loan term ends, even if needed for collection, regulatory compliance, or disputes. The authorization should extend through the full life of the loan and any collection or dispute resolution period thereafter.",
+          "revision": "... for the duration of the services, any subsequent services, and any period during which any obligation under this Agreement or the loan remains outstanding or is being collected or enforced.",
+          "comment": "The authorization has been extended to cover the full loan lifecycle and any collection or enforcement period, as limiting information access to the initial service term would impair DSI's ability to satisfy regulatory and collection obligations under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23395,
+            "end_char": 23758,
+            "start_line": 226,
+            "end_line": 235,
+            "match_cover": 0.433,
+            "match_run": 6,
+            "matched_text": "for the duration of the services or any subsequent services. NOTICE: YOU, THE BUYER, MAY CANCEL THIS CONTRACT AT ANY TIME BEFORE MIDNIGHT OF THE THIRD DAY AFTER THE DATE OF THE TRANSACTION. SEE ATTACHED NOTICE OF CANCELLATION FORM (TWO COPIES ATTACHED) FOR AN EXPLANATION OF THIS RIGHT. This Agreemen",
+            "clause": {
+              "clause_id": "neg28",
+              "label": "NEGATIVE",
+              "clause_name": "Notice of Right to Cancel"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The issue seeks to extend the authorization beyond the service period for collection and compliance purposes. It does not identify competing reasonable meanings or an internal conflict."
+          }
+        },
+        {
+          "kind": "Notable",
+          "tab": "risks_negotiation",
+          "title": "CAB Fee Prorated Rebate Only for \"Final Period\" — Narrow Scope",
+          "description": "The prepayment rebate provision   states the customer is entitled to a CAB fee refund \"based on a prorated daily basis for the final period with respect to payment in full.\" The phrase \"for the final period\" is ambiguous and potentially limits the rebate to only the last payment period rather than the remaining term of the loan. If prepayment occurs early in the loan, this could mean the customer gets a minimal rebate while the CAB retains most of its fee — which could expose DSI to regulatory risk if regulators view this as an unfair practice attributable to the lending arrangement.",
+          "revision": "prorated daily basis for the final periodremaining term of the loan with respect to payment in ...",
+          "comment": "We revised the rebate calculation to reference the remaining term of the loan to ensure the CAB fee refund accurately reflects unearned fees upon prepayment, which is consistent with fair lending principles and reduces regulatory exposure for all parties.",
+          "group_size": 1,
+          "location": {
+            "start_char": 4407,
+            "end_char": 4475,
+            "start_line": 45,
+            "end_line": 45,
+            "match_cover": 0.688,
+            "match_run": 6,
+            "matched_text": "prorated daily basis for the final period with respect to payment in",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.1",
+            "reason": "“For the final period” has an uncertain temporal scope and could refer either to the installment period containing payoff or more broadly to the remaining loan term."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Miscellaneous Section Omits DSI's Agent for Service of Process",
+          "description": "The Miscellaneous section   identifies the CAB's principal place of business and registered agent for service of process, but provides no corresponding information for DSI Lending Resources, Inc. Since the customer has obligations to the Lender throughout the agreement, DSI's contact information or registered agent should be included.",
+          "revision": "... Suite 3600, Chicago, IL 60606,. Lender's principal place of business is DSI Lending Resources, Inc., [INSERT DSI ADDRESS]. Our agent",
+          "comment": "Texas law requires that parties subject to obligations under a contract be identifiable for service of process purposes; we have added DSI Lending Resources, Inc.'s principal place of business to ensure the agreement reflects both parties' contact information symmetrically.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10827,
+            "end_char": 11188,
+            "start_line": 101,
+            "end_line": 106,
+            "match_cover": 0.4,
+            "match_run": 5,
+            "matched_text": "Suite 3600, Chicago, IL 60606. Any corrective action shall relieve us and Lender of any liability to the extent permitted by law. To the extent permitted by law, this requirement for pre-suit notice is cumulative of any notices and corrective-action procedures required by applicable law and other co",
+            "clause": {
+              "clause_id": "neg11",
+              "label": "NEGATIVE",
+              "clause_name": "Pre-Suit Notice Regarding Legal Compliance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Omission of DSI's address or registered agent is an informational or operational concern, not ambiguity in the provisions governing the customer and PLS."
+          }
+        },
+        {
+          "kind": "Minor",
+          "tab": "risks_negotiation",
+          "title": "Interstate Commerce Declaration May Limit Texas Consumer Protection Application",
+          "description": "The provision  states \"You agree that this Agreement involves interstate commerce for all purposes.\" While this language is designed to support FAA preemption for the arbitration clause, the sweeping \"for all purposes\" qualifier could be argued to override state consumer protection frameworks. DSI should consider whether this broad declaration creates any unintended regulatory exposure, particularly given the Texas OCCC's oversight role referenced elsewhere in the agreement .",
+          "revision": "... Agreement involves interstate commerce for all purposes.purposes of the Federal Arbitration Act.",
+          "comment": "We limited the interstate commerce declaration to its intended scope—supporting FAA applicability—to avoid inadvertently undermining applicable state consumer protection laws and regulatory oversight under Texas law.",
+          "group_size": 1,
+          "location": {
+            "start_char": 11641,
+            "end_char": 11733,
+            "start_line": 109,
+            "end_line": 111,
+            "match_cover": 0.615,
+            "match_run": 7,
+            "matched_text": "Agreement involves interstate commerce for all purposes. Assignment: We may transfer any of",
+            "clause": {
+              "clause_id": "neg13",
+              "label": "NEGATIVE",
+              "clause_name": "Interstate Commerce"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“For all purposes” is broad but linguistically clear. Concern that it might have unintended preemptive effects is a legal-scope or negotiation risk rather than textual ambiguity."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Missing space after period",
+          "description": "Missing space after period before \"All\"",
+          "revision": "... will actually receive a loan,. All credit decisions shall be ...",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 1669,
+            "end_char": 1728,
+            "start_line": 20,
+            "end_line": 20,
+            "match_cover": 1.0,
+            "match_run": 10,
+            "matched_text": "will actually receive a loan, All credit decisions shall be",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Description of Our Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The source text contains a comma splice rather than the alleged missing space after a period. Although grammatically defective, it does not change the meaning of the two propositions."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Spacing error",
+          "description": "Missing space before dollar sign",
+          "revision": "... CAB fee for this transaction ofSof $",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3836,
+            "end_char": 3864,
+            "start_line": 39,
+            "end_line": 39,
+            "match_cover": 0.833,
+            "match_run": 5,
+            "matched_text": "CAB fee for this transaction",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The text “ofS” mechanically corrupts the intended dollar sign and amount field for the CAB fee, obscuring that financial disclosure."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Corrupted text - typo in \"unlawful\"",
+          "description": "The compliance provision  contains a typo where \"unlawful\" is spelled as \"unlgyuful\". This is a spelling error that should be corrected.",
+          "revision": "lawful amounts. If an unlgyufulunlawful excess occurs, we will apply ...",
+          "comment": "Corrected typo: 'unlgyuful' changed to 'unlawful' for accuracy and clarity.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7061,
+            "end_char": 7121,
+            "start_line": 65,
+            "end_line": 65,
+            "match_cover": 0.9,
+            "match_run": 5,
+            "matched_text": "lawful amounts. If an unlgyuful excess occurs, we will apply",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "LOC and Obligation to Reimburse"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Unlgyuful” is a mechanical misspelling that replaces the operative word “unlawful” with nonsense, even though the intended meaning is inferable."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Garbled text - nonsense phrase",
+          "description": "The compliance provision  contains corrupted text reading \"maximug peepee\" which appears to be garbled nonsense that should read something like \"maximum permitted by law\" or similar. This is clearly a text corruption error that must be fixed.",
+          "revision": "... automatically be reduced to the maximug peepeemaximum permitted by",
+          "comment": "Corrected garbled/corrupted text ('maximug peepee') to the intended legal phrase 'maximum permitted by' for accuracy and enforceability.",
+          "group_size": 1,
+          "location": {
+            "start_char": 7197,
+            "end_char": 7329,
+            "start_line": 66,
+            "end_line": 67,
+            "match_cover": 0.778,
+            "match_run": 6,
+            "matched_text": "automatically be reduced to the maximug peepee law, for purposes of determining our compliance with law, we may calculate charges by",
+            "clause": {
+              "clause_id": "neg6",
+              "label": "NEGATIVE",
+              "clause_name": "LOC and Obligation to Reimburse"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "“Maximug peepee” is garbled text that prevents the clause from stating the intended maximum-lawful-rate limitation coherently."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Incomplete word with hash symbol",
+          "description": "The compliance provision  ends with an incomplete word \"amortiz#\" which appears to cut off mid-word with a hash symbol. This should be completed to read \"amortizing, prorating, allocating and spreading\" or similar language about how charges may be calculated.",
+          "revision": "... we may calculate charges by amortiz#amortizing, prorating, allocating and spreading.",
+          "comment": "Corrected truncated word 'amortiz#' to complete the phrase 'amortizing, prorating, allocating and spreading' for readability and drafting accuracy.",
+          "group_size": 1,
+          "location": {
+            "start_char": 10183,
+            "end_char": 10255,
+            "start_line": 96,
+            "end_line": 96,
+            "match_cover": 0.818,
+            "match_run": 5,
+            "matched_text": "may calculate charges by amortizing, prorating, allocating and spreading",
+            "clause": {
+              "clause_id": "neg10",
+              "label": "NEGATIVE",
+              "clause_name": "Compliance"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The word ending “amortiz#” is mechanically truncated and leaves the charge-calculation language incomplete."
+          }
+        },
+        {
+          "kind": "Internal Annotations",
+          "tab": "proofread",
+          "title": "Garbled text in customer name field",
+          "description": "The customer name field in the signature section  contains garbled text \"2 ball Vibha\"\" which appears to be corrupted or nonsensical placeholder text. This should contain the actual customer's name or be left as a clean template field for completion.",
+          "revision": "Customer Name: 2 ball Vibha\"",
+          "comment": "Removed garbled placeholder text from the customer name field; left clean for proper completion at signing.",
+          "group_size": 1,
+          "location": {
+            "start_char": 23780,
+            "end_char": 23807,
+            "start_line": 236,
+            "end_line": 236,
+            "match_cover": 1.0,
+            "match_run": 5,
+            "matched_text": "Customer Name: 2 ball Vibha",
+            "clause": null
+          },
+          "skipped": "matched outside every clause"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Amount Financed",
+          "description": "The term 'Amount Financed' is capitalized and used throughout the document  but is never formally defined. This term appears to reference a specific calculated value in the loan transaction and should be defined to avoid ambiguity regarding what is included in this amount.",
+          "revision": "payable in _ payments with interest of 10.00% per annum charged by the Lender, the Amount Financed (meaning the amount of credit provided to you) is $ , the Finance Charge is $",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3599,
+            "end_char": 3726,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 0.733,
+            "match_run": 17,
+            "matched_text": "payable in _ payments with interest of 10.00% per annum charged by the Lender, the Amount Financed is $ , the Finance Charge is",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Amount Financed” is a standard consumer-credit label for the disclosed transaction amount. The lack of a separate formal definition does not itself produce competing meanings."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled customer name",
+          "description": "Found: \"Customer:\" — Missing customer name  leaves the party unidentified and contract unenforceable.",
+          "revision": "",
+          "comment": "Insert the full legal name of the customer.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled transaction number",
+          "description": "Found: \"Transaction Number:\" — Missing transaction number prevents identifying this specific agreement among multiple transactions. See 3 uses of this placeholder",
+          "revision": "",
+          "comment": "Insert the unique transaction number assigned to this agreement.",
+          "group_size": 3,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled customer number",
+          "description": "Found: \"Customer Number:\" — Missing customer number  prevents linking agreement to customer account records.",
+          "revision": "",
+          "comment": "Insert the unique customer identification number assigned to this account.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled address",
+          "description": "Found: \"Address:\" — Missing customer address  prevents notice delivery and jurisdictional determinations.",
+          "revision": "",
+          "comment": "Insert the full street address where payday installment payments should be sent.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled annualized rate",
+          "description": "Found: \"based upon °% annualized rate\" — Missing annualized rate  renders CAB fee calculation undefined and Truth in Lending disclosures incomplete.",
+          "revision": "",
+          "comment": "Insert the specific annualized CAB fee percentage rate.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3217,
+            "end_char": 3246,
+            "start_line": 34,
+            "end_line": 34,
+            "match_cover": 1.0,
+            "match_run": 4,
+            "matched_text": "based upon °% annualized rate",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The annualized CAB-fee rate field is unfilled, mechanically omitting a value necessary to calculate the fee."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled loan amount with underscores",
+          "description": "Found: \"loan of $___\" — Missing loan amount  leaves principal sum undefined and violates Truth in Lending disclosure requirements.",
+          "revision": "",
+          "comment": "Insert the total dollar amount of the payday installment loan applied for.",
+          "group_size": 1,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled number of payments",
+          "description": "Found: \"payable in _ payments\" — Missing payment count  leaves repayment schedule undefined and materially incomplete under TILA.",
+          "revision": "",
+          "comment": "Insert the total number of payments required to repay the loan.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3599,
+            "end_char": 3620,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "payable in _ payments",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The blank payment-count field mechanically leaves the number of required installments unspecified."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled Amount Financed with trailing comma",
+          "description": "Found: \"Amount Financed is $ ,\" — Missing Amount Financed  is required TILA disclosure and prevents APR calculation verification.",
+          "revision": "",
+          "comment": "Insert the total dollar amount being financed by the Lender.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3682,
+            "end_char": 3700,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "Amount Financed is",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The Amount Financed field is blank, so the transaction-specific dollar amount is mechanically absent."
+          }
+        },
+        {
+          "kind": "Templated Content",
+          "tab": "proofread",
+          "title": "Unfilled Finance Charge amount",
+          "description": "Found: \"Finance Charge is $\" — Missing Finance Charge  violates mandatory Truth in Lending disclosure and prevents cost comparison.",
+          "revision": "",
+          "comment": "Insert the total dollar amount of the finance charge.",
+          "group_size": 1,
+          "location": {
+            "start_char": 3709,
+            "end_char": 3726,
+            "start_line": 37,
+            "end_line": 37,
+            "match_cover": 1.0,
+            "match_run": 3,
+            "matched_text": "Finance Charge is",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "cat1",
+            "subcategory": "1.2",
+            "reason": "The Finance Charge field is unfilled, mechanically omitting the disclosed total cost of credit."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: Annual Percentage Rate",
+          "description": "The term 'Annual Percentage Rate' is capitalized in the cost and payment terms section  but is never formally defined. While this is a standard financial term, providing a definition would clarify how it is calculated in this specific context and ensure transparency.",
+          "revision": "The Annual Percentage Rate (meaning the cost of your credit as a yearly rate) is %, payments commencing on , in the amount of $ , followed by regular payments of $",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3870,
+            "end_char": 3980,
+            "start_line": 41,
+            "end_line": 41,
+            "match_cover": 0.63,
+            "match_run": 14,
+            "matched_text": "The Annual Percentage Rate is %, payments commencing on , in the amount of $ , followed by regular payments of",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "“Annual Percentage Rate” is a standard statutory consumer-credit term and is not rendered ambiguous merely because the contract lacks a separate definition."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: CAB Fee",
+          "description": "The term 'CAB Fee' is capitalized throughout the document    but is never formally defined. While the context suggests it refers to the Credit Access Business fee, it should be formally defined when first introduced to avoid confusion.",
+          "revision": "COST AND PAYMENT TERMS. Our CAB fee (the \"CAB Fee\") is based upon °% annualized rate on the amount financed on the loan to you by the Lender.",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 3178,
+            "end_char": 3302,
+            "start_line": 34,
+            "end_line": 34,
+            "match_cover": 0.889,
+            "match_run": 19,
+            "matched_text": "COST AND PAYMENT TERMS. Our CAB fee is based upon °% annualized rate on the amount financed on the loan to you by the Lender",
+            "clause": {
+              "clause_id": "neg4",
+              "label": "NEGATIVE",
+              "clause_name": "Cost and Payment Terms"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The context identifies the CAB fee as the fee PLS charges for its listed credit-access services and states its calculation basis. A formal defined-term provision is unnecessary to understand the reference."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Undefined term: State Allowed Returned Item Fee",
+          "description": "The term 'State Allowed Returned Item Fee' appears in parentheses in the fees section   but is never formally defined. This term appears to reference a specific fee amount set by state law or regulation, and should be defined to clarify what amount is being referenced.",
+          "revision": "the reimbursement is paid, a return item fee of $30 (or the State Allowed Returned Item Fee, meaning the maximum returned item fee permitted under applicable Texas law, whichever is greater) for any check, ACH debit,",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 4957,
+            "end_char": 5096,
+            "start_line": 50,
+            "end_line": 50,
+            "match_cover": 0.694,
+            "match_run": 17,
+            "matched_text": "the reimbursement is paid, a return item fee of $30 (or the State Allowed Returned Item Fee, whichever is greater) for any check, ACH debit",
+            "clause": {
+              "clause_id": "neg5",
+              "label": "NEGATIVE",
+              "clause_name": "Other Fees and Charges"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Together with the Texas governing-law clause, the phrase objectively points to the returned-item fee permitted by applicable Texas law. Failure to state a fixed amount is not a genuine textual ambiguity."
+          }
+        },
+        {
+          "kind": "Spelling + Grammar",
+          "tab": "proofread",
+          "title": "Typo - improper character",
+          "description": "Letter \"e\" should be closing parenthesis",
+          "revision": "... the United States Bankruptcy Code; (¢)(e) you warrant",
+          "comment": "",
+          "group_size": 1,
+          "location": {
+            "start_char": 22911,
+            "end_char": 22961,
+            "start_line": 223,
+            "end_line": 223,
+            "match_cover": 0.875,
+            "match_run": 5,
+            "matched_text": "the United States Bankruptcy Code; (¢) you warrant",
+            "clause": {
+              "clause_id": "neg27",
+              "label": "NEGATIVE",
+              "clause_name": "Acknowledgments and Certifications by Signing"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "The “¢” character is an erroneous list marker, but the surrounding warranties remain grammatically and substantively understandable, so it does not change the provision's meaning."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: CAB",
+          "description": "The term is defined as 'CAB'  but appears in lowercase as 'CAB fee' . Once a term is formally defined with specific capitalization, all references should maintain that capitalization for consistency and clarity.",
+          "revision": "Our CAB feeFee is earned",
+          "comment": "",
+          "group_size": 5,
+          "location": null,
+          "skipped": "no match in the contract"
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Lender",
+          "description": "The term is defined as 'Lender'  but appears in lowercase as 'lender' . Once a term is formally defined with specific capitalization, all references should maintain that capitalization for consistency and clarity. See Definition",
+          "revision": "We are not a lenderLender or fiduciary.",
+          "comment": "",
+          "group_size": 7,
+          "location": {
+            "start_char": 727,
+            "end_char": 759,
+            "start_line": 14,
+            "end_line": 14,
+            "match_cover": 0.857,
+            "match_run": 4,
+            "matched_text": "We are not a lender or fiduciary",
+            "clause": {
+              "clause_id": "neg2",
+              "label": "NEGATIVE",
+              "clause_name": "Description of Our Services"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "In “we are not a lender,” lowercase “lender” is used as a common noun describing PLS's role, whereas capitalized “Lender” identifies DSI. The distinction is coherent rather than ambiguous."
+          }
+        },
+        {
+          "kind": "Definitions",
+          "tab": "proofread",
+          "title": "Inconsistent capitalization: Agreement",
+          "description": "The term is defined as 'Agreement'  but appears in lowercase as 'credit services agreement' . Once a term is formally defined with specific capitalization, all references should maintain that capitalization for consistency and clarity. See Definition",
+          "revision": "Definition of Claim. \"Claim\" means any dispute, claim or controversy between you and us and/or Lender arising from or relating to: (a) the current creditCredit",
+          "comment": "",
+          "group_size": 2,
+          "location": {
+            "start_char": 12478,
+            "end_char": 12624,
+            "start_line": 123,
+            "end_line": 123,
+            "match_cover": 0.962,
+            "match_run": 25,
+            "matched_text": "Definition of Claim. \"Claim\" means any dispute, claim or controversy between you and us and/or Lender arising from or relating to: (a) the current",
+            "clause": {
+              "clause_id": "pos1",
+              "label": "POSITIVE",
+              "clause_name": "Definition of Claim — Arbitration Agreement and Limitation on Class Participation"
+            }
+          },
+          "skipped": null,
+          "judgment": {
+            "category": "none",
+            "subcategory": "none",
+            "reason": "Lowercase “credit services agreement” occurs in a broad category within the Claim definition and does not necessarily purport to use the defined term “Agreement.” No genuine ambiguity results."
+          }
+        }
+      ]
+    }
+  },
+  "clauses": {
+    "neg10": {
+      "clause_id": "neg10",
+      "clause_name": "Compliance",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Incomplete sentence fragment",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The text ending in “amortiz#” is mechanically truncated and leaves the charge-calculation sentence incomplete, notwithstanding the complete parallel language elsewhere."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Incomplete word with hash symbol",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The word ending “amortiz#” is mechanically truncated and leaves the charge-calculation language incomplete."
+        }
+      ],
+      "risky": true
+    },
+    "neg11": {
+      "clause_id": "neg11",
+      "clause_name": "Pre-Suit Notice Regarding Legal Compliance",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Incorrect Entity Name in Arbitration Opt-Out Provision",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The opt-out provision names “PLS Financial Services,” while the agreement defines the contracting CAB as “PLS Loan Store of Texas, Inc.” That inconsistent entity identification creates a conflict requiring construction."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Pre-Suit Notice Lacks Lender's Address",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause states that notice to either PLS or Lender must be sent to the listed PLS address. Not providing a separate lender address may be operationally undesirable but is not textually ambiguous."
+        },
+        {
+          "party": "customer_vine",
+          "title": "No Separate Notice Address for Lender in Pre-Suit Provision",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause directs notices to PLS or Lender to the one stated address. A separate DSI address might be preferable, but its omission does not create an internal construction conflict."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Miscellaneous Section Omits DSI's Agent for Service of Process",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Omission of DSI's address or registered agent is an informational or operational concern, not ambiguity in the provisions governing the customer and PLS."
+        }
+      ],
+      "risky": true
+    },
+    "neg12": {
+      "clause_id": "neg12",
+      "clause_name": "Collection Expenses",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Collection Expenses Could Be Broader",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue seeks broader recovery rights for additional collection expenses. It identifies a commercial omission, not ambiguous or conflicting contract language."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Collection Expenses Clause Only Benefits CAB",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Our” is defined to refer to PLS, so the clause clearly benefits the CAB. Failure to grant DSI the same recovery right is a substantive omission, not ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg13": {
+      "clause_id": "neg13",
+      "clause_name": "Interstate Commerce",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "customer_vine"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "customer_vine",
+          "title": "Interstate Commerce Declaration May Limit Texas Consumer Protection Application",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“For all purposes” is broad but linguistically clear. Concern that it might have unintended preemptive effects is a legal-scope or negotiation risk rather than textual ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg14": {
+      "clause_id": "neg14",
+      "clause_name": "Assignment",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Interstate Commerce Declaration Lacks Factual Basis",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The lack of supporting facts presents a potential evidentiary or enforceability concern, not textual ambiguity or inconsistency within the contract."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Assignment Right Does Not Expressly Cover Lender",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The assignment clause clearly grants assignment rights to PLS and not expressly to DSI. Expanding it to cover DSI is a negotiation objective."
+        }
+      ],
+      "risky": false
+    },
+    "neg17": {
+      "clause_id": "neg17",
+      "clause_name": "Arbitration Procedure",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Arbitration Excludes Rules of Evidence — Potential Enforceability Risk",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "A possible unconscionability or enforceability challenge based on excluding evidentiary rules is a legal-policy risk, not an intrinsic ambiguity or internal inconsistency."
+        }
+      ],
+      "risky": false
+    },
+    "neg19": {
+      "clause_id": "neg19",
+      "clause_name": "Opting Out of Arbitration",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "customer_vine"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "customer_vine",
+          "title": "Arbitration Opt-Out Notice Uses Wrong Entity Name and Excludes Lender",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The opt-out provision's use of “PLS Financial Services” conflicts with the agreement's identification of “PLS Loan Store of Texas, Inc.” as the contracting CAB. The additional failure to require notice to DSI is merely an omission, but the entity mismatch is the closer construction defect."
+        }
+      ],
+      "risky": true
+    },
+    "neg2": {
+      "clause_id": "neg2",
+      "clause_name": "Description of Our Services",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": true,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 5,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Comma Splice Creates Ambiguity in Loan Disclaimer",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The comma splice is a grammatical error, but the two independent propositions remain readily separable and their meaning is not changed."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Lender Identification Incomplete",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "DSI Lending Resources, Inc. is expressly identified by name. Omission of additional corporate or licensing details is a disclosure concern, not a construction defect."
+        },
+        {
+          "party": "customer_vine",
+          "title": "DSI Not Identified as Party or Third-Party Beneficiary",
+          "category": "cat2",
+          "subcategory": "2.2",
+          "reason": "DSI is not a signatory or expressly designated beneficiary, yet multiple operative provisions purport to confer rights on or impose arbitration and waiver terms involving “Lender.” Reading those provisions together raises a whole-instrument question about DSI's contractual status and enforcement rights."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Missing space after period",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The source text contains a comma splice rather than the alleged missing space after a period. Although grammatically defective, it does not change the meaning of the two propositions."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Inconsistent capitalization: Lender",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "In “we are not a lender,” lowercase “lender” is used as a common noun describing PLS's role, whereas capitalized “Lender” identifies DSI. The distinction is coherent rather than ambiguous."
+        }
+      ],
+      "risky": true
+    },
+    "neg23": {
+      "clause_id": "neg23",
+      "clause_name": "Governing Law",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: Credit Services Agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The document is titled “Credit Services Agreement” and initially defines it as the “Agreement,” so the governing-law reference plainly identifies this instrument."
+        }
+      ],
+      "risky": false
+    },
+    "neg26": {
+      "clause_id": "neg26",
+      "clause_name": "Entire Agreement",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Entire Agreement Clause Lacks Survival Language",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The clause's failure expressly to address electronic writings and signatures is an omitted clarification, not an ambiguity or conflict."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Modification Requires Only Customer and CAB Signatures — Lender Excluded",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The modification clause unambiguously requires signatures from the customer and PLS. Whether DSI should also have consent rights is a legal or commercial concern, not an internal textual inconsistency."
+        }
+      ],
+      "risky": false
+    },
+    "neg27": {
+      "clause_id": "neg27",
+      "clause_name": "Acknowledgments and Certifications by Signing",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 4,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Bankruptcy Warranty May Be Unenforceable",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue concerns enforceability under federal bankruptcy policy rather than ambiguity, mechanical error, or conflict within the instrument."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Data Sharing Authorization Lacks Service Provider Coverage",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The authorization's failure to include service providers, successors, and assigns is a desired expansion of rights, not a construction defect."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: Notice of Cancellation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The two attached forms are each headed “Notice of Cancellation,” making the acknowledgment's reference clear without a separate formal definition."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Typo - improper character",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The “¢” character is an erroneous list marker, but the surrounding warranties remain grammatically and substantively understandable, so it does not change the provision's meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg28": {
+      "clause_id": "neg28",
+      "clause_name": "Notice of Right to Cancel",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "customer_vine"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "customer_vine",
+          "title": "Information Sharing Authorization Limited to \"Duration of Services\"",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The issue seeks to extend the authorization beyond the service period for collection and compliance purposes. It does not identify competing reasonable meanings or an internal conflict."
+        }
+      ],
+      "risky": false
+    },
+    "neg31": {
+      "clause_id": "neg31",
+      "clause_name": "Notice of Cancellation — How to Cancel",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Redundant Entity Name in Cancellation Notice Address",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Repeating the same entity name in the address is untidy but does not change the recipient or otherwise alter the provision's meaning."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Same Redundancy in Second Notice of Cancellation",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The duplicate entity name in the second cancellation form is redundant formatting that does not change the address or substantive meaning."
+        }
+      ],
+      "risky": false
+    },
+    "neg4": {
+      "clause_id": "neg4",
+      "clause_name": "Cost and Payment Terms",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 25,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Ambiguous Prepayment Refund Scope",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "The phrase “for the final period” has an uncertain temporal scope and could mean the installment period in which prepayment occurs or the remaining loan term."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Tension Between \"Irrevocable\" LOC and Automatic Revocation",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "Calling the LOC “irrevocable” conflicts facially with the operative provision automatically revoking it upon timely cancellation, even though the latter could be construed as an exception."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Typo - \"Joan\" should be \"loan\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Joan payments” is an erroneous substitution for “loan payments,” literally changing the referenced type of payment to nonsensical language."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Missing space before dollar amount",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted text “ofS” fails clearly to present the intended dollar sign and amount field for the CAB fee, mechanically obscuring the financial disclosure."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: Amount Financed",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Amount Financed” is a standard consumer-credit concept and is used as the label for a transaction-specific amount. Capitalization without a bespoke definition does not itself create genuine ambiguity."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: Finance Charge",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The agreement expressly states that the Finance Charge consists of lender interest and the CAB fee. The alleged lack of definition therefore does not create a construction issue."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: Annual Percentage Rate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Annual Percentage Rate” is a standard statutory credit term whose absence from a definitions section does not make its meaning genuinely uncertain."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Missing annualized rate percentage",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The annualized-rate field is unfilled, mechanically omitting the percentage needed to calculate the CAB fee."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Unfilled loan principal amount",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The blank principal field omits the transaction's loan amount and consequently leaves a central payment obligation incomplete."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Unfilled number of payments",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The blank installment-count field is a mechanical omission that prevents the payment schedule from specifying how many payments are due."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Missing Amount Financed",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The Amount Financed field is blank, mechanically omitting the dollar value to which the surrounding payment terms refer."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Missing Finance Charge",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The Finance Charge field is unfilled, leaving the stated total cost of credit mechanically incomplete."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Unfilled lender interest amount",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The lender-interest component contains an unfilled dollar field, mechanically omitting part of the stated Finance Charge breakdown."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Missing first payment date and amount",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The first payment date and amount are both blank, leaving the commencement of the repayment schedule mechanically incomplete."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: Total of Payments",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Total of Payments” is a standard credit-disclosure label used for the stated aggregate payment amount. No competing contractual meaning is identified."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Payment Waterfall Disadvantages Lender",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The payment waterfall expressly states the order of application. Its commercial disadvantage to the lender is a negotiation issue, not a construction defect."
+        },
+        {
+          "party": "customer_vine",
+          "title": "CAB Fee Prorated Rebate Only for \"Final Period\" — Narrow Scope",
+          "category": "cat1",
+          "subcategory": "1.1",
+          "reason": "“For the final period” has an uncertain temporal scope and could refer either to the installment period containing payoff or more broadly to the remaining loan term."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Spacing error",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The text “ofS” mechanically corrupts the intended dollar sign and amount field for the CAB fee, obscuring that financial disclosure."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Undefined term: Amount Financed",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Amount Financed” is a standard consumer-credit label for the disclosed transaction amount. The lack of a separate formal definition does not itself produce competing meanings."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Unfilled annualized rate",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The annualized CAB-fee rate field is unfilled, mechanically omitting a value necessary to calculate the fee."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Unfilled number of payments",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The blank payment-count field mechanically leaves the number of required installments unspecified."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Unfilled Amount Financed with trailing comma",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The Amount Financed field is blank, so the transaction-specific dollar amount is mechanically absent."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Unfilled Finance Charge amount",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The Finance Charge field is unfilled, mechanically omitting the disclosed total cost of credit."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Undefined term: Annual Percentage Rate",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Annual Percentage Rate” is a standard statutory consumer-credit term and is not rendered ambiguous merely because the contract lacks a separate definition."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Undefined term: CAB Fee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The context identifies the CAB fee as the fee PLS charges for its listed credit-access services and states its calculation basis. A formal defined-term provision is unnecessary to understand the reference."
+        }
+      ],
+      "risky": true
+    },
+    "neg5": {
+      "clause_id": "neg5",
+      "clause_name": "Other Fees and Charges",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Undefined term: State Allowed Returned Item Fee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Read with the Texas governing-law clause, “State Allowed Returned Item Fee” objectively refers to the returned-item fee allowed by applicable Texas law. The absence of a fixed amount does not make it genuinely indeterminate."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Reimbursement Interest Rate May Be Below Market for Default",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The 10% reimbursement rate is definite. Whether it is economically adequate for post-default risk is a negotiation question."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Undefined term: State Allowed Returned Item Fee",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Together with the Texas governing-law clause, the phrase objectively points to the returned-item fee permitted by applicable Texas law. Failure to state a fixed amount is not a genuine textual ambiguity."
+        }
+      ],
+      "risky": false
+    },
+    "neg6": {
+      "clause_id": "neg6",
+      "clause_name": "LOC and Obligation to Reimburse",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": true,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 6,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Spelling - \"unlgyuful\" should be \"unlawful\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Unlgyuful” is a corrupted spelling of “unlawful” that turns an operative condition into a nonexistent word, although the intended word is inferable."
+        },
+        {
+          "party": "customer_vine",
+          "title": "LOC 10-Day Default Waiting Period Delays Lender Recovery",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The ten-day waiting period is definite and internally consistent. The desire for faster LOC recovery is purely commercial."
+        },
+        {
+          "party": "customer_vine",
+          "title": "LOC Described as \"Irrevocable\" but Subject to Automatic Revocation",
+          "category": "cat2",
+          "subcategory": "2.1",
+          "reason": "The operative description of the LOC as “irrevocable” conflicts facially with its automatic revocation upon timely cancellation, requiring the cancellation provision to be construed as an exception."
+        },
+        {
+          "party": "customer_vine",
+          "title": "LOC Coverage Omits Attorneys' Fees and Collection Costs",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The LOC may secure only a defined subset of the customer's broader lender obligations without contradiction. Adding attorneys' fees and collection costs would expand security rather than resolve ambiguity."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Corrupted text - typo in \"unlawful\"",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Unlgyuful” is a mechanical misspelling that replaces the operative word “unlawful” with nonsense, even though the intended meaning is inferable."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Garbled text - nonsense phrase",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "“Maximug peepee” is garbled text that prevents the clause from stating the intended maximum-lawful-rate limitation coherently."
+        }
+      ],
+      "risky": true
+    },
+    "neg7": {
+      "clause_id": "neg7",
+      "clause_name": "Default",
+      "label": "NEGATIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 2,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Default Trigger for Lender Obligations May Be Overly Broad",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "“Your obligations to the Lender” broadly but clearly encompasses the customer's lender obligations. The concern is overbreadth or unconscionability, not competing meanings."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Default Remedies Limited to CAB — No Express Lender Remedies",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The default clause's failure to grant the Lender parallel remedies is an omission of desired rights, not an ambiguity or conflict with another provision."
+        }
+      ],
+      "risky": false
+    },
+    "neg8": {
+      "clause_id": "neg8",
+      "clause_name": "Notices and Waivers",
+      "label": "NEGATIVE",
+      "cat1": true,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Incomplete sentence with annotation marker",
+          "category": "cat1",
+          "subcategory": "1.2",
+          "reason": "The corrupted phrase “maximug peepee” is a mechanical drafting error that replaces the intended legal limitation with nonsensical text and obscures the sentence's meaning."
+        }
+      ],
+      "risky": true
+    },
+    "pos1": {
+      "clause_id": "pos1",
+      "clause_name": "Definition of Claim — Arbitration Agreement and Limitation on Class Participation",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "cab_pls_loan_store",
+        "customer_vine"
+      ],
+      "n_issues": 3,
+      "judgments": [
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Inconsistent capitalization: agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase “credit services agreement” appears within a broad list covering current agreements, loans, and obligations. The capitalization choice does not create a genuine ambiguity."
+        },
+        {
+          "party": "cab_pls_loan_store",
+          "title": "Inconsistent capitalization: arbitration agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "In context, lowercase “this arbitration agreement” plainly refers to the arbitration provision being stated. The capitalization inconsistency is stylistic only."
+        },
+        {
+          "party": "customer_vine",
+          "title": "Inconsistent capitalization: Agreement",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "Lowercase “credit services agreement” occurs in a broad category within the Claim definition and does not necessarily purport to use the defined term “Agreement.” No genuine ambiguity results."
+        }
+      ],
+      "risky": false
+    },
+    "pos2": {
+      "clause_id": "pos2",
+      "clause_name": "Starting an Arbitration/Costs — election to arbitrate any Claim",
+      "label": "POSITIVE",
+      "cat1": false,
+      "cat2": false,
+      "parties": [
+        "customer_vine"
+      ],
+      "n_issues": 1,
+      "judgments": [
+        {
+          "party": "customer_vine",
+          "title": "Arbitrator Selection Fallback Controlled by CAB",
+          "category": "none",
+          "subcategory": "none",
+          "reason": "The selection mechanism clearly gives the stated fallback authority to PLS. DSI's lack of a role is an omitted right rather than a construction defect."
+        }
+      ],
+      "risky": false
+    }
+  }
+}
