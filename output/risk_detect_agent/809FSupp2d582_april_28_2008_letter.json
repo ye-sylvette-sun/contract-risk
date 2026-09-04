@@ -1,0 +1,364 @@
+{
+  "contract_id": "809FSupp2d582_april_28_2008_letter",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "neg17",
+    "c018": "neg18",
+    "c019": "neg19",
+    "c020": "neg20",
+    "c021": "neg21"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The defined term \"Defendants\" is made to cover \"these original and proposed additional defendants,\" so it is uncertain whether persons never actually joined to the Lawsuit are bound by or benefit from the agreement. The label is a defined-term boundary problem rather than mere transcription noise.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": "This is essentially a recital describing the reinsurance arrangement, and a party could argue it narrows the operative claim-limitation in the third paragraph to claims under that described arrangement. The tension with the operative scope provision is possible but faint.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The provision purports to \"limit the scope\" of the claims but then says the permitted category \"includes, but is not limited to\" a list and \"may encompass ... among other things\" a further list of causes of action, so the outer reach of the retained claims is undefined. That general-catch-all-against-enumerated-specifics structure is exactly what a court must construe to decide whether a given claim survived the limitation.",
+          "type": 1,
+          "prob": 0.66
+        },
+        {
+          "issue": "The open-ended retained-claims category cannot easily be squared with the immediately following paragraph excluding the \"Other Causes of Action\" (improper reserves, claims mishandling, closing of files), since a claim about reserves or claim payments could fall within both. Reconciling the two lists is a genuine whole-instrument question.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "\"Other Causes of Action\" is defined by an enumerated list with a parenthetical carve-back (\"other than concerning the exclusion or misapplication of IBNR\"), leaving it uncertain whether a reserve- or claims-handling theory that also touches IBNR is excluded or retained. The scope of the list against the IBNR proviso is the construable point.",
+          "type": 1,
+          "prob": 0.48
+        },
+        {
+          "issue": "The exclusion overlaps with the retained IBNR/commission claims defined in the preceding \"limit the scope\" paragraph, which itself is expressly non-exhaustive, so the same claim may be both retained and disclaimed. The two paragraphs must be harmonised.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": "The reservation of the right to sue on Other Causes of Action sits against the very next sentence barring any such separate lawsuit during the pendency of the Lawsuit, and against the Defendants' tolling promise, raising a question whether the reserved right is meaningfully preserved. The tension is manageable but nameable.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "\"During the pendency of the Lawsuit\" is undefined and could mean until trial judgment or until all appeals are exhausted. The term controls when Lincoln General may file, so its boundary matters.",
+          "type": 1,
+          "prob": 0.35
+        },
+        {
+          "issue": "The filing bar keyed to \"pendency\" does not line up with the Defendants' tolling promise, which runs until the Lawsuit is \"settled or otherwise finally resolved, including the completion of any appeals,\" so the two clocks may end at different moments. That mismatch could leave a gap in which suit is barred or limitations run.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "\"Agrees to enable ... U.S. Auto to limit the claims it might otherwise seek\" states no identifiable obligation or standard, and re-defines \"U.S. Auto\" although it was already defined in the opening paragraph. What Lincoln General must actually do to \"enable\" is unstated.",
+          "type": 1,
+          "prob": 0.32
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The \"Excess Funds Claim(s)\" are defined by reference to \"the maximum profit margin to which U.S. Auto contends Lincoln General is entitled,\" a party-dependent and unquantified benchmark, and the parenthetical definition is left unclosed. Whether a later-asserted claim is an Excess Funds Claim, and thus tolled and non-precluded, turns on that phrase.",
+          "type": 1,
+          "prob": 0.5
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "The stipulation that the Excess Funds Claims share no nucleus of operative facts with the Lawsuit is hard to reconcile with the scope paragraph, which retains commission and remittance claims under the same Quota Share Reinsurance Agreements. A court asked to apply preclusion would have to reconcile the two.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "The express waiver of res judicata and collateral estoppel conflicts in direction with the final paragraph, in which both sides \"reserve the right to contest any later-filed separate lawsuits\" and to assert \"any and all applicable defenses.\" Which sentence governs a preclusion defense is a real question.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.2
+        },
+        {
+          "issue": "The tolling runs until final resolution \"including the completion of any appeals,\" while the following filing bar is keyed to \"the pendency of the Lawsuit,\" so the periods may not coincide. The duplicated \"the the\" is transcription noise, not the point.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "The carve-out preserving \"any limitations defenses which may exist immediately before this agreement is executed\" does not say whether it merely preserves accrued elapsed time or lets Lincoln General argue the Excess Funds Claims were already time-barred. That distinction is the classic tolling-agreement construction fight.",
+          "type": 1,
+          "prob": 0.41
+        },
+        {
+          "issue": "The reservation of pre-existing limitations defenses pulls against the preceding sentence's unqualified agreement to toll the statute of limitations for the Excess Funds Claims until the Lawsuit is finally resolved. Whether the toll or the reservation controls a partly-run period must be harmonised.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "\"During the pendency of the Lawsuit\" is undefined and may end at judgment or only after appeals, which controls when U.S. Auto may file its separate suit. The neighbouring tolling sentence uses a different, longer formulation.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": "The filing bar's \"pendency\" trigger does not match the tolling clause's \"settled or otherwise finally resolved, including the completion of any appeals,\" leaving a possible gap between when tolling stops and when filing becomes permissible. The two sentences must be read together.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": "The Defendants' stipulation that the Other Causes of Action share no nucleus of operative facts with the Lawsuit is in tension with the scope paragraph, which retains overlapping claims about the same reinsured policies and IBNR. A preclusion or claim-splitting argument would require reconciling them.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": "This express waiver of preclusion defences sits against the closing paragraph, in which all parties \"reserve the right to contest any later-filed separate lawsuits\" and may assert \"any and all applicable defenses or affirmative defenses.\" A court would have to decide which sentence prevails as to res judicata.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": "The Defendants' toll runs until final resolution including appeals, while the earlier sentence bars Lincoln General from filing only \"during the pendency of the Lawsuit,\" so the protected window and the filing bar may not coincide. The two must be read together to know when suit is safe.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The preservation of \"any limitations defenses which may exist immediately before this agreement is executed\" leaves unclear whether the Defendants may still contend the Other Causes of Action were already barred notwithstanding the toll. That is the standard latent ambiguity in a tolling carve-out.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The carve-out pulls against the immediately preceding unqualified promise to toll limitations for the Other Causes of Action until final resolution. Which controls a period that had partly run at execution is a genuine reconciliation question.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "The qualifier \"in general\" is inserted into an otherwise absolute non-concession, leaving open whether some specific concession of party status was intended elsewhere in the letter. A reader cannot tell what the words carve out.",
+          "type": 1,
+          "prob": 0.29
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.09
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.09
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "The blanket reservation of \"any and all applicable defenses or affirmative defenses\" is a general catch-all with no carve-out for the defences the letter expressly waives, so its reach against the earlier waivers is uncertain. The sentence also omits the noun qualifying \"allegations\" after \"defenses to.\"",
+          "type": 1,
+          "prob": 0.4
+        },
+        {
+          "issue": "This reservation directly contradicts the express waivers of res judicata and collateral estoppel by Lincoln General and by Defendants, and the mutual tolling promises, since limitations and preclusion are \"applicable defenses.\" A court would have to decide whether the general reservation swallows the specific waivers.",
+          "type": 2,
+          "prob": 0.47
+        }
+      ],
+      "dataset_clause_id": "neg21"
+    }
+  ]
+}

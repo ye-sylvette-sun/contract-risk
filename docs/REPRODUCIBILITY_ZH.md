@@ -6,7 +6,7 @@
 外部 review 指出：agent 实验为每份合同开了新的**对话**，但没有建立干净的**运行环境**。
 本文逐条列出 review 提出的问题、各自的处理，以及验证方式。
 
-只有 **agent** 一路受影响。`exp3_llm_api.py` 是无状态 Messages API 调用，不涉及 CLI、
+只有 **agent** 一路受影响。`risk_detect_llm_api.py` 是无状态 Messages API 调用，不涉及 CLI、
 配置文件、memory 或文件系统，其预测结果未重跑。
 
 ---
@@ -76,7 +76,7 @@
 
 - **仅记录了 CLI 版本，机器环境无记录。**
   **修复：**每次调用在首个 session 前写入
-  `output/llm_logs/exp3_agent/run_manifest_<时间戳>.json`，结束时再写一次，内容包括
+  `output/llm_logs/risk_detect_agent/run_manifest_<时间戳>.json`，结束时再写一次，内容包括
   SDK 与 CLI 版本、Python 解释器、平台、git commit 与 dirty 标志、隔离选项原文、被清扫
   的环境变量名单、生效的开关、prompt 与 `dataset.csv`、`contracts.json` 的 SHA-256、
   模型、effort、选中的示范例子、合同运行顺序，以及容器的 image id 与内容哈希。每个字段
@@ -103,7 +103,7 @@
   `~/.claude/.credentials.json`。目录本身永不挂载。manifest 记录用了哪条路径，不记录值。
 
 - **review 未提及、我们自查发现：两路看到的示范例子并不相同。** agent 的工作区里放了
-  每个示范例子的合同全文，而 `exp3_llm_api.py` 的 few-shot 块里只有两段条款正文和法院
+  每个示范例子的合同全文，而 `risk_detect_llm_api.py` 的 few-shot 块里只有两段条款正文和法院
   的原话。也就是说 agent 手上有对照组拿不到的材料。
   **处理：**删掉工作区里的示范合同，连同 prompt 里提到它们的那一句，然后全部重跑。
   轨迹统计显示这个入口两次运行中从未被用过——64 个 session 全都读了三份 `notes.md`，
@@ -201,9 +201,9 @@ pip install -r requirements.txt        # 宿主机侧：够用来构建镜像并
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
 claude setup-token                     # 手动跑一次，token 写进 .env
 python src/experiments/preflight.py    # 须输出 PREFLIGHT PASSED
-python src/experiments/exp3_agent.py --shuffle --parallel 6
-python src/experiments/compare_exp3.py
-python src/experiments/plot_exp3_thresholds.py --run agent
+python src/experiments/risk_detect_agent.py --shuffle --parallel 6
+python src/experiments/compare_risk_detect.py
+python src/experiments/plot_risk_detect_thresholds.py --run agent
 ```
 
 `--parallel` 只决定同时跑几个容器。每份合同都是独立容器里的独立 session，这个数字
@@ -213,6 +213,6 @@ python src/experiments/plot_exp3_thresholds.py --run agent
 `build_dataset.py` 按记录的字符区间从磁盘重新切分每一行，文字不能逐字复现即拒绝写出。
 重跑复现的是流程，模型答案会不同，差异幅度即第三节所述的未解决问题。
 
-每个 session 留下 `output/llm_logs/exp3_agent/<cid>.trajectory.jsonl`，含每次工具调用、
+每个 session 留下 `output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl`，含每次工具调用、
 思考块、CLI 版本与工作目录；另有 `<cid>.json` 记录轮数、token 用量、计费模型、被拒绝的
 路径以及所用镜像。本文各项说法可据此重新审计，无需重跑。

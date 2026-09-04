@@ -14,20 +14,21 @@ The raw paste is copied to spellbook/output/raw/<name>.txt before anything is
 rewritten, and never overwritten once saved.
 
 Usage:
-    python spellbook/fix_json.py                 # every file in output/
-    python spellbook/fix_json.py <name>          # just one
+    python spellbook/chatbot/fix_json.py                 # every file in output/
+    python spellbook/chatbot/fix_json.py <name>          # just one
 """
 import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+HERE = Path(__file__).resolve().parent          # spellbook/chatbot/
+ROOT = HERE.parents[1]                          # the repo root
 sys.path.insert(0, str(ROOT / "src" / "experiments"))
 import predictions  # noqa: E402
 
-OUT = ROOT / "spellbook" / "output"
+OUT = HERE / "output"
 RAW = OUT / "raw"
-KEYS = ("clause_id", "reasoning_cat1", "reasoning_cat2", "prob_cat1", "prob_cat2")
+KEYS = ("clause_id", "issues", "issue_text", "type", "prob")
 
 
 def prob(x):

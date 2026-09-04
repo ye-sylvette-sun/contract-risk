@@ -1,0 +1,413 @@
+{
+  "contract_id": "864FSupp2d1023_declarations_to_the_itu",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "pos1",
+    "c004": "pos2",
+    "c005": "neg3",
+    "c006": "neg4",
+    "c007": "neg5",
+    "c008": "neg6",
+    "c009": "neg7",
+    "c010": "neg8",
+    "c011": "neg9",
+    "c012": "neg10",
+    "c013": "neg11",
+    "c014": "neg12",
+    "c015": "neg13",
+    "c016": "neg14",
+    "c017": "neg15",
+    "c018": "neg16",
+    "c019": "neg17",
+    "c020": "neg18",
+    "c021": "neg19",
+    "c022": "neg20",
+    "c023": "neg21"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "\"Common texts or twin texts\" is used as the limit on the form's use but is nowhere defined in the instrument, and the sentence's broken syntax leaves the restriction's reach unclear. A user could not tell from these words which submissions the form may or may not cover.",
+          "type": 1,
+          "prob": 0.27
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "\"Implied license grant\" is a term of art capable of more than one reading: it may deny only that a license passes automatically by implication, or may deny that any licensing obligation arises at all. The disclaimer's scope is exactly what a licensee and patent holder would read differently.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "This disclaimer sits against the Option 2 commitment (c003) that \"The Patent Holder will grant a license to an unrestricted number of applicants\"; one text denies any grant while the other promises one. A court must reconcile a binding promise to license with a statement that the declaration grants nothing.",
+          "type": 2,
+          "prob": 0.55
+        }
+      ],
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "\"Reasonable terms and conditions\" and \"non-discriminatory basis\" set no benchmark, rate, or method of determination, so the content of the promised licence is indeterminate. Two parties can and do read the same RAND words to require very different royalties.",
+          "type": 1,
+          "prob": 0.78
+        },
+        {
+          "issue": "The unqualified promise that the holder \"will grant a license\" cannot be squared with the accompanying statements that \"This declaration does not represent an implied license grant\" (c002) and that \"Negotiations of licenses are left to the parties concerned\" (c004). Whether this is a binding obligation to license or only an undertaking to negotiate turns on harmonising those texts.",
+          "type": 2,
+          "prob": 0.6
+        }
+      ],
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "\"Left to the parties concerned\" does not say whether negotiation is merely relocated outside the standards bodies or is a precondition to any licensing duty. The phrase is the hinge of the \"obligation to grant versus obligation to negotiate\" argument.",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "It is in tension with the Option 2 undertaking (c003) that the holder \"will grant a license ... on reasonable terms and conditions\": if terms are wholly for negotiation, the RAND promise has no independent content. A court would have to decide which text controls.",
+          "type": 2,
+          "prob": 0.55
+        }
+      ],
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "\"Willing to license their patents or patent claims under options 1 or 2\" leaves open how willingness is demonstrated and whether the counterparty's patents must be essential to the same standard. The condition's trigger is therefore not self-applying.",
+          "type": 1,
+          "prob": 0.33
+        },
+        {
+          "issue": "The reciprocity condition qualifies the Option 2 promise (c003) to license \"an unrestricted number of applicants,\" and the two are hard to read together without deciding which applicants may be refused. That interaction is a genuine construction point.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "\"Does not represent an actual grant of a license\" may mean only that no licence passes on the form, or may mean that no enforceable licensing obligation is created. The scope of the disclaimer is the whole dispute.",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "It stands against the checked Option 2 statement (c007) that the holder \"is prepared to grant a license ... on reasonable terms and conditions,\" the very obligation this sentence appears to disclaim. Harmonising the two requires construing the instrument as a whole.",
+          "type": 2,
+          "prob": 0.55
+        }
+      ],
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "\"Reasonable terms and conditions\" on a \"non-discriminatory basis\" fixes no royalty, no ceiling and no mechanism, so the licence's content is left indeterminate on the face of the text. That indefiniteness is precisely what opposing parties construe differently.",
+          "type": 1,
+          "prob": 0.8
+        },
+        {
+          "issue": "\"Is prepared to grant\" is ambiguous between a binding promise to grant and a mere statement of present willingness to negotiate. The choice between those readings decides whether the declaration is enforceable at all.",
+          "type": 1,
+          "prob": 0.66
+        },
+        {
+          "issue": "The commitment cannot be squared as written with the form's own heading that \"This declaration does not represent an actual grant of a license\" (c006) and the negotiations sentence (c008). A court must decide whether those texts qualify or defeat the Option 2 promise.",
+          "type": 2,
+          "prob": 0.57
+        }
+      ],
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "\"Negotiations are left to the parties concerned\" does not state whether it merely allocates the forum for negotiation or makes negotiation the entire extent of the holder's duty. The phrase supports two competing readings on its face.",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "It pulls against the Option 2 commitment (c007) to grant licences on reasonable and non-discriminatory terms, since unconstrained negotiation would drain the RAND undertaking of content. Reconciling the two is a whole-instrument question.",
+          "type": 2,
+          "prob": 0.54
+        }
+      ],
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "The clause imports \"reciprocity\" as a condition on willingness to license without stating who must reciprocate or when, relying entirely on the separate definition. Whether the condition is a precondition to any offer or only a permitted licence term is not resolved here.",
+          "type": 1,
+          "prob": 0.31
+        },
+        {
+          "issue": "The condition qualifies the Option 2 promise (c007) to license \"an unrestricted number of applicants,\" and the two provisions must be read together to know which applicants may be refused. That is a live reconciliation problem within the same form.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "\"Other reasonable terms and conditions such as those relating to governing law, field of use, reciprocity, warranties, etc.\" places an open-ended \"etc.\" after a short enumerated list, leaving the catch-all's reach uncertain. How far beyond the named categories a patent holder may impose terms is exactly the ejusdem generis question.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The free-of-charge definition explains a term used only in Option 1, which is unchecked in this declaration where Option 2 (c007) is selected, so its operative effect on this declaration is unclear. A party could argue it colours the meaning of \"reasonable terms and conditions\" in the checked option.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The definition conditions the duty on the licensee committing to license \"free of charge or under reasonable terms and conditions\" without saying how or when that commitment must be made. The threshold for satisfying reciprocity is therefore not self-applying.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": "Read with the reciprocity checkbox (c009) and the Option 2 promise to license \"an unrestricted number of applicants\" (c007), it is unclear whether a non-reciprocating implementer is outside the commitment entirely. That interaction requires construction of the form as a whole.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "\"Does not represent an actual grant of a license\" may deny only the automatic passing of a licence or may deny any enforceable licensing duty. The breadth of that disclaimer is genuinely contestable.",
+          "type": 1,
+          "prob": 0.43
+        },
+        {
+          "issue": "It conflicts in appearance with the checked Option 2 undertaking in the same form (c013) that the holder \"is prepared to grant a license ... on reasonable terms and conditions.\" A court would have to decide whether the disclaimer defeats or merely qualifies that undertaking.",
+          "type": 2,
+          "prob": 0.54
+        }
+      ],
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "\"Reasonable terms and conditions\" and \"non-discriminatory basis\" supply no rate, ceiling or mechanism, leaving the content of the promised licence indeterminate on the face of the text. Implementer and patent holder can read the same words to require very different royalties.",
+          "type": 1,
+          "prob": 0.79
+        },
+        {
+          "issue": "\"Is prepared to grant\" is ambiguous between a binding promise to grant a licence and a mere expression of present willingness to negotiate one. Which reading applies decides whether the declaration is enforceable.",
+          "type": 1,
+          "prob": 0.65
+        },
+        {
+          "issue": "The undertaking cannot be read straightforwardly with the same form's heading that \"This declaration does not represent an actual grant of a license\" (c012) or with the negotiations sentence (c014). Harmonising those three texts is a whole-instrument construction problem.",
+          "type": 2,
+          "prob": 0.56
+        }
+      ],
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "\"Negotiations are left to the parties concerned\" does not say whether it merely allocates the forum for negotiation or defines the outer limit of the holder's duty. Both readings are available on the words alone.",
+          "type": 1,
+          "prob": 0.43
+        },
+        {
+          "issue": "It pulls against the Option 2 commitment in the same form (c013) to license on reasonable and non-discriminatory terms, since wholly free negotiation would empty that commitment. A court must decide which text controls.",
+          "type": 2,
+          "prob": 0.53
+        }
+      ],
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The clause conditions willingness to license on \"reciprocity\" without stating when or how the counterparty must reciprocate, deferring entirely to the separate definition. Whether it is a precondition to any offer or only a permissible licence term is unresolved.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": "The condition qualifies the Option 2 promise (c013) to license \"an unrestricted number of applicants,\" and the two must be reconciled to know who may be refused. That is a genuine internal reconciliation question.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The list of permitted \"other reasonable terms and conditions such as those relating to governing law, field of use, reciprocity, warranties, etc.\" ends in an open \"etc.\", leaving the catch-all's reach uncertain. How far beyond the enumerated categories a holder may go is exactly the ejusdem generis point.",
+          "type": 1,
+          "prob": 0.36
+        },
+        {
+          "issue": "The definition explains language used only in unchecked Option 1, while Option 2 (c013) is the selected commitment, so its operative role in this declaration is unclear. A party could invoke it to colour \"reasonable terms and conditions\" in the checked option.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "Reciprocity is triggered by the licensee's commitment to license \"free of charge or under reasonable terms and conditions\" with no statement of how or when that commitment must be given. The condition therefore cannot be applied without construction.",
+          "type": 1,
+          "prob": 0.33
+        },
+        {
+          "issue": "Read with the reciprocity checkbox (c015) and the Option 2 promise to license \"an unrestricted number of applicants\" (c013), it is unclear whether a non-reciprocating implementer falls outside the commitment altogether. That interaction needs resolving across provisions.",
+          "type": 2,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "\"Does not represent an actual grant of a license\" may deny only that a licence passes on the form, or may deny that any enforceable licensing obligation arises. The disclaimer's breadth is genuinely contestable.",
+          "type": 1,
+          "prob": 0.43
+        },
+        {
+          "issue": "It appears to contradict the Option 2 undertaking in the same 2010 form (c019) that the holder \"is prepared to grant a license ... on reasonable terms and conditions.\" Whether the disclaimer defeats or merely qualifies that undertaking is a construction question.",
+          "type": 2,
+          "prob": 0.54
+        }
+      ],
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "\"Reasonable terms and conditions\" and \"non-discriminatory basis\" fix no royalty, ceiling or method of determination, leaving the licence's content indeterminate. That indefiniteness is the central thing two parties would read differently.",
+          "type": 1,
+          "prob": 0.79
+        },
+        {
+          "issue": "\"Is prepared to grant\" is ambiguous between a binding promise to grant and a statement of mere willingness to negotiate. The choice between those readings determines enforceability.",
+          "type": 1,
+          "prob": 0.64
+        },
+        {
+          "issue": "The commitment must be squared with the 2010 form's heading that \"This declaration does not represent an actual grant of a license\" (c018) and with the negotiations sentence (c020). Reading the instrument as a whole leaves a real tension between promise and disclaimer.",
+          "type": 2,
+          "prob": 0.56
+        }
+      ],
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "\"Negotiations are left to the parties concerned\" does not indicate whether it merely places negotiation outside the standards bodies or makes negotiation the whole of the holder's duty. Both readings fit the words.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "It is in tension with the Option 2 undertaking in the same form (c019) to license on reasonable and non-discriminatory terms, which unconstrained negotiation would render empty. A court must decide which prevails.",
+          "type": 2,
+          "prob": 0.52
+        }
+      ],
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "The provision makes willingness to license turn on \"reciprocity\" but leaves the box unmarked in the text as it appears, so whether the condition was elected at all is not determinable from the clause. Its operative status is uncertain on its face.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": "The ITU database entry for statement H264-101 reproduced in the same instrument states that \"The Patent Holder's willingness to license is conditioned on reciprocity for the above document,\" while this checkbox in the 2010 form shows no mark. The two records of the same declaration do not agree.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "The permitted \"other reasonable terms and conditions such as those relating to governing law, field of use, reciprocity, warranties, etc.\" closes with an open-ended \"etc.\" after a short list, so the catch-all's reach is uncertain. How far past the named categories a holder may impose terms is contestable.",
+          "type": 1,
+          "prob": 0.36
+        },
+        {
+          "issue": "The definition governs a phrase used only in unchecked Option 1, whereas Option 2 (c019) is the operative commitment, leaving its effect on this declaration unclear. A party could use it to colour the meaning of \"reasonable terms and conditions\" in Option 2.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "Reciprocity depends on the prospective licensee committing to license \"free of charge or under reasonable terms and conditions,\" without specifying how or when that commitment must be made or which patents it must cover. The condition cannot be applied without construction.",
+          "type": 1,
+          "prob": 0.33
+        },
+        {
+          "issue": "Read with the reciprocity checkbox (c021) and the Option 2 promise to license \"an unrestricted number of applicants\" (c019), it is unclear whether a non-reciprocating implementer is excluded from the commitment. That cross-provision effect is genuinely open.",
+          "type": 2,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "neg21"
+    }
+  ]
+}

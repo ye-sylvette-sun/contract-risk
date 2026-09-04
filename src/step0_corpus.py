@@ -81,7 +81,14 @@ def entry_documents():
     idx = {h: i for i, h in enumerate(next(rows))}
     docs = {}
     for r in rows:
-        cit, doc = r[idx["Case Citation"]], r[idx["Entry Document"]]
+        # The sheet carries no dimension record, so `read_only` yields RAGGED
+        # rows — trailing empty cells are dropped per row. The header is 9 wide;
+        # the 28,176 data rows come back 5, 6 or 7 wide, and `Entry Document`
+        # sits at index 6. Indexing it directly raises IndexError on two thirds
+        # of the sheet. A short row simply has no entry document, which the
+        # `cit and doc` test below already discards.
+        cell = lambda i: r[i] if i < len(r) else None       # noqa: E731
+        cit, doc = cell(idx["Case Citation"]), cell(idx["Entry Document"])
         if cit and doc:
             docs.setdefault(norm(cit), set()).add(str(doc).strip())
     return {k: len(v) for k, v in docs.items()}

@@ -26,8 +26,35 @@ ENV PATH=/opt/venv/bin:$PATH
 # The committed pins. Only claude-agent-sdk is needed to judge, but installing
 # the whole file keeps requirements.txt honest — and on Linux/cp312 all four
 # resolve, including matplotlib==3.8.4, which has no cp313 Windows wheel.
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
+#
+# Installed from requirements.lock.txt, not requirements.txt: the network this
+# is built on blocks files.pythonhosted.org, where PyPI serves the wheels, so
+# pip is pointed at a proxy that is reachable. The lock is what makes that
+# safe. It carries the whole resolved closure with a sha256 for every wheel,
+# and each of those hashes was read from pypi.org/simple — which is NOT blocked
+# — so an index serving anything other than what PyPI published fails the build
+# here rather than shipping into a run. --require-hashes also refuses any
+# package the lock does not pin, so the closure cannot quietly grow.
+#
+# PIP_INDEX_URL is a build arg, and the default is whatever this machine's own
+# pip already resolves through. Point it at PyPI on a network that can reach
+# files.pythonhosted.org and the same lock installs the same bytes: the hashes
+# are properties of the artifacts, not of where they were fetched from.
+ARG PIP_INDEX_URL=https://packagefeedproxy.microsoft.io/pypi/simple
+COPY requirements.txt docker/requirements.lock.txt /tmp/
+RUN pip install --no-cache-dir --require-hashes --index-url "$PIP_INDEX_URL" \
+        -r /tmp/requirements.lock.txt
+
+# requirements.txt stays the source of truth for the direct pins, so assert the
+# lock did not drift from it: every pinned version must be the version actually
+# installed. Without this the lock could quietly carry a different version of
+# the one package the whole claim rests on.
+RUN python -c "import importlib.metadata as m, sys; \
+want = dict(l.strip().split('==') for l in open('/tmp/requirements.txt') \
+            if l.strip() and not l.startswith('#')); \
+bad = {n: (v, m.version(n)) for n, v in want.items() if m.version(n) != v}; \
+sys.exit(f'lock drifted from requirements.txt: {bad}') if bad else \
+print(f'lock matches all {len(want)} direct pins')"
 
 # The SDK ships a CLI in its own wheel and prefers it to anything on PATH, so
 # pinning the SDK pins the CLI. Assert that here, at BUILD time — the claim

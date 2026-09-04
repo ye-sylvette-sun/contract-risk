@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["court_defect", "evidence", "determinable", "alignment", "reason"],
+  "properties": {
+    "court_defect": {
+      "type": "string",
+      "description": "One or two sentences: what defect in THIS provision the passage shows the court construing. Written before you look at the alignment question, from the passage alone. If the passage does not show the court construing this provision at all, say that."
+    },
+    "evidence": {
+      "type": "string",
+      "description": "The span of the opinion passage you are relying on, copied EXACTLY from it, character for character, OCR damage included. Empty string only when determinable is false."
+    },
+    "determinable": {
+      "type": "boolean",
+      "description": "True if the passage contains enough to judge alignment either way. False when it is cut mid-argument, mentions the provision only in passing, or otherwise gives no basis to decide — in which case alignment must be 0.0."
+    },
+    "alignment": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "How far the defect the proposed issue names is the same defect the passage shows the court construing. Two decimal places. 0.8-1.0 exact same defect; 0.5-0.8 same underlying problem framed differently; 0.2-0.5 related but a different specific defect; 0.0-0.2 unrelated or absent. It need not be the court's main point — one of several defects construed in the passage still scores high."
+    },
+    "reason": {
+      "type": "string",
+      "description": "One or two sentences tying the quoted evidence to the score: what the proposed issue names, what the passage shows, and why that is or is not the same defect."
+    }
+  }
+}

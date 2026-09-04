@@ -3,8 +3,8 @@
 Two steps, one pass, one output file:
 
   1. PARSE the pasted review into issues and locate each one in the contract.
-  2. CLASSIFY every located issue against the two construction-risk categories
-     the main experiment uses -- cat1, cat2 or neither -- with one LLM call.
+  2. CLASSIFY every located issue against the two construction-risk risk types
+     the main experiment uses -- type1, type2 or neither -- with one LLM call.
 
     spellbook/risks_negotiation/output/<contract_id>/<party>.txt   (pasted in)
     spellbook/risks_negotiation/results/<contract_id>.json         (written)
@@ -16,10 +16,10 @@ under `parties`.
 ## The pasted format
 
 Each issue ends with a line `Apply` (or `Apply All (N)` where one issue stands
-for N occurrences), and begins with its severity or category:
+for N occurrences), and begins with its severity or risk type:
 
     Notable                       <- severity (Important/Notable/Minor) OR a
-                                     proofread category (Definitions,
+                                     proofread risk type (Definitions,
                                      Spelling + Grammar, ...)
     Released Parties definition should include independent contractors
     The definition of "Released Parties" includes officers, trustees, ...
@@ -46,14 +46,14 @@ and is left unlocated rather than placed somewhere plausible-looking.
 ## Classifying an issue
 
 One call per contract: the contract goes up once and every located issue from
-BOTH parties is judged against it, because Category 2 cannot be seen from a
+BOTH parties is judged against it, because risk type 2 cannot be seen from a
 single provision and a judgment on one side is better made with the other
 side's findings in view. Issues with no location, or located outside every
 extracted clause, are recorded but not sent -- there is nothing to attach a
 judgment to.
 
 Where both parties raise an issue on the SAME clause, the clause takes the
-UNION: cat1 if either side's issue was cat1, cat2 if either side's was cat2.
+UNION: type1 if either side's issue was type1, type2 if either side's was type2.
 
 Usage:
     python spellbook/risks_negotiation/review.py
@@ -96,7 +96,7 @@ RETRIES = 4
 # assumed -- `Section References` only shows up on contracts with numbered
 # sections, and appears in 3 of the 20.
 SEVERITIES = {"Important", "Notable", "Minor"}
-CATEGORIES = {"Definitions", "Spelling + Grammar", "Templated Content",
+TAB_HEADINGS = {"Definitions", "Spelling + Grammar", "Templated Content",
               "Internal Annotations", "Section References"}
 
 # Where the revision snippet begins. `Capitalize term(s)` and `Add definition`
@@ -104,7 +104,7 @@ CATEGORIES = {"Definitions", "Spelling + Grammar", "Templated Content",
 REVISION_MARKERS = {"Revision", "Capitalize term(s)", "Add definition"}
 COMMENT_MARKER = "Comment"
 # Buttons and toggles. `Internal` is furniture; `Internal Annotations` is a
-# category, so these are matched whole-line and never as a prefix.
+# risk type, so these are matched whole-line and never as a prefix.
 FURNITURE = {"Counterparty", "Internal", "Show", "Dismiss", "Apply"}
 COUNTER_RE = re.compile(r"^\d+\s*/\s*\d+$")            # `1 / 14`
 APPLY_ALL_RE = re.compile(r"^Apply All \((\d+)\)$")
@@ -133,7 +133,7 @@ def parse_issue(lines):
         return None
 
     kind = None
-    if body[0] in SEVERITIES or body[0] in CATEGORIES:
+    if body[0] in SEVERITIES or body[0] in TAB_HEADINGS:
         kind = body.pop(0)
 
     out = {"kind": kind,
@@ -299,11 +299,11 @@ def parse_party(path, raw, tokens, index, spans):
 
 # ========================================================== 3. CLASSIFYING ==
 
-# Lifted verbatim from `prompts/exp3.md` so this pass and the main experiment
+# Lifted verbatim from `prompts/risk_detect.md` so this pass and the main experiment
 # judge against the same definitions -- otherwise the comparison is between two
 # different questions.
-RISK_CATEGORIES = """\
-**CATEGORY 1 - an intrinsic textual defect, visible in the provision itself.**
+RISK_TYPES = """\
+**RISK TYPE 1 - an intrinsic textual defect, visible in the provision itself.**
 
 - **1.1 Lexical ambiguity or vagueness.** A specific word or phrase genuinely
   carries more than one reasonable meaning, or is so vague its boundary cannot
@@ -315,7 +315,7 @@ RISK_CATEGORIES = """\
   generis, expressio unius); or the provision is so one-sidedly drafted that a
   genuine ambiguity would be construed against its drafter.
 
-**CATEGORY 2 - the defect arises from the provision's RELATIONSHIP to the rest
+**RISK TYPE 2 - the defect arises from the provision's RELATIONSHIP to the rest
 of the instrument.** You must consult the other provisions of the contract.
 
 - **2.1 Conflicting clauses.** This provision directly contradicts another
@@ -336,19 +336,19 @@ behalf of a party. Your job is different: decide, for each issue, whether the
 defect it describes is one of two kinds of CONSTRUCTION risk -- something a court
 would have to construe -- or neither.
 
-### The two categories
+### The two risk types
 
-{RISK_CATEGORIES}
+{RISK_TYPES}
 
 ### What to decide
 
-For each issue, ask whether what it raises is related to Category 1 or Category
+For each issue, ask whether what it raises is related to risk type 1 or Risk type
 2. If it is related at all -- even a little, even where a court might well go
-the other way -- assign that category, and use `reason` to say what the
+the other way -- assign that risk type, and use `reason` to say what the
 connection is. If it is related to neither, return `none` and say why not.
 
 You judge how much relation is enough; there is no rubric to apply beyond the
-definitions above. Where an issue is related to both categories, choose the
+definitions above. Where an issue is related to both risk types, choose the
 closer one and say so in `reason`.
 """
 
@@ -362,19 +362,19 @@ SCHEMA = {
             "items": {
                 "type": "object",
                 "additionalProperties": False,
-                "required": ["ref", "category", "subcategory", "reason"],
+                "required": ["ref", "type", "subtype", "reason"],
                 "properties": {
                     "ref": {"type": "integer",
                             "description": "the issue's [n] number"},
-                    "category": {"type": "string",
-                                 "enum": ["cat1", "cat2", "none"]},
-                    "subcategory": {
+                    "type": {"type": "string",
+                                 "enum": ["type1", "type2", "none"]},
+                    "subtype": {
                         "type": "string",
                         "enum": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3",
                                  "none"]},
                     "reason": {
                         "type": "string",
-                        "description": "one or two sentences; for cat2, name "
+                        "description": "one or two sentences; for type2, name "
                                        "the conflicting provision"},
                 },
             },
@@ -471,8 +471,8 @@ def call(client, cid, document, items):
 def rollup(items):
     """Per-clause verdict, taking the UNION over both parties' issues.
 
-    A clause both sides raised something on is flagged cat1 if EITHER side's
-    issue was cat1, and cat2 if either side's was cat2 -- the two reviews are
+    A clause both sides raised something on is flagged type1 if EITHER side's
+    issue was type1, and type2 if either side's was type2 -- the two reviews are
     two looks at the same text, not two votes to be averaged.
     """
     clauses = {}
@@ -483,21 +483,21 @@ def rollup(items):
         c = issue["location"]["clause"]
         row = clauses.setdefault(c["clause_id"], {
             "clause_id": c["clause_id"], "clause_name": c["clause_name"],
-            "label": c["label"], "cat1": False, "cat2": False,
+            "label": c["label"], "type1": False, "type2": False,
             "parties": [], "n_issues": 0, "judgments": []})
         row["n_issues"] += 1
         if party not in row["parties"]:
             row["parties"].append(party)
-        if j["category"] == "cat1":
-            row["cat1"] = True
-        elif j["category"] == "cat2":
-            row["cat2"] = True
+        if j["type"] == "type1":
+            row["type1"] = True
+        elif j["type"] == "type2":
+            row["type2"] = True
         row["judgments"].append(
             {"party": party, "title": issue["title"],
-             "category": j["category"], "subcategory": j["subcategory"],
+             "type": j["type"], "subtype": j["subtype"],
              "reason": j["reason"]})
     for row in clauses.values():
-        row["risky"] = row["cat1"] or row["cat2"]
+        row["risky"] = row["type1"] or row["type2"]
     return dict(sorted(clauses.items()))
 
 
@@ -548,12 +548,12 @@ def review(client, cid, folder, dry_run=False):
     for ref, (_party, _i, issue) in enumerate(items):
         j = by_ref.get(ref)
         issue["judgment"] = None if j is None else {
-            "category": j["category"], "subcategory": j["subcategory"],
+            "type": j["type"], "subtype": j["subtype"],
             "reason": j["reason"]}
 
     judged = [i for _p, _i, i in items if i.get("judgment")]
-    counts = {k: sum(1 for i in judged if i["judgment"]["category"] == k)
-              for k in ("cat1", "cat2", "none")}
+    counts = {k: sum(1 for i in judged if i["judgment"]["type"] == k)
+              for k in ("type1", "type2", "none")}
     clauses = rollup(items)
 
     out = {
@@ -582,7 +582,7 @@ def review(client, cid, folder, dry_run=False):
     flagged = [c for c in clauses.values() if c["risky"]]
     hits = [c for c in flagged if c["label"] == "POSITIVE"]
     print(f"  {len(items)} judged, {out['n_skipped']} skipped  ->  "
-          f"cat1 {counts['cat1']}, cat2 {counts['cat2']}, none {counts['none']}")
+          f"type1 {counts['type1']}, type2 {counts['type2']}, none {counts['none']}")
     print(f"  {len(flagged)} of {len(clauses)} touched clause(s) flagged risky; "
           f"{len(hits)} gold POSITIVE "
           f"({', '.join(c['clause_id'] for c in hits) or '-'})")
@@ -703,7 +703,7 @@ def main():
         print(f"\n{len(todo)} contract(s) written to "
               f"{RESULTS.relative_to(ROOT)}/<contract_id>.json")
         print(f"{totals['judged']} issue(s) judged, {totals['skipped']} "
-              f"skipped -- cat1 {totals['cat1']}, cat2 {totals['cat2']}, "
+              f"skipped -- type1 {totals['type1']}, type2 {totals['type2']}, "
               f"none {totals['none']}")
 
 

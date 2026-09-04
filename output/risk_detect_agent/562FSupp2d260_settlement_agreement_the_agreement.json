@@ -1,0 +1,160 @@
+{
+  "contract_id": "562FSupp2d260_settlement_agreement_the_agreement",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "pos1",
+    "c003": "pos2",
+    "c004": "pos3",
+    "c005": "neg2",
+    "c006": "neg3",
+    "c007": "neg4",
+    "c008": "neg5",
+    "c009": "neg6"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.05
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.05
+        }
+      ],
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "The first paragraph of the amended identification runs \"...relating to stocks and bonds in electronic format downloadable from and made available via a global computer network on a subscription basis\" with no punctuation, so it is unclear whether the trailing \"in electronic format downloadable...\" qualifies the excluded asset-management material or the publications being claimed. The first item also carries no International Class designation while the other two are expressly placed \"in Class 16\" and \"in Class 36\".",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "The Background recital says the PETROLEUM ARGUS application was published in International Classes 9, 16 and 36, but the operative amendment in paragraph 1 assigns classes only to two of the three items and never mentions Class 9, leaving the recital and the operative text pointing different ways about what Class 9 coverage survives. The scope of the covenants in paragraphs 2 and 3 depends on this identification.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "After the specific undertakings \"not oppose or seek to cancel\" the application, the clause adds the open-ended catch-alls \"otherwise contest or challenge\" the rights and \"do any act or thing in derogation thereof\", leaving it genuinely uncertain whether Argus Research also surrendered infringement or unfair-competition claims outside the PTO. It is further unclear whether the limitation \"for the goods and services as set forth in that application as amended\" qualifies only the mark \"as shown\" or the entire non-challenge promise.",
+          "type": 1,
+          "prob": 0.58
+        },
+        {
+          "issue": "The covenant is keyed to the identification \"as amended pursuant to paragraph 1\", so any indeterminacy in paragraph 1's amended goods and services (including the missing class designation) transfers directly into the reach of this promise. Whether conduct is inside or outside the covenant cannot be decided without construing paragraph 1.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The clause protects \"Petroleum Argus' rights in the mark ENERGY ARGUS\" while the registrations it identifies are for \"ENERGY ARGUS & Design\", so it is ambiguous whether Argus Research gave up challenges to the composite marks only or to the words ENERGY ARGUS standing alone. The trailing catch-all \"do any act or thing in derogation thereof\" sits against the enumerated \"oppose or seek to cancel\" and leaves the covenant's outer reach uncertain.",
+          "type": 1,
+          "prob": 0.48
+        },
+        {
+          "issue": "The Background recital frames the settlement solely as resolving Argus Research's extensions of time to oppose the PETROLEUM ARGUS application, yet this operative paragraph surrenders rights against two separate ENERGY ARGUS registrations the recital never mentions. That mismatch between recited purpose and operative concession is capable of being argued.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "pos3"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "The second sentence, \"This provision extends to the United States, its territories and possessions\", has no clear referent: it may mean only that New York law governs disputes arising in those places, or may be a substantive geographic limit on the whole settlement between a Delaware and a UK company. The first sentence is also grammatically incomplete (\"the performance of shall be governed\"), leaving the object of \"performance of\" to be supplied.",
+          "type": 1,
+          "prob": 0.47
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "\"All their own costs in attorneys' fees\" is a mechanical error for \"costs and attorneys' fees\", so on its face it covers only costs incurred in attorneys' fees and leaves other litigation costs unallocated. Whether the clause also bars fee-shifting for later breach of the settlement is not addressed.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "\"The parties will agree to keep\" states a future agreement rather than a present obligation, and the carve-out \"as required by Court order and/or state and federal rules of civil procedure\" is open-ended enough to permit disclosure in almost any litigation. Neither the duration nor the permitted recipients of the confidentiality duty is stated.",
+          "type": 1,
+          "prob": 0.27
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg6"
+    }
+  ]
+}

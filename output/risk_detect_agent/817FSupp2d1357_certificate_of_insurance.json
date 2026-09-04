@@ -1,0 +1,296 @@
+{
+  "contract_id": "817FSupp2d1357_certificate_of_insurance",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "neg17"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The designation mechanism (\"designated by 2 \\\"X\\\" in the box below\") is garbled and no box or mark is actually reproduced, so the identification of the contracting insurer rests on the printed name alone. A court could be asked whether the designation requirement was satisfied.",
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "\"MUST FIRST BE MADE AND REPORTED IN WRITING ... DURING THE 'CERTIFICATE PERIOD' OR ANY APPLICABLE EXTENDED REPORTING PERIOD\" leaves open whether both the making and the reporting must fall in the same period, and what makes an extended reporting period \"applicable\". This is the classic notice condition in a claims-made policy and is the kind of wording insureds and insurers read differently.",
+          "type": 1,
+          "prob": 0.48
+        },
+        {
+          "issue": "The condition is measured by the \"Certificate Period\" in Item 5, whose dates as written (\"2/45/2007 To ... 2/AS/2808\") are unintelligible, so the reporting window cannot be fixed from the instrument. The clause cannot be applied without construing Item 5.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "\"DEFENSE COSTS\" is a quoted defined term but the certificate contains no definition, leaving it to the Master Policy referenced in Item 7/Item 8 and the issuance clause. Any inconsistency between the two documents on defense-cost treatment would have to be construed.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "\"Protective Life Insurance Company and Empire General and the Registered Representatives of ProEquities, [Inc.]\" is an open-ended class of additional insureds with no stated limit on the capacity or transactions for which they are insured. Whether a particular person is covered, and for which activities, is exactly what the words leave uncertain.",
+          "type": 1,
+          "prob": 0.45
+        },
+        {
+          "issue": "The additional-insured list names Protective Life and ProEquities entities, while Item 6 splits deductibles between \"products of Protective Life and ProEquities\" and \"all other covered products\", implying coverage beyond those entities' products; the two Items pull in different directions on the scope of the risk. A court would have to harmonise Item 2 with Item 6.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.06
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.05
+        }
+      ],
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The per-claim limit is written \"$2,060,000,09\", a figure that is not a coherent dollar amount and does not match the $2,000,000.00 aggregate immediately following. The stated limit of liability therefore has to be construed rather than read.",
+          "type": 1,
+          "prob": 0.31
+        },
+        {
+          "issue": "The garbled each-claim figure sits against the $2,000,000.00 aggregate in the same Item 4, so the certificate as a whole does not state a consistent set of limits. Reconciling them requires resort to the Master Policy referenced in the issuance clause.",
+          "type": 2,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The dates \"2/45/2007\" and \"2/AS/2808\" are not valid dates, so the beginning and end of the \"Certificate Period\" cannot be determined from the text. In a claims-made policy the policy period is the operative boundary and its mis-writing changes what is covered.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "The unreadable period cannot be squared with the reporting condition, which requires claims to be \"made and reported\" during the \"Certificate Period\", making that condition unworkable on the face of the instrument. The two must be construed together.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "\"covered claims involving products of Protective Life and ProEquities, Inc.\" turns on the undefined and elastic word \"involving\", and on whether the conjunction requires both entities' products. Which deductible applies to a mixed or hybrid transaction is left open.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "\"all other covered products\" is a catch-all set against the specific Protective Life/ProEquities products in the preceding line, and \"covered products\" is nowhere defined in the certificate. Its reach — and whether it implies coverage for outside products at all — is the ambiguity.",
+          "type": 1,
+          "prob": 0.41
+        },
+        {
+          "issue": "The reference to \"all other covered products\" presupposes a definition of covered products found only in the \"Master Policy\" invoked by the issuance clause and Items 7 and 8, and any narrower master-policy scope would contradict this Item. A court would have to reconcile the certificate with the master policy.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.06
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "\"Endorsements Effective at Inception: Refer to Master Policy\" identifies no endorsement, so which endorsements (and therefore which coverage modifications) attach at inception cannot be told from the certificate. The scope of what is incorporated is left at large.",
+          "type": 1,
+          "prob": 0.27
+        },
+        {
+          "issue": "This blanket reference to unspecified master-policy endorsements sits uneasily with the closing clause stating that \"THIS POLICY EMBODIES ALL AGREEMENTS EXISTING BETWEEN THE NAMED CERTIFICATE HOLDER AND THE COMPANY\". The two provisions have to be harmonised to know what documents form the contract.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.19
+        },
+        {
+          "issue": "Issuance \"in accordance with the 'Master Policy'\" incorporates an external document, yet the following sentence says this policy \"EMBODIES ALL AGREEMENTS\" between the holder and the Company; the certificate does not say which controls on conflict. That tension is a genuine internal inconsistency about the content of the contract.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "\"THE APPLICATION AND ANY ATTACHMENTS HERETO\" are deemed the holder's \"AGREEMENTS AND REPRESENTATIONS\" without identifying the documents or the consequence of a misstatement. Whether this creates warranty/rescission rights is left unstated.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The integration sentence is incomplete — it ends \"RELATING TO THIS\" with no object — and also contains \"GR\" for \"OR\", so the class of superseded agreements is not stated. What the merger clause actually covers must be supplied by construction.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": "Saying this policy embodies all agreements cannot be squared with the issuance clause making the certificate subject to the \"MASTER POLICY\" and with Items 7 and 8 which direct the reader to the Master Policy for premium and endorsements. A court would have to decide whether the master policy terms are part of the contract.",
+          "type": 2,
+          "prob": 0.41
+        }
+      ],
+      "dataset_clause_id": "neg17"
+    }
+  ]
+}

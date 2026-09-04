@@ -9,10 +9,17 @@ litigation is itself what makes it risky.
 It may legitimately answer "none": the opinion can turn on an agreement that
 was never filed.
 
-The model writes no clause text and chooses no label — the taxonomy codes come
-from the Westlaw keys and are facts about the case. Every clause must point at
-the opinion passage showing the dispute, which keeps selection tied to the
-court's words rather than to what looks risky to a model.
+The model writes no clause text, and it never decides WHETHER a clause is
+positive on its own authority — every clause must point at the opinion passage
+showing the dispute, which keeps selection tied to the court's words rather
+than to what looks risky to a model.
+
+The risk TYPE is drawn from the Westlaw keys the case was filed under. Where the
+case carries one code that is the whole answer and no model chose it; where it
+carries several, the model says which of them this clause's dispute turned on,
+and may name more than one. `taxonomy_provenance` records which of the two a row
+came from — `westlaw` or `model` — so a consumer can keep only the rows whose
+type no model had a say in.
 
 Contracts step 0b rejected as two-column scans are dropped before the call.
 
@@ -24,10 +31,12 @@ Usage:
     python src/step1_extract.py [--case CITATION]
 """
 import argparse
+import concurrent.futures as cf
 
 import lib
 
 OUT = lib.OUT / "clauses.json"
+SHARDS = "clauses"       # output/clauses/<case_id>.json while running
 
 
 def blocks(ids, texts):
@@ -44,29 +53,36 @@ def blocks(ids, texts):
 
 
 def taxonomy_of(value):
-    """The code the model meant. A key label maps to its code; brackets go.
+    """The codes the model meant. A key label maps to its code; brackets go.
 
-    `prompts/extract.schema.json` now enumerates the six codes, so a wrong
-    spelling cannot come back at all. This exists because it did: before the
-    enum, one run answered with the Westlaw KEY LABEL — `k152`, `k143(2)` —
-    instead of the code that label maps to, and once with `[1.1]`. All twelve
-    named the right risk category in the wrong vocabulary, and two whole cases lost
-    every clause they had to it.
+    `prompts/extract.schema.json` enumerates the six codes, so a wrong spelling
+    cannot come back at all. This exists because it did: before the enum, one
+    run answered with the Westlaw KEY LABEL — `k152`, `k143(2)` — instead of the
+    code that label maps to, and once with `[1.1]`. All twelve named the right
+    risk type in the wrong vocabulary, and two whole cases lost every clause
+    they had to it.
 
-    It concedes nothing on provenance. The result still has to be one of the
-    codes the CASE was filed under, which is the check that matters: the label
-    comes from the Westlaw keys, never from the model.
+    It concedes nothing on provenance. Every result still has to be one of the
+    codes the CASE was filed under, which is the check that matters.
 
     The label is tried BEFORE the brackets are stripped: `k143(2)` is a key
     label whose own name ends in a bracket, and stripping first turns it into
     `k143(2` — which would have thrown away the six clauses this was written to
     recover.
+
+    A bare string is still accepted, not only the list the schema now asks for:
+    an archived answer from before the change reads back unchanged.
     """
-    s = str(value).strip()
-    for candidate in (s, s.strip("[]() ")):
-        if candidate in lib.KEY_BY_LABEL:
-            return lib.KEY_BY_LABEL[candidate][1]
-    return s.strip("[]() ")
+    values = value if isinstance(value, (list, tuple)) else [value]
+    out = []
+    for v in values:
+        s = str(v).strip()
+        code = next((lib.KEY_BY_LABEL[c][1]
+                     for c in (s, s.strip("[]() ")) if c in lib.KEY_BY_LABEL),
+                    s.strip("[]() "))
+        if code not in out:
+            out.append(code)
+    return sorted(out)
 
 
 def check(clause, case, texts, opinion_lines):
@@ -75,15 +91,22 @@ def check(clause, case, texts, opinion_lines):
     if cid not in texts:
         return None, f"contract_id {cid!r} is not one of the supplied documents"
 
-    # The model does not choose the label — the codes are handed to it as facts
-    # about the case, and one outside that set is rejected. This is an integrity
-    # check on which risk category the dispute falls under, NOT a filter on whether
+    # The answer must be a non-empty SUBSET of the codes the case was filed
+    # under, and anything outside that set is rejected. This is an integrity
+    # check on which risk type the dispute falls under, NOT a filter on whether
     # a clause was disputed: a clause the court examined and upheld is still a
     # positive, so nothing here may turn on how the case came out.
+    #
+    # Where the case carries ONE code the model has no choice and the label is
+    # still a Westlaw fact. Where it carries several, the model picks which of
+    # them this clause's dispute turned on — and may pick more than one, since
+    # a court can find a phrase ambiguous on its face AND resolve it from the
+    # whole instrument. `provenance` below records which of the two happened,
+    # so a consumer can keep only the rows no model had a say in.
     codes = lib.codes_of(case)
-    code = taxonomy_of(clause["taxonomy"])
-    if code not in codes:
-        return None, f"taxonomy {clause['taxonomy']!r} is not one of {codes}"
+    types = taxonomy_of(clause["taxonomy"])
+    if not types or any(t not in codes for t in types):
+        return None, f"taxonomy {clause['taxonomy']!r} is not a subset of {codes}"
 
     found, why = lib.locate(texts[cid], clause["start_line"], clause["end_line"],
                             clause["head"], clause["tail"])
@@ -97,13 +120,14 @@ def check(clause, case, texts, opinion_lines):
                       f"(1-{len(opinion_lines)})")
 
     # The key is the label's provenance: the Westlaw keys of this case that map
-    # to the code the clause carries, so a row can always be traced back to the
+    # to the codes the clause carries, so a row can always be traced back to the
     # headnotes it was selected under.
     keys = sorted(k for k in case["keys"]
-                  if lib.KEY_BY_LABEL[k][1] == code)
+                  if lib.KEY_BY_LABEL[k][1] in types)
     return {
         "clause_name": clause["clause_name"],
-        "taxonomy": code,
+        "taxonomy": ",".join(types),
+        "taxonomy_provenance": "westlaw" if len(codes) == 1 else "model",
         "key": ",".join(keys),
         "contract_id": cid,
         "claimed_lines": [clause["start_line"], clause["end_line"]],
@@ -121,21 +145,27 @@ def check(clause, case, texts, opinion_lines):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--case", help="extract one citation only")
+    ap.add_argument("--parallel", type=int, default=4,
+                    help="cases extracted at once (default 4)")
     args = ap.parse_args()
 
     cases = lib.read_json(lib.OUT / "cases.json", {})
     registry = lib.read_json(lib.OUT / "contracts.json", {})
     layout = lib.read_json(lib.OUT / "layout.json", {})
-    done = lib.read_json(OUT, {})
+    done = {**(lib.read_json(OUT, {}) or {}), **lib.read_shards(SHARDS)}
 
     by_case = {}
     for cid, c in registry.items():
         by_case.setdefault(c["citation"], []).append(cid)
 
-    for citation, ids in sorted(by_case.items()):
-        if (args.case and citation != args.case) or citation in done:
-            continue
+    todo = [(cit, ids) for cit, ids in sorted(by_case.items())
+            if not (args.case and cit != args.case) and cit not in done]
+
+    def extract_one(citation, ids):
+        """One case. Everything it has to say is collected and printed in a
+        single call, so concurrent workers cannot interleave inside a case."""
         case = cases[citation]
+        out = []
 
         # A two-column scan is dropped here rather than in step 0, so the
         # registry stays a record of what was extracted and only this step's
@@ -143,42 +173,43 @@ def main():
         # a filter on known-bad documents, not a gate that everything must pass.
         dropped = [c for c in ids if layout.get(c, {}).get("two_column")]
         ids = [c for c in ids if c not in dropped]
-        for cid in dropped:
-            print(f"  drop {cid}: two-column scan (step 0b)")
+        out += [f"  drop {cid}: two-column scan (step 0b)" for cid in dropped]
         if not ids:
-            print(f"skip   {citation}: every contract is a two-column scan")
-            done[citation] = {"case_desc": "skipped: every contract of this case "
-                                           "is a two-column scan",
-                              "clauses": [], "rejected": []}
-            lib.write_json(OUT, done)
-            continue
+            lib.write_shard(SHARDS, case["id"], citation,
+                            {"case_desc": "skipped: every contract of this case "
+                                          "is a two-column scan",
+                             "clauses": [], "rejected": []})
+            print(f"skip   {citation}: every contract is a two-column scan",
+                  flush=True)
+            return
+
         opinion = (lib.OPINIONS / f"{case['id']}.txt").read_text(encoding="utf-8")
         opinion_lines = opinion.split("\n")
         texts = {cid: (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
                  for cid in sorted(ids)}
-
         contracts = blocks(sorted(ids), texts)
+
         # The ceiling is on the call, not on any one document: this carries
         # every document filed in the case PLUS the opinion. Sized from stored
         # artifacts, before the call is made.
         why = lib.out_of_bounds(lib.numbered(opinion) + contracts)
         if why:
-            print(f"skip   {citation}: {why}")
-            done[citation] = {"case_desc": f"skipped: {why}",
-                              "clauses": [], "rejected": []}
-            lib.write_json(OUT, done)
-            continue
+            lib.write_shard(SHARDS, case["id"], citation,
+                            {"case_desc": f"skipped: {why}",
+                             "clauses": [], "rejected": []})
+            print(f"skip   {citation}: {why}", flush=True)
+            return
 
-        print(f"extract {citation}  ({len(ids)} document(s))")
         answer = lib.ask(
             "extract", case["id"],
             citation=citation, opinion=lib.numbered(opinion),
             contracts=contracts,
+            taxonomy=lib.taxonomy_lines(),
             risks=lib.risk_lines(sorted(case["keys"])),
             headnotes="\n".join(f"- [{k}] {h}"
                                 for k, hs in case["keys"].items() for h in hs))
         if answer is None:
-            continue
+            return
 
         kept, rejected = [], []
         for clause in answer["clauses"]:
@@ -188,21 +219,40 @@ def main():
                                  "contract_id": clause["contract_id"],
                                  "head": clause["head"], "tail": clause["tail"],
                                  "reason": why})
-                print(f"  ! rejected {clause['clause_name']}: {why}")
             else:
                 kept.append(record)
-                moved = ("" if record["lines"] == record["claimed_lines"]
-                         else f"  (snapped from {record['claimed_lines'][0]}-"
-                              f"{record['claimed_lines'][1]})")
-                print(f"  {record['clause_name']} [{record['taxonomy']}] "
-                      f"{len(record['text'])} chars from {record['contract_id']} "
-                      f"lines {record['lines'][0]}-{record['lines'][1]} "
-                      f"@{record['score']:.2f}{moved}")
+
+        # Document order within each contract, fixed here rather than left to
+        # the order the model happened to report them in.
+        kept.sort(key=lambda c: (c["contract_id"], c["span"]))
+        rejected.sort(key=lambda r: (r["contract_id"], r["clause_name"]))
+
+        lib.write_shard(SHARDS, case["id"], citation,
+                        {"case_desc": answer["case_desc"],
+                         "clauses": kept, "rejected": rejected})
+
+        out.insert(0, f"extract {citation}  ({len(ids)} document(s))")
+        for r in rejected:
+            out.append(f"  ! rejected {r['clause_name']}: {r['reason']}")
+        for record in kept:
+            moved = ("" if record["lines"] == record["claimed_lines"]
+                     else f"  (snapped from {record['claimed_lines'][0]}-"
+                          f"{record['claimed_lines'][1]})")
+            out.append(f"  {record['clause_name']} [{record['taxonomy']}] "
+                       f"{len(record['text'])} chars from {record['contract_id']} "
+                       f"lines {record['lines'][0]}-{record['lines'][1]} "
+                       f"@{record['score']:.2f}{moved}")
         if not answer["clauses"]:
-            print(f"  no clause extracted: {answer['case_desc']}")
-        done[citation] = {"case_desc": answer["case_desc"],
-                          "clauses": kept, "rejected": rejected}
-        lib.write_json(OUT, done)
+            out.append(f"  no clause extracted: {answer['case_desc']}")
+        print("\n".join(out), flush=True)
+
+    if todo:
+        with cf.ThreadPoolExecutor(max_workers=args.parallel) as pool:
+            futs = [pool.submit(extract_one, cit, ids) for cit, ids in todo]
+            for fut in cf.as_completed(futs):
+                fut.result()
+
+    done = lib.merge_shards(SHARDS, OUT)
 
     clauses = sum(len(c["clauses"]) for c in done.values())
     rejected = sum(len(c["rejected"]) for c in done.values())

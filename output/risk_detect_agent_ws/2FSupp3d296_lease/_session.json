@@ -1,0 +1,82 @@
+{
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 15,
+  "duration_ms": 403689,
+  "total_cost_usd": 2.9465,
+  "usage": {
+    "input_tokens": 26,
+    "cache_creation_input_tokens": 156743,
+    "cache_read_input_tokens": 948243,
+    "output_tokens": 36194,
+    "output_tokens_details": {
+      "thinking_tokens": 15007
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 156743,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 56,
+        "cache_read_input_tokens": 154723,
+        "cache_creation_input_tokens": 6096,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6096
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 26,
+      "outputTokens": 36194,
+      "cacheReadInputTokens": 948243,
+      "cacheCreationInputTokens": 156743,
+      "webSearchRequests": 0,
+      "costUSD": 2.9465315,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "16de32d6-7748-4c14-b8ff-203586a54bbc",
+  "errors": null,
+  "result": "I wrote 164 judgments (c001–c055, c056–c110, c111–c164) across predictions_001.json, predictions_002.json and predictions_003.json.",
+  "path_denials": [],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "utilization": null,
+      "resets_at": 1788417000
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 164,
+  "n_wanted": 164,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

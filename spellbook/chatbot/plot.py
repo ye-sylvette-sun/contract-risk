@@ -1,9 +1,9 @@
 """Threshold-sweep figure: Spellbook against the agentic approach.
 
 Three binary tasks swept over a flagging threshold t in [0, 1] -- risky vs not
-(score `max(prob_cat1, prob_cat2)`), category 1 vs not (`prob_cat1`), category 2
-vs not (`prob_cat2`). The two category panels are ONE-VS-REST, matching
-src/experiments/plot_exp3_thresholds.py, because each probability is an
+(score `max(prob_type1, prob_type2)`), risk type 1 vs not (`prob_type1`), risk type 2
+vs not (`prob_type2`). The two risk-type panels are ONE-VS-REST, matching
+src/experiments/plot_risk_detect_thresholds.py, because each probability is an
 independent judgement rather than a share of one distribution.
 
 Precision and recall on top, the share of provisions flagged underneath. The
@@ -16,7 +16,7 @@ results -- so the comparison is like-for-like. The one-shot `llm_api` arm is
 deliberately not drawn.
 
 Usage:
-    python spellbook/plot.py
+    python spellbook/chatbot/plot.py
 """
 import sys
 from pathlib import Path
@@ -25,15 +25,16 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "spellbook"))
+HERE = Path(__file__).resolve().parent          # spellbook/chatbot/
+ROOT = HERE.parents[1]                          # the repo root
+sys.path.insert(0, str(HERE))
 import score  # noqa: E402
 
 FIG = ROOT / "output" / "figures" / "spellbook_vs_agent_threshold_curves.png"
 
 PANELS = [("Risky vs not", "risky"),
-          ("Category 1 vs not — intrinsic defect", "cat1"),
-          ("Category 2 vs not — relational defect", "cat2")]
+          ("risk type 1 vs not — intrinsic defect", "type1"),
+          ("risk type 2 vs not — relational defect", "type2")]
 
 # Spellbook solid, the agent dashed: the measure is the colour, the arm is the
 # line style, so a reader compares like with like down a column.
@@ -57,7 +58,7 @@ def sweep(scores, labels, thresholds):
 
 def main():
     sb, cids, missing, _lines, n_all, _bad = score.collect()
-    agent = score.arm_rows("exp3_agent_preds.csv", cids)
+    agent = score.arm_rows("risk_detect_agent_preds.csv", cids)
     n = len(sb)
     print(f"{len(cids)} of {n_all} contracts, {n} provisions")
     if missing:
@@ -150,7 +151,7 @@ def main():
              f"{n} provisions from {len(cids)} contracts, judged by both  ·  "
              f"dots mark each arm's threshold for "
              f"{score.TARGET:.0%} recall on risky-vs-not  ·  "
-             f"the two category panels are one-vs-rest",
+             f"the two risk-type panels are one-vs-rest",
              ha="center", fontsize=9.5, color=INK2)
 
     # Colour only. Which arm is solid and which dashed is already said by each

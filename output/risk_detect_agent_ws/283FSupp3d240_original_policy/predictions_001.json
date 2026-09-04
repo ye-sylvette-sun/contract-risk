@@ -1,0 +1,152 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.06}]},
+ {"clause_id": "c002", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.06}]},
+ {"clause_id": "c003", "issues": [
+   {"issue": "The paid-up benefit states only condition 1(a) - a level death benefit 'based on' the current Policy Account Value less indebtedness - without completing the conditions or fixing how the level amount is computed. 'Based on' leaves the actual paid-up amount indeterminate.", "type": 1, "prob": 0.30},
+   {"issue": "A paid-up death benefit measured by Policy Account Value less indebtedness sits awkwardly against Section 4.2's Coverage Option A/B death benefit formulas and the policy's stated Termination/Maturity Date in Section 1.", "type": 2, "prob": 0.22}]},
+ {"clause_id": "c004", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.05}]},
+ {"clause_id": "c005", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.05}]},
+ {"clause_id": "c006", "issues": [
+   {"issue": null, "type": 1, "prob": 0.04},
+   {"issue": null, "type": 2, "prob": 0.04}]},
+ {"clause_id": "c007", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "The definition fixes the Beneficiary by the original application, whereas Section 8.4 supplies a default (the Owner) where no beneficiary was named and a separate change mechanism; the two must be read together.", "type": 2, "prob": 0.13}]},
+ {"clause_id": "c008", "issues": [
+   {"issue": "'Proceeds' is defined to cover both amounts payable on death and on surrender, so it is uncertain whether 'Proceeds' elsewhere means the gross death benefit or the amount net of indebtedness and unpaid premium. The single defined term does double duty.", "type": 1, "prob": 0.24},
+   {"issue": "Section 4.1 splits the payment obligation into 'Death Proceeds' and 'Surrender Value', and Sections 9.4 and 10.1 use 'Policy Proceeds', none of which is separately defined against this definition.", "type": 2, "prob": 0.18}]},
+ {"clause_id": "c009", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.06}]},
+ {"clause_id": "c010", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": "The definition points to Section 7.2 for the initial Effective Date, but Section 7.2 makes coverage turn on the later of Policy Date and premium payment while Section 3.1 says no coverage exists until payment; the commencement date must be reconciled across three provisions.", "type": 2, "prob": 0.18}]},
+ {"clause_id": "c011", "issues": [
+   {"issue": "The definition says the Planned Periodic Premium is what you 'most recently elect to pay' yet also that the Section 1 amount is the two-year minimum, leaving unclear whether the Owner's election can reduce the required premium in that period.", "type": 1, "prob": 0.22},
+   {"issue": "Section 3.2 permits premium payments 'at any time and in any amount you choose', which pulls against this definition's mandatory two-year minimum.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c012", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": "This says the Minimum Initial Premium must be paid 'before' delivery, while Section 3.1 and Section 3.2(2) say 'at or before' the time of delivery.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c013", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c014", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c015", "issues": [
+   {"issue": "The statement that both options provide an increased death benefit when the gap between Policy Account Value and death benefit 'reaches a minimum size' names no figure and no measure of that size.", "type": 1, "prob": 0.26},
+   {"issue": "The corridor described here is expressed in Section 4.2 as a risk-percentage multiple of the Policy Account Value, not as a 'minimum size' difference, so the two descriptions of the same feature do not match.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "The definition cross-refers to 'Section 4.3' for the Monthly Insurance Charge, but Section 4.3 is Interest on Death Proceeds; the charge is governed by Section 5.3.", "type": 1, "prob": 0.19},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c017", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c018", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c019", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": "The flat statement that 'there is no insurance coverage in effect until the payment is made' is hard to square with Section 7.2's reference to a Temporary Insurance Agreement given when the application was taken.", "type": 2, "prob": 0.22}]},
+ {"clause_id": "c020", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": "The cumulative one-twelfth-per-elapsed-month test here is stated again, in different words, in the first-two-years no-lapse sentence of Section 5.10 and against the flat two-year total in Section 3.2(1).", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c021", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c022", "issues": [
+   {"issue": "'This will happen only if' has no clear antecedent - it may qualify the insurer's power to limit additional premiums, the insurability requirement, or both - and the insurability condition is attached ambiguously to the list.", "type": 1, "prob": 0.27},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c023", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c024", "issues": [
+   {"issue": "The reinstatement conditions cross-refer to 'Section 5.2' for Monthly Insurance Charges, but Section 5.2 is the Interest Rate provision and the charge is defined in Section 5.3; the effective-date condition is also left unfinished.", "type": 1, "prob": 0.22},
+   {"issue": "Reinstatement uses Policy Account Value and Surrender Charges 'in effect when the Policy lapsed', which has to be reconciled with Section 5.10's statement that the Policy 'terminates without value' at the end of the Grace Period.", "type": 2, "prob": 0.24}]},
+ {"clause_id": "c025", "issues": [
+   {"issue": null, "type": 1, "prob": 0.14},
+   {"issue": "The unconditional promise to pay the Surrender Value while the Insured lives sits against Section 5.8, which makes payment of the Surrender Value depend on a written request to surrender, and against Section 5.8's six-month postponement right.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c026", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.05}]},
+ {"clause_id": "c027", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c028", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.12}]},
+ {"clause_id": "c029", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c030", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": "Increasing the death benefit 'by any premiums received after the date of death' is hard to reconcile with Section 5.10(3), which deducts premium unpaid at death from the Proceeds.", "type": 2, "prob": 0.19}]},
+ {"clause_id": "c031", "issues": [
+   {"issue": "The insurer may unilaterally 'modify' the death benefit to comply with federal tax law while the Owner may 'refuse' the modification, leaving the consequence of a refusal - and the state of the benefit thereafter - unstated.", "type": 1, "prob": 0.24},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c032", "issues": [
+   {"issue": "Interest is at 'an annual rate determined by us', an unbounded discretionary rate subject only to the floor of the rate 'required by the state in which the Insured resides', a state that may differ from the delivery state used elsewhere.", "type": 1, "prob": 0.23},
+   {"issue": null, "type": 2, "prob": 0.12}]},
+ {"clause_id": "c033", "issues": [
+   {"issue": "The Policy Account Value is defined by the formula A + B + C - D - E but the text does not identify each lettered element, and it cross-refers 'E' to 'Section 2' rather than to Section 5.3 where the Monthly Insurance Charge is fixed.", "type": 1, "prob": 0.30},
+   {"issue": null, "type": 2, "prob": 0.13}]},
+ {"clause_id": "c034", "issues": [
+   {"issue": "'At the rates declared by us' confers wholly undefined discretion over the credited interest rate with no standard for setting it.", "type": 1, "prob": 0.27},
+   {"issue": null, "type": 2, "prob": 0.12}]},
+ {"clause_id": "c035", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": "The guaranteed rate is left to Section 1, the Policy Specifications page, whose corresponding entries are blank/illegible in the instrument as issued.", "type": 2, "prob": 0.17}]},
+ {"clause_id": "c036", "issues": [
+   {"issue": "The worked example is arithmetically wrong on its face - '6% less 2 points equals 6%' - so the illustration contradicts the rule it illustrates.", "type": 1, "prob": 0.40},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c037", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c038", "issues": [
+   {"issue": "The Cost of Insurance is stated to be computed 'on any Premium Due Date', a term the Policy never defines; every other charging provision uses the defined 'Monthly Due Date'. The formula's element 'C' is also left undefined.", "type": 1, "prob": 0.34},
+   {"issue": "The charging date here conflicts with Section 5.3 and definition 2.15, which deduct the Monthly Insurance Charge on each Monthly Due Date.", "type": 2, "prob": 0.25}]},
+ {"clause_id": "c039", "issues": [
+   {"issue": "Current cost of insurance rates are set 'by us based on our expectation of future experience', a standard with no defined content, and the guaranteed maximum table is stated 'per $1,050' rather than per $1,000.", "type": 1, "prob": 0.32},
+   {"issue": null, "type": 2, "prob": 0.13}]},
+ {"clause_id": "c040", "issues": [
+   {"issue": "The rated-class adjustment sets out alternatives (a) and (b) but the operative words of each - what is multiplied by what - are not completed, so the adjustment cannot be applied from the text.", "type": 1, "prob": 0.24},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c041", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c042", "issues": [
+   {"issue": "The Cash Value clause defines A, B and C but never states the arithmetic that combines them, so whether C (excess interest credited over the guaranteed rate) is subtracted, and over what period, is left open.", "type": 1, "prob": 0.31},
+   {"issue": null, "type": 2, "prob": 0.14}]},
+ {"clause_id": "c043", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c044", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c045", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c046", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c047", "issues": [
+   {"issue": "The withdrawal limits are expressed as 'at least $500 but no more than the Surrender Value less $25 and less the next Monthly Insurance Charges', a chain of deductions whose order and content are not clear on the face of the sentence.", "type": 1, "prob": 0.20},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c048", "issues": [
+   {"issue": "The Withdrawal Charge formula 'A + B + $25' leaves 'B' unidentified, so the charge cannot be computed from the provision as written.", "type": 1, "prob": 0.24},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c049", "issues": [
+   {"issue": "The instruction that the first year Surrender Fee is decreased by 'A' 'divided by the Percent of Surrender Fee for the coverage year' is mathematically opaque and does not track the pro-rata definition of A in the preceding paragraph.", "type": 1, "prob": 0.22},
+   {"issue": null, "type": 2, "prob": 0.12}]},
+ {"clause_id": "c050", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": null, "type": 2, "prob": 0.12}]}
+]}

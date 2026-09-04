@@ -1,0 +1,135 @@
+examples (3): 1.1=99FSupp3d585_asset_purchase_and_product(4p/114n), 1.3=88FSupp3d27_e_mployment_b_inding(3p/18n), 2.2=779FSupp2d416_lovejoy_inc_kamco_industrial(4p/19n)
+order shuffled, seed 0
+11636 clauses (190 risky) in 100 contracts after excluding 3 example contract(s)
+1 contract(s) done, 99 to run (claude-opus-5, effort high, max 60 turns, 8 at a time, auth via token)
+image contract-risk-judge:0.2.139
+      sha256:957de41bdd619eb6845ec741692445e82b696139fe53b434f86b03565b0f7093
+[1/99] 303FSupp3d236_1987_welfare_fund_contribution: 90 provisions, 28,480-char contract
+[2/99] 874FSupp2d328_financial_guaranty_insurance_policy: 72 provisions, 34,653-char contract
+[3/99] 20FSupp3d709_nols_student_agreement_including: 29 provisions, 12,733-char contract
+[4/99] 252FSupp3d52_agreement_for_network_operator: 284 provisions, 198,768-char contract
+[5/99] 562FSupp2d260_settlement_agreement_the_agreement: 9 provisions, 4,953-char contract
+[6/99] 809FSupp2d582_april_28_2008_letter: 21 provisions, 11,767-char contract
+[7/99] 982FSupp2d518_2003_mta: 11 provisions, 7,887-char contract
+[8/99] 467FSupp2d115_venture_agreement: 23 provisions, 5,839-char contract
+    562FSupp2d260_settlement_agreement_the_agreement: 9/9 judged  | 8 turns, 66s, $0.33, rc=0
+[9/99] 702FSupp2d921_the_trust: 51 provisions, 23,938-char contract
+    982FSupp2d518_2003_mta: 11/11 judged  | 8 turns, 69s, $0.35, rc=0
+[10/99] 359FSupp3d268_leases: 227 provisions, 149,098-char contract
+    809FSupp2d582_april_28_2008_letter: 21/21 judged  | 11 turns, 95s, $0.50, rc=0
+    ! 809FSupp2d582_april_28_2008_letter: 1 path(s) denied outside the workspace
+[11/99] 35FSupp3d725_confirmations: 245 provisions, 276,548-char contract
+    20FSupp3d709_nols_student_agreement_including: 29/29 judged  | 9 turns, 102s, $0.52, rc=0
+[12/99] 871FSupp2d671_2005_noncompetition_agreement: 24 provisions, 16,222-char contract
+    467FSupp2d115_venture_agreement: 23/23 judged  | 9 turns, 116s, $0.50, rc=0
+[13/99] 894F3d509_delaware_river_basin_compact: 153 provisions, 143,606-char contract
+    871FSupp2d671_2005_noncompetition_agreement: 24/24 judged  | 10 turns, 91s, $0.55, rc=0
+    ! 871FSupp2d671_2005_noncompetition_agreement: 1 path(s) denied outside the workspace
+[14/99] 571FSupp2d59_airtime_royalty_agreement: 87 provisions, 71,494-char contract
+    702FSupp2d921_the_trust: 51/51 judged  | 10 turns, 137s, $0.78, rc=0
+[15/99] 252FSupp3d52_guaranty_agreement: 33 provisions, 12,192-char contract
+    874FSupp2d328_financial_guaranty_insurance_policy: 72/72 judged  | 9 turns, 212s, $1.13, rc=0
+[16/99] 555BR369_settlement_agreement_between_debtors: 38 provisions, 32,011-char contract
+    303FSupp3d236_1987_welfare_fund_contribution: 90/90 judged  | 10 turns, 216s, $1.09, rc=0
+[17/99] 78FSupp3d520_consent_j: 24 provisions, 54,614-char contract
+    252FSupp3d52_guaranty_agreement: 33/33 judged  | 11 turns, 111s, $0.60, rc=0
+    ! 252FSupp3d52_guaranty_agreement: 1 path(s) denied outside the workspace
+[18/99] 774FSupp2d1073_aia_document_a111_1997: 324 provisions, 488,178-char contract
+    78FSupp3d520_consent_j: 24/24 judged  | 9 turns, 127s, $0.94, rc=0
+[19/99] 226FSupp3d719_pond_agreement: 144 provisions, 29,787-char contract
+    555BR369_settlement_agreement_between_debtors: 38/38 judged  | 9 turns, 138s, $0.83, rc=0
+[20/99] 527BR351_secured_promissory_note_purchase: 96 provisions, 77,261-char contract
+    894F3d509_delaware_river_basin_compact: 153/153 judged  | 14 turns, 310s, $2.21, rc=0
+[21/99] 767FSupp2d1191_subscription_agreement: 54 provisions, 15,594-char contract
+    252FSupp3d52_agreement_for_network_operator: 284/284 judged  | 19 turns, 472s, $3.56, rc=0
+    ! 252FSupp3d52_agreement_for_network_operator: 3 path(s) denied outside the workspace
+[22/99] 118FSupp3d802_membership_agreement: 86 provisions, 62,902-char contract
+    571FSupp2d59_airtime_royalty_agreement: 87/87 judged  | 10 turns, 304s, $1.64, rc=0
+    ! 571FSupp2d59_airtime_royalty_agreement: 1 path(s) denied outside the workspace
+[23/99] 299FSupp3d836_comcell_assignment: 107 provisions, 114,424-char contract
+    767FSupp2d1191_subscription_agreement: 54/54 judged  | 9 turns, 123s, $0.68, rc=0
+[24/99] 68FSupp3d317_2008_agreement: 88 provisions, 54,834-char contract
+    35FSupp3d725_confirmations: 245/245 judged  | 21 turns, 485s, $3.47, rc=0
+[25/99] 88FSupp3d1156_product_contamination_insurance_policy: 110 provisions, 85,098-char contract
+    359FSupp3d268_leases: 227/227 judged  | 17 turns, 519s, $3.41, rc=0
+[26/99] 767FSupp2d1191_october_24_2000_declaration: 74 provisions, 56,886-char contract
+    527BR351_secured_promissory_note_purchase: 96/96 judged  | 12 turns, 275s, $1.73, rc=0
+[27/99] 874FSupp2d328_insurance_and_indemnity_agreement: 183 provisions, 77,705-char contract
+    226FSupp3d719_pond_agreement: 144/144 judged  | 11 turns, 288s, $1.42, rc=0
+[28/99] 122FSupp3d1157_broker_dealer_agreement: 47 provisions, 30,787-char contract
+    118FSupp3d802_membership_agreement: 86/86 judged  | 13 turns, 283s, $1.50, rc=0
+    ! 118FSupp3d802_membership_agreement: 3 path(s) denied outside the workspace
+[29/99] 35FSupp3d725_master_repurchase_agreement_mra: 185 provisions, 115,540-char contract
+    122FSupp3d1157_broker_dealer_agreement: 47/47 judged  | 10 turns, 146s, $0.84, rc=0
+    ! 122FSupp3d1157_broker_dealer_agreement: 1 path(s) denied outside the workspace
+[30/99] 527BR351_mortgage_fund_08_note: 223 provisions, 140,361-char contract
+    68FSupp3d317_2008_agreement: 88/88 judged  | 9 turns, 259s, $1.46, rc=0
+[31/99] 767FSupp2d1191_custody_agreement: 38 provisions, 12,527-char contract
+    767FSupp2d1191_october_24_2000_declaration: 74/74 judged  | 11 turns, 237s, $1.34, rc=0
+    ! 767FSupp2d1191_october_24_2000_declaration: 1 path(s) denied outside the workspace
+[32/99] 131FSupp3d635_restricted_cash_agreement_to: 21 provisions, 9,452-char contract
+    299FSupp3d836_comcell_assignment: 107/107 judged  | 12 turns, 356s, $2.13, rc=0
+[33/99] 11FSupp3d1062_commercial_property_insurance_policy: 346 provisions, 246,261-char contract
+    88FSupp3d1156_product_contamination_insurance_policy: 110/110 judged  | 11 turns, 295s, $1.64, rc=0
+    ! 88FSupp3d1156_product_contamination_insurance_policy: 1 path(s) denied outside the workspace
+[34/99] 767FSupp2d1191_master_securities_loan_agreement: 155 provisions, 92,712-char contract
+    131FSupp3d635_restricted_cash_agreement_to: 21/21 judged  | 10 turns, 96s, $0.50, rc=0
+    ! 131FSupp3d635_restricted_cash_agreement_to: 1 path(s) denied outside the workspace
+[35/99] 268FSupp3d61_contract: 58 provisions, 13,041-char contract
+    767FSupp2d1191_custody_agreement: 38/38 judged  | 11 turns, 116s, $0.62, rc=0
+    ! 767FSupp2d1191_custody_agreement: 1 path(s) denied outside the workspace
+[36/99] 97FSupp3d548_pooling_and_servicing_agreement: 476 provisions, 352,225-char contract
+    774FSupp2d1073_aia_document_a111_1997: 324/324 judged  | 21 turns, 688s, $4.23, rc=0
+[37/99] 571FSupp2d59_master_royalty_and_use: 91 provisions, 84,281-char contract
+    874FSupp2d328_insurance_and_indemnity_agreement: 183/183 judged  | 19 turns, 381s, $2.24, rc=0
+    ! 874FSupp2d328_insurance_and_indemnity_agreement: 3 path(s) denied outside the workspace
+[38/99] 864FSupp2d1023_declarations_to_the_itu: 23 provisions, 50,092-char contract
+    35FSupp3d725_master_repurchase_agreement_mra: 185/185 judged  | 13 turns, 261s, $1.99, rc=0
+[39/99] 303FSupp3d236_fund_s_trust_agreement: 155 provisions, 116,712-char contract
+    268FSupp3d61_contract: 58/58 judged  | 9 turns, 190s, $0.86, rc=0
+[40/99] 694FSupp2d106_confidential_disclosure_agreement: 14 provisions, 5,985-char contract
+    864FSupp2d1023_declarations_to_the_itu: 23/23 judged  | 9 turns, 126s, $0.79, rc=0
+[41/99] 874FSupp2d328_mortgage_loan_purchase_agreement: 148 provisions, 87,396-char contract
+    694FSupp2d106_confidential_disclosure_agreement: 14/14 judged  | 8 turns, 74s, $0.37, rc=0
+[42/99] 785FSupp2d188_policy: 20 provisions, 7,007-char contract
+    767FSupp2d1191_master_securities_loan_agreement: 155/155 judged  | 13 turns, 339s, $2.26, rc=0
+[43/99] 18FSupp3d456_phoenix_accumulator_universal_life: 208 provisions, 100,745-char contract
+    571FSupp2d59_master_royalty_and_use: 91/91 judged  | 12 turns, 213s, $1.58, rc=0
+[44/99] 527BR351_liquidating_trust_agreement: 64 provisions, 50,489-char contract
+    527BR351_mortgage_fund_08_note: 223/223 judged  | 17 turns, 502s, $3.35, rc=0
+    ! 527BR351_mortgage_fund_08_note: 1 path(s) denied outside the workspace
+[45/99] 565BR241_senior_secured_credit_agreement: 250 provisions, 173,865-char contract
+    785FSupp2d188_policy: 20/20 judged  | 9 turns, 120s, $0.55, rc=0
+[46/99] 951FSupp2d826_2011_2012_policy: 91 provisions, 45,901-char contract
+    527BR351_liquidating_trust_agreement: 64/64 judged  | 10 turns, 184s, $1.17, rc=0
+[47/99] 787FSupp2d118_employment_agreement_agreement: 37 provisions, 25,620-char contract
+    303FSupp3d236_fund_s_trust_agreement: 155/155 judged  | 14 turns, 427s, $2.73, rc=0
+[48/99] 57FSupp3d920_management_agreement: 16 provisions, 11,563-char contract
+    11FSupp3d1062_commercial_property_insurance_policy: 346/346 judged  | 22 turns, 597s, $3.83, rc=0
+[49/99] 122FSupp3d1157_proposal_to_provide_investment: 24 provisions, 17,792-char contract
+    122FSupp3d1157_proposal_to_provide_investment: 24/24 judged  | 10 turns, 85s, $0.48, rc=0
+    ! 122FSupp3d1157_proposal_to_provide_investment: 1 path(s) denied outside the workspace
+[50/99] 871FSupp2d671_2005_employment_agreement: 94 provisions, 52,936-char contract
+    787FSupp2d118_employment_agreement_agreement: 37/37 judged  | 9 turns, 145s, $0.78, rc=0
+[51/99] 976FSupp2d606_haywood_marriott_stipulation_of: 15 provisions, 4,791-char contract
+    57FSupp3d920_management_agreement: 16/16 judged  | 9 turns, 104s, $0.52, rc=0
+[52/99] 364FSupp3d990_clinic_master_lease_and: 64 provisions, 41,054-char contract
+    874FSupp2d328_mortgage_loan_purchase_agreement: 148/148 judged  | 13 turns, 443s, $2.41, rc=0
+[53/99] 767FSupp2d1191_confidential_memorandum_for_the: 91 provisions, 28,029-char contract
+    951FSupp2d826_2011_2012_policy: 91/91 judged  | 9 turns, 279s, $1.38, rc=0
+[54/99] 266FSupp3d961_farmout_agreements_foas: 75 provisions, 226,423-char contract
+    976FSupp2d606_haywood_marriott_stipulation_of: 15/15 judged  | 10 turns, 68s, $0.38, rc=0
+    ! 976FSupp2d606_haywood_marriott_stipulation_of: 1 path(s) denied outside the workspace
+[55/99] 328FSupp3d317_kelly_agreement: 45 provisions, 24,568-char contract
+    97FSupp3d548_pooling_and_servicing_agreement: 476/476 judged  | 46 turns, 708s, $6.27, rc=0
+[56/99] 93FSupp3d375_personal_deposit_account_agreement: 267 provisions, 161,522-char contract
+    18FSupp3d456_phoenix_accumulator_universal_life: 208/208 judged  | 13 turns, 422s, $2.56, rc=0
+[57/99] 694FSupp2d794_umbrella_liability_policy_number: 135 provisions, 70,735-char contract
+    364FSupp3d990_clinic_master_lease_and: 64/64 judged  | 10 turns, 180s, $1.05, rc=0
+    ! 364FSupp3d990_clinic_master_lease_and: 1 path(s) denied outside the workspace
+[58/99] 785FSupp2d188_pooling_servicing_agreement_psa: 698 provisions, 685,397-char contract
+    871FSupp2d671_2005_employment_agreement: 94/94 judged  | 11 turns, 243s, $1.36, rc=0
+    ! 871FSupp2d671_2005_employment_agreement: 1 path(s) denied outside the workspace
+[59/99] 266FSupp3d666_employment_agreement: 62 provisions, 46,025-char contract
+    565BR241_senior_secured_credit_agreement: 150/250 judged  (100 MISSING)  | ? turns, 518s, $0.00, rc=1
+    ! 565BR241_senior_secured_credit_agreement: only 150 of 250 provisions judged

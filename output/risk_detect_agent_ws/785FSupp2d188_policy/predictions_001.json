@@ -1,0 +1,52 @@
+{"judgments": [
+  {"clause_id": "c001",
+   "issues": [
+     {"issue": "The guarantee is declared \"UNCONDITIONALLY AND IRREVOCABLY\" yet is immediately qualified as \"subject only to the terms of this Policy (which includes each endorsement hereto)\"; what an unconditional guarantee of \"full and complete payment\" means once the endorsements' conditions and exclusions are layered on is genuinely contestable. The operative promise also depends entirely on \"Guaranteed Distributions\", a term left to Endorsement No. 1.", "type": 1, "prob": 0.38},
+     {"issue": "The insuring clause promises \"full and complete payment of Guaranteed Distributions\" while the acceleration provision (c010) says an acceleration payment is not due except at Financial Security's option, and the Endorsement No. 1 definition of Guaranteed Distributions (c012) carves out Net Rate Cap reductions, prepayment effects and withholding; reconciling \"full and complete\" with those carve-outs is a live question. The guarantee also runs \"to each Trustee\" while the endorsement machinery (c019, c020) vests the claim and assignment functions in the Trust Administrator.", "type": 2, "prob": 0.34}
+   ]},
+  {"clause_id": "c002",
+   "issues": [
+     {"issue": "The preference guarantee covers distributions \"made during the Term of this Policy\" that are \"subsequently avoided\", so it is unclear whether the avoidance itself must occur within the Term as defined in Endorsement No. 1 (c013). The scope of \"any distribution of principal\" — whether interest is included — is also left uncertain on the face of the clause.", "type": 1, "prob": 0.26},
+     {"issue": null, "type": 2, "prob": 0.14}
+   ]},
+  {"clause_id": "c003",
+   "issues": [
+     {"issue": "Payment is to be made \"following receipt\" of notice with no stated period in this clause, leaving the timing of Financial Security's obligation dependent on an external cross-reference. \"Notice as described in [the endorsement]\" is an incorporation whose content must be supplied from elsewhere.", "type": 1, "prob": 0.24},
+     {"issue": "The timing left open here is supplied only by the endorsement's \"Business Day following receipt\" language (c017); whether that endorsement governs all payments or only preference claims is not settled by either provision. That gap is a relationship question rather than a defect visible in this sentence alone.", "type": 2, "prob": 0.22}
+   ]},
+  {"clause_id": "c004",
+   "issues": [
+     {"issue": "Subrogation is expressed narrowly as to \"the rights of each Holder to receive distributions with respect to each Certificate\", which on its face may not carry the Holder's contract or fraud claims against third parties. Whether the clause transfers only payment rights or all rights of recovery is the classic construction question for a monoline insurer seeking to sue.", "type": 1, "prob": 0.44},
+     {"issue": "This narrow subrogation sits against the endorsement's assignment language (c017 and c019), which purports to transfer to Financial Security \"all rights and claims of the Holder relating to or arising under the Insured Certificates\". The two provisions describe different scopes of transfer for the same payment.", "type": 2, "prob": 0.38}
+   ]},
+  {"clause_id": "c005",
+   "issues": [
+     {"issue": "\"Holder\" is tied to the registered owner on the Trustee's books, which in a book-entry certificate structure is a depository nominee rather than the beneficial certificateholder. Who may actually claim as a \"Holder\" is therefore contestable, though the definition itself is internally clear.", "type": 1, "prob": 0.21},
+     {"issue": null, "type": 2, "prob": 0.12}
+   ]},
+  {"clause_id": "c006",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.10},
+     {"issue": "The clause defers \"Trustee\", \"Guaranteed Distributions\" and \"Term of this Policy\" entirely to Endorsement No. 1, whose definitions (c012, c013, c015) also introduce a separate Trust Administrator (c014) not mentioned here. Any incoherence in those endorsement definitions is imported wholesale into the Policy by this referral.", "type": 2, "prob": 0.20}
+   ]},
+  {"clause_id": "c007",
+   "issues": [
+     {"issue": "\"[S]hall not be modified, altered or affected by any other agreement or instrument, including any modification or amendment thereto\" leaves \"thereto\" ambiguous as between the Policy and the other agreement, and \"affected by\" is broader than \"modified\" in an undefined way. Whether the clause bars mere interpretive reference to other documents or only substantive modification is genuinely open.", "type": 1, "prob": 0.36},
+     {"issue": "The Policy says it is not affected by any other agreement or instrument, yet Endorsement No. 1 defines the core terms by reference to the Pooling and Servicing Agreement (c012, c014, c015, c016) and even keys coverage to amendments of that Agreement. Squaring the integration language with that pervasive incorporation is a real whole-instrument problem.", "type": 2, "prob": 0.44}
+   ]},
+  {"clause_id": "c008",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.09},
+     {"issue": null, "type": 2, "prob": 0.07}
+   ]},
+  {"clause_id": "c009",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.11},
+     {"issue": "A flat non-cancellation statement must be read with the \"Term of this Policy\" definition in Endorsement No. 1 (c013), which fixes an end date for coverage; whether termination by expiry is consistent with non-cancellability is a minor but nameable fit question. Nothing else in the instrument contradicts it.", "type": 2, "prob": 0.16}
+   ]},
+  {"clause_id": "c010",
+   "issues": [
+     {"issue": "\"An acceleration payment shall not be due under this Policy unless ... at the sole option of Financial Security\" leaves \"acceleration payment\" undefined and does not say what happens to amounts that have been accelerated under the transaction documents. The clause's reach over accelerated principal is the kind of term insurers and trustees read differently.", "type": 1, "prob": 0.33},
+     {"issue": "This limitation cuts against the insuring clause's \"full and complete payment of Guaranteed Distributions\" (c001) and against the Guaranteed Distributions definition in Endorsement No. 1 (c012), which is keyed to scheduled distribution dates. Whether the guarantee is of scheduled amounts only, or of all amounts due, turns on harmonising the three.", "type": 2, "prob": 0.30}
+   ]}
+]}

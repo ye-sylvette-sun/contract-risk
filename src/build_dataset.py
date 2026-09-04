@@ -26,16 +26,17 @@ from collections import Counter, defaultdict
 
 import lib
 
-FIELDS = ["citation", "taxonomy", "key", "clause_id", "clause_name", "label",
-          "provenance", "case_desc", "contract_id", "contract_file",
-          "source_lines", "source_span", "clause_text", "anchor_score",
-          "opinion_comment"]
+FIELDS = ["citation", "taxonomy", "taxonomy_provenance", "key", "clause_id",
+          "clause_name", "label", "provenance", "case_desc", "contract_id",
+          "contract_file", "source_lines", "source_span", "clause_text",
+          "anchor_score", "opinion_comment"]
 
 
 def row(citation, case_desc, entry, c, clause_id, label, provenance,
-        taxonomy, key, comment=""):
+        taxonomy, tax_provenance, key, comment=""):
     return {
-        "citation": citation, "taxonomy": taxonomy, "key": key,
+        "citation": citation, "taxonomy": taxonomy,
+        "taxonomy_provenance": tax_provenance, "key": key,
         "clause_id": clause_id, "clause_name": c.get("clause_name") or c["name"],
         "label": label, "provenance": provenance, "case_desc": case_desc,
         "contract_id": c["contract_id"], "contract_file": entry["file"],
@@ -57,10 +58,17 @@ def main():
     for cid, entry in registry.items():
         of_case.setdefault(entry["citation"], []).append(cid)
 
+    # Every positive's text, across every case. A negative that reproduces one
+    # of these character for character is dropped below.
+    positive_texts = {c["text"] for case in clauses.values()
+                      for c in case["clauses"]}
+
     for citation, found in sorted(clauses.items()):
         case = cases.get(citation, {})
-        # Fallback risk category for a contract with no positive of its own. Still
-        # the Westlaw keys, never a model's choice.
+        # Fallback risk type for a contract with no positive of its own: every
+        # code the CASE was filed under. Straight from the Westlaw keys, so it
+        # is `westlaw` provenance however many codes there are — no model chose
+        # between them, they are simply all carried.
         case_code = ",".join(case.get("taxonomy", []))
         case_key = ",".join(sorted(case.get("keys", {})))
 
@@ -71,13 +79,15 @@ def main():
         by_pos = defaultdict(list)
         for c in found["clauses"]:
             by_pos[c["contract_id"]].append(c)
-        # The code is per clause, from the case's own Westlaw keys.
+        # The code is per clause, drawn from the case's own Westlaw keys.
         for cid in sorted(by_pos):
             for i, c in enumerate(sorted(by_pos[cid], key=lambda c: c["span"]), 1):
                 rows.append(row(citation, found["case_desc"], registry[cid], c,
                                 f"pos{i}", "POSITIVE",
                                 "step 1 — construed by the court",
-                                c["taxonomy"], c["key"], c["opinion_comment"]))
+                                c["taxonomy"],
+                                c.get("taxonomy_provenance", "westlaw"),
+                                c["key"], c["opinion_comment"]))
 
         # Every inventoried contract contributes negatives, not only those that
         # produced a positive.
@@ -87,9 +97,16 @@ def main():
             n = 0
             here = [c for c in found["clauses"] if c["contract_id"] == cid]
             positives = [c["lines"] for c in here]
-            # A negative carries the risk category its own contract's positives
-            # were construed under; failing that, the case's code.
-            taxonomy = ",".join(sorted({c["taxonomy"] for c in here})) or case_code
+            # A negative carries the risk type its own contract's positives were
+            # construed under; failing that, the case's codes. It is not a claim
+            # about the negative — nothing was construed in it — but a record of
+            # what the case is about, which is why its provenance follows the
+            # positives that supplied it.
+            taxonomy = ",".join(sorted({t for c in here
+                                        for t in c["taxonomy"].split(",")})) \
+                or case_code
+            tax_prov = ("model" if any(c.get("taxonomy_provenance") == "model"
+                                       for c in here) else "westlaw")
             key = ",".join(sorted({k for c in here
                                    for k in c["key"].split(",")})) or case_key
             for c in sorted(inventory[cid]["clauses"], key=lambda c: c["span"]):
@@ -99,11 +116,25 @@ def main():
                     print(f"    excluded {c['name']} (lines {c['lines'][0]}-"
                           f"{c['lines'][1]} meet a positive at {hit[0]}-{hit[1]})")
                     continue
+                # Same words, somewhere else. A clause that reproduces a
+                # positive character for character carries whatever made that
+                # positive risky, so calling it a negative would be asserting
+                # the opposite of a label the corpus already holds. Two things
+                # produce this: boilerplate a policy repeats across its
+                # endorsements, and a case that files several editions of the
+                # same instrument where the court happened to cite one of them.
+                # Neither is evidence either way, so the row is dropped rather
+                # than labelled — the same choice the line rule above makes.
+                if c["text"] in positive_texts:
+                    print(f"    excluded {c['name']} (lines {c['lines'][0]}-"
+                          f"{c['lines'][1]} reproduce a positive verbatim)")
+                    continue
                 n += 1
                 n_case += 1
                 rows.append(row(citation, found["case_desc"], registry[cid],
                                 {**c, "contract_id": cid}, f"neg{n}", "NEGATIVE",
-                                "step 2 — not disputed", taxonomy, key))
+                                "step 2 — not disputed", taxonomy, tax_prov,
+                                key))
 
         missing = [c["contract_id"] for c in found["clauses"]
                    if c["contract_id"] not in inventory]

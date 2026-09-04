@@ -1,5 +1,5 @@
 """Shared machinery for the dataset build: paths, the taxonomy, one stateless
-Claude call, `numbered()`, the `CLAUSE` definition both prompts share, and
+model call, `numbered()`, the `CLAUSE` definition both prompts share, and
 `locate()`.
 
 The model never writes clause text. It returns a coarse line window plus a short
@@ -10,16 +10,30 @@ itself. The anchors only say *where*. See docs/DATASET.md.
 
 import bisect
 import difflib
+import hashlib
 import json
 import os
 import re
 import time
 from pathlib import Path
 
-import anthropic
 import httpx
+import openai
+import tiktoken
 
-MODEL = "claude-opus-5"
+# The DATASET BUILD runs on OpenAI; EXPERIMENT 3 runs on Claude. Not an
+# oversight: the experiment compares one API call against one Claude Code agent
+# session, and the CLI cannot be pointed at another provider — moving only its
+# one-shot arm would make the two arms differ in model as well as in delivery.
+# `provider_of()` reads the transport off the model name, so a call site that
+# names its model has already chosen its API.
+MODEL = "gpt-5.6-sol"
+# Step 0b asks a shallow, visual question of every contract, so it runs on the
+# cheap model rather than the reasoning one. Named here, beside MODEL, so the
+# two are chosen together.
+CHEAP_MODEL = "gpt-5.6-terra"
+CLAUDE_MODEL = "claude-opus-5"      # the risk-detection experiment, both arms
+ENCODING = "o200k_base"      # what the OpenAI models tokenise with
 # The model's own ceiling, not a self-imposed budget: covers thinking and
 # response together, and only what is produced is billed, so there is nothing to
 # gain by lowering it.
@@ -79,7 +93,7 @@ KEYS = {
     "160": ("k160", "2.3", "whether a RECITAL conflicts with or controls the operative terms"),
 }
 
-CATEGORIES = {
+RISK_TYPES = {
     "1.1": "Lexical ambiguity or vagueness — a word or phrase in the clause is "
            "susceptible to more than one reasonable reading on its face.",
     "1.2": "Mechanical error — a mistake in writing, grammar, spelling or "
@@ -100,13 +114,26 @@ KEY_BY_LABEL = {label: (folder, code, about)
 
 
 def risk_lines(key_labels):
-    """The risk categories a case was selected under, as prompt text."""
+    """The risk types a case was selected under, as prompt text."""
     out = []
     for label in key_labels:
         _, code, about = KEY_BY_LABEL[label]
         out.append(f"  [{code}] Westlaw key {label} — {about}.\n"
-                   f"        {CATEGORIES[code]}")
+                   f"        {RISK_TYPES[code]}")
     return "\n".join(out)
+
+
+def taxonomy_lines():
+    """The whole risk-type taxonomy, as prompt text.
+
+    A case's own codes are the CANDIDATES a clause may be given (`risk_lines`);
+    this is the taxonomy those candidates are drawn from. A model that is shown
+    only two codes cannot tell whether they are the whole scheme or a slice of
+    it, and a multi-code case asks it to choose between them — so it is shown
+    both, and told which is which.
+    """
+    return "\n".join(f"  [{code}] {text}" for code, text in
+                     sorted(RISK_TYPES.items()))
 
 
 def codes_of(case):
@@ -114,7 +141,6 @@ def codes_of(case):
     return sorted({KEY_BY_LABEL[k][1] for k in case["keys"]})
 
 
-# ------------------------------------------------------------------- names --
 def cite_id(citation):
     """44 F.Supp.3d 736 -> 44FSupp3d736 (a filename-safe case id)."""
     return re.sub(r"[^A-Za-z0-9]", "", citation)
@@ -505,25 +531,49 @@ def overlaps(a, b):
 _client = None
 
 
+_anthropic_client = None
+
+
 def client():
     """Built on first use, so the steps that need no model also need no key."""
     global _client
     if _client is None:
-        if not os.environ.get("ANTHROPIC_API_KEY"):
-            raise SystemExit("ANTHROPIC_API_KEY is not set — put it in .env "
+        if not os.environ.get("OPENAI_API_KEY"):
+            raise SystemExit("OPENAI_API_KEY is not set — put it in .env "
                              "(see .env.example)")
-        _client = anthropic.Anthropic()
+        _client = openai.OpenAI()
     return _client
 
 
+def anthropic_client():
+    """Only the risk-detection experiment reaches this, so only it needs the Anthropic key."""
+    global _anthropic_client
+    if _anthropic_client is None:
+        import anthropic
+        if not os.environ.get("ANTHROPIC_API_KEY"):
+            raise SystemExit("ANTHROPIC_API_KEY is not set — the risk-detection experiment runs "
+                             "on Claude. Put it in .env (see .env.example)")
+        _anthropic_client = anthropic.Anthropic()
+    return _anthropic_client
+
+
+_encoder = None
+
+
 def n_tokens(text):
-    """Claude's own count, from the metering endpoint. A text shorter than
-    MIN_INPUT_TOKENS characters cannot be that many tokens, so it skips the
-    round trip."""
+    """The token count, from the tokeniser the model itself uses.
+
+    Local, unlike the Anthropic metering endpoint this replaces: no round trip,
+    no key, no rate limit, and `out_of_bounds()` can size a call for free. A
+    text shorter than MIN_INPUT_TOKENS characters cannot be that many tokens,
+    so it skips the work entirely.
+    """
+    global _encoder
     if len(text) < MIN_INPUT_TOKENS:
         return len(text)
-    return client().messages.count_tokens(
-        model=MODEL, messages=[{"role": "user", "content": text}]).input_tokens
+    if _encoder is None:
+        _encoder = tiktoken.get_encoding(ENCODING)
+    return len(_encoder.encode(text, disallowed_special=()))
 
 
 def out_of_bounds(text):
@@ -542,18 +592,122 @@ RETRIES = 4          # attempts after the first, on a transient server error
 BACKOFF = 20         # seconds before the first retry, doubling thereafter
 
 
-def _stream(name, model, effort, p, more=()):
-    """One request, retried through transient server errors.
+class Answer:
+    """One provider's reply, in the shape `ask()` reads.
 
-    The SDK retries a failure BEFORE the stream opens but cannot retry one
-    during it — a ten-minute call raising `overloaded_error` from inside the
-    iterator loses the whole answer. Only server and connection faults are
-    retried; a 400 is deterministic and raised at once.
-
-    `httpx.HTTPError` is not redundant: once the stream is open the bytes come
-    through httpx directly, and a socket dropped mid-answer surfaces as a raw
-    `httpx.ReadError` the SDK never sees. One killed a 64-call run at call 37.
+    The two providers are not interchangeable in their wire format — a refusal
+    is a content part on one and a stop reason on the other, truncation is a
+    status on one and a stop reason on the other — so each `_stream_*` maps its
+    own reply onto this, and `ask()` is written once against it.
     """
+
+    def __init__(self, model, ok, text, refusal, truncated, why,
+                 usage, blocks):
+        self.model = model            # what actually served the call
+        self.ok = ok                  # a complete answer arrived
+        self.text = text              # the JSON body, or ""
+        self.refusal = refusal        # the model declined, and said why
+        self.truncated = truncated    # it ran into MAX_OUTPUT
+        self.why = why                # a short reason, for the log and console
+        self.usage = usage
+        self.blocks = blocks          # the raw reply, for the log
+
+
+def provider_of(model):
+    """Which API a model name belongs to.
+
+    Inferred rather than passed: the dataset build runs on OpenAI and the
+    experiment on Claude, and a call site that names its model has already said
+    everything needed. One place to look, and no way to pair a model with the
+    wrong transport.
+    """
+    return "anthropic" if str(model).startswith("claude") else "openai"
+
+
+def _retrying(attempt, e, errors):
+    """Should this failure be retried, and how long to wait first.
+
+    Only server and connection faults are: a 400 is deterministic and raised at
+    once. `httpx.HTTPError` is not redundant in the caught set — once a stream
+    is open the bytes come through httpx directly, and a socket dropped
+    mid-answer surfaces as a raw `httpx.ReadError` the SDK never sees. One
+    killed a 64-call run at call 37.
+    """
+    if not isinstance(e, errors):
+        return None
+    status = getattr(e, "status_code", None)
+    if status is not None and status < 500 and status != 429:
+        return None
+    if attempt == RETRIES:
+        return None
+    wait = BACKOFF * 2 ** attempt
+    print(f"  ! {type(e).__name__}{f' {status}' if status else ''}, retrying "
+          f"in {wait}s ({attempt + 1}/{RETRIES})")
+    return wait
+
+
+def _stream_openai(name, model, effort, p, more):
+    """The dataset build's transport.
+
+    `strict` structured output is what makes the schemas load-bearing rather
+    than advisory — every schema under prompts/ satisfies its two demands
+    (`additionalProperties: false`, and every property named in `required`).
+    """
+    body = {
+        "model": model,
+        "max_output_tokens": MAX_OUTPUT,
+        "reasoning": {"effort": effort},
+        "input": [
+            {"role": "system", "content": p["SYSTEM"]},
+            {"role": "user", "content": [
+                {"type": "input_text", "text": p["DOCUMENT"]},
+                {"type": "input_text", "text": p["INSTRUCTIONS"]},
+                {"type": "input_text", "text": p["TASK"]},
+            ]},
+        ] + list(more),
+        "text": {"format": {"type": "json_schema", "name": name,
+                            "strict": True, "schema": schema(name)}},
+    }
+    errors = (openai.APIStatusError, openai.APIConnectionError, httpx.HTTPError)
+    for attempt in range(RETRIES + 1):
+        try:
+            with client().responses.stream(**body) as stream:
+                r = stream.get_final_response()
+            break
+        except Exception as e:                                   # noqa: BLE001
+            wait = _retrying(attempt, e, errors)
+            if wait is None:
+                raise
+            time.sleep(wait)
+
+    # A refusal is a content part, not a status: the response completes and
+    # carries `refusal` where the text would be, so `output_text` is empty.
+    refusal = next((c.refusal for b in r.output
+                    for c in (getattr(b, "content", None) or [])
+                    if getattr(c, "type", None) == "refusal"), None)
+    truncated = (r.status == "incomplete"
+                 and getattr(r.incomplete_details, "reason", "") == "max_output_tokens")
+    return Answer(
+        model=r.model, ok=r.status == "completed" and bool(r.output_text),
+        text=r.output_text or "", refusal=refusal, truncated=truncated,
+        why=(r.status if r.status != "completed"
+             else "" if r.output_text else "empty answer"),
+        usage=r.usage.model_dump() if r.usage else None,
+        blocks=[b.model_dump() for b in r.output])
+
+
+def _stream_anthropic(name, model, effort, p, more):
+    """The experiment's transport.
+
+    The risk-detection experiment stays on Claude while the dataset build moved to OpenAI. The
+    two arms of that experiment differ only in HOW the material reaches the
+    model — one API call against one agent session — and its agent arm is the
+    Claude Code CLI, which cannot be pointed at another provider. Moving only
+    the one-shot arm would have made the two differ in model as well as in
+    shape, and the comparison would no longer be about delivery.
+    """
+    import anthropic                    # only this path needs the SDK
+
     body = {
         "model": model,
         "max_tokens": MAX_OUTPUT,
@@ -567,22 +721,39 @@ def _stream(name, model, effort, p, more=()):
                           "format": {"type": "json_schema",
                                      "schema": schema(name)}},
     }
+    errors = (anthropic.APIStatusError, anthropic.APIConnectionError,
+              httpx.HTTPError)
     for attempt in range(RETRIES + 1):
         try:
-            with client().messages.stream(**body) as stream:
-                return stream.get_final_message()
-        except (anthropic.APIStatusError, anthropic.APIConnectionError,
-                httpx.HTTPError) as e:
-            status = getattr(e, "status_code", None)
-            if status is not None and status < 500 and status != 429:
+            with anthropic_client().messages.stream(**body) as stream:
+                m = stream.get_final_message()
+            break
+        except Exception as e:                                   # noqa: BLE001
+            wait = _retrying(attempt, e, errors)
+            if wait is None:
                 raise
-            if attempt == RETRIES:
-                raise
-            wait = BACKOFF * 2 ** attempt
-            print(f"  ! {type(e).__name__}"
-                  f"{f' {status}' if status else ''}, retrying in {wait}s "
-                  f"({attempt + 1}/{RETRIES})")
             time.sleep(wait)
+
+    text = next((b.text for b in m.content if b.type == "text"), "")
+    return Answer(
+        model=m.model, ok=m.stop_reason not in ("refusal", "max_tokens") and bool(text),
+        text=text, refusal="declined" if m.stop_reason == "refusal" else None,
+        truncated=m.stop_reason == "max_tokens",
+        why="" if text else f"stop_reason {m.stop_reason}",
+        usage=m.usage.model_dump(), blocks=[b.model_dump() for b in m.content])
+
+
+def _stream(name, model, effort, p, more=()):
+    """One request, retried through transient server errors.
+
+    Streamed rather than awaited whole, on both providers: a high-effort call
+    over a 200k-token contract runs for many minutes, and a plain request can
+    outlive the client's socket timeout with the answer already produced and
+    billed.
+    """
+    fn = (_stream_anthropic if provider_of(model) == "anthropic"
+          else _stream_openai)
+    return fn(name, model, effort, p, more)
 
 
 def prompt(name, **fields):
@@ -616,43 +787,158 @@ def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(), **field
     The document goes first and the instructions after it, so a rule sits beside
     the text it governs rather than tens of thousands of tokens above it.
 
-    `effort="high"`, raised from "medium": both steps ask a judgement, and every
-    call at medium spent ZERO thinking tokens, so there was headroom to buy.
-    Reasoning is billed as output — watch `output_tokens` after changing it.
+    `effort="high"`: both steps ask a judgement, and reasoning is billed as
+    output — watch `output_tokens` after changing it.
 
-    NOTHING IS CACHED, deliberately. No two calls share a prefix (measured:
-    54,310 tokens written to cache, ZERO read), and a cache write costs 1.25x
-    base input — a flat 25% surcharge for nothing. Do not restore the marker
-    without a prefix two calls actually share.
+    Nothing is cached explicitly. The provider caches long shared prefixes on
+    its own, and no two calls here share one anyway: each carries a different
+    document.
     """
     p = prompt(name, **fields)
-    msg = _stream(name, model, effort, p, more)
+    a = _stream(name, model, effort, p, more)
 
     d = LOGS / (log_as or name)
     d.mkdir(parents=True, exist_ok=True)
+    # The document is NOT stored. It is the numbered corpus text — several
+    # hundred KB a call, many times everything else in the log put together —
+    # and the same text is already on disk under output/contracts/ and
+    # output/opinions/. Its digest and length are kept so a reader can still
+    # prove what was sent, and `replay_anchors.py` reads the corpus instead.
     (d / f"{call_id}.json").write_text(json.dumps({
-        "system": p["SYSTEM"], "document": p["DOCUMENT"],
+        "system": p["SYSTEM"],
+        "document_sha256": hashlib.sha256(
+            p["DOCUMENT"].encode("utf-8")).hexdigest(),
+        "document_chars": len(p["DOCUMENT"]),
         "instructions": p["INSTRUCTIONS"], "task": p["TASK"],
-        "model": msg.model, "stop_reason": msg.stop_reason,
-        "usage": msg.usage.model_dump(),
-        "response": [b.model_dump() for b in msg.content],
+        "provider": provider_of(model), "model": a.model,
+        "ok": a.ok, "refusal": a.refusal, "truncated": a.truncated,
+        "why": a.why, "usage": a.usage, "response": a.blocks,
     }, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    if msg.stop_reason == "refusal":
-        print(f"  ! refused: {call_id}")
+    if a.refusal:
+        print(f"  ! refused: {call_id}: {str(a.refusal)[:120]}")
         return None
-    if msg.stop_reason == "max_tokens":
+    if a.truncated:
         print(f"  ! truncated at {MAX_OUTPUT:,} output tokens: {call_id}")
         return None
-    return json.loads(next(b.text for b in msg.content if b.type == "text"))
+    if not a.ok:
+        print(f"  ! no answer ({a.why}): {call_id}")
+        return None
+    return json.loads(a.text)
 
 
 # ---------------------------------------------------------------- storage ---
 def read_json(path, default=None):
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+    """The artifact, or `default` if there is not one yet.
+
+    A ZERO-BYTE file counts as "not yet": it carries nothing, and the resumable
+    steps should start from scratch rather than refuse to run. A file with
+    content that will not parse still raises — that is real corruption and
+    silently discarding a run's worth of work would be worse than stopping.
+    """
+    if not path.exists() or path.stat().st_size == 0:
+        return default
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
-def write_json(path, obj):
+def write_json(path, obj, quiet=False):
+    """Write an artifact ATOMICALLY, with its keys in a fixed order.
+
+    `os.replace` is atomic on Windows and POSIX alike, so a reader sees either
+    the old artifact or the new one, never a partial one. Without it, anything
+    that interrupts the process between truncating and writing — a kill, a
+    crash, a sync client, a full disk — leaves a zero-byte or half-written file
+    where hours of paid-for work used to be. The temp file goes in the SAME
+    directory, because a rename across filesystems is not atomic.
+
+    `sort_keys` is what makes the artifact independent of the order its entries
+    were produced in. Units are judged concurrently and finish in whatever order
+    the API returns them, and a resumed run adds its entries at the end; without
+    this, three runs over the same answers would write three different files.
+    Lists are NOT sorted here — a step that stores one sorts it itself, because
+    only the step knows what order means for its own records.
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"  -> {path.relative_to(ROOT)}")
+    tmp = path.with_name(f".{path.name}.tmp")
+    tmp.write_text(json.dumps(obj, ensure_ascii=False, indent=2, sort_keys=True),
+                   encoding="utf-8")
+    os.replace(tmp, path)
+    if not quiet:
+        print(f"  -> {path.relative_to(ROOT)}")
+
+
+# ------------------------------------------------------------------ shards ---
+# Steps 0b, 1 and 2 judge independent units — a contract, a case — and run them
+# concurrently. Each worker writes ONLY its own unit's file, so there is no
+# shared mutable state to lock and no way for two workers to lose each other's
+# results. The per-unit files are folded into the one artifact downstream reads
+# once the step finishes, and deleted after that has been verified.
+#
+# It also removes an accidental cost: the old shape rewrote the WHOLE artifact
+# after every call, which for step 2's 6.6 MB inventory over 103 contracts was
+# some 680 MB of writes to store 6.6 MB of results.
+
+def shard_dir(name):
+    return OUT / name
+
+
+def write_shard(name, filename, key, value):
+    """One unit's result, in its own file.
+
+    `filename` and `key` differ where the artifact is keyed on something that is
+    not filename-safe: step 1 keys on the citation `44 F.Supp.3d 736` and files
+    it under `44FSupp3d736`. The key travels inside the file so the merge does
+    not have to invert that mapping.
+    """
+    d = shard_dir(name)
+    d.mkdir(parents=True, exist_ok=True)
+    write_json(d / f"{filename}.json", {"key": key, "value": value}, quiet=True)
+
+
+def read_shards(name):
+    """{artifact key: value} over every shard of a step."""
+    out = {}
+    d = shard_dir(name)
+    if d.is_dir():
+        for p in sorted(d.glob("*.json")):
+            s = read_json(p)
+            if s and "key" in s:
+                out[s["key"]] = s["value"]
+    return out
+
+
+def merge_shards(name, path):
+    """Fold the shards into the artifact, verify, then delete them.
+
+    Verified before deleting, and in that order: the merged file is written,
+    read back from disk, and every shard's entry checked against what actually
+    landed. Only then are the shards removed. A step that dies before this point
+    keeps them, and the next run resumes from them.
+    """
+    shards = read_shards(name)
+    if not shards:
+        return read_json(path, {}) or {}
+
+    merged = {**(read_json(path, {}) or {}), **shards}
+    write_json(path, merged)
+
+    back = read_json(path, {}) or {}
+    missing = [k for k, v in shards.items() if back.get(k) != v]
+    if missing:
+        raise SystemExit(
+            f"{path.name}: {len(missing)} unit(s) did not survive the merge "
+            f"({missing[:3]}). The shards under {name}/ are intact — fix the "
+            f"artifact and re-run rather than losing them.")
+
+    d = shard_dir(name)
+    for p in d.glob("*.json"):
+        p.unlink()
+    for p in d.glob(".*.tmp"):
+        p.unlink()
+    try:
+        d.rmdir()
+    except OSError:
+        pass                        # something else is in there; leave it alone
+    print(f"  merged {len(shards)} unit(s) -> {path.relative_to(ROOT)}, "
+          f"shards removed")
+    return merged

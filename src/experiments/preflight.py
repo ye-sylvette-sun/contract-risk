@@ -27,7 +27,7 @@ from pathlib import Path, PurePosixPath
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib  # noqa: E402
-import exp3_agent as ag  # noqa: E402
+import risk_detect_agent as ag  # noqa: E402
 import isolation  # noqa: E402
 
 api = ag.api

@@ -1,0 +1,205 @@
+"""Threshold-sweep figure for risk detection.
+
+Three binary tasks swept over a flagging threshold t in [0, 1]: risky vs not
+(score `max(prob_type1, prob_type2)`), risk type 1 vs not (`prob_type1`),
+risk type 2 vs not (`prob_type2`). The two risk-type panels are ONE-VS-REST —
+for risk type 1 a risk type-2 clause counts as a negative — because each
+probability is an independent judgement, not a share of one distribution.
+
+Per task: precision and recall on top, the share of clauses flagged below. The
+bottom row stops the top being read too kindly — near 2% prevalence, flagging a
+third of the contract can still post a respectable recall.
+
+Artefacts are named in parallel for both runs, <run> being `llm_api` or `agent`:
+
+    risk_detect_<run>_preds.csv                 one row per provision
+    risk_detect_<run>/                          the model's returned judgments
+    llm_logs/risk_detect_<run>/                 request, response and usage per call
+    figures/risk_detect_<run>_threshold_curves.png
+
+Usage:
+    python src/experiments/plot_risk_detect_thresholds.py --run llm_api
+    python src/experiments/plot_risk_detect_thresholds.py --run agent
+"""
+import argparse
+import csv
+import os
+import sys
+
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt  # noqa: E402
+
+csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
+
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+OUT_DIR = os.path.join(ROOT, "output")
+FIG_DIR = os.path.join(OUT_DIR, "figures")
+
+# The two experiments write the same columns, so one figure script serves both.
+# Each entry is (predictions file, figure file, title, subtitle). The approach is
+# named in the TITLE, because the two figures are read side by side and a reader
+# should not have to work out which one they are looking at from the filename.
+RUNS = {
+    "llm_api": ("risk_detect_llm_api_preds.csv", "risk_detect_llm_api_threshold_curves.png",
+                "LLM API call",
+                "few-shot with judicial reasoning, one call per contract"),
+    "agent": ("risk_detect_agent_preds.csv", "risk_detect_agent_threshold_curves.png",
+              "Agentic approach",
+              "few-shot with judicial reasoning, one agent session per contract"),
+}
+
+# (panel title, how to score a row, what counts as a positive)
+TASKS = [
+    ("Risky vs not",
+     lambda r: max(float(r["prob_type1"]), float(r["prob_type2"])),
+     lambda r: r["gold"] != "not_risky"),
+    # One-vs-rest, and NOT exclusive: a clause gold for both risk types is a
+    # positive in both panels.
+    ("risk type 1 vs not — intrinsic defect",
+     lambda r: float(r["prob_type1"]),
+     lambda r: r.get("gold_type1") in (1, "1")),
+    ("risk type 2 vs not — relational defect",
+     lambda r: float(r["prob_type2"]),
+     lambda r: r.get("gold_type2") in (1, "1")),
+]
+
+# classic matplotlib look: dashed primary-color lines on a plain white box
+C_PRECISION = "blue"
+C_RECALL = "red"
+C_FLAGGED = "green"
+INK2 = "#52514e"
+
+FLAG_DEFAULT = 0.5
+
+
+def load(preds):
+    """Every attempted clause, deduped on (contract_id, clause_id).
+
+    A clause the model never returned a judgment for (`ok=0`) is kept, with
+    both probabilities at 0 -- unflagged at every threshold above zero. Silence
+    is a prediction of "not risky", not grounds for dropping the row: a missing
+    positive should cost recall, and a missing negative should still count
+    toward the flag rate.
+    """
+    rows = {}
+    with open(preds, newline="", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            key = (r["contract_id"], r["clause_id"])
+            prev = rows.get(key)
+            if prev is not None and (prev["ok"] == "1" or r["ok"] != "1"):
+                continue                  # never let a blank mask a real score
+            if r["ok"] != "1":
+                r["prob_type1"] = r["prob_type2"] = "0"
+            rows[key] = r
+    return list(rows.values())
+
+
+def sweep(scored, thresholds):
+    """(precision, recall, flagged %) per threshold; NaN where undefined."""
+    n = len(scored)
+    n_pos = sum(1 for _, y in scored if y)
+    prec, rec, flag = [], [], []
+    for t in thresholds:
+        tp = sum(1 for s, y in scored if y and s >= t)
+        fl = sum(1 for s, _ in scored if s >= t)
+        prec.append(tp / fl if fl else float("nan"))
+        rec.append(tp / n_pos if n_pos else float("nan"))
+        flag.append(100.0 * fl / n)
+    return prec, rec, flag
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--run", choices=sorted(RUNS), default="llm_api",
+                    help="which experiment's predictions to plot")
+    args = ap.parse_args()
+    # `run_title`, not `title` — the panel loops below bind `title` to each
+    # panel's own name, and a shared name would put the last panel's title on
+    # the whole figure.
+    preds_name, fig_name, run_title, subtitle = RUNS[args.run]
+    preds = os.path.join(OUT_DIR, preds_name)
+
+    rows = load(preds)
+    n_contracts = len({r["contract_id"] for r in rows})
+    print(f"{len(rows)} clauses scored over {n_contracts} contracts")
+    blank = [r for r in rows if r["ok"] != "1"]
+    if blank:
+        n_pos = sum(1 for r in blank if r["gold"] != "not_risky")
+        print(f"  ! {len(blank)} returned no judgment ({n_pos} positive) "
+              f"-- counted as not flagged")
+
+    # 0.00, 0.01, ..., 1.00 — evaluated at every 0.01; consecutive points are
+    # joined by line segments, which softens the staircase a little
+    thresholds = [i / 100 for i in range(101)]
+    panels = []
+    for title, score_of, is_pos in TASKS:
+        scored = [(score_of(r), is_pos(r)) for r in rows]
+        n_pos = sum(1 for _, y in scored if y)
+        prec, rec, flag = sweep(scored, thresholds)
+        panels.append((title, n_pos, prec, rec, flag))
+
+        tp = sum(1 for s, y in scored if y and s >= FLAG_DEFAULT)
+        fl = sum(1 for s, _ in scored if s >= FLAG_DEFAULT)
+        p = f"{tp / fl:.2f}" if fl else "n/a"
+        r_ = f"{tp / n_pos:.2f}" if n_pos else "n/a"
+        print(f"  {title:36} {n_pos:3d} positive  @{FLAG_DEFAULT}  "
+              f"P={p}  R={r_}  ({fl} flagged = {100 * fl / len(rows):.0f}%)")
+
+    plt.rcParams.update({
+        "font.family": ["Segoe UI", "DejaVu Sans", "sans-serif"],
+    })
+    fig, axes = plt.subplots(2, 3, figsize=(11.2, 7.6), dpi=200, sharex=True)
+
+    for col, (title, n_pos, prec, rec, flag) in enumerate(panels):
+        top, bot = axes[0][col], axes[1][col]
+        for ax in (top, bot):
+            ax.tick_params(labelsize=9)
+            ax.set_xlim(0, 1)
+            ax.set_xticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
+            ax.grid(color="#e8e7e3", linewidth=0.7)
+            ax.set_axisbelow(True)
+
+        top.tick_params(labelbottom=True)   # sharex hides these by default
+        top.set_title(f"{title}\n{n_pos} positive of {len(rows)} "
+                      f"({100 * n_pos / len(rows):.1f}%)", fontsize=10.5, pad=10)
+        top.plot(thresholds, prec, color=C_PRECISION, linestyle="--",
+                 linewidth=1.5, label="Precision")
+        top.plot(thresholds, rec, color=C_RECALL, linestyle="--",
+                 linewidth=1.5, label="Recall")
+        top.set_ylim(0, 1.04)
+        top.set_yticks([0, 0.2, 0.4, 0.6, 0.8, 1.0])
+
+        bot.plot(thresholds, flag, color=C_FLAGGED, linestyle="--",
+                 linewidth=1.5)
+        bot.set_ylim(0, 104)
+        bot.set_yticks([0, 20, 40, 60, 80, 100])
+        bot.set_xlabel("Threshold", fontsize=10)
+
+    axes[0][0].set_ylabel("Precision / Recall", fontsize=10)
+    axes[1][0].set_ylabel("% of clauses flagged", fontsize=10)
+
+    fig.suptitle(f"{run_title} — precision, recall, and flag rate across "
+                 f"risk-flagging thresholds", fontsize=14, x=0.5, y=0.985)
+    fig.text(0.5, 0.935,
+             f"Exp 3 — {subtitle}  ·  "
+             f"{len(rows)} clauses from {n_contracts} contracts  ·  "
+             f"the two risk-type panels are one-vs-rest",
+             ha="center", fontsize=9.5, color=INK2)
+    fig.legend(handles=[
+        plt.Line2D([], [], color=C_PRECISION, linestyle="--", linewidth=1.5,
+                   label="Precision"),
+        plt.Line2D([], [], color=C_RECALL, linestyle="--", linewidth=1.5,
+                   label="Recall"),
+    ], loc="upper center", bbox_to_anchor=(0.5, 0.925), ncol=2, frameon=False,
+        fontsize=10, labelcolor=INK2)
+
+    fig.tight_layout(rect=(0, 0, 1, 0.925))
+    os.makedirs(FIG_DIR, exist_ok=True)
+    out = os.path.join(FIG_DIR, fig_name)
+    fig.savefig(out, facecolor="white", bbox_inches="tight")
+    print(f"-> {out}")
+
+
+if __name__ == "__main__":
+    main()

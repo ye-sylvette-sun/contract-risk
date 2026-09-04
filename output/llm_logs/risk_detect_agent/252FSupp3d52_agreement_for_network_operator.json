@@ -1,0 +1,101 @@
+{
+  "contract_id": "252FSupp3d52_agreement_for_network_operator",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 284,
+  "container_rc": 0,
+  "image": "contract-risk-judge:0.2.139",
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 19,
+  "duration_ms": 465351,
+  "total_cost_usd": 3.5576,
+  "usage": {
+    "input_tokens": 28,
+    "cache_creation_input_tokens": 194738,
+    "cache_read_input_tokens": 1092721,
+    "output_tokens": 42547,
+    "output_tokens_details": {
+      "thinking_tokens": 12738
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 194738,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 75,
+        "cache_read_input_tokens": 185182,
+        "cache_creation_input_tokens": 13632,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13632
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 28,
+      "outputTokens": 42547,
+      "cacheReadInputTokens": 1092721,
+      "cacheCreationInputTokens": 194738,
+      "webSearchRequests": 0,
+      "costUSD": 3.5575555000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "7fee2fcd-c981-41c0-a8a4-577320b0002b",
+  "errors": null,
+  "result": "All 284 provisions judged and written to `predictions_001.json` (c001–c096), `predictions_002.json` (c097–c184) and `predictions_003.json` (c185–c284).\n\nI wrote 284 judgments.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/1.3_88FSupp3d27_e_mployment_b_inding/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/mnt/user-data/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "utilization": null,
+      "resets_at": 1788417000
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 284,
+  "n_wanted": 284,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

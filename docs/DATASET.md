@@ -5,9 +5,15 @@ United States federal court construed the clause in a written opinion. Every
 clause is verbatim text cut out of the scanned filing it was attached to.
 
 ```
-6,835 rows  |  144 positive / 6,691 negative  (2.1% positive)
-39 cases    |  67 contracts                   |  8.9 MB
+11,798 rows  |  201 positive / 11,597 negative  (1.7% positive)
+62 cases     |  103 contracts                   |  12.4 MB
 ```
+
+Positives carry 236 risk-type codes between them — 1.1 × 134, 1.3 × 17,
+2.2 × 85 — because 35 of the 201 carry more than one. Where the case's Westlaw
+keys give exactly one candidate code the label is `taxonomy_provenance =
+westlaw` (111 clauses) and the model had no choice; where the case has several,
+the model chose among them and the provenance is `model` (90 clauses).
 
 ---
 
@@ -24,17 +30,17 @@ Because a positive's own contract also supplies negatives, the two classes share
 the drafter, the domain, the era and the OCR condition; the only systematic
 difference between them is the one being labelled. The other agreements of a case
 supply negatives too — a case commonly files several instruments and the court
-reaches only some. 16 of the 67 contracts contain no positive at all, and are the
-only documents here where the right answer is "nothing to flag".
+reaches only some. 27 of the 103 contracts contain no positive at all, and are
+the only documents here where the right answer is "nothing to flag".
 
 An unlitigated clause is **lower risk, not sound**. It may be well drafted, or it
 may carry a defect nobody had occasion to fight over. Precision measured against
 these labels is a lower bound.
 
 **No model assigns the label.** It comes from the **Westlaw Key Numbers** the
-case was filed under. Twelve keys map onto six risk-category codes:
+case was filed under. Twelve keys map onto six risk-type codes:
 
-| code | risk category |
+| code | risk type |
 |---|---|
 | 1.1 | Lexical ambiguity — a word or phrase is open to more than one reasonable reading |
 | 1.2 | Mechanical error — a mistake in writing, grammar, spelling or punctuation |
@@ -46,6 +52,30 @@ case was filed under. Twelve keys map onto six risk-category codes:
 A model is *handed* the codes its case was selected under and may only choose
 among them; anything else is rejected. Every row carries the keys it was selected
 under, so a label traces back to the headnotes.
+
+### Which code, when a case carries several
+
+A case is filed under one or more Westlaw keys, and those keys need not map to
+one code. The **binary** label never depends on this — a positive is a positive
+because the opinion shows the court construed the clause, whatever the keys say.
+Only the risk *type* does.
+
+- **One code.** Nothing to choose: the code is a Westlaw fact and no model
+  touches it.
+- **Several codes.** The model is shown the whole six-code taxonomy as
+  background and the case's own codes as the **candidates**, and says which of
+  them the dispute over *this* clause turned on. It may name more than one — a
+  court can find a phrase ambiguous on its face *and* resolve it by reading the
+  instrument as a whole. Anything outside the candidate set is rejected.
+
+`taxonomy_provenance` records which of the two produced a row — `westlaw` or
+`model` — so a consumer who wants the stricter dataset can keep only the rows no
+model had a say in. `taxonomy` is therefore a comma-separated list, and a
+positive can be both risk type 1 and risk type 2.
+
+An earlier build dropped every multi-code case instead. That cost 24 cases and
+42 already-registered contracts — about 63% more rows — to protect a property
+only the type column has, and the binary label never lacked.
 
 ---
 
@@ -83,29 +113,25 @@ arrive OCR'd (`ocrmypdf --force-ocr`) and sliced to each named agreement's own
 lines — a verbatim line-range cut. An 8-word-shingle containment check at 0.90
 catches the same document filed twice under two names.
 
-### Step 0b — reject two-column scans (Sonnet 5, low effort, one call per contract)
+### Step 0b — reject two-column scans (`gpt-5.6-terra`, low effort, one call per contract)
 
 OCR reads a two-column page straight across, so every output line splices the
 left column onto the right, from two passages with nothing to do with each other.
 Nothing downstream can see this: the anchors match, the line range is real, and
 the "clause" is alternating halves of two different clauses.
 
-Two independent detectors run and **either one rejects**:
+The document is sampled as windows spread from its first line to its last — the
+signature is a break recurring line after line, and a single window at the front
+would see only front matter — and the model must **quote the interleaved lines
+back verbatim, with their line numbers**. That requirement is what makes the
+verdict checkable: every rejection can be looked up in the file rather than
+taken on trust.
 
-- **A gutter score** — a run of blank space at the same column position on many
-  *consecutive* lines. Persistence is the discriminator: a body column holds its
-  gutter for dozens of lines, a letterhead for five. Costs nothing.
-- **A model call** — the document is sampled as windows spread from first line to
-  last, and the model must **quote the interleaved lines back verbatim**, so
-  every rejection can be looked up in the file.
+It rejects 14 of 117 contracts, most of them insurance policies with two-column
+endorsement pages. Nothing is deleted — `output/layout.json` keeps the verdict,
+the model's finding and the lines it quoted, and step 1 skips the contract.
 
-They fail differently. The gutter is blind to a document whose left column is
-often empty; the model is blind to a two-column passage occupying a small
-fraction of a long filing. Between them they reject 8 of 117 contracts, four
-being insurance policies with two-column endorsement pages. Nothing is deleted —
-`output/layout.json` records both scores and the evidence.
-
-### From the linking sheet to 67 contracts
+### From the linking sheet to the corpus
 
 Each filter with the count it leaves. Everything here is recomputable from
 `data/`, `contract_risk/generated/` and `output/{cases,contracts,layout}.json`.
@@ -118,18 +144,18 @@ Each filter with the count it leaves. Everything here is recomputable from
 | in a case in scope: filed under one of the 12 keys, with opinion text on disk | 143 | 81 |
 | Contract-Risk's verdict is `usable` | 123 | 68 |
 | registered — de-duplicated at 0.90 shingle containment, over the length floor | **117** | 68 |
-| single-column — Step 0b rejects 8 two-column scans | **109** | 68 |
-| in a case filed under a **single risk category** | **67** | **39** |
+| single-column — Step 0b rejects 14 two-column scans | **103** | 62 |
 
-The last row is the only filter about labels rather than about whether a
-document is usable, and it costs the most.
+Every filter here is about whether a document is *usable*. There is no longer a
+filter about labels.
 
-**The rule.** A case is kept only if all its Westlaw keys map to one taxonomy
-code. Several keys are fine — 7 of the 44 kept cases carry two keys meaning the
-same risk category (`k143.5` and `k147(3)` both map to 2.2). Excluded is a case
-whose keys span two codes.
+The previous build added one — a case was kept only if all its Westlaw keys
+mapped to a single taxonomy code — and it took 109 contracts down to 67 over 39
+cases. It bought one property: that the risk type was a Westlaw fact with no
+model in the loop. It is now bought per row instead, by
+`taxonomy_provenance`, which costs nothing and keeps the other 42 contracts.
 
-### Step 1 — which clauses were disputed (Opus 5, high effort, one call per case)
+### Step 1 — which clauses were disputed (`gpt-5.6-sol`, high effort, one call per case)
 
 The call carries the **numbered opinion plus every registered contract of the
 case**, the risk codes the case was selected under, and the headnote text. The
@@ -140,7 +166,7 @@ clause selection tied to the court's own words rather than to what looks risky.
 **Returning no clauses is a valid answer**, and happens when the disputed
 agreement was never filed.
 
-### Step 2 — every clause of a contract (Opus 5, high effort, one call per contract)
+### Step 2 — every clause of a contract (`gpt-5.6-sol`, high effort, one call per contract)
 
 Enumerates a contract's clauses in document order, producing the negatives. It
 runs on every contract step 1 was shown, so no positive lacks negatives from its
@@ -154,9 +180,15 @@ Withholding step 1's answer is the point: were the model told which clause was
 litigated, its enumeration of the others could be shaped by that, and the two
 classes would differ by more than the one property being labelled.
 
-Three over-capture detectors run as **flags** — clauses out of document order,
-overlapping spans, and a clause longer than 10× the contract's median. They are
-printed and stored; none of them rejects anything.
+Clauses come back in document order, sorted by span, so the artifact does not
+depend on the order the model happened to list them in. Two over-capture
+detectors then run as **flags** — overlapping spans, and a clause longer than
+10× the contract's median. They are printed and stored; neither rejects
+anything.
+
+A third detector used to check whether the model reported its clauses out of
+order. The sort made it vacuous — it compared the sorted list against itself —
+and it was removed rather than left reporting a constant.
 
 ### `build_dataset.py` (no LLM)
 
@@ -178,7 +210,9 @@ is filed under exactly one.
 
 | column | |
 |---|---|
-| `citation`, `taxonomy`, `key` | the case and the risk category, from the Westlaw key |
+| `citation`, `key` | the case, and the Westlaw keys it was selected under |
+| `taxonomy` | the risk type code(s), comma-separated — a clause can carry both 1.x and 2.x |
+| `taxonomy_provenance` | `westlaw` (the case has one code; no model chose it) or `model` (the case has several and a model said which apply) |
 | `clause_id` | `pos1…` / `neg1…` **within the contract**, in document order — unique per `(contract_id, clause_id)` |
 | `clause_name`, `label` | `POSITIVE` / `NEGATIVE` |
 | `provenance` | which step produced the row |
@@ -196,12 +230,18 @@ contract file alone, without any model output.
 
 ## 5. Cost
 
-| step | model | input | output | |
+Measured over the current build, from `output/llm_logs/`:
+
+| step | model | calls | input | output |
 |---|---|---:|---:|---:|
-| 0b layout | Sonnet 5 | 1,500,540 | 10,401 | $4.66 |
-| 1 extract | Opus 5 | 3,132,579 | 104,269 | $18.27 |
-| 2 inventory | Opus 5 | 2,378,231 | 720,200 | $29.90 |
-| **total** | | | | **$52.82** |
+| 0b layout | `gpt-5.6-terra` | 117 | 1,065,625 | 14,719 |
+| 1 extract | `gpt-5.6-sol` | 62 (one per case) | 3,406,100 | 239,898 |
+| 2 inventory | `gpt-5.6-sol` | 103 (one per contract) | 2,570,290 | 1,576,530 |
+| **total** | | **282** | **7,042,015** | **1,831,147** |
+
+Dollar cost depends on the provider's rates at the time and is not fixed here.
+Step 2 dominates the output side: it transcribes every clause of every contract,
+where step 1 returns only the disputed ones.
 
 Step 0 and `build_dataset.py` make no model calls, so the dataset rebuilds from
 the stored artifacts without an API key. Every call's full prompt, response and
@@ -211,6 +251,28 @@ token usage is kept under `output/llm_logs/`.
 
 ## 6. Known limits
 
+- **Clause length no longer separates the classes — verify that it still
+  doesn't.** Positives and negatives run to almost the same length (median 329
+  characters against 331), and length alone ranks them at within-contract ROC-AUC
+  **0.523** [0.501, 0.546], indistinguishable from chance. The previous build was
+  **0.683**, a real shortcut, and the difference is the rebuilt step 1 cutting
+  tighter spans. Because it is a property of the extraction rather than of the
+  task, re-measure it after any rebuild before quoting a model's AUC.
+- **A positive is not one dispute.** Every positive carries a verbatim passage
+  from the opinion — none is empty, the median is 3,761 characters — but the 201
+  positives trace to only **138 distinct passages**. 101 map to a single clause;
+  the rest map to two or more, because a court often construes several
+  provisions in one discussion, and one passage covers 9. Treat a positive as
+  "this clause was part of a litigated dispute", not "this clause had its own
+  dispute".
+- **The clause-to-passage link is the model's judgment, not a verified fact.**
+  What *is* verified mechanically: the clause text was located verbatim in the
+  filed contract (`anchor_score` median 1.000), and the taxonomy is a subset of
+  the case's Westlaw key codes. What is not: that the attached passage actually
+  discusses that clause. Nothing second-guesses the extraction model on that
+  point — the heuristic that once did was removed as too ad hoc. A human
+  spot-check of a few dozen positives would put a number on it; it has not been
+  done.
 - **Over-capture between two correct anchors is undetectable.** A range that
   starts and ends at the right clause but swallows an intervening one passes
   every check. 22 contracts carry a flag for it; the flags reject nothing, and

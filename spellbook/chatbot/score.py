@@ -1,8 +1,8 @@
 """Score the Spellbook results against gold, beside the two existing arms.
 
-Reads every non-empty spellbook/output/<cid>.json, maps the opaque provision
+Reads every non-empty spellbook/chatbot/output/<cid>.json, maps the opaque provision
 ids back to dataset clause ids through the id map stored with the one-shot
-run, and scores the same three panels as src/experiments/compare_exp3.py.
+run, and scores the same three panels as src/experiments/compare_risk_detect.py.
 
 A provision Spellbook did not judge is scored as not_risky at probability 0 --
 never dropped. Dropping it would forgive the omission and, on a positive,
@@ -13,7 +13,7 @@ are comparable; a run scored on different documents differs as much in which
 contracts it covered as in anything about the method.
 
 Usage:
-    python spellbook/score.py
+    python spellbook/chatbot/score.py
 """
 import csv
 import json
@@ -22,7 +22,8 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+HERE = Path(__file__).resolve().parent          # spellbook/chatbot/
+ROOT = HERE.parents[1]                          # the repo root
 sys.path.insert(0, str(ROOT / "src" / "experiments"))
 import predictions  # noqa: E402
 
@@ -129,12 +130,15 @@ def threshold_at_recall(scores, labels, target=TARGET):
 
 
 def panel(rows, which):
+    """One-vs-rest, and the two risk types are NOT exclusive — a clause whose
+    case was filed under several Westlaw keys can be gold for both, and then
+    counts as a positive in both panels."""
     if which == "risky":
         return ([max(f(r["p1"]), f(r["p2"])) for r in rows],
                 [1 if r["gold"] != "not_risky" else 0 for r in rows])
-    key = "p1" if which == "cat1" else "p2"
+    key = "p1" if which == "type1" else "p2"
     return ([f(r[key]) for r in rows],
-            [1 if r["gold"] == f"risky_{which}" else 0 for r in rows])
+            [int(r.get(f"gold_{which}") in (1, "1")) for r in rows])
 
 
 def report(name, rows):
@@ -156,7 +160,7 @@ def report(name, rows):
     pc, rc = f"P@{t:g}", f"R@{t:g}"
     print(f"    {'panel':7}{'pos':>5}{'ROC':>8}{'PR':>8}{pc:>7}{rc:>7}"
           f"{'F1':>7}{'TP':>4}{'FP':>5}{'FN':>4}{'flag':>8}")
-    for which in ("risky", "cat1", "cat2"):
+    for which in ("risky", "type1", "type2"):
         sc, lb = panel(rows, which)
         n = sum(lb)
         if not n:
@@ -189,8 +193,9 @@ def arm_rows(path, cids):
             continue
         keep[k] = r
     return [{"gold": r["gold"],
-             "p1": r["prob_cat1"] if r["ok"] == "1" else 0,
-             "p2": r["prob_cat2"] if r["ok"] == "1" else 0}
+             "gold_type1": r.get("gold_type1"), "gold_type2": r.get("gold_type2"),
+             "p1": r["prob_type1"] if r["ok"] == "1" else 0,
+             "p2": r["prob_type2"] if r["ok"] == "1" else 0}
             for r in keep.values()]
 
 
@@ -200,14 +205,20 @@ def collect():
     Shared by the table and the figure so the two cannot disagree about which
     contracts are in and how a missing judgment is scored.
     """
-    out = ROOT / "spellbook" / "output"
-    candidates = sorted(p.stem for p in (ROOT / "spellbook" / "prompt").glob("*.txt"))
+    out = HERE / "output"
+    candidates = sorted(p.stem for p in (HERE / "prompt").glob("*.txt"))
 
+    # Gold is multi-label: `taxonomy` is a comma-separated list of codes, so a
+    # positive can be both risk types at once.
     gold = defaultdict(dict)
     for r in csv.DictReader(open(ROOT / "output" / "dataset.csv", encoding="utf-8")):
-        g = "not_risky" if r["label"] != "POSITIVE" else \
-            ("risky_cat1" if r["taxonomy"].startswith("1") else "risky_cat2")
-        gold[r["contract_id"]][r["clause_id"]] = g
+        codes = [c.strip() for c in r["taxonomy"].split(",") if c.strip()]
+        pos = r["label"] == "POSITIVE"
+        gold[r["contract_id"]][r["clause_id"]] = {
+            "gold": "risky" if pos else "not_risky",
+            "gold_type1": int(pos and any(c.startswith("1") for c in codes)),
+            "gold_type2": int(pos and any(c.startswith("2") for c in codes)),
+        }
 
     sb, cids, missing_total = [], [], 0
     lines, unreadable = [], []
@@ -220,28 +231,28 @@ def collect():
                               f"read ({note})")
             continue
         cids.append(cid)
-        idmap = json.loads((ROOT / "output" / "exp3_llm_api" / f"{cid}.json")
+        idmap = json.loads((ROOT / "output" / "risk_detect_llm_api" / f"{cid}.json")
                            .read_text(encoding="utf-8"))["_id_map"]
         got = {}
         for j in judgments:
             real = idmap.get(str(j.get("clause_id", "")).strip())
-            if real and j.get("prob_cat1") is not None:
+            if real and predictions.valid(j):
                 got[real] = j
         for clause_id, g in gold[cid].items():
             j = got.get(clause_id)
-            sb.append({"cid": cid, "clause_id": clause_id, "gold": g,
-                       "p1": j.get("prob_cat1") if j else 0,
-                       "p2": j.get("prob_cat2") if j else 0})
+            p1, p2 = predictions.probs_of(j) if j else (0, 0)
+            sb.append({"cid": cid, "clause_id": clause_id, **g,
+                       "p1": p1, "p2": p2})
         n_missing = len(gold[cid]) - len(got)
         missing_total += n_missing
-        n_pos = sum(1 for g in gold[cid].values() if g != "not_risky")
+        n_pos = sum(1 for g in gold[cid].values() if g["gold"] != "not_risky")
         lines.append(f"  {cid[:48]:50}{len(got):>8}{len(gold[cid]):>5}{n_pos:>7}"
                      f"  {src:4}"
                      + (f" ! {n_missing} unjudged, scored 0" if n_missing else ""))
 
     if not cids:
-        sys.exit("no results yet — paste into spellbook/output/<cid>.json "
-                 "or spellbook/output/raw/<cid>.txt")
+        sys.exit("no results yet — paste into spellbook/chatbot/output/<cid>.json "
+                 "or spellbook/chatbot/output/raw/<cid>.txt")
     return sb, cids, missing_total, lines, len(candidates), unreadable
 
 
@@ -254,8 +265,8 @@ def main():
         print(f"\n  {missing_total} provision(s) unjudged overall, scored not_risky at 0")
 
     report("SPELLBOOK", sb)
-    for name, path in (("llm_api", "exp3_llm_api_preds.csv"),
-                       ("agent", "exp3_agent_preds.csv")):
+    for name, path in (("llm_api", "risk_detect_llm_api_preds.csv"),
+                       ("agent", "risk_detect_agent_preds.csv")):
         report(name, arm_rows(path, cids))
 
 

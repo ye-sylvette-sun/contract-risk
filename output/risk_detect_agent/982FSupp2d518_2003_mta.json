@@ -1,0 +1,194 @@
+{
+  "contract_id": "982FSupp2d518_2003_mta",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "pos1",
+    "c003": "neg2",
+    "c004": "neg3",
+    "c005": "neg4",
+    "c006": "neg5",
+    "c007": "neg6",
+    "c008": "neg7",
+    "c009": "pos2",
+    "c010": "neg8",
+    "c011": "neg9"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The preamble describes the arrangement as a \"collaborative research study\" without defining the scope or duration of that collaboration, and the phrase is loose enough to be read either as a mere description of purpose or as an operative limit on permitted use. It is riddled with typographical corruption (\"Dr,\", \"inc e\", \"th University\") but none of that changes meaning.",
+          "type": 1,
+          "prob": 0.29
+        },
+        {
+          "issue": "The recital's framing of a mutual \"collaborative research study\" sits against operative paragraphs 2-5, which impose only one-way restrictions on Recipient and give St. Jude an unrestricted right to distribute the Material elsewhere (para. 5), so the recital and the operative terms point in different directions about what the parties undertook.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "\"Unmodified derivatives\" (alongside \"progeny\", \"portions\" and \"any accompanying know-how or data\") is the pivotal ambiguous term: it is undefined and leaves open whether a new lentiviral construct built from the transferred construct is itself \"Material\". The catch-all \"any accompanying know-how or data\" adds a further boundary problem against the enumerated physical items.",
+          "type": 1,
+          "prob": 0.72
+        },
+        {
+          "issue": "The definition of \"Material\" cannot easily be squared with paragraph 3, which expressly authorises the Recipient to use the Material to create a different (lentiviral) construct; if that creation is itself \"Material\" the permission is largely self-defeating, and if it is not, paragraphs 4 and 8 lose their grip. This is the central whole-instrument tension in the document.",
+          "type": 2,
+          "prob": 0.55
+        }
+      ],
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "\"Persons directly supervised by Recipient Scientist\" and \"immediate and direct control\" are undefined standards whose boundary (e.g. collaborating postdocs, other Penn labs, contract vectors facilities) is genuinely contestable. The absolute bar on transfer to \"any other laboratory\" states no exception for the creation work paragraph 3 permits.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The sentence is ambiguous as to whether \"to be used in pre-clinical studies\" limits only the purpose for which the new construct is created, or attaches a permanent pre-clinical-only restriction to the construct once made. \"Pre-clinical studies\" is itself undefined at its boundary with first-in-human work.",
+          "type": 1,
+          "prob": 0.66
+        },
+        {
+          "issue": "Whether paragraph 3's limit reaches the newly created lentiviral construct depends on the paragraph 1 definition of \"Material\" (\"unmodified derivatives\"), and the two provisions cannot be harmonised without deciding whether a modified derivative escapes the instrument entirely. Paragraph 4's human-use ban compounds rather than resolves the point.",
+          "type": 2,
+          "prob": 0.47
+        }
+      ],
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "\"May not be used in humans\" and \"not be used for any commercial purpose\" both turn on the undefined reach of \"the Material\", and \"commercial purpose\" has no boundary (sponsored research, licensing, patenting are all arguable). Neither restriction says whether it applies to products derived from but not containing the Material.",
+          "type": 1,
+          "prob": 0.48
+        },
+        {
+          "issue": "The flat prohibition on use \"for any commercial purpose\" conflicts with paragraph 8, which contemplates commercialization of products containing Material with St. Jude's prior written approval and expressly permits Recipient to patent inventions made through use of the Material. A court would have to decide which controls.",
+          "type": 2,
+          "prob": 0.52
+        }
+      ],
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": "An \"unrestricted right\" in St. Jude to distribute to commercial entities sits uncomfortably with the preamble's exclusive-sounding \"collaborative research study\" with this Recipient Scientist, but nothing in the operative text promises exclusivity. The tension is weak.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The sentence has a missing verb (\"...using the Material [shall] be jointly published\"), leaving it unclear whether joint publication is mandatory, and \"in accordance with academic standards\" supplies no ascertainable standard. Nor is it stated who decides authorship or whether either party may publish alone.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "\"Recipient shall destroy all unused Materials\" leaves open what becomes of Material already consumed or incorporated into constructs, and \"unused\" is the ambiguous term. The typographic corruption (\"te Recipient\", \"clays\") does not itself change meaning.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The termination clause contains no survival provision, so it cannot be told from the instrument whether the use, human-use, non-commercialization and license obligations in paragraphs 3, 4 and 8 continue after a thirty-day termination. Read with paragraph 8's royalty-free license to St. Jude, that gap is a genuine whole-instrument incoherence.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "\"Any product that contains Material\" is the ambiguous phrase: whether a therapy built from a construct created under paragraph 3 \"contains\" Material depends on the contested reach of \"unmodified derivatives\" in paragraph 1. No standard governs when approval may be withheld.",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "By conditioning commercialization on St. Jude's prior written approval, this provision presupposes that commercialization is possible, which contradicts paragraph 4's unqualified statement that the Material \"will not be used for any commercial purpose\". The two operative bans cannot both be given full effect.",
+          "type": 2,
+          "prob": 0.51
+        }
+      ],
+      "dataset_clause_id": "pos2"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.11
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The carve-out for Claims \"solely caused by the gross negligence or willful misconduct of St. Jude\" is an undefined and unusually demanding standard, and \"Except to the extent prohibited by law\" leaves the clause's own operative reach indeterminate. Neither is defined elsewhere in this short letter agreement.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg9"
+    }
+  ]
+}

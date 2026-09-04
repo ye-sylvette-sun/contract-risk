@@ -5,18 +5,25 @@ court opinions and the contracts filed with them, plus an experiment that asks a
 model to predict the labels.
 
 ```
-6,835 rows  |  144 positive / 6,691 negative  (2.1% positive)
-39 cases    |  67 contracts
+11,798 rows  |  201 positive / 11,597 negative  (1.7% positive)
+62 cases     |  103 contracts                   |  12.4 MB
 ```
+
+> **The experiment is agentic.** `risk_detect_agent.py` — one sandboxed Claude Code
+> session per contract — is the experiment that is run and reported.
+> `risk_detect_llm_api.py`, the one-shot API arm, has been **retired**: it is kept as
+> the reference implementation of the scoring contract the agent arm reuses, but
+> it is not run and its numbers are not maintained. The old two-arm comparison
+> is on the `legacy_spellbook_9.1` branch.
 
 - **[docs/DATASET.md](docs/DATASET.md)** — what a label means, how the dataset is
   built, the columns, the known limits.
-- **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** — the prediction experiment: two
-  runs, what the model is given, how it is scored.
+- **[docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)** — the prediction experiment:
+  what the model is given, how it is scored.
 - **[docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)** — what the agent run is
   isolated from, and how that is checked.
-- **[docs/REPORT.md](docs/REPORT.md)** — the results: what the two runs found,
-  what separates them, and what is not established.
+- **[docs/REPORT.md](docs/REPORT.md)** — the results: what the agent run found,
+  and what is not established.
 
 This README is the repo tour and how to run it.
 
@@ -36,16 +43,23 @@ An unlitigated clause is **lower risk, not sound**: it may be well drafted, or i
 may carry a defect nobody had occasion to fight over. Precision against these
 labels is a lower bound.
 
-The risk *category* is never a model's opinion either — it comes from the Westlaw Key
-Number the case was filed under.
+The risk *type* comes from the Westlaw Key Number the case was filed under, not
+from a model's opinion — except where a case was filed under several, when a
+model says which of *those* the dispute turned on and `taxonomy_provenance`
+records that it did. The binary risky/not label never depends on this.
 
-**The classes are not matched on clause length, deliberately.** Positives run
-longer (median 607 characters against 372; P(positive longer) = **0.655**). The
-clauses parties take to court are the long, qualified, heavily conditioned ones.
-Length is left in rather than sampled away — the dataset's job is to record what
-the corpus is, not to look balanced. **If you benchmark on this, report a
-length-only baseline alongside your model**, and report per-contract as well as
-aggregate numbers.
+**The classes are not matched on clause length, and currently do not need to
+be.** Positives and negatives run to almost the same length (median 329
+characters against 331), and clause length alone separates them at
+within-contract ROC-AUC **0.523** [0.501, 0.546] — indistinguishable from
+chance.
+
+This was **not** true of the previous build, where positives ran to a median 607
+against 372 and length alone reached **0.683**. The gap closed because the
+rebuilt step 1 cuts tighter spans, not because the task changed. So: **if you
+benchmark on this, re-measure the length-only baseline for whatever build you
+have** rather than trusting this number, and report per-contract as well as
+aggregate figures.
 
 ## What guarantees the text
 
@@ -67,28 +81,32 @@ data/                    Westlaw headnotes, opinion text, the docket linking she
 contract_risk/           the Contract-Risk repo's new_approach/ — OCR'd contract text
 
 prompts/                 <name>.md (SYSTEM/DOCUMENT/INSTRUCTIONS/TASK) + <name>.schema.json
-  layout                 step 0b — is the scan an interleaved two-column page?
-  extract                step 1 — locate the clauses the parties disputed
-  inventory              step 2 — locate every clause of one contract
-  exp3                   the experiment's judging criteria
+  layout                    step 0b — is the scan an interleaved two-column page?
+  extract                   step 1 — locate the clauses the parties disputed
+  inventory                 step 2 — locate every clause of one contract
+  risk_detect               the risk-detection experiment's judging criteria
+  issue_alignment_check     did an issue match the dispute the court had?
 
 src/lib.py               paths, taxonomy, ask(), locate(), normalise()
 src/step0_corpus.py      0.  link cases, register documents        (no LLM)
-src/step0b_layout.py     0b. reject two-column scans              (Sonnet, per contract)
+src/step0b_layout.py     0b. reject two-column scans        (cheap model, per contract)
 src/step1_extract.py     1.  which clauses were disputed          (LLM, per case)
 src/step2_inventory.py   2.  every clause of every contract       (LLM, per contract)
 src/build_dataset.py         assemble + validate -> dataset.csv   (no LLM)
 src/replay_anchors.py        re-score the locator against stored logs (no LLM, no cost)
 
-src/experiments/exp3_llm_api.py          one API call per contract
-src/experiments/exp3_agent.py            one agent session per contract, in a container
-src/experiments/isolation.py             what a session may see: tools, path hook, env
-src/experiments/predictions.py           reading the judgment files the agent writes
-src/experiments/test_isolation.py        the path hook's cases (no cost, no API)
-src/experiments/manifest.py              what the machine was, per run
-src/experiments/preflight.py             one session, then audit it for leakage
-src/experiments/compare_exp3.py          ROC, precision, recall, flag rate
-src/experiments/plot_exp3_thresholds.py  --run {llm_api,agent}
+src/experiments/
+  risk_detect_agent.py            THE risk-detection run: one agent session per contract, in a container
+  risk_detect_llm_api.py          RETIRED one-shot arm; kept as the scoring contract the agent imports
+  issue_alignment_check.py        was a named issue the defect the court actually construed?
+  plot_risk_detect_thresholds.py  the threshold figure           --run agent
+  compare_risk_detect.py          ROC, precision, recall, flag rate (needs two runs)
+  predictions.py                  reading the judgment files the agent writes
+  isolation.py                    what a session may see: tools, path hook, env
+  test_isolation.py               the path hook's cases (no cost, no API)
+  preflight.py                    one session, then audit it for leakage
+  manifest.py                     what the machine was, per run
+  lockgen.py                      regenerate the hash-pinned docker/requirements.lock.txt
 
 docker/Dockerfile                        the judging sandbox, base pinned by digest
 docker/judge_one.py                      the only code that runs inside it
@@ -101,8 +119,9 @@ output/clauses.json      step 1 — positives, and what was rejected
 output/inventory.json    step 2 — every clause of every contract, and the flags
 output/llm_logs/<step>/  full prompt, response and usage for every call
 output/dataset.csv       the dataset
-output/exp3_<run>_*      the experiment's predictions, raw answers and figures
-output/llm_logs/exp3_agent/run_manifest_<stamp>.json
+output/risk_detect_<run>_*   risk detection: predictions, raw answers, figures
+output/issue_alignment_check.*  one row per issue judged against the court's words
+output/llm_logs/risk_detect_agent/run_manifest_<stamp>.json
                          SDK, CLI, interpreter, platform, git commit, the
                          environment sweep, the options, and the input hashes
 ```
@@ -127,13 +146,25 @@ byte-identical to their source. Step 0 registers only the entries their
 
 ```sh
 pip install -r requirements.txt
-echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
+cat > .env <<'KEYS'
+OPENAI_API_KEY=sk-proj-...            # the dataset build (steps 0b, 1, 2)
+CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...   # risk detection (`claude setup-token`)
+KEYS
 ```
 
-**Then authenticate the subscription, by hand, once.** The dataset steps below
-bill the API key, but the agent experiment bills the Claude Code
-**subscription** — and it runs each session in a container with no `~/.claude`
-to log in from, so the credential has to be passed in.
+**Two providers, on purpose.** The dataset build runs on OpenAI
+(`gpt-5.6-sol`, and `gpt-5.6-terra` for the cheap layout screen); the risk-detection experiment
+runs on Claude, because it *is* the Claude Code CLI. `lib.provider_of()` picks
+the transport from the model name, so a step that names its model has already
+chosen its API.
+
+**Then authenticate the subscription, by hand, once.** The dataset steps bill the
+OpenAI API key; the experiment bills the Claude Code **subscription** — and it
+runs each session in a container with no `~/.claude` to log in from, so the
+credential has to be passed in. No Anthropic API key is needed, and none reaches
+the container: `docker run` passes only `-e CLAUDE_CODE_OAUTH_TOKEN`, and
+`isolation.env()` strips every `ANTHROPIC_*` variable inside the container before
+the SDK starts.
 
 ```sh
 claude setup-token          # opens a browser; prints a long-lived (1-year) token
@@ -151,7 +182,7 @@ CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...
 An exported `CLAUDE_CODE_OAUTH_TOKEN` also works and wins over `.env`. Only the
 token is handed to the container (`docker run -e`); the API key is not.
 
-If that variable is unset, `exp3_agent.py` falls back to bind-mounting
+If that variable is unset, `risk_detect_agent.py` falls back to bind-mounting
 `~/.claude/.credentials.json` read-only, as a single file — never the directory,
 which would carry `settings.json`, `CLAUDE.md` and the memory store in with it.
 That works, but a read-only mount cannot refresh an access token that expires
@@ -161,7 +192,7 @@ Now the dataset:
 
 ```sh
 python src/step0_corpus.py       # 0.  no LLM
-python src/step0b_layout.py      # 0b. one cheap Sonnet call per contract
+python src/step0b_layout.py      # 0b. one cheap call per contract
 python src/step1_extract.py      # 1.  one call per case
 python src/step2_inventory.py    # 2.  one call per contract step 1 was shown
 python src/build_dataset.py      #     no LLM — validates, then writes
@@ -179,6 +210,25 @@ Step 0b takes `--force` instead.
 
 Step 0 and `build_dataset.py` make no model calls, so the dataset is reproducible
 from the stored artifacts without an API key.
+
+Then the experiment:
+
+```sh
+docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
+python src/experiments/test_isolation.py      # the path hook's cases, no cost
+python src/experiments/preflight.py --container   # one real session, then audit it
+
+python src/experiments/risk_detect_agent.py --shuffle --parallel 8
+python src/experiments/plot_risk_detect_thresholds.py --run agent
+```
+
+`--parallel` sets how many containers run at once; they are independent sessions
+against one subscription, so the only shared resource is the rate limit, which
+pauses new launches when the CLI says the window is gone. The run is
+**resumable** — a contract already scored is skipped — so it is safe to stop it,
+change a constant such as `MAX_TURNS`, and start again. A contract interrupted
+mid-container writes nothing, so no half-judged contract enters `preds.csv`; kill
+any orphaned `judge-*` containers before restarting.
 
 ### Re-scoring the locator for free
 

@@ -1,0 +1,152 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": [
+   {"issue": "The sentence \"a Beneficiary may request written election of any such other plans in lieu of a lump sum\" is garbled and leaves unclear whether the Company must honour such a request or merely receive it. The grant of alternative settlement options is expressed only as a possibility (\"If the Company makes other plans of payment available\").", "type": 1, "prob": 0.16},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c002", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c003", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c004", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "The Schedule lists a Risk Classification of \"Percentage Substandard 150.0%\" but states \"Additional Ratings Not Applicable\", while Section 9's Monthly Deduction component (d) charges for \"any applicable Additional Ratings shown in Section 1\". How the 150% substandard rating is charged is left unreconciled.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c005", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c006", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c007", "issues": [
+   {"issue": "The notice requires \"the Net Policy Value, less Policy Debt\" to cover deductions, but Section 3 already defines Net Policy Value as the Policy Value less Policy Debt, so the phrase double-subtracts the debt. That mechanical error changes the lapse threshold it purports to describe.", "type": 1, "prob": 0.33},
+   {"issue": null, "type": 2, "prob": 0.16}]},
+ {"clause_id": "c008", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.13}]},
+ {"clause_id": "c009", "issues": [
+   {"issue": "The charge table has been reproduced with the descriptions detached from the charge names, so which text ($50.00, $3.50, 3.5%) belongs to which charge is not fixed on the face of the page. The Surrender Charge also appears under the heading \"Monthly Deduction\" though it is not a monthly deduction under Section 9.", "type": 1, "prob": 0.27},
+   {"issue": null, "type": 2, "prob": 0.14}]},
+ {"clause_id": "c010", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c011", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "Section 15 conditions withdrawals on the \"Minimum Face Amount shown in Section 1\", but this Table of Values contains only a \"Minimum Total Face Amount\" and a \"Minimum Basic Face Amount\" and no term of that name. The cross-reference cannot be matched to any entry here.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c012", "issues": [
+   {"issue": null, "type": 1, "prob": 0.17},
+   {"issue": "This footnote asserts an unqualified right to \"change ... the amount of cost of insurance deducted\", while Section 9 states that cost of insurance rates \"will be based on our expectations of future mortality, persistency, investment earnings, expense experience, capital and reserve requirements, and tax assumptions\" and must not discriminate unfairly. Whether the Section 1 footnote frees the insurer from the Section 9 constraints is a live question.", "type": 2, "prob": 0.36}]},
+ {"clause_id": "c013", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c014", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.15}]},
+ {"clause_id": "c015", "issues": [
+   {"issue": "The Monthly Factor is stated as \"4.0032737\" where the parallel non-unisex paragraph states 1.0032737; a factor of 4 would quadruple the divisor used to compute the Net Amount at Risk. That is a mechanical error that changes the arithmetic the clause prescribes.", "type": 1, "prob": 0.26},
+   {"issue": null, "type": 2, "prob": 0.12}]},
+ {"clause_id": "c016", "issues": [
+   {"issue": null, "type": 1, "prob": 0.14},
+   {"issue": null, "type": 2, "prob": 0.12}]},
+ {"clause_id": "c017", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.14}]},
+ {"clause_id": "c018", "issues": [
+   {"issue": "\"Attained Age\" is defined as \"the Age plus the number of whole years that have elapsed since the Policy Date\", but \"Age\" is itself defined as the person's age at the nearest birthday on the given date, so elapsed years are counted twice. Read literally the Insured reaches Attained Age 100 fourteen years before the Maturity Date.", "type": 1, "prob": 0.40},
+   {"issue": "On its literal terms this definition cannot be squared with the Section 3 definition of \"Maturity Date\" (\"the date upon which the Insured reaches Attained Age 100\") and the October 12, 2035 Maturity Date shown in Section 1. The two produce different Age-100 dates.", "type": 2, "prob": 0.30}]},
+ {"clause_id": "c019", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c020", "issues": [
+   {"issue": "\"Due proof of death\" is defined by two specifics followed by the open catch-all \"any other proof acceptable to us\", leaving the reach of the catch-all and the insurer's discretion to reject proof undefined. Death Proceeds are payable only \"on receipt ... of due proof\", so the boundary matters.", "type": 1, "prob": 0.30},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c021", "issues": [
+   {"issue": null, "type": 1, "prob": 0.15},
+   {"issue": "\"In force\" is tied only to termination or lapse \"in accordance with the Grace Period provision\", but Section 12 lists two further automatic termination events (death of the Insured and surrender). The definition and the termination section do not cover the same ground.", "type": 2, "prob": 0.22}]},
+ {"clause_id": "c022", "issues": [
+   {"issue": "The definition requires \"a written form signed by you, satisfactory to us\" but then adds \"or such other medium electronic or otherwise that we may from time to time make available\", so whether an electronic communication satisfies the signature requirement is left open. The syntax does not make clear what the alternative medium is an alternative to.", "type": 1, "prob": 0.22},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c023", "issues": [
+   {"issue": "The \"Issue Date\" is defined only by its function (\"the date from which the Suicide Exclusion and Incontestability provisions are applied\") and not by any identifiable event, making the definition circular. Its content depends entirely on the Schedule entry it does not reference.", "type": 1, "prob": 0.21},
+   {"issue": null, "type": 2, "prob": 0.11}]},
+ {"clause_id": "c024", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": "The stated Maturity Date of October 12, 2035 depends on \"Attained Age 100\", but the Section 3 definition of Attained Age (Age plus whole years elapsed since the Policy Date) would place Attained Age 100 much earlier. The two cannot both be right.", "type": 2, "prob": 0.26}]},
+ {"clause_id": "c025", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.07}]},
+ {"clause_id": "c026", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c027", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": "The Section 1 premium notice speaks of \"the Net Policy Value, less Policy Debt\", which subtracts Policy Debt a second time from a figure this definition already nets. The lapse test therefore reads differently in Section 1 than in Section 11.", "type": 2, "prob": 0.18}]},
+ {"clause_id": "c028", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c029", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c030", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c031", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.07}]},
+ {"clause_id": "c032", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c033", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c034", "issues": [
+   {"issue": null, "type": 1, "prob": 0.05},
+   {"issue": null, "type": 2, "prob": 0.07}]},
+ {"clause_id": "c035", "issues": [
+   {"issue": "The opening formula — Net Premium credited \"less an amount not to exceed one month of Monthly Deductions\" — gives no rule for fixing the amount actually deducted within that ceiling. The initial Policy Value is therefore not determinable from the definition itself.", "type": 1, "prob": 0.27},
+   {"issue": null, "type": 2, "prob": 0.14}]},
+ {"clause_id": "c036", "issues": [
+   {"issue": null, "type": 1, "prob": 0.05},
+   {"issue": null, "type": 2, "prob": 0.07}]},
+ {"clause_id": "c037", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c038", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.09}]},
+ {"clause_id": "c039", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": "The Living Benefit Rider defines \"We (Our, Us)\" as \"Phoenix Life Insurance Company, or its subsidiaries\", whereas this definition limits the pronouns to the Company alone. The two definitions of the same pronouns do not match.", "type": 2, "prob": 0.18}]},
+ {"clause_id": "c040", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c041", "issues": [
+   {"issue": "\"We reserve the right to make any reasonable adjustments to the terms or conditions of this policy ... to the extent we deem it necessary\" combines an objective standard (\"reasonable\") with a wholly subjective trigger (\"we deem\"), and no limit on what terms may be adjusted. The scope of that unilateral power is not fixed by the words.", "type": 1, "prob": 0.28},
+   {"issue": "This clause lets the Company adjust policy terms unilaterally \"notwithstanding any other provisions of the policy to the contrary\", while Section 22 provides that any change in the provisions of the policy must be in writing signed by an executive officer and countersigned. The two amendment mechanisms sit uneasily together.", "type": 2, "prob": 0.30}]},
+ {"clause_id": "c042", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "The reserved \"right to refuse any premium payments that would cause the policy to fail the test you elected\" is contradicted by the closing sentence of the Guideline Premium Limit paragraph: \"In no event, however, will we refuse to accept any premium necessary to prevent the policy from terminating.\"", "type": 2, "prob": 0.32}]},
+ {"clause_id": "c043", "issues": [
+   {"issue": null, "type": 1, "prob": 0.16},
+   {"issue": "The closing sentence (\"In no event, however, will we refuse to accept any premium necessary to prevent the policy from terminating\") cannot be squared with Section 10's directive that \"we will not process such payment\" where receipt would disqualify the policy as life insurance, or with Section 4's reserved right to refuse such premiums.", "type": 2, "prob": 0.36}]},
+ {"clause_id": "c044", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.16}]},
+ {"clause_id": "c045", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.10}]},
+ {"clause_id": "c046", "issues": [
+   {"issue": null, "type": 1, "prob": 0.14},
+   {"issue": "A face-amount reduction here triggers a pro-rata Surrender Charge, whereas the Section 6 reduction on a change of Death Benefit Option is made \"with no change to the surrender charge schedule of the policy\". Which rule governs a reduction achieved through an option change is not stated.", "type": 2, "prob": 0.22}]},
+ {"clause_id": "c047", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": "The rule that \"if the Insured dies on or after the date we receive a request from you to surrender the policy, no Death Proceeds will be paid\" is hard to reconcile with Section 12, under which the policy terminates only on \"the date the policy is surrendered\", and with the Grace Period rule preserving proceeds on death. The date coverage ends is stated differently in the two sections.", "type": 2, "prob": 0.24}]},
+ {"clause_id": "c048", "issues": [
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": "This paragraph reduces Death Proceeds by \"any outstanding Policy Charges due\", while Section 11 says that on death in default \"we will deduct from the proceeds all Monthly Deductions due and unpaid\". Policy Charges is a broader category than Monthly Deductions.", "type": 2, "prob": 0.22}]},
+ {"clause_id": "c049", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.08}]},
+ {"clause_id": "c050", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.09}]}
+]}

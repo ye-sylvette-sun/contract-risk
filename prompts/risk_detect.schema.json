@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "judgments"
+  ],
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "description": "One judgment per provision id listed in the document, in the order given.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "clause_id",
+          "issues"
+        ],
+        "properties": {
+          "clause_id": {
+            "type": "string",
+            "description": "The provision id, copied exactly from the square brackets."
+          },
+          "issues": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Every construction issue this provision carries, one entry each, with its own probability. NORMALLY no named issue at all, or exactly one: a provision with no nameable defect gets exactly two entries, one per type, each with issue null and prob carrying how likely that kind of dispute is anyway. Two issues of one type, or issues of both types, are the exception -- give them only when the extra defect is obvious and carries a genuinely high probability of its own. Never leave a type unrepresented: a type with no entry is read as probability 0.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "issue",
+                "type",
+                "prob"
+              ],
+              "properties": {
+                "issue": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "description": "Two sentences naming THIS specific defect: for risk type 1 the ambiguous term or the general-vs-specific tension; for risk type 2 the other provision it cannot be squared with, named. Null only when there is no specific defect to name and the entry exists to carry a probability for its type."
+                },
+                "type": {
+                  "type": "integer",
+                  "enum": [
+                    1,
+                    2
+                  ],
+                  "description": "1 for an intrinsic textual defect, visible in the provision itself. 2 for a defect in the provision's relationship to the rest of the instrument."
+                },
+                "prob": {
+                  "type": "number",
+                  "description": "Probability in [0, 1] that a court would have something to construe on account of THIS issue. Two decimal places, on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1. The range is stated here and not as minimum/maximum, which structured output rejects on a number; the reader clamps it."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

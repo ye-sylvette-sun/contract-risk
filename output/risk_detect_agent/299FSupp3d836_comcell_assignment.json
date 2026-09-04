@@ -1,0 +1,1826 @@
+{
+  "contract_id": "299FSupp3d836_comcell_assignment",
+  "_id_map": {
+    "c001": "neg1",
+    "c002": "neg2",
+    "c003": "neg3",
+    "c004": "neg4",
+    "c005": "neg5",
+    "c006": "neg6",
+    "c007": "neg7",
+    "c008": "neg8",
+    "c009": "neg9",
+    "c010": "neg10",
+    "c011": "neg11",
+    "c012": "neg12",
+    "c013": "neg13",
+    "c014": "neg14",
+    "c015": "neg15",
+    "c016": "neg16",
+    "c017": "neg17",
+    "c018": "neg18",
+    "c019": "neg19",
+    "c020": "neg20",
+    "c021": "neg21",
+    "c022": "neg22",
+    "c023": "neg23",
+    "c024": "neg24",
+    "c025": "neg25",
+    "c026": "neg26",
+    "c027": "neg27",
+    "c028": "neg28",
+    "c029": "neg29",
+    "c030": "neg30",
+    "c031": "neg31",
+    "c032": "neg32",
+    "c033": "neg33",
+    "c034": "neg34",
+    "c035": "neg35",
+    "c036": "neg36",
+    "c037": "neg37",
+    "c038": "neg38",
+    "c039": "neg39",
+    "c040": "neg40",
+    "c041": "neg41",
+    "c042": "neg42",
+    "c043": "neg43",
+    "c044": "neg44",
+    "c045": "neg45",
+    "c046": "neg46",
+    "c047": "neg47",
+    "c048": "neg48",
+    "c049": "neg49",
+    "c050": "neg50",
+    "c051": "neg51",
+    "c052": "neg52",
+    "c053": "neg53",
+    "c054": "neg54",
+    "c055": "neg55",
+    "c056": "neg56",
+    "c057": "neg57",
+    "c058": "neg58",
+    "c059": "neg59",
+    "c060": "neg60",
+    "c061": "neg61",
+    "c062": "neg62",
+    "c063": "neg63",
+    "c064": "neg64",
+    "c065": "neg65",
+    "c066": "neg66",
+    "c067": "neg67",
+    "c068": "neg68",
+    "c069": "neg69",
+    "c070": "neg70",
+    "c071": "neg71",
+    "c072": "neg72",
+    "c073": "neg73",
+    "c074": "neg74",
+    "c075": "neg75",
+    "c076": "neg76",
+    "c077": "neg77",
+    "c078": "neg78",
+    "c079": "neg79",
+    "c080": "neg80",
+    "c081": "neg81",
+    "c082": "neg82",
+    "c083": "neg83",
+    "c084": "neg84",
+    "c085": "neg85",
+    "c086": "neg86",
+    "c087": "neg87",
+    "c088": "neg88",
+    "c089": "neg89",
+    "c090": "neg90",
+    "c091": "neg91",
+    "c092": "pos1",
+    "c093": "neg92",
+    "c094": "neg93",
+    "c095": "neg94",
+    "c096": "neg95",
+    "c097": "neg96",
+    "c098": "neg97",
+    "c099": "neg98",
+    "c100": "neg99",
+    "c101": "neg100",
+    "c102": "neg101",
+    "c103": "neg102",
+    "c104": "neg103",
+    "c105": "neg104",
+    "c106": "neg105",
+    "c107": "neg106"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": "The preamble makes the Assignment operate \"pursuant to\" an unattached Settlement Agreement, whose terms could point differently from the operative text. That sits uneasily with Section 5(g), which declares this Assignment the entire agreement with respect to the assignment of the PEG Bandwidth Contract.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "neg1"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "The acceptance sentence is made \"Subject to the provisions of Section 1(b) below,\" but Section 1(b) is the pro-rations clause; the limitation on assumed obligations is in Section 1(c) (Exclusions). The mis-cross-reference leaves the scope of what Comcell actually assumed open to argument.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "A wholesale transfer of \"all of Texhoma's benefits, obligations and liabilities\" is hard to square with Section 4, under which Texhoma keeps performing maintenance and restoration for the fibers used to serve PEG. The two provisions leave it uncertain who bears performance obligations toward PEG after the Effective Date.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg2"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The clause prorates \"the maintenance fee paid by PEG for the month in which the Effective Date falls,\" but the Effective Date is the first day of January, so the pro rata split it assumes has no obvious content. The measure of each party's \"pro rata share\" is not stated.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg3"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg4"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.07
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg5"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "The enumerated taxes are followed by the catch-all \"any other taxes or fees applicable to the PEG Bandwidth Contract,\" whose reach beyond the listed categories is uncertain. A dispute could turn on whether an unlisted charge is of the same kind as those enumerated.",
+          "type": 1,
+          "prob": 0.18
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "neg6"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg7"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.07
+        },
+        {
+          "issue": "The warranted monthly maintenance fee of $9,399.84 does not match Section 6.1 of the PEG Bandwidth Contract, which fixes the fee at $9,400 upon acceptance of all sites and escalates it 1.5% every five years. The discrepancy invites argument about the accuracy of the warranted figure.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "neg8"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg9"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The maintenance and restoration standard is defined by reference to \"Exhibit B to the Maintenance Agreement between the Parties\" and to \"Outage\" as defined in that Maintenance Agreement, a document not part of or attached to this instrument. The content of Texhoma's continuing duty therefore cannot be fixed from the text, and \"the term of the PEG Bandwidth Contract\" (initial term, renewals, or post-purchase period) is equally open.",
+          "type": 1,
+          "prob": 0.52
+        },
+        {
+          "issue": "The clause promises \"the six Burkburnett Fibers described on Exhibit B,\" but Exhibit B to the Assignment lists only two Burkburnett sites and describes no six fibers. The mismatch between the operative promise and the exhibit it incorporates leaves the subject matter of the sublease uncertain.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "neg10"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The clause makes the Assignment binding on and enforceable by the parties \"and, in the case of Comcell, its successors and assigns,\" naming only one party's successors. Expressio unius invites the argument that Texhoma's successors and assigns are not covered.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": "That one-sided successor language contradicts Section 5(m) (Binding agreement), which states the Assignment binds Texhoma Fiber LLC and its successors and assigns as well as Comcell and its successors and assigns. The two clauses cannot both be given their literal effect.",
+          "type": 2,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "neg11"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.05
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg12"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "The sentence is garbled — \"and so much of said Assignment is held to be unenforceable\" hangs without a clear grammatical role — obscuring what triggers the saving clause. Its operation on partial invalidity is therefore uncertain.",
+          "type": 1,
+          "prob": 0.2
+        },
+        {
+          "issue": "This savings language duplicates Section 5(i) (Severability), which adds an obligation to renegotiate invalid provisions; the two overlap without stating which governs. The redundancy leaves the remedy for an invalid term ambiguous.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "neg13"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.04
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg14"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The clause reads \"shall continue in full force and effect in accordance shall survive execution and delivery,\" a plainly incomplete sentence with words missing after \"in accordance.\" What survives, and by reference to what terms, is left unclear.",
+          "type": 1,
+          "prob": 0.32
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg15"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "Notice is \"deemed to be given\" only if \"received within twenty-four (24) hours\" of delivery to a courier or \"within seventy-two (72) hours\" of mailing, so a notice actually received later may be deemed never given. The deeming mechanism can be read either as a timing presumption or as a condition of validity.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg16"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The parties promise only to \"cooperate to the extent necessary\" to secure PEG's agreement to send notices to Comcell, a standard with no measurable content and dependent on a third party's consent. Whether it obliges any particular step is open.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg17"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg18"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The merger clause is limited to \"the entire agreement between the Parties with respect to the assignment of the PEG Bandwidth Contract,\" leaving unclear whether the sublease and maintenance obligations in Section 4 fall inside or outside it. The boundary of the integrated subject matter is genuinely contestable.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": "The clause sits against the preamble's statement that the Assignment is entered into pursuant to the Settlement Agreement and against Section 4's reference to a separate \"Maintenance Agreement between the Parties.\" Whether those documents remain operative alongside this one is unresolved.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg19"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.11
+        },
+        {
+          "issue": "The statement that each Party's rights and obligations \"shall be only those expressly stated in this Assignment\" is difficult to reconcile with Section 4, which imports maintenance and Outage standards from a separate Maintenance Agreement. A party could argue the incorporated duties are excluded.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg20"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.07
+        },
+        {
+          "issue": "Severability here overlaps the second sentence of Section 5(b), which addresses the same subject in different terms and without the good-faith renegotiation duty. The instrument contains two severability regimes without a priority rule.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "neg21"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "neg22"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.06
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg23"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.04
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.04
+        }
+      ],
+      "dataset_clause_id": "neg24"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.07
+        },
+        {
+          "issue": "This clause binds both parties' successors and assigns, while Section 5(a) (Successors and Assigns) extends that benefit and burden only \"in the case of Comcell.\" The two successor provisions cannot both be read literally.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "neg25"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "The clause states that \"[t]he signatories to this Settlement Agreement\" have authority, but the instrument being signed is the Assignment; \"Settlement Agreement\" is separately defined in the preamble as a different document. The mislabelling makes the scope of the authority representation uncertain.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg26"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "The execution date is left blank (\"this __ day of May, 20 I J\"), so the instrument does not state when it was made. The date matters because other provisions run terms and obligations from it.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": "Both Amendments recite that the Dark Fiber Lease Agreement is \"dated June 1st, 2011,\" while Recital A of the Assignment describes it as entered into May 31, 2011 and this preamble says May. The instrument dates the same agreement three ways.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg27"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "Maintenance is to be performed \"pursuant to its standard plant maintenance standards,\" an undefined internal standard set by Texhoma alone. What that standard requires cannot be determined from the instrument.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": "This general maintenance obligation stands beside Article 6, which prescribes detailed maintenance duties, response times and fees, without stating which controls if they differ. A conflict between the \"standard plant\" measure and Article 6/Exhibit B specifications is possible.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "neg28"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": "The grant of two backbone and four lateral dark fibers conflicts with Section 3 of the Second Amendment, which increases the strands \"to six (6) throughout the fiber route,\" and the Second Amendment's ratification clause leaves the original grant nominally in force. How many fibers PEG holds on each segment is therefore contestable.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "neg29"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "The parties merely \"shall enter into a separate Equipment Collocation Agreement\" whose terms are wholly unstated, an agreement to agree. Nothing in the instrument fixes the content of that promised agreement.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": "Section 7.1 makes all of PEG's access to the Route depend on the Collo Agreement, so if no such agreement is made the access regime is left with no content. The two provisions together leave PEG's access rights indeterminate.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg30"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "The Demarcation Points \"generally will be at a handhole near but outside the relevant tower site\" and are to \"be agreed upon at time of Installation\" — both the location standard and the mechanism are indefinite. Neither \"generally\" nor \"near\" can be applied to a boundary line.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg31"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "The prohibition on reselling, assigning or subleasing the Leased Fibers is immediately qualified by a carve-out permitting PEG to use them to provide lit capacity and other services to third parties, leaving the line between prohibited resale and permitted service provision unclear. \"Resell\" is the contested term.",
+          "type": 1,
+          "prob": 0.36
+        },
+        {
+          "issue": "The flat bar on assignment or sublease to \"any third party\" conflicts with Section 18.10, which lets PEG assign the Agreement in whole or in part to affiliates or in a merger or asset sale. The two assignment regimes point in different directions.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg32"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "The access right is granted \"in accordance with Section 4.2 of this Agreement,\" but Section 4.2 concerns power and space charges at POPs and says nothing about access. The cross-reference cannot be applied as written.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": "The grant of backbone access at any transmission site, regeneration site or POP contradicts Section 7.1, which states that PEG \"shall not have access\" to the Route or the Leased Fibers except as provided in the Collo Agreement. The two provisions cannot both be given effect.",
+          "type": 2,
+          "prob": 0.44
+        }
+      ],
+      "dataset_clause_id": "neg33"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.07
+        }
+      ],
+      "dataset_clause_id": "neg34"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg35"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.15
+        },
+        {
+          "issue": "This definition identifies Leased Fibers functionally (fibers on which Texhoma initiates no signal), while Section 1.2 defines \"Leased Fibers\" as the specific two backbone and four lateral fibers shown on Exhibit A. The two definitions of the same term do not necessarily describe the same fibers.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg36"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "\"Underlying Rights\" is defined here as easements, licenses and franchises to use real property, but Article 14 separately defines the same capitalised term to include rights, authorizations and licenses from governmental authorities and building-owner access rights. Two competing definitions of one defined term govern the termination right in Article 14.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg37"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "The thirty-year term runs \"from the date of Acceptance,\" yet Acceptance under Article 5 occurs site by site over time, so the commencement date of the term is indeterminate. The article is also headed \"ARTICLE 1. TERM\" although it is the third article.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "The term provision governs how long the sublease in Section 4 of the Assignment (\"for the term of the PEG Bandwidth Contract\") runs, but it contains an initial term, a purchase option and a year-to-year renewal without saying which of these is the \"term.\" The two instruments cannot be aligned on duration.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg38"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.11
+        },
+        {
+          "issue": "The $20,000 per-site fee is displaced in part by First Amendment Section 2 ($10,000 for the last 14 Added Sites) and Second Amendment Section 2 ($60,000 for five sites), each expressed as \"[n]otwithstanding Section 4.1.\" Which fee applies to which site depends on reconciling three overlapping schedules.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg39"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "The no-charge rule applies only \"outside of the Community Telephone Company (CTC) service area,\" and rates inside that area are left to CTC's tariffs — a third party's schedule not attached. The geographic boundary and the applicable rate are both external to the text.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": "Section 1.6 grants backbone access \"in accordance with Section 4.2,\" yet this section contains no access terms at all. Read together the two provisions leave the access conditions unstated.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "neg40"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "neg41"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "Amounts \"other than those disputed by PEG\" escape late charges and the suspension remedy, but nothing states how or when a dispute must be raised. A party could dispute an invoice at any time to defeat the remedy.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": "The right to suspend or terminate service ten days after a nonpayment notice conflicts with Article 13, which requires thirty days' notice and cure before a party is in Default and may terminate. The two termination mechanisms give different periods for the same failure to pay.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "neg42"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [
+        {
+          "issue": "PEG must respond \"within five (5) days\" of the Notice of Acceptance, but the deemed-acceptance sentence measures the same period as \"five (5) business days.\" The provision states two different deadlines for one response, and \"unreasonably withholds acceptance\" adds a further undefined standard.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg43"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "The clause requires payment of \"the maintenance fees and the Site Fee as set forth in Article 6,\" but the Site Fee is established in Section 4.1, not Article 6. The cross-reference misdirects the reader as to what is owed on Conditional Acceptance.",
+          "type": 1,
+          "prob": 0.33
+        },
+        {
+          "issue": "Payment of the Site Fee on Conditional Acceptance sits against Section 2 of the Second Amendment, which requires the Site Fee within 15 days of Acceptance under Article 5, and against Section 4.1's trigger. The timing and conditions of the Site Fee obligation are not uniform across the instrument.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "neg44"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [
+        {
+          "issue": "The stated arithmetic does not work: an initial fee of $4,523.63 increasing by $123.68 per additional site does not reach the stated $9,400 upon acceptance of all anticipated sites. The escalator (\"1.5% every five years over the $9,400\") also does not say whether it compounds.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": "The $9,400 total assumes the full anticipated site count, yet Section 2 of the Second Amendment removes the sites listed on its Exhibit B from the Agreement without adjusting the fee. The maintenance fee actually payable after that deletion is unresolved.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg45"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg46"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "Texhoma will only \"endeavor\" to perform maintenance that \"will not in most circumstances result in interruptions,\" a standard with no ascertainable content. The notice requirement is also written as \"seven days (7) business days,\" leaving calendar and business days in conflict.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "neg47"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [
+        {
+          "issue": "PEG-requested relocations \"may be performed by TEXHOMA FIBER at its sole discretion,\" yet the final sentence says such relocations \"will be presented to PEG for review and approval,\" leaving the decision-maker unclear. The sentence is also ungrammatical (\"any such relocation shall subject to the prepayment\").",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg48"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.17
+        },
+        {
+          "issue": "The right to terminate if the Leased Fibers are not restored within 24 hours conflicts with Section 11.3, which makes the Credit Allowances PEG's \"sole and exclusive remedy\" for interruptions, and with Article 13's thirty-day cure period before termination. The instrument gives three different consequences for the same failure.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "neg49"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.05
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg50"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": "The blanket denial of access to the Route and the Leased Fibers contradicts Section 1.6, which permits PEG to access the Leased Fibers along the backbone at any transmission site, regeneration site or POP. Whether PEG has access rights at all turns on which provision prevails.",
+          "type": 2,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "neg51"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "The parties merely agree to \"negotiate in good faith\" over the construction of Additional Connections, with no standard for when a request must be granted or refused. Whether that creates any enforceable obligation is contestable.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "neg52"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg53"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "Neither party is to have \"any limitations on the types of electronics or technologies\" used, yet the same sentence subjects PEG to Texhoma's safety procedures and to a non-interference condition, and Texhoma alone may act to eliminate interference. The scope of the freedom granted is uncertain.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg54"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "The paragraph is numbered 7.1.3 although it plainly belongs in the 7.2 series on Additional Connections, between 7.2.2 and 7.2.4. The misnumbering obscures which set of obligations it qualifies.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": "The statement that Texhoma need not construct any additional facilities sits against Section 7.2, under which the parties negotiate in good faith \"for the construction and installation\" of Additional Connections and Texhoma may agree to them. The two leave Texhoma's construction obligation unresolved.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg55"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "The statement that Texhoma \"is under no obligation to share its Underlying Rights with PEG\" is in tension with Section 9.4 and Article 14, under which Texhoma must obtain and maintain the rights required for the Route and negotiate modifications if they are lost. The extent of PEG's entitlement to those rights is unclear.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg56"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg57"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "The capacity commitment is stated in indefinite terms — \"up to\" 1G, POPs \"expected to be comprised of 10 locations,\" locations selected by Texhoma \"in consultation with PEG.\" What PEG must actually deliver cannot be fixed from the text.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": "The capacity increase is conditioned on Texhoma providing \"4 fibers along the entire leased Fiber route,\" while Section 3 of the Second Amendment increases the strands to six throughout the route. Whether the condition has been satisfied is left open.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg58"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.18
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg59"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.11
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "neg60"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.06
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.07
+        }
+      ],
+      "dataset_clause_id": "neg61"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.17
+        },
+        {
+          "issue": "The warranty that the Route will operate to Exhibit B specifications for the whole term is channelled into \"the rights and remedies as set forth in Article 11,\" which caps recovery at monthly maintenance-fee credits. Whether the warranty adds anything to the Article 11 credit regime is contestable.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg62"
+    },
+    {
+      "clause_id": "c063",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": "The absolute undertaking to have obtained and to maintain all permits, licenses and franchises throughout the term conflicts with Article 14, which contemplates that Underlying Rights may be withdrawn or modified \"through no fault of either party\" and provides for renegotiation instead of breach. The two allocate the same risk differently.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "neg63"
+    },
+    {
+      "clause_id": "c064",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "neg64"
+    },
+    {
+      "clause_id": "c065",
+      "issues": [
+        {
+          "issue": "The clause reads \"from or all damages,\" a mangled phrase where \"from any and all damages\" was intended, and it never qualifies the indemnity by reference to fault. The scope of what PEG must indemnify is left to construction.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": "This unqualified indemnity for outages and interruptions in the Leased Fibers overrides the carve-out in Section 10.1, which excludes claims caused by the indemnitee's own negligence, even where the outage is Texhoma's fault. The two indemnities allocate the same loss to different parties.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg65"
+    },
+    {
+      "clause_id": "c066",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": "The same defined term \"Infringement Claim\" and the same definition of \"Intellectual Property Rights\" are separately created here and in Section 10.4 for opposite indemnity flows. Which definition governs a mixed claim is unresolved.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "neg66"
+    },
+    {
+      "clause_id": "c067",
+      "issues": [
+        {
+          "issue": "The indemnity is triggered by allegations that the content transmitted or PEG's use infringes, but the remedy sentence switches to the case where \"the Leased Fibers are held to infringe\" — apparently copied from Section 10.3. The trigger and the remedy address different events.",
+          "type": 1,
+          "prob": 0.35
+        },
+        {
+          "issue": "For the identical scenario of the Leased Fibers being held to infringe, Section 10.3 obliges Texhoma to indemnify PEG and to procure, modify or replace, while this section gives Texhoma a right to terminate. The two provisions give opposite consequences to the same fact.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg67"
+    },
+    {
+      "clause_id": "c068",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": "The graduated credit regime for outages lasting two and four business days is difficult to square with Section 6.5, which lets PEG terminate if the Fibers are not restored within twenty-four hours, and with Second Amendment Section 4's 24-continuous-hour trigger. The consequence of a prolonged outage differs across the instrument.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg68"
+    },
+    {
+      "clause_id": "c069",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "The credit remedy for non-path-protected outages after twelve and twenty-four hours coexists with Section 6.5's right to terminate after twenty-four hours and with Section 11.3's exclusive-remedy clause. Which remedy PEG may pursue for the same outage is not settled by the text.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "neg69"
+    },
+    {
+      "clause_id": "c070",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.09
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg70"
+    },
+    {
+      "clause_id": "c071",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg71"
+    },
+    {
+      "clause_id": "c072",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "neg72"
+    },
+    {
+      "clause_id": "c073",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.18
+        },
+        {
+          "issue": "Making the Credit Allowances PEG's \"sole and exclusive remedy\" for interruptions contradicts Section 18.7, which states that the parties' rights and remedies \"shall be cumulative and in addition to any other rights and remedies provided by law or equity,\" and Section 4 of the Second Amendment, which gives self-help and termination \"in addition to any other remedies.\" The exclusivity cannot stand with those provisions as written.",
+          "type": 2,
+          "prob": 0.44
+        }
+      ],
+      "dataset_clause_id": "neg73"
+    },
+    {
+      "clause_id": "c074",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.15
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg74"
+    },
+    {
+      "clause_id": "c075",
+      "issues": [
+        {
+          "issue": "The waiver operates only \"if releaser's insurance policy applicable to the claim contains a clause providing that such a release or waiver shall not invalidate the insurance,\" a condition whose satisfaction depends on documents outside the contract. Whether the waiver is in force at any moment is indeterminate on the face of the text.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": "A requirement to look first to insurance and a mutual subrogation waiver \"regardless of negligence\" is hard to reconcile with the negligence-based indemnities in Article 10 and with Section 12.1's statement that the insurance section does not limit the indemnity responsibilities. The relationship between waiver and indemnity is unresolved.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg75"
+    },
+    {
+      "clause_id": "c076",
+      "issues": [
+        {
+          "issue": "Default is limited to failure to perform a \"material term, provision, covenant, condition, agreement, or obligation,\" with materiality left undefined against a broad list. Which failures qualify is open to argument.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": "The thirty-day notice-and-cure regime conflicts with Article 4, which lets Texhoma suspend or terminate service ten days after a nonpayment notice, and with Section 6.5, which lets PEG terminate after twenty-four hours without cure. The instrument contains inconsistent termination triggers.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg76"
+    },
+    {
+      "clause_id": "c077",
+      "issues": [
+        {
+          "issue": "Termination turns on whether partial termination \"is not practical\" or \"substantially alters the fundamental terms\" of the Agreement, standards with no defined content. Either party could apply them differently to the same loss of rights.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": "This article defines \"Underlying Rights\" to include third-party and governmental authorizations and building access, whereas Article 2 defines the same term as easements, licenses and franchises to use real property. The termination right depends on which definition applies.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg77"
+    },
+    {
+      "clause_id": "c078",
+      "issues": [
+        {
+          "issue": "Texhoma bears all listed taxes \"and other taxes and governmental fees, directly applicable to the leasing of the Leased Fibers,\" a catch-all whose reach beyond the enumerated categories is uncertain. \"Directly applicable\" is the contested limit.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "neg78"
+    },
+    {
+      "clause_id": "c079",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "neg79"
+    },
+    {
+      "clause_id": "c080",
+      "issues": [
+        {
+          "issue": "Force Majeure is defined by a general phrase — \"causes beyond the reasonable control of such other party, including, but not limited to\" — followed by specific enumerations, leaving the catch-all's reach open to an ejusdem generis argument. The deemed inclusion of hazardous materials sits oddly with the listed categories.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": "Section 4 of the Second Amendment refers to \"Force Majeure as defined in Article 11,\" but Force Majeure is defined here in Article 17 and Article 11 is the limitation of liabilities. The two documents point to different articles for the same defined term.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg80"
+    },
+    {
+      "clause_id": "c081",
+      "issues": [
+        {
+          "issue": "The prohibition covers services to \"licensed CMRS carriers\" while the immediately following carve-out speaks of \"wireless carriers,\" leaving the restricted class uncertain. The two descriptions are not obviously coextensive.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": "The restriction is keyed to \"the sites contained in Exhibit A,\" but Exhibit A was replaced by the First Amendment's Amended Exhibit A and further reduced by the Second Amendment's Exhibit B of deleted sites. Which site list defines the restricted and unrestricted sites is unresolved.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "neg81"
+    },
+    {
+      "clause_id": "c082",
+      "issues": [
+        {
+          "issue": "The clause applies to work by either party on the other's premises yet requires adherence to \"TEXHOMA FIBER security procedures, policies and operation,\" which makes no sense for Texhoma's work on PEG premises. The obligation's application is asymmetric on its face.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "neg82"
+    },
+    {
+      "clause_id": "c083",
+      "issues": [
+        {
+          "issue": "Notification is triggered by a defect creating \"a substantial risk to stored data or software\" or \"to the public health,\" a threshold with no defined measure. When the immediate-notice duty arises is a matter of judgment.",
+          "type": 1,
+          "prob": 0.2
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.07
+        }
+      ],
+      "dataset_clause_id": "neg83"
+    },
+    {
+      "clause_id": "c084",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.16
+        },
+        {
+          "issue": "Characterising the relationship as \"solely that of vendor-purchaser\" is difficult to reconcile with the instrument's own structure as a lease of fibers granting PEG exclusive use for a thirty-year term with a purchase option under Article 3. The legal character of the arrangement is left contestable.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg84"
+    },
+    {
+      "clause_id": "c085",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.11
+        },
+        {
+          "issue": "The entire-agreement statement sits against Section 1.3, which contemplates a separate Collo Agreement, and Section 7.2, under which the Collo Agreement controls collocation obligations. Whether those separate documents form part of the bargain is unresolved.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "neg85"
+    },
+    {
+      "clause_id": "c086",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.07
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "neg86"
+    },
+    {
+      "clause_id": "c087",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": "Cumulative remedies \"in addition to any other rights and remedies provided by law or equity\" directly contradict Section 11.3, which makes the Credit Allowances PEG's sole and exclusive remedy for interruptions and outages. A court would have to choose between them.",
+          "type": 2,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "neg87"
+    },
+    {
+      "clause_id": "c088",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.05
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "neg88"
+    },
+    {
+      "clause_id": "c089",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.04
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.07
+        }
+      ],
+      "dataset_clause_id": "neg89"
+    },
+    {
+      "clause_id": "c090",
+      "issues": [
+        {
+          "issue": "The writing requirement is limited to \"[n]o subsequent agreement concerning the Route,\" not to amendments of the Agreement generally, leaving open whether other terms could be varied informally. \"Concerning the Route\" is the contested limit.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "neg90"
+    },
+    {
+      "clause_id": "c091",
+      "issues": [
+        {
+          "issue": "The delivery methods are garbled — \"mailed certified with return receipt requested at by overnight courier\" — so whether certified mail and courier are alternatives or a single required method is unclear. The notice mechanics cannot be applied as written.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "neg91"
+    },
+    {
+      "clause_id": "c092",
+      "issues": [
+        {
+          "issue": "The clause lets Texhoma assign \"its rights and obligations hereunder to any entity\" with notice to PEG, but does not say whether notice is a condition of effectiveness or whether the assignment releases Texhoma from its own obligations. Both the effect of the assignment on the assignor and the meaning of \"assign its obligations\" are open to opposing readings.",
+          "type": 1,
+          "prob": 0.55
+        },
+        {
+          "issue": "Read with Section 1(a) of the Assignment and Assumption Agreement, which transfers all of Texhoma's benefits, obligations and liabilities to Comcell, this clause leaves unresolved whether Texhoma remains bound to PEG, particularly given Section 4 of the Assignment, under which Texhoma continues to maintain and restore the fibers used to serve PEG. The instrument does not reconcile a complete assignment with Texhoma's retained performance duties.",
+          "type": 2,
+          "prob": 0.45
+        }
+      ],
+      "dataset_clause_id": "pos1"
+    },
+    {
+      "clause_id": "c093",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "neg92"
+    },
+    {
+      "clause_id": "c094",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.05
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.05
+        }
+      ],
+      "dataset_clause_id": "neg93"
+    },
+    {
+      "clause_id": "c095",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.18
+        },
+        {
+          "issue": "The Amendment names the contracting party as \"TEXHOMA FIBER, Inc.,\" whereas the Dark Fiber Lease Agreement and the Assignment identify the party as Texhoma Fiber, LLC. Which entity is bound by the amended terms is left uncertain across the instrument.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "neg94"
+    },
+    {
+      "clause_id": "c096",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": "Replacing Exhibit A wholesale interacts with the Second Amendment, which further removes sites by its own Exhibit B, so the operative site list must be assembled from three documents. Which sites remain subject to the lease is not stated in any one place.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg95"
+    },
+    {
+      "clause_id": "c097",
+      "issues": [
+        {
+          "issue": "The Site Fee for the last 14 Added Sites is written as \"$10,000.000 (Ten Thousand and No Dollars),\" where the figure and the words do not match. The numeral as printed states a different amount.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": "The $500,000 payment is given the defined term \"Initial Fiber Fee,\" which Section 4.1 of the Dark Fiber Lease Agreement already uses for the $840,000 one-time payment. The same defined term now denotes two different sums.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg96"
+    },
+    {
+      "clause_id": "c098",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": "The ratification identifies the ratified instrument as the \"Dark Fiber Lease Agreement dated June 1, 2011,\" while the lease itself is dated in May 2011 (day left blank) and Recital A of the Assignment describes it as dated May 31, 2011. Which document is ratified depends on resolving the date conflict.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg97"
+    },
+    {
+      "clause_id": "c099",
+      "issues": [
+        {
+          "issue": "The fee split turns on \"the last 14\" and \"the first 5\" of the \"Added Sites,\" but nothing establishes the order in which the Added Sites are counted on the Amended Exhibit A. Which sites carry the $10,000 fee is therefore uncertain.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "neg98"
+    },
+    {
+      "clause_id": "c100",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.15
+        },
+        {
+          "issue": "The Second Amendment again names \"TEXHOMA FIBER, Inc.\" as the contracting party, while the underlying lease and the Assignment identify Texhoma Fiber, LLC. The identity of the entity bound by the amendments is inconsistent across the instrument.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "neg99"
+    },
+    {
+      "clause_id": "c101",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.12
+        },
+        {
+          "issue": "This recital defines \"the Agreement\" as the lease \"dated June lst, 2011, as amended effective August 15, 2011,\" while the lease preamble is dated May 2011 and Recital A of the Assignment says May 31, 2011. The recital's description of the instrument does not match the operative documents.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg100"
+    },
+    {
+      "clause_id": "c102",
+      "issues": [
+        {
+          "issue": "The clause makes time of the essence for each site's \"Completion Date\" but sets no date in the text, leaving the obligation to an Exhibit A whose dates are not reproduced. It also states no consequence for missing a Completion Date.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "neg101"
+    },
+    {
+      "clause_id": "c103",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.13
+        },
+        {
+          "issue": "The $60,000 site fee payable within 15 days of Acceptance sits on top of Section 4.1's $20,000 fee and the First Amendment's $10,000 fee, and against Section 5.2, which triggers the Site Fee on Conditional Acceptance. Which fee and which trigger apply to a given site requires reconciling three instruments.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "neg102"
+    },
+    {
+      "clause_id": "c104",
+      "issues": [
+        {
+          "issue": "\"[I]ncreased to six (6) throughout the fiber route\" is ambiguous, because Section 1.2 already granted six fibers in total (two backbone and four lateral); the amendment could mean six overall or six on each of the backbone and lateral segments. The number of strands actually leased is genuinely open.",
+          "type": 1,
+          "prob": 0.36
+        },
+        {
+          "issue": "The increase conflicts with Section 1.2's grant of two backbone and four lateral fibers and with Section 1.5's reference to \"either of the Leased Fibers,\" both of which the Second Amendment's ratification clause leaves in force. The instrument states the fiber count two ways.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "neg103"
+    },
+    {
+      "clause_id": "c105",
+      "issues": [
+        {
+          "issue": "The carve-out refers to \"Force Majeure as defined in Article 11,\" but Article 11 is the limitation of liabilities and Force Majeure is defined in Article 17. The cross-reference cannot be applied as written.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The self-help and termination remedies are granted \"in addition to any other remedies available to it under this Agreement and applicable law,\" which contradicts Section 11.3 making Credit Allowances PEG's sole and exclusive remedy for interruptions and outages. The two remedy regimes cannot both govern the same outage.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "neg104"
+    },
+    {
+      "clause_id": "c106",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": "The clause lets the non-breaching party pursue remedies on any failure to perform, without the notice and thirty-day cure that Article 13 requires before a party is in Default and may terminate. The two provisions state different preconditions to remedy.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "neg105"
+    },
+    {
+      "clause_id": "c107",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.08
+        },
+        {
+          "issue": "The ratification again dates the lease \"June 1, 2011,\" whereas the lease preamble is dated May 2011 and the Assignment's Recital A says May 31, 2011. The identity of the ratified instrument depends on resolving that inconsistency.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "neg106"
+    }
+  ]
+}

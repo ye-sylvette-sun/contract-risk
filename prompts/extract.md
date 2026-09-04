@@ -115,6 +115,35 @@ does not belong in the list.
   type, and the disputes the opinion discusses are usually that type. Use it to
   drop a clause that plainly does not fit, not as a reason to be selective.
 
+### Choosing among the candidate risk types
+
+The task shows you two lists, and they do different jobs.
+
+- **The full taxonomy** is the whole scheme these codes are drawn from. It is
+  there so you can see what each code means against its neighbours — a code
+  reads differently once you know what the others cover.
+- **The candidates** are the codes *this case* was filed under. Your answer for
+  every clause must come from that shorter list, and nothing outside it is
+  accepted.
+
+Where the case lists **one** candidate, that code is the answer for every clause
+you report — there is nothing to choose.
+
+Where it lists **several**, decide from the opinion which of them the dispute
+over *this clause* actually turned on:
+
+- Give **one** code when the court's discussion of the clause turns on one kind
+  of defect.
+- Give **more than one** when it genuinely turns on more than one — the court
+  finds a phrase ambiguous on its face *and* resolves it by reading the
+  instrument as a whole, say. Both codes then belong in the list.
+- Do not list a code merely because the case carries it. The case's keys cover
+  everything the court did across the whole opinion, and one clause is usually
+  only part of that. A code you cannot point at in the passage you are citing
+  does not belong in this clause's list.
+- Different clauses of the same case may well carry different codes. That is
+  expected, not a contradiction.
+
 ### When the answer is no clause at all
 
 - If the disputed language is not in any block above, return an empty `clauses`
@@ -130,7 +159,17 @@ does not belong in the list.
 
 **Case:** {citation}
 
-### Risk types this case was selected under
+### The risk-type taxonomy, in full
+
+Every code the scheme has. This is background: read it to see what each code
+means against the others. It is **not** the list you may answer from.
+
+{taxonomy}
+
+### The candidate risk types for this case
+
+These come from the Westlaw keys this case was filed under. **Every code you
+return must be one of these.**
 
 {risks}
 
@@ -148,8 +187,10 @@ does not belong in the list.
    listed. For each one:
 
    - `clause_name` — a short name including its section number.
-   - `taxonomy` — which of the risk types above the dispute over this clause
-     falls under. Use one of the codes listed and no other.
+   - `taxonomy` — a **list** of the candidate codes the dispute over this clause
+     falls under. Usually one; more than one only where the court's discussion
+     genuinely turns on more than one. Codes from the candidate list and no
+     other.
    - `contract_id` — the id in that contract's START marker, copied exactly.
    - `start_line`, `end_line` — the first and last line the clause occupies
      **in that contract**.

@@ -4,7 +4,7 @@ A review found that the agent experiment starts a fresh *conversation* for each
 contract but does not establish a clean *environment*. This document lists each
 point it raised, what was done about it, and how the claims are checked.
 
-Only the **agent** arm is affected. `exp3_llm_api.py` is a stateless Messages API
+Only the **agent** arm is affected. `risk_detect_llm_api.py` is a stateless Messages API
 call with no CLI, settings, memory or filesystem, and its predictions were not
 rerun.
 
@@ -97,7 +97,7 @@ rerun.
 
 - **Only the CLI version was recorded; nothing else about the machine.**
   **Fixed:** each invocation writes
-  `output/llm_logs/exp3_agent/run_manifest_<stamp>.json` before its first session
+  `output/llm_logs/risk_detect_agent/run_manifest_<stamp>.json` before its first session
   and again at the end: SDK and CLI versions, interpreter, platform, git commit
   and dirty flag, the isolation options verbatim, the names of every environment
   variable swept, the flags set, SHA-256 of the prompts and of `dataset.csv` and
@@ -147,7 +147,7 @@ rerun.
 
 - **Not raised in the review, found in our own audit: the two arms were not
   shown the same worked examples.** The agent's workspace carried each example's
-  full contract; `exp3_llm_api.py` puts only the two provision texts and the
+  full contract; `risk_detect_llm_api.py` puts only the two provision texts and the
   court's verbatim words in its few-shot block. The agent therefore had evidence
   available that the arm it is compared against did not.
   **Fixed:** the example contracts are gone from the workspace, along with the
@@ -261,9 +261,9 @@ pip install -r requirements.txt        # host side: enough to build and drive
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
 claude setup-token                     # by hand, once; the token goes in .env
 python src/experiments/preflight.py    # must print PREFLIGHT PASSED
-python src/experiments/exp3_agent.py --shuffle --parallel 6
-python src/experiments/compare_exp3.py
-python src/experiments/plot_exp3_thresholds.py --run agent
+python src/experiments/risk_detect_agent.py --shuffle --parallel 6
+python src/experiments/compare_risk_detect.py
+python src/experiments/plot_risk_detect_thresholds.py --run agent
 ```
 
 `--parallel` only sets how many containers run at once. Each contract is a
@@ -274,7 +274,7 @@ model calls, and `build_dataset.py` re-cuts every row from disk and refuses to
 write unless the text reproduces exactly. A rerun reproduces the procedure; the
 model's answers will differ, and by how much is the open question in §3.
 
-Every session leaves `output/llm_logs/exp3_agent/<cid>.trajectory.jsonl` — every
+Every session leaves `output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl` — every
 tool call, thinking block, the CLI version and the working directory — plus a
 `<cid>.json` recording turns, usage, models billed, refused paths and the image
 it ran in. The claims here can be re-audited from those artefacts without

@@ -8,8 +8,12 @@ Two kinds of log, picked per clause:
 * **synthesised** — clauses carrying full `text`. Anchors are sliced from it, so
   `--anchor-words` can be swept.
 
-Each log stores the numbered document that was sent, so nothing outside the log
-directory is needed and the OCR inputs need not be on disk.
+The logs do NOT store the document that was sent — it is the corpus text, many
+times the size of everything else in the log, and it is already on disk. The
+source is read from `output/contracts/` instead, resolved through
+`output/contracts.json`, so the corpus must be present. A log that still carries
+its own `document` (an archive from before this changed) is scored from that
+instead, so old log directories keep working.
 
 It measures what fraction of anchors match, how often snapping moves a boundary
 and by how much, and how often the extracted text differs from the raw source
@@ -46,10 +50,11 @@ def unnumber(chunk):
 
 
 def documents(log):
-    """{contract_id: text} for every numbered document in one log.
+    """{contract_id: text} for a log that still carries its own document.
 
     A per-case log carries the opinion and several tagged contracts; a per-file
-    log carries one untagged document. Both are recovered the same way.
+    log carries one untagged document. Both are recovered the same way. Only
+    archived logs reach this now — see `sources()`.
     """
     parts = TAGGED.split(log["document"])
     if len(parts) == 1:
@@ -57,11 +62,70 @@ def documents(log):
     return {parts[i]: unnumber(parts[i + 1]) for i in range(1, len(parts), 2)}
 
 
+def corpus(registry, cache):
+    """contract_id -> the filed text, read once and kept.
+
+    `locate()` wants the source, not the numbered form the model was shown, so
+    reading the corpus file is not an approximation of what the log used to
+    hold: it is the same string the numbering was built from.
+    """
+    def read(cid):
+        if cid not in cache:
+            entry = registry.get(cid)
+            path = (lib.ROOT / entry["file"]) if entry else                 lib.OUT / "contracts" / f"{cid}.md"
+            cache[cid] = path.read_text(encoding="utf-8") if path.exists() else None
+        return cache[cid]
+    return read
+
+
+def sources(log, path, read):
+    """{contract_id: text} for one log, from the corpus or the log itself.
+
+    An `inventory` log is named for the one contract it covers; an `extract` log
+    covers a case, and every clause in it names its own `contract_id`, so the
+    answer says which files to open.
+    """
+    if "document" in log:                       # an archived log, self-contained
+        return documents(log)
+    found = answer(log) or {}
+    items = found.get("clauses") or found.get("provisions") or []
+    ids = {c.get("contract_id") for c in items if c.get("contract_id")}
+    if ids:
+        return {cid: read(cid) for cid in ids}
+    return {"": read(path.stem)}                # inventory: one contract, unnamed
+
+
 def answer(log):
-    """The parsed response of one log, or None if it did not land."""
+    """The parsed response of one log, or None if it is not a locator answer.
+
+    The log directory also holds run manifests and the agent run's own records,
+    which carry no `response` at all. Until the document stopped being stored,
+    those were filtered out by its absence; now they are rejected here.
+    """
     if log.get("stop_reason") == "refusal":
         return None
-    text = next((b["text"] for b in log["response"] if b["type"] == "text"), None)
+    blocks = log.get("response")
+    if not isinstance(blocks, list):
+        return None
+
+    def texts(bs):
+        """The answer text, whichever provider's reply shape this is.
+
+        Anthropic returns `{"type": "text", "text": ...}` at the top level;
+        OpenAI returns reasoning blocks and one `{"type": "message"}` whose
+        `content` holds `{"type": "output_text", "text": ...}`. Both are logged
+        verbatim, so both have to be read here — a locator answer from the
+        dataset build has been OpenAI-shaped since the build moved providers.
+        """
+        for b in bs:
+            if not isinstance(b, dict):
+                continue
+            if b.get("type") in ("text", "output_text") and b.get("text"):
+                yield b["text"]
+            elif isinstance(b.get("content"), list):
+                yield from texts(b["content"])
+
+    text = next(texts(blocks), None)
     try:
         return json.loads(text) if text else None
     except json.JSONDecodeError:
@@ -93,14 +157,19 @@ def main():
     mode = {'replay': 0, 'synthesised': 0}
     lines_moved, scores, misses, dirty = [], [], [], []
 
+    registry = lib.read_json(lib.OUT / "contracts.json", {}) or {}
+    read = corpus(registry, {})
+
     for path in paths:
         log = lib.read_json(path)
-        if not log or "document" not in log:
+        if not log:
             continue
         found = answer(log)
         if not found:
             continue
-        texts = documents(log)
+        texts = {k: v for k, v in sources(log, path, read).items() if v}
+        if not texts:
+            continue
         items = found.get("clauses") or found.get("provisions") or []
 
         for c in items:

@@ -1,0 +1,91 @@
+{
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 31,
+  "duration_ms": 733897,
+  "total_cost_usd": 5.6259,
+  "usage": {
+    "input_tokens": 56,
+    "cache_creation_input_tokens": 229142,
+    "cache_read_input_tokens": 3332077,
+    "output_tokens": 66728,
+    "output_tokens_details": {
+      "thinking_tokens": 31313
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 229142,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 29,
+        "cache_read_input_tokens": 231683,
+        "cache_creation_input_tokens": 1535,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1535
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 56,
+      "outputTokens": 66728,
+      "cacheReadInputTokens": 3332077,
+      "cacheCreationInputTokens": 229142,
+      "webSearchRequests": 0,
+      "costUSD": 5.625938499999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "ddec058e-c8a4-412a-9550-5979eb6d3841",
+  "errors": null,
+  "result": "I wrote 366 judgments across predictions_001.json–predictions_008.json.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/mnt/skills/public/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
+    },
+    {
+      "tool": "Read",
+      "file_path": "/home/judge/.claude/projects/-work/ddec058e-c8a4-412a-9550-5979eb6d3841/tool-results/toolu_019zS2tvkiKCaWVwGD48xsqf.txt"
+    }
+  ],
+  "rate_limits": {
+    "five_hour": {
+      "status": "allowed",
+      "utilization": null,
+      "resets_at": 1788417000
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 366,
+  "n_wanted": 366,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}
