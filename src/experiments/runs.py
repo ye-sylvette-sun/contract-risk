@@ -183,9 +183,23 @@ _LEAD = re.compile(r'^(?:Exhibit|Ex\.|Id\.|See|Cf\.|Compare|Accord|Supra)\b'
                    r'|^.{0,34}?\bat\s+¶?\s*\d')
 
 # Words that mark the court describing a CONTEST rather than stating a holding.
-_CUES = ("disput", "argues", "argue ", "contends", "contend ", "asserts",
-         "must determine", "conflict", "ambigu", "does not define",
-         "undefined", "silent as to")
+#
+# `(?<!un)ambigu` because the negated form means the opposite and is what a
+# holding says. Counting "unambiguously" as a dispute cue is what put the 2.2
+# example's excerpt on `Accordingly, the Court finds ... unambiguously permits`
+# — the court's disposition — instead of on `the two provisions appear to
+# conflict`, which is the incoherence the example exists to show.
+_CUES = re.compile(r"(?<!un)ambigu|disput|\bargues?\b|\bcontends?\b|\basserts\b"
+                   r"|must determine|\bconflict|does not define|\bundefined\b"
+                   r"|silent as to", re.I)
+
+# The court disposing of the question. A worked example wants the defect, not
+# the answer to it: an excerpt of the holding teaches the model to write
+# verdicts, and `issue` is not a verdict.
+_HOLDING = re.compile(r"\baccordingly\b|the Court (?:finds|concludes|therefore)"
+                      r"|for the foregoing reasons|\bwe hold\b"
+                      r"|\bis (?:DENIED|GRANTED)\b"
+                      r"|it is clear from its plain language", re.I)
 
 _STOP = set("""the a an and or of to in on for with that this these those is are
 was were be been being it its as by at from any all such other than not no if
@@ -247,8 +261,9 @@ def court_excerpt(comment, terms, cap=700, floor=300):
             w = text[a:b]
             wl = w.lower()
             score = (sum(1 for t in terms if t in wl)
-                     + 0.6 * sum(wl.count(c) for c in _CUES)
+                     + 0.6 * len(_CUES.findall(w))
                      - 1.5 * len(_CITE.findall(w))
+                     - 1.0 * len(_HOLDING.findall(w))
                      - (2.0 if _LEAD.match(w) else 0.0))
             key = (score, n, -a)          # ties: the fuller window, then earlier
             if best is None or key > best[0]:
