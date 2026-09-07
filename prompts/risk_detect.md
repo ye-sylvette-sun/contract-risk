@@ -81,6 +81,16 @@ court would have something to construe** — not a verdict that it is sound.
 
 - A definite, consistent provision carries **no issue at all**. Being litigated
   is not itself a defect, and neither is being important, long or complex.
+- **If you can name it, list it — however unsure you are.** A defect you can put
+  into a sentence but would not bet on is a real entry with a low probability:
+  0.08, 0.15, 0.20. It is not a reason to write nothing. The low end of the
+  range is where most named issues belong, and it is doing real work — these
+  numbers rank provisions against each other, and a provision you scored 0.15 on
+  is ranked far above one you left empty.
+- **Uncertainty goes into the probability. Inability to name goes into the empty
+  list.** Never use the empty list to express doubt about a defect you can see.
+  The question that decides between them is not "am I confident?" but "can I say
+  what is wrong?"
 - Put a **type 1** issue at or above 0.5 only with specific textual evidence —
   name the ambiguous term, or the general-vs-specific tension.
 - Put a **type 2** issue at or above 0.5 only after checking the other
@@ -89,14 +99,9 @@ court would have something to construe** — not a verdict that it is sound.
 - The provisions were **sampled neutrally**. Do not assume any fixed number of
   them are risky, and do not spread your probabilities to fill a quota. Judge
   each one independently.
-- Use the whole range **for the issues you do list**. Having named a defect, do
-  not pin it near zero for want of proof: the probability is your estimate that
-  a court would have something to construe, not your confidence that it would
-  decide either way. A defect you can name but are unsure of belongs in the
-  middle.
-- **Your uncertainty goes into the probability, not into a bare entry.** If you
-  cannot say what is wrong with the provision, the answer is no entry — not an
-  entry with a small number on it.
+- Use the whole range. 0.03, 0.17, 0.44 and 0.71 all mean different things, and
+  the probability is your estimate that a court would have something to construe
+  on account of the defect — not your confidence that it would decide either way.
 
 ## DOCUMENT
 
@@ -149,12 +154,13 @@ Each issue is three fields:
 **How long the list should normally be.** Almost always: **empty, or exactly one
 entry.**
 
-- **Most provisions carry no nameable defect. Their answer is an empty list.**
-  Not an entry saying so, not a small probability standing in for one — nothing.
-  That is the ordinary answer and most of your provisions should get it.
+- **A provision you can find nothing to name in gets an empty list.** Not an
+  entry saying so — nothing. Reach it by looking and finding nothing, though,
+  not by deciding that the defect you can see is too weak to be worth writing
+  down. A weak defect you can name is a low-probability entry, not an empty list.
 - **A provision that does carry a defect names it, and nothing else.** One entry,
-  of whichever type it is. The other type gets no entry at all. This is the
-  second most common answer by a wide margin.
+  of whichever type it is, at whatever probability it deserves — 0.10 if that is
+  what you think. The other type gets no entry at all.
 - **Two issues of one type, or issues of both types, are the exception.** Give
   them only when the extra defect is *obvious* and you would put a genuinely
   high probability on it in its own right — not when you have found a second
@@ -177,10 +183,12 @@ Rules for the list:
 - Do not pad the list to look thorough. A long issue list is not a better
   answer; it is usually a wrong one. An issue you cannot name in a sentence is
   not an issue — leave it out rather than invent a defect or hold a place for one.
-- **An empty list is a real answer and the most common one.** It is not a
-  failure to judge, and it costs you nothing: you are not being asked to find
-  something in every provision. Returning an empty list for a provision you
-  looked at and found nothing in is exactly right.
+- **An empty list is a real answer**, and the right one for a provision with
+  nothing to name. It is not free, though: it scores 0 for both types and puts
+  the provision below every provision you did name something in. That is correct
+  when there was nothing to name and wrong when there was something you passed
+  over — so spend the effort on looking, and let the probability, not the empty
+  list, carry how little you think of what you found.
 
 Keep each `issue` to two sentences. You are producing a judgment, not a
 memorandum.

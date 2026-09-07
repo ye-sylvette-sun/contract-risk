@@ -22,7 +22,7 @@
           },
           "issues": {
             "type": "array",
-            "description": "Every construction issue this provision carries, one entry each, with its own probability. Only defects you can NAME go in the list. A provision with nothing to name for either type gets an empty list, and that is the ordinary answer -- most provisions get it. Otherwise normally exactly one entry. Two issues of one type, or issues of both types, are the exception -- give them only when the extra defect is obvious and carries a genuinely high probability of its own. A type with no entry is read as probability 0, which is what it means: nothing specific was found.",
+            "description": "Every construction issue this provision carries, one entry each, with its own probability. Only defects you can NAME go in the list -- but if you can name one, list it however unsure you are, with a LOW probability (0.08, 0.15, 0.20). Uncertainty goes into the probability; the empty list is only for a provision you can find nothing to name in. The question deciding between them is not whether you are confident but whether you can say what is wrong. Otherwise normally exactly one entry. Two issues of one type, or issues of both types, are the exception -- give them only when the extra defect is obvious and carries a genuinely high probability of its own. A type with no entry is read as probability 0, which is what it means: nothing specific was found.",
             "items": {
               "type": "object",
               "additionalProperties": false,
@@ -46,7 +46,7 @@
                 },
                 "prob": {
                   "type": "number",
-                  "description": "Probability in (0, 1] that a court would have something to construe on account of THIS issue. Greater than zero: the entry exists because the defect does, and a defect you would put at 0 is one you should not have listed. Two decimal places, on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1. The range is stated here and not as minimum/maximum, which structured output rejects on a number; the reader clamps it."
+                  "description": "Probability in (0, 1] that a court would have something to construe on account of THIS issue. Greater than zero: the entry exists because the defect does, and a defect you would put at 0 is one you should not have listed. Low values are expected and are where most named issues belong -- 0.08 or 0.15 on a defect you can name but would not bet on is the right answer, not a reason to omit the entry. Two decimal places, on a 0.01 grid (0.03, 0.17, 0.62) -- do not round to the nearest 0.05 or 0.1. The range is stated here and not as minimum/maximum, which structured output rejects on a number; the reader clamps it."
                 }
               }
             }

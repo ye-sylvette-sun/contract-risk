@@ -123,6 +123,31 @@ are to be given only when the extra defect is obvious and carries a high
 probability in its own right — the prompt's test is whether the second defect
 could be stated to a judge on its own and taken seriously.
 
+**A weak defect you can name is a low-probability entry, not an empty list, and
+the prompt has to say so in those words.** The first wording of this contract did
+not. It said an empty list was the ordinary answer, that it was not a failure to
+judge, and that it "costs you nothing"; and, having removed the null channel, it
+also lost the old prompt's push to name defects one could not prove. The 51-
+contract run that followed measured the cost. Named issues fell from 0.80 per
+provision to 0.30, and **18 of 92 positives (20%) came back with an empty list**
+— scoring exactly 0, tied with 71% of the corpus and unrecoverable at any
+threshold, which caps recall at 80%. Under the previous wording that figure was
+0 of 23, across two runs.
+
+The cause is not sample difficulty, and the comparison that shows it is
+controlled: twelve contracts were judged under both wordings, and the rate of
+provisions with no named issue rose in **twelve of twelve** (mean 39% → 61%). One
+missed positive appears in both runs — `252FSupp3d52_agreement_for_network_
+operator/c013` — and under the old wording the same model named two defects on
+it, including a type-2 entry at 0.24 that identified the mechanism precisely.
+Reading all 18 by hand, roughly eight are plainly nameable 1.1 ambiguities: the
+clearest is a 218-character arbitration clause reciting "judgment may be entered
+… in accordance with **applicable law**" without saying which law, which is what
+the court construed. The model could see these; the wording talked it out of
+saying so. Hence the current phrasing: uncertainty goes into the probability,
+inability to name goes into the empty list, and the question separating them is
+not "am I confident?" but "can I say what is wrong?"
+
 **A type with no entry scores 0, and that is what it means.** An earlier version
 of this contract asked instead for a null-text entry per absent type, to carry
 "how likely that kind of dispute is anyway" — the worry being that a bare 0 was

@@ -200,17 +200,26 @@ Write your answers to `predictions.json` in the working directory, as an object:
       ...
     ]}}
 
-`c002` above is the ordinary case: a provision you read and found nothing
-nameable in gets an empty list. Every entry that IS in a list names a defect and
-carries a probability above 0 — there is no entry for "no issue here".
+`c002` above is a provision you read and found nothing nameable in. Every entry
+that IS in a list names a defect and carries a probability above 0 — there is no
+entry for "no issue here".
+
+**If you can name it, list it — however unsure you are.** A defect you can put
+into a sentence but would not bet on is a real entry with a low probability:
+0.08, 0.15, 0.20. It is not a reason to write nothing, and the low end of the
+range is where most named issues belong. Uncertainty goes into the probability;
+the empty list is only for a provision you can find nothing to name in. The
+question that decides between them is not "am I confident?" but "can I say what
+is wrong?" — a provision you scored 0.15 on ranks far above one you left empty.
 
 **How long the list should normally be: empty, or exactly one entry.**
 
-  * Most provisions carry no nameable defect, and their answer is an empty list.
-    Not an entry saying so, not a small probability standing in for one —
-    nothing. That is the ordinary answer and most provisions should get it.
+  * A provision you can find nothing to name in gets an empty list — not an
+    entry saying so, nothing. Reach it by looking and finding nothing, not by
+    deciding the defect you can see is too weak to write down.
   * A provision that does carry a defect names it and nothing else: one entry,
-    of whichever type it is. The other type gets no entry at all.
+    of whichever type it is, at whatever probability it deserves — 0.10 if that
+    is what you think. The other type gets no entry at all.
   * Two issues of one type, or issues of both types, are the exception. Give
     them only when the extra defect is obvious and you would put a genuinely
     high probability on it in its own right. If you are hedging about the second
