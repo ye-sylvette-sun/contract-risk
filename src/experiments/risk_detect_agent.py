@@ -129,12 +129,25 @@ def build_workspace(cid, clauses, registry, examples):
 def task_prompt(cid, citation, n, examples):
     """What to do with the workspace. The judging criteria are in the SYSTEM
     prompt, taken verbatim from prompts/risk_detect.md so both arms are asked the same
-    question in the same words."""
+    question in the same words.
+
+    The working directory is named ABSOLUTELY, and the paths under it declared
+    relative, because a prompt that did neither invited the only isolation
+    warning this experiment has produced. Two of eleven sessions followed a Glob
+    that returned `examples/1.1_.../notes.md` with a Read of
+    `/tmp/../examples/1.1_.../notes.md` — which resolves to `/examples/...`, is
+    outside the workspace, and was refused. Both retried with the relative path
+    and judged every provision, so nothing was lost; but the agent only invents
+    a prefix when it has not been told what the root is, and every other path in
+    those two sessions was relative and correct.
+    """
     dirs = "\n".join(
         f"    examples/{e['code']}_{e['row']['contract_id']}/" for e in examples)
     return f"""You are judging contract `{cid}`, filed in {citation}.
 
-Your working directory holds everything you need.
+Your working directory is `/work`, and it holds everything you need. Every path
+below is relative to it — use them exactly as written, and do not join them onto
+a directory of your own. Nothing outside `/work` is readable.
 
     contract.txt          the contract to judge, in full
     provisions.json       the {n} provisions to judge, in the order they appear
@@ -435,6 +448,17 @@ async def run(args):
         Path("/work"), system_prompt, None, [], MODEL, EFFORT, MAX_TURNS))
     opts["system_prompt"] = "sha256:" + hashlib.sha256(
         system_prompt.encode("utf-8")).hexdigest()
+    # The task prompt is built in this file rather than read from `prompts/`, so
+    # `hash_prompts` below does not reach it and nothing else fingerprints it.
+    # Without this, two runs that were told to do different things would be
+    # indistinguishable in the manifest as long as the SYSTEM prompt matched,
+    # and the only witness would be `git_commit` — which says nothing on a dirty
+    # tree, and says the wrong thing when the fix is not yet committed.
+    # Rendered with neutral placeholders because cid, citation and the provision
+    # count vary per contract; `examples` is the real one, since the workspace
+    # listing is built from it.
+    opts["task_prompt"] = "sha256:" + hashlib.sha256(
+        task_prompt("", "", 0, examples).encode("utf-8")).hexdigest()
     opts["cwd"] = "/work"
     started = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     man = manifest.Manifest(
