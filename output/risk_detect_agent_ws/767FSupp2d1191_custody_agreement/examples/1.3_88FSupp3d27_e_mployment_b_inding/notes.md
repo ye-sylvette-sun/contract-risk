@@ -2,11 +2,11 @@
 
 Contract `88FSupp3d27_e_mployment_b_inding`, filed in 88 F.Supp.3d 27.
 
-A court construed **3** of this contract's provisions; the other **18** it did not. Read that as the base rate to expect, NOT as a quota to reproduce.
+A court construed **3** of this contract's provisions; the other **20** it did not. Read that as the base rate to expect, NOT as a quota to reproduce.
 
 ## HIGH RISK — a federal court construed this provision
 
-"Section 1(a) — Claims Covered"  (risk type: 1.3)
+"a. Claims Covered"  (risk type: 1.3)
 
 ```
 a. Claims Covered: This agreement to submit to mediation and (if necessary) arbitration: i Covers any dispute concerning the arbitrability of any such controversy or claim; and ii. Includes, but is not limited to, any claim that could be asserted in court or before an administrative agency or claims for which you have an alleged cause of action, including without limitation claims for breach of any contract or covenant (express or implied); tort claims (not otherwise exluded); claims for discrimination - (including but not limited to. discrimination based on sex, pregnancy, race, national or ethnic origin, age, religion, creed, marital status, mental or physical disability, or medical condition or other characteristics protected by statute); claims for wrongful discharge; violations of the Family and Medical Leave Act (FMLA); violations of confidentiality or breaches of trade secrets; and/or claims for violation of any federal, state, or other governmental law, statute, regulation, or ordinance, and whether based on statute or common law; and All those claims whether made against us, any of our parent, subsidiary, or affiliated entities, or our individual officers or directors (in an official or personal capacity).
@@ -24,7 +24,7 @@ When contract language is clear and unambiguous, a court should interpret the pa
 
 ## LOWER RISK — from the same contract
 
-"1.d. Binding Arbitration". No court construed it in this case. It is not established to be sound, only never fought over.
+"d. Binding Arbitration". No court construed it in this case. It is not established to be sound, only never fought over.
 
 ```
 Binding Arbitration: If a covered dispute remains unresolved at the conclusion of the informal procedure as outlined in the Handbook, either you or we may submit the dispute for resolution by final binding confidential arbitration under the Procedure. The arbitration will be conducted under the Employment Dispute Resolution Rules of the American Arbitration Association (“AAA”) with the additional proviso that the Procedure shall be conducted on a confidential basis. These Rules, incorporated by reference into this Procedure, include (but are not limited to) the procedures for the joint selection of an impartial arbitrator and for the hearing of evidence before the arbitrator. The arbitrator shall have the authority to allow for appropriate discovery and exchange of information before a hearing, including (but not limited to) production of documents, information requests, depositions, and subpoenas. A copy of the complete AAA: Employment Dispute Resolution Rules may be obtained from the Human Resources Director.

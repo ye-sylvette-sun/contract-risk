@@ -2,21 +2,21 @@
   "contract_id": "874FSupp2d328_sale_and_servicing_agreement",
   "model": "claude-opus-5",
   "effort": "high",
-  "n_provisions": 60,
+  "n_provisions": 57,
   "container_rc": 0,
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 12,
-  "duration_ms": 249505,
-  "total_cost_usd": 1.6439,
+  "duration_ms": 255935,
+  "total_cost_usd": 1.691,
   "usage": {
     "input_tokens": 18,
-    "cache_creation_input_tokens": 94567,
-    "cache_read_input_tokens": 354851,
-    "output_tokens": 20830,
+    "cache_creation_input_tokens": 96576,
+    "cache_read_input_tokens": 361705,
+    "output_tokens": 21773,
     "output_tokens_details": {
-      "thinking_tokens": 10064
+      "thinking_tokens": 11537
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,7 +24,7 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 94567,
+      "ephemeral_1h_input_tokens": 96576,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
@@ -32,11 +32,11 @@
       {
         "input_tokens": 2,
         "output_tokens": 32,
-        "cache_read_input_tokens": 94232,
-        "cache_creation_input_tokens": 4411,
+        "cache_read_input_tokens": 96374,
+        "cache_creation_input_tokens": 4278,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 4411
+          "ephemeral_1h_input_tokens": 4278
         },
         "type": "message"
       }
@@ -46,34 +46,34 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 18,
-      "outputTokens": 20830,
-      "cacheReadInputTokens": 354851,
-      "cacheCreationInputTokens": 94567,
+      "outputTokens": 21773,
+      "cacheReadInputTokens": 361705,
+      "cacheCreationInputTokens": 96576,
       "webSearchRequests": 0,
-      "costUSD": 1.6439355,
+      "costUSD": 1.6910275,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "094f67cf-8570-4ed1-b1f7-ccb767d30376",
+  "session_id": "8aae2e59-ba9d-4137-b08b-8614ecd1704a",
   "errors": null,
-  "result": "60 judgments written (35 in predictions_001.json, 25 in predictions_002.json).",
+  "result": "57 judgments written (30 in predictions_001.json, 27 in predictions_002.json).",
   "path_denials": [],
   "rate_limits": {
     "five_hour": {
-      "status": "allowed_warning",
-      "utilization": 0.9,
-      "resets_at": 1788417000
+      "status": "allowed",
+      "utilization": null,
+      "resets_at": 1788732600
     }
   },
   "models_seen": [
     "claude-opus-5"
   ],
   "top_ups": [],
-  "n_judged": 60,
-  "n_wanted": 60,
+  "n_judged": 57,
+  "n_wanted": 57,
   "parse_notes": [],
   "trajectory_saved": true,
   "env_removed": [],

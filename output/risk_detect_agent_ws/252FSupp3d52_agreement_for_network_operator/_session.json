@@ -1,16 +1,16 @@
 {
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 19,
-  "duration_ms": 465351,
-  "total_cost_usd": 3.5576,
+  "num_turns": 16,
+  "duration_ms": 583584,
+  "total_cost_usd": 4.0656,
   "usage": {
     "input_tokens": 28,
-    "cache_creation_input_tokens": 194738,
-    "cache_read_input_tokens": 1092721,
-    "output_tokens": 42547,
+    "cache_creation_input_tokens": 205488,
+    "cache_read_input_tokens": 1357438,
+    "output_tokens": 53274,
     "output_tokens_details": {
-      "thinking_tokens": 12738
+      "thinking_tokens": 12477
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 194738,
+      "ephemeral_1h_input_tokens": 205488,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 75,
-        "cache_read_input_tokens": 185182,
-        "cache_creation_input_tokens": 13632,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 201186,
+        "cache_creation_input_tokens": 8378,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 13632
+          "ephemeral_1h_input_tokens": 8378
         },
         "type": "message"
       }
@@ -40,39 +40,26 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 28,
-      "outputTokens": 42547,
-      "cacheReadInputTokens": 1092721,
-      "cacheCreationInputTokens": 194738,
+      "outputTokens": 53274,
+      "cacheReadInputTokens": 1357438,
+      "cacheCreationInputTokens": 205488,
       "webSearchRequests": 0,
-      "costUSD": 3.5575555000000003,
+      "costUSD": 4.065589000000001,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "7fee2fcd-c981-41c0-a8a4-577320b0002b",
+  "session_id": "9f4f6e15-f535-4793-8208-731cc829ab4f",
   "errors": null,
-  "result": "All 284 provisions judged and written to `predictions_001.json` (c001–c096), `predictions_002.json` (c097–c184) and `predictions_003.json` (c185–c284).\n\nI wrote 284 judgments.",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/1.3_88FSupp3d27_e_mployment_b_inding/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/mnt/user-data/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
-    }
-  ],
+  "result": "284 judgments written.",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1788417000
+      "resets_at": 1788732600
     }
   },
   "models_seen": [

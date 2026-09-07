@@ -1,4 +1,4 @@
-"""Issue-alignment check — was the agent right for the right reason?
+"""Issue-alignment check — was the agent right for the right reason, and which?
 
 Risk detection measures ranking: did the model put the litigated provisions above
 the rest. It cannot tell whether it did so for the reason the court actually
@@ -7,26 +7,33 @@ touched, and every metric in risk detection scores that as a hit.
 
 So: for each issue the agent named, ask a DIFFERENT model — `gpt-5.6-sol`, which
 never saw the agent's reasoning and is not the family being judged — whether the
-defect it named is one the court construed, judged only against the court's own
+defect it named is one the court construed, judged against the court's own
 verbatim words.
+
+**What is new here is `matched`.** Step 2 records every distinct defect a court
+construed in a provision, each with its own passage, so the judge does not
+merely say "aligned" — it says WHICH recorded defect the agent found:
+
+    precision  of the issues the agent named, how many name a defect the
+               court actually construed
+    recall     of the defects the court construed, how many the agent found
+
+Recall was not computable before: one passage per provision collapsed several
+defects into one target, so what was reported as recall was really target
+coverage, an upper bound.
 
 **Scope.** Only issues whose provision AND risk type both match the gold label.
 An issue on a provision no court construed has no passage to check it against,
 and an issue of the wrong type is already counted wrong by risk detection's
-one-vs-rest panels. This is a precision-of-explanation measure, conditional on
-the provision and type being right — not a second shot at the ranking.
+one-vs-rest panels. Precision here is therefore conditional on the provision and
+type being right; recall is not — it is over every gold issue in the corpus,
+including those on provisions the agent said nothing about.
 
-A court commonly construes several defects of one provision in one passage, so
-an issue counts as aligned when it matches ANY of them; it does not have to be
-the court's main point. That is why the judge returns a score rather than a
-verdict, and why `--threshold` is a reporting choice rather than something the
-judge is told.
+**Control.** `--control` pairs every issue with defects that are not its own.
+The judge should reject those. If it does not, it is not discriminating and the
+real numbers mean nothing, so run it before believing them:
 
-**Control.** `--control` pairs every issue with a DIFFERENT case's opinion
-passage. The judge should reject those. If it does not, it is not discriminating
-and the real numbers mean nothing, so run it before believing them:
-
-    python src/experiments/issue_alignment_check.py --control --out /tmp/alignment-control
+    python src/experiments/issue_alignment_check.py --control --out /tmp/align
 
 Usage:
     python src/experiments/issue_alignment_check.py                 # the real run
@@ -57,50 +64,75 @@ SHARDS = "issue_alignment_check"
 
 FIELDS = ["job_id", "contract_id", "clause_id", "citation", "clause_name",
           "taxonomy", "taxonomy_provenance", "type", "prob", "issue",
-          "alignment", "determinable", "court_defect", "evidence", "reason"]
+          "matched", "matched_key", "gold_issue", "alignment", "determinable",
+          "court_defect", "evidence", "reason"]
 
 
-def whole_opinion(js):
-    """Swap each job's captured passage for the entire opinion.
+def gold_issues(dataset):
+    """Every gold issue in the corpus, keyed so a match can be counted once.
 
-    Step 1 records ONE contiguous line range per clause — a median 4.2% of the
-    opinion — so a defect the court took up somewhere else in the same opinion
-    is invisible to the check. Re-judging against the whole opinion says how
-    much that costs: if a misaligned issue stays misaligned when the judge can
-    see everything the court wrote, the single range was not the limit.
+    The key is positional within its provision — `<contract>__<clause>__i2` —
+    and step 2 stores the list in a fixed order, so the same gold issue keeps
+    the same key across runs. This is the recall denominator.
     """
-    cases = lib.read_json(lib.OUT / "cases.json", {}) or {}
-    ids = {cit: c["id"] for cit, c in cases.items()}
-    out = []
-    for j in js:
-        p = lib.OPINIONS / f"{ids.get(j['citation'], '?')}.txt"
-        if not p.exists():
+    out = {}
+    for r in dataset:
+        if r["label"] != "POSITIVE":
             continue
-        k = dict(j)
-        k["opinion_comment"] = p.read_text(encoding="utf-8")
-        out.append(k)
+        for n, g in enumerate(json.loads(r["issues"]), 1):
+            key = f"{r['contract_id']}__{r['clause_id']}__i{n}"
+            out[key] = {**g, "key": key, "citation": r["citation"],
+                        "clause_name": r["clause_name"],
+                        "contract_id": r["contract_id"],
+                        "clause_id": r["clause_id"]}
     return out
+
+
+def render(cands):
+    """The candidate block the prompt shows, ids and all."""
+    return "\n\n".join(
+        f"#### {c['id']}\n\n"
+        f"Recorded defect: {c['issue']}\n\n"
+        f"Verbatim from the opinion, lines "
+        f"{c['opinion_lines'][0]}-{c['opinion_lines'][1]}:\n\n"
+        f"```\n{c['opinion_comment'].strip()}\n```"
+        for c in cands)
 
 
 def jobs(preds, dataset):
     """One job per named issue whose provision and risk type both match gold.
 
+    The candidates are the gold issues of that provision whose fine code falls
+    under the coarse type the agent named — `1.1` and `1.3` both answer type 1.
+    An issue with no candidate is out of scope: either the provision was never
+    construed, or it was construed only under the other type.
+
     Keyed on (contract_id, clause_id, type, ordinal) so a provision carrying two
     issues of one type yields two jobs that cannot collide in the shard store.
     """
+    gold = gold_issues(dataset)
+    by_clause = {}
+    for g in gold.values():
+        by_clause.setdefault((g["contract_id"], g["clause_id"]), []).append(g)
     ds = {(r["contract_id"], r["clause_id"]): r for r in dataset}
+
     out = []
     for r in preds:
         if r["ok"] != "1" or r["gold"] == "not_risky":
             continue
-        gold = {1: int(r["gold_type1"]), 2: int(r["gold_type2"])}
         src = ds.get((r["contract_id"], r["clause_id"]))
-        if src is None or not src["opinion_comment"].strip():
+        if src is None:
             continue
+        here = by_clause.get((r["contract_id"], r["clause_id"]), [])
         seen = {1: 0, 2: 0}
         for it in json.loads(r["issues"]):
             t = it.get("type")
-            if not it.get("issue") or t not in (1, 2) or not gold[t]:
+            if not it.get("issue") or t not in (1, 2):
+                continue
+            cands = [{**g, "id": f"g{n}"} for n, g in
+                     enumerate((x for x in here
+                                if x["risk_type"].startswith(str(t))), 1)]
+            if not cands:
                 continue
             seen[t] += 1
             out.append({
@@ -108,24 +140,24 @@ def jobs(preds, dataset):
                 "contract_id": r["contract_id"], "clause_id": r["clause_id"],
                 "citation": src["citation"], "clause_name": src["clause_name"],
                 "clause_text": src["clause_text"],
-                "opinion_comment": src["opinion_comment"],
                 "taxonomy": r["taxonomy"],
                 "taxonomy_provenance": r.get("taxonomy_provenance", ""),
                 "type": t, "prob": it["prob"], "issue": it["issue"],
+                "candidates": cands,
             })
     return sorted(out, key=lambda j: j["job_id"])
 
 
 def scramble(js, mode="corpus", seed=0):
-    """Re-pair every job with an opinion passage that is not its own.
+    """Re-pair every job with candidates that are not its own.
 
     Two nulls, because they test different things:
 
-    `corpus` — a passage from a DIFFERENT case. Nothing lines up: parties,
+    `corpus` — candidates from a DIFFERENT case. Nothing lines up: parties,
     subject matter and vocabulary all differ, so a judge that merely pattern-
     matches "legal text about a contract" is caught. This is the easy null.
 
-    `case` — a passage from the SAME case but a different provision. The
+    `case` — candidates from the SAME case but a different provision. The
     parties, the instrument and the vocabulary are shared, and only the defect
     differs, so passing it means the judge is discriminating between defects
     rather than between documents. This is the null that matters, and the one
@@ -137,14 +169,14 @@ def scramble(js, mode="corpus", seed=0):
     for j in js:
         if mode == "case":
             others = [o for o in js if o["citation"] == j["citation"]
-                      and o["opinion_comment"] != j["opinion_comment"]]
+                      and o["clause_id"] != j["clause_id"]]
         else:
             others = [o for o in js if o["citation"] != j["citation"]]
         if not others:
             continue
         foil = rnd.choice(others)
         k = dict(j)
-        k["opinion_comment"] = foil["opinion_comment"]
+        k["candidates"] = foil["candidates"]
         k["citation"] = foil["citation"]          # the prompt names the source
         k["foil_from"] = f"{foil['contract_id']}/{foil['clause_id']}"
         out.append(k)
@@ -158,19 +190,31 @@ def type_def(t):
 
 
 def judge(job, log_as):
-    a = lib.ask("issue_alignment_check", job["job_id"], effort=EFFORT, model=MODEL, log_as=log_as,
+    a = lib.ask("issue_alignment_check", job["job_id"], effort=EFFORT,
+                model=MODEL, log_as=log_as,
                 citation=job["citation"], contract_id=job["contract_id"],
                 clause_name=job["clause_name"], clause_text=job["clause_text"],
                 type_def=type_def(job["type"]), issue_text=job["issue"],
-                opinion_comment=job["opinion_comment"].strip())
+                candidates=render(job["candidates"]))
     if a is None:
         return None
     if not isinstance(a.get("alignment"), (int, float)):
         return None
-    # An undecidable passage scores 0 whatever the model put in the field: the
-    # prompt says so, and letting the two disagree would make the column mean
-    # two things.
-    if not a.get("determinable"):
+
+    # `matched` must name a candidate that was actually shown. An id outside the
+    # list is not a near miss to be salvaged — it means the answer is not about
+    # the material, so it is treated as no match rather than trusted.
+    by_id = {c["id"]: c for c in job["candidates"]}
+    hit = by_id.get(str(a.get("matched") or "").strip())
+    a["matched"] = hit["id"] if hit else ""
+    a["matched_key"] = hit["key"] if hit else ""
+    a["gold_issue"] = hit["issue"] if hit else ""
+
+    # Three ways to score zero, kept consistent so the column means one thing:
+    # an undecidable passage, no candidate chosen, and a score the model itself
+    # put at zero. The prompt states the first two; enforcing them here stops
+    # the score and the verdict disagreeing.
+    if not a.get("determinable") or not hit:
         a["alignment"] = 0.0
     a["alignment"] = min(max(float(a["alignment"]), 0.0), 1.0)
     return a
@@ -193,7 +237,7 @@ def run(js, done, keep, log_as, parallel):
             return
         keep(j["job_id"], {**j, **a})
         print(f"  [{i}/{len(todo)}] {j['job_id']}: "
-              f"alignment {a['alignment']:.2f}"
+              f"{a['matched'] or '--':<3} alignment {a['alignment']:.2f}"
               f"{'' if a.get('determinable') else '  (not determinable)'}",
               flush=True)
 
@@ -203,13 +247,15 @@ def run(js, done, keep, log_as, parallel):
             f.result()
 
 
-def report(res, threshold, label=""):
-    """Alignment rate overall, by risk type and by taxonomy provenance."""
+def report(res, threshold, n_gold, n_reachable, label=""):
+    """Precision over named issues, recall over the court's own defects."""
     rows = sorted(res.values(), key=lambda r: r["job_id"])
     if not rows:
         print("nothing to report")
         return rows
     det = [r for r in rows if r.get("determinable")]
+    ok = [r for r in rows if r["alignment"] >= threshold and r["matched_key"]]
+    found = {r["matched_key"] for r in ok}
 
     def rate(rs):
         if not rs:
@@ -221,8 +267,28 @@ def report(res, threshold, label=""):
     print(f"\n=== alignment{label} (threshold {threshold}) ===\n")
     print(f"  judged                    {len(rows)}")
     print(f"  determinable              {len(det)} ({len(det)/len(rows):.1%})")
-    print(f"\n  ALL                       {rate(rows)}")
-    print(f"  determinable only         {rate(det)}")
+    print(f"\n  PRECISION  {rate(rows)}")
+    print(f"    determinable only       {rate(det)}")
+
+    # Recall is reported twice because the two answer different questions. Over
+    # every gold issue it is the honest headline: how much of what the courts
+    # construed did the agent find. Over the reachable ones it isolates the
+    # explanation from the ranking — a defect on a provision the agent never
+    # flagged, or flagged only under the other type, was never in reach of this
+    # measure, and that is a risk-detection miss, not a wrong reason.
+    if n_gold:
+        print(f"\n  RECALL     {len(found):4d}/{n_gold:<4d} = "
+              f"{len(found)/n_gold:6.1%}   of every gold issue in the corpus")
+    if n_reachable:
+        print(f"    reachable only          {len(found):4d}/{n_reachable:<4d} = "
+              f"{len(found)/n_reachable:6.1%}   (gold issues this check could "
+              f"reach at all)")
+
+    dup = len(ok) - len(found)
+    if dup > 0:
+        print(f"\n  {dup} aligned issue(s) matched a gold issue another issue "
+              f"had already matched — counted once in recall")
+
     print(f"\n  by risk type")
     for t in (1, 2):
         print(f"    type {t}                  {rate([r for r in rows if r['type'] == t])}")
@@ -256,23 +322,28 @@ def main():
     ap.add_argument("--threshold", type=float, default=0.5)
     ap.add_argument("--control", choices=["corpus", "case"], nargs="?",
                     const="corpus", default=None,
-                    help="score against a passage that is not this issue's: "
+                    help="judge against defects that are not this issue's: "
                          "'corpus' from another case, 'case' from another "
                          "provision of the same case (the harder null)")
     ap.add_argument("--out", help="directory for the control run's artifacts")
     ap.add_argument("--report", action="store_true", help="score what exists, no calls")
-    ap.add_argument("--full-opinion", action="store_true",
-                    help="judge against the WHOLE opinion instead of the one "
-                         "passage step 1 recorded (diagnostic; needs --out)")
     ap.add_argument("--rejudge-below", type=float, metavar="X",
                     help="only issues already scored below X in the real run")
     args = ap.parse_args()
 
+    if not PREDS.exists():
+        sys.exit(f"{PREDS} does not exist — run the risk-detection experiment "
+                 f"first, then this")
+
     preds = list(csv.DictReader(open(PREDS, newline="", encoding="utf-8")))
     dataset = list(csv.DictReader(open(DATASET, newline="", encoding="utf-8")))
+    gold = gold_issues(dataset)
     js = jobs(preds, dataset)
+    reachable = {c["key"] for j in js for c in j["candidates"]}
     print(f"{len(js)} issue(s) with provision and risk type both matching gold, "
-          f"over {len({j['clause_id'] + j['contract_id'] for j in js})} provision(s)")
+          f"over {len({(j['contract_id'], j['clause_id']) for j in js})} provision(s)")
+    print(f"{len(gold)} gold issues in the corpus, {len(reachable)} reachable "
+          f"by this check")
 
     if args.rejudge_below is not None:
         prior = {r["job_id"]: float(r["alignment"]) for r in
@@ -283,27 +354,19 @@ def main():
 
     if args.control:
         js = scramble(js, args.control)
-    if args.full_opinion:
-        js = whole_opinion(js)
-        print(f"  judging against the WHOLE opinion, {len(js)} job(s)")
 
-    diagnostic = args.control or args.full_opinion
-    if diagnostic:
+    if args.control:
         if not args.out:
-            sys.exit("--control and --full-opinion need --out <dir> — a "
-                     "diagnostic should leave nothing in output/")
+            sys.exit("--control needs --out <dir> — a diagnostic should leave "
+                     "nothing in output/")
         out_dir = Path(args.out)
         out_dir.mkdir(parents=True, exist_ok=True)
-        tag = f"control_{args.control}" if args.control else "rejudged"
-        tag += "_full" if args.full_opinion else ""
+        tag = f"control_{args.control}"
         json_out, csv_out = out_dir / f"{tag}.json", out_dir / f"{tag}.csv"
-        bits = []
-        if args.control:
-            bits.append("passage from " + ("another case" if args.control ==
-                        "corpus" else "another provision of the SAME case"))
-        if args.full_opinion:
-            bits.append("the WHOLE opinion, not the recorded passage")
-        label, log_as = f" — DIAGNOSTIC: {'; '.join(bits)}", f"alignment_{tag}"
+        where = ("another case" if args.control == "corpus"
+                 else "another provision of the SAME case")
+        label = f" — DIAGNOSTIC: candidates from {where}"
+        log_as = f"alignment_{tag}"
     else:
         json_out, csv_out = OUT, CSV_OUT
         label, log_as = "", "issue_alignment_check"
@@ -313,7 +376,7 @@ def main():
 
     if args.report:
         res = {**(lib.read_json(json_out, {}) or {}), **lib.read_shards(SHARDS)}
-    elif diagnostic:
+    elif args.control:
         res = {}
         run(js, res, res.__setitem__, log_as, args.parallel)
     else:
@@ -322,9 +385,13 @@ def main():
             log_as, args.parallel)
         res = lib.merge_shards(SHARDS, OUT)
 
-    rows = report(res, args.threshold, label)
+    # A control's recall is meaningless against the real corpus — its jobs were
+    # deliberately paired with the wrong defects — so only precision is scored.
+    rows = report(res, args.threshold,
+                  0 if args.control else len(gold),
+                  0 if args.control else len(reachable), label)
     if rows and not args.report:
-        if diagnostic:
+        if args.control:
             # Not lib.write_json: a diagnostic writes outside the repo on
             # purpose, and that helper reports paths relative to ROOT.
             json_out.write_text(json.dumps(res, ensure_ascii=False, indent=2,

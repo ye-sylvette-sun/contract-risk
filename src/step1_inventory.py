@@ -1,8 +1,21 @@
-"""Step 2 — locate every clause of a contract (one call per contract).
+"""Step 1 — locate every clause of a contract (one call per contract).
 
-Runs on every contract step 1 was shown: those a positive came from (so a
-positive is never left without negatives from its own document) and those that
-produced none (whose clauses are negatives in their own right).
+**This step, and only this step, decides where a clause starts and ends.**
+
+It is deliberately first, and it is deliberately blind: it sees one contract and
+nothing else. No opinion, no Westlaw key, no hint that the document was ever
+litigated. A clause boundary is a fact about the drafting — the smallest unit
+that states a complete obligation on its own — and nothing about which clause a
+court happened to construe may move it.
+
+That ordering is not cosmetic. When the dispute step ran first it drew its own
+boundaries, and they drifted with what the court had said — fragmenting a
+provision so each piece could carry a defect, or widening one to hold two. Drift
+like that separates positives from negatives for a reason unrelated to drafting
+risk, and a classifier can learn it.
+
+Every clause gets an id — `c001`, `c002`, ... in document order — and step 2
+answers only in those ids. It has no way to report a span of its own.
 
 The model returns a line range and two anchors per clause and writes no text.
 What it cannot be checked on is a range that starts and ends correctly but
@@ -10,11 +23,12 @@ swallows an intervening clause — both anchors match and the extraction silentl
 contains too much (docs/DATASET.md §6). The detectors below are FLAGS only,
 printed and stored, so they can be measured before anyone rejects on them.
 
-Input : output/clauses.json, output/contracts.json, output/contracts/*.md
+Input : output/cases.json, output/contracts.json, output/contracts/*.md,
+        output/layout.json
 Output: output/inventory.json  (resumable — re-runs only what is missing)
 
 Usage:
-    python src/step2_inventory.py [--case CITATION] [--contract CONTRACT_ID]
+    python src/step1_inventory.py [--case CITATION] [--contract CONTRACT_ID]
 """
 import argparse
 import concurrent.futures as cf
@@ -66,38 +80,27 @@ def flags(kept):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--case", help="inventory one citation's winners only")
+    ap.add_argument("--case", help="inventory one citation's contracts only")
     ap.add_argument("--contract", help="inventory one contract_id only")
     ap.add_argument("--parallel", type=int, default=4,
                     help="contracts inventoried at once (default 4)")
     args = ap.parse_args()
 
-    clauses = lib.read_json(lib.OUT / "clauses.json", {})
+    cases = lib.read_json(lib.OUT / "cases.json", {})
     registry = lib.read_json(lib.OUT / "contracts.json", {})
     layout = lib.read_json(lib.OUT / "layout.json", {})
     done = {**(lib.read_json(OUT, {}) or {}), **lib.read_shards(SHARDS)}
 
-    # EVERY contract step 1 was shown, for every case it processed — not only
-    # the ones a positive came out of.
+    # EVERY registered contract of an in-scope case. A case often files several
+    # agreements and the court reaches only some; the others were before the
+    # court and not construed, which is exactly what a negative is, and they
+    # supply the contracts where the right answer is "nothing here".
     #
-    # The winners have to be here: a positive is never left without negatives cut
-    # from its own document. The rest are here because their clauses are
-    # negatives too. A case often files several agreements and the court reaches
-    # only some of them; the others were before the court, were not construed,
-    # and that is exactly what a negative is. Dropping them threw away about a
-    # fifth of the corpus for no reason beyond how the pipeline happened to be
-    # wired, and it also removed every contract in which the right answer is
-    # "nothing here" — the case that most sharply tests over-flagging.
-    #
-    # A two-column contract is still excluded: step 1 never saw it either.
-    targets = {}
-    for citation, case in clauses.items():
-        for c in case["clauses"]:
-            targets.setdefault(c["contract_id"], citation)
-    for cid, entry in registry.items():
-        if entry["citation"] in clauses and \
-                not layout.get(cid, {}).get("two_column"):
-            targets.setdefault(cid, entry["citation"])
+    # Two-column contracts are excluded here and so never reach step 2 either —
+    # the exclusion happens once, in one place.
+    targets = {cid: e["citation"] for cid, e in registry.items()
+               if e["citation"] in cases
+               and not layout.get(cid, {}).get("two_column")}
 
     todo = [(cid, cit) for cid, cit in sorted(targets.items())
             if not (args.case and cit != args.case)
@@ -143,6 +146,13 @@ def main():
         # happened to list them in, so the artifact does not depend on it.
         kept.sort(key=lambda c: c["span"])
         rejected.sort(key=lambda r: (r["name"], r["head"]))
+
+        # The id every later step names a clause by. It encodes document order
+        # and nothing else, so it cannot carry a hint about the label the way
+        # `pos1`/`neg1` once did — and it is assigned before anything in the
+        # pipeline knows which clauses were disputed.
+        for n, c in enumerate(kept, 1):
+            c["clause_id"] = f"c{n:03d}"
 
         snapped = sum(1 for c in kept if c["lines"] != c["claimed_lines"])
         marks = flags(kept)

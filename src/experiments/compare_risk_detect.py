@@ -1,4 +1,4 @@
-"""The two runs side by side, per panel:
+"""Score a risk-detection run, per panel:
 
   ROC-AUC     ranking quality, threshold-free
   precision   of what we flagged, how much was really litigated
@@ -8,11 +8,16 @@
 The flag rate keeps the other two honest: at 2% prevalence a threshold that
 flags a third of the contract can post a respectable recall and be useless.
 
-The figure is the same sweep drawn out: `plot_risk_detect_thresholds.py --run <run>`.
+The figure is the same sweep drawn out: `plot_risk_detect_thresholds.py`.
+
+One run is the normal case. `--against PATH` adds a second and scores both over
+the provisions they share, which is how two prompts, or two repeats of one, are
+compared without the difference being in which contracts each covered.
 
 Usage:
     python src/experiments/compare_risk_detect.py
-    python src/experiments/compare_risk_detect.py --json output/risk_detect_comparison.json
+    python src/experiments/compare_risk_detect.py --against <other>_preds.csv
+    python src/experiments/compare_risk_detect.py --json output/risk_detect_scores.json
 """
 import argparse
 import csv
@@ -25,14 +30,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import lib  # noqa: E402
 
 _spec = importlib.util.spec_from_file_location(
-    "risk_detect_llm_api", Path(__file__).with_name("risk_detect_llm_api.py"))
+    "runs", Path(__file__).with_name("runs.py"))
 api = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(api)
 
 csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 
-RUNS = {"llm_api": lib.OUT / "risk_detect_llm_api_preds.csv",
-        "agent": lib.OUT / "risk_detect_agent_preds.csv"}
+RUNS = {"agent": lib.OUT / "risk_detect_agent_preds.csv"}
 FLAG = 0.5
 RECALL_TARGETS = (0.70, 0.80, 0.90)
 
@@ -116,15 +120,14 @@ def cheapest_at_recall(scores, labels, target):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--json", metavar="PATH", help="also write the numbers here")
-    # Either side can be pointed elsewhere, e.g. at the superseded run kept on
-    # `legacy_agent_experiment_8.17`.
-    ap.add_argument("--agent", metavar="PATH")
-    ap.add_argument("--llm-api", metavar="PATH", dest="llm_api")
+    ap.add_argument("--agent", metavar="PATH", help="the run to score")
+    ap.add_argument("--against", metavar="PATH",
+                    help="a second run, scored over the shared provisions")
     args = ap.parse_args()
     if args.agent:
         RUNS["agent"] = Path(args.agent)
-    if args.llm_api:
-        RUNS["llm_api"] = Path(args.llm_api)
+    if args.against:
+        RUNS["other"] = Path(args.against)
 
     loaded, unscored = {}, {}
     for run, path in RUNS.items():
@@ -133,15 +136,15 @@ def main():
             return
         loaded[run], unscored[run] = load(path)
 
-    # Only provisions BOTH runs cover. A partial run against a full one would
+    # Only provisions EVERY run covers. A partial run against a full one would
     # differ as much in which contracts each covered as in anything about the
     # method.
-    shared = sorted(set(loaded["llm_api"]) & set(loaded["agent"]))
+    shared = sorted(set.intersection(*(set(v) for v in loaded.values())))
     rows = {run: [loaded[run][k] for k in shared] for run in RUNS}
     contracts = {r["contract_id"] for r in rows["agent"]}
 
-    print(f"{len(shared)} provisions judged by both runs, in "
-          f"{len(contracts)} contract(s)")
+    what = "judged by every run" if len(RUNS) > 1 else "judged"
+    print(f"{len(shared)} provisions {what}, in {len(contracts)} contract(s)")
     for run in RUNS:
         print(f"  {run:8} {len(loaded[run]):6} row(s), "
               f"{len(loaded[run]) - len(shared)} not shared, "
@@ -179,8 +182,7 @@ def main():
                 "threshold": t, "precision": p, "recall": r, "flag_rate": f}
             print(f"{target:8.0%}{run:>10}{t:11.2f}{p:11.3f}{f:10.1%}{r:9.2f}")
 
-    print("\nfigure: python src/experiments/plot_risk_detect_thresholds.py --run "
-          "{llm_api,agent}")
+    print("\nfigure: python src/experiments/plot_risk_detect_thresholds.py")
 
     if args.json:
         Path(args.json).write_text(json.dumps(res, indent=2, default=str),

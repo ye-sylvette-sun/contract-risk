@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 10,
-  "duration_ms": 221641,
-  "total_cost_usd": 1.2879,
+  "duration_ms": 245969,
+  "total_cost_usd": 1.4102,
   "usage": {
     "input_tokens": 14,
-    "cache_creation_input_tokens": 70840,
-    "cache_read_input_tokens": 193161,
-    "output_tokens": 19313,
+    "cache_creation_input_tokens": 77787,
+    "cache_read_input_tokens": 194853,
+    "output_tokens": 21395,
     "output_tokens_details": {
-      "thinking_tokens": 6206
+      "thinking_tokens": 8921
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 70840,
+      "ephemeral_1h_input_tokens": 77787,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 36,
-        "cache_read_input_tokens": 68654,
-        "cache_creation_input_tokens": 6262,
+        "output_tokens": 32,
+        "cache_read_input_tokens": 71532,
+        "cache_creation_input_tokens": 6255,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 6262
+          "ephemeral_1h_input_tokens": 6255
         },
         "type": "message"
       }
@@ -40,39 +40,34 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 14,
-      "outputTokens": 19313,
-      "cacheReadInputTokens": 193161,
-      "cacheCreationInputTokens": 70840,
+      "outputTokens": 21395,
+      "cacheReadInputTokens": 194853,
+      "cacheCreationInputTokens": 77787,
       "webSearchRequests": 0,
-      "costUSD": 1.2878755000000002,
+      "costUSD": 1.4102415000000001,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "db939f16-8dda-4d95-8fa6-ebdc683188a9",
+  "session_id": "d8955b2d-c0b2-410b-9142-ca762e259d80",
   "errors": null,
-  "result": "93 judgments written (50 in `predictions_001.json`, 43 in `predictions_002.json`).",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/tmp/x"
-    }
-  ],
+  "result": "97 judgments written (50 in predictions_001.json, 47 in predictions_002.json).",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1788417000
+      "resets_at": 1788732600
     }
   },
   "models_seen": [
     "claude-opus-5"
   ],
   "top_ups": [],
-  "n_judged": 93,
-  "n_wanted": 93,
+  "n_judged": 97,
+  "n_wanted": 97,
   "parse_notes": [],
   "trajectory_saved": true,
   "env_removed": [],

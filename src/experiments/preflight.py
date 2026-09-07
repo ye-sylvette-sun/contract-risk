@@ -30,7 +30,7 @@ import lib  # noqa: E402
 import risk_detect_agent as ag  # noqa: E402
 import isolation  # noqa: E402
 
-api = ag.api
+api = ag.runs
 
 # Distinctive strings from the three context channels that do not appear in the
 # conversation unless something loaded them. `MEMORY.md` and `CLAUDE.md` are the

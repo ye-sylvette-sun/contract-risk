@@ -4,9 +4,9 @@ A review found that the agent experiment starts a fresh *conversation* for each
 contract but does not establish a clean *environment*. This document lists each
 point it raised, what was done about it, and how the claims are checked.
 
-Only the **agent** arm is affected. `risk_detect_llm_api.py` is a stateless Messages API
-call with no CLI, settings, memory or filesystem, and its predictions were not
-rerun.
+Only the **agent** arm is affected. The one-shot API arm it was once compared
+against had no CLI, settings, memory or filesystem, and has since been retired
+and deleted; nothing below depends on it.
 
 ---
 
@@ -147,9 +147,9 @@ rerun.
 
 - **Not raised in the review, found in our own audit: the two arms were not
   shown the same worked examples.** The agent's workspace carried each example's
-  full contract; `risk_detect_llm_api.py` puts only the two provision texts and the
-  court's verbatim words in its few-shot block. The agent therefore had evidence
-  available that the arm it is compared against did not.
+  full contract; the one-shot arm's few-shot block held only the two provision
+  texts and the court's verbatim words. The agent therefore had evidence
+  available that the arm it was compared against did not.
   **Fixed:** the example contracts are gone from the workspace, along with the
   prompt line offering them, and everything was rerun. A census of the
   trajectories shows the affordance was never used in either run — all 64

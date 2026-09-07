@@ -8,12 +8,12 @@ Two kinds of log, picked per clause:
 * **synthesised** — clauses carrying full `text`. Anchors are sliced from it, so
   `--anchor-words` can be swept.
 
-The logs do NOT store the document that was sent — it is the corpus text, many
-times the size of everything else in the log, and it is already on disk. The
-source is read from `output/contracts/` instead, resolved through
-`output/contracts.json`, so the corpus must be present. A log that still carries
-its own `document` (an archive from before this changed) is scored from that
-instead, so old log directories keep working.
+The logs do NOT store the document that was sent — it is corpus text and is
+already on disk. The source is read from `output/contracts/` instead, resolved
+through `output/contracts.json`, so the corpus must be present.
+
+Only step 1's `inventory` logs carry anchors. Step 2 answers in clause ids and
+reports no spans, so its logs have nothing to replay and are skipped.
 
 It measures what fraction of anchors match, how often snapping moves a boundary
 and by how much, and how often the extracted text differs from the raw source
@@ -29,37 +29,9 @@ Usage:
 """
 import argparse
 import json
-import re
 from pathlib import Path
 
 import lib
-
-NUMBERED = re.compile(r"^ *(\d+)│(.*)$")
-
-# The marker that opens a tagged document block. Both this pipeline's form
-# (`---------- CONTRACT X START ----------`) and the older `--- contract_id: X`
-# parse, so an archived log directory can still be scored.
-TAGGED = re.compile(r"^(?:--- contract_id: |-{5,} CONTRACT )(\S+)"
-                    r"(?: START -{5,})?\s*$", re.M)
-
-
-def unnumber(chunk):
-    """The source text a numbered block was made from, line for line."""
-    return "\n".join(m.group(2) for ln in chunk.split("\n")
-                     if (m := NUMBERED.match(ln)))
-
-
-def documents(log):
-    """{contract_id: text} for a log that still carries its own document.
-
-    A per-case log carries the opinion and several tagged contracts; a per-file
-    log carries one untagged document. Both are recovered the same way. Only
-    archived logs reach this now — see `sources()`.
-    """
-    parts = TAGGED.split(log["document"])
-    if len(parts) == 1:
-        return {"": unnumber(log["document"])}
-    return {parts[i]: unnumber(parts[i + 1]) for i in range(1, len(parts), 2)}
 
 
 def corpus(registry, cache):
@@ -79,14 +51,12 @@ def corpus(registry, cache):
 
 
 def sources(log, path, read):
-    """{contract_id: text} for one log, from the corpus or the log itself.
+    """{contract_id: text} for one log.
 
-    An `inventory` log is named for the one contract it covers; an `extract` log
-    covers a case, and every clause in it names its own `contract_id`, so the
-    answer says which files to open.
+    An `inventory` log is named for the one contract it covers, which is the
+    only log kind that carries anchors. A log whose clauses name their own
+    `contract_id` says which files to open instead.
     """
-    if "document" in log:                       # an archived log, self-contained
-        return documents(log)
     found = answer(log) or {}
     items = found.get("clauses") or found.get("provisions") or []
     ids = {c.get("contract_id") for c in items if c.get("contract_id")}

@@ -1,0 +1,36 @@
+examples (3): 1.1=88FSupp3d1156_product_contamination_insurance_policy(3p/113n), 1.3=88FSupp3d27_e_mployment_b_inding(3p/20n), 2.2=88FSupp3d1156_product_contamination_insurance_policy(3p/113n)
+order shuffled, seed 0
+11921 clauses (220 risky) in 101 contracts after excluding 2 example contract(s)
+0 contract(s) done, 20 to run (claude-opus-5, effort high, max 100 turns, 4 at a time, auth via token)
+image contract-risk-judge:0.2.139
+      sha256:957de41bdd619eb6845ec741692445e82b696139fe53b434f86b03565b0f7093
+[1/20] 78FSupp3d520_consent_j: 22 provisions, 54,614-char contract
+[2/20] 976FSupp2d606_employment_contract: 97 provisions, 55,055-char contract
+[3/20] 266FSupp3d961_farmout_agreements_foas: 75 provisions, 226,423-char contract
+[4/20] 527BR351_mortgage_fund_08_note: 216 provisions, 140,361-char contract
+    78FSupp3d520_consent_j: 22/22 judged  | 9 turns, 126s, $0.97, rc=0
+[5/20] 252FSupp3d52_agreement_for_network_operator: 284 provisions, 198,768-char contract
+    266FSupp3d961_farmout_agreements_foas: 75/75 judged  | 11 turns, 252s, $1.51, rc=0
+[6/20] 767FSupp2d1191_custody_agreement: 36 provisions, 12,527-char contract
+    976FSupp2d606_employment_contract: 97/97 judged  | 10 turns, 253s, $1.41, rc=0
+[7/20] 982FSupp2d518_2007_mta: 28 provisions, 10,036-char contract
+    982FSupp2d518_2007_mta: 28/28 judged  | 9 turns, 96s, $0.50, rc=0
+[8/20] 18FSupp3d456_phoenix_accumulator_universal_life: 191 provisions, 100,745-char contract
+    767FSupp2d1191_custody_agreement: 36/36 judged  | 9 turns, 131s, $0.64, rc=0
+[9/20] 97FSupp3d548_pooling_and_servicing_agreement: 481 provisions, 352,225-char contract
+    527BR351_mortgage_fund_08_note: 216/216 judged  | 17 turns, 390s, $2.97, rc=0
+    ! 527BR351_mortgage_fund_08_note: 1 path(s) denied outside the workspace
+[10/20] 565BR241_senior_secured_credit_agreement: 252 provisions, 173,865-char contract
+    252FSupp3d52_agreement_for_network_operator: 284/284 judged  | 16 turns, 588s, $4.07, rc=0
+[11/20] 874FSupp2d328_sale_and_servicing_agreement: 57 provisions, 85,297-char contract
+    18FSupp3d456_phoenix_accumulator_universal_life: 191/191 judged  | 17 turns, 391s, $2.36, rc=0
+    ! 18FSupp3d456_phoenix_accumulator_universal_life: 1 path(s) denied outside the workspace
+[12/20] 527BR351_loan_and_security_agreement: 403 provisions, 272,941-char contract
+    565BR241_senior_secured_credit_agreement: 252/252 judged  | 24 turns, 580s, $3.50, rc=0
+[13/20] 785FSupp2d188_policy: 22 provisions, 7,007-char contract
+    874FSupp2d328_sale_and_servicing_agreement: 57/57 judged  | 12 turns, 260s, $1.69, rc=0
+[14/20] 767FSupp2d1191_securities_lending_agreement_sla: 20 provisions, 10,847-char contract
+    97FSupp3d548_pooling_and_servicing_agreement: 481/481 judged  | 38 turns, 618s, $5.72, rc=0
+[15/20] 527BR351_liquidating_trust_agreement: 62 provisions, 50,489-char contract
+    527BR351_loan_and_security_agreement: 0/403 judged  (403 MISSING)  | ? turns, 262s, $0.00, rc=1
+    ! 527BR351_loan_and_security_agreement: only 0 of 403 provisions judged

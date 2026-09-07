@@ -1,142 +1,122 @@
 {"judgments": [
-  {"clause_id": "c001", "issues": [
-    {"issue": null, "type": 1, "prob": 0.06},
-    {"issue": "The preamble names the issuing entity \"GPMF Trust 2007-HE1\" while the cover page of the same instrument names \"GreenPoint Mortgage Funding Trust 2007-HE1\" as issuing entity. A court could be asked which designation identifies the contracting trust.", "type": 2, "prob": 0.19}
-  ]},
-  {"clause_id": "c002", "issues": [
-    {"issue": "The recital purports to define \"HELOCs\" circularly and vaguely — \"such HELOCs consist of certain home equity lines of credit\" — with the term already used in the preceding recital and never delimited except by the word \"certain\". The scope of the defined pool is not fixed by the words themselves.", "type": 1, "prob": 0.33},
-    {"issue": null, "type": 2, "prob": 0.16}
-  ]},
-  {"clause_id": "c003", "issues": [
-    {"issue": null, "type": 1, "prob": 0.05},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c004", "issues": [
-    {"issue": "Definitions are imported wholesale from Appendix A to the Indenture \"except as otherwise expressly provided herein or unless the context otherwise requires\", so the operative meaning of key terms depends on an external document and on an undefined contextual override. Which text governs a given term is left open.", "type": 1, "prob": 0.24},
-    {"issue": null, "type": 2, "prob": 0.14}
-  ]},
-  {"clause_id": "c005", "issues": [
-    {"issue": null, "type": 1, "prob": 0.05},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c006", "issues": [
-    {"issue": null, "type": 1, "prob": 0.06},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c007", "issues": [
-    {"issue": null, "type": 1, "prob": 0.09},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c008", "issues": [
-    {"issue": null, "type": 1, "prob": 0.04},
-    {"issue": null, "type": 2, "prob": 0.04}
-  ]},
-  {"clause_id": "c009", "issues": [
-    {"issue": null, "type": 1, "prob": 0.08},
-    {"issue": null, "type": 2, "prob": 0.07}
-  ]},
-  {"clause_id": "c010", "issues": [
-    {"issue": "The enumerated conveyance items end in an open-ended catch-all — \"any proceeds of the foregoing and any other property owned by the Trust and all other assets included or to be included in the Issuing Entity\" — whose reach against the specific items (i)-(iv) is undefined. A court could be asked whether the catch-all sweeps in assets of a different kind from those listed.", "type": 1, "prob": 0.26},
-    {"issue": "Section 2.01(a) recites that the conveyance is \"in consideration of the Issuing Entity's delivery of the proceeds from the sale of the Notes and the Certificates to the Sponsor\", while the Preliminary Statement recites that the Depositor acquires the HELOCs from the Sponsor in consideration for the Depositor's transfer of the Certificates and Note proceeds and then acquires the Notes and Certificates from the Issuing Entity. The recited flow of consideration and the operative flow do not match.", "type": 2, "prob": 0.33}
-  ]},
-  {"clause_id": "c011", "issues": [
-    {"issue": "The subsection imposes a funding and reimbursement obligation on \"the Holder of the Class S Certificate\", a person who is not a party and whose consent is deemed from mere acceptance of the certificate. Whether that obligation binds, and against whom the Servicer's advance may be enforced, turns on the words used.", "type": 1, "prob": 0.30},
-    {"issue": "Section 2.01(a) provides that none of the Securities Administrator, Master Servicer nor Indenture Trustee \"shall be obligated or permitted to fund any such Draws\", while Section 2.01(b) has the Securities Administrator agreeing to direct funds to reimburse Servicer Draw advances. The two subsections have to be reconciled on whether the Securities Administrator may participate in Draw funding at all.", "type": 2, "prob": 0.32}
-  ]},
-  {"clause_id": "c012", "issues": [
-    {"issue": "The clause says only that \"it is not intended that\" any HELOC be a high-cost loan, which leaves open whether it is a representation, a covenant, or a mere statement of purpose carrying no remedy. The S&P reference compounds this by pointing simultaneously to the \"then current\" Glossary and to \"Version 5.7 Revised\".", "type": 1, "prob": 0.40},
-    {"issue": null, "type": 2, "prob": 0.14}
-  ]},
-  {"clause_id": "c013", "issues": [
-    {"issue": "Clause (v) requires \"either a title insurance policy or guaranty title\", a garbled and undefined alternative whose content cannot be identified from the text. What satisfies delivery under (v) is therefore uncertain.", "type": 1, "prob": 0.24},
-    {"issue": null, "type": 2, "prob": 0.15}
-  ]},
-  {"clause_id": "c014", "issues": [
-    {"issue": "The recording obligation is triggered only \"[u]pon the occurrence of a Recordation Event\", a term nowhere defined in this Agreement and left to Appendix A of the Indenture. When the Sponsor's recording duty arises turns on that undefined trigger.", "type": 1, "prob": 0.27},
-    {"issue": null, "type": 2, "prob": 0.13}
-  ]},
-  {"clause_id": "c015", "issues": [
-    {"issue": null, "type": 1, "prob": 0.12},
-    {"issue": null, "type": 2, "prob": 0.12}
-  ]},
-  {"clause_id": "c016", "issues": [
-    {"issue": null, "type": 1, "prob": 0.13},
-    {"issue": "The final sentence allows original documents not delivered to the Indenture Trustee or Custodian to be held by the Servicer in trust, which sits awkwardly against Section 2.01(d)'s unqualified requirement that the Sponsor deliver all listed documents on or before the Closing Date. Whether non-delivery is excused is left to be harmonised.", "type": 2, "prob": 0.22}
-  ]},
-  {"clause_id": "c017", "issues": [
-    {"issue": "\"Material Defect\" is defined partly by circular reference — a document that \"does not conform on its face to the review criteria specified in this Section\" — and carries no materiality threshold despite its name. What counts as a Material Defect triggering repurchase is therefore contestable.", "type": 1, "prob": 0.34},
-    {"issue": "This paragraph makes any Material Defect repurchaseable without qualification, whereas the Final Certification paragraph of the same Section 2.02(a) requires that the Material Defect \"materially and adversely affects the interests of the Noteholders, Certificateholders or the Note Insurer\" before the same remedy is enforced. The two passages state different triggers for the same obligation.", "type": 2, "prob": 0.36}
-  ]},
-  {"clause_id": "c018", "issues": [
-    {"issue": "The paragraph limits the Custodian's obligations \"with respect to those documents described in subsections (b)(iv), (v) and (vii) of Section 2.01\", but Section 2.01(b) concerns funding of Draws by the Class S Certificateholder; the document list is in Section 2.01(d). The cross-reference identifies no existing subsections.", "type": 2, "prob": 0.38},
-    {"issue": "The Repurchase Price is to be remitted \"for deposit in the Collection Account\", a term differing from the \"Master Servicer Collection Account\" used for the identical payment in Sections 2.02(b), 2.03(b) and 2.04. Which account is meant is left to construction.", "type": 1, "prob": 0.30}
-  ]},
-  {"clause_id": "c019", "issues": [
-    {"issue": "Subsection (b) applies where a HELOC is purchased \"in accordance with Subsections 2.02(a) or (b) above\", but (b) is this very subsection, so the reference is circular and the intended trigger (probably 2.02(a) or 2.03) cannot be identified. The scope of the repurchase machinery depends on fixing that reference.", "type": 1, "prob": 0.38},
-    {"issue": "The sole-remedy sentence names the Issuing Entity, Noteholders, Certificateholders, Indenture Trustee and Owner Trustee, while the parallel sole-remedy sentences in Section 2.02(a) (Indenture Trustee, Issuer, Depositor, any Noteholder) and Section 2.03(b) (Issuing Entity, Noteholders, Indenture Trustee) list different beneficiaries and omit the Note Insurer. Whether a party absent from one list is bound by the limitation is a genuine internal inconsistency.", "type": 2, "prob": 0.44}
-  ]},
-  {"clause_id": "c020", "issues": [
-    {"issue": "The sentence \"[t]he obligations of the Sponsor to substitute or repurchase, as applicable, a HELOC shall be the ... sole remedy for any breach thereof\" leaves \"thereof\" without a clear antecedent — breach of the Mortgage Loan Purchase Agreement, of the reps and warranties, or of the Servicing Agreement. The scope of the remedy limitation turns on that word.", "type": 1, "prob": 0.42},
-    {"issue": "The sole-remedy beneficiaries here (Issuing Entity, Indenture Trustee, Noteholders, Certificateholder) differ from those in Section 2.02(b) and Section 2.03(b), and the Note Insurer is omitted although Section 2.08 makes the Sponsor's covenants run to the Note Insurer. Whether the Note Insurer is bound by the limitation cannot be settled from one provision.", "type": 2, "prob": 0.40}
-  ]},
-  {"clause_id": "c021", "issues": [
-    {"issue": "The repurchase trigger depends on a \"discover[y]\" of a breach that \"materially and adversely affects the value of the interests\" of named parties, and on \"prompt written notice\" — none of which is defined or measured. Whether discovery includes constructive knowledge and what makes a breach material and adverse are classic points of construction.", "type": 1, "prob": 0.52},
-    {"issue": "The closing sole-remedy sentence names only the Issuing Entity, the Noteholders and the Indenture Trustee, omitting the Certificateholders and the Note Insurer who are expressly covered by the parallel sole-remedy sentence in Section 2.02(b). The instrument does not say whether the omitted parties are limited to repurchase.", "type": 2, "prob": 0.40}
-  ]},
-  {"clause_id": "c022", "issues": [
-    {"issue": null, "type": 1, "prob": 0.18},
-    {"issue": "Section 2.04 directs the Sponsor to deliver the Substitute HELOC documents \"in accordance with the provisions of the Mortgage Loan Purchase Agreement and Subsection 2.02(b) of this Agreement\", but Section 2.02(b) contains only the repurchase-remittance and release mechanics; the document delivery requirements are in Section 2.01(d). The cross-reference points to a subsection with no such provisions.", "type": 2, "prob": 0.36}
-  ]},
-  {"clause_id": "c023", "issues": [
-    {"issue": "Repurchase is barred for any HELOC \"that is not in default or as to which default is not reasonably foreseeable\", a double-negative formulation whose vagueness (\"reasonably foreseeable\" default) determines when the Opinion of Counsel condition bites. The boundary of the exception cannot be applied from the words alone.", "type": 1, "prob": 0.31},
-    {"issue": null, "type": 2, "prob": 0.14}
-  ]},
-  {"clause_id": "c024", "issues": [
-    {"issue": "\"[T]he Indenture Trustee and the Owner Trustee shall require the Sponsor, at its option, to either (i) substitute ... or (ii) repurchase\" leaves it unclear whose option is meant — the Sponsor's or the Trustees'. The choice of remedy depends on that pronoun.", "type": 1, "prob": 0.33},
-    {"issue": null, "type": 2, "prob": 0.14}
-  ]},
-  {"clause_id": "c025", "issues": [
-    {"issue": null, "type": 1, "prob": 0.07},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c026", "issues": [
-    {"issue": null, "type": 1, "prob": 0.09},
-    {"issue": "The Depositor is described in the preamble and in Section 2.06(i) as a Delaware limited liability company, yet this representation speaks of its \"full corporate power\" and Section 2.06(iii) of \"necessary corporate action\". The corporate vocabulary does not fit the entity as defined.", "type": 2, "prob": 0.18}
-  ]},
-  {"clause_id": "c027", "issues": [
-    {"issue": null, "type": 1, "prob": 0.09},
-    {"issue": null, "type": 2, "prob": 0.10}
-  ]},
-  {"clause_id": "c028", "issues": [
-    {"issue": null, "type": 1, "prob": 0.07},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c029", "issues": [
-    {"issue": null, "type": 1, "prob": 0.07},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c030", "issues": [
-    {"issue": "The no-litigation representation ends with a dangling \"; or\", so it reads as one half of a disjunction whose other half (clause (vii)) is a sentence fragment rather than a separate representation. Whether the representation is limited to proceedings concerning the contemplated transactions depends on repairing the break.", "type": 1, "prob": 0.30},
-    {"issue": null, "type": 2, "prob": 0.12}
-  ]},
-  {"clause_id": "c031", "issues": [
-    {"issue": "Clause (vii) begins \"with respect to any other matter which in the judgment of the Depositor will be determined adversely\" and has no subject or verb of its own; as written it represents nothing. What, if anything, the Depositor warrants by it cannot be determined from the text.", "type": 1, "prob": 0.43},
-    {"issue": null, "type": 2, "prob": 0.14}
-  ]},
-  {"clause_id": "c032", "issues": [
-    {"issue": null, "type": 1, "prob": 0.16},
-    {"issue": "The Depositor warrants that immediately before transfer each Mortgage Note and Mortgage \"were not subject to an assignment or pledge\", yet Section 2.01(a) and the recitals describe a chain in which the Sponsor sells and assigns the same HELOCs to the Depositor immediately beforehand. Whether that intervening assignment breaches the warranty is a question for construction.", "type": 2, "prob": 0.26}
-  ]},
-  {"clause_id": "c033", "issues": [
-    {"issue": null, "type": 1, "prob": 0.09},
-    {"issue": null, "type": 2, "prob": 0.07}
-  ]},
-  {"clause_id": "c034", "issues": [
-    {"issue": null, "type": 1, "prob": 0.07},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]},
-  {"clause_id": "c035", "issues": [
-    {"issue": null, "type": 1, "prob": 0.07},
-    {"issue": null, "type": 2, "prob": 0.06}
-  ]}
+ {"clause_id": "c001", "issues": [
+   {"issue": null, "type": 1, "prob": 0.05},
+   {"issue": "The issuing entity is named \"GPMF Trust 2007-HE1\" here while the cover page and the transaction title identify \"Greenpoint Mortgage Funding Trust 2007-HE1\". The identity of the contracting trust is therefore established by two different names in the same instrument.", "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c002", "issues": [
+   {"issue": null, "type": 1, "prob": 0.04},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c003", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": "Operative terms such as \"Repurchase Price\", \"Substitute HELOC\", \"Recordation Event\" and \"Accepted Master Servicing Practices\" are used throughout Articles II and IV but defined only in Appendix A to the Indenture, an instrument not attached. A court would have to decide whether the incorporated Indenture definitions or the usage in Sections 2.02–2.04 governs.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c004", "issues": [
+   {"issue": null, "type": 1, "prob": 0.05},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c005", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.08}
+ ]},
+ {"clause_id": "c006", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c007", "issues": [
+   {"issue": null, "type": 1, "prob": 0.04},
+   {"issue": null, "type": 2, "prob": 0.04}
+ ]},
+ {"clause_id": "c008", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.09}
+ ]},
+ {"clause_id": "c009", "issues": [
+   {"issue": "Clause (v) sweeps in \"any proceeds of the foregoing and any other property owned by the Trust and all other assets included or to be included in the Issuing Entity\" after four specific asset categories, leaving the reach of the catch-all uncertain. What passed to the Issuing Entity beyond the enumerated items is a genuine ejusdem generis question.", "type": 1, "prob": 0.30},
+   {"issue": "The recital states that the Depositor acquires the HELOCs from the Sponsor \"in consideration for its transfer to the Sponsor of the Certificates and the proceeds from the sale of the Notes\", whereas this operative paragraph recites the consideration as \"the Issuing Entity's delivery of the proceeds from the sale of the Notes and the Certificates to the Sponsor\". The recital and the granting language identify different payors of the purchase price.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c010", "issues": [
+   {"issue": "The obligation to fund additional Draws is imposed on \"the Class S Certificateholder\", a non-signatory said to agree \"by accepting such Certificate\", with no stated funding mechanic, timing or remedy for failure. Who bears the Draw-funding risk, and on what terms, is left open on the face of the paragraph.", "type": 1, "prob": 0.32},
+   {"issue": "Section 2.01(a) provides that none of the Securities Administrator, Master Servicer nor Indenture Trustee \"shall be obligated or permitted to fund any such Draws\", yet this paragraph has the Securities Administrator agreeing to \"direct funds\" to reimburse Servicer Draw advances. The two paragraphs pull against each other on the Securities Administrator's role in Draw funding.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c011", "issues": [
+   {"issue": "The paragraph says only that it \"is not intended\" that any HELOC be a high-cost loan while adding that \"the Depositor so represents and recognizes\", so whether this is a binding representation or a mere statement of intent is genuinely uncertain. Clause (v) compounds this by referring to the \"then current\" S&P LEVELS Glossary \"which is now Version 5.7 Revised\", leaving the operative version indeterminate.", "type": 1, "prob": 0.35},
+   {"issue": null, "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c012", "issues": [
+   {"issue": "The enumeration uses \"(ii)\" twice — for the blank Assignment of Mortgage and for the recorded Mortgage — and clause (iv) then requires endorsement \"in accordance with clause (ii) above\", so which clause is cross-referenced is uncertain. That is a mechanical numbering error that changes what the Sponsor must deliver.", "type": 1, "prob": 0.30},
+   {"issue": "This delivery list requires the \"original Credit Line Agreement\" and never mentions a Mortgage Note, yet Section 2.02(a) directs the Custodian to confirm each Mortgage File \"contains the related Mortgage Note or lost note affidavit\" and makes a missing or defective Mortgage Note a repurchase trigger. The delivery obligation and the certification/repurchase machinery describe different documents.", "type": 2, "prob": 0.34}
+ ]},
+ {"clause_id": "c013", "issues": [
+   {"issue": null, "type": 1, "prob": 0.14},
+   {"issue": null, "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c014", "issues": [
+   {"issue": null, "type": 1, "prob": 0.15},
+   {"issue": "Section 2.01(d)(v) requires an actual title insurance policy (or guaranty title) to be delivered on or before the Closing Date, while this clause allows the Sponsor to satisfy a failure to deliver by furnishing a mere copy within 180 days. Whether non-delivery is a Material Defect under Section 2.02(a) or is cured by this clause is left unresolved.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c015", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "The certificate must address deposits into \"the related Collection Account\", a term that appears nowhere else in the Agreement, which elsewhere uses the Master Servicer Collection Account (Sections 2.02(b), 2.03(b)) and the Protected Account (Section 4.06(a)). Which account the certification covers is not settled by the instrument.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "\"Material Defect\" is defined partly by non-conformity \"to the review criteria specified in this Section\", criteria the Section never separately states, and the layered 90-day, 360-day and second-anniversary periods leave it unclear whether notice and cure are conditions precedent to any repurchase claim. Both the trigger and the timing of the sole remedy are open to opposing readings.", "type": 1, "prob": 0.50},
+   {"issue": "This Section's sole-remedy sentence runs to \"the Indenture Trustee, the Issuer, the Depositor and any Noteholder\", while Section 2.02(b) states the same limitation for the Issuing Entity, Noteholders, Certificateholders, Indenture Trustee and Owner Trustee and Section 2.03(b) for only the Issuing Entity, Noteholders and Indenture Trustee, with the Note Insurer omitted throughout. Who is bound by the sole remedy cannot be settled by harmonising the three sentences.", "type": 2, "prob": 0.44}
+ ]},
+ {"clause_id": "c017", "issues": [
+   {"issue": "The opening words condition the subsection on a purchase made \"in accordance with Subsections 2.02(a) or (b) above\", but subsection (b) is this very subsection, so the cross-reference is circular. The intended trigger (probably Sections 2.02(a) and 2.03) has to be supplied by construction.", "type": 1, "prob": 0.40},
+   {"issue": "The sole-remedy sentence here names the Issuing Entity, Noteholders, Certificateholders, Indenture Trustee and Owner Trustee, a list that differs from the parallel sentences in Section 2.02(a) and Section 2.03(b) and again omits the Note Insurer. The three provisions cannot be reconciled on the scope of the remedy limitation.", "type": 2, "prob": 0.36}
+ ]},
+ {"clause_id": "c018", "issues": [
+   {"issue": "The bracketed parenthetical reserving to the Sponsor the right to enforce breaches \"with respect to the HELOCs of the Servicer under the Servicing Agreement\" is garbled and opened with a brace rather than a parenthesis, so which party retains which enforcement rights is unclear. The same sentence purports to assign both \"rights and obligations\", which sits oddly with the closing sentence of Section 2.08 that no obligations are assigned.", "type": 1, "prob": 0.35},
+   {"issue": "This sole-remedy sentence binds the Issuing Entity, Indenture Trustee, Noteholders and Certificateholders, whereas the corresponding sentence in Section 2.03(b) omits Certificateholders and the Note Insurer. The instrument therefore states the same limitation with materially different beneficiaries.", "type": 2, "prob": 0.33}
+ ]},
+ {"clause_id": "c019", "issues": [
+   {"issue": "The repurchase obligation turns on a breach that \"materially and adversely affects the value of the interests\" and on \"discovery or receipt of notice\", so whether prompt written notice and the 90-day cure window are conditions precedent to a claim, and by what measure materiality is judged, are both open. These are the words on which a repurchase dispute would turn.", "type": 1, "prob": 0.55},
+   {"issue": "The concluding sole-remedy sentence runs only to \"the Issuing Entity, the Noteholders or the Indenture Trustee\", omitting the Certificateholders and Note Insurer who are expressly covered by the parallel sentences in Sections 2.02(b) and 2.03(a). Whether the Note Insurer's remedies are limited cannot be resolved by reading the three together.", "type": 2, "prob": 0.44}
+ ]},
+ {"clause_id": "c020", "issues": [
+   {"issue": "The Sponsor is directed to deliver Substitute HELOC documents \"in accordance with the provisions of the Mortgage Loan Purchase Agreement and Subsection 2.02(b) of this Agreement\", but Subsection 2.02(b) concerns remittance of the Repurchase Price, not document delivery, which is governed by Section 2.01(d). The delivery standard for a substitute loan must therefore be supplied by construction.", "type": 1, "prob": 0.32},
+   {"issue": "This Section bars any substitution more than two years after the Closing Date, yet Section 2.05(a) requires substitutions to be deferred until an Opinion of Counsel is delivered and Section 2.02(a) contemplates cure periods running to 360 days and the second anniversary. The absolute bar and the deferral machinery can produce a repurchase obligation with no available substitute remedy.", "type": 2, "prob": 0.31}
+ ]},
+ {"clause_id": "c021", "issues": [
+   {"issue": null, "type": 1, "prob": 0.18},
+   {"issue": "The deferral of repurchase or substitution until an Opinion of Counsel is obtained can push a substitution past the absolute two-year cut-off imposed by the last sentence of Section 2.04. Which provision prevails when the opinion arrives late is not addressed.", "type": 2, "prob": 0.27}
+ ]},
+ {"clause_id": "c022", "issues": [
+   {"issue": "The Indenture Trustee and Owner Trustee \"shall require the Sponsor, at its option, to either\" substitute or repurchase — the antecedent of \"its\" is ambiguous as between the Sponsor and the requiring trustees. Who chooses between substitution and repurchase is therefore unsettled.", "type": 1, "prob": 0.28},
+   {"issue": null, "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c023", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c024", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": "This representation asserts \"full corporate power\" although Section 2.06(i) represents the Depositor to be a Delaware limited liability company, and Section 2.06(iii) likewise refers to \"corporate action\" and \"certificate of formation or by-laws\". The entity form described in the same series of representations is internally inconsistent.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c025", "issues": [
+   {"issue": null, "type": 1, "prob": 0.06},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c026", "issues": [
+   {"issue": null, "type": 1, "prob": 0.05},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c027", "issues": [
+   {"issue": null, "type": 1, "prob": 0.05},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c028", "issues": [
+   {"issue": "Clause (vii) is joined to clause (vi) by \"or\" but has no subject or operative verb — \"with respect to any other matter which in the judgment of the Depositor will be determined adversely\" — so what is being represented cannot be read off the words. The broken sentence changes the content of the no-litigation representation.", "type": 1, "prob": 0.36},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c029", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "The title representation is given as to \"each Mortgage Note and each Mortgage\", while Section 2.01(d)(i) requires delivery of the \"original Credit Line Agreement\" and the assets conveyed under Section 2.01(a) are HELOCs. Whether the warranty reaches the Credit Line Agreements is left to construction.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c030", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]}
 ]}

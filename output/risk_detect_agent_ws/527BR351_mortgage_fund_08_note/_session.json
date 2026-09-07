@@ -2,15 +2,15 @@
   "is_error": false,
   "stop_reason": "end_turn",
   "num_turns": 17,
-  "duration_ms": 500579,
-  "total_cost_usd": 3.3524,
+  "duration_ms": 383207,
+  "total_cost_usd": 2.9672,
   "usage": {
     "input_tokens": 28,
-    "cache_creation_input_tokens": 169037,
-    "cache_read_input_tokens": 1044507,
-    "output_tokens": 45584,
+    "cache_creation_input_tokens": 164469,
+    "cache_read_input_tokens": 862327,
+    "output_tokens": 35648,
     "output_tokens_details": {
-      "thinking_tokens": 19314
+      "thinking_tokens": 6910
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -18,19 +18,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 169037,
+      "ephemeral_1h_input_tokens": 164469,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 36,
-        "cache_read_input_tokens": 166497,
-        "cache_creation_input_tokens": 6616,
+        "output_tokens": 48,
+        "cache_read_input_tokens": 156989,
+        "cache_creation_input_tokens": 7480,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 6616
+          "ephemeral_1h_input_tokens": 7480
         },
         "type": "message"
       }
@@ -40,39 +40,39 @@
   "model_usage": {
     "claude-opus-5": {
       "inputTokens": 28,
-      "outputTokens": 45584,
-      "cacheReadInputTokens": 1044507,
-      "cacheCreationInputTokens": 169037,
+      "outputTokens": 35648,
+      "cacheReadInputTokens": 862327,
+      "cacheCreationInputTokens": 164469,
       "webSearchRequests": 0,
-      "costUSD": 3.3523634999999996,
+      "costUSD": 2.9671935,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "7e88cab2-1989-43b8-8464-6de49b807aa3",
+  "session_id": "73c8f8a5-998c-4d12-b4be-4e54ce54f677",
   "errors": null,
-  "result": "I wrote 223 judgments (c001–c223) across predictions_001.json–predictions_004.json.",
+  "result": "I wrote 216 judgments (87 + 68 + 61) across predictions_001.json, predictions_002.json and predictions_003.json.",
   "path_denials": [
     {
       "tool": "Read",
-      "file_path": "/contract.txt"
+      "file_path": "/examples/1.1_88FSupp3d1156_product_contamination_insurance_policy/notes.md"
     }
   ],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1788417000
+      "resets_at": 1788732600
     }
   },
   "models_seen": [
     "claude-opus-5"
   ],
   "top_ups": [],
-  "n_judged": 223,
-  "n_wanted": 223,
+  "n_judged": 216,
+  "n_wanted": 216,
   "parse_notes": [],
   "trajectory_saved": true,
   "env_removed": [],

@@ -1,29 +1,34 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["court_defect", "evidence", "determinable", "alignment", "reason"],
+  "required": ["court_defect", "matched", "evidence", "determinable",
+               "alignment", "reason"],
   "properties": {
     "court_defect": {
       "type": "string",
-      "description": "One or two sentences: what defect in THIS provision the passage shows the court construing. Written before you look at the alignment question, from the passage alone. If the passage does not show the court construing this provision at all, say that."
+      "description": "One or two sentences: what the candidate passages show the court construing in THIS provision, read from the passages alone before you look at the alignment question. If they show the court construing nothing about this provision, say that."
+    },
+    "matched": {
+      "type": "string",
+      "description": "The id of the ONE candidate whose defect is the same as the proposed issue's, e.g. \"g2\". Empty string when none of them is the same defect. An id that is not among the candidates shown is rejected."
     },
     "evidence": {
       "type": "string",
-      "description": "The span of the opinion passage you are relying on, copied EXACTLY from it, character for character, OCR damage included. Empty string only when determinable is false."
+      "description": "The span of the CHOSEN candidate's opinion passage you are relying on, copied EXACTLY from it, character for character, OCR damage included. Empty string only when matched is empty or determinable is false."
     },
     "determinable": {
       "type": "boolean",
-      "description": "True if the passage contains enough to judge alignment either way. False when it is cut mid-argument, mentions the provision only in passing, or otherwise gives no basis to decide — in which case alignment must be 0.0."
+      "description": "True if the passages contain enough to judge either way. False when they are cut mid-argument or otherwise give no basis to decide — in which case alignment must be 0.0."
     },
     "alignment": {
       "type": "number",
       "minimum": 0,
       "maximum": 1,
-      "description": "How far the defect the proposed issue names is the same defect the passage shows the court construing. Two decimal places. 0.8-1.0 exact same defect; 0.5-0.8 same underlying problem framed differently; 0.2-0.5 related but a different specific defect; 0.0-0.2 unrelated or absent. It need not be the court's main point — one of several defects construed in the passage still scores high."
+      "description": "How far the defect the proposed issue names is the same defect the chosen candidate records. Two decimal places. 0.8-1.0 the same defect; 0.5-0.8 same underlying problem framed differently; 0.2-0.5 related but a different specific defect; 0.0-0.2 unrelated. 0.0 whenever matched is empty."
     },
     "reason": {
       "type": "string",
-      "description": "One or two sentences tying the quoted evidence to the score: what the proposed issue names, what the passage shows, and why that is or is not the same defect."
+      "description": "One or two sentences tying the quoted evidence to the score: what the proposed issue names, what the chosen passage shows, and why that is or is not the same defect. Say so if the choice between two candidates was close."
     }
   }
 }

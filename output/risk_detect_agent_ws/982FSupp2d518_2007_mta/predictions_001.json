@@ -1,54 +1,72 @@
 {"judgments": [
-  {"clause_id": "c001", "issues": [
-    {"issue": "\"Recipient\" is defined collectively as Dr. June and the Trustees of the University of Pennsylvania, leaving it unclear whether obligations and restrictions bind the individual scientist, the institution, or both jointly. The scope of who is a \"Recipient\" controls every downstream restriction on transfer and use.", "type": 1, "prob": 0.31},
-    {"issue": null, "type": 2, "prob": 0.10}
-  ]},
-  {"clause_id": "c002", "issues": [
-    {"issue": "\"[W]e ask that you and your Institute agree to the following terms\" is precatory in form, raising a question whether the numbered paragraphs are promissory obligations or requested conditions of shipment. The point is compounded by the letter format, which makes the operative language depend on this introduction.", "type": 1, "prob": 0.24},
-    {"issue": null, "type": 2, "prob": 0.09}
-  ]},
-  {"clause_id": "c003", "issues": [
-    {"issue": "\"Materials\" is defined to include \"any progeny, portions, unmodified derivatives and any accompanying know-how or data,\" and the reach of \"progeny,\" \"portions\" and \"unmodified derivatives\" is genuinely contestable when the recipient incorporates the construct into a new lentiviral vector. Whether the resulting vector is a \"portion\"/\"derivative\" of the Materials, or a distinct modified product outside the definition, is exactly the kind of dispute this wording invites.", "type": 1, "prob": 0.66},
-    {"issue": "The definition captures only \"unmodified derivatives,\" yet Section 3 expressly authorizes Recipient to modify the construct into a lentiviral vector clone and Section 5 asserts St. Jude ownership of anything \"derived from the Materials,\" so the three provisions cannot be harmonized as to what the recipient's product is.", "type": 2, "prob": 0.40}
-  ]},
-  {"clause_id": "c004", "issues": [
-    {"issue": "\"Except as provided in this Agreement\" leaves the scope of the implied carve-out to be worked out against Section 3's permitted-purpose language, so what license the Recipient actually has is defined only negatively. The reservation of rights in \"any altered forms of the Materials made by St. Jude\" is a narrow specific that invites an expressio unius reading about altered forms made by Recipient.", "type": 1, "prob": 0.31},
-    {"issue": "The disclaimer of any express or implied license sits uneasily with Section 3, which affirmatively authorizes Recipient to produce a GMP lentiviral vector and use it in a Phase I clinical trial; a court could be asked whether Section 3 grants a license notwithstanding this clause.", "type": 2, "prob": 0.30}
-  ]},
-  {"clause_id": "c005", "issues": [
-    {"issue": null, "type": 1, "prob": 0.11},
-    {"issue": null, "type": 2, "prob": 0.07}
-  ]},
-  {"clause_id": "c006", "issues": [
-    {"issue": "The \"sole purpose\" limitation — producing a GMP lentiviral vector clone \"in quantities sufficient to complete a Phase I clinical trial to be conducted at the Recipient's clinical facilities\" — is the operative boundary of permitted use and its edges (quantity, which trial, whose facilities, use after the trial) are open to competing readings. Whether manufacture or use outside those bounds breaches the MTA turns entirely on how far this sentence reaches.", "type": 1, "prob": 0.62},
-    {"issue": "The permitted purpose contemplates GMP manufacture and a clinical trial, activities ordinarily involving outside contractors and sponsors, which is difficult to square with the flat prohibitions in Section 3(i) and 3(ii) on sending Materials to another institution or a commercial entity.", "type": 2, "prob": 0.34}
-  ]},
-  {"clause_id": "c007", "issues": [
-    {"issue": "\"[A]nother institution\" is undefined and it is contestable whether it covers a commercial company, an affiliated hospital, or a contract manufacturer acting for Recipient. Read alongside subsection (ii)'s separate reference to \"a commercial entity,\" the boundary between the two categories is genuinely uncertain.", "type": 1, "prob": 0.47},
-    {"issue": null, "type": 2, "prob": 0.16}
-  ]},
-  {"clause_id": "c008", "issues": [
-    {"issue": "The parenthetical carve-out for \"those obligations imposed upon grantee institutions of the U.S. government\" is a specific exception carved out of a general prohibition on research subject to \"consulting or licensing obligations to another party,\" and its reach against a university's sponsored-research and licensing arrangements is contestable. It is also unclear whether the \"without express written consent\" qualifier attaches to both the commercial-entity ban and the consulting/licensing ban or only the second.", "type": 1, "prob": 0.58},
-    {"issue": null, "type": 2, "prob": 0.20}
-  ]},
-  {"clause_id": "c009", "issues": [
-    {"issue": null, "type": 1, "prob": 0.10},
-    {"issue": null, "type": 2, "prob": 0.07}
-  ]},
-  {"clause_id": "c010", "issues": [
-    {"issue": "The trigger \"contains a portion of the Materials, is derived from the Materials, or which could not have been produced but for the use of the Materials\" is a sweeping but-for standard whose outer limit is uncertain, and the only obligation it imposes is to \"contact St. Jude to determine ownership interests, if any\" — an agreement to discuss rather than a rule of ownership. Both the trigger and the remedy are open to sharply different readings.", "type": 1, "prob": 0.52},
-    {"issue": "A claim of St. Jude ownership interests in products merely \"derived from\" the Materials is hard to reconcile with Section 1's definition of Materials as limited to progeny, portions and *unmodified* derivatives, and with Section 3's authorization to create a modified vector.", "type": 2, "prob": 0.36}
-  ]},
-  {"clause_id": "c011", "issues": [
-    {"issue": "\"[T]he results of such research using the Materials\" has no clear antecedent — the preceding sentences concern patenting and commercialization, not a defined research programme — so the class of disclosures subject to 30-day prepublication review is uncertain. \"[D]isclose\" is likewise unbounded and could sweep in ordinary regulatory or investor communications.", "type": 1, "prob": 0.40},
-    {"issue": "The review right protects \"St. Jude proprietary information,\" but Section 4 separately requires only that publications be supplied to St. Jude after the fact, leaving the two publication provisions in tension about what Recipient may publish and when.", "type": 2, "prob": 0.22}
-  ]},
-  {"clause_id": "c012", "issues": [
-    {"issue": null, "type": 1, "prob": 0.10},
-    {"issue": "This paragraph is numbered \"5,\" duplicating the ownership/publication paragraph also numbered 5, so the survival clause's reference to \"Sections 5, 5 and 7\" cannot be matched to a single provision. Which section 5 survives termination is indeterminate on the face of the instrument.", "type": 2, "prob": 0.33}
-  ]},
-  {"clause_id": "c013", "issues": [
-    {"issue": null, "type": 1, "prob": 0.09},
-    {"issue": null, "type": 2, "prob": 0.09}
-  ]}
+  {"clause_id": "c001",
+   "issues": [
+     {"issue": "\"Recipient\" is defined collectively as both Dr. June personally and the Trustees of the University of Pennsylvania, leaving it uncertain whether each obligation binds the individual, the institution, or both jointly. The phrase \"materials developed at St. Jude\" is also broader than the item later defined in section 1.", "type": 1, "prob": 0.24},
+     {"issue": null, "type": 2, "prob": 0.10}
+   ]},
+  {"clause_id": "c002",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.07},
+     {"issue": null, "type": 2, "prob": 0.06}
+   ]},
+  {"clause_id": "c003",
+   "issues": [
+     {"issue": "\"Materials\" is defined to include \"any progeny, portions, unmodified derivatives and any accompanying know-how or data,\" and the boundary of \"unmodified derivatives\" and \"progeny\" is not fixed; whether a lentiviral vector clone incorporating the construct falls inside the definition is contestable. The undefined \"accompanying know-how or data\" is equally open-ended.", "type": 1, "prob": 0.42},
+     {"issue": "The definition covers only \"unmodified derivatives,\" but section 7 indemnity speaks of \"the Materials and their progeny or derivatives\" without the qualifier, so the two provisions describe different subject matter.", "type": 2, "prob": 0.26}
+   ]},
+  {"clause_id": "c004",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.13},
+     {"issue": null, "type": 2, "prob": 0.09}
+   ]},
+  {"clause_id": "c005",
+   "issues": [
+     {"issue": "The carve-out \"Except as provided in this Agreement\" does not identify what licence, if any, the Agreement does grant, so the scope of the permission implied by the section 3 purpose clause is left to inference. The reach of \"other proprietary rights\" against the enumerated patents, applications and trade secrets is also open.", "type": 1, "prob": 0.30},
+     {"issue": null, "type": 2, "prob": 0.18}
+   ]},
+  {"clause_id": "c006",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.14},
+     {"issue": null, "type": 2, "prob": 0.09}
+   ]},
+  {"clause_id": "c007",
+   "issues": [
+     {"issue": "The \"sole purpose\" grant is drawn in technical terms — production of a molecular lentiviral vector clone \"in quantities sufficient to complete a Phase I clinical trial\" — and whether particular downstream uses (further trials, manufacture, collaboration) fall inside that single permitted purpose is genuinely contestable. \"Quantities sufficient\" and \"the Recipient's clinical facilities\" both lack a fixed boundary.", "type": 1, "prob": 0.48},
+     {"issue": null, "type": 2, "prob": 0.20}
+   ]},
+  {"clause_id": "c008",
+   "issues": [
+     {"issue": "\"Another institution\" is undefined and it is unclear whether it captures a commercial company, a collaborating hospital, or an affiliate of the Recipient, and whether \"taken or sent\" reaches products made from the Materials rather than the Materials themselves.", "type": 1, "prob": 0.32},
+     {"issue": null, "type": 2, "prob": 0.13}
+   ]},
+  {"clause_id": "c009",
+   "issues": [
+     {"issue": "\"Provided to a commercial entity\" and \"research that is subject to consulting or licensing obligations to another party\" are both undefined, so whether a sponsored collaboration or a licence of Recipient's own inventions trips the restriction is contestable. The parenthetical carve-out for U.S. government grantee obligations sharpens the expressio unius question about other pre-existing obligations.", "type": 1, "prob": 0.44},
+     {"issue": null, "type": 2, "prob": 0.16}
+   ]},
+  {"clause_id": "c010",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.15},
+     {"issue": "Section 4 requires only that a copy of a publication be provided (naturally read as after publication), while the last sentence of section 5 forbids publication without 30 days' prior submission for review; the two publication regimes must be reconciled.", "type": 2, "prob": 0.36}
+   ]},
+  {"clause_id": "c011",
+   "issues": [
+     {"issue": null, "type": 1, "prob": 0.16},
+     {"issue": "The flat acknowledgment of St. Jude ownership of the Materials \"and any progeny thereof\" sits awkwardly with the same section's statement that \"Ownership shall [follow] inventorship according to US patent law\" and with the contact-to-determine-ownership sentence, which assume ownership is yet to be worked out.", "type": 2, "prob": 0.30}
+   ]},
+  {"clause_id": "c012",
+   "issues": [
+     {"issue": "The trigger \"which could not have been produced but for the use of the Materials\" is an open-ended causal test, and the obligation itself — to \"contact St. Jude to determine ownership interests, if any\" — states no standard, outcome or consequence. What compliance looks like is therefore indeterminate.", "type": 1, "prob": 0.41},
+     {"issue": null, "type": 2, "prob": 0.20}
+   ]},
+  {"clause_id": "c013",
+   "issues": [
+     {"issue": "The one-line rule \"Ownership shall [follow] inventorship according to US patent law\" is garbled and does not say whether it governs only the patent applications described in the preceding sentence or ownership of the Materials generally. Its interaction with the flat ownership acknowledgment in the same section is left unresolved.", "type": 1, "prob": 0.38},
+     {"issue": "It cannot readily be squared with the first sentence of section 5, in which Recipient acknowledges St. Jude's ownership of the Materials and any progeny regardless of who invents.", "type": 2, "prob": 0.31}
+   ]},
+  {"clause_id": "c014",
+   "issues": [
+     {"issue": "\"The results of such research\" has no clear antecedent: it may mean all research using the Materials, or only research yielding a patent application or commercial product as described in the immediately preceding sentences. The scope of the pre-publication review duty turns entirely on that word \"such.\"", "type": 1, "prob": 0.72},
+     {"issue": "It is in tension with section 4, which contemplates simply supplying St. Jude a copy of any publication containing results obtained from use of the Materials, with no prior-review condition.", "type": 2, "prob": 0.44}
+   ]}
 ]}

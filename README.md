@@ -5,16 +5,17 @@ court opinions and the contracts filed with them, plus an experiment that asks a
 model to predict the labels.
 
 ```
-11,798 rows  |  201 positive / 11,597 negative  (1.7% positive)
-62 cases     |  103 contracts                   |  12.4 MB
+12,060 rows  |  226 positive / 11,834 negative  (1.9% positive)
+62 cases     |  103 contracts                   |  13.9 MB
+310 issues   |  the defects the courts construed, named one by one
 ```
 
 > **The experiment is agentic.** `risk_detect_agent.py` — one sandboxed Claude Code
-> session per contract — is the experiment that is run and reported.
-> `risk_detect_llm_api.py`, the one-shot API arm, has been **retired**: it is kept as
-> the reference implementation of the scoring contract the agent arm reuses, but
-> it is not run and its numbers are not maintained. The old two-arm comparison
-> is on the `legacy_spellbook_9.1` branch.
+> session per contract — is the experiment that is run and reported. A one-shot
+> API arm ran alongside it until it was **retired and deleted**; what the two
+> shared (the taxonomy, the worked examples, the `preds.csv` row contract) is now
+> `runs.py`. The old two-arm comparison is on `2026.9.1_legacy_spellbook`, and the
+> deleted arm on `2026.9.3_legacy_multi_issue_experiment`.
 
 - **[docs/DATASET.md](docs/DATASET.md)** — what a label means, how the dataset is
   built, the columns, the known limits.
@@ -48,16 +49,17 @@ from a model's opinion — except where a case was filed under several, when a
 model says which of *those* the dispute turned on and `taxonomy_provenance`
 records that it did. The binary risky/not label never depends on this.
 
-**The classes are not matched on clause length, and currently do not need to
-be.** Positives and negatives run to almost the same length (median 329
-characters against 331), and clause length alone separates them at
-within-contract ROC-AUC **0.523** [0.501, 0.546] — indistinguishable from
-chance.
+**The classes are not matched on clause length, and this is the caveat to read
+first.** Positives run to a median 586 characters against the negatives' 332,
+and clause length alone separates them at within-contract ROC-AUC **0.706**. Any
+model's AUC has to be read against that baseline.
 
-This was **not** true of the previous build, where positives ran to a median 607
-against 372 and length alone reached **0.683**. The gap closed because the
-rebuilt step 1 cuts tighter spans, not because the task changed. So: **if you
-benchmark on this, re-measure the length-only baseline for whatever build you
+An earlier build reported 0.523 here, but its positives were cut by a model that
+had read the opinion, so their spans were drawn around the *disputed language*
+rather than around the clause containing it — a label-dependent boundary, which
+is a worse problem than the confound it hid. DATASET.md §6 sets out the
+evidence. So: **if you benchmark on this, re-measure the length-only baseline
+for whatever build you
 have** rather than trusting this number, and report per-contract as well as
 aggregate figures.
 
@@ -82,25 +84,25 @@ contract_risk/           the Contract-Risk repo's new_approach/ — OCR'd contra
 
 prompts/                 <name>.md (SYSTEM/DOCUMENT/INSTRUCTIONS/TASK) + <name>.schema.json
   layout                    step 0b — is the scan an interleaved two-column page?
-  extract                   step 1 — locate the clauses the parties disputed
-  inventory                 step 2 — locate every clause of one contract
+  inventory                 step 1 — locate every clause of one contract
+  disputes                  step 2 — which listed clauses were disputed, over what
   risk_detect               the risk-detection experiment's judging criteria
   issue_alignment_check     did an issue match the dispute the court had?
 
 src/lib.py               paths, taxonomy, ask(), locate(), normalise()
 src/step0_corpus.py      0.  link cases, register documents        (no LLM)
 src/step0b_layout.py     0b. reject two-column scans        (cheap model, per contract)
-src/step1_extract.py     1.  which clauses were disputed          (LLM, per case)
-src/step2_inventory.py   2.  every clause of every contract       (LLM, per contract)
+src/step1_inventory.py   1.  every clause of every contract       (LLM, per contract)
+src/step2_disputes.py    2.  which of those clauses were disputed (LLM, per case)
 src/build_dataset.py         assemble + validate -> dataset.csv   (no LLM)
 src/replay_anchors.py        re-score the locator against stored logs (no LLM, no cost)
 
 src/experiments/
   risk_detect_agent.py            THE risk-detection run: one agent session per contract, in a container
-  risk_detect_llm_api.py          RETIRED one-shot arm; kept as the scoring contract the agent imports
+  runs.py                         what a run reads and writes: dataset rows, the preds.csv contract, scoring
   issue_alignment_check.py        was a named issue the defect the court actually construed?
-  plot_risk_detect_thresholds.py  the threshold figure           --run agent
-  compare_risk_detect.py          ROC, precision, recall, flag rate (needs two runs)
+  plot_risk_detect_thresholds.py  the threshold figure
+  compare_risk_detect.py          ROC, precision, recall, flag rate (--against to compare two runs)
   predictions.py                  reading the judgment files the agent writes
   isolation.py                    what a session may see: tools, path hook, env
   test_isolation.py               the path hook's cases (no cost, no API)
@@ -115,8 +117,8 @@ output/cases.json        cases in scope, with keys, headnotes and codes
 output/contracts.json    the document registry
 output/contracts/<cid>.md   document text, OCR furniture stripped
 output/layout.json       step 0b — the two-column verdict, with the model's evidence
-output/clauses.json      step 1 — positives, and what was rejected
-output/inventory.json    step 2 — every clause of every contract, and the flags
+output/inventory.json    step 1 — every clause of every contract, its id and the flags
+output/disputes.json     step 2 — which ids were disputed, their issues and passages
 output/llm_logs/<step>/  full prompt, response and usage for every call
 output/dataset.csv       the dataset
 output/risk_detect_<run>_*   risk detection: predictions, raw answers, figures
@@ -193,18 +195,24 @@ Now the dataset:
 ```sh
 python src/step0_corpus.py       # 0.  no LLM
 python src/step0b_layout.py      # 0b. one cheap call per contract
-python src/step1_extract.py      # 1.  one call per case
-python src/step2_inventory.py    # 2.  one call per contract step 1 was shown
+python src/step1_inventory.py    # 1.  one call per contract
+python src/step2_disputes.py     # 2.  one call per case
 python src/build_dataset.py      #     no LLM — validates, then writes
 ```
 
 `--case "44 F.Supp.3d 736"` restricts any step to one citation, which is how to
 try the pipeline end to end before paying for a full run. `step0b_layout.py` and
-`step2_inventory.py` also take `--contract <contract_id>`.
+`step1_inventory.py` also take `--contract <contract_id>`.
+
+**Step 1 runs before step 2 on purpose.** Clause boundaries are decided once, by
+a call that sees one contract and no opinion, and step 2 answers only in the ids
+step 1 assigned — it cannot report a span. A boundary therefore cannot shift with
+what a court said about the clause, which is the one systematic difference
+between positives and negatives that has nothing to do with drafting risk.
 
 **Steps 0b, 1 and 2 are resumable.** Each writes its artifact after every call and
 re-runs only what is missing. To *redo* work already done — after a prompt change,
-say — delete that case or contract id from `clauses.json` / `inventory.json`
+say — delete that case or contract id from `inventory.json` / `disputes.json`
 first, or the step will skip it and you will conclude the change had no effect.
 Step 0b takes `--force` instead.
 

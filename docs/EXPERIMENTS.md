@@ -9,15 +9,16 @@ reached by the wrong route.
 **Question.** Given a contract and the provisions it contains, can a model say
 which provisions a federal court would find something to construe?
 
-> **The `llm_api` arm has been retired.** This experiment once ran two arms — one
-> stateless API call per contract against one agent session per contract — and
-> compared them. **The agentic approach is now the experiment.** `risk_detect_agent.py`
-> is what runs and what §8 reports. `risk_detect_llm_api.py` remains in the codebase as
-> the reference implementation of the scoring contract the agent arm imports
-> (`FIELDS`, `pred_row`, `gold_types`, `anonymise`, `pick_examples`), so the two
-> can never disagree about what a column means — but it is not run, needs an
-> `ANTHROPIC_API_KEY` that is not provisioned, and no `llm_api` numbers are
-> maintained. The old two-arm comparison is on `legacy_spellbook_9.1`.
+> **The `llm_api` arm has been retired and deleted.** This experiment once ran
+> two arms — one stateless API call per contract against one agent session per
+> contract — and compared them. **The agentic approach is now the experiment**:
+> `risk_detect_agent.py` is what runs and what §8 reports. What the two arms
+> shared — `FIELDS`, `pred_row`, `gold_types`, `anonymise`, `pick_examples`,
+> `roc_auc` — is now `runs.py`, so a run and everything that scores it still
+> cannot disagree about what a column means. Nothing calls the Anthropic API
+> directly any more, so no `ANTHROPIC_API_KEY` is needed. The two-arm comparison
+> is on `2026.9.1_legacy_spellbook`; the deleted arm on
+> `2026.9.3_legacy_multi_issue_experiment`.
 
 **The experiment stays on Claude**, while the dataset build moved to OpenAI. The
 agent arm *is* the Claude Code CLI, so this is not a free choice.
@@ -47,19 +48,25 @@ section is used **verbatim**.
 
 ## 1. Evaluation set
 
-Every contract of the dataset that is not used as a worked example. Three are
-held out permanently to supply the examples — one per risk code present. They are
-the same three on every run and appear in no evaluation.
+Every contract of the dataset that is not used as a worked example. One example
+is picked per risk code present — three of them, drawn from **two** contracts,
+since two codes happened to select clauses of the same document. Those two
+contracts are held out permanently and appear in no evaluation.
 
 ```
-11,636 clauses  |  190 positive  (1.6%)  |  100 contracts
-type 1: 141 positive   type 2: 81 positive   (not exclusive)
+11,921 clauses  |  220 positive  (1.8%)  |  101 contracts
+300 issues — the defects the courts construed, counted one by one
+type 1: 172 positive   type 2: 68 positive   (not exclusive)
 ```
 
-The three held-out example contracts are picked per risk code, not per
-comma-joined taxonomy string — a clause labelled `1.1,1.3` counts as a candidate
-for both codes. Getting that wrong invents codes that do not exist and holds out
-more contracts than intended.
+The issue count is the denominator that matters for §10. A positive can carry
+more than one defect, so "how many of the court's findings did the model reach"
+is a different and larger question than "how many provisions did it flag".
+
+Examples are picked per risk code, not per comma-joined taxonomy string — a
+clause labelled `1.1,1.3` counts as a candidate for both codes. Getting that
+wrong invents codes that do not exist and holds out more contracts than
+intended.
 
 ---
 
@@ -78,12 +85,17 @@ to expect, not a quota to reproduce.
 **The contract**, in full.
 
 **The provisions to judge**, under opaque ids `c001…cNNN` assigned in order of
-appearance in the contract. The dataset's own `pos1`/`neg1` ids never reach the
-model: they would put the gold label on the door of every provision and group the
-answers at the top of the list. Document order is also the order a reader meets
-them in, and it places each provision beside its neighbours — which is what a
-risk type 2 judgement needs. The mapping back is stored per contract in the raw
-output and applied before anything reaches the predictions file.
+appearance in the contract. Document order is the order a reader meets them in,
+and it places each provision beside its neighbours — which is what a risk type 2
+judgement needs. The mapping back is stored per contract in the raw output and
+applied before anything reaches the predictions file.
+
+The dataset's own ids are now positional too (`c001…`, assigned by step 1 before
+anything knew the label), so this renumbering is no longer what stands between
+the model and the answer key. It was: an earlier build used `pos1`/`neg1`, which
+put the gold label on the door of every provision. Keeping the renumbering costs
+nothing and keeps the experiment independent of how the dataset happens to key
+its rows.
 
 ---
 
@@ -121,7 +133,7 @@ the **strongest** issue of each type. Not a sum — the probabilities are per is
 and independent, so two weak issues must not add up to a likely dispute, and what
 each panel asks is whether a court would construe the provision on account of
 *any* of them. `predictions.probs_of()` is the single implementation, shared by
-both arms and the Spellbook scorer.
+the run, the container and the Spellbook scorer.
 
 **Every provision of a contract is judged in one call or one session.** Risk
 type 2 asks about the relationship between provisions, so splitting a contract
@@ -137,9 +149,7 @@ rather than the model. So a short answer is always followed up, with no flag to
 disable it:
 
 `agent` **resumes the same session**, so "these ids are missing" is something it
-can check against what it already wrote. (`llm_api`, when it was run, instead
-continued the same conversation with its own answer replayed as an assistant
-turn.)
+can check against what it already wrote.
 
 Rounds stop as soon as one returns nothing new. Anything still unjudged after
 that is scored as `not_risky` at probability 0 — unflagged at every threshold —
@@ -242,17 +252,18 @@ threshold. The flag rate is what stops the first two being read too kindly — a
 respectable recall. `compare_risk_detect.py` prints these; `plot_risk_detect_thresholds.py`
 draws the sweep.
 
-`compare_risk_detect.py` compares two runs only on the clauses **both** have scored,
-joined on `(contract_id, clause_id)` — a partial run against a full one would
-differ as much in which contracts each covered as in anything about the method.
-With `llm_api` retired there is no second run to compare against, so it is
-`plot_risk_detect_thresholds.py --run agent` that produces the reported figure.
+`compare_risk_detect.py` scores the run. Given `--against PATH` it scores two,
+but only on the clauses **both** have covered, joined on `(contract_id,
+clause_id)` — a partial run against a full one would differ as much in which
+contracts each covered as in anything about the method. That is how two repeats
+of one prompt, or two prompts, are compared; there is no second arm any more.
+`plot_risk_detect_thresholds.py` produces the reported figure.
 
 ---
 
 ## 7. Artifacts
 
-Named with `<run>` being `agent` (the same scheme served `llm_api` when it ran):
+Named with `<run>` being `agent`:
 
 ```
 output/risk_detect_<run>_preds.csv                    one row per provision
@@ -269,51 +280,47 @@ output/risk_detect_agent_ws/<cid>/                    the agent's workspace, kep
 
 `preds.csv` is append-only. A row with `ok=0` is a provision that came back
 unjudged; where both exist for one provision, readers prefer the scored row.
-`api.pred_row()` is the only place a row is built, so the two arms cannot
-disagree about what a column means.
+`runs.pred_row()` is the only place a row is built, so a run and everything
+that scores it cannot disagree about what a column means.
 
 ---
 
 ## 8. Results
 
-Full write-up in [REPORT.md](REPORT.md). One run, `agent`, over all 11,636
-provisions of all 100 evaluation contracts — 100 sessions, 1,254 turns, nothing
-left unjudged and no session at the turn ceiling.
+**Not yet run on the current dataset.** The dataset was rebuilt when step 1 and
+step 2 were reordered (see [DATASET.md](DATASET.md) §3): clause boundaries, the
+positive set and the ids all changed, so the previous run's `preds.csv` cannot
+be joined to it and its numbers are not comparable. The run has to be repeated.
+
+The superseded run and its write-up are on
+`2026.9.3_legacy_multi_issue_experiment`. For the record, so that the repeat has
+something to be read against — over 11,636 provisions of 100 contracts, 100
+sessions, 1,254 turns, nothing left unjudged:
 
 | panel | positives | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
 |---|---:|---:|---:|---:|---:|---:|
-| risky vs not | 190 | **0.899** | 0.361 | 0.35 | 0.53 | 2.5% |
+| risky vs not | 190 | 0.899 | 0.361 | 0.35 | 0.53 | 2.5% |
 | risk type 1 — intrinsic | 141 | 0.898 | 0.326 | 0.31 | 0.50 | 2.0% |
 | risk type 2 — relational | 81 | 0.854 | 0.149 | 0.21 | 0.22 | 0.7% |
 
-Bootstrap 95% CI on the main panel: **[0.844, 0.949]**. At 1.6% prevalence
-PR-AUC is the number to read; ROC-AUC is flattered by the 11,446 easy negatives.
-The two risk types rank about equally well and their intervals overlap heavily.
+Bootstrap 95% CI on the main panel was [0.844, 0.949]. Cost was 1,890 input,
+8.6M cache-create, 55.8M cache-read and 2.4M output tokens over 7.6 hours of
+container time — **$174.35 at API-equivalent rates**, billed to a subscription
+rather than charged; caching absorbed 85% of the input side. Expect the repeat
+to cost about the same: the evaluation set is 11,921 provisions against 11,636.
 
-What a recall target costs, on the main panel:
+**Read the repeat against the length baseline, not against the table above.**
+Length alone now ranks provisions at within-contract ROC-AUC **0.706**, where
+the superseded build gave 0.523. That is not a regression in the pipeline —
+DATASET.md §6 sets out why the old figure was the artifact — but it does mean a
+headline AUC has a much higher floor to clear than it did, and the two builds'
+numbers must not be put side by side as though they measured the same thing.
 
-| recall | threshold | precision | share flagged |
-|---:|---:|---:|---:|
-| 70% | 0.41 | 0.182 | 6.3% |
-| 80% | 0.33 | 0.079 | 16.6% |
-| 90% | 0.26 | 0.044 | 33.5% |
-
-Performance is flat in contract length — ROC-AUC 0.864 / 0.897 / 0.876 across
-short (9-58 provisions), medium (60-148) and long (153-698) strata, a spread
-well inside the confidence interval.
-
-**Cost.** 1,890 input, 8.6M cache-create, 55.8M cache-read and 2.4M output
-tokens over 7.6 hours of container time - **$174.35 at API-equivalent rates**,
-billed to a subscription rather than charged. About 209 output tokens per
-provision; caching absorbed 85% of the input side.
-
-**Caveats that matter.** Run-to-run variance is unquantified (no seed, no
-temperature control); one repeat under the previous design moved ROC-AUC by
-~0.02 and recall@0.5 by ~0.10, which is the scale against which the small
-differences above should be judged. Clause length alone ranks at 0.523, so the
-result is not a length shortcut - but the previous build's was 0.683, so this is
-a property of the current extraction and worth re-checking after any rebuild.
-
+**Run-to-run variance is unquantified**: no seed, no temperature control. One
+repeat under an earlier design moved ROC-AUC by ~0.02 and recall@0.5 by ~0.10,
+which is the scale against which small differences should be judged.
+`compare_risk_detect.py --against` exists to measure this properly and has not
+been used for it yet.
 
 ---
 
@@ -395,8 +402,22 @@ first would look in the wrong place.
 
 `issue_alignment_check.py` closes that gap. For each issue the agent named, a
 **different** model reads the provision, the risk-type definition, the issue,
-and the court's verbatim passage, and scores how far the named defect is the
-defect the court construed.
+and **the defects step 2 recorded for that provision** — each with its own
+verbatim passage — and says which of them the named defect is, and how closely.
+
+**The judge names the match, and that is what makes recall computable.** Step 2
+records every defect a court construed separately, so `matched` identifies which
+one an issue found. Two numbers follow instead of one:
+
+| | |
+|---|---|
+| precision | of the issues the agent named, how many name a defect the court construed |
+| recall | of the 300 defects in the evaluation set, how many the agent found |
+
+Recall did not exist before. The previous build recorded one passage per
+provision, so several distinct defects collapsed into one target, and what was
+reported as recall was really target coverage — an upper bound on the real
+thing. Two issues that match the same defect count once.
 
 **The judge is `gpt-5.6-sol`, effort high** — deliberately not the family being
 judged, since the predictions came from `claude-opus-5` and a same-family judge
@@ -404,47 +425,56 @@ invites a self-preference objection. `lib.provider_of()` already routes by model
 name, so this costs nothing structurally.
 
 **What the judge is shown, and what it is not.** The provision, the type
-definition, the issue text, the opinion passage. **Not** the agent's
-probability, which would anchor it, and not whether the provision is gold —
-that is settled before the call and is not the question.
+definition, the issue text, and the candidate defects with their passages.
+**Not** the agent's probability, which would anchor it, and not whether the
+provision is gold — that is settled before the call and is not the question.
 
-**Scope: 191 issues over 169 provisions.** Only named issues whose provision
-*and* risk type both match gold. An issue on a provision no court construed has
-no passage to check against; an issue of the wrong type is already counted wrong
-by the one-vs-rest panels. So this is precision of explanation, **conditional**
-on the provision and the type being right — not a second shot at the ranking.
+One further precaution: the one-line summary of each candidate defect was
+written by step 2, which is the same model family as the judge. The prompt
+therefore states that the summary is a pointer and **the passage is the
+evidence**, and that the passage governs where the two disagree.
 
-The 21 gold positives that contributed no job are not failures of explanation:
-the model scored them **below 0.5 on the gold type** (median 0.13, max 0.26).
-They are ordinary misses, and counting them here would confuse "did not find it"
-with "found it and described it wrongly".
+**Scope.** Only named issues whose provision *and* risk type both match gold. An
+issue on a provision no court construed has no defect to check against; an issue
+of the wrong type is already counted wrong by the one-vs-rest panels. So
+precision here is **conditional** on the provision and the type being right —
+not a second shot at the ranking.
+
+Recall is not conditional in the same way: its denominator is every defect in
+the evaluation set, including those on provisions the agent said nothing about.
+A defect the check could never reach — no issue of that type was named on that
+provision at any probability — caps recall, and the figure draws that ceiling.
+Those are risk-detection misses, not wrong reasons, and the report separates
+them.
 
 **Output shape.**
 
 | field | |
 |---|---|
-| `court_defect` | what the passage shows the court construing, written from the passage alone |
-| `evidence` | a span copied **exactly** from the passage — the same verbatim discipline step 1 uses; no quote means no evidence |
-| `determinable` | false when the passage is cut mid-argument or mentions the provision only in passing, in which case `alignment` is forced to 0 |
-| `alignment` | 0–1, how far the named defect is the litigated defect |
+| `court_defect` | what the candidate passages show the court construing, written from them alone |
+| `matched` | the id of the one candidate defect the issue names, or empty for none |
+| `evidence` | a span copied **exactly** from the matched candidate's passage — the same verbatim discipline step 1 uses; no quote means no evidence |
+| `determinable` | false when the passages are cut mid-argument, in which case `alignment` is forced to 0 |
+| `alignment` | 0–1, how far the named defect is the matched defect |
 | `reason` | one or two sentences tying the quote to the score |
 
-A court often construes several defects of one provision in one passage, so an
-issue counts as aligned when it matches **any** of them — it need not be the
-court's main point. The judge returns a score, never a verdict, and the 0.5
-threshold is applied when reporting. It is never shown to the judge, so the
-operating point can be moved without re-running anything.
+An empty `matched` scores 0 whatever the model put in the field, as does a
+`matched` naming a candidate that was not shown — an id outside the list means
+the answer is not about the material, which is not a near miss to be salvaged.
+The judge returns a score, never a verdict, and the 0.5 threshold is applied
+when reporting. It is never shown to the judge, so the operating point can be
+moved without re-running anything.
 
 ### Two nulls, because the instrument has to be validated
 
 An LLM judge that says "aligned" to everything would produce a flattering number
-and mean nothing. `--control` re-pairs every issue with a passage that is not
-its own:
+and mean nothing. `--control` re-pairs every issue with candidate defects that
+are not its own:
 
-- **`corpus`** — a passage from a **different case**. Parties, subject matter
+- **`corpus`** — candidates from a **different case**. Parties, subject matter
   and vocabulary all differ. This catches a judge that merely recognises legal
   prose.
-- **`case`** — a passage from the **same case, a different provision**. Parties,
+- **`case`** — candidates from the **same case, a different provision**. Parties,
   instrument and vocabulary are shared and only the defect differs, so passing
   this means the judge discriminates between *defects*, not between *documents*.
   Its expected rate is **not zero**: a court that construes two provisions
@@ -459,15 +489,17 @@ python src/experiments/issue_alignment_check.py --control corpus --out /tmp/ctl
 python src/experiments/issue_alignment_check.py --control case   --out /tmp/ctl
 ```
 
-### A diagnostic for the passage itself
+### The diagnostic that was removed
 
-Step 1 records **one contiguous line range** per clause — a median 4.2% of the
-opinion. A defect the court took up elsewhere in the same opinion is therefore
-invisible to the check, and would be scored as a miss. `--full-opinion`
-re-judges against the whole opinion to measure what that costs:
+`--full-opinion` re-judged a misaligned issue against the entire opinion, to
+measure what was lost by recording **one** contiguous passage per clause. Step 2
+now records a passage per *defect*, so the question it asked no longer maps onto
+the data, and a diagnostic whose meaning has quietly changed is worse than none.
+It was removed rather than left running.
 
-```bash
-python src/experiments/issue_alignment_check.py     --full-opinion --rejudge-below 0.5 --out /tmp/ctl
-```
+What it found before removal is still the reason to expect little from more
+context: of 78 misaligned issues re-judged against the whole opinion, only 9
+flipped — a ceiling of about +4.7 points — and 25 scored *lower*, because a whole
+opinion is mostly about other provisions.
 
 Results in [REPORT.md](REPORT.md) §9.

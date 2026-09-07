@@ -1,18 +1,37 @@
-# Risk detection — results
+# Risk detection — results (superseded build)
 
 One question, one method: can a model, given a contract and no access to the
 opinion, rank the provisions a federal court went on to construe above the ones
 it did not?
 
-> **The `llm_api` arm has been retired.** Earlier builds ran two arms — one
-> stateless API call per contract against one agent session per contract — and
-> this report compared them. That comparison is no longer maintained. **The
-> agentic approach is the experiment.** `risk_detect_llm_api.py` stays in the codebase
-> as the reference implementation of the scoring contract (`FIELDS`, `pred_row`,
-> `anonymise`, `probs_of`) that the agent arm reuses, so that the two can never
-> disagree about what a column means — but it is not run, and no `llm_api`
-> numbers are maintained. The old two-arm comparison, produced under the
-> previous design, is on the `legacy_spellbook_9.1` branch.
+> ## ⚠ These results are superseded
+>
+> **Every number in this report was produced on a dataset that no longer
+> exists.** Steps 1 and 2 have since been reordered so that clause boundaries
+> are fixed by a call that never sees the opinion
+> ([DATASET.md](DATASET.md) §3). That changed the clause segmentation, the
+> positive set (201 → 226), the ids, and the evaluation set (11,636 → 11,921
+> provisions). **The run has not been repeated**, and when it is, its numbers
+> must not be placed beside the tables below as though they measured the same
+> thing.
+>
+> One difference matters more than the rest: length alone now ranks provisions
+> at within-contract ROC-AUC **0.706**, where this run's dataset gave 0.523.
+> DATASET.md §6 explains why the old figure was the artifact and the new one is
+> the property. A headline AUC has a much higher floor to clear than it did
+> here.
+>
+> The dataset these numbers belong to is on
+> `2026.9.3_legacy_multi_issue_experiment`. They are kept because a repeat needs
+> something to be read against — not because they describe the current build.
+
+> **The `llm_api` arm has been retired and deleted.** Earlier builds ran two
+> arms — one stateless API call per contract against one agent session per
+> contract — and this report compared them. **The agentic approach is the
+> experiment.** What the two arms shared (`FIELDS`, `pred_row`, `anonymise`,
+> `probs_of`) is now `runs.py`. The two-arm comparison is on
+> `2026.9.1_legacy_spellbook`; the deleted arm on
+> `2026.9.3_legacy_multi_issue_experiment`.
 
 ## The run
 
@@ -158,7 +177,9 @@ particular clause — the extraction model made that link, and the heuristic tha
 once second-guessed it was removed as too ad hoc. A human spot-check of a few
 dozen positives would put a number on it; that has not been done.
 
-**A positive is not one dispute.** The 201 positives trace to 138 distinct
+**A positive is not one dispute.** (Fixed since: the rebuilt step 2 records each
+defect separately, so the current dataset carries 310 issues over 226 positives
+and the issue-level denominator is real.) The 201 positives trace to 138 distinct
 opinion passages: 101 map to a single clause, the rest to two or more, because a
 court often construes several provisions in one discussion. One passage covers 9
 clauses.

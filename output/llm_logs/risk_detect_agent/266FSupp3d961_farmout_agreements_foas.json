@@ -7,16 +7,16 @@
   "image": "contract-risk-judge:0.2.139",
   "is_error": false,
   "stop_reason": "end_turn",
-  "num_turns": 16,
-  "duration_ms": 320971,
-  "total_cost_usd": 1.5854,
+  "num_turns": 11,
+  "duration_ms": 245023,
+  "total_cost_usd": 1.5128,
   "usage": {
-    "input_tokens": 24,
-    "cache_creation_input_tokens": 78356,
-    "cache_read_input_tokens": 272637,
-    "output_tokens": 26615,
+    "input_tokens": 16,
+    "cache_creation_input_tokens": 85876,
+    "cache_read_input_tokens": 267911,
+    "output_tokens": 20800,
     "output_tokens_details": {
-      "thinking_tokens": 11946
+      "thinking_tokens": 9287
     },
     "server_tool_use": {
       "web_search_requests": 0,
@@ -24,19 +24,19 @@
     },
     "service_tier": "standard",
     "cache_creation": {
-      "ephemeral_1h_input_tokens": 78356,
+      "ephemeral_1h_input_tokens": 85876,
       "ephemeral_5m_input_tokens": 0
     },
     "inference_geo": "not_available",
     "iterations": [
       {
         "input_tokens": 2,
-        "output_tokens": 32,
-        "cache_read_input_tokens": 77984,
-        "cache_creation_input_tokens": 6326,
+        "output_tokens": 47,
+        "cache_read_input_tokens": 80867,
+        "cache_creation_input_tokens": 5009,
         "cache_creation": {
           "ephemeral_5m_input_tokens": 0,
-          "ephemeral_1h_input_tokens": 6326
+          "ephemeral_1h_input_tokens": 5009
         },
         "type": "message"
       }
@@ -45,40 +45,27 @@
   },
   "model_usage": {
     "claude-opus-5": {
-      "inputTokens": 24,
-      "outputTokens": 26615,
-      "cacheReadInputTokens": 272637,
-      "cacheCreationInputTokens": 78356,
+      "inputTokens": 16,
+      "outputTokens": 20800,
+      "cacheReadInputTokens": 267911,
+      "cacheCreationInputTokens": 85876,
       "webSearchRequests": 0,
-      "costUSD": 1.5853735,
+      "costUSD": 1.5127955,
       "contextWindow": 1000000,
       "maxOutputTokens": 64000,
       "canonicalModel": "claude-opus-5",
       "provider": "firstParty"
     }
   },
-  "session_id": "2748a2a1-18c2-4ad1-b4af-a75d8d0dbecd",
+  "session_id": "b25d77b5-e186-48d6-b78a-8ef6efe1d2ca",
   "errors": null,
-  "result": "75 judgments written (40 in predictions_001.json, 35 in predictions_002.json).",
-  "path_denials": [
-    {
-      "tool": "Read",
-      "file_path": "/tmp/outputs/examples/1.1_99FSupp3d585_asset_purchase_and_product/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/tmp/outputs/examples/1.3_88FSupp3d27_e_mployment_b_inding/notes.md"
-    },
-    {
-      "tool": "Read",
-      "file_path": "/tmp/outputs/examples/2.2_779FSupp2d416_lovejoy_inc_kamco_industrial/notes.md"
-    }
-  ],
+  "result": "I wrote 75 judgments (c001–c040 in `predictions_001.json`, c041–c075 in `predictions_002.json`).",
+  "path_denials": [],
   "rate_limits": {
     "five_hour": {
       "status": "allowed",
       "utilization": null,
-      "resets_at": 1788417000
+      "resets_at": 1788732600
     }
   },
   "models_seen": [

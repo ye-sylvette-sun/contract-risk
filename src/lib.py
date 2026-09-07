@@ -522,11 +522,6 @@ def window(lines, start, end):
     return "\n".join(lines[start - 1:end])
 
 
-def overlaps(a, b):
-    """Do two line windows share a line? The positive/negative test."""
-    return a[0] <= b[1] and b[0] <= a[1]
-
-
 # ------------------------------------------------------------------ calls ---
 _client = None
 

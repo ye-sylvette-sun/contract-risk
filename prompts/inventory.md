@@ -1,8 +1,10 @@
-# Step 2 — locate every clause of one contract
+# Step 1 — locate every clause of one contract
 
-One call per winning contract — a contract step 1 found a construed clause in.
-Its other clauses are the dataset's negatives, so both classes come out of the
-same document in the same OCR condition.
+One call per contract, and the first step of the pipeline. This is where a
+clause's boundaries are decided, for every clause in the corpus and once only.
+Later steps say which of these clauses a court construed; none of them may move
+a boundary. So both classes of the dataset are cut here, from the same document
+in the same OCR condition, by a call that does not know which is which.
 
 Sections below are sent as the system prompt, the document, the instructions and
 the task, in that order — instructions after the document, so a rule sits next
@@ -39,10 +41,13 @@ research dataset of contract clauses.
 
 - List **every** substantive clause of the contract, in document order. Do not
   skip any, and do not stop early.
-- This document has already been established to be a contract, and a court has
-  already construed one of its clauses. What is wanted now is the rest of it.
+- This document has already been established to be a contract. What is wanted
+  now is a complete enumeration of it.
 - Do not judge whether a clause is well or badly drafted, and do not rank them.
   Every clause is wanted, the dull ones most of all.
+- Nothing here turns on litigation. You are not being asked which clauses look
+  risky, ambiguous or likely to be argued over, and you are not told whether
+  this contract was ever before a court. List what the document contains.
 
 ### What to leave out
 

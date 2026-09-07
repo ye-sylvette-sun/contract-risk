@@ -10,7 +10,7 @@ Per task: precision and recall on top, the share of clauses flagged below. The
 bottom row stops the top being read too kindly — near 2% prevalence, flagging a
 third of the contract can still post a respectable recall.
 
-Artefacts are named in parallel for both runs, <run> being `llm_api` or `agent`:
+Artefacts of a run, <run> being `agent`:
 
     risk_detect_<run>_preds.csv                 one row per provision
     risk_detect_<run>/                          the model's returned judgments
@@ -18,8 +18,7 @@ Artefacts are named in parallel for both runs, <run> being `llm_api` or `agent`:
     figures/risk_detect_<run>_threshold_curves.png
 
 Usage:
-    python src/experiments/plot_risk_detect_thresholds.py --run llm_api
-    python src/experiments/plot_risk_detect_thresholds.py --run agent
+    python src/experiments/plot_risk_detect_thresholds.py
 """
 import argparse
 import csv
@@ -38,12 +37,9 @@ FIG_DIR = os.path.join(OUT_DIR, "figures")
 
 # The two experiments write the same columns, so one figure script serves both.
 # Each entry is (predictions file, figure file, title, subtitle). The approach is
-# named in the TITLE, because the two figures are read side by side and a reader
-# should not have to work out which one they are looking at from the filename.
+# named in the TITLE, so a reader need not work out from the filename which run
+# a figure came from. A second entry is how another run gets its own figure.
 RUNS = {
-    "llm_api": ("risk_detect_llm_api_preds.csv", "risk_detect_llm_api_threshold_curves.png",
-                "LLM API call",
-                "few-shot with judicial reasoning, one call per contract"),
     "agent": ("risk_detect_agent_preds.csv", "risk_detect_agent_threshold_curves.png",
               "Agentic approach",
               "few-shot with judicial reasoning, one agent session per contract"),
@@ -111,8 +107,8 @@ def sweep(scored, thresholds):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--run", choices=sorted(RUNS), default="llm_api",
-                    help="which experiment's predictions to plot")
+    ap.add_argument("--run", choices=sorted(RUNS), default="agent",
+                    help="which run's predictions to plot")
     args = ap.parse_args()
     # `run_title`, not `title` — the panel loops below bind `title` to each
     # panel's own name, and a shared name would put the last panel's title on

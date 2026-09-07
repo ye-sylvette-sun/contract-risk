@@ -1,58 +1,82 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["case_desc", "clauses"],
+  "required": ["case_desc", "disputed", "unlocated"],
   "properties": {
     "case_desc": {
       "type": "string",
       "description": "One line: the parties, and what the construction dispute was about."
     },
-    "clauses": {
+    "disputed": {
       "type": "array",
-      "description": "The clauses the court construed. An empty list is a valid answer when the construed contract is not in the record.",
+      "description": "The listed clauses the court construed. An empty list is a valid answer when the construed language is not among the clauses shown.",
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["clause_name", "taxonomy", "contract_id", "start_line",
-                     "end_line", "head", "tail",
-                     "opinion_comment_start_line", "opinion_comment_end_line"],
+        "required": ["contract_id", "clause_id", "issues"],
         "properties": {
-          "clause_name": {
-            "type": "string",
-            "description": "Short name including the section number, e.g. \"Section 8 — Indemnity\"."
-          },
-          "taxonomy": {
-            "type": "array",
-            "minItems": 1,
-            "items": {
-              "type": "string",
-              "enum": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3"]
-            },
-            "description": "Which of the risk type codes listed in the task the dispute over this clause falls under. CODES, e.g. [\"1.1\"] — not the Westlaw key label such as \"k152\", and no brackets inside a code. Every code must be one the task lists for this case. Give more than one only when the opinion shows the dispute genuinely turned on more than one of them; where the case lists a single code, that code is the only possible answer."
-          },
           "contract_id": {
             "type": "string",
-            "description": "The contract_id of the contract this clause came from, copied exactly from that document's START marker."
+            "description": "The contract_id whose clause list this id comes from, copied exactly from that document's START marker."
           },
-          "start_line": {
-            "type": "integer",
-            "description": "First line the clause occupies in that contract."
-          },
-          "end_line": {
-            "type": "integer",
-            "description": "Last line the clause occupies in that contract."
-          },
-          "head": {
+          "clause_id": {
             "type": "string",
-            "description": "The clause's first 8 words, copied EXACTLY as the lines show them. Do not repair the OCR here. If the whole clause is under 16 words, put all of it here."
+            "description": "The id of the clause, taken from that contract's clause list, e.g. \"c042\". This is the only way to name a clause: you cannot report a line range, and an id absent from that contract's list is rejected."
           },
-          "tail": {
+          "issues": {
+            "type": "array",
+            "minItems": 1,
+            "description": "One entry per DISTINCT defect the court construed in this clause. Two entries only where the court construed two different problems; a defect the court returns to later in the opinion is still one issue. Most clauses have exactly one.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["risk_type", "issue",
+                           "opinion_comment_start_line",
+                           "opinion_comment_end_line"],
+              "properties": {
+                "risk_type": {
+                  "type": "string",
+                  "enum": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3"],
+                  "description": "The ONE risk type code this issue falls under. A CODE, e.g. \"1.1\" — not the Westlaw key label such as \"k152\", and no brackets. It must be one the task lists as a candidate for this case."
+                },
+                "issue": {
+                  "type": "string",
+                  "description": "One sentence naming the specific defect the court construed: which words, and what was wrong with them. Concrete enough that a different defect in the same clause would need a different sentence. Your own words — do not quote the opinion at length."
+                },
+                "opinion_comment_start_line": {
+                  "type": "integer",
+                  "description": "First line in the OPINION of the passage where the court construes THIS issue."
+                },
+                "opinion_comment_end_line": {
+                  "type": "integer",
+                  "description": "Last line in the OPINION of that passage."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "unlocated": {
+      "type": "array",
+      "description": "Anything the court construed that no listed clause contains. Empty when there is nothing. Use this rather than reporting the nearest similar clause.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["description", "why",
+                     "opinion_comment_start_line", "opinion_comment_end_line"],
+        "properties": {
+          "description": {
             "type": "string",
-            "description": "The clause's last 8 words, copied EXACTLY as the lines show them. Do not repair the OCR here. Empty string if the whole clause is already in head."
+            "description": "What the court was construing, in your own words."
+          },
+          "why": {
+            "type": "string",
+            "description": "Why it is not in the lists, as far as you can tell: the agreement was not filed, the page is missing, the clause list skipped it, or you cannot say."
           },
           "opinion_comment_start_line": {
             "type": "integer",
-            "description": "First line in the OPINION of the passage where the court construes this clause."
+            "description": "First line in the OPINION showing the court construing it."
           },
           "opinion_comment_end_line": {
             "type": "integer",

@@ -1,152 +1,202 @@
 {"judgments": [
  {"clause_id": "c001", "issues": [
-   {"issue": "The Application is \"incorporated herein by reference\" and warranted to be \"complete, accurate and truthful\", but neither the standard of completeness nor the effect of incorporation on the operative terms is specified. A court could be asked what the incorporated Application actually adds to the contract.", "type": 1, "prob": 0.22},
-   {"issue": "Breach of this warranty is a just-cause ground under provision 14.1(E) (\"any breach of Employee's warranties\"), but the entire-agreement clause 24.1 says the Contract supersedes all previous understandings, leaving the Application's status arguable.", "type": 2, "prob": 0.18}]},
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": "The Application is \"incorporated herein by reference\" as a warranted document, which sits awkwardly with provision 24.1's statement that this Contract is the entire agreement superseding all prior writings. A court could be asked whether the Application's contents form part of the agreement.", "type": 2, "prob": 0.21}
+ ]},
  {"clause_id": "c002", "issues": [
-   {"issue": "The first \"Contract Year\" is defined as a thirteen-month period (Dec. 16, 2010 - Jan. 15, 2012) while all others are twelve months, so per-Contract-Year amounts are unevenly measured. A court could be asked how that oversized first year is counted.", "type": 1, "prob": 0.22},
-   {"issue": "The irregular first Contract Year interacts awkwardly with provision 14.2's liquidated damages of $750,000 \"per Contract Year, pro rated, for the then-unexpired Term\", making the pro-ration for the first year uncertain. That is a computation question spanning two provisions.", "type": 2, "prob": 0.22}]},
+   {"issue": null, "type": 1, "prob": 0.12},
+   {"issue": "The defined \"Contract Year\" runs thirteen months in its first iteration, which has to be applied to provision 14.2's liquidated damages of \"$750,000 per Contract Year, pro rated\" and 14.5's dates. A court measuring damages would have to construe how the irregular first Contract Year meshes with those clauses.", "type": 2, "prob": 0.28}
+ ]},
  {"clause_id": "c003", "issues": [
-   {"issue": "The obligation is only to \"meet to discuss\" and the University \"in its sole discretion — may consider\" an extension, which is an agreement to agree with no ascertainable standard. A court could be asked whether it creates any enforceable duty at all.", "type": 1, "prob": 0.24},
-   {"issue": null, "type": 2, "prob": 0.07}]},
+   {"issue": "\"May consider an extension\" in the University's \"sole discretion\" gives no ascertainable obligation beyond meeting, so the extension promise's content is uncertain. The duty to \"discuss ... the desirability of a possible extension\" cannot be measured.", "type": 1, "prob": 0.19},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
  {"clause_id": "c004", "issues": [
-   {"issue": "Salary is stated to be \"compensation for his services to the University and satisfactory performance of the terms and conditions of this Contract\", which could be read as conditioning salary on satisfactory performance. \"Satisfactory\" is undefined and unmeasured.", "type": 1, "prob": 0.24},
-   {"issue": null, "type": 2, "prob": 0.09}]},
+   {"issue": "Salary is payable \"as compensation for his services ... and satisfactory performance of the terms and conditions of this Contract,\" which can be read either as recital of purpose or as a condition precedent to payment. \"Satisfactory performance\" is undefined and unmeasured.", "type": 1, "prob": 0.26},
+   {"issue": null, "type": 2, "prob": 0.10}
+ ]},
  {"clause_id": "c005", "issues": [
    {"issue": null, "type": 1, "prob": 0.05},
-   {"issue": null, "type": 2, "prob": 0.07}]},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
  {"clause_id": "c006", "issues": [
-   {"issue": "Benefits are defined by reference to the Staff Handbook, an external document that can change, so the content of the promised benefits is not fixed by the instrument. A court could be asked which version governs.", "type": 1, "prob": 0.22},
-   {"issue": "Provision 24.2(d) reserves the University's right to modify benefits unilaterally, and provision 11.1 displaces Handbook rules for vacation, so the extent to which the Handbook actually governs is contestable.", "type": 2, "prob": 0.18}]},
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": "The promise of \"standard staff fringe benefits\" per the Staff Handbook has to be squared with provision 24.2(d), under which the University reserves the right to modify benefits unilaterally. A court could be asked which controls.", "type": 2, "prob": 0.17}
+ ]},
  {"clause_id": "c007", "issues": [
-   {"issue": "The club is only a \"mutually agreed upon golf or country club\", leaving the essential term to future agreement with no fallback if the parties disagree. That is a classic agreement-to-agree gap.", "type": 1, "prob": 0.24},
-   {"issue": null, "type": 2, "prob": 0.07}]},
+   {"issue": "\"A mutually agreed upon golf or country club\" supplies no fallback if the parties never agree, leaving the obligation's object undetermined. The scope of \"development and entertainment activities associated with ... official responsibilities\" is also unbounded.", "type": 1, "prob": 0.18},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
  {"clause_id": "c008", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": null, "type": 2, "prob": 0.06}]},
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
  {"clause_id": "c009", "issues": [
-   {"issue": null, "type": 1, "prob": 0.10},
-   {"issue": null, "type": 2, "prob": 0.06}]},
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
  {"clause_id": "c010", "issues": [
-   {"issue": null, "type": 1, "prob": 0.07},
-   {"issue": null, "type": 2, "prob": 0.05}]},
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
  {"clause_id": "c011", "issues": [
-   {"issue": null, "type": 1, "prob": 0.08},
-   {"issue": null, "type": 2, "prob": 0.05}]},
+   {"issue": "\"All Operating expenses ... including without limitation, gasoline and oil\" pairs a general term with two consumable specifics, leaving unclear whether items like insurance, maintenance or repairs fall inside it. The University separately promises the car will be \"fully insured\" in 3.4, sharpening that boundary question.", "type": 1, "prob": 0.22},
+   {"issue": null, "type": 2, "prob": 0.13}
+ ]},
  {"clause_id": "c012", "issues": [
-   {"issue": "Forfeiture turns on whether \"the University reasonably determines\" non-compliance, a self-judging standard qualified only by reasonableness. A court could be asked how much deference that determination gets.", "type": 1, "prob": 0.18},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c013", "issues": [
-   {"issue": "The tickets are provided \"at no cost\" yet \"all of which shall be used for his official responsibilities\", a restriction whose boundary (what counts as official use of a season ticket) is undefined. A court could be asked whether personal use breaches it.", "type": 1, "prob": 0.17},
-   {"issue": null, "type": 2, "prob": 0.06}]},
- {"clause_id": "c014", "issues": [
-   {"issue": "Reimbursement is limited to \"appropriate\" travel and out-of-pocket expenses \"reasonably incurred\", two undefined qualifiers, and the enumerated NCAA recruiting expenses sit against an open \"including but not limited to\". The reach of the catch-all is contestable.", "type": 1, "prob": 0.24},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c015", "issues": [
-   {"issue": "The bonus structure is internally muddled: subparagraph A promises \"the greatest of\" three alternatives, two of which are the identical $100,000, the second bullet is unlabelled, and the items are joined by both \"or\" and \"and\". Whether A, B and C are cumulative or alternative is genuinely uncertain.", "type": 1, "prob": 0.44},
-   {"issue": null, "type": 2, "prob": 0.10}]},
- {"clause_id": "c016", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c017", "issues": [
-   {"issue": null, "type": 1, "prob": 0.10},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c018", "issues": [
-   {"issue": null, "type": 1, "prob": 0.11},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c019", "issues": [
-   {"issue": "The $150,000 is payable \"while the Employee is representing the University as Head Football Coach\" in two installments, but the parenthetical \"(by January 1, 2012 for the first Contract Year)\" does not say whether both installments or only the second are due then. The payment mechanics for the irregular first Contract Year are ambiguous.", "type": 1, "prob": 0.26},
-   {"issue": null, "type": 2, "prob": 0.13}]},
- {"clause_id": "c020", "issues": [
-   {"issue": "The paragraph declares itself to relate to \"this provision 3.8\" although it appears within the 3.9 block, so the matters to which the publicity consent attaches are misidentified. A court could be asked which provision the consent actually covers.", "type": 1, "prob": 0.22},
-   {"issue": null, "type": 2, "prob": 0.12}]},
- {"clause_id": "c021", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c022", "issues": [
-   {"issue": "\"Full time, attention and energies\" and the duty to \"take every precaution\" to ensure staff compliance are open-ended standards with no measurable boundary. A court could be asked what conduct falls short of them.", "type": 1, "prob": 0.26},
-   {"issue": "The full-time-and-attention duty is expressly \"subject to any exceptions hereinafter expressly described\", yet provision 10.1 permits outside contracting for separate compensation, so the interaction of the two is arguable.", "type": 2, "prob": 0.18}]},
- {"clause_id": "c023", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c024", "issues": [
-   {"issue": null, "type": 1, "prob": 0.10},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c025", "issues": [
-   {"issue": "The nine enumerated duties end with \"(9) such other duties as assigned from time to time by the University's Director of Athletics\", a catch-all whose reach against the specific list is undefined. Duties such as \"maintaining a good working relationship with the University community\" are also unmeasurable.", "type": 1, "prob": 0.30},
-   {"issue": null, "type": 2, "prob": 0.12}]},
- {"clause_id": "c026", "issues": [
-   {"issue": "Termination is authorised only for \"significant or repetitive violations\" of NCAA Rules, neither adjective being defined. A court could be asked which violations cross that line.", "type": 1, "prob": 0.26},
-   {"issue": "This provision permits termination only for significant or repetitive NCAA violations, while provision 14.1(B) makes \"any violation of NCAA Rules\" just cause for immediate termination; the opening \"[w]ithout limiting any other provision\" only partly reconciles them.", "type": 2, "prob": 0.30}]},
- {"clause_id": "c027", "issues": [
-   {"issue": null, "type": 1, "prob": 0.10},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c028", "issues": [
    {"issue": null, "type": 1, "prob": 0.08},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c029", "issues": [
-   {"issue": "The Employee may offer input on listed matters \"and other matters pertaining to the operation of the Team\", a general phrase appended to a specific list whose reach is uncertain. Its practical effect is limited because final decisions rest with the Director of Athletics.", "type": 1, "prob": 0.15},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c030", "issues": [
-   {"issue": "The Employee must appear \"at such times and places as the University may reasonably require\", with \"reasonably\" the only limit on an otherwise unlimited demand. A court could be asked where that limit lies.", "type": 1, "prob": 0.18},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c031", "issues": [
-   {"issue": null, "type": 1, "prob": 0.11},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c032", "issues": [
-   {"issue": "The bar on appearing on \"any competing shows or programs\" does not define what competes with the Programs, and \"such reasonable services as may be requested\" is likewise open-ended. Both terms could be read broadly or narrowly.", "type": 1, "prob": 0.26},
-   {"issue": null, "type": 2, "prob": 0.09}]},
- {"clause_id": "c033", "issues": [
-   {"issue": "As with provision 3.9, the parenthetical \"(by January 1, 2012 for the first Contract Year)\" does not make clear whether one or both installments of the $350,000 fall due on that date. The first Contract Year's payment schedule is therefore uncertain.", "type": 1, "prob": 0.22},
-   {"issue": null, "type": 2, "prob": 0.11}]},
- {"clause_id": "c034", "issues": [
-   {"issue": "The provision breaks off mid-sentence (\"the University shall have the right (and shall\"), so the scope of the publicity rights granted cannot be read from its own text. Whatever right it confers has to be supplied from elsewhere.", "type": 1, "prob": 0.30},
-   {"issue": "Its content can only be reconstructed from the parallel grant in the provision 3.9 publicity paragraph, and the two may not have identical scope. A court would have to harmonise them.", "type": 2, "prob": 0.18}]},
- {"clause_id": "c035", "issues": [
-   {"issue": "The text begins mid-sentence (\"form acceptable to the University; naming the University as an additional insured\"), so the insurance and camp obligations it qualifies are absent from the provision. Its subject cannot be identified from the words given.", "type": 1, "prob": 0.32},
-   {"issue": "The conditions attach to a football-camp right whose granting language does not appear in the instrument, leaving provisions 9.2 to 9.5 to supply a predicate that is missing. A court would have to reconstruct the camp arrangement from the surrounding provisions.", "type": 2, "prob": 0.22}]},
- {"clause_id": "c036", "issues": [
-   {"issue": "The Employee \"shall not unreasonably withhold consent when reasonable alternative facilities are offered\", leaving both the reasonableness of alternatives and the consequences of a withheld consent open. The ten-month consultation deadline also has no stated sanction.", "type": 1, "prob": 0.20},
-   {"issue": null, "type": 2, "prob": 0.09}]},
- {"clause_id": "c037", "issues": [
-   {"issue": null, "type": 1, "prob": 0.11},
-   {"issue": null, "type": 2, "prob": 0.08}]},
- {"clause_id": "c038", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": null, "type": 2, "prob": 0.07}]},
- {"clause_id": "c039", "issues": [
-   {"issue": null, "type": 1, "prob": 0.10},
-   {"issue": null, "type": 2, "prob": 0.10}]},
- {"clause_id": "c040", "issues": [
-   {"issue": "The first sentence prohibits public use of the Employee's publicity rights without approval, and the next says \"[w]ithout limiting the foregoing, the Employee shall be permitted to contract independently\" subject to the same approval; a prohibition and a permission are joined by a non-limiting connector. Whether outside endorsement contracting is barred or merely conditioned is genuinely uncertain.", "type": 1, "prob": 0.38},
-   {"issue": null, "type": 2, "prob": 0.15}]},
- {"clause_id": "c041", "issues": [
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c013", "issues": [
    {"issue": null, "type": 1, "prob": 0.13},
-   {"issue": null, "type": 2, "prob": 0.09}]},
- {"clause_id": "c042", "issues": [
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c014", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c015", "issues": [
+   {"issue": null, "type": 1, "prob": 0.15},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "The bonus structure is mechanically broken: \"The greatest of\" introduces (1)-(3) but items (2) and (3) are both $100,000, the \"B\" designation is missing before the conference-championship bonus, and the connectors alternate between \"or\" and \"and.\" Whether the bonuses are alternative or cumulative cannot be read off the text.", "type": 1, "prob": 0.40},
+   {"issue": null, "type": 2, "prob": 0.08}
+ ]},
+ {"clause_id": "c017", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c018", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c019", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": "The $150,000 is payable \"while the Employee is representing the University as Head Football Coach\" in semi-annual installments, which must be reconciled with provision 14.10's cessation of all payments on termination and with 14.2's liquidated-damages measure. Whether this sum forms part of the compensation base after an early termination is left open.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c020", "issues": [
+   {"issue": "The paragraph sits in provision 3.9 but refers to \"the matters described in, this provision 3.8,\" a mis-numbered cross-reference. The scope of the publicity-rights grant turns on which provision's subject matter it attaches to.", "type": 1, "prob": 0.29},
+   {"issue": null, "type": 2, "prob": 0.10}
+ ]},
+ {"clause_id": "c021", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c022", "issues": [
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": "The duty to devote \"full time, attention and energies\" must be squared with provision 10.1, which permits the Employee to contract independently with outside sources and run football camps under 9.0. The clause's own \"subject to any exceptions hereinafter expressly described\" leaves the boundary to be construed.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c023", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c024", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c025", "issues": [
+   {"issue": "Item (9), \"such other duties as assigned from time to time by the University's Director of Athletics,\" is an open catch-all appended to eight specific duties, and its reach against those specifics is undefined. Duties (7) and (8) — \"good working relationship\" and public relations that \"reflect positively\" — are themselves unmeasurable standards.", "type": 1, "prob": 0.22},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c026", "issues": [
+   {"issue": "\"If the Employee is found to be in ... violation of NCAA Rules\" does not say who makes the finding or by what process, and \"significant or repetitive violations\" is an unmeasured threshold for termination. Both terms would have to be construed before the discipline power could be applied.", "type": 1, "prob": 0.24},
+   {"issue": null, "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c027", "issues": [
+   {"issue": null, "type": 1, "prob": 0.08},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c028", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c029", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c030", "issues": [
+   {"issue": null, "type": 1, "prob": 0.14},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c031", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c032", "issues": [
+   {"issue": "\"Competing shows or programs\" is undefined, and against the extremely broad definition of \"Programs\" in 8.2 (any medium whose subject is in whole or in part the Team or University athletics) its boundary is genuinely uncertain. Whether a general media appearance is \"competing\" could be read either way.", "type": 1, "prob": 0.24},
+   {"issue": null, "type": 2, "prob": 0.08}
+ ]},
+ {"clause_id": "c033", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": "The $350,000 is payable \"while the Employee is representing the University as Head Football Coach\" but is also stated as an annual amount \"during each Contract Year,\" which must be reconciled with 14.2's $750,000 liquidated-damages figure and 14.10's cessation of payments. Whether it counts toward post-termination compensation is left unresolved.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c034", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.08}
+ ]},
+ {"clause_id": "c035", "issues": [
+   {"issue": "The sentence breaks off mid-clause (\"the University shall have the right (and shall\"), so the scope of the consent granted is textually incomplete. It also cross-refers only to provisions 8.1 and 8.2, omitting 8.3, although the preceding paragraph covered 8.1-8.3.", "type": 1, "prob": 0.24},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
+ {"clause_id": "c036", "issues": [
+   {"issue": "The provision begins mid-sentence (\"form acceptable to the University; naming the University as an additional insured\") with no subject or operative verb, so the conditions it imposes and on whom cannot be identified from the text. The insurance and indemnity obligations it recites are unattached to any duty-holder.", "type": 1, "prob": 0.29},
+   {"issue": null, "type": 2, "prob": 0.08}
+ ]},
+ {"clause_id": "c037", "issues": [
    {"issue": null, "type": 1, "prob": 0.16},
-   {"issue": "The clause makes changes in NCAA, conference and University rules \"automatically apply to this Contract without the necessity of a written modification\", which cannot be squared with provision 24.1's requirement that the Contract not be \"amended or modified in any manner, except by an instrument in writing signed by both of the parties\".", "type": 2, "prob": 0.40}]},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c038", "issues": [
+   {"issue": null, "type": 1, "prob": 0.11},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
+ {"clause_id": "c039", "issues": [
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
+ {"clause_id": "c040", "issues": [
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": null, "type": 2, "prob": 0.09}
+ ]},
+ {"clause_id": "c041", "issues": [
+   {"issue": "The paragraph first prohibits all public use of the Employee's publicity rights without approval, then says \"Without limiting the foregoing, the Employee shall be permitted to contract independently with outside sources,\" a permission that on its face qualifies the prohibition it purports not to limit. Whether outside endorsement contracts are permitted or barred turns on that internal contradiction.", "type": 1, "prob": 0.32},
+   {"issue": null, "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c042", "issues": [
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.06}
+ ]},
  {"clause_id": "c043", "issues": [
-   {"issue": null, "type": 1, "prob": 0.12},
-   {"issue": null, "type": 2, "prob": 0.09}]},
+   {"issue": null, "type": 1, "prob": 0.16},
+   {"issue": null, "type": 2, "prob": 0.12}
+ ]},
  {"clause_id": "c044", "issues": [
-   {"issue": "The heading \"Employee Retains all Revenues\" is contradicted by the body, which subjects retention to limitations in the Contract and in University, conference and NCAA rules. Provision 21.1 says captions do not control, but the mismatch still invites argument about the residual entitlement.", "type": 1, "prob": 0.24},
-   {"issue": null, "type": 2, "prob": 0.12}]},
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": "The statement that changes in NCAA, conference or University rules \"shall automatically apply to this Contract without the necessity of a written modification\" cannot be squared with provision 24.1, which bars amendment or modification except by a writing signed by both parties. A court would have to decide which governs a rule change that alters the Employee's obligations.", "type": 2, "prob": 0.37}
+ ]},
  {"clause_id": "c045", "issues": [
-   {"issue": "\"Usurp any corporate opportunities of the University\" and \"any activity causing a conflict of interest\" are both undefined and, applied to a university athletics department, have no settled boundary. A court could be asked what falls inside them.", "type": 1, "prob": 0.26},
-   {"issue": null, "type": 2, "prob": 0.09}]},
+   {"issue": null, "type": 1, "prob": 0.10},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
  {"clause_id": "c046", "issues": [
-   {"issue": null, "type": 1, "prob": 0.12},
-   {"issue": null, "type": 2, "prob": 0.08}]},
+   {"issue": "The caption \"Employee Retains all Revenues\" is contradicted by the body, which subjects retention to limitations in this Contract and in University, conference and NCAA rules, and the reporting list (\"including, but not limited to, income from annuities, sports camps ...\") leaves the catch-all's reach unclear. Provision 21.1 says captions do not control, but the tension still requires construction.", "type": 1, "prob": 0.21},
+   {"issue": null, "type": 2, "prob": 0.12}
+ ]},
  {"clause_id": "c047", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": null, "type": 2, "prob": 0.07}]},
+   {"issue": "\"Usurp any corporate opportunities of the University\" and \"any activity causing a conflict of interest\" are undefined and have no evident content for a university athletics employee. Both boundaries would have to be construed before the prohibition could be applied.", "type": 1, "prob": 0.25},
+   {"issue": null, "type": 2, "prob": 0.07}
+ ]},
  {"clause_id": "c048", "issues": [
-   {"issue": "The parenthetical example — that unused vacation may not be retained \"(for example during a renewal term of this Contract, if any)\" — describes retention across a renewal, which is not the same thing as retention after expiration or termination. The illustration does not fit the rule it illustrates.", "type": 1, "prob": 0.24},
-   {"issue": null, "type": 2, "prob": 0.10}]},
+   {"issue": null, "type": 1, "prob": 0.13},
+   {"issue": null, "type": 2, "prob": 0.08}
+ ]},
  {"clause_id": "c049", "issues": [
-   {"issue": null, "type": 1, "prob": 0.09},
-   {"issue": "The clause displaces \"anything contained herein or in University rules, regulations or policies to the contrary\" for vacation, while provision 3.2 makes Staff Handbook benefits generally applicable; the override is expressly limited to vacation, so the two are reconcilable.", "type": 2, "prob": 0.13}]},
+   {"issue": null, "type": 1, "prob": 0.07},
+   {"issue": null, "type": 2, "prob": 0.05}
+ ]},
  {"clause_id": "c050", "issues": [
-   {"issue": "The Employee has \"authority to select, hire, establish the salaries of, and dismiss\" staff but \"all subject to the prior approval\" of the Director of Athletics, so the authority granted may be no authority at all. A court could be asked whether any independent power survives the proviso.", "type": 1, "prob": 0.22},
-   {"issue": null, "type": 2, "prob": 0.10}]}
+   {"issue": null, "type": 1, "prob": 0.09},
+   {"issue": "The bar on carrying or being paid for unused vacation must be reconciled with provision 3.2's grant of \"standard staff fringe benefits\" under the Staff Handbook, which may treat accrued vacation differently. Provision 11.1's own exclusivity paragraph is the intended answer, but the interaction still invites argument.", "type": 2, "prob": 0.14}
+ ]}
 ]}

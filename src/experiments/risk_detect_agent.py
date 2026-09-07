@@ -1,9 +1,7 @@
 """Risk detection, agentic: one Claude Code session per contract, each in a container.
 
-Same task and same prompts as `risk_detect_llm_api.py`; only the delivery differs. The
-one-shot arm answers in one pass; here the model gets a workspace and decides
-what to read — the point being that risk type 2 ("does this conflict with another
-provision?") is a search problem.
+The model gets a workspace and decides what to read — the point being that risk
+type 2 ("does this conflict with another provision?") is a search problem.
 
 Isolation is structural: the container has no `~/.claude`, no settings, no
 skills, no managed policy, and only this contract's workspace is mounted, so
@@ -41,12 +39,12 @@ import manifest  # noqa: E402
 import isolation  # noqa: E402
 import predictions  # noqa: E402
 
-# The taxonomy, worked examples and gold mapping come from the one-shot
-# experiment by import, so the two arms cannot drift apart.
+# The taxonomy, worked examples, gold mapping and preds.csv row contract, so
+# the run and everything that scores it cannot drift apart.
 _spec = importlib.util.spec_from_file_location(
-    "risk_detect_llm_api", Path(__file__).with_name("risk_detect_llm_api.py"))
-api = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(api)
+    "runs", Path(__file__).with_name("runs.py"))
+runs = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(runs)
 
 MODEL = lib.CLAUDE_MODEL
 EFFORT = "high"
@@ -66,7 +64,7 @@ WARN_AT = 0.90              # rate-limit utilisation at which we stop launching
 def write_examples(root, examples):
     """One directory per worked pair, holding the notes and nothing else.
 
-    The example CONTRACTS are deliberately not here. `risk_detect_llm_api.py` puts only
+    The example CONTRACTS are deliberately not here. The prompt carries only
     the two provision texts and the court's words in its few-shot block, so
     shipping the full contracts would give this arm more evidence than the one
     it is compared against.
@@ -77,7 +75,7 @@ def write_examples(root, examples):
         d.mkdir(parents=True, exist_ok=True)
 
         notes = [
-            f"# Worked example — {api.TYPE_NAME[e['code']]}",
+            f"# Worked example — {runs.TYPE_NAME[e['code']]}",
             "",
             f"Contract `{r['contract_id']}`, filed in {r['citation']}.",
             "",
@@ -89,7 +87,7 @@ def write_examples(root, examples):
             "",
             f'"{r["clause_name"]}"  (risk type: {e["code"]})',
             "",
-            "```", api.flat(r["clause_text"]), "```",
+            "```", runs.flat(r["clause_text"]), "```",
             "",
             f"### What the court said, verbatim from the opinion in {r['citation']}",
             "",
@@ -103,7 +101,7 @@ def write_examples(root, examples):
                 f'"{foil["clause_name"]}". No court construed it in this case. '
                 f"It is not established to be sound, only never fought over.",
                 "",
-                "```", api.flat(foil["clause_text"]), "```",
+                "```", runs.flat(foil["clause_text"]), "```",
             ]
         (d / "notes.md").write_text("\n".join(notes), encoding="utf-8")
 
@@ -120,9 +118,9 @@ def build_workspace(cid, clauses, registry, examples):
 
     # Opaque ids in document order. The dataset's own pos1/neg1 ids would put
     # the gold label on the door of every provision.
-    shown, _opaque_of, real_of = api.anonymise(clauses)
+    shown, _opaque_of, real_of = runs.anonymise(clauses)
     (root / "provisions.json").write_text(json.dumps(
-        [{"id": oid, "name": c["clause_name"], "text": api.flat(c["clause_text"])}
+        [{"id": oid, "name": c["clause_name"], "text": runs.flat(c["clause_text"])}
          for oid, c in zip(real_of, shown)],
         ensure_ascii=False, indent=2), encoding="utf-8")
     return root, real_of
@@ -392,19 +390,19 @@ async def run(args):
     img_id = image_id(image)
     how, auth_extra = auth_mount()
 
-    rows = api.load_rows(lib.OUT / "dataset.csv")
+    rows = runs.load_rows(lib.OUT / "dataset.csv")
     registry = lib.read_json(lib.OUT / "contracts.json", {})
-    examples = api.pick_examples(rows)
+    examples = runs.pick_examples(rows)
     taught = {e["row"]["contract_id"] for e in examples}
     print("examples (%d): " % len(examples) + ", ".join(
         f"{e['code']}={e['row']['contract_id']}({e['n_pos']}p/{e['n_neg']}n)"
         for e in examples))
 
     eval_rows = [r for r in rows if r["contract_id"] not in taught]
-    groups = api.by_contract(eval_rows)
+    groups = runs.by_contract(eval_rows)
     # `groups` makes "done" mean COMPLETE — a contract with unjudged provisions
     # comes back rather than being counted as finished.
-    done = api.done_contracts(PREDS, groups)
+    done = runs.done_contracts(PREDS, groups)
     todo = [(cid, cl) for cid, cl in groups.items() if cid not in done]
     if args.only:
         todo = [(cid, cl) for cid, cl in todo if cid == args.only]
@@ -464,7 +462,7 @@ async def run(args):
 
     new = not PREDS.exists()
     fout = open(PREDS, "a", newline="", encoding="utf-8")
-    writer = csv.DictWriter(fout, fieldnames=api.FIELDS)
+    writer = csv.DictWriter(fout, fieldnames=runs.FIELDS)
     if new:
         writer.writeheader()
 
@@ -488,9 +486,9 @@ async def run(args):
         seen_models.update(models)
         async with lock:
             for c in clauses:
-                # Same row builder as the one-shot arm, so the two cannot drift
+                # The shared row builder, so the run and its scoring cannot drift
                 # apart in what a column means.
-                writer.writerow(api.pred_row(cid, c, judged.get(c["clause_id"])))
+                writer.writerow(runs.pred_row(cid, c, judged.get(c["clause_id"])))
             fout.flush()
 
     fout.close()

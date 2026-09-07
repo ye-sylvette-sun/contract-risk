@@ -1,181 +1,83 @@
 {
   "contract_id": "767FSupp2d1191_custody_agreement",
   "_id_map": {
-    "c001": "neg1",
-    "c002": "neg2",
-    "c003": "neg3",
-    "c004": "neg4",
-    "c005": "neg5",
-    "c006": "neg6",
-    "c007": "neg7",
-    "c008": "neg8",
-    "c009": "neg9",
-    "c010": "neg10",
-    "c011": "neg11",
-    "c012": "neg12",
-    "c013": "neg13",
-    "c014": "neg14",
-    "c015": "neg15",
-    "c016": "neg16",
-    "c017": "neg17",
-    "c018": "neg18",
-    "c019": "neg19",
-    "c020": "neg20",
-    "c021": "neg21",
-    "c022": "neg22",
-    "c023": "neg23",
-    "c024": "neg24",
-    "c025": "neg25",
-    "c026": "neg26",
-    "c027": "neg27",
-    "c028": "neg28",
-    "c029": "neg29",
-    "c030": "neg30",
-    "c031": "neg31",
-    "c032": "neg32",
-    "c033": "neg33",
-    "c034": "neg34",
-    "c035": "neg35",
-    "c036": "neg36",
-    "c037": "neg37",
-    "c038": "neg38"
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036"
   },
   "judgments": [
     {
       "clause_id": "c001",
       "issues": [
         {
-          "issue": "The execution date is left incomplete — \"on the Ist day of ____ 1999\" has no month, so the date of making cannot be determined from the instrument itself. That blank is a mechanical defect going to when the parties' obligations attached.",
+          "issue": "The execution date is incomplete on its face — \"the Ist day of ___ 1999\" leaves the month blank, so the date of making cannot be determined from the words. That is a mechanical defect that bears on when obligations attached.",
           "type": 1,
-          "prob": 0.34
+          "prob": 0.3
         },
         {
-          "issue": "The recited making date of 1999 cannot be squared with Section 11 (Effective Date), which states the Agreement is effective in 1997, leaving two inconsistent commencement dates in the same document.",
+          "issue": "The preamble dates the making of the Agreement in 1999, while Section 11 (Effective Date) states the Agreement is effective August 1, 1997; the two cannot both be read literally. A court would have to decide which date governs.",
           "type": 2,
-          "prob": 0.42
+          "prob": 0.33
         }
       ],
-      "dataset_clause_id": "neg1"
+      "dataset_clause_id": "c001"
     },
     {
       "clause_id": "c002",
       "issues": [
         {
-          "issue": "The lettered sub-paragraphs (a., b., c., &) are detached from the duties they are supposed to introduce, and the number of listed duties does not match the number of letters, so the enumeration cannot be applied as written. \"Be responsible for the collection of all investment income\" also states a duty of result without any stated standard of care.",
+          "issue": "The Custodian's duties are given as a closed enumeration with no catch-all, leaving open whether anything not listed (e.g. monitoring the investment manager or the account's contents) is a duty at all; expressio unius cuts one way and \"be responsible for the collection of all investment income\" cuts the other. The reach of the list is exactly what two parties would fight about.",
           "type": 1,
-          "prob": 0.33
+          "prob": 0.42
         },
         {
-          "issue": null,
+          "issue": "The ministerial, direction-driven duties here sit awkwardly against Section 21's indemnity for loss by \"mysterious disappearance\", which imposes liability untethered to any listed duty. A court could be asked whether Section 1 caps the Custodian's responsibilities.",
           "type": 2,
-          "prob": 0.16
+          "prob": 0.24
         }
       ],
-      "dataset_clause_id": "neg2"
+      "dataset_clause_id": "c002"
     },
     {
       "clause_id": "c003",
       "issues": [
         {
-          "issue": "Paragraph (b) lets the Custodian delegate \"such ministerial and other non-discretionary duties as it sees fit\" and \"rely upon such information furnished by such agents\"; the boundary between ministerial/non-discretionary and discretionary duties, and the reach of the reliance protection, are undefined. Paragraph (a) also reads \"Hold assets in the nominee selected by the Custodian\", apparently omitting \"name\".",
-          "type": 1,
-          "prob": 0.34
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.18
-        }
-      ],
-      "dataset_clause_id": "neg3"
-    },
-    {
-      "clause_id": "c004",
-      "issues": [
-        {
-          "issue": null,
-          "type": 1,
-          "prob": 0.09
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.08
-        }
-      ],
-      "dataset_clause_id": "neg4"
-    },
-    {
-      "clause_id": "c005",
-      "issues": [
-        {
-          "issue": "\"Such other reports as the Owners may reasonably request, including reports to the Owner's accountants or other examiners as may be necessary\" fixes no boundary: \"reasonably request\", \"other examiners\" and \"as may be necessary\" are all open-ended. The catch-all sits against no meaningful specification of what reports are owed.",
-          "type": 1,
-          "prob": 0.28
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.12
-        }
-      ],
-      "dataset_clause_id": "neg5"
-    },
-    {
-      "clause_id": "c006",
-      "issues": [
-        {
-          "issue": "Compensation is fixed only by reference to \"Schedule A attached to this Agreement as amended from time to time by the parties\", and it is unclear whether \"as amended\" qualifies the Schedule or the Agreement. The pricing term is therefore wholly extrinsic.",
+          "issue": "Subsection (c)'s catch-all — \"any other instruments that may be necessary or appropriate to carry out the custodianship duties and powers\" — follows specific documents of transfer and conveyance, so its reach is uncertain; \"ministerial and other non-discretionary duties\" in (b) is likewise a boundary term. The general-vs-specific tension is nameable.",
           "type": 1,
           "prob": 0.3
-        },
-        {
-          "issue": "No Schedule A appears anywhere in the executed instrument, so the fee term cross-refers to a document the contract as a whole does not contain, unlike Section 8 which sets out its particulars in full.",
-          "type": 2,
-          "prob": 0.31
-        }
-      ],
-      "dataset_clause_id": "neg6"
-    },
-    {
-      "clause_id": "c007",
-      "issues": [
-        {
-          "issue": "\"Out-of-pocket expenses during the reasonable performance of the Custodian's duties\" misplaces the reasonableness qualifier — it modifies \"performance\" rather than the expenses, so it is unclear whether unreasonable expenses are reimbursable. \"Out-of-pocket\" is itself undefined against the fee schedule.",
-          "type": 1,
-          "prob": 0.31
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.13
-        }
-      ],
-      "dataset_clause_id": "neg7"
-    },
-    {
-      "clause_id": "c008",
-      "issues": [
-        {
-          "issue": null,
-          "type": 1,
-          "prob": 0.1
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.09
-        }
-      ],
-      "dataset_clause_id": "neg8"
-    },
-    {
-      "clause_id": "c009",
-      "issues": [
-        {
-          "issue": "\"Entitled to rely on the oral advice as confirmed in writing or written advice of such persons\" is syntactically ambiguous: it can mean oral advice is protected only once confirmed in writing, or that oral advice may be acted on with confirmation to follow. That distinction decides who bears the loss on an unconfirmed oral instruction.",
-          "type": 1,
-          "prob": 0.44
         },
         {
           "issue": null,
@@ -183,7 +85,103 @@
           "prob": 0.15
         }
       ],
-      "dataset_clause_id": "neg9"
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "\"[A] market value for the assets of the account\" fixes neither a valuation source nor a method, but the obligation itself is plain. Only mild vagueness.",
+          "type": 1,
+          "prob": 0.14
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "\"[S]uch other reports as the Owners may reasonably request, including reports ... as may be necessary\" stacks two open-ended standards with no benchmark. The scope of the reporting duty is not fixed by the words.",
+          "type": 1,
+          "prob": 0.24
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": null,
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": "Compensation is set \"in Schedule A attached to this Agreement\", but no Schedule A appears in the instrument, and its amendment \"from time to time by the parties\" is not tied to Section 6(a)'s requirement of written agreement. A court would have to supply or reconcile the missing term.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "\"[O]ut-of-pocket expenses during the reasonable performance of the Custodian's duties\" misplaces the modifier: it is unclear whether \"reasonable\" limits the expenses or merely describes the performance. That misplacement changes what the Owner must reimburse.",
+          "type": 1,
+          "prob": 0.31
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The only defect is the typo \"chenges\"/\"conceming\", which does not alter meaning. The obligation to furnish and update the list is definite.",
+          "type": 1,
+          "prob": 0.1
+        },
+        {
+          "issue": null,
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "\"[T]he oral advice as confirmed in writing or written advice of such persons\" is syntactically ambiguous: it may mean the Custodian may act on oral advice only once confirmed in writing, or that written confirmation is merely one of two permitted forms. Whether reliance on unconfirmed oral instructions is protected turns on this reading.",
+          "type": 1,
+          "prob": 0.4
+        },
+        {
+          "issue": "Section 1(b)–(c) requires the Custodian to act and settle only on \"written direction\", which is difficult to square with any reading of this clause permitting reliance on oral advice. A court could be asked which controls.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c009"
     },
     {
       "clause_id": "c010",
@@ -194,18 +192,18 @@
           "prob": 0.08
         },
         {
-          "issue": null,
+          "issue": "Section 4 contemplates Schedule A being \"amended from time to time by the parties\" without any writing requirement, while this clause permits amendment only \"by written agreement of the parties\". The tension is mild but nameable.",
           "type": 2,
-          "prob": 0.12
+          "prob": 0.19
         }
       ],
-      "dataset_clause_id": "neg10"
+      "dataset_clause_id": "c010"
     },
     {
       "clause_id": "c011",
       "issues": [
         {
-          "issue": null,
+          "issue": "\"[U]nless or until terminated\" is a clumsy conjunction, but the 30-day written-notice mechanic is plain. Nothing turns on the wording.",
           "type": 1,
           "prob": 0.11
         },
@@ -215,7 +213,7 @@
           "prob": 0.1
         }
       ],
-      "dataset_clause_id": "neg11"
+      "dataset_clause_id": "c011"
     },
     {
       "clause_id": "c012",
@@ -223,63 +221,63 @@
         {
           "issue": null,
           "type": 1,
-          "prob": 0.09
+          "prob": 0.11
         },
         {
-          "issue": null,
+          "issue": "\"[A]ll securities held in the account shall be delivered\" on termination cannot be squared literally with Section 15, under which deposit securities are under the control of the Colorado Insurance Commissioner and may not be withdrawn without approval, nor with Section 6(d)'s withholding right. A court would have to harmonise them.",
           "type": 2,
-          "prob": 0.14
+          "prob": 0.28
         }
       ],
-      "dataset_clause_id": "neg12"
+      "dataset_clause_id": "c012"
     },
     {
       "clause_id": "c013",
       "issues": [
         {
-          "issue": "\"Any fees remaining outstanding and balances owing to the Custodian\" is undefined — \"balances owing\" could reach beyond fees and expenses to any claim the Custodian asserts, and \"may be withheld\" gives an unmeasured self-help right.",
+          "issue": "\"[B]alances owing to the Custodian\" is undefined and broader than \"fees\", leaving the extent of the withholding right uncertain. The clause also does not say how assets are valued when withheld.",
           "type": 1,
-          "prob": 0.3
+          "prob": 0.22
         },
         {
-          "issue": "A unilateral right to withhold assets is difficult to square with Section 15, under which custodied securities \"shall be withdrawable upon the demand of the Owner\", and with Section 6's delivery obligation on termination.",
+          "issue": "This self-help right qualifies Section 6(c)'s unqualified command that \"all securities held in the account shall be delivered\" to the Owner. The two sentences pull against each other.",
           "type": 2,
-          "prob": 0.3
+          "prob": 0.22
         }
       ],
-      "dataset_clause_id": "neg13"
+      "dataset_clause_id": "c013"
     },
     {
       "clause_id": "c014",
       "issues": [
         {
-          "issue": "\"Any and all claims, liabilities, and expenses ... which Custodian may incur by reason of its acting as Custodian\" does not say whether it covers only third-party claims or also first-party claims by the Owner against the Custodian. That is the classic construction fight in a broad indemnity.",
+          "issue": "The carve-out turns on whether the Custodian \"has committed negligence or malfeasance\", terms that are neither defined nor allocated a decision-maker, and the indemnity's reach — whether it covers claims by the Owner itself as well as third parties — is not stated. Both are classic points of construction.",
           "type": 1,
-          "prob": 0.46
+          "prob": 0.4
         },
         {
-          "issue": "Read as a first-party indemnity it would neutralise Section 21, under which the Custodian indemnifies the Owner for losses caused by its own officers' negligence or dishonesty, so the two indemnities pull in opposite directions.",
+          "issue": "A broad Owner-indemnity for \"any and all claims\" the Custodian incurs by acting as Custodian is circular against Sections 21 and 22, which make the Custodian liable to the Owner for losses including no-fault \"mysterious disappearance\". Read together they can require the Owner to indemnify the Custodian against the very liability Section 21 creates.",
           "type": 2,
-          "prob": 0.42
+          "prob": 0.53
         }
       ],
-      "dataset_clause_id": "neg14"
+      "dataset_clause_id": "c014"
     },
     {
       "clause_id": "c015",
       "issues": [
         {
-          "issue": "The carve-out turns on whether the \"Custodian has committed negligence or malfeasance\", neither term defined, and does not say whether the acts of agents employed under Section 2(b) are the Custodian's. It also disapplies \"the indemnification provisions of the Agreement\" generally rather than only Section 7.",
+          "issue": null,
           "type": 1,
-          "prob": 0.4
+          "prob": 0.05
         },
         {
-          "issue": "Because it disapplies \"the indemnification provisions of the Agreement\" without limitation, it can be read to switch off Section 21's indemnity running the other way, which would be perverse since Section 21 is itself triggered by Custodian negligence.",
+          "issue": null,
           "type": 2,
-          "prob": 0.36
+          "prob": 0.06
         }
       ],
-      "dataset_clause_id": "neg15"
+      "dataset_clause_id": "c015"
     },
     {
       "clause_id": "c016",
@@ -287,7 +285,7 @@
         {
           "issue": null,
           "type": 1,
-          "prob": 0.07
+          "prob": 0.05
         },
         {
           "issue": null,
@@ -295,23 +293,23 @@
           "prob": 0.06
         }
       ],
-      "dataset_clause_id": "neg16"
+      "dataset_clause_id": "c016"
     },
     {
       "clause_id": "c017",
       "issues": [
         {
-          "issue": null,
+          "issue": "\"[R]elevant to this Agreement\" is the only limit on an otherwise unbounded examination right, with no notice, place or procedure. The boundary of \"relevant\" is left to argument.",
           "type": 1,
-          "prob": 0.06
+          "prob": 0.18
         },
         {
-          "issue": null,
+          "issue": "This unconditional inspection right conflicts with Section 17, which permits examination only during business hours, on the Custodian's premises, on reasonable notice and \"only upon\" written instructions from an appropriate officer of the Owner. Both cannot be applied literally.",
           "type": 2,
-          "prob": 0.06
+          "prob": 0.4
         }
       ],
-      "dataset_clause_id": "neg17"
+      "dataset_clause_id": "c017"
     },
     {
       "clause_id": "c018",
@@ -319,63 +317,63 @@
         {
           "issue": null,
           "type": 1,
-          "prob": 0.17
-        },
-        {
-          "issue": "Section 9 makes the Custodian's books and practices \"subject to examination by the Owner\" without qualification, while Section 17 permits examination only on the Custodian's premises, during business hours, on reasonable notice and \"only upon furnishing ... written instructions\" from an officer. The two access rights cannot both operate as written.",
-          "type": 2,
-          "prob": 0.42
-        }
-      ],
-      "dataset_clause_id": "neg18"
-    },
-    {
-      "clause_id": "c019",
-      "issues": [
-        {
-          "issue": null,
-          "type": 1,
           "prob": 0.06
         },
         {
           "issue": null,
           "type": 2,
-          "prob": 0.07
+          "prob": 0.08
         }
       ],
-      "dataset_clause_id": "neg19"
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The operative date is handwritten and garbled — \"Aust { i 997\" — so the effective date cannot be read off the instrument with confidence. A mechanical defect of this kind directly changes when the Agreement took effect.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The stated 1997 effective date cannot be reconciled with the preamble, which recites that the Agreement is made in 1999. A court asked when the custodial duties began would have to choose between them.",
+          "type": 2,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c019"
     },
     {
       "clause_id": "c020",
       "issues": [
         {
-          "issue": "The effective date is written as an illegible, incomplete entry (\"Aust { i 997\"), so the date the Agreement takes effect cannot be read off the instrument. A missing or unreadable commencement date is a mechanical defect that changes what the clause does.",
+          "issue": "The Custodian is given a bare election — segregated holding \"or\" fungible bulk under a FOSBI arrangement — with no criteria and no notice obligation, and FOSBI is not defined. Which branch applies to any given security is not fixed by the text.",
           "type": 1,
-          "prob": 0.4
+          "prob": 0.22
         },
         {
-          "issue": "The 1997 effective date contradicts the preamble, which recites that the Agreement is made on a day in 1999, leaving the instrument with two irreconcilable start dates.",
+          "issue": null,
           "type": 2,
-          "prob": 0.43
+          "prob": 0.16
         }
       ],
-      "dataset_clause_id": "neg20"
+      "dataset_clause_id": "c020"
     },
     {
       "clause_id": "c021",
       "issues": [
         {
-          "issue": "\"Certified securities\" appears to be an error for \"certificated securities\", and the clause gives the Custodian an unqualified election between segregation and fungible bulk without saying who chooses. \"Held either separate from the securities of the Custodian and all of its other customers\" is also ambiguous as to whether both separations are required.",
+          "issue": null,
           "type": 1,
-          "prob": 0.29
+          "prob": 0.11
         },
         {
           "issue": null,
           "type": 2,
-          "prob": 0.14
+          "prob": 0.13
         }
       ],
-      "dataset_clause_id": "neg21"
+      "dataset_clause_id": "c021"
     },
     {
       "clause_id": "c022",
@@ -383,15 +381,15 @@
         {
           "issue": null,
           "type": 1,
-          "prob": 0.1
+          "prob": 0.08
         },
         {
           "issue": null,
           "type": 2,
-          "prob": 0.09
+          "prob": 0.08
         }
       ],
-      "dataset_clause_id": "neg22"
+      "dataset_clause_id": "c022"
     },
     {
       "clause_id": "c023",
@@ -404,42 +402,42 @@
         {
           "issue": null,
           "type": 2,
-          "prob": 0.08
+          "prob": 0.07
         }
       ],
-      "dataset_clause_id": "neg23"
+      "dataset_clause_id": "c023"
     },
     {
       "clause_id": "c024",
       "issues": [
         {
-          "issue": null,
+          "issue": "The clause permits four alternative registrations without saying who elects among them or on what basis. The permissive string leaves the Owner's protection dependent on an unallocated choice.",
           "type": 1,
-          "prob": 0.1
+          "prob": 0.18
         },
         {
-          "issue": null,
+          "issue": "Registration \"in the name of the Custodian or its nominee\" sits in tension with Section 13, which requires the Custodian's records to identify the securities as \"owned by the Owner\", and with Section 15's withdrawal-on-demand right. The relationship of legal title to those rights is not spelled out.",
           "type": 2,
-          "prob": 0.08
+          "prob": 0.22
         }
       ],
-      "dataset_clause_id": "neg24"
+      "dataset_clause_id": "c024"
     },
     {
       "clause_id": "c025",
       "issues": [
         {
-          "issue": null,
+          "issue": "\"[T]o the extent required by those sections\" makes the Commissioner's control depend on external statutes without identifying which securities are so \"used to meet the deposit requirements\". The boundary of the exception must be worked out from outside the document.",
           "type": 1,
-          "prob": 0.12
+          "prob": 0.26
         },
         {
-          "issue": null,
+          "issue": "The absolute statement that custodied securities are \"withdrawable upon the demand of the Owner\" conflicts with Section 6(c)/(d), under which delivery on termination is subject to the Custodian's right to withhold for outstanding fees and balances. Both are stated in unqualified terms.",
           "type": 2,
-          "prob": 0.11
+          "prob": 0.26
         }
       ],
-      "dataset_clause_id": "neg25"
+      "dataset_clause_id": "c025"
     },
     {
       "clause_id": "c026",
@@ -447,98 +445,82 @@
         {
           "issue": null,
           "type": 1,
-          "prob": 0.15
+          "prob": 0.07
         },
         {
-          "issue": "The unqualified statement that securities \"shall be withdrawable upon the demand of the Owner\" sits against Section 6, which lets the Custodian withhold assets for outstanding fees and \"balances owing\", so the only stated exception (Commissioner-controlled deposits) is not in fact the only one.",
+          "issue": null,
           "type": 2,
-          "prob": 0.33
+          "prob": 0.09
         }
       ],
-      "dataset_clause_id": "neg26"
+      "dataset_clause_id": "c026"
     },
     {
       "clause_id": "c027",
       "issues": [
         {
-          "issue": null,
+          "issue": "\"[A]t such times and containing such information as may be reasonably requested\" leaves the content and frequency of reporting entirely to an unbounded reasonableness standard. What a request may compel is not fixed.",
           "type": 1,
-          "prob": 0.08
+          "prob": 0.19
         },
         {
-          "issue": null,
+          "issue": "This duplicates and overlaps Section 3's reporting obligations without saying which governs where they differ, leaving two reporting regimes in one instrument. The overlap is redundant rather than plainly contradictory.",
           "type": 2,
-          "prob": 0.09
+          "prob": 0.16
         }
       ],
-      "dataset_clause_id": "neg27"
+      "dataset_clause_id": "c027"
     },
     {
       "clause_id": "c028",
       "issues": [
         {
-          "issue": null,
+          "issue": "\"[A]ny representative of an appropriate regulatory body\" and \"an appropriate officer of the Owner\" both turn on an undefined \"appropriate\", which decides who may compel access. The gatekeeping condition is therefore not self-applying.",
           "type": 1,
-          "prob": 0.14
+          "prob": 0.23
         },
         {
-          "issue": null,
+          "issue": "The \"but only upon furnishing ... written instructions\" precondition cannot be squared with Section 9, which subjects the Custodian's books, records and practices to examination by the Owner with no conditions at all. A court would have to decide whether Section 17 qualifies Section 9.",
           "type": 2,
-          "prob": 0.13
+          "prob": 0.36
         }
       ],
-      "dataset_clause_id": "neg28"
+      "dataset_clause_id": "c028"
     },
     {
       "clause_id": "c029",
       "issues": [
         {
-          "issue": "The examination right is conditioned \"only upon furnishing the Custodian with written instructions to that effect from an appropriate officer of the Owner\", and \"appropriate officer\" and \"appropriate regulatory body\" are both undefined. The proviso can also be read to condition even a regulator's access on the Owner's written instruction.",
+          "issue": "The trailing qualifier \"that the Owner may reasonably request\" is ambiguous as to whether it limits only clause (b) or both (a) and (b), which decides whether clearing-corporation reports must be sent automatically. The syntax alone will not resolve it.",
           "type": 1,
-          "prob": 0.31
+          "prob": 0.33
         },
         {
-          "issue": "The conditions and limits here contradict Section 9 (Inspection Privileges), which subjects the Custodian's books, records and practices to examination by the Owner with no notice, premises or written-instruction requirement.",
+          "issue": null,
           "type": 2,
-          "prob": 0.38
+          "prob": 0.12
         }
       ],
-      "dataset_clause_id": "neg29"
+      "dataset_clause_id": "c029"
     },
     {
       "clause_id": "c030",
       "issues": [
         {
-          "issue": "The trailing qualifier \"that the Owner may reasonably request\" may modify only limb (b) or both limbs, deciding whether clearing-corporation control reports must be sent automatically or only on request. The syntax leaves that genuinely open.",
+          "issue": "\"[R]ecords sufficient to determine and verify information ... that may be reported in the Owner's Annual Statement\" sets no ascertainable standard of sufficiency. What suffices is judged only after the fact.",
           "type": 1,
-          "prob": 0.36
+          "prob": 0.18
         },
         {
           "issue": null,
           "type": 2,
-          "prob": 0.13
+          "prob": 0.1
         }
       ],
-      "dataset_clause_id": "neg30"
+      "dataset_clause_id": "c030"
     },
     {
       "clause_id": "c031",
-      "issues": [
-        {
-          "issue": null,
-          "type": 1,
-          "prob": 0.14
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.09
-        }
-      ],
-      "dataset_clause_id": "neg31"
-    },
-    {
-      "clause_id": "c032",
       "issues": [
         {
           "issue": null,
@@ -551,103 +533,87 @@
           "prob": 0.08
         }
       ],
-      "dataset_clause_id": "neg32"
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "\"[M]ysterious disappearance\" is a term of art with contested boundaries, and the clause mixes fault-based triggers (negligence, dishonesty) with no-fault ones (theft, mysterious disappearance, damage or destruction), so the standard of liability is not settled by the words. \"[L]oss of custodied securities\" is likewise undefined as against loss of value.",
+          "type": 1,
+          "prob": 0.52
+        },
+        {
+          "issue": "This liability cannot readily be reconciled with Section 7, under which the Owner indemnifies the Custodian for all claims incurred by acting as Custodian except where the Custodian was negligent or committed malfeasance — leaving no-fault losses indemnified in both directions. Section 23's force-majeure exculpation pulls the same way.",
+          "type": 2,
+          "prob": 0.45
+        }
+      ],
+      "dataset_clause_id": "c032"
     },
     {
       "clause_id": "c033",
       "issues": [
         {
-          "issue": "The indemnity is confined to \"loss of custodied securities\" occasioned by an enumerated list ending in \"mysterious disappearance, including loss by damage or destruction\", so whether it reaches economic loss short of physical loss of the securities is open. The enumerated causes invite an ejusdem generis reading of \"mysterious disappearance\".",
+          "issue": "\"[S]hall promptly replace the securities or the value thereof\" does not say who elects between replacement in kind and payment, or as of what date value is fixed, and \"the value of any loss of rights or privileges\" is unquantified. The remedy is left unspecified in a clause whose whole purpose is remedy.",
           "type": 1,
-          "prob": 0.45
+          "prob": 0.31
         },
         {
-          "issue": "Its allocation of loss caused by Custodian negligence runs against Section 7, under which the Owner indemnifies the Custodian for \"any and all claims\" incurred by reason of its acting as Custodian, subject only to the Section 7 negligence carve-out.",
+          "issue": null,
           "type": 2,
-          "prob": 0.37
+          "prob": 0.14
         }
       ],
-      "dataset_clause_id": "neg33"
+      "dataset_clause_id": "c033"
     },
     {
       "clause_id": "c034",
       "issues": [
         {
-          "issue": "\"Shall promptly replace the securities or the value thereof\" does not say who elects between replacement in kind and payment of value, nor how \"value\" or \"the value of any loss of rights or privileges\" is measured or as of what date.",
+          "issue": "The exculpation ends in a catch-all — \"or similar causes beyond its reasonable control\" — appended to a long list of specific events, so ejusdem generis leaves its reach genuinely open; the list also contains the mechanical error \"lot\" for \"riot\". Whether an event is \"similar\" to war, strikes and acts of God is precisely what parties would dispute.",
           "type": 1,
-          "prob": 0.33
+          "prob": 0.44
         },
         {
-          "issue": null,
+          "issue": "A blanket exculpation for \"any failure to take any action required to be taken under the Agreement\" is hard to reconcile with Section 21, which makes the Custodian liable for no-fault losses including theft and mysterious disappearance. A court would have to decide whether Section 23 cuts down Section 21.",
           "type": 2,
-          "prob": 0.13
+          "prob": 0.34
         }
       ],
-      "dataset_clause_id": "neg34"
+      "dataset_clause_id": "c034"
     },
     {
       "clause_id": "c035",
       "issues": [
         {
-          "issue": "The excusing events end in the catch-alls \"other differences with employees\" and \"or similar causes beyond its reasonable control\", whose reach against the enumerated specifics is exactly the ejusdem generis question; \"lot\" is also an obvious error for \"riot\". Whether \"laws, regulations, orders\" is itself an excusing event or merely a governmental-act example is left unclear by the punctuation.",
+          "issue": "The proviso lets \"the Insurance Commissioner of the state of domicile of the insurance company\" accept a different standard of liability, but the Agreement never defines \"the insurance company\" and gives no mechanism or timing for that acceptance. The clause's operation is left to an outside actor on undefined terms.",
           "type": 1,
-          "prob": 0.42
+          "prob": 0.26
         },
         {
           "issue": null,
           "type": 2,
-          "prob": 0.17
+          "prob": 0.14
         }
       ],
-      "dataset_clause_id": "neg35"
+      "dataset_clause_id": "c035"
     },
     {
       "clause_id": "c036",
       "issues": [
         {
-          "issue": null,
+          "issue": "\"[I]nsurance protection consistent with the requirements of the Office of the Comptroller of the Currency\" incorporates an unidentified external standard and fixes no amount, coverage or duration. Whether the warranty was met cannot be judged from the words alone.",
           "type": 1,
-          "prob": 0.15
+          "prob": 0.28
         },
         {
           "issue": null,
           "type": 2,
-          "prob": 0.18
+          "prob": 0.11
         }
       ],
-      "dataset_clause_id": "neg36"
-    },
-    {
-      "clause_id": "c037",
-      "issues": [
-        {
-          "issue": "The proviso lets a non-party, the Insurance Commissioner of the state of domicile, accept \"a standard of liability applicable to the agent that is different from\" the Custodian's, without saying when, how or with what effect on the Owner's rights. \"May accept\" leaves it unclear whether the different standard ever becomes contractually operative.",
-          "type": 1,
-          "prob": 0.32
-        },
-        {
-          "issue": "It undercuts the immediately preceding requirement in Section 24 that the agent be subject to \"the same liability for loss of custodied securities as the Custodian\", so the same section both requires and dispenses with parity of liability.",
-          "type": 2,
-          "prob": 0.31
-        }
-      ],
-      "dataset_clause_id": "neg37"
-    },
-    {
-      "clause_id": "c038",
-      "issues": [
-        {
-          "issue": "\"Insurance protection consistent with the requirements of the Office of the Comptroller of the Currency\" identifies no policy, limit or requirement, and the OCC prescribes no fixed custodial insurance standard. The measure of compliance with the warranty is therefore indeterminate.",
-          "type": 1,
-          "prob": 0.32
-        },
-        {
-          "issue": null,
-          "type": 2,
-          "prob": 0.13
-        }
-      ],
-      "dataset_clause_id": "neg38"
+      "dataset_clause_id": "c036"
     }
   ]
 }
