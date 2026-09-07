@@ -436,9 +436,22 @@ async def run(args):
     done = runs.done_contracts(PREDS, groups)
     todo = [(cid, cl) for cid, cl in groups.items() if cid not in done]
     if args.only:
-        todo = [(cid, cl) for cid, cl in todo if cid == args.only]
+        # A LIST, because the shuffled order is a function of how many contracts
+        # were outstanding when it was drawn: the same seed over 100 candidates
+        # and over 89 does not deal the same hand. Re-running the exact set some
+        # earlier run judged — to compare two promptings on the same contracts —
+        # therefore cannot be expressed as a --limit, and naming them is the only
+        # way to ask for them.
+        want = [c.strip() for c in str(args.only).split(",") if c.strip()]
+        todo = [(cid, cl) for cid, cl in todo if cid in set(want)]
+        got = {cid for cid, _ in todo}
         if not todo:
-            sys.exit(f"{args.only}: not outstanding (done, an example, or no such id)")
+            sys.exit(f"none of the {len(want)} requested id(s) are outstanding "
+                     f"(done already, an example contract, or no such id)")
+        if len(got) < len(want):
+            missing = [c for c in want if c not in got]
+            print(f"  ! {len(missing)} requested id(s) not outstanding, skipped: "
+                  + ", ".join(missing[:5]) + (" …" if len(missing) > 5 else ""))
     if args.shuffle:
         random.Random(args.seed).shuffle(todo)
         print(f"order shuffled, seed {args.seed}")
@@ -546,7 +559,8 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="run only N contracts")
     ap.add_argument("--shuffle", action="store_true", help="seeded random order")
     ap.add_argument("--seed", type=int, default=0)
-    ap.add_argument("--only", metavar="CONTRACT_ID", help="one contract by id")
+    ap.add_argument("--only", metavar="CONTRACT_ID[,ID...]",
+                    help="judge exactly these contracts, by id; comma-separated")
     ap.add_argument("--parallel", type=int, default=4, help="containers at once")
     ap.add_argument("--image", default=IMAGE)
     asyncio.run(run(ap.parse_args()))
