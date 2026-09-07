@@ -177,8 +177,10 @@ def main():
 
     fig.suptitle(f"{run_title} — precision, recall, and flag rate across "
                  f"risk-flagging thresholds", fontsize=14, x=0.5, y=0.985)
+    # No "Exp 3" here: the experiments were renamed off those indices, and a
+    # figure is the last place a stale one should survive.
     fig.text(0.5, 0.935,
-             f"Exp 3 — {subtitle}  ·  "
+             f"{subtitle}  ·  "
              f"{len(rows)} clauses from {n_contracts} contracts  ·  "
              f"the two risk-type panels are one-vs-rest",
              ha="center", fontsize=9.5, color=INK2)

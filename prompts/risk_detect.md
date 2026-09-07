@@ -57,8 +57,10 @@ risk. A short phrase like `Free land` can be high risk.
 
 ### What "lower risk" does and does not mean
 
-This matters for how you read the worked examples below, and it is the one place
-this task is easy to get wrong.
+This matters for how you read the worked examples you are given, and it is the
+one place this task is easy to get wrong. Each pairs a provision with the
+court's own words about it, and one short passage of those words is set apart as
+the defect: that is the kind of thing an `issue` entry names.
 
 The high-risk examples are provisions a federal court **did** construe. That is
 direct evidence: two parties read the same words differently and a judge had to

@@ -16,6 +16,7 @@ import csv
 import json
 import os
 import random
+import re
 import sys
 from collections import OrderedDict, defaultdict
 
@@ -146,6 +147,113 @@ def flat(text):
 def codes_in(row):
     """The individual taxonomy codes on a row. `taxonomy` is comma-separated."""
     return [c for c in row["taxonomy"].split(",") if c]
+
+
+def issue_for(row, code):
+    """The gold issue on this row whose risk type is `code`, or None.
+
+    A clause can carry several gold issues — c110 of the product-contamination
+    policy carries a 1.1 and a 2.2 — and `opinion_comment` at row level is their
+    passages CONCATENATED. A worked example for one code that showed the join
+    would show the court arguing the other code's point as well, at twice the
+    length and with the overlap between them repeated.
+    """
+    for g in json.loads(row.get("issues") or "[]"):
+        if str(g.get("risk_type", "")).startswith(code):
+            return g
+    return None
+
+
+# Sentence-enders that are really abbreviations. A split after these is what put
+# an excerpt's first words in the middle of `See Galli v. Metz, 973 F.2d 145`.
+_ABBREV = {"v", "no", "inc", "co", "corp", "cir", "supp", "ct", "ed", "rev",
+           "stat", "univ", "cal", "mass", "id", "ex", "art", "sec", "para",
+           "assn", "dept", "natl", "intl", "pp", "vol", "ch", "fed", "f", "u",
+           "s", "n", "y", "e", "d", "l", "p", "a", "r", "i"}
+
+# What a citation looks like. A passage full of them is the court reciting the
+# law of contract construction, which every opinion does and which says nothing
+# about the provision in hand.
+_CITE = re.compile(r'\d+\s?F\.\s?(?:Supp\.?|\dd|App)|\d+\s?[APN]\.\s?\dd|'
+                   r'\b\d+\s?U\.S\.|Cir\.\s?\d|\(\d{4}\)|quotation marks omitted|'
+                   r'internal citations|\bSee\b|\bid\.\b|§', re.I)
+
+# A window that opens on one of these opens mid-citation.
+_LEAD = re.compile(r'^(?:Exhibit|Ex\.|Id\.|See|Cf\.|Compare|Accord|Supra)\b'
+                   r'|^.{0,34}?\bat\s+¶?\s*\d')
+
+# Words that mark the court describing a CONTEST rather than stating a holding.
+_CUES = ("disput", "argues", "argue ", "contends", "contend ", "asserts",
+         "must determine", "conflict", "ambigu", "does not define",
+         "undefined", "silent as to")
+
+_STOP = set("""the a an and or of to in on for with that this these those is are
+was were be been being it its as by at from any all such other than not no if
+then shall will may must under upon which who whom whose their there here what
+when where how each both same own more most some only very can also into over
+""".split())
+
+
+def content_terms(*texts):
+    """The distinctive words of a provision — what a passage about it echoes."""
+    out = set()
+    for t in texts:
+        for w in re.findall(r"[A-Za-z][A-Za-z'-]{3,}", t or ""):
+            if w.lower() not in _STOP:
+                out.add(w.lower())
+    return out
+
+
+def _bounds(text):
+    """Offsets a sentence may begin at, abbreviations excluded."""
+    b = [0]
+    for m in re.finditer(r'(?<=[.?!])\s+(?=[“"‘\'(A-Z])|\n+', text):
+        tail = re.findall(r"[A-Za-z']+\.?$", text[:m.start()].rstrip())
+        if tail and tail[0].rstrip('.').lower() in _ABBREV:
+            continue
+        b.append(m.end())
+    b.append(len(text))
+    return sorted(set(b))
+
+
+def court_excerpt(comment, terms, cap=700, floor=300):
+    """The court's own words on THIS provision's defect, as ONE contiguous run.
+
+    Contiguous by construction — the return value is a verbatim substring of
+    `comment`, never sentences stitched from different places, which would read
+    as the court saying something it did not say in that order.
+
+    Scored on how much of the provision's own vocabulary the window echoes,
+    because a passage that argues about a clause quotes it; plus a smaller
+    weight on words that mark a contest, so the excerpt lands on what was
+    disputed rather than on the holding; minus citations, which is what
+    separates the argument from the recital of law around it. Cue words alone
+    were tried first and chose boilerplate twice out of three: a standard-of-
+    review paragraph is the densest "ambiguous … construe … interpret" text in
+    any opinion and is about no provision at all.
+    """
+    text = (comment or "").strip()
+    if len(text) <= cap:
+        return text
+    bounds = _bounds(text)
+    best = None
+    for i, a in enumerate(bounds[:-1]):
+        for b in bounds[i + 1:]:
+            n = b - a
+            if n > cap:
+                break
+            if n < floor:
+                continue
+            w = text[a:b]
+            wl = w.lower()
+            score = (sum(1 for t in terms if t in wl)
+                     + 0.6 * sum(wl.count(c) for c in _CUES)
+                     - 1.5 * len(_CITE.findall(w))
+                     - (2.0 if _LEAD.match(w) else 0.0))
+            key = (score, n, -a)          # ties: the fuller window, then earlier
+            if best is None or key > best[0]:
+                best = (key, a, b)
+    return text[best[1]:best[2]].strip() if best else text[:cap]
 
 
 def pick_examples(rows):

@@ -74,14 +74,36 @@ def write_examples(root, examples):
         d = root / "examples" / f"{e['code']}_{r['contract_id']}"
         d.mkdir(parents=True, exist_ok=True)
 
+        # This code's own gold issue, not the row-level join of every issue on
+        # the clause — and a short contiguous run of the court's words out of
+        # it. The output is issue-level now, so the example has to show what
+        # naming ONE defect looks like; the model was previously given the
+        # standard to apply and no instance of the artefact it must produce.
+        # Court text, never the gold `issue` field: that field was written by a
+        # model which had read the opinion, and it is what
+        # issue_alignment_check.py scores against, so showing it here would
+        # teach imitation of the marker.
+        gold = runs.issue_for(r, e["code"])
+        passage = ((gold or {}).get("opinion_comment") or r["opinion_comment"]).strip()
+        excerpt = runs.court_excerpt(
+            passage, runs.content_terms(r["clause_text"], r["clause_name"]))
+
         notes = [
             f"# Worked example — {runs.TYPE_NAME[e['code']]}",
             "",
             f"Contract `{r['contract_id']}`, filed in {r['citation']}.",
             "",
             f"A court construed **{e['n_pos']}** of this contract's provisions; "
-            f"the other **{e['n_neg']}** it did not. Read that as the base rate "
-            f"to expect, NOT as a quota to reproduce.",
+            f"the other **{e['n_neg']}** it did not.",
+            "",
+            "**That ratio is the rate of HIGH probabilities, not the rate of "
+            "issues.** Being litigated is the top of the scale: a defect worth "
+            "the cost of a lawsuit is one you would score well above 0.5, and "
+            "those are this rare. It says nothing about how often a provision "
+            "carries a defect you can NAME — that is far more common, and every "
+            "one of those belongs in the list, at the low probability it "
+            "deserves. Read the ratio as how seldom a probability should be "
+            "high, never as a quota for how many issues to report.",
             "",
             "## HIGH RISK — a federal court construed this provision",
             "",
@@ -89,9 +111,18 @@ def write_examples(root, examples):
             "",
             "```", runs.flat(r["clause_text"]), "```",
             "",
-            f"### What the court said, verbatim from the opinion in {r['citation']}",
+            "### The defect, in the court's own words",
             "",
-            "```", r["opinion_comment"].strip(), "```",
+            "One specific thing about THIS provision that the parties read "
+            "differently. An `issue` entry names something of this kind — not a "
+            "summary of the case, and not a verdict on the provision.",
+            "",
+            "```", excerpt, "```",
+            "",
+            f"### The passage it comes from, verbatim from the opinion in "
+            f"{r['citation']}",
+            "",
+            "```", passage, "```",
         ]
         if foil:
             notes += [
