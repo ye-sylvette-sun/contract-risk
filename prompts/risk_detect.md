@@ -79,20 +79,24 @@ court would have something to construe** — not a verdict that it is sound.
 
 ### Calibration
 
-- A definite, consistent provision has **every** probability low, however
-  important it is. Being litigated is not itself a defect.
+- A definite, consistent provision carries **no issue at all**. Being litigated
+  is not itself a defect, and neither is being important, long or complex.
 - Put a **type 1** issue at or above 0.5 only with specific textual evidence —
   name the ambiguous term, or the general-vs-specific tension.
 - Put a **type 2** issue at or above 0.5 only after checking the other
   provisions and finding a specific conflict or incoherence — **name the other
-  provision**. If you did not find one, the type-2 probability stays low.
+  provision**. If you did not find one, write no type-2 entry.
 - The provisions were **sampled neutrally**. Do not assume any fixed number of
   them are risky, and do not spread your probabilities to fill a quota. Judge
   each one independently.
-- Use the whole range. A provision you cannot rule out, but cannot point to
-  anything specific in, belongs in the middle — not pinned near zero because you
-  found no proof. A defect that is real but cannot be named is still a defect,
-  and courts construe those too.
+- Use the whole range **for the issues you do list**. Having named a defect, do
+  not pin it near zero for want of proof: the probability is your estimate that
+  a court would have something to construe, not your confidence that it would
+  decide either way. A defect you can name but are unsure of belongs in the
+  middle.
+- **Your uncertainty goes into the probability, not into a bare entry.** If you
+  cannot say what is wrong with the provision, the answer is no entry — not an
+  entry with a small number on it.
 
 ## DOCUMENT
 
@@ -136,21 +140,21 @@ Each issue is three fields:
   if you find yourself writing "and also", that is a second issue.
 - `type` — `1` for an intrinsic defect visible in the provision itself, `2` for a
   defect in its relationship to the rest of the instrument.
-- `prob` in [0, 1] — that a court would have something to construe **on account
+- `prob` in (0, 1] — that a court would have something to construe **on account
   of this issue**. To **two decimal places**, on a 0.01 grid — 0.03, 0.17, 0.62.
   Do not round to the nearest 0.05 or 0.1: the fine distinctions are what the
-  number is for.
+  number is for. Greater than zero, always: the entry exists because the defect
+  does, and one you would put at 0 is one you should not have listed.
 
-**How long the list should normally be.** Almost always: **no named issue at
-all, or exactly one.**
+**How long the list should normally be.** Almost always: **empty, or exactly one
+entry.**
 
-- **Most provisions carry no nameable defect.** Their answer is exactly two
-  entries, one per type, each with `issue` set to `null` and `prob` carrying how
-  likely you think that kind of dispute is anyway — both well below 0.5. That is
-  the ordinary answer and most of your list should look like it.
-- **A provision that does carry one names it, and nothing else.** One issue of
-  one type, plus a `null` entry for the other type. This is the second most
-  common answer by a wide margin.
+- **Most provisions carry no nameable defect. Their answer is an empty list.**
+  Not an entry saying so, not a small probability standing in for one — nothing.
+  That is the ordinary answer and most of your provisions should get it.
+- **A provision that does carry a defect names it, and nothing else.** One entry,
+  of whichever type it is. The other type gets no entry at all. This is the
+  second most common answer by a wide margin.
 - **Two issues of one type, or issues of both types, are the exception.** Give
   them only when the extra defect is *obvious* and you would put a genuinely
   high probability on it in its own right — not when you have found a second
@@ -167,13 +171,16 @@ Rules for the list:
 - **Probabilities are per issue and independent.** They are not shares of
   anything and do not sum to 1. Two weak issues do not make a strong provision,
   and you should not inflate one because you found two.
-- **Never leave a type unrepresented.** A type with no entry is read as
-  probability 0, which is a stronger claim than you mean. If you can name a
-  type-1 defect but nothing relational, give the type-1 issue *and* a `null`
-  type-2 entry carrying its probability.
+- **A type with no entry is read as probability 0, and that is what it means.**
+  If you can name a type-1 defect but nothing relational, list the type-1 issue
+  and stop. Do not add a type-2 entry to keep the two balanced.
 - Do not pad the list to look thorough. A long issue list is not a better
-  answer; it is usually a wrong one. An issue you cannot name in a sentence is a
-  `null` entry with a middling probability, not an invented defect.
+  answer; it is usually a wrong one. An issue you cannot name in a sentence is
+  not an issue — leave it out rather than invent a defect or hold a place for one.
+- **An empty list is a real answer and the most common one.** It is not a
+  failure to judge, and it costs you nothing: you are not being asked to find
+  something in every provision. Returning an empty list for a provision you
+  looked at and found nothing in is exactly right.
 
 Keep each `issue` to two sentences. You are producing a judgment, not a
 memorandum.

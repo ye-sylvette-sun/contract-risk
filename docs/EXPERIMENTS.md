@@ -106,9 +106,9 @@ defect a court could be asked to construe:
 
 | field | |
 |---|---|
-| `issue` | two sentences naming **this** defect — the ambiguous term, or the other provision it cannot be squared with. `null` when there is nothing specific to name |
+| `issue` | two sentences naming **this** defect — the ambiguous term, or the other provision it cannot be squared with. Never null: an entry exists only because there is a defect to name |
 | `type` | `1` intrinsic, visible in the provision itself (taxonomy 1.x); `2` relational, about its fit with the rest of the instrument (2.x) |
-| `prob` | in [0, 1], two decimal places on a 0.01 grid, that a court would construe the provision **on account of this issue** |
+| `prob` | in (0, 1], two decimal places on a 0.01 grid, that a court would construe the provision **on account of this issue** |
 
 A pair of numbers could not say that a provision carries a vague term *and* a
 list-scope problem *and* contradicts a definition three sections away — three
@@ -116,17 +116,29 @@ things of different strengths. The list can, and each strength is stated
 separately.
 
 **Most lists are short, and that is asked for explicitly.** The normal answer is
-no named issue at all: exactly two entries, one per type, each with `issue` null
-and `prob` carrying how likely that kind of dispute is anyway. Next most common
-is one named issue plus a null entry for the other type. Two issues of one type,
-or issues of both, are the exception and are to be given only when the extra
-defect is obvious and carries a high probability in its own right — the prompt's
-test is whether the second defect could be stated to a judge on its own and
-taken seriously.
+an **empty list**: the provision was read and nothing nameable was found in it.
+Next most common is a single named issue, of whichever type it is, with no entry
+for the other. Two issues of one type, or issues of both, are the exception and
+are to be given only when the extra defect is obvious and carries a high
+probability in its own right — the prompt's test is whether the second defect
+could be stated to a judge on its own and taken seriously.
 
-**A type is never left out.** A type with no entry scores 0, which is a stronger
-claim than "I found nothing specific", so the null entry exists to carry the
-probability instead.
+**A type with no entry scores 0, and that is what it means.** An earlier version
+of this contract asked instead for a null-text entry per absent type, to carry
+"how likely that kind of dispute is anyway" — the worry being that a bare 0 was
+a stronger claim than the answer meant. The two runs that used it settled the
+question: across 3,317 such entries the model never put one above 0.24, while
+named issues ran to 0.81, and in 1,275 provisions carrying a named issue a null
+entry outranked every named one exactly once. Forcing them to 0 moved ROC-AUC by
+−0.003, 0.000 and 0.000 on the three panels. The channel was costing a third of
+the output to say nothing, so it is gone.
+
+**An empty list is an answer; an absent provision is not.** `predictions.valid()`
+accepts an explicit `[]` and rejects a judgment whose issues are missing or
+unreadable, so a truncated file still goes to the top-up round instead of
+passing as a page of clean verdicts. The salvage path matches `"issues": []`
+literally rather than inferring emptiness from a failed parse, which would
+collapse the same distinction.
 
 **Scoring derives two numbers from the list**: `prob_type1` and `prob_type2` are
 the **strongest** issue of each type. Not a sum — the probabilities are per issue

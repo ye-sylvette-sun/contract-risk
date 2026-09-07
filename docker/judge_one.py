@@ -34,7 +34,10 @@ def fill_prompt(missing):
         "`predictions_fill_001.json` (and `_002`, `_003` … if you work in "
         "batches) in the same shape as your earlier files — do not modify a "
         "file you have already written. Probabilities to two decimal places on "
-        "a 0.01 grid. Reply with the count when every id above is written."
+        'a 0.01 grid. Write EVERY id above, including the ones you find nothing '
+        'nameable in: those get `"issues": []`. An id left out is not read as '
+        'clean, it is read as unanswered — which is why it is on this list. '
+        "Reply with the count when every id above is written."
     )
 
 

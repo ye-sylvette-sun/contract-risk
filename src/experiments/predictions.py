@@ -8,6 +8,20 @@ A judgment is `{clause_id, issues: [{issue, type, prob}, ...]}`. The list
 is what makes the salvage below harder than it was when a judgment held two
 fixed probability fields: the issues are variable in number, and the free text
 that can break the JSON now sits inside each of them.
+
+Every entry is a defect the model can NAME, and its `prob` is in (0, 1]. A
+provision with nothing to name carries an explicitly empty list, and that is the
+ordinary answer. It replaces the null-text entry the earlier contract asked for,
+which existed to carry a probability for a type with no specific defect: across
+the two runs that used it the model never put one above 0.24, while named issues
+ran to 0.81, so the channel cost a third of the output to say nothing the
+ordinary answer does not already say.
+
+The empty list must be EXPLICIT. A judgment whose issues could not be read is
+still dropped rather than read as clean — the difference between "no defect" and
+"we could not parse the answer" is the whole point of the top-up round in
+judge_one.py, and collapsing the two would let a truncated file pass as a page
+of clean verdicts.
 """
 import json
 import re
@@ -30,6 +44,11 @@ ISSUE_RE_ALT = re.compile(
     r'\s*"issue"\s*:\s*(?:"(?P<text>.*?)"|(?P<null>null))', re.S)
 
 CLAUSE_ID_RE = re.compile(r'"clause_id"\s*:\s*"(.*?)"')
+
+# `"issues": []`, matched rather than inferred. In a chunk that would not parse,
+# "no issue could be read" and "the model wrote an empty list" look identical
+# until one of them is spelled out, and only one of them is a verdict.
+EMPTY_ISSUES_RE = re.compile(r'"issues"\s*:\s*\[\s*\]')
 
 
 def _issues_in(chunk):
@@ -60,12 +79,16 @@ def issues_of(judgment):
     """The judgment's issue list, cleaned: [(type, prob, text)].
 
     An entry missing a probability is dropped rather than guessed at, and a type
-    outside 1/2 with it. `issue` null is meaningful and kept — it is how a
-    model states a probability for a type it found no specific defect in.
+    outside 1/2 with it. An entry with no `issue` TEXT is dropped too: under this
+    contract an issue is a defect that was named, so a nameless one carries no
+    probability to score. Models that still write the old null-text entry are
+    read as saying nothing about that type, which is what such an entry meant.
     """
     out = []
     for it in (judgment or {}).get("issues") or []:
         if not isinstance(it, dict) or it.get("prob") is None:
+            continue
+        if not str(it.get("issue") or "").strip():
             continue
         try:
             t = int(it.get("type"))
@@ -82,9 +105,10 @@ def probs_of(judgment):
     The STRONGEST issue of each type, not a sum: the probabilities are per issue
     and independent, so two weak issues do not add up to a likely dispute, and
     the question each panel asks is whether a court would construe the clause on
-    account of ANY of them. A type with no entry scores 0 — which the prompt
-    warns is a stronger claim than most answers mean, and why it asks for a
-    null-text entry instead.
+    account of ANY of them. A type with no entry scores 0, and under this
+    contract that is exactly what the answer means: nothing was found to name.
+    An empty list therefore scores (0.0, 0.0), which is the ordinary answer and
+    not a failure to answer — `valid` is what tells those two apart.
 
     Here rather than in either experiment, so the one-shot arm, the agent arm
     and the Spellbook scorer cannot disagree about what a probability is.
@@ -98,16 +122,29 @@ def probs_of(judgment):
 def valid(judgment):
     """Is this a judgment we can score?
 
-    One usable issue is enough. A judgment whose every entry was dropped carries
-    no probability for either type, and scoring it would mean inventing one.
+    An EXPLICIT empty list is a complete answer: the model looked and found
+    nothing to name, which is what most provisions get. Anything else needs one
+    usable entry — a judgment whose issues are present but unreadable carries no
+    probability for either type, and scoring it would mean inventing one.
+
+    The distinction is load-bearing. `issues` absent is not the same as `issues`
+    empty: the first is a judgment that never said anything about this provision
+    and belongs in the top-up round, the second is a verdict. Reading a
+    half-written file as a page of clean provisions is the failure this ordering
+    exists to prevent, so the empty list must be there to be believed.
     """
     if not isinstance(judgment, dict):
         return False
     if not str(judgment.get("clause_id", "")).strip():
         return False
+    issues = judgment.get("issues")
+    if not isinstance(issues, list):
+        return False
+    if not issues:
+        return True
     return any(isinstance(i, dict) and i.get("prob") is not None
                and i.get("type") in (1, 2, "1", "2")
-               for i in judgment.get("issues") or [])
+               for i in issues)
 
 
 def salvage(text):
@@ -118,7 +155,8 @@ def salvage(text):
     judgments already paid for. A failed parse falls back to object-by-object,
     then issue-by-issue with the patterns above.
 
-    Nothing is invented: a judgment no issue could be read out of is dropped.
+    Nothing is invented: a judgment no issue could be read out of is dropped,
+    unless it spells out an empty list, which is an answer rather than a gap.
     """
     try:
         data = json.loads(text)
@@ -142,7 +180,7 @@ def salvage(text):
             pass
         m = CLAUSE_ID_RE.search(chunk)
         issues = _issues_in(chunk)
-        if m and issues:
+        if m and (issues or EMPTY_ISSUES_RE.search(chunk)):
             out.append({"clause_id": m.group(1), "issues": issues})
             repaired += 1
     note = (f"invalid JSON; recovered {len(out)} judgment(s) object-by-object"

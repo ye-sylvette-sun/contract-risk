@@ -181,7 +181,8 @@ Each issue is three fields:
     itself, `2` for a defect in its relationship to the rest of the instrument.
   * `prob` — that a court would have something to construe on account of THIS
     issue, to two decimal places on a 0.01 grid (0.03, 0.17, 0.62 — do not round
-    to the nearest 0.05).
+    to the nearest 0.05). Always greater than 0: the entry exists because the
+    defect does, and one you would put at 0 is one you should not have listed.
 
 Take type 2 seriously: you can search this contract, so go and check, and name
 the other provision you checked against.
@@ -193,20 +194,23 @@ Write your answers to `predictions.json` in the working directory, as an object:
         "issues": [
           {{"issue": "\\"Reasonable efforts\\" is not defined and the section
                           sets no benchmark to measure it against.",
-            "type": 1, "prob": 0.44}},
-          {{"issue": null, "type": 2, "prob": 0.06}}
+            "type": 1, "prob": 0.44}}
         ]}},
+      {{"clause_id": "c002", "issues": []}},
       ...
     ]}}
 
-**How long the list should normally be: no named issue at all, or exactly one.**
+`c002` above is the ordinary case: a provision you read and found nothing
+nameable in gets an empty list. Every entry that IS in a list names a defect and
+carries a probability above 0 — there is no entry for "no issue here".
 
-  * Most provisions carry no nameable defect. Their answer is exactly two
-    entries, one per type, each with `issue` set to `null` and `prob` carrying
-    how likely that kind of dispute is anyway — both well below 0.5. That is the
-    ordinary answer and most of your list should look like it.
-  * A provision that does carry one names it and nothing else: one issue of one
-    type, plus a `null` entry for the other type.
+**How long the list should normally be: empty, or exactly one entry.**
+
+  * Most provisions carry no nameable defect, and their answer is an empty list.
+    Not an entry saying so, not a small probability standing in for one —
+    nothing. That is the ordinary answer and most provisions should get it.
+  * A provision that does carry a defect names it and nothing else: one entry,
+    of whichever type it is. The other type gets no entry at all.
   * Two issues of one type, or issues of both types, are the exception. Give
     them only when the extra defect is obvious and you would put a genuinely
     high probability on it in its own right. If you are hedging about the second
@@ -216,16 +220,21 @@ Write your answers to `predictions.json` in the working directory, as an object:
 
 Rules for that file:
 
-  * one entry for EVERY id in `provisions.json`, all {n} of them, same order
+  * one judgment for EVERY id in `provisions.json`, all {n} of them, same order
+    — including every provision you found nothing in, which gets `"issues": []`
+  * an OMITTED provision is not the same as an empty list. A provision you leave
+    out counts as unanswered, and you will be asked for it again; a provision
+    with an empty list is judged and done. Never drop a provision to say it is
+    clean — write the empty list
   * `clause_id` copied exactly — `c001`, not the provision's heading
-  * **never leave a type unrepresented** — a type with no entry is read as
-    probability 0, which is a stronger claim than you mean
+  * a type with no entry is read as probability 0, and that is what it means —
+    do not add an entry for the other type just to keep the two balanced
   * keep each `issue` to two sentences; you are producing a judgment, not a
     memorandum
   * a long issue list is not a better answer; it is usually a wrong one
-  * write the file even if you are unsure about some provisions; a missing entry
-    is scored as "not risky" at probability 0, which is the worst outcome
-    available to you — an entry you are unsure of is always better than none
+  * write the file even if you are unsure about some provisions; a provision
+    missing from the file is scored as "not risky" at probability 0 anyway, so
+    leaving it out buys you nothing and loses the judgment you did make
 
 **Work in batches and flush as you go.** Do not hold {n} judgments in your head
 and write them all at the end: if the session ends early, everything unwritten
