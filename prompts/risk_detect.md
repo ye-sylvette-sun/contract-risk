@@ -22,8 +22,9 @@ construction risk.
 Every issue is one of two types, and you report `1` or `2`.
 
 **RISK TYPE 1 — the defect is in this provision's own words.** You may need the
-rest of the contract to notice it, and your explanation will often cite other
-provisions to show it, but the words needing repair are these words.
+rest of the contract, or a document filed beside it, to notice it, and your
+explanation will often cite other provisions to show it, but the words needing
+repair are these words.
 
 **RISK TYPE 2 — the defect is relational.** The provision's own words are not
 what is in doubt. What is in doubt is how it stands with another part of the
@@ -74,7 +75,9 @@ say in combination?
 
 This is a way of looking, not a step you owe an answer to. Usually the
 counterpart turns out to be consistent and there is nothing to report. Where it
-does not, name the other provision — that is what a type-2 issue is.
+does not, name the other provision — that is what a type-2 issue is. Finding a
+counterpart tells you where you had to look; on its own it does not tell you
+where the defect is.
 
 #### Assigning the type
 
@@ -90,10 +93,15 @@ Treat it as a guide rather than a rule: where a defect genuinely sits across
 both, give it the type the dispute would most likely turn on. Apply it to the
 defect you have named, not to how you came to notice it or how you explain it.
 
+- **How you came to notice it does not decide the type.** Whether it took one
+  reading, three cross-references, or opening a document mounted beside this
+  one, the only question is where the trouble sits once you have found it. A
+  term left undefined here is type 1 even when it took an appendix to establish
+  that it is defined nowhere.
 - **What the other provision is doing decides the type.** Where it is evidence
   of what a word in this provision means, the words here are what needs repair
-  and the issue is type 1. Where the dispute is about the two together, the
-  issue is type 2.
+  and the issue is type 1. Where the dispute is about the two together — which
+  governs, or what they mean in combination — the issue is type 2.
 - **A term used inconsistently across the contract is normally type 1.** The
   defect is that the term was never pinned down; name the term.
 - **Type 2 is not only direct conflict.** Provisions that can be harmonised, but

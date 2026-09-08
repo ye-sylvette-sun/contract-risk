@@ -33,10 +33,15 @@ You are auditing a classification rule against data it was meant to reproduce.
 > both, give it the type the dispute would most likely turn on. Apply it to the
 > defect you have named, not to how you came to notice it or how you explain it.
 >
+> - **How you came to notice it does not decide the type.** Whether it took one
+>   reading, three cross-references, or opening a document mounted beside this
+>   one, the only question is where the trouble sits once you have found it. A
+>   term left undefined here is type 1 even when it took an appendix to establish
+>   that it is defined nowhere.
 > - **What the other provision is doing decides the type.** Where it is evidence
 >   of what a word in this provision means, the words here are what needs repair
->   and the issue is type 1. Where the dispute is about the two together, the
->   issue is type 2.
+>   and the issue is type 1. Where the dispute is about the two together — which
+>   governs, or what they mean in combination — the issue is type 2.
 > - **A term used inconsistently across the contract is normally type 1.** The
 >   defect is that the term was never pinned down; name the term.
 > - **Type 2 is not only direct conflict.** Provisions that can be harmonised, but
