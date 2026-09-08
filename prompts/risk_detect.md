@@ -97,23 +97,24 @@ verdict that the provision is sound.
 
 ### Calibration
 
-- A definite, consistent provision carries **no issue at all**; being litigated
-  is not itself a defect.
-- **If you can name it, list it — however unsure you are.** A defect you can put
-  into a sentence but would not bet on is a real entry with a low probability:
-  0.08, 0.15, 0.20. That is where most named issues belong, and the number does
-  real work — a provision you scored 0.15 on ranks far above one you left empty.
-- **Uncertainty goes into the probability; inability to name goes into the empty list.** 
-  Never use the empty list to express doubt about a defect you can see.
-  The question deciding between them is not "am I confident?" but "can I say
-  what is wrong?"
-- Reach 0.5 or above only on specific evidence: for **type 1**, name the
-  ambiguous term or the general-vs-specific tension; for **type 2**, name the
-  other provision you checked this one against. If you found none, write no
-  type-2 entry.
-- Use the whole range — 0.03, 0.17, 0.44 and 0.71 all mean different things. The
-  probability is that a court would have something to construe on account of the
-  defect, not your confidence in how it would decide.
+Two instructions that pull against each other on purpose. Hold both.
+
+**Be generous with entries.** If you can put a doubt into a sentence, write it
+down, however unsure you are. A 0.01 entry is a real answer, and it does real work: 
+it ranks the provision above one you left empty. Silence is for a provision you 
+looked at and found nothing nameable in. It is never the way to express that a 
+doubt seemed too small to write down.
+
+**Be sparing above 0.5.** In the contracts the worked examples come from, a
+court construed only a handful of provisions out of many hundreds — on the
+order of one or two in a hundred. Your own rate of scoring 0.5 or above should
+look about like that. Reaching 0.5 means naming the specific thing: for
+**type 1** the ambiguous term or the general-vs-specific tension, for **type 2**
+the other provision it cannot be squared with.
+
+Between those two ends use the whole range — 0.03, 0.17, 0.44, 0.71 and 0.92 all mean
+different things. The probability is that a court would have something to
+construe on account of the defect, not your confidence in how it would decide.
 
 ## DOCUMENT
 
@@ -160,32 +161,19 @@ Each issue is three fields:
   not rounded to the nearest 0.05 or 0.1, since the fine distinctions are what
   the number is for. Greater than zero, always.
 
-**How long the list should normally be.** Almost always: **empty, or exactly one
-entry.**
+**Ask about both types before moving on.** Having named a defect in the
+provision's own words, ask separately whether it also sits badly against another
+provision; having named a conflict, ask whether the words themselves are loose.
+Where you can name both, list both. The second entry is held to the same
+standard as the first — that you can say what is wrong, not that you are
+confident — so it belongs in the list at 0.10 as readily as at 0.60.
 
-- **Nothing you can name — an empty list.** Not an entry saying so; nothing.
-  Reach it by looking and finding nothing, not by judging a defect you can see
-  too weak to be worth writing down.
-- **A defect you can name — one entry**, of whichever type it is, at whatever
-  probability it deserves. The other type gets no entry at all.
-- **Two issues of one type, or issues of both types, are the exception.** Give
-  them only when the extra defect is *obvious* and carries a genuinely high
-  probability in its own right. Could you state it to a judge, on its own, and
-  expect to be taken seriously? If not, leave it out and let the first issue's
-  probability carry your uncertainty.
-
-Two things the scoring does with your list:
-
-- **A type with no entry is read as probability 0.** If you can name a type-1
-  defect but nothing relational, list the type-1 issue and stop — do not add a
-  type-2 entry to keep the two balanced.
-- **An empty list puts the provision below every provision you named something
-  in.** That is correct when there was nothing to name and wrong when there was
-  something you passed over, so spend the effort on looking.
+A type with no entry is read as probability 0, and an empty list puts the
+provision below every provision you named something in. Both are correct when
+there was nothing to name, and wrong when there was something you passed over.
 
 Probabilities are per issue and independent: they are not shares of anything and
-do not sum to 1. Two weak issues do not make a strong provision, and a long list
-is not a better answer.
+do not sum to 1.
 
 ## TASK
 
