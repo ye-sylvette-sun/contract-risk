@@ -138,7 +138,19 @@ def write_examples(root, examples):
 
 
 def build_workspace(cid, clauses, registry, examples):
-    """Lay out one contract's workspace. Returns (dir, real_of)."""
+    """Lay out one contract's workspace. Returns (dir, real_of, context).
+
+    `context/` holds the other contracts filed in the same case. Step 2 was
+    shown all of them when it decided what the court construed, so 39 of the
+    dataset's issues — 36 of its positives — turn on a document that is not
+    this one, and a session given only `contract.txt` could not reach them
+    however well it read. The court had the whole transaction in front of it;
+    this is the same set, and nothing more.
+
+    It leaks nothing: these are the same raw contract files the corpus is cut
+    from, with no clause list, no ids and no labels. The provisions to judge
+    still come only from `contract.txt`.
+    """
     root = WS / cid
     if root.exists():
         shutil.rmtree(root)
@@ -147,6 +159,16 @@ def build_workspace(cid, clauses, registry, examples):
     shutil.copyfile(lib.ROOT / registry[cid]["file"], root / "contract.txt")
     write_examples(root, examples)
 
+    # Every sibling, not the ones an issue happens to name: choosing would tell
+    # the model which documents matter, which is part of what it is being asked.
+    context = [c for c in (clauses[0].get("context_contract_ids") or "").split(",")
+               if c]
+    if context:
+        (root / "context").mkdir()
+        for other in context:
+            shutil.copyfile(lib.ROOT / registry[other]["file"],
+                            root / "context" / f"{other}.txt")
+
     # Opaque ids in document order. The dataset's own pos1/neg1 ids would put
     # the gold label on the door of every provision.
     shown, _opaque_of, real_of = runs.anonymise(clauses)
@@ -154,10 +176,10 @@ def build_workspace(cid, clauses, registry, examples):
         [{"id": oid, "name": c["clause_name"], "text": runs.flat(c["clause_text"])}
          for oid, c in zip(real_of, shown)],
         ensure_ascii=False, indent=2), encoding="utf-8")
-    return root, real_of
+    return root, real_of, context
 
 
-def task_prompt(cid, citation, n, examples):
+def task_prompt(cid, citation, n, examples, context=()):
     """What to do with the workspace. The judging criteria are in the SYSTEM
     prompt, taken verbatim from prompts/risk_detect.md so both arms are asked the same
     question in the same words.
@@ -174,6 +196,19 @@ def task_prompt(cid, citation, n, examples):
     """
     dirs = "\n".join(
         f"    examples/{e['code']}_{e['row']['contract_id']}/" for e in examples)
+    ctx = ("" if not context else
+           f"""    context/              the other {len(context)} document(s) filed in the same case
+"""
+           + "\n".join(f"    context/{c}.txt" for c in context) + "\n")
+    ctx_step = ("" if not context else f"""3. **The case filed {len(context)} other document(s), and they are in `context/`.**
+   The court read them together with this one, and a provision here can fail to
+   square with something in one of them — a policy against the endorsement that
+   amends it, a memorandum against the declaration of trust that governs it.
+   Skim what each one is, and go back to it when a provision points outward.
+   You judge only the provisions in `provisions.json`, every one of which is
+   from `contract.txt`; the context documents are there to be read, not judged.
+""")
+    last = 4 if context else 3
     return f"""You are judging contract `{cid}`, filed in {citation}.
 
 Your working directory is `/work`, and it holds everything you need. Every path
@@ -183,7 +218,7 @@ a directory of your own. Nothing outside `/work` is readable.
     contract.txt          the contract to judge, in full
     provisions.json       the {n} provisions to judge, in the order they appear
                           in the contract, each with an id like `c001`
-    examples/             one worked pair per risk type — read these FIRST
+{ctx}    examples/             one worked pair per risk type — read these FIRST
 {dirs}
 
 Work in this order.
@@ -195,7 +230,7 @@ Work in this order.
 2. Read `contract.txt`. You need the whole instrument for risk type 2: a conflict
    cannot be seen from one provision alone. It is long — read it in pieces, and
    use Grep to chase a defined term or a cross-reference wherever it leads.
-3. Read `provisions.json` and judge every provision in it.
+{ctx_step}{last}. Read `provisions.json` and judge every provision in it.
 
 For each provision return an **issue list** — one entry per distinct defect a
 court could be asked to construe, each with its own probability. A provision may
@@ -379,19 +414,25 @@ async def judge_contract(cid, clauses, registry, examples, system_prompt, image,
                          auth_extra, gate, sem, counter, total):
     async with sem:
         await gate.wait()
-        root, real_of = build_workspace(cid, clauses, registry, examples)
+        root, real_of, context = build_workspace(cid, clauses, registry, examples)
 
         # Prompts live outside /work so the workspace holds exactly what the
-        # model is meant to see: contract.txt, provisions.json, examples/.
+        # model is meant to see: contract.txt, provisions.json, context/,
+        # examples/.
         task_dir = Path(tempfile.mkdtemp(prefix=f"task_{cid[:24]}_"))
         (task_dir / "system_prompt.txt").write_text(system_prompt, encoding="utf-8")
         (task_dir / "task_prompt.txt").write_text(
-            task_prompt(cid, clauses[0]["citation"], len(clauses), examples),
+            task_prompt(cid, clauses[0]["citation"], len(clauses), examples,
+                        context),
             encoding="utf-8")
 
         n = next(counter)
+        ctx = (f", {len(context)} context doc(s) "
+               f"({sum(p.stat().st_size for p in (root / 'context').iterdir()):,} chars)"
+               if context else "")
         print(f"[{n}/{total}] {cid}: {len(clauses)} provisions, "
-              f"{(root / 'contract.txt').stat().st_size:,}-char contract", flush=True)
+              f"{(root / 'contract.txt').stat().st_size:,}-char contract{ctx}",
+              flush=True)
 
         started = time.time()
         try:
@@ -519,8 +560,13 @@ async def run(args):
     # Rendered with neutral placeholders because cid, citation and the provision
     # count vary per contract; `examples` is the real one, since the workspace
     # listing is built from it.
+    # Both branches, because the context paragraph only renders for a contract
+    # with siblings and a hash of the other branch would not move when it
+    # changed. This prompt is built in code, so its digest is the only record
+    # of what was asked; `prompt_sha256` covers only the files under prompts/.
     opts["task_prompt"] = "sha256:" + hashlib.sha256(
-        task_prompt("", "", 0, examples).encode("utf-8")).hexdigest()
+        (task_prompt("", "", 0, examples)
+         + task_prompt("", "", 0, examples, ["sibling"])).encode("utf-8")).hexdigest()
     opts["cwd"] = "/work"
     started = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     man = manifest.Manifest(
