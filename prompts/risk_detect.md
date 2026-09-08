@@ -25,9 +25,10 @@ Every issue is one of two types, and you report `1` or `2`.
 rest of the contract to notice it, and your explanation will often cite other
 provisions to show it, but the words needing repair are these words.
 
-**RISK TYPE 2 — the words are adequate; the defect is the fit.** Read alone the
-provision is clear. Set against another, the two cannot both be given effect,
-and rewriting this one would not resolve it.
+**RISK TYPE 2 — the defect is relational.** The provision's own words are not
+what is in doubt. What is in doubt is how it stands with another part of the
+instrument: whether the two can both be given effect, what this one means once
+they are read together, or which of them controls.
 
 **LOWER RISK** — nothing in the provision's wording, and nothing in its fit with
 the rest of the instrument, gives a court something to construe. In any contract
@@ -43,9 +44,11 @@ you report:
   meaning; **1.3** general-vs-specific / list scope, a catch-all sitting against
   enumerated specifics (ejusdem generis, expressio unius), or drafting so
   one-sided that a genuine ambiguity goes against its drafter.
-- **Type 2** — **2.1** direct conflict with another operative provision;
-  **2.2** whole-instrument incoherence that survives any harmonising reading;
-  **2.3** a recital pointing away from an operative term.
+- **Type 2** — **2.1** direct conflict, where this clause cannot be squared with
+  another of the same contract; **2.2** whole-contract coherence, where the
+  clause's meaning only comes out, or falls apart, when the contract is read as
+  a whole; **2.3** a recital conflicting with, or argued to control, the
+  operative terms.
 
 ### Detection guidelines
 
@@ -57,23 +60,45 @@ sides could read it differently and the dispute would turn on the words. This is
 commercially significant. A long, carefully drafted limitation of liability is
 usually lower risk; a short phrase like `Free land` can be high risk.
 
+#### A way to look for the relational reading
+
+Most provisions have a counterpart somewhere — the section they are made
+subject to, the definition they turn on, the clause covering the same ground
+more generally or more specifically, the amendment or endorsement that
+qualifies them, the recital reciting what they were for. It is often worth
+asking which one that is here, and then
+whether reading them together changes what this one means. Read this provision
+the natural way: does that leave the other with nothing left to do, contradict
+what the instrument plainly does elsewhere, or turn the answer on what the two
+say in combination?
+
+This is a way of looking, not a step you owe an answer to. Usually the
+counterpart turns out to be consistent and there is nothing to report. Where it
+does not, name the other provision — that is what a type-2 issue is.
+
 #### Assigning the type
 
-A useful test is to ask what would have to change to remove the dispute. If
-rewriting **this provision alone** would ordinarily do it, that points to
-**type 1**. If the provision is sound as written and the fix lies in **another
-provision**, or in deciding which of two governs, that points to **type 2**.
+A useful test is to ask where the trouble lies. If it is **inside this
+provision** — a word that can be read more than one way, a writing mistake, a
+general term whose reach against its own list is unclear — that points to
+**type 1**. If it is in **how this provision stands with another part of the
+instrument** — the two cannot both be given effect, or what this one means only
+settles once they are read together, or a recital pulls against operative
+words — that points to **type 2**.
 
 Treat it as a guide rather than a rule: where a defect genuinely sits across
 both, give it the type the dispute would most likely turn on. Apply it to the
 defect you have named, not to how you came to notice it or how you explain it.
 
-- **The evidence you cite does not decide the type.** Pointing out where else a
-  term appears is ordinary support for an ambiguity. An issue stays type 1
-  however many cross-references it takes to demonstrate.
+- **What the other provision is doing decides the type.** Where it is evidence
+  of what a word in this provision means, the words here are what needs repair
+  and the issue is type 1. Where the dispute is about the two together, the
+  issue is type 2.
 - **A term used inconsistently across the contract is normally type 1.** The
-  defect is that the term was never pinned down; name the term. Type 2 needs two
-  provisions, each clear in itself, that cannot both be given effect.
+  defect is that the term was never pinned down; name the term.
+- **Type 2 is not only direct conflict.** Provisions that can be harmonised, but
+  only by deciding what they mean together, and a recital pulling against
+  operative words, are type 2 as much as two clauses that cannot both stand.
 
 #### What the worked examples do and do not tell you
 
@@ -110,7 +135,8 @@ court construed only a handful of provisions out of many hundreds — on the
 order of one or two in a hundred. Your own rate of scoring 0.5 or above should
 look about like that. Reaching 0.5 means naming the specific thing: for
 **type 1** the ambiguous term or the general-vs-specific tension, for **type 2**
-the other provision it cannot be squared with.
+the other part of the instrument this one stands against, and what the two
+together leave open.
 
 Between those two ends use the whole range — 0.03, 0.17, 0.44, 0.71 and 0.92 all mean
 different things. The probability is that a court would have something to
@@ -152,10 +178,11 @@ Each issue is three fields:
 
 - `issue` — two sentences naming **this specific defect**. For risk type 1,
   name the ambiguous term or the general-vs-specific tension. For risk type 2,
-  **name the other provision** it cannot be squared with. One issue, one defect:
-  if you find yourself writing "and also", that is a second issue.
-- `type` — `1` if rewriting this provision alone would remove the dispute; `2`
-  if the fix lies in another provision, or in deciding which of two governs.
+  **name the other part of the instrument** this one stands against, and say
+  what the two together leave open. One issue, one defect: if you find yourself
+  writing "and also", that is a second issue.
+- `type` — `1` if the trouble is inside this provision's own words; `2` if it is
+  in how this provision stands with another part of the instrument.
 - `prob` in (0, 1] — that a court would have something to construe **on account
   of this issue**. To **two decimal places**, on a 0.01 grid: 0.03, 0.17, 0.62,
   not rounded to the nearest 0.05 or 0.1, since the fine distinctions are what

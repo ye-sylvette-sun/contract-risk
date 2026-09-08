@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "verdicts"
+  ],
+  "properties": {
+    "verdicts": {
+      "type": "array",
+      "description": "One verdict per issue id listed in the task, in the order given.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "issue_id",
+          "type",
+          "clarity",
+          "rewrite",
+          "note"
+        ],
+        "properties": {
+          "issue_id": {
+            "type": "string",
+            "description": "The issue id, copied exactly."
+          },
+          "type": {
+            "type": "integer",
+            "enum": [
+              1,
+              2
+            ],
+            "description": "The type the quoted rule yields for this defect. 1 if rewriting the provision alone would ordinarily remove the dispute; 2 if the provision is sound as written and the fix lies in another provision, or in deciding which of two governs. This is the rule's answer, not the answer you would give on other grounds."
+          },
+          "clarity": {
+            "type": "string",
+            "enum": [
+              "clear",
+              "arguable",
+              "underdetermined"
+            ],
+            "description": "How clearly the rule decides this one. `clear` if a careful reader applying it honestly would land on the same type; `arguable` if it can be applied either way and you have given the more natural reading; `underdetermined` if the rule genuinely does not decide it."
+          },
+          "rewrite": {
+            "type": "string",
+            "description": "One sentence naming concretely what would have to change to remove the dispute -- the term to define, the sentence to rewrite, the choice between two provisions to make express. This is the working of the test, so it should say WHERE the change falls."
+          },
+          "note": {
+            "type": "string",
+            "description": "Empty string unless the rule's answer differs from the one you would give on your own reading, or the defect sits genuinely across both types. Where it does, say in one sentence what the rule misses. This is the field the audit is for."
+          }
+        }
+      }
+    }
+  }
+}
