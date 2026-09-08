@@ -347,7 +347,7 @@ rather than charged; caching absorbed 85% of the input side. Expect the repeat
 to cost about the same: the evaluation set is 11,921 provisions against 11,636.
 
 **Read the repeat against the length baseline, not against the table above.**
-Length alone now ranks provisions at within-contract ROC-AUC **0.705**, where
+Length alone now ranks provisions at within-contract ROC-AUC **0.712**, where
 the superseded build gave 0.523. That is not a regression in the pipeline —
 DATASET.md §6 sets out why the old figure was the artifact — but it does mean a
 headline AUC has a much higher floor to clear than it did, and the two builds'

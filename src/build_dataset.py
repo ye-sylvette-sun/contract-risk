@@ -91,7 +91,6 @@ def main():
     scope_of = {(r["contract_id"], r["clause_id"], r["issue_index"]): r
                 for v in lib.read_json(lib.OUT / "issue_scope.json", {}).values()
                 for r in v.get("scopes", [])}
-    unreachable = []
     if scope_of:
         out = Counter(r["scope"] for r in scope_of.values())
         print(f"issue_scope.json: {len(scope_of)} issue(s) carry a scope — "
@@ -108,7 +107,27 @@ def main():
     # of these character for character is dropped below.
     positive_texts = {by_id[k]["text"] for k in positive if k in by_id}
 
+    # A positive whose every issue is out of reach takes its whole contract with
+    # it. Dropping the clause alone would not do: the experiment shows the model
+    # the entire contract and asks it to judge the provisions listed, so a hole
+    # in that list is a clause the model can read and is never asked about — and
+    # the hole would sit exactly where a court found a defect. Judging part of a
+    # contract is not the task, so the contract leaves the corpus.
+    unreachable = {}
+    for (cid, clause_id), (_, _, d) in positive.items():
+        if not any(scope_of.get((cid, clause_id, n), {}).get("scope", "clause")
+                   in REACHABLE for n in range(len(d["issues"]))):
+            unreachable.setdefault(cid, []).append(clause_id)
+    if unreachable:
+        print(f"\n{len(unreachable)} contract(s) dropped whole: a clause the court "
+              f"construed has no issue a contract reader could reach")
+        for cid in sorted(unreachable):
+            print(f"    {cid}  ({', '.join(sorted(unreachable[cid]))})")
+        print()
+
     for cid in sorted(inventory):
+        if cid in unreachable:
+            continue
         inv = inventory[cid]
         citation = inv["citation"]
         if citation not in disputes:
@@ -139,19 +158,14 @@ def main():
         for c in inv["clauses"]:
             hit = positive.get((cid, c["clause_id"]))
 
-            # Step 3's verdict, applied. An issue out of reach is dropped, and
-            # a positive left with none goes with it — NOT relabelled. The
-            # court construed this clause; calling it NEGATIVE because the
-            # material it turned on is missing would assert the opposite of
-            # what the corpus knows. Same rule, same reason, as the verbatim
-            # duplicate below.
-            issues = (scoped(hit[2]["issues"], cid, c["clause_id"], scope_of)
-                      if hit else [])
-            issues = [i for i in issues
+            # Step 3's verdict, applied. An issue out of reach is dropped; a
+            # positive keeps the row as long as one issue survives, and the
+            # whole-contract skip above has already removed the ones where none
+            # does, so this cannot empty a positive's list.
+            issues = [i for i in (scoped(hit[2]["issues"], cid, c["clause_id"],
+                                         scope_of) if hit else [])
                       if i.get("scope", "clause") in REACHABLE]
-            if hit and not issues:
-                unreachable.append((cid, c["clause_id"]))
-                continue
+            assert not hit or issues, f"{cid}/{c['clause_id']} kept with no issue"
 
             if hit is None and c["text"] in positive_texts:
                 # Same words, somewhere else. A clause reproducing a positive
@@ -202,12 +216,6 @@ def main():
                     dict.fromkeys(i["opinion_comment"] for i in issues)),
             })
         print(f"{cid}: {n_pos} positive, {n_neg} negative")
-
-    if unreachable:
-        print(f"\n{len(unreachable)} positive(s) dropped: every issue the court "
-              f"construed in them turns on material the corpus does not hold")
-        for cid, clause_id in unreachable:
-            print(f"    {cid}/{clause_id}")
 
     # A clause step 2 named that step 1 never listed would be a silent hole.
     # `check()` rejects those at source, so this asserts the invariant holds

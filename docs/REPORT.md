@@ -16,7 +16,7 @@ it did not?
 > thing.
 >
 > One difference matters more than the rest: length alone now ranks provisions
-> at within-contract ROC-AUC **0.705**, where this run's dataset gave 0.523.
+> at within-contract ROC-AUC **0.712**, where this run's dataset gave 0.523.
 > DATASET.md §6 explains why the old figure was the artifact and the new one is
 > the property. A headline AUC has a much higher floor to clear than it did
 > here.
@@ -178,7 +178,7 @@ once second-guessed it was removed as too ad hoc. A human spot-check of a few
 dozen positives would put a number on it; that has not been done.
 
 **A positive is not one dispute.** (Fixed since: the rebuilt step 2 records each
-defect separately, so the current dataset carries 267 issues over 202 positives
+defect separately, so the current dataset carries 242 issues over 179 positives
 and the issue-level denominator is real.) The 201 positives trace to 138 distinct
 opinion passages: 101 map to a single clause, the rest to two or more, because a
 court often construes several provisions in one discussion. One passage covers 9
