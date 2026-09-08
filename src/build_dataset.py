@@ -28,14 +28,42 @@ Usage:
 """
 import csv
 import json
-from collections import Counter
+from collections import Counter, defaultdict
 
 import lib
 
+
+# The scopes a reader holding the contract and its siblings can reach. An
+# `external` issue turns on case-specific material the corpus does not have —
+# an email, a course of dealing, an exhibit never filed, a document whose OCR
+# stops early — so no harness can put it within reach, and scoring against it
+# measures the record rather than the reader. General knowledge is not
+# `external`: `prompts/issue_scope.md` puts the law, terms of art and ordinary
+# usage on the reader's side of the line.
+REACHABLE = ("clause", "contract", "case")
+
+
+def scoped(issues, cid, clause_id, scope_of):
+    """Step 2's issues, each carrying step 3's scope where one was recorded.
+
+    A copy, so nothing writes back into the loaded `disputes.json`. An issue is
+    matched by its position in the clause's list, which step 2 sorts and this
+    step does not reorder; an issue with no scope is passed through unchanged
+    rather than given a default, because "not annotated" and "visible from the
+    clause alone" are different claims.
+    """
+    out = []
+    for n, i in enumerate(issues):
+        s = scope_of.get((cid, clause_id, n))
+        out.append({**i, "scope": s["scope"], "scope_needs": s["needs"]}
+                   if s else dict(i))
+    return out
+
 FIELDS = ["citation", "taxonomy", "taxonomy_provenance", "key", "clause_id",
           "clause_name", "label", "provenance", "case_desc", "contract_id",
-          "contract_file", "source_lines", "source_span", "clause_text",
-          "anchor_score", "n_issues", "issues", "opinion_comment"]
+          "contract_file", "context_contract_ids", "source_lines",
+          "source_span", "clause_text", "anchor_score", "n_issues", "issues",
+          "opinion_comment"]
 
 
 def main():
@@ -46,6 +74,28 @@ def main():
     if not inventory or not disputes:
         raise SystemExit("run step 1 and step 2 first")
     rows = []
+
+    # The other documents of the same case, which is exactly what step 2 was
+    # shown when it decided what the court construed. A reader given only the
+    # target contract cannot see an issue that lives in the fit between two of
+    # them, so the set is recorded per row rather than left to be rederived
+    # from the id prefix — `contracts.json` holds 14 documents step 1 never
+    # inventoried, and those were not before the annotator either.
+    siblings = defaultdict(list)
+    for cid, inv in inventory.items():
+        if inv["clauses"]:
+            siblings[inv["citation"]].append(cid)
+
+    # Step 3, if it has run. Optional by construction: it annotates issues and
+    # changes no label, so a build without it produces what it always did.
+    scope_of = {(r["contract_id"], r["clause_id"], r["issue_index"]): r
+                for v in lib.read_json(lib.OUT / "issue_scope.json", {}).values()
+                for r in v.get("scopes", [])}
+    unreachable = []
+    if scope_of:
+        out = Counter(r["scope"] for r in scope_of.values())
+        print(f"issue_scope.json: {len(scope_of)} issue(s) carry a scope — "
+              + ", ".join(f"{k} {out[k]}" for k in REACHABLE + ("external",)))
 
     # Every disputed clause, keyed the way a row is keyed. This IS the label.
     positive = {(d["contract_id"], d["clause_id"]): (citation, found, d)
@@ -88,6 +138,21 @@ def main():
         n_pos = n_neg = 0
         for c in inv["clauses"]:
             hit = positive.get((cid, c["clause_id"]))
+
+            # Step 3's verdict, applied. An issue out of reach is dropped, and
+            # a positive left with none goes with it — NOT relabelled. The
+            # court construed this clause; calling it NEGATIVE because the
+            # material it turned on is missing would assert the opposite of
+            # what the corpus knows. Same rule, same reason, as the verbatim
+            # duplicate below.
+            issues = (scoped(hit[2]["issues"], cid, c["clause_id"], scope_of)
+                      if hit else [])
+            issues = [i for i in issues
+                      if i.get("scope", "clause") in REACHABLE]
+            if hit and not issues:
+                unreachable.append((cid, c["clause_id"]))
+                continue
+
             if hit is None and c["text"] in positive_texts:
                 # Same words, somewhere else. A clause reproducing a positive
                 # character for character carries whatever made that positive
@@ -117,19 +182,32 @@ def main():
                 "case_desc": found["case_desc"],
                 "contract_id": cid,
                 "contract_file": entry["file"],
+                "context_contract_ids": ",".join(
+                    x for x in sorted(siblings[citation]) if x != cid),
                 "source_lines": f"{c['lines'][0]}-{c['lines'][1]}",
                 "source_span": f"{c['span'][0]}-{c['span'][1]}",
                 "clause_text": c["text"],
                 "anchor_score": c["score"],
-                "n_issues": len(d["issues"]) if d else 0,
+                "n_issues": len(issues),
                 # The per-issue detail, as JSON in one column: the risk type,
-                # the sentence naming the defect, and the passage that shows it.
-                # Issue-level scoring reads this; nothing else needs to.
-                "issues": json.dumps(d["issues"], ensure_ascii=False) if d
-                          else "[]",
-                "opinion_comment": d["opinion_comment"] if d else "",
+                # the sentence naming the defect, the passage that shows it,
+                # and — where step 3 has run — what a reader must hold to see
+                # it at all. Issue-level scoring reads this; nothing else does.
+                "issues": json.dumps(issues, ensure_ascii=False) if d else "[]",
+                # Rebuilt from the issues that survived, not copied from step
+                # 2: a passage whose only issue was dropped has nothing left to
+                # explain, and leaving it would show the reader a defect the
+                # row no longer claims. Duplicates fold, as they do in step 2.
+                "opinion_comment": "\n\n".join(
+                    dict.fromkeys(i["opinion_comment"] for i in issues)),
             })
         print(f"{cid}: {n_pos} positive, {n_neg} negative")
+
+    if unreachable:
+        print(f"\n{len(unreachable)} positive(s) dropped: every issue the court "
+              f"construed in them turns on material the corpus does not hold")
+        for cid, clause_id in unreachable:
+            print(f"    {cid}/{clause_id}")
 
     # A clause step 2 named that step 1 never listed would be a silent hole.
     # `check()` rejects those at source, so this asserts the invariant holds
@@ -190,6 +268,25 @@ def main():
     if spread:
         print("  issues per positive: " + ", ".join(
             f"{n}x{spread[n]}" for n in sorted(spread)))
+
+    fam = [r for r in rows if r["context_contract_ids"]]
+    print(f"{len(fam)} row(s) in {len({r['contract_id'] for r in fam})} contracts "
+          f"have sibling documents in their case; "
+          f"{len(rows) - len(fam)} stand alone")
+
+    # What a one-document reader can and cannot reach, where step 3 has run.
+    # `case` is the part mounting the siblings recovers; `external` is the part
+    # nothing recovers, and belongs in the limits rather than in a score.
+    scopes = [(i.get("risk_type", ""), i["scope"])
+              for r in pos for i in json.loads(r["issues"]) if "scope" in i]
+    if scopes:
+        for code, label in (("1", "risk type 1"), ("2", "risk type 2")):
+            sub = [s for t, s in scopes if t.startswith(code)]
+            if sub:
+                c = Counter(sub)
+                print(f"  {label} issue scope: " + "  ".join(
+                    f"{k} {c[k]} ({100 * c[k] / len(sub):.0f}%)"
+                    for k in ("clause", "contract", "case", "external") if c[k]))
     if scores:
         print(f"anchor score: {min(scores):.2f} worst, "
               f"{sum(scores) / len(scores):.3f} mean, "

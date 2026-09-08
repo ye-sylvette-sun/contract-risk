@@ -1,0 +1,51 @@
+{
+  "system": "You are a careful reader of litigation records.\n\nYou are given every contract filed in one case and a list of issues a court\nconstrued in them. For each issue you say what a reader would have to have in\nfront of them to see that issue at all.\n\n### The four scopes\n\n- **`clause`** — the issue is visible in the quoted clause by itself. Someone\n  handed that clause and nothing else could state the defect.\n- **`contract`** — the issue needs other provisions of the **same** contract.\n  A term defined in one section and used in another, a conflict between two\n  clauses of one instrument, a catch-all read against a list elsewhere in it.\n- **`case`** — the issue needs a **different document filed in this case**. Name\n  the `contract_id`. This is the scope for a conflict between two instruments of\n  one transaction: a memorandum against the declaration of trust that governs\n  it, a guaranty against the agreement it secures, a policy against the\n  endorsement that amends it.\n- **`external`** — the issue needs **case-specific material that is not shown**:\n  a document the record does not hold (an exhibit incorporated by reference but\n  never filed, an earlier agreement, a rulebook the filing omits, a document\n  whose filed text stops before the provision), or evidence of what these\n  parties did (an email, a conversation, a payment, a course of dealing). Say\n  what is missing.\n\n### General knowledge is not external material\n\nYou read as a competent contract analyst, and everything such a reader is\nexpected to bring already counts as **available**:\n\n- **the law** — statutes, regulations, doctrine, and published decisions,\n  including ones this very case cites;\n- **terms of art** and what they mean in the relevant industry;\n- **ordinary English usage**, and how instruments of this kind normally work.\n\nAn issue that needs the clause plus that background is `clause`, not `external`.\nThe test for `external` is whether the missing thing is **particular to this\ncase** — these parties, this transaction, this record — and absent from the\ndocuments above. \"A reader would have to know what a receiver is\" is not\nmissing material. \"A reader would have to see the letter of 28 April 2008\" is.\n\n### What decides the scope\n\nAsk what a reader must be able to *read* to state this defect — not what would\nbe useful, not what a lawyer would consult to be thorough, and not what the\ncourt happened to cite while explaining itself.\n\n- An opinion citing a sibling document does not by itself make the issue `case`.\n  Courts recite the surrounding transaction routinely. The question is whether\n  the defect **disappears** if that document is taken away.\n- If the clause's own words carry the defect, the scope is `clause` even where\n  the court reached for the rest of the instrument to confirm it.\n- Where two scopes both fit, choose the **narrowest one that is sufficient**.\n  `clause` over `contract`, `contract` over `case`, `case` over `external`.\n\n### The one thing that is not your judgement\n\n**Whether the issue is real, correctly typed, or well described is settled.**\nYou are not reviewing step 2. Even where you would have described the defect\ndifferently, answer for the issue as written.",
+  "document_sha256": "6497ae82d808a91863ae7d80cf3e8f4d7c23277825d4de1e38613eed1b47c8b2",
+  "document_chars": 142909,
+  "instructions": "Take the issues one at a time, in the order given.\n\n1. **Read the clause, and the opinion around the lines the issue names.** Could\n   you state this defect from the clause's words alone? If so the scope is\n   `clause` and you are done.\n2. **Look in the same contract.** Is the missing piece a definition, a\n   cross-reference, or a competing provision of the document the clause came\n   from? Then `contract`.\n3. **Look at the other documents above.** If one of them holds what the issue\n   turns on, the scope is `case` — and `needs` names its `contract_id`.\n4. **Otherwise `external`**, and `needs` says in a few words what is missing.\n\nAnswer for every issue id listed, once each, and nothing else.",
+  "task": "### The issues recorded in this case\n\nEach carries the clause it was found in, the risk type step 2 assigned, the\nsentence naming the defect, and the passage of the opinion it came from.\n\n### i001\n- **contract:** 894F3d509_delaware_river_basin_compact\n- **clause:** c038 — Section 3.8 Referral and Review\n- **risk type:** 1.1\n- **the defect step 2 recorded:** The term “project” in § 3.8 was ambiguous as to which undertakings must be submitted to and approved by the Commission.\n\nThe clause, verbatim:\n\n```\n3.8 Referral and Review. No project having a substantial effect on the water resources of the basin shall hereafter be undertaken by any person, corporation or governmental authority unless it shall have been first submitted to and approved by the commission, subject to the provisions of Sections 3.3 and 3.5. The commission shall approve a project whenever it finds and determines that such project would not substantially impair or conflict with the comprehensive plan and may modify and approve as modified, or may disapprove any such project whenever it finds and determines that the project would substantially impair or conflict with such plan. The commission shall provide by regulation for the procedure of submission, review and consideration of projects, and for its determinations pursuant to this section. Any determination of the commission hereunder shall be subject to judicial review in any court of competent jurisdiction.\n```\n\nThe passage of the opinion it came from — **lines 2-2**, an extract; the court's reasoning may run past it:\n\n```\nI agree with my colleagues that the term \"project,\" as used in Section 3.8 of the Delaware River Basin Compact, is ambiguous, and that the matter should be remanded to the District Court for fact-finding respecting the Compact drafters' intent. But I have a considerable concern-involving my colleagues' characterization and evaluation of some of the parties' arguments on the central issue in this case-that precludes me from joining in full their well crafted Opinion.\n```\n\n### What to return\n\nOne entry per issue id above, in the same order.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 28980,
+    "input_tokens_details": {
+      "cache_write_tokens": 27854,
+      "cached_tokens": 1123
+    },
+    "output_tokens": 277,
+    "output_tokens_details": {
+      "reasoning_tokens": 207
+    },
+    "total_tokens": 29257
+  },
+  "response": [
+    {
+      "id": "rs_0a9db10d743d7c8c006a9fb24ecf8087d087e8341649289b64",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqn7JUX0XYBEzfu3cAapnZxFWmvNSsKZd_Iu1cprSssxBe5YKs-4DPR-PJ4OKGhSawpIp9OVmWtleqHohho-q7dZagGOesst8Wv2UUBmrN44GsktWsvVYwbOfdWhNZzSJfKOaH3ErWlnLwECxzpr-4vyugHgymLTHrWJcYTiSuD2fsFcsDj87IZBg1bcvytd8HtsBjJLoy_WWt8MdlsdcwYizus67GemG88Snc13ykMoP9bh-fLurtoTiwSSPBTqfrnSaMIht0IuR3b4vZxvu0UqwOcneR2Yl75-6dt4vpJO3MPW2Z3VSS_fHDf9HThDCWxqHRCTJcJCMpJxLi--dpKn6B6rHzESozzUHWFqVM4Nwm4d-KByue8pmukhE9yMbAmZff3I3T8gZDtlDSL2xii3s36qg52Ew3ZKKO-jrkSP6oE2IqGqSZJ2O8m1tpCBo0xvQCS9B8KLJrp9e-z9gm-_JcnmpXcsdDgmQsFafG0ux2Oq9pBO5WoV3uUE30E_8kOV04WVC1HH1crzPl4lv2qKKIBgJY_vMz3xPiJ54PzyP-vlSsH3binRzSLPdPapcjMzv7Ib4bAWflax5eKFwOzJxCqYWp8F1PT6afger13f7ruISN-ywojkiPjPTUwjibtVwMrsAqKGYqvqEU__F6PdptGV-sM0NrZFpsoTTtXUzqWwa71MECF9c4cksEslBjSCBt1_L7hgbjMInwSRlH7JPRSQIzwtfteyJ1e7OiX4k1cx0Iws9fzpg2KAbAGwqzc4T-Emp5mxk2784mCMFjG-jCVOSfRZqbbd_WeOeXkCrKnmc_zUr0zj3Du5rmY7vo77uDLhUG1cTWfHLzmSGjCxbf_mJcQTy_3qIzQhTn6ECDXOCanQnMLGYYnoVdDgPBvOx6wf0VZt14bEy-BpNFqhUqvAzUOorL1c7yAtM_JhvDwLmsXagKfpr_jhI2bU_g6ESi8boBfYiGY1blJ7pAPhV2IFwlpTIQuqCXYmHUI2Dr4C7_Xg2KdqHDdhVJ726OftAlZXWXq6z6JyjvmKyiigiBAAbDTXzRDZuYKhKZf_mjG-9o9jKzYhwvOvGnxrh-2gvcwGhzzU2hUgdVdZuzLf4mbExufwaCJfvavT0uaKchXb7jlSggVNEFkzXhqwAlQVHMV2u0ZItTwE0Q8Ifkf3bxwWT3_H5ixA7KNw3NuOoRIqRrZSyuft5RZFzEw8Nhkyw4NMK35S9PCSC8l2AQ7puVeSL_zp6HxNVJGGytXqavbFOl14Ztxl_7K2XRpQmNtY_4dV2_9zFK4yJJtoJ_iDgNq26ZwUry6qZnf0aAk5GrRNs37GA32_um2UIDYnJs9sUojKataxxgeFiAHGjDP_H8CD2rmXQQ0ogamSprSphsorRUv8CJKBzAY8G-PhoGc9Vyl5LShIklePMnsCgmNS1Nyq5N0z57cvWcla0FUnefC-gs0NdJ0pF-SRHLUW_CZJ1oxNxebYWE0DCB6Y0TuLGMmAxtNKvZQCB9ji_f555IYTfwVw0k_cIMXal1k6cLZREdp4CNZ8JGa2jFbk9Toafw_fs9YSdXyk2AIbSkF3JTM8-qordFUYvvK3ypHPCGBLTZvoljJ-VgG1QizAhkQeRs71RevWP0wPf-5EXZjv5kVkKXMrTjrT3qwmD5__0F0VMVUgqj60kXeBw6B41QHxazryLRsvsE9rEVz0uynsqPUvQUMYQOk-qll7vWEe8Fe2I5SVCPXS7MPkOe6OMjPSYbTozuYYwvwv1PZpBzu2NhFosRvXKpXUs1ETOsxcbE5hwaAdS-57ME5k3RP2jzorFwCtzrJ9XF3wj63yV2DPo9fxTUdouhDI6gagY6O1RMq2pwacVgTmicLRnUg9UGzNEDssRdP2Rft26BwYS0-_KMnGUT29w36_unKGfwAS3blygBBRa0KUSJkfcQ3D2bhFC8wfmieZA7TVwB8tgaFgHLaySdqwIls_GPDcHrfM0GMQsWQUu-v5bx0z6TpNNhPOqU7o9dxtc_k9JOA7h_CgAPcCw28bWFncmlQrXc1LadW9ecL6rGKiZIfV2hxUD6vreSb-LFWa2IgObDfEm59-4_f6GhGbjMapBmFy-7lfBnyLZhT6V_H7Jo2PQKbtCfx4P0MbUmd9dfJBzCDh6tIQJeQB1fTdXFDULDPRFwJKgT8N0EZ9uJ_bZvhNy6jz58CKIIhTFqj0K8ii957bRh17jujiZMLEaTE1wKnO6s8Xikzsp8_P8687ossrhtCsFpufSWi92E1VI4fJNMoR-rIanHt7PFzfkUcY--sQE-uCBfiu3RGSG9HfNCq-NKQHN18uBuPzxc6aosNzkLBnJNBc-CpFSvAsnFJLq_iDkQbtWbin0CnZ8rTxSq1dzkjMHMKw2etuKZlS60_PfXNW0JlI-aWHeU8dh9qqKVrYumtbWZlDZXmJ0p6Q5m0F1s7G-RospTVFCiKCtd_E2rsIAzeRn-PLeS-C61zONnmkVHzFidTtlZfRhBBH_eICoA6rNgwqVHjw4gUVrcNuwYz9-oLzf3M_W6vz8PDGBaYuP2Ar9RrE5qDt5EQEzPbCffDnlTwsgi3P9et6TwQJyS3pjLWyzJIhM=",
+      "status": null
+    },
+    {
+      "id": "msg_0a9db10d743d7c8c006a9fb25408c487d097a74be74588e11c",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"scopes\":[{\"issue_id\":\"i001\",\"scope\":\"contract\",\"needs\":\"\",\"why\":\"The reader must examine § 1.2(g), which expressly defines “project,” to see why the term as used in § 3.8 leaves uncertain which undertakings require Commission review.\"}]}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

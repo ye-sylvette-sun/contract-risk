@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["scopes"],
+  "properties": {
+    "scopes": {
+      "type": "array",
+      "description": "One entry per issue id listed in the task, in the same order. Every id must appear exactly once; an id not in the list is rejected.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["issue_id", "scope", "needs", "why"],
+        "properties": {
+          "issue_id": {
+            "type": "string",
+            "description": "The id of the issue, copied exactly from the task list, e.g. \"i007\". This is the only way to name an issue."
+          },
+          "scope": {
+            "type": "string",
+            "enum": ["clause", "contract", "case", "external"],
+            "description": "What a reader must have in front of them to state this defect. \"clause\": the quoted clause alone suffices. \"contract\": other provisions of the SAME contract are needed. \"case\": a different document filed in this case is needed -- name it in `needs`. \"external\": case-specific material not shown is needed -- a document the record does not hold, or evidence of what these parties did -- describe it in `needs`. General knowledge is NOT external material: the law (statutes, doctrine, published decisions), terms of art, ordinary usage and how such instruments normally work are all available to you, so an issue needing only the clause plus that background is \"clause\". Choose the narrowest scope that is sufficient."
+          },
+          "needs": {
+            "type": "string",
+            "description": "For \"case\": the contract_id of the document required, exactly as its START marker spells it; several are separated by commas. For \"external\": a few words naming what is missing (e.g. \"Exhibit E, incorporated by reference but not filed\"). For \"clause\" and \"contract\": the empty string."
+          },
+          "why": {
+            "type": "string",
+            "description": "One sentence: what the reader would be unable to see without it. For \"clause\", what in the wording carries the defect."
+          }
+        }
+      }
+    }
+  }
+}

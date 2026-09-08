@@ -5,9 +5,9 @@ court opinions and the contracts filed with them, plus an experiment that asks a
 model to predict the labels.
 
 ```
-12,060 rows  |  226 positive / 11,834 negative  (1.9% positive)
-62 cases     |  103 contracts                   |  13.9 MB
-310 issues   |  the defects the courts construed, named one by one
+12,036 rows  |  202 positive / 11,834 negative  (1.7% positive)
+62 cases     |  103 contracts                   |  14.1 MB
+267 issues   |  the defects the courts construed, named one by one
 ```
 
 > **The experiment is agentic.** `risk_detect_agent.py` — one sandboxed Claude Code
@@ -51,7 +51,7 @@ records that it did. The binary risky/not label never depends on this.
 
 **The classes are not matched on clause length, and this is the caveat to read
 first.** Positives run to a median 586 characters against the negatives' 332,
-and clause length alone separates them at within-contract ROC-AUC **0.706**. Any
+and clause length alone separates them at within-contract ROC-AUC **0.705**. Any
 model's AUC has to be read against that baseline.
 
 An earlier build reported 0.523 here, but its positives were cut by a model that
