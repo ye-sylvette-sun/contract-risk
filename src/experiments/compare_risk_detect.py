@@ -92,6 +92,56 @@ def scored(rows, which):
             [int(r.get(f"gold_{which}") in (1, "1")) for r in rows])
 
 
+def type_metrics(rows):
+    """Two ways of asking whether the risk type was right, over distinct defects.
+
+    `wins`   the gold type outscored the other. What a single-label reading
+             asks, and what the type panels' winner is.
+    `named`  the gold type got any probability at all — the model listed an
+             issue of that type on that provision, wherever it ranked.
+
+    They come apart because the output is a LIST. A provision can carry several
+    real defects; the court construed one of them, and the model may name that
+    one at 0.18 and a different, equally real one at 0.44. `wins` scores that as
+    a type error, `named` as a hit. Neither is the whole truth — `wins` is the
+    stricter, `named` the more forgiving — so both are reported, and the gap
+    between them is how much of the type error is really a ranking difference.
+
+    Deduplicated on the gold issue text, because one recorded defect can sit on
+    several provisions of one contract: `359FSupp3d268_leases` repeats a
+    construed clause five times, and counting it five times would weight the
+    score by how often a drafter copied a paragraph. A defect counts as found if
+    ANY provision carrying it was scored that way.
+
+    Returns {1: {...}, 2: {...}}, empty where the dataset is not on disk — the
+    gold issue text lives there, not in `preds.csv`.
+    """
+    ds = lib.OUT / "dataset.csv"
+    if not ds.exists():
+        return {}
+    gold = {(r["contract_id"], r["clause_id"]): json.loads(r["issues"] or "[]")
+            for r in api.load_rows(ds)}
+    out = {}
+    for t in (1, 2):
+        other, seen = 3 - t, {}
+        for r in rows:
+            k = (r["contract_id"], r["clause_id"])
+            p_own = api._f(r[f"prob_type{t}"])
+            p_oth = api._f(r[f"prob_type{other}"])
+            for g in gold.get(k, []):
+                if not str(g.get("risk_type", "")).startswith(str(t)):
+                    continue
+                w, n = seen.get(g["issue"].strip(), (False, False))
+                seen[g["issue"].strip()] = (
+                    w or (p_own >= p_oth and max(p_own, p_oth) > 0),
+                    n or p_own > 0)
+        if seen:
+            out[t] = {"n": len(seen),
+                      "wins": sum(1 for w, _ in seen.values() if w),
+                      "named": sum(1 for _, n in seen.values() if n)}
+    return out
+
+
 def at(scores, labels, t):
     """Precision, recall and flag rate at one threshold."""
     flagged = [s >= t for s in scores]
@@ -164,6 +214,25 @@ def main():
                 "flag_rate": f, "positives": sum(y), "n": len(s)}
             print(f"{run:10}{api.roc_auc(s, y):10.3f}{p:8.2f}{r:8.2f}"
                   f"{f:9.1%}{sum(y):11}")
+
+    print("\n=== risk type, over distinct gold defects ===")
+    print("  `wins`  the gold type outscored the other")
+    print("  `named` the gold type was listed at all, wherever it ranked")
+    res["type"] = {}
+    hdr = False
+    for run in RUNS:
+        tm = type_metrics(rows[run])
+        if not tm:
+            print("  (output/dataset.csv not found — skipped)")
+            break
+        res["type"][run] = tm
+        if not hdr:
+            print(f"\n{'run':10}{'type':>6}{'defects':>9}{'wins':>12}{'named':>12}")
+            hdr = True
+        for t, m in sorted(tm.items()):
+            print(f"{run:10}{t:>6}{m['n']:>9}"
+                  f"{m['wins']:>7} {100*m['wins']/m['n']:>3.0f}%"
+                  f"{m['named']:>7} {100*m['named']/m['n']:>3.0f}%")
 
     print("\n=== what each recall target costs (risky vs not) ===")
     print(f"{'target':>8}{'run':>10}{'threshold':>11}{'precision':>11}"

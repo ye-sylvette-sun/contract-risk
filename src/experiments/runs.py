@@ -271,31 +271,45 @@ def court_excerpt(comment, terms, cap=700, floor=300):
     return text[best[1]:best[2]].strip() if best else text[:cap]
 
 
+def example_dir(e):
+    """Workspace directory name for one worked example. Unique per provision."""
+    return f"{'+'.join(e['codes'])}_{e['row']['contract_id']}_{e['row']['clause_id']}"
+
+
 def pick_examples(rows):
-    """One worked pair per risk type present in the data.
+    """Every construed provision of the example contracts, with every defect.
+
+    Which CONTRACTS teach is chosen one per risk type, deterministically and
+    never randomly: per taxonomy code, the positive with the longest
+    `opinion_comment` that still fits under EXCERPT_CAP (the longest in the
+    corpus runs to 38,000 characters and would swamp the others). Where every
+    candidate is over the cap the shortest is used whole — reasoning cut off
+    mid-sentence is worse than a different example. Ties break on clause id.
 
     Grouped by INDIVIDUAL code, not by the `taxonomy` string. Since step 1
     began letting a multi-key case give a clause more than one code, that string
     can read `1.1,1.3` — and grouping on it would invent a seventh risk type
     that `TYPE_NAME` has no name for, and hold out a contract for each
-    combination that happened to occur rather than one per code. A clause
-    construed under both codes is a candidate for both.
+    combination that happened to occur rather than one per code.
 
-    Deterministic, never random: per taxonomy code, the positive with the
-    longest `opinion_comment` that still fits under EXCERPT_CAP (the longest in
-    the corpus runs to 38,000 characters and would swamp the others). Where
-    every candidate is over the cap the shortest is used whole — reasoning cut
-    off mid-sentence is worse than a different example. Ties break on clause id.
+    But once a contract has been picked its whole cost is already paid: every
+    provision of it leaves the evaluation set, construed or not. So teach from
+    all of it. Holding out two contracts used to buy three worked examples on
+    two distinct provisions, out of six construed provisions carrying ten
+    recorded defects; the other seven were thrown away for nothing. What they
+    show is exactly what was missing — a provision the court construed on
+    several grounds at once, of more than one risk type, which is the shape the
+    model almost never produced.
 
-    Each is paired with a clause from the SAME contract that no court construed,
-    so the contrast is within a document. The pair is a scale, not a right
-    answer.
+    Each provision is paired with a clause from the SAME contract that no court
+    construed, so the contrast is within a document. The pair is a scale, not a
+    right answer.
     """
     by_contract = defaultdict(list)
     for r in rows:
         by_contract[r["contract_id"]].append(r)
 
-    examples = []
+    taught = []
     for code in sorted({c for r in rows if r["label"] == "POSITIVE"
                         for c in codes_in(r)}):
         cands = [r for r in rows
@@ -307,12 +321,22 @@ def pick_examples(rows):
         best = (max(fits, key=lambda r: (len(r["opinion_comment"]), r["clause_id"]))
                 if fits else
                 min(cands, key=lambda r: (len(r["opinion_comment"]), r["clause_id"])))
-        pool = by_contract[best["contract_id"]]
+        if best["contract_id"] not in taught:
+            taught.append(best["contract_id"])
+
+    examples = []
+    for cid in taught:
+        pool = by_contract[cid]
         foils = [r for r in pool if r["label"] == "NEGATIVE"]
         foil = max(foils, key=lambda r: (len(r["clause_text"]), r["clause_id"])) \
             if foils else None
-        examples.append({"code": code, "row": best, "foil": foil,
-                         "n_pos": len(pool) - len(foils), "n_neg": len(foils)})
+        for r in sorted((x for x in pool if x["label"] == "POSITIVE"
+                         and x["opinion_comment"].strip()),
+                        key=lambda x: x["clause_id"]):
+            codes = codes_in(r) or ["1.1"]
+            examples.append({"code": codes[0], "codes": codes, "row": r,
+                             "foil": foil, "n_pos": len(pool) - len(foils),
+                             "n_neg": len(foils)})
     return examples
 
 

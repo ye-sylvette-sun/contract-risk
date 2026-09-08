@@ -71,25 +71,24 @@ def write_examples(root, examples):
     """
     for e in examples:
         r, foil = e["row"], e["foil"]
-        d = root / "examples" / f"{e['code']}_{r['contract_id']}"
+        d = root / "examples" / runs.example_dir(e)
         d.mkdir(parents=True, exist_ok=True)
 
-        # This code's own gold issue, not the row-level join of every issue on
-        # the clause — and a short contiguous run of the court's words out of
-        # it. The output is issue-level now, so the example has to show what
-        # naming ONE defect looks like; the model was previously given the
-        # standard to apply and no instance of the artefact it must produce.
+        # EVERY defect the court found in this provision, each with its own
+        # passage — not the row-level join, which is those passages
+        # concatenated. A provision construed on three grounds is shown as
+        # three, because the list the model returns is issue-level and one
+        # example per provision taught it to stop after one.
         # Court text, never the gold `issue` field: that field was written by a
         # model which had read the opinion, and it is what
         # issue_alignment_check.py scores against, so showing it here would
         # teach imitation of the marker.
-        gold = runs.issue_for(r, e["code"])
-        passage = ((gold or {}).get("opinion_comment") or r["opinion_comment"]).strip()
-        excerpt = runs.court_excerpt(
-            passage, runs.content_terms(r["clause_text"], r["clause_name"]))
+        golds = [g for g in json.loads(r.get("issues") or "[]")
+                 if (g.get("opinion_comment") or "").strip()]
+        terms = runs.content_terms(r["clause_text"], r["clause_name"])
 
         notes = [
-            f"# Worked example — {runs.TYPE_NAME[e['code']]}",
+            f"# Worked example — \"{r['clause_name']}\"",
             "",
             f"Contract `{r['contract_id']}`, filed in {r['citation']}.",
             "",
@@ -107,23 +106,34 @@ def write_examples(root, examples):
             "",
             "## HIGH RISK — a federal court construed this provision",
             "",
-            f'"{r["clause_name"]}"  (risk type: {e["code"]})',
+            f'"{r["clause_name"]}"  (risk type: {", ".join(e["codes"])})',
             "",
             "```", runs.flat(r["clause_text"]), "```",
             "",
-            "### The defect, in the court's own words",
+            f"### The defects the court found — **{len(golds)}** in this one "
+            f"provision",
             "",
-            "One specific thing about THIS provision that the parties read "
-            "differently. An `issue` entry names something of this kind — not a "
-            "summary of the case, and not a verdict on the provision.",
-            "",
-            "```", excerpt, "```",
-            "",
-            f"### The passage it comes from, verbatim from the opinion in "
-            f"{r['citation']}",
-            "",
-            "```", passage, "```",
+            "Each is one specific thing about THIS provision that the parties "
+            "read differently. An `issue` entry names something of this kind — "
+            "not a summary of the case, and not a verdict on the provision. "
+            "Where a provision carries more than one, that is what the list is "
+            "for: each defect is its own entry, with its own type and its own "
+            "probability, and one of them being the strongest is no reason to "
+            "leave the others out.",
         ]
+        for n, g in enumerate(golds, 1):
+            passage = g["opinion_comment"].strip()
+            notes += [
+                "",
+                f"#### Defect {n} of {len(golds)} — risk type {g['risk_type']}",
+                "",
+                "```", runs.court_excerpt(passage, terms), "```",
+                "",
+                f"The passage it comes from, verbatim from the opinion in "
+                f"{r['citation']}:",
+                "",
+                "```", passage, "```",
+            ]
         if foil:
             notes += [
                 "",
@@ -194,8 +204,7 @@ def task_prompt(cid, citation, n, examples, context=()):
     a prefix when it has not been told what the root is, and every other path in
     those two sessions was relative and correct.
     """
-    dirs = "\n".join(
-        f"    examples/{e['code']}_{e['row']['contract_id']}/" for e in examples)
+    dirs = "\n".join(f"    examples/{runs.example_dir(e)}/" for e in examples)
     ctx = ("" if not context else
            f"""    context/              the other {len(context)} document(s) filed in the same case
 """
@@ -218,15 +227,18 @@ a directory of your own. Nothing outside `/work` is readable.
     contract.txt          the contract to judge, in full
     provisions.json       the {n} provisions to judge, in the order they appear
                           in the contract, each with an id like `c001`
-{ctx}    examples/             one worked pair per risk type — read these FIRST
+{ctx}    examples/             every provision a court construed in {len({e['row']['contract_id'] for e in examples})} other
+                          contracts, with every defect it found — read these FIRST
 {dirs}
 
 Work in this order.
 
 1. Read every `examples/*/notes.md`. Each gives a provision a federal court
-   actually construed and the court's own words about the dispute, paired with a
-   provision from the same contract that no court construed. That is the
-   standard to apply — not your own sense of what looks badly drafted.
+   actually construed, **every defect the court found in it** in the court's own
+   words, and a provision from the same contract that no court construed. That
+   is the standard to apply — not your own sense of what looks badly drafted.
+   Note how often one provision carries more than one defect, and of more than
+   one type.
 2. Read `contract.txt`. You need the whole instrument for risk type 2: a conflict
    cannot be seen from one provision alone. It is long — read it in pieces, and
    use Grep to chase a defined term or a cross-reference wherever it leads.
@@ -497,9 +509,13 @@ async def run(args):
     registry = lib.read_json(lib.OUT / "contracts.json", {})
     examples = runs.pick_examples(rows)
     taught = {e["row"]["contract_id"] for e in examples}
-    print("examples (%d): " % len(examples) + ", ".join(
-        f"{e['code']}={e['row']['contract_id']}({e['n_pos']}p/{e['n_neg']}n)"
-        for e in examples))
+    print("examples: %d provision(s) carrying %d defect(s), from %d contract(s)"
+          % (len(examples),
+             sum(len(json.loads(e["row"].get("issues") or "[]")) for e in examples),
+             len({e["row"]["contract_id"] for e in examples})))
+    for e in examples:
+        print(f"    {'+'.join(e['codes']):<9} {e['row']['contract_id']}"
+              f"/{e['row']['clause_id']}  ({e['n_pos']}p/{e['n_neg']}n)")
 
     eval_rows = [r for r in rows if r["contract_id"] not in taught]
     groups = runs.by_contract(eval_rows)
