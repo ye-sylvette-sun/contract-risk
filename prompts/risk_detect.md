@@ -19,91 +19,101 @@ construction risk.
 
 ### The two risk types
 
-**RISK TYPE 1 — an intrinsic textual defect, visible in the provision itself.**
+Every issue is one of two types, and you report `1` or `2`.
 
-- **1.1 Lexical ambiguity or vagueness.** A specific word or phrase genuinely
-  carries more than one reasonable meaning, or is so vague its boundary cannot
-  be applied. You must be able to *name* the term.
-- **1.2 Mechanical error.** A mistake in writing, grammar, spelling or
-  punctuation that changes what the provision means.
-- **1.3 General-vs-specific / list scope.** A general catch-all sits against
-  enumerated specifics, leaving the catch-all's reach uncertain (ejusdem
-  generis, expressio unius); or the provision is so one-sidedly drafted that a
-  genuine ambiguity would be construed against its drafter.
+**RISK TYPE 1 — the defect is in this provision's own words.** You may need the
+rest of the contract to notice it, and your explanation will often cite other
+provisions to show it, but the words needing repair are these words.
 
-**RISK TYPE 2 — the defect arises from the provision's RELATIONSHIP to the rest
-of the instrument.** You must consult the other provisions of the contract.
-
-- **2.1 Conflicting clauses.** This provision directly contradicts another
-  operative provision of the same contract.
-- **2.2 Whole-instrument incoherence.** The provision cannot be reconciled with
-  the contract read as a whole; harmonising every provision still leaves a
-  genuine internal inconsistency.
-- **2.3 Recitals vs operative text.** A recital and an operative term point in
-  different directions.
+**RISK TYPE 2 — the words are adequate; the defect is the fit.** Read alone the
+provision is clear. Set against another, the two cannot both be given effect,
+and rewriting this one would not resolve it.
 
 **LOWER RISK** — nothing in the provision's wording, and nothing in its fit with
 the rest of the instrument, gives a court something to construe. In any contract
 only a small minority of provisions ever become the subject of a construction
 dispute, so **most provisions should receive low probabilities.**
 
-### What makes a provision risky here
+The sub-categories are illustrations of the range, not a checklist and not what
+you report:
+
+- **Type 1** — **1.1** lexical ambiguity or vagueness, where a word carries more
+  than one reasonable meaning or has no applicable boundary (name the term);
+  **1.2** a mechanical error in grammar, spelling or punctuation that changes the
+  meaning; **1.3** general-vs-specific / list scope, a catch-all sitting against
+  enumerated specifics (ejusdem generis, expressio unius), or drafting so
+  one-sided that a genuine ambiguity goes against its drafter.
+- **Type 2** — **2.1** direct conflict with another operative provision;
+  **2.2** whole-instrument incoherence that survives any harmonising reading;
+  **2.3** a recital pointing away from an operative term.
+
+### Detection guidelines
+
+#### What counts as a risk
 
 A provision is risky when a court would have something to construe: the two
-sides could read it differently and the dispute would turn on the words. It is
-**not** about whether the provision is important, complex, or commercially
-significant. A long, carefully drafted limitation of liability is usually lower
-risk. A short phrase like `Free land` can be high risk.
+sides could read it differently and the dispute would turn on the words. This is
+**not** a judgement about whether the provision is important, complex or
+commercially significant. A long, carefully drafted limitation of liability is
+usually lower risk; a short phrase like `Free land` can be high risk.
 
-### What "lower risk" does and does not mean
+#### Assigning the type
 
-This matters for how you read the worked examples you are given, and it is the
-one place this task is easy to get wrong. Each pairs a provision with the
-court's own words about it, and one short passage of those words is set apart as
-the defect: that is the kind of thing an `issue` entry names.
+A useful test is to ask what would have to change to remove the dispute. If
+rewriting **this provision alone** would ordinarily do it, that points to
+**type 1**. If the provision is sound as written and the fix lies in **another
+provision**, or in deciding which of two governs, that points to **type 2**.
 
-The high-risk examples are provisions a federal court **did** construe. That is
-direct evidence: two parties read the same words differently and a judge had to
-decide between them.
+Treat it as a guide rather than a rule: where a defect genuinely sits across
+both, give it the type the dispute would most likely turn on. Apply it to the
+defect you have named, not to how you came to notice it or how you explain it.
 
-The lower-risk examples are provisions no court construed **in that case**. That
-is much weaker evidence, and it is **not** evidence that the provision is sound.
-It may be perfectly drafted, or it may carry a latent defect that no one had
-occasion to fight over — a dispute has to be worth the cost of litigating, and
-most defects never are. Nothing in this task tells you that any provision is
-free of risk.
+- **The evidence you cite does not decide the type.** Pointing out where else a
+  term appears is ordinary support for an ambiguity. An issue stays type 1
+  however many cross-references it takes to demonstrate.
+- **A term used inconsistently across the contract is normally type 1.** The
+  defect is that the term was never pinned down; name the term. Type 2 needs two
+  provisions, each clear in itself, that cannot both be given effect.
 
-So do not treat a lower-risk example as a model of good drafting to be matched.
-Treat the pair as one end of a scale against the other: what did a court
-actually find worth arguing about, and what, in the same document, did nobody
-reach for? Your probabilities express **how likely this provision is to be one a
-court would have something to construe** — not a verdict that it is sound.
+#### What the worked examples do and do not tell you
+
+Each example pairs a provision with the court's own words about it, and one
+short passage of those words is set apart as the defect — that is the kind of
+thing an `issue` entry names.
+
+The high-risk examples are provisions a federal court **did** construe: direct
+evidence that two parties read the same words differently and a judge had to
+decide between them. The lower-risk examples are only provisions no court
+construed **in that case**. That is much weaker evidence, and it is **not**
+evidence that the provision is sound: it may be well drafted, or it may carry a
+latent defect nobody had occasion to fight over, since a dispute has to be worth
+the cost of litigating and most defects never are.
+
+So do not treat a lower-risk example as a model of good drafting to match. Treat
+the pair as two ends of a scale: what did a court find worth arguing about, and
+what, in the same document, did nobody reach for? Your probabilities express
+**how likely it is that a court would have something to construe here** — not a
+verdict that the provision is sound.
 
 ### Calibration
 
-- A definite, consistent provision carries **no issue at all**. Being litigated
-  is not itself a defect, and neither is being important, long or complex.
+- A definite, consistent provision carries **no issue at all**; being litigated
+  is not itself a defect.
 - **If you can name it, list it — however unsure you are.** A defect you can put
   into a sentence but would not bet on is a real entry with a low probability:
-  0.08, 0.15, 0.20. It is not a reason to write nothing. The low end of the
-  range is where most named issues belong, and it is doing real work — these
-  numbers rank provisions against each other, and a provision you scored 0.15 on
-  is ranked far above one you left empty.
-- **Uncertainty goes into the probability. Inability to name goes into the empty
-  list.** Never use the empty list to express doubt about a defect you can see.
-  The question that decides between them is not "am I confident?" but "can I say
+  0.08, 0.15, 0.20. That is where most named issues belong, and the number does
+  real work — a provision you scored 0.15 on ranks far above one you left empty.
+- **Uncertainty goes into the probability; inability to name goes into the empty list.** 
+  Never use the empty list to express doubt about a defect you can see.
+  The question deciding between them is not "am I confident?" but "can I say
   what is wrong?"
-- Put a **type 1** issue at or above 0.5 only with specific textual evidence —
-  name the ambiguous term, or the general-vs-specific tension.
-- Put a **type 2** issue at or above 0.5 only after checking the other
-  provisions and finding a specific conflict or incoherence — **name the other
-  provision**. If you did not find one, write no type-2 entry.
-- The provisions were **sampled neutrally**. Do not assume any fixed number of
-  them are risky, and do not spread your probabilities to fill a quota. Judge
-  each one independently.
-- Use the whole range. 0.03, 0.17, 0.44 and 0.71 all mean different things, and
-  the probability is your estimate that a court would have something to construe
-  on account of the defect — not your confidence that it would decide either way.
+- Reach 0.5 or above only on specific evidence: for **type 1**, name the
+  ambiguous term or the general-vs-specific tension; for **type 2**, name the
+  other provision you checked this one against. If you found none, write no
+  type-2 entry.
+- Use the whole range — 0.03, 0.17, 0.44 and 0.71 all mean different things. The
+  probability is that a court would have something to construe on account of the
+  defect, not your confidence in how it would decide.
 
 ## DOCUMENT
 
@@ -128,72 +138,54 @@ Work in this order.
    court's own words about it. What did the two sides actually argue, and what
    did the court find uncertain? That is the standard to apply — not your own
    sense of what looks like a badly drafted clause.
-2. **Read the contract.** You need it for risk type 2: a conflict cannot be seen
-   from one provision alone.
+2. **Read the contract.** You need it for both types: a conflict cannot be seen
+   from one provision alone, and how a term is used elsewhere often shows it was
+   never pinned down here.
 3. **Judge each listed provision**, in the order given.
 
 ### What to return for each provision: a list of issues
 
-A provision is not one risk with one number. It may carry a vague term *and* a
-list-scope problem *and* contradict a definition three sections away — three
-separate things a court could be asked to construe, of different strengths. So
-you return an **issue list**, and each issue carries its own probability.
-
+A provision may carry more than one thing a court could be asked to construe, of
+different strengths, so you return an **issue list** rather than one number.
 Each issue is three fields:
 
 - `issue` — two sentences naming **this specific defect**. For risk type 1,
   name the ambiguous term or the general-vs-specific tension. For risk type 2,
   **name the other provision** it cannot be squared with. One issue, one defect:
   if you find yourself writing "and also", that is a second issue.
-- `type` — `1` for an intrinsic defect visible in the provision itself, `2` for a
-  defect in its relationship to the rest of the instrument.
+- `type` — `1` if rewriting this provision alone would remove the dispute; `2`
+  if the fix lies in another provision, or in deciding which of two governs.
 - `prob` in (0, 1] — that a court would have something to construe **on account
-  of this issue**. To **two decimal places**, on a 0.01 grid — 0.03, 0.17, 0.62.
-  Do not round to the nearest 0.05 or 0.1: the fine distinctions are what the
-  number is for. Greater than zero, always: the entry exists because the defect
-  does, and one you would put at 0 is one you should not have listed.
+  of this issue**. To **two decimal places**, on a 0.01 grid: 0.03, 0.17, 0.62,
+  not rounded to the nearest 0.05 or 0.1, since the fine distinctions are what
+  the number is for. Greater than zero, always.
 
 **How long the list should normally be.** Almost always: **empty, or exactly one
 entry.**
 
-- **A provision you can find nothing to name in gets an empty list.** Not an
-  entry saying so — nothing. Reach it by looking and finding nothing, though,
-  not by deciding that the defect you can see is too weak to be worth writing
-  down. A weak defect you can name is a low-probability entry, not an empty list.
-- **A provision that does carry a defect names it, and nothing else.** One entry,
-  of whichever type it is, at whatever probability it deserves — 0.10 if that is
-  what you think. The other type gets no entry at all.
+- **Nothing you can name — an empty list.** Not an entry saying so; nothing.
+  Reach it by looking and finding nothing, not by judging a defect you can see
+  too weak to be worth writing down.
+- **A defect you can name — one entry**, of whichever type it is, at whatever
+  probability it deserves. The other type gets no entry at all.
 - **Two issues of one type, or issues of both types, are the exception.** Give
-  them only when the extra defect is *obvious* and you would put a genuinely
-  high probability on it in its own right — not when you have found a second
-  thing you could argue for. If the second issue is one you are hedging about,
-  it is not a second issue: leave it out and let the first issue's probability
-  carry your uncertainty.
-- The test: could you state the second defect to a judge, on its own, and expect
-  to be taken seriously? If not, it does not go in the list.
+  them only when the extra defect is *obvious* and carries a genuinely high
+  probability in its own right. Could you state it to a judge, on its own, and
+  expect to be taken seriously? If not, leave it out and let the first issue's
+  probability carry your uncertainty.
 
-Rules for the list:
+Two things the scoring does with your list:
 
-- **One entry per distinct defect.** One issue, one defect — but see above:
-  finding a second one should be uncommon.
-- **Probabilities are per issue and independent.** They are not shares of
-  anything and do not sum to 1. Two weak issues do not make a strong provision,
-  and you should not inflate one because you found two.
-- **A type with no entry is read as probability 0, and that is what it means.**
-  If you can name a type-1 defect but nothing relational, list the type-1 issue
-  and stop. Do not add a type-2 entry to keep the two balanced.
-- Do not pad the list to look thorough. A long issue list is not a better
-  answer; it is usually a wrong one. An issue you cannot name in a sentence is
-  not an issue — leave it out rather than invent a defect or hold a place for one.
-- **An empty list is a real answer**, and the right one for a provision with
-  nothing to name. It is not free, though: it scores 0 for both types and puts
-  the provision below every provision you did name something in. That is correct
-  when there was nothing to name and wrong when there was something you passed
-  over — so spend the effort on looking, and let the probability, not the empty
-  list, carry how little you think of what you found.
+- **A type with no entry is read as probability 0.** If you can name a type-1
+  defect but nothing relational, list the type-1 issue and stop — do not add a
+  type-2 entry to keep the two balanced.
+- **An empty list puts the provision below every provision you named something
+  in.** That is correct when there was nothing to name and wrong when there was
+  something you passed over, so spend the effort on looking.
 
-Keep each `issue` to two sentences. You are producing a judgment, not a
-memorandum.
+Probabilities are per issue and independent: they are not shares of anything and
+do not sum to 1. Two weak issues do not make a strong provision, and a long list
+is not a better answer.
 
 ## TASK
 
