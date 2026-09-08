@@ -5,14 +5,14 @@ United States federal court construed the clause in a written opinion. Every
 clause is verbatim text cut out of the scanned filing it was attached to.
 
 ```
-10,358 rows  |  179 positive / 10,179 negative  (1.7% positive)
-57 cases     |  89 contracts                    |  12.3 MB
-242 issues   |  the defects the courts construed, named one by one
+10,238 rows  |  165 positive / 10,073 negative  (1.6% positive)
+56 cases     |  87 contracts                    |  11.9 MB
+214 issues   |  the defects the courts construed, named one by one
 ```
 
 A positive carries a list of **issues** — one per distinct defect the court
-construed in it — so the corpus holds 242 defects over 179 clauses: 125 clauses
-with one, 48 with two, and 6 with three or more. That list is the denominator
+construed in it — so the corpus holds 214 defects over 165 clauses: 125 clauses
+with one, 34 with two, and 6 with three or more. That list is the denominator
 for scoring a model at the issue level, which an earlier build could not supply.
 
 **Every issue here is one a reader holding the contract could reach.** Step 3
@@ -20,12 +20,14 @@ asks what someone would have to read to see each defect, and the build drops the
 43 that turn on material the corpus does not hold — an email, a course of
 dealing, an exhibit never filed. Where that leaves a construed clause with no
 issue at all, the **whole contract** goes: the experiment asks a model to judge
-a contract's provisions, and judging only some of them is a different task.
+a contract's provisions, and judging only some of them is a different task. The
+same rule drops a contract holding two byte-identical clauses, one construed —
+nothing a reader sees tells them apart.
 
-Positives carry 242 risk-type codes between them — 1.1 × 170, 1.3 × 7,
-2.2 × 65 — because 24 of the 179 carry more than one. Where the case's Westlaw
+Positives carry 214 risk-type codes between them — 1.1 × 142, 1.3 × 7,
+2.2 × 65 — because 24 of the 165 carry more than one. Where the case's Westlaw
 keys give exactly one candidate code the label is `taxonomy_provenance =
-westlaw` (103 clauses) and the model had no choice; where the case has several,
+westlaw` (89 clauses) and the model had no choice; where the case has several,
 the model chose among them and the provenance is `model` (76 clauses).
 
 ---
@@ -43,7 +45,7 @@ Because a positive's own contract also supplies negatives, the two classes share
 the drafter, the domain, the era and the OCR condition; the only systematic
 difference between them is the one being labelled. The other agreements of a case
 supply negatives too — a case commonly files several instruments and the court
-reaches only some. 24 of the 89 contracts contain no positive at all, and are
+reaches only some. 24 of the 87 contracts contain no positive at all, and are
 the only documents here where the right answer is "nothing to flag".
 
 An unlitigated clause is **lower risk, not sound**. It may be well drafted, or it
@@ -161,9 +163,8 @@ Each filter with the count it leaves. Everything here is recomputable from
 | registered — de-duplicated at 0.90 shingle containment, over the length floor | **117** | 68 |
 | single-column — Step 0b rejects 14 two-column scans | **103** | 62 |
 
-That is the **corpus**. `build_dataset.py` drops 14 more contracts whose only
-construed clauses are ones no contract reader could reach, leaving the **89** the
-dataset ships.
+That is the **corpus**. `build_dataset.py` drops 16 more contracts that cannot be
+scored end to end, leaving the **87** the dataset ships.
 
 Every filter here is about whether a document is *usable*; none is about labels.
 An earlier build also required a case's Westlaw keys to map to a single taxonomy
@@ -232,8 +233,8 @@ step 2 recorded, and answers per issue **what a reader would have to hold**:
 
 | scope | | in the dataset |
 |---|---|---|
-| `clause` | the quoted clause alone states the defect | 119 |
-| `contract` | other provisions of the same contract are needed | 84 |
+| `clause` | the quoted clause alone states the defect | 99 |
+| `contract` | other provisions of the same contract are needed | 76 |
 | `case` | another document filed in the case, named in `scope_needs` | 39 |
 | `external` | case-specific material the corpus does not hold | *dropped* |
 
@@ -263,10 +264,14 @@ It refuses to write unless the data survives four checks:
 - no text carries both labels;
 - every positive has at least one issue and a non-empty passage.
 
-A clause that reproduces a positive's text character for character somewhere
-else is **dropped, not labelled** — it carries whatever made that positive
-risky. This is boilerplate repeated across endorsements, and cases filing
-several editions of one instrument.
+A clause that reproduces a **positive of its own contract** character for
+character takes the contract with it. Same words, same surroundings: nothing a
+reader could see tells the two apart, so one row would have to be scored right
+and the other wrong on identical evidence. Across contracts the duplicate is
+kept and labelled normally — the label is a fact about a clause in an
+instrument in a case, not about a string, and a NEGATIVE means only that nobody
+fought over it there. One text carries both labels on that basis: `All other
+terms and conditions of this Policy remain unchanged.`
 
 An issue step 3 scoped `external` is dropped for the same reason in the other
 direction: no harness can put it within a contract reader's reach, so scoring
@@ -275,9 +280,9 @@ positive's list the **whole contract** is dropped — not the clause, and never
 relabelled NEGATIVE, which would assert the opposite of what the court did.
 Dropping the clause alone would leave a hole in the provision list the
 experiment hands its model, sitting exactly where a court found a defect, and
-judging part of a contract is not the task. That costs 14 contracts, 1,678 rows
-and 23 positives. Each surviving row's `opinion_comment` is rebuilt from the
-issues that remain.
+judging part of a contract is not the task. With the verbatim-duplicate rule
+above, 16 contracts go: 1,811 rows and 37 positives. Each surviving row's
+`opinion_comment` is rebuilt from the issues that remain.
 
 A negative in a contract holding no positive of its own carries the **case's**
 taxonomy code — still a Westlaw key, and unambiguous because every case in scope
@@ -297,7 +302,7 @@ is filed under exactly one.
 | `provenance` | which step produced the row |
 | `case_desc` | one line on the dispute |
 | `contract_id`, `contract_file` | which document it was cut from |
-| `context_contract_ids` | the other contracts filed in the same case, comma-separated — what step 2 was shown, and what a reader needs mounted to reach a `case`-scoped issue. Empty for the 3,791 rows whose case holds one document |
+| `context_contract_ids` | the other contracts filed in the same case, comma-separated — what step 2 was shown, and what a reader needs mounted to reach a `case`-scoped issue. Empty for the 3,803 rows whose case holds one document |
 | `source_lines`, `source_span` | the line range and character offsets the anchors snapped to |
 | `clause_text` | the normalised extraction — **the dataset text** |
 | `anchor_score` | the match quality |
@@ -343,8 +348,8 @@ token usage is kept under `output/llm_logs/`.
 ## 6. Known limits
 
 - **Clause length separates the classes, and this is the headline caveat.**
-  Positives run to a median 588 characters against the negatives' 330, and
-  length alone ranks them at within-contract ROC-AUC **0.712**. Any model's AUC
+  Positives run to a median 655 characters against the negatives' 332, and
+  length alone ranks them at within-contract ROC-AUC **0.728**. Any model's AUC
   must be read against that baseline.
 
   An earlier build reported 0.523, but its positives were cut by a model that
@@ -354,21 +359,20 @@ token usage is kept under `output/llm_logs/`.
   either: the AUC is *higher* among contracts step 1 did not flag for it (0.749)
   than among those it did (0.665). Litigated language really does sit in longer
   clauses.
-- **A positive is not one dispute, but its issues are counted.** The 242 issues
-  trace to 139 distinct opinion passages: a court often construes several
+- **A positive is not one dispute, but its issues are counted.** The 214 issues
+  trace to 135 distinct opinion passages: a court often construes several
   provisions in one discussion, so a passage can serve more than one clause. What
   is now separate is the *defect* — each issue names its own, so "how many
   problems did the court find here" is answerable where it previously was not.
 - **43 of the 310 issues needed material the corpus does not hold**, and were
-  dropped along with the 14 contracts they left without a scoreable positive.
+  dropped along with the contracts they left without a scoreable positive.
   Most are **not missing documents**: 26 turn on evidence of what the parties
   did — spoofed emails, a course of dealing — and 17 on a document the record
   lacks. A court decides construction disputes on more than the instrument, and
   a corpus of instruments can never hold all of it.
-- **Four contracts still have a hole in their provision list.** The verbatim
-  duplicate rule above drops 16 clauses without dropping their contracts, so a
-  model judging those four is not asked about every clause it can read. The
-  clauses are boilerplate repeated across endorsements, not litigated language.
+- **Every contract in the corpus is scoreable end to end.** A clause the model
+  can read but could not be scored on takes its contract out, so no provision
+  list has a hole in it.
 - **39 surviving issues need a sibling document**, and 36 positives depend on
   one. `context_contract_ids` names what to mount; an experiment that gives a
   model one contract cannot reach them.
@@ -376,7 +380,7 @@ token usage is kept under `output/llm_logs/`.
   link below: 90–93% test-retest agreement, no human check.
 - **The clause-to-passage link is the model's judgment, not a verified fact.**
   What *is* verified mechanically: the clause text was located verbatim in the
-  filed contract (`anchor_score` mean 0.997, 10,095 of 10,358 exact), and the
+  filed contract (`anchor_score` mean 0.996, 9,975 of 10,238 exact), and the
   taxonomy is a subset of the case's Westlaw key codes. What is not: that the
   attached passage actually discusses that clause. Nothing second-guesses the
   model on that point — the heuristic that once did was removed as too ad hoc. A

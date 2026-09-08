@@ -103,30 +103,65 @@ def main():
 
     by_id = {(cid, c["clause_id"]): c
              for cid, inv in inventory.items() for c in inv["clauses"]}
-    # Every positive's text, across every case. A negative that reproduces one
-    # of these character for character is dropped below.
-    positive_texts = {by_id[k]["text"] for k in positive if k in by_id}
+    # Where each positive's exact text occurs, by contract. A negative
+    # reproducing one of these is dropped below — but only inside the SAME
+    # document, which is the only place the duplication makes the row
+    # unscoreable: two byte-identical clauses of one contract are the same
+    # words in the same surroundings, and nothing a reader could see tells
+    # them apart, so labelling one POSITIVE and the other NEGATIVE would be
+    # scoring noise.
+    #
+    # Across contracts it is kept, and this is the point of the corpus. A label
+    # here says a court construed this clause **in this instrument, in this
+    # case** — not that the words are defective wherever they appear. A
+    # NEGATIVE means nobody fought over it, which §1 states outright and which
+    # an identical clause in an unrelated policy satisfies exactly. Risk type 2
+    # makes the same point from the other side: the defect is the fit, so the
+    # same sentence can be a conflict in one instrument and unremarkable in
+    # another. The old rule dropped 12 endorsements of one policy because a
+    # court in a different case had construed "All other terms and conditions
+    # of this Policy remain unchanged."
+    positive_texts = {}
+    for k in positive:
+        if k in by_id:
+            positive_texts.setdefault(by_id[k]["text"], set()).add(k[0])
 
-    # A positive whose every issue is out of reach takes its whole contract with
-    # it. Dropping the clause alone would not do: the experiment shows the model
-    # the entire contract and asks it to judge the provisions listed, so a hole
-    # in that list is a clause the model can read and is never asked about — and
-    # the hole would sit exactly where a court found a defect. Judging part of a
-    # contract is not the task, so the contract leaves the corpus.
-    unreachable = {}
+    # Two ways a contract stops being scoreable, and both take the whole
+    # document rather than the clause. The experiment copies the contract into
+    # the workspace and lists the provisions to judge from these rows, so a
+    # missing row is a clause the model can read and is never asked about.
+    # Judging part of a contract is a different task, so the contract goes.
+    dropped = {}
+
+    # (a) a clause the court construed, whose every issue needs material no
+    #     contract reader could hold.
     for (cid, clause_id), (_, _, d) in positive.items():
         if not any(scope_of.get((cid, clause_id, n), {}).get("scope", "clause")
                    in REACHABLE for n in range(len(d["issues"]))):
-            unreachable.setdefault(cid, []).append(clause_id)
-    if unreachable:
-        print(f"\n{len(unreachable)} contract(s) dropped whole: a clause the court "
-              f"construed has no issue a contract reader could reach")
-        for cid in sorted(unreachable):
-            print(f"    {cid}  ({', '.join(sorted(unreachable[cid]))})")
+            dropped.setdefault(cid, []).append(f"{clause_id}: no reachable issue")
+
+    # (b) two byte-identical clauses of one contract, one of them construed.
+    #     Same words, same surroundings: nothing a reader could see tells them
+    #     apart, so one row would have to be scored right and the other wrong
+    #     on identical evidence.
+    for cid, inv in inventory.items():
+        for c in inv["clauses"]:
+            if ((cid, c["clause_id"]) not in positive
+                    and cid in positive_texts.get(c["text"], ())):
+                dropped.setdefault(cid, []).append(
+                    f"{c['clause_id']}: repeats a construed clause verbatim")
+
+    if dropped:
+        print(f"\n{len(dropped)} contract(s) dropped whole — a clause the model "
+              f"would read but could not be scored on:")
+        for cid in sorted(dropped):
+            print(f"    {cid}")
+            for why in sorted(dropped[cid]):
+                print(f"        {why}")
         print()
 
     for cid in sorted(inventory):
-        if cid in unreachable:
+        if cid in dropped:
             continue
         inv = inventory[cid]
         citation = inv["citation"]
@@ -167,16 +202,7 @@ def main():
                       if i.get("scope", "clause") in REACHABLE]
             assert not hit or issues, f"{cid}/{c['clause_id']} kept with no issue"
 
-            if hit is None and c["text"] in positive_texts:
-                # Same words, somewhere else. A clause reproducing a positive
-                # character for character carries whatever made that positive
-                # risky, so labelling it NEGATIVE would assert the opposite of a
-                # label the corpus already holds. It comes from boilerplate
-                # repeated across endorsements, and from cases filing several
-                # editions of one instrument. Dropped rather than labelled.
-                print(f"    excluded {c['name']} of {cid} "
-                      f"(reproduces a positive verbatim)")
-                continue
+            assert hit is not None or cid not in positive_texts.get(c["text"], ()),                 f"{cid}/{c['clause_id']} repeats a construed clause of its own "                 f"contract; the contract should have been dropped whole"
             d = hit[2] if hit else None
             if d:
                 n_pos += 1
@@ -233,15 +259,29 @@ def main():
         f"{len(same_place)} clause(s) extracted twice from the same span: " \
         f"{same_place[:3]}"
 
-    # Identical text under BOTH labels is fatal: the same words cannot be
-    # evidence for and against at once. Repetition within one label is fine.
+    # Identical text under both labels is fatal WITHIN one contract — there the
+    # words sit in the same surroundings and nothing distinguishes them, so one
+    # of the two rows must be wrong. Across contracts it is expected: the label
+    # is a fact about a clause in an instrument in a case, not about a string,
+    # and the same sentence can be litigated in one policy and untouched in
+    # another. Reported, because a sudden jump in the count would mean the
+    # corpus had started repeating whole documents.
     by_text = {}
     for r in rows:
-        by_text.setdefault(r["clause_text"], set()).add(r["label"])
+        by_text.setdefault((r["contract_id"], r["clause_text"]), set()).add(r["label"])
     contradictions = [t for t, labels in by_text.items() if len(labels) > 1]
     assert not contradictions, \
         f"{len(contradictions)} clause text(s) appear as both POSITIVE and " \
-        f"NEGATIVE: {[t[:60] for t in contradictions[:3]]}"
+        f"NEGATIVE in one contract: {[t[1][:60] for t in contradictions[:3]]}"
+
+    across = {}
+    for r in rows:
+        across.setdefault(r["clause_text"], set()).add(r["label"])
+    both = [t for t, labels in across.items() if len(labels) > 1]
+    if both:
+        print(f"{len(both)} clause text(s) carry both labels in DIFFERENT "
+              f"contracts — expected: a label is about a clause in an "
+              f"instrument, not about a string")
 
     files = {}
     for r in rows:
