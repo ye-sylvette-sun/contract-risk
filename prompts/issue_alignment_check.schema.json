@@ -1,20 +1,22 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["court_defect", "matched", "evidence", "determinable",
-               "alignment", "reason"],
+  "required": [
+    "words_at_issue",
+    "matched",
+    "evidence",
+    "determinable",
+    "alignment",
+    "reason"
+  ],
   "properties": {
-    "court_defect": {
-      "type": "string",
-      "description": "One or two sentences: what the candidate passages show the court construing in THIS provision, read from the passages alone before you look at the alignment question. If they show the court construing nothing about this provision, say that."
-    },
     "matched": {
       "type": "string",
       "description": "The id of the ONE candidate whose defect is the same as the proposed issue's, e.g. \"g2\". Empty string when none of them is the same defect. An id that is not among the candidates shown is rejected."
     },
     "evidence": {
       "type": "string",
-      "description": "The span of the CHOSEN candidate's opinion passage you are relying on, copied EXACTLY from it, character for character, OCR damage included. Empty string only when matched is empty or determinable is false."
+      "description": "The span of the CHOSEN candidate's opinion passage showing the court engaged with what that recorded sentence describes, copied EXACTLY from it, character for character, OCR damage included. This confirms the recorded sentence; it is not the comparison itself. Empty string only when matched is empty or determinable is false."
     },
     "determinable": {
       "type": "boolean",
@@ -24,11 +26,15 @@
       "type": "number",
       "minimum": 0,
       "maximum": 1,
-      "description": "How far the defect the proposed issue names is the same defect the chosen candidate records. Two decimal places. 0.8-1.0 the same defect; 0.5-0.8 same underlying problem framed differently; 0.2-0.5 related but a different specific defect; 0.0-0.2 unrelated. 0.0 whenever matched is empty."
+      "description": "How far the proposed issue and the CHOSEN candidate's recorded defect name the same defect. Two decimal places. 0.8-1.0 the same defect -- both point at the same words of the provision and make the same complaint about them; 0.5-0.8 same underlying problem framed differently; 0.2-0.5 related but a different specific defect; 0.0-0.2 unrelated. 0.0 whenever matched is empty."
     },
     "reason": {
       "type": "string",
-      "description": "One or two sentences tying the quoted evidence to the score: what the proposed issue names, what the chosen passage shows, and why that is or is not the same defect. Say so if the choice between two candidates was close."
+      "description": "One or two sentences tying the comparison to the score: what the proposed issue names, what the chosen recorded defect names, and why those are or are not the same defect. Say so if the choice between two candidates was close."
+    },
+    "words_at_issue": {
+      "type": "string",
+      "description": "Before deciding: which words of the provision the PROPOSED ISSUE is about, and which words each candidate's recorded defect is about. Name the term, sentence, silence or cross-reference each one turns on, separately, in one or two sentences. Two defects pointing at different words are different defects however similar the complaints sound."
     }
   }
 }

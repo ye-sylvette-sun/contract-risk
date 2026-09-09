@@ -65,7 +65,7 @@ SHARDS = "issue_alignment_check"
 FIELDS = ["job_id", "contract_id", "clause_id", "citation", "clause_name",
           "taxonomy", "taxonomy_provenance", "type", "prob", "issue",
           "matched", "matched_key", "gold_issue", "alignment", "determinable",
-          "court_defect", "evidence", "reason"]
+          "words_at_issue", "evidence", "reason"]
 
 
 def gold_issues(dataset):
