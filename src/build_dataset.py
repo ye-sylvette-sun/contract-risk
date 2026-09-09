@@ -116,9 +116,9 @@ def main():
     # case** — not that the words are defective wherever they appear. A
     # NEGATIVE means nobody fought over it, which §1 states outright and which
     # an identical clause in an unrelated policy satisfies exactly. Risk type 2
-    # makes the same point from the other side: the defect is the fit, so the
-    # same sentence can be a conflict in one instrument and unremarkable in
-    # another. The old rule dropped 12 endorsements of one policy because a
+    # makes the same point from the other side: the defect is relational, so
+    # the same sentence can be defective in one instrument and unremarkable
+    # in another. The old rule dropped 12 endorsements of one policy because a
     # court in a different case had construed "All other terms and conditions
     # of this Policy remain unchanged."
     positive_texts = {}

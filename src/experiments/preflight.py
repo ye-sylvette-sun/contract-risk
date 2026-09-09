@@ -256,8 +256,8 @@ def smallest_outstanding():
     kept and the full run continues from it.
     """
     rows = api.load_rows(lib.OUT / "dataset.csv")
-    examples = api.pick_examples(rows)
-    taught = {e["row"]["contract_id"] for e in examples}
+    examples = api.load_examples(rows)
+    taught = {e["contract_id"] for e in examples}
     groups = api.by_contract([r for r in rows if r["contract_id"] not in taught])
     done = api.done_contracts(ag.PREDS, groups)
     left = [(cid, cl) for cid, cl in groups.items() if cid not in done]

@@ -62,72 +62,110 @@ WARN_AT = 0.90              # rate-limit utilisation at which we stop launching
 
 # -------------------------------------------------------------- workspace ----
 def write_examples(root, examples):
-    """One directory per worked pair, holding the notes and nothing else.
+    """One directory per worked CONTRACT, holding its notes and nothing else.
 
-    The example CONTRACTS are deliberately not here. The prompt carries only
-    the two provision texts and the court's words in its few-shot block, so
+    Each note shows every provision of that contract a court construed, and
+    under each one every distinct defect the court found in it, with the court's
+    own words. Showing one defect per provision would teach that one is the
+    answer, which is the opposite of what an issue LIST is for.
+
+    The example CONTRACTS themselves are deliberately not here. The note carries
+    the construed provisions, one uncontested provision, and the court's words;
     shipping the full contracts would give this arm more evidence than the one
     it is compared against.
+
+    The gold `issue` sentence is never shown. It was written by a model that had
+    read the opinion, and it is what issue_alignment_check.py scores against, so
+    showing it would teach imitation of the marker rather than the finding.
     """
     for e in examples:
-        r, foil = e["row"], e["foil"]
-        d = root / "examples" / f"{e['code']}_{r['contract_id']}"
+        d = root / "examples" / f"{e['kind']}_{e['contract_id']}"
         d.mkdir(parents=True, exist_ok=True)
-
-        # This code's own gold issue, not the row-level join of every issue on
-        # the clause — and a short contiguous run of the court's words out of
-        # it. The output is issue-level now, so the example has to show what
-        # naming ONE defect looks like; the model was previously given the
-        # standard to apply and no instance of the artefact it must produce.
-        # Court text, never the gold `issue` field: that field was written by a
-        # model which had read the opinion, and it is what
-        # issue_alignment_check.py scores against, so showing it here would
-        # teach imitation of the marker.
-        gold = runs.issue_for(r, e["code"])
-        passage = ((gold or {}).get("opinion_comment") or r["opinion_comment"]).strip()
-        excerpt = runs.court_excerpt(
-            passage, runs.content_terms(r["clause_text"], r["clause_name"]))
+        n_prov = e["n_pos"] + e["n_neg"]
 
         notes = [
-            f"# Worked example — {runs.TYPE_NAME[e['code']]}",
+            f"# Worked example — {runs.KIND_NAME[e['kind']]}",
             "",
-            f"Contract `{r['contract_id']}`, filed in {r['citation']}.",
+            f"Contract `{e['contract_id']}`, filed in {e['citation']}.",
             "",
-            f"A court construed **{e['n_pos']}** of this contract's provisions; "
-            f"the other **{e['n_neg']}** it did not.",
+            f"It has **{n_prov}** provisions. A court construed **{e['n_pos']}** "
+            f"of them, and found **{e['n_defects']}** distinct defect(s) between "
+            f"them. Every one is below, with the court's own words.",
             "",
-            "**That ratio is the rate of HIGH probabilities, not the rate of "
-            "issues.** Being litigated is the top of the scale: a defect worth "
-            "the cost of a lawsuit is one you would score well above 0.5, and "
-            "those are this rare. It says nothing about how often a provision "
-            "carries a defect you can NAME — that is far more common, and every "
-            "one of those belongs in the list, at the low probability it "
-            "deserves. Read the ratio as how seldom a probability should be "
-            "high, never as a quota for how many issues to report.",
-            "",
-            "## HIGH RISK — a federal court construed this provision",
-            "",
-            f'"{r["clause_name"]}"  (risk type: {e["code"]})',
-            "",
-            "```", runs.flat(r["clause_text"]), "```",
-            "",
-            "### The defect, in the court's own words",
-            "",
-            "One specific thing about THIS provision that the parties read "
-            "differently. An `issue` entry names something of this kind — not a "
-            "summary of the case, and not a verdict on the provision.",
-            "",
-            "```", excerpt, "```",
-            "",
-            f"### The passage it comes from, verbatim from the opinion in "
-            f"{r['citation']}",
-            "",
-            "```", passage, "```",
+            "**That ratio is your reference for HIGH probabilities.** Being "
+            "litigated is the top of the scale — a defect someone thought worth "
+            "the cost of a lawsuit — and this is how large a share of a contract "
+            "that comes to. It says nothing about how often a provision carries "
+            "a defect you can merely NAME, which is far more common and belongs "
+            "in the list at a low probability.",
         ]
+
+        # A court often disposes of two defects in one paragraph, and step 2
+        # records the same passage against both. Printing it twice would suggest
+        # two separate findings, so the second says where the first is.
+        seen = {}
+        shown_excerpts = {}
+        for i, r in enumerate(e["positives"], 1):
+            golds = runs.gold_issues(r)
+            terms = runs.content_terms(r["clause_text"], r["clause_name"])
+            notes += [
+                "",
+                f"## Construed provision {i} of {e['n_pos']} — "
+                f'"{r["clause_name"]}"',
+                "",
+                "```", runs.flat(r["clause_text"]), "```",
+                "",
+                f"A federal court construed this provision, and found "
+                f"**{len(golds)}** distinct defect(s) in it.",
+            ]
+            for j, g in enumerate(golds, 1):
+                passage = g["opinion_comment"].strip()
+                excerpt = runs.court_excerpt(passage, terms)
+                repeat = shown_excerpts.get(excerpt)
+                notes += [
+                    "",
+                    f"### Defect {j} of {len(golds)} — risk type {g['risk_type']}",
+                    "",
+                    "One specific thing about THIS provision that the parties "
+                    "read differently. An `issue` entry names something of this "
+                    "kind — not a summary of the case, and not a verdict on the "
+                    "provision.",
+                    "",
+                ] + ([f"The same words as {repeat} above — the court took "
+                      f"these defects together."] if repeat else
+                     ["```", excerpt, "```"])
+                shown_excerpts.setdefault(excerpt,
+                                          f"defect {j} of provision {i}")
+                if passage in seen:
+                    notes += [
+                        "",
+                        f"It comes from the same passage as {seen[passage]} "
+                        f"above: one paragraph of the opinion disposing of "
+                        f"several different defects.",
+                    ]
+                elif excerpt.strip() == passage:
+                    # The excerpt already IS the whole recorded passage -- short
+                    # ones fall under court_excerpt's cap untouched -- so
+                    # printing it again would only repeat itself.
+                    seen[passage] = f"defect {j} of provision {i}"
+                    notes += ["", f"That is the passage in full, verbatim from "
+                                  f"the opinion in {e['citation']}."]
+                else:
+                    seen[passage] = f"defect {j} of provision {i}"
+                    notes += [
+                        "",
+                        f"The passage it comes from, verbatim from the opinion "
+                        f"in {e['citation']}:",
+                        "",
+                        "```", passage, "```",
+                    ]
+
+        foil = e["foil"]
         if foil:
             notes += [
                 "",
-                "## LOWER RISK — from the same contract",
+                f"## LOWER RISK — one of the {e['n_neg']} provisions no court "
+                f"construed",
                 "",
                 f'"{foil["clause_name"]}". No court construed it in this case. '
                 f"It is not established to be sound, only never fought over.",
@@ -195,7 +233,7 @@ def task_prompt(cid, citation, n, examples, context=()):
     those two sessions was relative and correct.
     """
     dirs = "\n".join(
-        f"    examples/{e['code']}_{e['row']['contract_id']}/" for e in examples)
+        f"    examples/{e['kind']}_{e['contract_id']}/" for e in examples)
     ctx = ("" if not context else
            f"""    context/              the other {len(context)} document(s) filed in the same case
 """
@@ -218,15 +256,17 @@ a directory of your own. Nothing outside `/work` is readable.
     contract.txt          the contract to judge, in full
     provisions.json       the {n} provisions to judge, in the order they appear
                           in the contract, each with an id like `c001`
-{ctx}    examples/             one worked pair per risk type — read these FIRST
+{ctx}    examples/             three worked contracts — read these FIRST
 {dirs}
 
 Work in this order.
 
-1. Read every `examples/*/notes.md`. Each gives a provision a federal court
-   actually construed and the court's own words about the dispute, paired with a
-   provision from the same contract that no court construed. That is the
-   standard to apply — not your own sense of what looks badly drafted.
+1. Read every `examples/*/notes.md`. Each is one contract: every provision of
+   it a federal court construed, every distinct defect the court found in each,
+   in the court's own words, and one provision nobody contested. One example
+   carries only risk type 1, one only risk type 2, one both. Note how a single
+   provision can carry more than one defect, and of more than one type. That is
+   the standard to apply — not your own sense of what looks badly drafted.
 2. Read `contract.txt`. You need the whole instrument for risk type 2: a conflict
    cannot be seen from one provision alone. It is long — read it in pieces, and
    use Grep to chase a defined term or a cross-reference wherever it leads.
@@ -495,10 +535,11 @@ async def run(args):
 
     rows = runs.load_rows(lib.OUT / "dataset.csv")
     registry = lib.read_json(lib.OUT / "contracts.json", {})
-    examples = runs.pick_examples(rows)
-    taught = {e["row"]["contract_id"] for e in examples}
+    examples = runs.load_examples(rows)
+    taught = {e["contract_id"] for e in examples}
     print("examples (%d): " % len(examples) + ", ".join(
-        f"{e['code']}={e['row']['contract_id']}({e['n_pos']}p/{e['n_neg']}n)"
+        f"{e['kind']}={e['contract_id']}"
+        f"({e['n_pos']}p/{e['n_neg']}n, {e['n_defects']} defect(s))"
         for e in examples))
 
     eval_rows = [r for r in rows if r["contract_id"] not in taught]
@@ -580,8 +621,10 @@ async def run(args):
                    "isolation_sha256": manifest.sha256(
                        lib.ROOT / "src" / "experiments" / "isolation.py")},
         contract_order=[cid for cid, _ in todo],
-        examples=[{"code": e["code"], "contract_id": e["row"]["contract_id"],
-                   "clause_id": e["row"]["clause_id"]} for e in examples],
+        examples=[{"kind": e["kind"], "contract_id": e["contract_id"],
+                   "codes": e["codes"], "n_defects": e["n_defects"],
+                   "clause_ids": [r["clause_id"] for r in e["positives"]]}
+                  for e in examples],
     )
     # The sweep happens inside each container; per-contract _session.json
     # records what was actually removed and set there.

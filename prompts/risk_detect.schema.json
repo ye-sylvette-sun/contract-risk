@@ -22,7 +22,7 @@
           },
           "issues": {
             "type": "array",
-            "description": "Every construction issue this provision carries, one entry each, with its own probability. Only defects you can NAME go in the list -- but if you can name one, list it however unsure you are, with a LOW probability (0.08, 0.15, 0.20). Uncertainty goes into the probability; the empty list is only for a provision you can find nothing to name in. The question deciding between them is not whether you are confident but whether you can say what is wrong. Otherwise normally exactly one entry. Two issues of one type, or issues of both types, are the exception -- give them only when the extra defect is obvious and carries a genuinely high probability of its own. A type with no entry is read as probability 0, which is what it means: nothing specific was found.",
+            "description": "Every construction issue this provision carries, one entry each, with its own probability. TWO SEPARATE QUESTIONS. (1) Is there an entry at all? That turns only on whether you can say what is wrong. If you can name a defect, list it however unsure you are that it matters, with a LOW probability (0.08, 0.15, 0.20); uncertainty goes into the probability, never into silence. If you can name nothing, return an empty list -- which is the ordinary answer, since only a small minority of provisions ever become the subject of a construction dispute. (2) Given a non-empty list, how long is it? That turns on how many SEPARATE defects you can name. Normally exactly one. Two issues of one type, or issues of both types, are the exception -- give them only when the extra defect is obvious and carries a genuinely high probability of its own, and never to keep the two types balanced. A type with no entry is read as probability 0, which is what it means: nothing specific was found of that type.",
             "items": {
               "type": "object",
               "additionalProperties": false,
@@ -34,7 +34,7 @@
               "properties": {
                 "issue": {
                   "type": "string",
-                  "description": "Two sentences naming THIS specific defect: for risk type 1 the ambiguous term or the general-vs-specific tension; for risk type 2 the other provision it cannot be squared with, named. Never empty and never null -- an entry exists only because there is a defect to name. If you cannot name one, write no entry."
+                  "description": "Two sentences naming THIS specific defect: for risk type 1 the ambiguous term or the general-vs-specific tension; for risk type 2 the other part of the instrument this one has to be read against, named. Never empty and never null -- an entry exists only because there is a defect to name. If you cannot name one, write no entry."
                 },
                 "type": {
                   "type": "integer",
@@ -42,7 +42,7 @@
                     1,
                     2
                   ],
-                  "description": "1 if rewriting THIS provision alone would remove the dispute -- the defect is in its own words, however many cross-references it takes to show it. 2 if this provision is sound as written and the fix lies in another provision, or in deciding which of two governs. Citing another provision does not by itself make an issue type 2."
+                  "description": "Where the trouble lies. 1 if it is inside THIS provision's own words -- a term that can be read more than one way, a writing mistake, a general term whose reach against its own list is unclear -- however many cross-references it takes to show it. 2 if it is in how this provision stands with another part of the instrument: the two cannot both be given effect, or what this one means only settles once they are read together, or a recital pulls against the operative terms. Type 2 is not only direct conflict. Citing another provision as evidence of what a word HERE means does not by itself make an issue type 2."
                 },
                 "prob": {
                   "type": "number",

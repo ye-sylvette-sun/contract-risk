@@ -14,6 +14,7 @@ Imported by:
 """
 import csv
 import json
+import statistics
 import os
 import random
 import re
@@ -49,17 +50,6 @@ FIELDS = ["contract_id", "citation", "clause_id", "clause_name",
           "gold", "gold_type1", "gold_type2", "gold_subtype", "pred",
           "prob_type1", "prob_type2", "n_issues_type1", "n_issues_type2",
           "issues", "ok"]
-
-TYPE_NAME = {
-    "1.1": "risk type 1.1 — lexical ambiguity or vagueness",
-    "1.2": "risk type 1.2 — mechanical error",
-    "1.3": "risk type 1.3 — general-vs-specific / list scope",
-    "2.1": "risk type 2.1 — conflicting clauses",
-    "2.2": "risk type 2.2 — whole-instrument incoherence",
-    "2.3": "risk type 2.3 — recitals vs operative text",
-}
-
-EXCERPT_CAP = 6_000     # characters of opinion an example may carry
 
 # Reading a judgment the agent wrote by hand lives in `predictions.py`, which is
 # also mounted into the container, so host and container cannot disagree.
@@ -142,26 +132,6 @@ def pred_row(cid, c, judgment):
 
 def flat(text):
     return " ".join(str(text).split())
-
-
-def codes_in(row):
-    """The individual taxonomy codes on a row. `taxonomy` is comma-separated."""
-    return [c for c in row["taxonomy"].split(",") if c]
-
-
-def issue_for(row, code):
-    """The gold issue on this row whose risk type is `code`, or None.
-
-    A clause can carry several gold issues — c110 of the product-contamination
-    policy carries a 1.1 and a 2.2 — and `opinion_comment` at row level is their
-    passages CONCATENATED. A worked example for one code that showed the join
-    would show the court arguing the other code's point as well, at twice the
-    length and with the overlap between them repeated.
-    """
-    for g in json.loads(row.get("issues") or "[]"):
-        if str(g.get("risk_type", "")).startswith(code):
-            return g
-    return None
 
 
 # Sentence-enders that are really abbreviations. A split after these is what put
@@ -271,48 +241,125 @@ def court_excerpt(comment, terms, cap=700, floor=300):
     return text[best[1]:best[2]].strip() if best else text[:cap]
 
 
-def pick_examples(rows):
-    """One worked pair per risk type present in the data.
+# The three worked contracts, named outright. One carries only risk type 1, one
+# only risk type 2, one both — the third shape had no instance at all before,
+# and it is the one that shows a contract failing in two different ways.
+#
+# Named rather than derived. Every scoring rule tried here — shortest opinion,
+# cheapest per defect taught, fewest provisions, smallest share of the
+# evaluation set — picked a different three, and none of them expressed what
+# actually makes a contract worth teaching from. These were chosen by reading
+# them: short enough to show whole, every recorded defect carrying the court's
+# own words, and opinion passages short enough that three of them do not crowd
+# out the contract being judged.
+EXAMPLE_CONTRACTS = {
+    "type1": "562FSupp2d260_settlement_agreement_the_agreement",
+    "type2": "118FSupp3d802_membership_agreement",
+    "mixed": "252FSupp3d52_guaranty_agreement",
+}
 
-    Grouped by INDIVIDUAL code, not by the `taxonomy` string. Since step 1
-    began letting a multi-key case give a clause more than one code, that string
-    can read `1.1,1.3` — and grouping on it would invent a seventh risk type
-    that `TYPE_NAME` has no name for, and hold out a contract for each
-    combination that happened to occur rather than one per code. A clause
-    construed under both codes is a candidate for both.
 
-    Deterministic, never random: per taxonomy code, the positive with the
-    longest `opinion_comment` that still fits under EXCERPT_CAP (the longest in
-    the corpus runs to 38,000 characters and would swamp the others). Where
-    every candidate is over the cap the shortest is used whole — reasoning cut
-    off mid-sentence is worse than a different example. Ties break on clause id.
+KIND_NAME = {
+    "type1": "risk type 1 only — every defect is in the provision's own words",
+    "type2": "risk type 2 only — every defect is relational",
+    "mixed": "both risk types, in one contract",
+}
 
-    Each is paired with a clause from the SAME contract that no court construed,
-    so the contrast is within a document. The pair is a scale, not a right
-    answer.
+
+def gold_issues(row):
+    """This row's recorded defects, each with the court's own passage attached."""
+    return [g for g in json.loads(row.get("issues") or "[]")
+            if (g.get("opinion_comment") or "").strip()]
+
+
+def distinct_defects(positives):
+    """A contract's defects, deduplicated on the issue text.
+
+    One recorded defect can sit on several provisions: a drafter repeats a
+    paragraph and step 2 records the same finding against each copy. Counting
+    the copies would let a contract that teaches ONE defect twice look richer
+    than one that teaches two.
+    """
+    return {g["issue"].strip() for r in positives for g in gold_issues(r)}
+
+
+def example_kind(issues):
+    """`type1`, `type2` or `mixed`, from the coarse types this contract's gold has."""
+    coarse = {str(g["risk_type"])[0] for g in issues}
+    return "mixed" if coarse == {"1", "2"} else "type" + coarse.pop()
+
+
+def load_examples(rows):
+    """The three contracts of EXAMPLE_CONTRACTS, with everything they teach.
+
+    Load, not pick: WHICH contracts teach is settled by the constant above.
+    What is left here is reading them out, checking they are what the constant
+    says they are, and choosing the one uncontested provision each is shown
+    beside.
+
+    Whole contracts, not one clause each. Holding a contract out costs the
+    evaluation set every provision in it, so each one shows EVERY provision a
+    court construed and EVERY distinct defect the court found in it. Teaching
+    from one clause per taxonomy code threw the rest of those contracts away for
+    nothing.
+
+    Each is paired with a provision from the SAME contract that no court
+    construed, so the contrast is within one document. The pair is a scale, not
+    a right answer.
+
+    Raises rather than skipping. A named contract that is missing, or whose gold
+    is not the kind it is filed under, means the dataset moved under the
+    examples — and teaching from two contracts instead of three, or from a
+    type-1 contract labelled type 2, is exactly the failure a quiet `continue`
+    would hide until the run was over.
     """
     by_contract = defaultdict(list)
     for r in rows:
         by_contract[r["contract_id"]].append(r)
 
     examples = []
-    for code in sorted({c for r in rows if r["label"] == "POSITIVE"
-                        for c in codes_in(r)}):
-        cands = [r for r in rows
-                 if r["label"] == "POSITIVE" and code in codes_in(r)
-                 and r["opinion_comment"].strip()]
-        if not cands:
-            continue
-        fits = [r for r in cands if len(r["opinion_comment"]) <= EXCERPT_CAP]
-        best = (max(fits, key=lambda r: (len(r["opinion_comment"]), r["clause_id"]))
-                if fits else
-                min(cands, key=lambda r: (len(r["opinion_comment"]), r["clause_id"])))
-        pool = by_contract[best["contract_id"]]
+    for kind, cid in EXAMPLE_CONTRACTS.items():
+        pool = by_contract.get(cid)
+        if not pool:
+            raise KeyError(f"worked example {cid} is not in the dataset")
+        pos = sorted((r for r in pool if r["label"] == "POSITIVE"),
+                     key=lambda r: r["clause_id"])
+        issues = [g for r in pos for g in gold_issues(r)]
+        if not issues:
+            raise ValueError(f"worked example {cid} carries no defect with the "
+                             f"court's own words")
+        # Every defect must carry the court's words, not merely most of them: a
+        # provision shown with one of its two defects silently teaches that one
+        # defect per provision is the answer.
+        if sum(len(json.loads(r.get("issues") or "[]")) for r in pos) != len(issues):
+            raise ValueError(f"worked example {cid} has a defect with no "
+                             f"opinion passage attached")
+        got = example_kind(issues)
+        if got != kind:
+            raise ValueError(f"worked example {cid} is {got}, filed as {kind}")
+
+        # The foil is the CLOSEST IN LENGTH to the construed provisions, not the
+        # longest. Length is the strongest baseline signal in this corpus (AUC
+        # 0.731), so contrasting a construed provision with the longest thing
+        # nobody sued over teaches length as much as it teaches drafting — and
+        # the longest provision is often a page of boilerplate that costs the
+        # prompt more than it is worth.
         foils = [r for r in pool if r["label"] == "NEGATIVE"]
-        foil = max(foils, key=lambda r: (len(r["clause_text"]), r["clause_id"])) \
-            if foils else None
-        examples.append({"code": code, "row": best, "foil": foil,
-                         "n_pos": len(pool) - len(foils), "n_neg": len(foils)})
+        target = statistics.median(len(r["clause_text"]) for r in pos)
+        foil = (min(foils, key=lambda r: (abs(len(r["clause_text"]) - target),
+                                          r["clause_id"]))
+                if foils else None)
+        examples.append({
+            "kind": kind,
+            "contract_id": cid,
+            "citation": pos[0]["citation"],
+            "positives": pos,
+            "foil": foil,
+            "n_pos": len(pos),
+            "n_neg": len(foils),
+            "n_defects": len(distinct_defects(pos)),
+            "codes": sorted({g["risk_type"] for g in issues}),
+        })
     return examples
 
 
