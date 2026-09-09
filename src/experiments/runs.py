@@ -363,6 +363,24 @@ def load_examples(rows):
     return examples
 
 
+def held_out(rows, examples):
+    """Every contract the worked examples make unusable for evaluation.
+
+    Not just the three example contracts: every contract filed in the same CASE.
+    A case's other documents are mounted into the workspace as `context/`, so
+    judging a sibling of an example would put that example's own contract in
+    front of the model with its construed provisions and the court's words about
+    them already given away in `examples/`. The defects are usually the same
+    dispute seen from another document, which is precisely what makes them a
+    leak rather than a coincidence.
+
+    Costs more than it looks: dropping one example contract can drop several
+    hundred provisions with it.
+    """
+    cases = {e["citation"] for e in examples}
+    return {r["contract_id"] for r in rows if r["citation"] in cases}
+
+
 def anonymise(clauses):
     """Present the provisions under opaque ids, in the order they appear.
 

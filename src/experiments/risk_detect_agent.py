@@ -536,7 +536,7 @@ async def run(args):
     rows = runs.load_rows(lib.OUT / "dataset.csv")
     registry = lib.read_json(lib.OUT / "contracts.json", {})
     examples = runs.load_examples(rows)
-    taught = {e["contract_id"] for e in examples}
+    taught = runs.held_out(rows, examples)
     print("examples (%d): " % len(examples) + ", ".join(
         f"{e['kind']}={e['contract_id']}"
         f"({e['n_pos']}p/{e['n_neg']}n, {e['n_defects']} defect(s))"
