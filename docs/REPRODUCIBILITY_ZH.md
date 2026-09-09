@@ -1,218 +1,154 @@
-# Agent 实验的可复现性 · 说明（中文）
+# Agent 实验的可复现性（中文）
 
-配套文档：[数据集说明](DATASET_ZH.md)、[实验说明](EXPERIMENTS_ZH.md)。英文原文见
-[REPRODUCIBILITY.md](REPRODUCIBILITY.md)。
-
-外部 review 指出：agent 实验为每份合同开了新的**对话**，但没有建立干净的**运行环境**。
-本文逐条列出 review 提出的问题、各自的处理，以及验证方式。
-
-只有 **agent** 一路受影响。当初与它对照的一次性 API 调用没有 CLI、配置文件、memory
-或文件系统，现已停用并删除，下文没有任何一条依赖它。
+agent 实验为每份合同开一个全新的对话。仅有这一点是不够的：Claude Code CLI 可以加载
+settings 文件、`CLAUDE.md`、memory、skill 和 MCP server，而这些都不会出现在对话里；
+它还运行在一个持有答案的文件系统上。本文说明这次运行与什么隔离、每一项保证如何强制
+实施、以及如何被核验。
 
 ---
 
-## 一、问题与处理
+## 1. session 与什么隔离
 
-- **`setting_sources=None` 会加载全部配置文件。** SDK 对 `None` 的定义是"加载全部来源，
-  与 CLI 默认一致"：`~/.claude/settings.json`、`.claude/settings.json`、
-  `.claude/settings.local.json`，以及工作目录各级祖先目录下的 `CLAUDE.md`。原代码的
-  注释写的是相反的意思。
-  **修复：**`setting_sources=[]`（SDK 隔离模式），并删除该注释。`ClaudeAgentOptions`
-  是 dataclass，不存在的选项名会在构造时抛 `TypeError`，因此 session 能启动即表示这些
-  选项均有效。
+**配置。** SDK 把 `None` 当作「加载全部来源，与 CLI 默认一致」—— 用户级
+`~/.claude/settings.json`、项目级 `.claude/settings.json`、本地
+`.claude/settings.local.json`，以及工作区上溯路径上的每一个 `CLAUDE.md`。运行时传入的
+是显式的空值：
 
-- **`skills=None` 不等于关闭 skills。** `None` 表示 SDK 不做配置，CLI 自身默认仍生效，
-  包括用户配置中注册的 skills marketplace。
-  **修复：**`skills=[]`。
-
-- **项目级、用户级、插件级 MCP server 仍可被加载。**
-  **修复：**`strict_mcp_config=True`。
-
-- **auto memory 与 `CLAUDE.md` 注入不受 `setting_sources` 控制**，两者默认开启。
-  **修复：**在 SDK 启动子进程前，于父进程设置 `CLAUDE_CODE_DISABLE_AUTO_MEMORY=1`
-  与 `CLAUDE_CODE_DISABLE_CLAUDE_MDS=1`。
-
-- **父进程环境被整体继承，`env()` 仅删除三个变量。** 机器上任何 `CLAUDE_*`、
-  `ANTHROPIC_*` 或代理变量都会进入运行，且无记录。
-  **修复：**`env()` 清扫父进程，按名删除匹配 `ANTHROPIC_*`、`CLAUDE_*`、`CLAUDECODE`、
-  `DISABLE_*` 及代理变量名的条目，再设置上述开关。注意 review 建议的 `env={...}` 无法
-  达到此效果：SDK 构造的是 `{**inherited_env, ..., **options.env, ...}`，`options.env`
-  覆盖在继承环境之上，只能增不能减，限制继承必须在父进程完成。记录变量名，不记录值。
-  搬进容器之后这套清扫已无可清扫之物：容器启动时没有任何 `CLAUDE_*` 或 `ANTHROPIC_*`
-  变量，64 个 session 记录的清扫数量都是 **0**。代码保留，因为这个数字正是靠它才可查。
-
-- **CLI 可能在运行中途自动升级。**
-  **修复：**`DISABLE_AUTOUPDATER=1`。实际影响有限，原因见下文 CLI 版本一条。
-
-- **agent 一路并非只运行一个模型。** 64 个 session 均额外为 CLI 内部调用计费
-  `claude-haiku-4-5`。
-  **修复：**`CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1`。注意 CLI 中不存在
-  `DISABLE_NON_ESSENTIAL_MODEL_CALLS` 这个变量名，设置它无任何效果。
-
-- **工具限制是隐式的**：`Bash`、`Edit` 只是未出现在白名单中。
-  **修复：**在四工具白名单外增加显式 `disallowed_tools`，列出 `Bash`、`Edit`、`Task`、
-  `Skill`、`WebFetch`、`WebSearch` 等。
-
-- **无文件系统边界。** session 无 `Bash`，但 `Read`、`Glob` 接受绝对路径，可触及本仓库
-  源码、`dataset.csv` 中的标准答案或其他合同的工作区。
-  **修复：**`PreToolUse` hook 将每个路径参数相对 session 工作区解析，工作区外的一律
-  拒绝并记录。检查的参数名包括 `pattern` 与 `glob`，不只是 `file_path`——`Glob` 的路径
-  是走 `pattern` 传的，只看 `file_path` 的 hook 会让绝对路径的 glob 整个漏过去。
-  `test_isolation.py` 用 22 个用例把这件事钉死，宿主机与镜像内都跑。64 个 session 里
-  模型共有 32 次工作区外的尝试，全部是 `Read`，全部被拒绝，全部指向并不存在的位置
-  （`/tmp/outputs/...`、`/mnt/user-data/outputs/...`、`/Users/you/work/...`）；每个
-  session 随后都找到了真实路径并正常完成。
-
-- **`claude-agent-sdk` 不在 `requirements.txt` 中**，已有两条依赖使用 `>=` 下界。
-  **修复：**全部改为 `==` 锁定并在运行前提交：`claude-agent-sdk==0.2.139`、
-  `anthropic==0.122.0`、`matplotlib==3.8.4`、`openpyxl==3.1.2`，在镜像构建时装入。
-  看 manifest 时有一点要注意：它记录的是**宿主机**环境——宿主机驱动实验但不执行实验——
-  已经写下的 manifest 里 `matplotlib` 都是 3.11.1，因为当时的宿主机是 Windows +
-  CPython 3.13，3.8.4 在那里没有 wheel。宿主机后来已重建到 CPython 3.12，锁定的
-  wheel 能装上，所以现在再写一份 manifest 会记录 3.8.4。
-  真正决定 session 行为的两个版本 `claude-agent-sdk` 与 `anthropic` 处处一致；
-  `matplotlib` 与 `openpyxl` 只用来画图和读表格，session 运行的代码一个都不 import。
-  SDK 须高于 0.1.59，低于该版本 `setting_sources=[]` 行为不正确。
-
-- **仅记录了 CLI 版本，机器环境无记录。**
-  **修复：**每次调用在首个 session 前写入
-  `output/llm_logs/risk_detect_agent/run_manifest_<时间戳>.json`，结束时再写一次，内容包括
-  SDK 与 CLI 版本、Python 解释器、平台、git commit 与 dirty 标志、隔离选项原文、被清扫
-  的环境变量名单、生效的开关、prompt 与 `dataset.csv`、`contracts.json` 的 SHA-256、
-  模型、effort、选中的示范例子、合同运行顺序，以及容器的 image id 与内容哈希。每个字段
-  对应 review 的哪一条要求，见第四节。文件名带时间戳而非覆盖写，因为脚本可续跑。
-
-- **记录的 CLI 版本会是错的。** SDK 的 wheel 内置一份 CLI 并优先于 `PATH` 使用。本机
-  `claude --version` 为 Homebrew 的 2.1.227，实际运行的是内置的 2.1.233。
-  **修复：**manifest 通过 SDK 自身的查找逻辑解析 CLI，同时记录其路径、版本与 `PATH`
-  上的版本。因此锁定 `claude-agent-sdk` 即锁定 CLI。
-
-- **原先运行在开发机的普通用户下。** 环境清扫覆盖不到企业托管的组织级策略
-  (`/etc/claude-code/managed-settings.json`)；而任何交互式用过 Claude Code 的机器，
-  `~/.claude` 里都带着配置、memory 与 skills。
-  **处理：** 每个 session 都在自己的容器里跑，基础镜像按 digest 锁定
-  (`ubuntu@sha256:d78ab764...`)，以镜像构建时新建的非 root 用户运行，其 home 目录是空的。
-  文件系统上没有托管策略文件、没有 `~/.claude`、没有 skills、没有任何 `CLAUDE.md`——
-  不是被关掉了，是从来没装过。容器只挂载当前这一份合同的工作区到 `/work`，两个 prompt
-  只读挂到 `/opt/task`；`dataset.csv`、本仓库以及另外 63 份合同根本不在它的文件系统上。
-  镜像构建时会断言 SDK 自带的 CLI 就是 2.1.233，构建得出来的镜像不可能悄悄换了 CLI。
-
-- **登录凭据要进容器，但不能把配置一起带进去。** 直接挂 `~/.claude` 目录会把配置、
-  memory、skills 一并带入。
-  **处理：** 用环境变量 `CLAUDE_CODE_OAUTH_TOKEN` 传入；没有它时，只读挂载单个文件
-  `~/.claude/.credentials.json`。目录本身永不挂载。manifest 记录用了哪条路径，不记录值。
-
-- **review 未提及、我们自查发现：两路看到的示范例子并不相同。** agent 的工作区里放了
-  每个示范例子的合同全文，而一次性那一路的 few-shot 块里只有两段条款正文和法院
-  的原话。也就是说 agent 手上有对照组拿不到的材料。
-  **处理：**删掉工作区里的示范合同，连同 prompt 里提到它们的那一句，然后全部重跑。
-  轨迹统计显示这个入口两次运行中从未被用过——64 个 session 全都读了三份 `notes.md`，
-  没有一个打开过示范合同——所以没有结果依赖于它；但对比的成立不应该建立在"模型主动
-  放弃了给它的优势"之上。
-
-- **`claude-opus-5` 是别名而非带日期的快照**，API 返回的即该别名，无法直接锁定。
-  **部分修复：**记录可观测项——API 每次调用返回的 `model` 字段、CLI 每个 session 报告的
-  `model_usage` 键、manifest 的起止时间。若日后暴露带日期的 id，在 `lib.MODEL` 中锁定。
-
-## 二、review 中两条不成立的判断
-
-- **"memory 位置按 git 仓库确定，仓库下所有工作区共用一份 memory。"** 实际按工作目录
-  的绝对路径确定：64 个工作区在 `~/.claude/projects/` 下生成 64 个独立目录，其中没有
-  任何一个含 `memory/`。工作区结构无需改动。
-
-- **"轨迹中出现一次 `Bash` 与一次 `Edit` 调用，说明实际代码与提交代码不一致，或工具
-  限制失效。"** 两次调用均返回错误：*"No such tool available: Bash. Bash exists but is
-  not enabled in this context."* 被拒绝恰恰说明限制生效，而不是失效。仍加入
-  `disallowed_tools`，因为"未列出"与"被明确拒绝"是两种不同的说法，只有后者可从外部
-  检查。本次运行 64 个 session 全部 727 次工具调用的统计为
-  `Read 445 / Write 165 / Glob 92 / Grep 25`，没有别的。
-
-## 三、未解决的问题
-
-- **每个条件仅运行一次。** 两路均未设 temperature 与 seed，API 也不提供确定性采样，
-  重跑不会得到相同数字。没有做重复实验（成本原因），因此每个指标**跑与跑之间的波动
-  没有量化**。
-
-  有一个附带的观测可以给出量级：agent 一路被完整执行过两次，两次的 `prompt_sha256`、
-  `input_sha256`、模型、effort、轮数上限与镜像均一致；两次之间在全语料上 ROC-AUC 相差
-  约 0.02，召回率@0.5 相差约 0.10。这是一次观测而非方差估计，但它意味着几个百分点以内
-  的 ROC-AUC 差异不能单独拿来解读。哪些结论经得起这个尺度、哪些经不起，见
-  [REPORT.md](REPORT.md) 第 6 节。这仍是唯一会影响结果解读方式的遗留项。
-
-- **`claude-opus-5` 是别名。** 见第一节：能观测到的都记录了，但没有带日期的快照可锁。
-
-## 四、记录了什么、记在哪
-
-每次运行留下两类文件，都已提交。
-
-**`run_manifest_<时间戳>.json`**——每次启动一份，首个 session 前写一次，结束时再写一次：
-
-| review 的要求 | 字段 |
-|---|---|
-| SDK / CLI 版本 | `packages`；`cli_version`、`cli_path`（实际运行的内置二进制）、`cli_on_path`（`claude --version` 会报告的那个） |
-| 环境变量白名单 | `env_set`、`env_removed` |
-| prompt / 输入哈希 | `prompt_sha256`、`input_sha256`；system prompt 以 `sha256:` 摘要形式存放，不存原文 |
-| 模型、effort | `model`（请求的）、`models_seen`（实际计费的）、`effort`、`max_turns` |
-| 运行顺序 | `contract_order`、`seed`、`examples` |
-| 机器 | `python`、`platform`、`git_commit`、`git_dirty`、`billing` |
-| 隔离 | `options` 原文——`setting_sources`、`skills`、`strict_mcp_config`、`disallowed_tools`、`hooks`、`cwd` |
-| 容器 | image tag、image id，以及 Dockerfile、entrypoint、`isolation.py` 的 SHA-256 |
-
-**`<cid>.json`**——每份合同一份：模型、effort、`models_seen`、session id、轮数、token
-用量、`container_rc`、镜像、`path_denials`，以及 `env_removed`——清扫程序自己给出的
-"这里没有东西可删"的记录。旁边还有 `<cid>.trajectory.jsonl` 与 `<cid>.container.log`。
-
-**指令加载清单**是唯一一条我们用别的方式满足的要求，这个差别应当讲清楚而不是含糊过去：
-CLI 不输出这样的记录，所以没有一份"实际加载了什么"的正面清单。替代的做法是：镜像里
-根本没有可加载的东西——没有 `~/.claude`、没有任何 `CLAUDE.md`、没有 skills、没有托管
-配置文件——再由 `preflight.py` 从 session 自己的轨迹里核对它们确实不存在（第五节）。
-"构造上不存在 + 反向审计"是在 CLI 不支持的前提下能拿到的最强证据，但它确实弱于
-review 要求的那份清单。
-
-## 五、验证方式
-
-`preflight.py` 在剩余合同中选最小的一份，以与正式实验完全相同的选项真实运行一个
-session，随后审计其轨迹，任一项不通过即以非零码退出。检查项：
-
-- 轨迹中无 `MEMORY.md`、`CLAUDE.md`、skills 列表、`mcp__*` 工具；
-- `<system-reminder>` 仅作为 CLI 包裹工具返回结果出现，无独立指令块；
-- 计费模型有且仅有一个，且为指定模型；
-- 所有记录的 CLI 版本一致，且等于 SDK 解析出的版本；
-- 未使用四个工具以外的工具，此类尝试均被拒绝；
-- 无工作区外路径被实际读取（被拒绝的尝试计为通过并记录）；
-- 存在覆盖该合同的 manifest，其隔离选项为设定值，且环境开关均实际存在于该 session
-  自己的环境中；
-- session 跑在预期的镜像里、工作目录只有 `/work`，且容器内需要清扫的环境变量为 0 个
-  ——这是在开发机上跑不出来的数字。
-
-该检查早期两次运行失败：一次因 manifest 记录的 CLI 未参与运行，一次因
-`DISABLE_NON_ESSENTIAL_MODEL_CALLS` 不是有效变量名。两者均属选项看似生效、实际无效，
-仅靠阅读代码无法发现。当前 harness 14 项检查全部通过。
-
-```sh
-python src/experiments/preflight.py                  # 运行一个 session 并审计
-python src/experiments/preflight.py --audit <cid>    # 审计已运行的 session
+```python
+setting_sources=[]          # 任何层级的 settings 文件都不加载
+skills=[]                   # 不加载 skill；None 的含义是「不做配置」
+strict_mcp_config=True      # 项目、用户、插件的 MCP server 一律不加载
 ```
 
-## 六、复现步骤
+**memory 与 `CLAUDE.md` 注入**不受 `setting_sources` 管辖，由环境变量关闭：
+`CLAUDE_CODE_DISABLE_AUTO_MEMORY=1` 和 `CLAUDE_CODE_DISABLE_PROJECT_CLAUDE_MD=1`。
 
-```sh
-pip install -r requirements.txt        # 宿主机侧：够用来构建镜像并驱动实验
+**环境变量。** `env()` 扫描父进程，**按名移除**每一个可能到达 CLI 的变量 —— API key、
+base URL、代理设置、模型覆盖、遥测，全部 —— 而不是只移除已知的少数几个。传进去的，
+就是实验选择传进去的。
+
+**非必要流量。** `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1`。不设它的话，一次 session
+会为后台工作计费第二个更小的模型，那么这次运行就不是单模型的测量。
+
+**自动更新。** `DISABLE_AUTOUPDATER=1`，CLI 不能在运行中途改变版本。
+
+**工具。** 允许四个工具，其余在 `disallowed_tools` 中显式列出 —— 不在白名单里的工具
+会被拒绝，而不只是没有被提及。
+
+**文件系统。** session 没有 `Bash`，但 `Read` 和 `Glob` 接受路径。一个 `PreToolUse`
+hook 把每个路径参数解析到工作区根目录之下，越界一律拒绝。每次拒绝都会被记录，
+`preflight.py` 报告次数。
+
+**机器。** 每个 session 都在自己的容器里运行，镜像按 digest 固定，不按 tag：
+
+```
+contract-risk-judge:0.2.139
+sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec
+```
+
+容器里没有 `~/.claude`、没有 settings、没有 skill、没有托管策略，只有这份合同的工作区
+被挂载。`dataset.csv` 和其他合同根本不在它的文件系统上。
+
+**凭据。** `CLAUDE_CODE_OAUTH_TOKEN` 作为单个环境变量传入 —— 订阅凭据，**从不使用
+API key** —— 使鉴权进入容器时不带入任何配置。
+
+**评测集。** 持出的不只是 example 合同本身，而是该 example 所在案件提交的**每一份
+合同**。同案的其他文书会作为 `context/` 挂载，因此判断一个 example 的同案兄弟，等于把
+该 example 自己的被解释条款和法院对它们的原话直接摆在模型面前。
+
+---
+
+## 2. 哪些东西被钉死
+
+全部依赖以 `==` 固定并在运行前提交，包括 `claude-agent-sdk`。CLI 版本通过 SDK 自身的
+查找逻辑解析，而不是从 `PATH` 取：SDK 自带一个 CLI 且会优先使用它，所以 `PATH` 上的
+版本未必就是实际运行的那个。
+
+`claude-opus-5` 是一个别名而不是带日期的快照，API 在用量记录里返回的也是这个别名。某一天
+它背后的确切权重无法从日志中恢复；manifest 记录的是**请求了什么**和**计费了什么**，这是
+别名机制允许做到的极限。
+
+---
+
+## 3. 记录了什么、记在哪
+
+```
+output/llm_logs/risk_detect_agent/<cid>.json             请求、响应、用量
+output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl session 的每一轮
+output/risk_detect_agent/<cid>.json                      返回的判断
+output/risk_detect_agent_ws/<cid>/                       挂载时的工作区
+output/run_manifest_<timestamp>.json                     镜像 digest、CLI 版本、
+                                                         请求与计费的模型、
+                                                         各项选项、依赖版本
+```
+
+对隔离而言最关键的记录是 trajectory：它显示 session 发起的每一次工具调用，因此「模型只
+读到了实验给它的东西」这个主张可以被核验，而不是被假定。
+
+---
+
+## 4. 如何核验
+
+`preflight.py` 端到端跑一份合同，并在值得开始完整运行之前断言结果的十四条性质：
+
+```
+TRAJECTORY   trajectory 存在且有记录
+CONTAINER    镜像与工作目录是钉死的那一个
+MEMORY       没有加载任何 memory 文件
+CLAUDE_MD    没有注入任何 CLAUDE.md
+SKILLS       没有加载任何 skill
+REMINDERS    没有 system reminder 包裹工具结果
+CLI          trajectory 中的 CLI 版本就是 SDK 实际启动的那个
+MODEL        计费的模型就是请求的模型，且只有这一个
+PATHS        有多少路径参数落在工作区之外，其中多少被拒绝
+TOOLS        实际使用了哪些工具
+MANIFEST     run manifest 已写出
+OPTIONS      setting_sources、skills、strict_mcp_config 是隔离所需的值
+ENV          清扫了多少变量，以及每个开关是否都已设置
+```
+
+这里失败是**不该开跑**的理由，不是一条记下来的警告。
+
+---
+
+## 5. 已知限度
+
+- **模型别名不是快照。** 几个月后的重跑可能在同一个名字下运行不同的权重，而日志中不会
+  有任何迹象。
+- **运行间方差未测量。** 没有随机种子，没有温度控制，同一 prompt 从未在这个数据集上跑过
+  两遍。在做过这件事之前，两个配置无法比较；`compare_risk_detect.py --against` 就是
+  为此而存在的。
+- **数据集里条款到段落的对应是模型的判断**，不是已核实的事实 —— 见
+  [DATASET_ZH.md](DATASET_ZH.md) §5。隔离让**运行**可复现，它不会让**标签**正确。
+
+---
+
+## 6. 复现步骤
+
+```bash
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
-claude setup-token                     # 手动跑一次，token 写进 .env
-python src/experiments/preflight.py    # 须输出 PREFLIGHT PASSED
-python src/experiments/risk_detect_agent.py --shuffle --parallel 6
+export CLAUDE_CODE_OAUTH_TOKEN=...          # 订阅凭据
+
+python src/experiments/preflight.py         # 十四项必须全部通过
+python src/experiments/risk_detect_agent.py --parallel 6
+
 python src/experiments/compare_risk_detect.py
-python src/experiments/plot_risk_detect_thresholds.py --run agent
+python src/experiments/plot_risk_detect_thresholds.py
+
+python src/experiments/issue_alignment_check.py --parallel 6
+python src/experiments/issue_alignment_check.py --control case --out DIR
+python src/experiments/plot_issue_alignment_thresholds.py
 ```
 
-`--parallel` 只决定同时跑几个容器。每份合同都是独立容器里的独立 session，这个数字
-不影响结果。
+从语料重建数据集：
 
-数据集本身不需要 API key：`step0_corpus.py` 与 `build_dataset.py` 不做模型调用，且
-`build_dataset.py` 按记录的字符区间从磁盘重新切分每一行，文字不能逐字复现即拒绝写出。
-重跑复现的是流程，模型答案会不同，差异幅度即第三节所述的未解决问题。
+```bash
+python src/step1_inventory.py  --parallel 6
+python src/step2_disputes.py   --parallel 6
+python src/step3_issue_scope.py --parallel 6
+python src/build_dataset.py
+```
 
-每个 session 留下 `output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl`，含每次工具调用、
-思考块、CLI 版本与工作目录；另有 `<cid>.json` 记录轮数、token 用量、计费模型、被拒绝的
-路径以及所用镜像。本文各项说法可据此重新审计，无需重跑。
+`step2_disputes.py` 和 `step3_issue_scope.py` 支持续跑：已在产物中的案件会被跳过。
+`--cases-file PATH` 只运行文件中列出的 citation（每行一个），并在某个 citation 匹配不到
+任何已建清单的案件时直接报错退出。

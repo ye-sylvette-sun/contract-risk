@@ -53,12 +53,9 @@ WIDE = 10
 def flags(kept):
     """The §7 detectors. Reporting only — none of these rejects a clause.
 
-    `kept` is already in document order, sorted by span before this is called.
-
-    A third detector used to live here — clauses reported out of document order.
-    It was dropped when the sort went in: sorting is what fixes the order, and
-    the artifact no longer depends on the sequence the model happened to list
-    them in, so the check had nothing left to report.
+    `kept` is already in document order, sorted by span before this is called,
+    so the order the model happened to list them in cannot reach the artifact
+    and is not something to check for.
     """
     out = []
     for a, b in zip(kept, kept[1:]):

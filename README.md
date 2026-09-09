@@ -5,17 +5,15 @@ court opinions and the contracts filed with them, plus an experiment that asks a
 model to predict the labels.
 
 ```
-10,238 rows  |  165 positive / 10,073 negative  (1.6% positive)
-56 cases     |  87 contracts                    |  11.9 MB
-214 issues   |  the defects the courts construed, named one by one
+10,102 rows  |  170 positive / 9,932 negative   (1.7% positive)
+53 cases     |  87 contracts
+225 issues   |  the defects the courts construed, named one by one
 ```
 
-> **The experiment is agentic.** `risk_detect_agent.py` — one sandboxed Claude Code
-> session per contract — is the experiment that is run and reported. A one-shot
-> API arm ran alongside it until it was **retired and deleted**; what the two
-> shared (the taxonomy, the worked examples, the `preds.csv` row contract) is now
-> `runs.py`. The old two-arm comparison is on `2026.9.1_legacy_spellbook`, and the
-> deleted arm on `2026.9.3_legacy_multi_issue_experiment`.
+> **The experiment is agentic.** `risk_detect_agent.py` runs one sandboxed Claude
+> Code session per contract. The taxonomy, the worked examples and the `preds.csv`
+> row contract live in `runs.py`, so the run and everything that scores it cannot
+> disagree about what a column means.
 
 - **[docs/DATASET.md](docs/DATASET.md)** — what a label means, how the dataset is
   built, the columns, the known limits.
@@ -25,6 +23,11 @@ model to predict the labels.
   isolated from, and how that is checked.
 - **[docs/REPORT.md](docs/REPORT.md)** — the results: what the agent run found,
   and what is not established.
+
+Chinese versions of all four sit beside them: [DATASET_ZH.md](docs/DATASET_ZH.md),
+[EXPERIMENTS_ZH.md](docs/EXPERIMENTS_ZH.md),
+[REPRODUCIBILITY_ZH.md](docs/REPRODUCIBILITY_ZH.md),
+[REPORT_ZH.md](docs/REPORT_ZH.md).
 
 This README is the repo tour and how to run it.
 
@@ -50,18 +53,17 @@ model says which of *those* the dispute turned on and `taxonomy_provenance`
 records that it did. The binary risky/not label never depends on this.
 
 **The classes are not matched on clause length, and this is the caveat to read
-first.** Positives run to a median 586 characters against the negatives' 332,
-and clause length alone separates them at within-contract ROC-AUC **0.728**. Any
-model's AUC has to be read against that baseline.
+first.** Positives run to a median 620 characters against the negatives' 343,
+and clause length alone separates them at ROC-AUC **0.691**. Any model's AUC has
+to be read against that baseline, and one of the findings is that on risk type 2
+the model does not beat it.
 
-An earlier build reported 0.523 here, but its positives were cut by a model that
-had read the opinion, so their spans were drawn around the *disputed language*
-rather than around the clause containing it — a label-dependent boundary, which
-is a worse problem than the confound it hid. DATASET.md §6 sets out the
-evidence. So: **if you benchmark on this, re-measure the length-only baseline
-for whatever build you
-have** rather than trusting this number, and report per-contract as well as
-aggregate figures.
+Clause boundaries are cut by step 1, which never sees the opinion, so a positive
+and a negative are the same kind of object and the length gap is a property of
+litigated language rather than of how the spans were drawn. DATASET.md §6 sets
+out the evidence. **If you benchmark on this, re-measure the length-only
+baseline for the build you have** rather than trusting this number, and report
+per-contract as well as aggregate figures.
 
 ## What guarantees the text
 

@@ -364,8 +364,8 @@ _DOCKET = re.compile(rf"(?:{_PART}){{2,}}", re.I)
 # the middle of a text line where `_stamp`'s whole-line fullmatch cannot reach.
 # Cutting mid-line is the dangerous direction, so the pattern is narrow: the
 # junk after a copyright year is allowed ONLY when the whole footer is present.
-# An earlier version allowed it after a bare form id and ate the word `Premises`
-# out of a policy's own name. 49 hits across 3 of the 117 contracts.
+# Anchoring on a bare form id instead would eat words out of a policy's own name
+# — `Premises` follows one in this corpus. 49 hits across 3 of 117 contracts.
 _FOOTER = re.compile(
     r"[A-Z]{2,4}-\d{3,6}[a-z]?.{0,2}?\s*\(\d{1,2}/\d{2,4}\)"    # PF-27556c (11/10)
     r"(?:\s*©\s*\d{4}"                                     # © 2010
@@ -869,9 +869,9 @@ def write_json(path, obj, quiet=False):
 # results. The per-unit files are folded into the one artifact downstream reads
 # once the step finishes, and deleted after that has been verified.
 #
-# It also removes an accidental cost: the old shape rewrote the WHOLE artifact
-# after every call, which for step 2's 6.6 MB inventory over 103 contracts was
-# some 680 MB of writes to store 6.6 MB of results.
+# It also keeps the writing proportional to the work: each call writes only its
+# own result, where folding into one artifact after every call would rewrite the
+# whole of it each time — hundreds of megabytes of writes to store a few.
 
 def shard_dir(name):
     return OUT / name

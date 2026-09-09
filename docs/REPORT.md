@@ -1,215 +1,146 @@
-# Risk detection — results (superseded build)
+# Risk detection — results
 
-One question, one method: can a model, given a contract and no access to the
-opinion, rank the provisions a federal court went on to construe above the ones
-it did not?
-
-> ## ⚠ These results are superseded
->
-> **Every number in this report was produced on a dataset that no longer
-> exists.** Steps 1 and 2 have since been reordered so that clause boundaries
-> are fixed by a call that never sees the opinion
-> ([DATASET.md](DATASET.md) §3). That changed the clause segmentation, the
-> positive set (201 → 226), the ids, and the evaluation set (11,636 → 11,921
-> provisions). **The run has not been repeated**, and when it is, its numbers
-> must not be placed beside the tables below as though they measured the same
-> thing.
->
-> One difference matters more than the rest: length alone now ranks provisions
-> at within-contract ROC-AUC **0.728**, where this run's dataset gave 0.523.
-> DATASET.md §6 explains why the old figure was the artifact and the new one is
-> the property. A headline AUC has a much higher floor to clear than it did
-> here.
->
-> The dataset these numbers belong to is on
-> `2026.9.3_legacy_multi_issue_experiment`. They are kept because a repeat needs
-> something to be read against — not because they describe the current build.
-
-> **The `llm_api` arm has been retired and deleted.** Earlier builds ran two
-> arms — one stateless API call per contract against one agent session per
-> contract — and this report compared them. **The agentic approach is the
-> experiment.** What the two arms shared (`FIELDS`, `pred_row`, `anonymise`,
-> `probs_of`) is now `runs.py`. The two-arm comparison is on
-> `2026.9.1_legacy_spellbook`; the deleted arm on
-> `2026.9.3_legacy_multi_issue_experiment`.
+What one sandboxed Claude Code session per contract finds when it is given a
+contract and asked which of its provisions a court would be asked to construe,
+and whether it names the defect the court actually construed.
 
 ## The run
 
-**`agent`** — one Claude Code session per contract, in a container. The model
-gets a workspace (the contract, the provisions under opaque ids, three worked
-examples) and decides for itself what to read and in what order.
-
-`claude-opus-5`, effort high, ceiling 100 turns, 8 containers at a time, billed
-to a Claude Code subscription. Image `contract-risk-judge:0.2.139`
-(`sha256:957de41b…`), identical for all 100 sessions.
-
 ```
-11,636 provisions  |  190 positive (1.6%)  |  100 contracts
-100 sessions       |  1,254 turns          |  0 unjudged, 0 errored
+model            claude-opus-5, effort high, 100-turn ceiling
+harness          one container per contract, contract-risk-judge:0.2.139
+                 sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec
+auth             CLAUDE_CODE_OAUTH_TOKEN (subscription), never an API key
+evaluation set   84 contracts, 9,890 provisions, 3 example contracts held out
+gold             163 construed provisions, 225 recorded defects
+cost             $169.47 at API-equivalent rates, 0 failed sessions
 ```
 
-Every provision of every contract was judged. No session hit the turn ceiling —
-the largest, at 698 provisions, used 51 turns.
+The alignment judge is `gpt-5.6-sol` at high effort — a different family from
+the one being judged, and it never sees the agent's reasoning.
 
----
+## 1. Ranking
 
-## 1. Headline
+Three one-vs-rest tasks. A provision's score is its probability for that type;
+`risky` takes the larger of the two.
 
-| panel | positives | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
-|---|---:|---:|---:|---:|---:|---:|
-| risky vs not | 190 | **0.899** | 0.361 | 0.35 | 0.53 | 2.5% |
-| risk type 1 — intrinsic | 141 | 0.898 | 0.326 | 0.31 | 0.50 | 2.0% |
-| risk type 2 — relational | 81 | 0.854 | 0.149 | 0.21 | 0.22 | 0.7% |
+| | positives | ROC-AUC | recall ceiling |
+|---|---|---|---|
+| risky vs not | 163 (1.6%) | **0.868** | 0.99 |
+| risk type 1 — intrinsic | 120 (1.2%) | **0.770** | 0.72 |
+| risk type 2 — relational | 68 (0.7%) | **0.690** | 0.59 |
+| clause length alone | | **0.691** | |
 
-Bootstrap 95% CIs on ROC-AUC: risky **[0.844, 0.949]**, risk type 1
-[0.831, 0.952], risk type 2 [0.752, 0.935].
+The recall ceiling is the recall available at a threshold of 0.01: the share of
+gold provisions that received any entry of that type at any probability. No
+threshold can reach past it.
 
-At 1.6% prevalence **PR-AUC is the number to read** — ROC-AUC is flattered by
-the 11,446 easy negatives. The ranking is strong, and the two risk types rank
-about equally well; their intervals overlap heavily, so the 0.045 gap between
-them is not an established difference.
+**Risk type 2 does not beat clause length.** 0.690 against 0.691. Everything the
+model contributes over the length baseline is on type 1 and on the binary
+risky/not question; on the relational half it adds nothing measurable.
 
-The flag rate at threshold 0.5 (2.5%) sits close to the true prevalence (1.6%),
-so the recall is not bought by flagging indiscriminately.
+Figure: `output/figures/risk_detect_agent_threshold_curves.png`.
 
-## 2. What a recall target costs
+## 2. There is no usable operating point
 
-The practical question is not "what is precision at 0.5" but "to catch most of
-what was litigated, how much of the contract must a reader read".
+| threshold | precision | recall | flagged |
+|---|---|---|---|
+| 0.3 | 0.08 | 0.66 | 1,341 (13.6%) |
+| 0.5 | 0.30 | 0.16 | 88 (0.9%) |
 
-| recall target | threshold | precision | share flagged |
-|---:|---:|---:|---:|
-| 70% | 0.41 | 0.182 | 6.3% |
-| 80% | 0.33 | 0.079 | 16.6% |
-| 90% | 0.26 | 0.044 | 33.5% |
+Precision and recall cross at about t = 0.45, both near 0.25. At 1.6%
+prevalence that is well above chance and still far from a threshold anyone would
+operate at. What the run demonstrates is ranking, not a working detector.
 
-Catching 70% of litigated provisions costs reading **6.3%** of the contract.
-Past that the curve turns sharply: 80% costs 16.6%, and 90% costs a third of the
-document — at which point the ranking is no longer doing useful work.
+The 0.99 risky ceiling has to be read with the flag rate that produces it: the
+model writes at least one issue on 68% of provisions. It is not that almost
+every construed provision was recognised — it is that almost every provision
+received something.
 
-## 3. Contract length
+## 3. Naming the right defect
 
-The agent works through a long contract in stages, so it should hold up as
-documents grow.
-
-| stratum | contracts | provisions | positives | ROC-AUC | R@0.5 |
-|---|---:|---:|---:|---:|---:|
-| short (9–58 prov) | 36 | 1,059 | 54 | 0.864 | 0.54 |
-| medium (60–148) | 37 | 3,481 | 69 | 0.897 | 0.49 |
-| long (153–698) | 27 | 7,096 | 67 | 0.876 | 0.57 |
-
-Performance is flat across strata — the spread, 0.864 to 0.897, is well inside
-the headline confidence interval. **Length neither helps nor hurts**, which is
-itself the useful finding: a 698-provision agreement is ranked as well as a
-20-provision letter.
-
-## 4. The issue list
-
-The model returns, per provision, a list of `{issue, type, prob}` entries. A
-null `issue` carrying a probability is how it states "no specific defect of this
-type, and here is how likely a dispute is anyway".
+The ranking task cannot tell whether a provision was flagged for the reason the
+court had. The alignment check asks that separately: for each issue the agent
+named, is it one of the defects recorded for that provision?
 
 ```
-0 named issues:  5,418 (46.6%)
-1 named issue:   4,831 (41.5%)
-2 named issues:  1,382 (11.9%)
-3+ named:            5 ( 0.0%)
+209 issues judged over 161 provisions
+ 69 aligned  =  33.0%
+ 69 distinct gold defects matched, of 225 in the corpus
 ```
 
-88.1% carry no issue or exactly one, which is what the prompt asks for. Of the
-1,387 multi-issue provisions, all but 5 are one type-1 entry and one type-2
-entry: the model almost never names two defects of the same type.
+**The control is the number to read this against.** Re-pairing every issue with
+the defects of a *different provision of the same case* — deliberately wrong
+answers, in the same contract, the same dispute, the same legal vocabulary —
+still produces 28 matches:
 
-Issue **count** alone is a strong ranker — ROC-AUC **0.838**, against 0.899 for
-the probability. Gold positives carry two or more named issues 70.0% of the time
-against 11.0% of negatives. The probability still carries information the count
-does not, so it stays the primary score, but the count is a calibration-free
-fallback that loses little.
+| | main | control (same case) | ratio |
+|---|---|---|---|
+| all issues | 33.0% | 14.2% | 2.3× |
+| gold 1.1 — lexical | 24.3% | 2.9% | **8.4×** |
+| gold 2.2 — whole-contract | 35.2% | 26.4% | **1.3×** |
 
-## 5. Cost
+**On 1.1 the measurement is sound; on 2.2 it is not.** A relational defect is
+described as "this provision has to be read against that one", and in the
+control the foil often *is* a provision of the same instrument, so the
+descriptions are near-interchangeable. The judge cannot separate them.
 
-| | sessions | turns | input | cache-create | cache-read | output |
-|---|---:|---:|---:|---:|---:|---:|
-| `agent` | 100 | 1,254 | 1,890 | 8,571,538 | 55,839,828 | 2,428,086 |
+This is the same conclusion the ranking reaches by a completely independent
+route: on risk type 2, AUC equals the length baseline. Two measurements that
+share no machinery agree that the relational half of the taxonomy carries no
+usable signal in this setup.
 
-**$174.35 at API-equivalent rates** — what these tokens would have cost through
-the API, not an amount charged; the run is billed to a Claude Code subscription.
-7.6 hours of container time, about 209 output tokens per provision. Caching
-absorbed 85% of the input side; without it the 55.8M cache-read tokens would
-have been billed in full.
+**Risk type is not part of the alignment test.** The judge is shown neither
+side's type and candidates are not filtered by it, because the dataset's type
+labels come from the case's Westlaw key rather than from the passage. Type
+agreement is reported separately: of the 69 matched pairs, 52 (75.4%) agree on
+the coarse type. The other 17 name the same defect and classify it differently.
 
-## 6. Isolation held
+Figure: `output/figures/issue_alignment_threshold_curves.png`.
 
-The container carries no `~/.claude`, no user `CLAUDE.md`, no skills, no MCP
-registration and no managed policy, and only one contract's workspace is mounted
-— so no session can see `dataset.csv`, the opinion, or another contract.
+## 4. What the two measurements say together
 
-Across 100 sessions the confinement hook recorded **39 denied reads**, every one
-an attempt at a conventional path (`/tmp/x`, `/mnt/user-data/outputs/…`,
-`/contract.txt`) before the model located the real workspace. None reached a
-file outside `/work`, and none was a file it could not already read inside it.
+```
+risky recall ceiling   0.99      almost every construed provision got an entry
+alignment              33.0%     about a third of those entries name the defect
+```
 
-Label leakage was checked against the bytes the container received, not against
-the code that writes them. The dataset's own clause ids are `pos<N>`/`neg<N>`;
-provisions are presented as `c001…cNNN` in `source_span` order. Across all
-workspaces: 2,048 provisions, key set exactly `{id, name, text}`, ids strictly
-sequential with no gaps, and zero occurrences of `pos<N>`, `neg<N>`, `POSITIVE`,
-`NEGATIVE` or `gold_*` in any workspace file, prompt or trajectory. Position
-carries no signal either — a positive's mean position in `c001…cNNN` is 0.507
-against 0.500 for uniform, and only 1 of 201 lands at `c001`.
+The model is good at deciding *where* to look and much weaker at saying *what is
+wrong*. Reading the misses confirms it: the defects it names are usually real
+drafting problems in the right provision — an undefined term, a missing cure
+period, a cross-reference to a mis-dated letter — but not the one that became a
+lawsuit.
 
-## 7. What is not established
+The judge is not being strict about this. Its scores are effectively binary:
+of 209 issues, none scored between 0.01 and 0.49, so lowering the threshold
+changes nothing. Of the 140 misses, 15 quote language that also appears in a
+recorded defect, and reading them, about 4 are genuinely arguable. Counting all
+15 as hits would move 33.0% to 39.7% and the control from 14.2% to 18.8% — the
+ratio falls from 2.3× to 2.1×, so a looser standard buys score and loses
+discrimination.
 
-**Run-to-run variance is unquantified.** No temperature or seed is set, and the
-API exposes no way to make sampling deterministic; a rerun will not reproduce
-these numbers. Under the previous design, two executions of the agent arm with
-matching manifest hashes moved ROC-AUC by ~0.02 and recall@0.5 by ~0.10. That is
-one observation, not a variance estimate, but it is the scale against which
-small differences here should be judged — the risk type 1 vs 2 gap and the
-length strata all sit inside it. The threshold-free measures and §2's
-recall-cost curve are the stable views.
+## 5. What is not established
 
-**The gold link rests on model judgment.** Every positive carries a verbatim
-passage from the opinion (median 3,761 characters, none empty), and every clause
-text was located verbatim in the filed contract (`anchor_score` median 1.000).
-What is *not* independently verified is that the attached passage discusses that
-particular clause — the extraction model made that link, and the heuristic that
-once second-guessed it was removed as too ad hoc. A human spot-check of a few
-dozen positives would put a number on it; that has not been done.
+- **No noise floor.** Every number here is one observation. The same prompt has
+  never been run twice on this dataset, so no difference between configurations
+  can be called real.
+- **The type-2 conclusion is about this setup, not about the task.** AUC 0.690
+  against a 0.691 baseline says this pipeline extracts nothing; it does not
+  say a relational defect is undetectable.
+- **Recall is a lower bound.** Step 2 records what it can locate in the
+  opinion, and 45 issues in the corpus need a document the corpus does not
+  hold. A defect the court construed but the dataset never recorded counts
+  against the agent as a miss.
+- **The alignment judge's absolute rate is not meaningful on its own** — only
+  the gap to its control is, and on 2.2 that gap is small.
+- **The 75.4% type agreement is agreement with the dataset's labelling
+  convention, not accuracy.** The dataset's per-defect type comes from the
+  case's Westlaw key, which is a case-level fact.
 
-**A positive is not one dispute.** (Fixed since: the rebuilt step 2 records each
-defect separately, so the current dataset carries 214 issues over 165 positives
-and the issue-level denominator is real.) The 201 positives trace to 138 distinct
-opinion passages: 101 map to a single clause, the rest to two or more, because a
-court often construes several provisions in one discussion. One passage covers 9
-clauses.
+## 6. Cost
 
-**Length is not a confound here — but it was, so keep checking.** Clause length
-alone ranks positives above negatives at within-contract ROC-AUC **0.523**
-[0.501, 0.546], indistinguishable from chance. The previous build's figure was
-**0.683**, so this is a property of the rebuilt extraction rather than a
-constant of the task. The 0.899 therefore reflects substance, not a length
-shortcut.
-
-**Negatives are unlitigated, not sound.** Precision against these labels is a
-lower bound.
-
----
-
-## 8. Summary
-
-- The agent ranks litigated provisions well above the rest: ROC-AUC **0.899**
-  [0.844, 0.949] at 1.6% prevalence, PR-AUC 0.361.
-- 70% of litigated provisions are recoverable by reading **6.3%** of the
-  contract; 80% costs 16.6%.
-- Performance is flat in contract length, from 9 to 698 provisions.
-- Both risk types rank about equally well; the apparent gap is inside the
-  confidence intervals.
-- Isolation and label leakage were verified against the bytes the container
-  received, not the code that writes them.
-- Run-to-run variance is unquantified, and is the main caveat on every small
-  difference above.
-
-Figure: `output/figures/risk_detect_agent_threshold_curves.png`. Predictions:
-`output/risk_detect_agent_preds.csv` (11,636 rows, 18 columns). Per-session logs and
-trajectories: `output/llm_logs/risk_detect_agent/`.
+```
+detection      $169.47   84 sessions, claude-opus-5, effort high
+alignment      209 + 197 calls, gpt-5.6-sol, effort high
+dataset build  step 2 over 62 cases, step 3 over 55, gpt-5.6-sol
+```

@@ -4,9 +4,7 @@ One row per clause step 1 enumerated. A row is POSITIVE when step 2 named its
 id, NEGATIVE otherwise — a set membership test on ids, nothing more. Both
 classes come from one enumeration, cut in one call that did not know which
 clause any court had construed, so they are the same kind of object and differ
-in one respect: whether the opinion shows the clause was fought over. (The two
-steps used to cut their own spans, and the overlap had to be computed with line
-arithmetic.)
+in one respect: whether the opinion shows the clause was fought over.
 
 A positive's own contract always contributes negatives, so both classes come
 from the same document in the same OCR condition: a classifier cannot win by
@@ -118,9 +116,9 @@ def main():
     # an identical clause in an unrelated policy satisfies exactly. Risk type 2
     # makes the same point from the other side: the defect is relational, so
     # the same sentence can be defective in one instrument and unremarkable
-    # in another. The old rule dropped 12 endorsements of one policy because a
-    # court in a different case had construed "All other terms and conditions
-    # of this Policy remain unchanged."
+    # in another. Boilerplate makes that concrete: "All other terms and
+    # conditions of this Policy remain unchanged" is construed in one case and
+    # unremarkable in the dozen other policies that carry it word for word.
     positive_texts = {}
     for k in positive:
         if k in by_id:

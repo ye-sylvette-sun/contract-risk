@@ -9,16 +9,12 @@ reached by the wrong route.
 **Question.** Given a contract and the provisions it contains, can a model say
 which provisions a federal court would find something to construe?
 
-> **The `llm_api` arm has been retired and deleted.** This experiment once ran
-> two arms — one stateless API call per contract against one agent session per
-> contract — and compared them. **The agentic approach is now the experiment**:
-> `risk_detect_agent.py` is what runs and what §8 reports. What the two arms
-> shared — `FIELDS`, `pred_row`, `gold_types`, `anonymise`, `pick_examples`,
-> `roc_auc` — is now `runs.py`, so a run and everything that scores it still
-> cannot disagree about what a column means. Nothing calls the Anthropic API
-> directly any more, so no `ANTHROPIC_API_KEY` is needed. The two-arm comparison
-> is on `2026.9.1_legacy_spellbook`; the deleted arm on
-> `2026.9.3_legacy_multi_issue_experiment`.
+> **The experiment is agentic.** `risk_detect_agent.py` runs one sandboxed
+> Claude Code session per contract, and §8 reports it. The taxonomy, the worked
+> examples, the gold mapping and the `preds.csv` row contract live in `runs.py`,
+> so a run and everything that scores it cannot disagree about what a column
+> means. Nothing calls the Anthropic API directly, so no `ANTHROPIC_API_KEY` is
+> needed.
 
 **The experiment stays on Claude**, while the dataset build moved to OpenAI. The
 agent arm *is* the Claude Code CLI, so this is not a free choice.
@@ -90,12 +86,12 @@ and it places each provision beside its neighbours — which is what a risk type
 judgement needs. The mapping back is stored per contract in the raw output and
 applied before anything reaches the predictions file.
 
-The dataset's own ids are now positional too (`c001…`, assigned by step 1 before
-anything knew the label), so this renumbering is no longer what stands between
-the model and the answer key. It was: an earlier build used `pos1`/`neg1`, which
-put the gold label on the door of every provision. Keeping the renumbering costs
-nothing and keeps the experiment independent of how the dataset happens to key
-its rows.
+The dataset's own ids are positional too — `c001…`, assigned by step 1 before
+anything knew the label — so the renumbering is not what keeps the answer key
+away from the model. It is kept because it costs nothing and leaves the
+experiment independent of how the dataset happens to key its rows: an id scheme
+that encoded the label would otherwise put the answer on the door of every
+provision.
 
 ---
 
@@ -148,11 +144,10 @@ saying so. Hence the current phrasing: uncertainty goes into the probability,
 inability to name goes into the empty list, and the question separating them is
 not "am I confident?" but "can I say what is wrong?"
 
-**A type with no entry scores 0, and that is what it means.** An earlier version
-of this contract asked instead for a null-text entry per absent type, to carry
-"how likely that kind of dispute is anyway" — the worry being that a bare 0 was
-a stronger claim than the answer meant. The two runs that used it settled the
-question: across 3,317 such entries the model never put one above 0.24, while
+**A type with no entry scores 0, and that is what it means.** The alternative —
+a null-text entry per absent type, carrying "how likely that kind of dispute is
+anyway" — was measured and dropped: across 3,317 such entries the model never
+put one above 0.24, while
 named issues ran to 0.81, and in 1,275 provisions carrying a named issue a null
 entry outranked every named one exactly once. Forcing them to 0 moved ROC-AUC by
 −0.003, 0.000 and 0.000 on the three panels. The channel was costing a third of
@@ -207,8 +202,9 @@ probability.
 
 The agent run spawns the Claude Code CLI, which can load settings files,
 `CLAUDE.md`, memory, skills and MCP servers that never appear in the
-conversation. (The retired one-shot arm was a stateless API call with nothing to
-isolate — this section is the price of the agentic shape.)
+conversation. This section is the price of the agentic shape: an agent that can
+read its filesystem has to be shown to have read only what the experiment gave
+it.
 
 **Every session runs in its own container**, and that is the first line of
 defence rather than the last. The image has no `~/.claude`, no user `CLAUDE.md`,
@@ -324,40 +320,34 @@ that scores it cannot disagree about what a column means.
 
 ## 8. Results
 
-**Not yet run on the current dataset.** The dataset was rebuilt when step 1 and
-step 2 were reordered (see [DATASET.md](DATASET.md) §3): clause boundaries, the
-positive set and the ids all changed, so the previous run's `preds.csv` cannot
-be joined to it and its numbers are not comparable. The run has to be repeated.
+84 contracts, 9,890 provisions, 84 sessions, nothing left unjudged,
+**$169.47** at API-equivalent rates.
 
-The superseded run and its write-up are on
-`2026.9.3_legacy_multi_issue_experiment`. For the record, so that the repeat has
-something to be read against — over 11,636 provisions of 100 contracts, 100
-sessions, 1,254 turns, nothing left unjudged:
-
-| panel | positives | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
+| panel | positives | ROC-AUC | recall ceiling | P@0.5 | R@0.5 | flagged |
 |---|---:|---:|---:|---:|---:|---:|
-| risky vs not | 190 | 0.899 | 0.361 | 0.35 | 0.53 | 2.5% |
-| risk type 1 — intrinsic | 141 | 0.898 | 0.326 | 0.31 | 0.50 | 2.0% |
-| risk type 2 — relational | 81 | 0.854 | 0.149 | 0.21 | 0.22 | 0.7% |
+| risky vs not | 163 | **0.868** | 0.99 | 0.30 | 0.16 | 0.9% |
+| risk type 1 — intrinsic | 120 | **0.770** | 0.72 | 0.34 | 0.14 | 0.5% |
+| risk type 2 — relational | 68 | **0.690** | 0.59 | 0.13 | 0.07 | 0.4% |
+| clause length alone | | **0.691** | | | | |
 
-Bootstrap 95% CI on the main panel was [0.844, 0.949]. Cost was 1,890 input,
-8.6M cache-create, 55.8M cache-read and 2.4M output tokens over 7.6 hours of
-container time — **$174.35 at API-equivalent rates**, billed to a subscription
-rather than charged; caching absorbed 85% of the input side. Expect the repeat
-to cost about the same: the evaluation set is 11,921 provisions against 11,636.
+**Read every figure against the length baseline.** On risk type 2 the model does
+not beat it: 0.690 against 0.691. Whatever the run contributes over sorting by
+clause length is on risk type 1 and on the binary question.
 
-**Read the repeat against the length baseline, not against the table above.**
-Length alone now ranks provisions at within-contract ROC-AUC **0.728**, where
-the superseded build gave 0.523. That is not a regression in the pipeline —
-DATASET.md §6 sets out why the old figure was the artifact — but it does mean a
-headline AUC has a much higher floor to clear than it did, and the two builds'
-numbers must not be put side by side as though they measured the same thing.
+The recall ceiling is the recall available at a threshold of 0.01 — the share of
+gold provisions that received any entry of that type at any probability. It has
+to be read with the flag rate that produces it: the model writes at least one
+issue on 68% of provisions, so a 0.99 ceiling on `risky` means almost every
+provision got something, not that almost every construed provision was
+recognised.
 
-**Run-to-run variance is unquantified**: no seed, no temperature control. One
-repeat under an earlier design moved ROC-AUC by ~0.02 and recall@0.5 by ~0.10,
-which is the scale against which small differences should be judged.
-`compare_risk_detect.py --against` exists to measure this properly and has not
-been used for it yet.
+Figures: `output/figures/risk_detect_agent_threshold_curves.png` and
+`issue_alignment_threshold_curves.png`. [REPORT.md](REPORT.md) reads them.
+
+**Run-to-run variance is unquantified**: no seed, no temperature control, and
+the same prompt has never been run twice on this dataset. No difference between
+two configurations should be called real until it has been.
+`compare_risk_detect.py --against` measures it and has not been used for it.
 
 ---
 
@@ -438,44 +428,49 @@ exactly as well as one that understood the dispute, and a reviewer acting on the
 first would look in the wrong place.
 
 `issue_alignment_check.py` closes that gap. For each issue the agent named, a
-**different** model reads the provision, the risk-type definition, the issue,
-and **the defects step 2 recorded for that provision** — each with its own
-verbatim passage — and says which of them the named defect is, and how closely.
+**different** model reads the provision, the issue, and **every defect step 2
+recorded for that provision** — each with its own verbatim passage — and says
+which of them the named defect is, and how closely.
 
-**The judge names the match, and that is what makes recall computable.** Step 2
+**The judge names the match, which is what makes recall computable.** Step 2
 records every defect a court construed separately, so `matched` identifies which
 one an issue found. Two numbers follow instead of one:
 
 | | |
 |---|---|
 | precision | of the issues the agent named, how many name a defect the court construed |
-| recall | of the 300 defects in the evaluation set, how many the agent found |
+| recall | of the 225 defects in the corpus, how many the agent found |
 
-Recall did not exist before. The previous build recorded one passage per
-provision, so several distinct defects collapsed into one target, and what was
-reported as recall was really target coverage — an upper bound on the real
-thing. Two issues that match the same defect count once.
+Two issues that match the same defect count once.
 
 **The judge is `gpt-5.6-sol`, effort high** — deliberately not the family being
 judged, since the predictions came from `claude-opus-5` and a same-family judge
 invites a self-preference objection. `lib.provider_of()` already routes by model
 name, so this costs nothing structurally.
 
-**What the judge is shown, and what it is not.** The provision, the type
-definition, the issue text, and the candidate defects with their passages.
-**Not** the agent's probability, which would anchor it, and not whether the
-provision is gold — that is settled before the call and is not the question.
+**What the judge is shown, and what it is not.** The provision, the issue text,
+and the candidate defects with their passages. **Not** the agent's probability,
+which would anchor it; not whether the provision is gold, which is settled
+before the call; and **not either side's risk type**.
 
-One further precaution: the one-line summary of each candidate defect was
-written by step 2, which is the same model family as the judge. The prompt
-therefore states that the summary is a pointer and **the passage is the
-evidence**, and that the passage governs where the two disagree.
+**Risk type plays no part.** Candidates are not filtered by it and it is not
+shown. The dataset's type labels come from the case's Westlaw key rather than
+from the passage — for 41 of 62 cases the keys span only one main type, so every
+defect in the case takes it — and gating on them discards matches where both
+sides name the same defect and classify it differently. Type agreement is
+reported separately, from `type` against `gold_type` over the matched pairs.
 
-**Scope.** Only named issues whose provision *and* risk type both match gold. An
-issue on a provision no court construed has no defect to check against; an issue
-of the wrong type is already counted wrong by the one-vs-rest panels. So
-precision here is **conditional** on the provision and the type being right —
-not a second shot at the ranking.
+**The comparison is sentence against sentence.** Both sides are one sentence
+naming one defect in one provision. The passage is context: it shows what the
+court was construing and confirms the recorded sentence is faithful to it, but
+more than half the recorded defects share their passage with another defect of
+the same case, so the passage alone cannot tell two of them apart.
+
+**Scope.** Every named issue on a provision the court construed. An issue on a
+provision no court construed has no defect to check against. Precision is
+therefore **conditional** on the provision being right — not a second shot at
+the ranking. Recall is not conditional: it is over every gold defect, including
+those on provisions the agent said nothing about.
 
 Recall is not conditional in the same way: its denominator is every defect in
 the evaluation set, including those on provisions the agent said nothing about.
@@ -526,17 +521,21 @@ python src/experiments/issue_alignment_check.py --control corpus --out /tmp/ctl
 python src/experiments/issue_alignment_check.py --control case   --out /tmp/ctl
 ```
 
-### The diagnostic that was removed
+### What the control showed
 
-`--full-opinion` re-judged a misaligned issue against the entire opinion, to
-measure what was lost by recording **one** contiguous passage per clause. Step 2
-now records a passage per *defect*, so the question it asked no longer maps onto
-the data, and a diagnostic whose meaning has quietly changed is worse than none.
-It was removed rather than left running.
+On the reported run the `case` control is what the real rate has to be read
+against, and it does not divide evenly:
 
-What it found before removal is still the reason to expect little from more
-context: of 78 misaligned issues re-judged against the whole opinion, only 9
-flipped — a ceiling of about +4.7 points — and 25 scored *lower*, because a whole
-opinion is mostly about other provisions.
+| | main | control (same case) | ratio |
+|---|---|---|---|
+| all issues | 33.0% | 14.2% | 2.3× |
+| gold 1.1 — lexical | 24.3% | 2.9% | **8.4×** |
+| gold 2.2 — whole-contract | 35.2% | 26.4% | **1.3×** |
 
-Results in [REPORT.md](REPORT.md) §9.
+**The instrument works on 1.1 and does not work on 2.2.** A relational defect is
+described as "this provision has to be read against that one", and in the `case`
+control the foil often *is* a provision of the same instrument, so the two
+descriptions are near-interchangeable. Report the two separately; a single
+combined rate hides that half of it is uninformative.
+
+Results in [REPORT.md](REPORT.md).

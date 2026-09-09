@@ -62,9 +62,10 @@ KEEP = {"CLAUDE_CODE_OAUTH_TOKEN"}
 HERMETIC = {
     "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
     "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
-    # The CLI's own side-calls. Without this an earlier run billed
-    # `claude-haiku-4-5` in all 64 sessions, so the arm was not one model.
-    # `DISABLE_NON_ESSENTIAL_MODEL_CALLS` is NOT a name the CLI knows.
+    # The CLI's own side-calls. Without this every session also bills a second,
+    # smaller model for background work, and the run is not a single-model
+    # measurement. `DISABLE_NON_ESSENTIAL_MODEL_CALLS` is NOT a name the CLI
+    # knows.
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "DISABLE_AUTOUPDATER": "1",
     "DISABLE_TELEMETRY": "1",
