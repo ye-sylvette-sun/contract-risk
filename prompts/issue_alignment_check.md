@@ -11,9 +11,13 @@ this aligned" but "aligned with which recorded defect", and the answer is what
 lets the experiment count how many of the court's defects were found rather than
 only how many of the model's guesses were right.
 
-Only issues whose provision and risk type both match the gold label reach this
-prompt. Whether the provision was risky is already known from the docket; the
-question is only whether the model was right **for the right reason**.
+Every issue the model named on a provision some court construed reaches this
+prompt, and the candidates are every defect recorded in that provision whatever
+risk type it was filed under. Whether the provision was risky is already known
+from the docket; the question is only whether the model was right **for the
+right reason**. Whether it also got the risk type right is settled afterwards,
+by comparing the matched defect's type with the one the model gave -- not by
+hiding candidates from the judge.
 
 Sections below are sent as the system prompt, the document, the instructions and
 the task, in that order — instructions after the document, so a rule sits next
@@ -47,7 +51,9 @@ or from your own view of the drafting. If the passages do not settle it, say so
 {clause_text}
 ```
 
-### The risk type this issue was filed under
+### The risk taxonomy
+
+Both types, because a recorded defect below may be filed under either one.
 
 {type_def}
 
@@ -57,7 +63,7 @@ or from your own view of the drafting. If the passages do not settle it, say so
 {issue_text}
 ```
 
-### The defects the court construed in this provision under this risk type
+### The defects the court construed in this provision
 
 Each is a candidate. The one-line summary was written when the dataset was
 built; **the passage beneath it is the evidence**, quoted verbatim from the
@@ -92,6 +98,11 @@ have to be phrased as the candidate is. It has to name the same problem.
   that it would fit almost any dispute about almost any provision. Vagueness is
   not alignment: if you cannot point to the words in a passage it corresponds
   to, it does not match.
+
+**The risk type is not what you are deciding.** A candidate filed under a
+different risk type from the proposed issue can still be the same defect, and
+must be matched if it is. Whether the proposed issue was filed under the right
+type is settled elsewhere; here, only the defect matters.
 
 **Where two candidates could fit**, choose the one whose passage supports it
 most directly, and say in `reason` that the choice was close. Do not split the

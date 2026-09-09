@@ -289,6 +289,30 @@ threshold. The flag rate is what stops the first two being read too kindly — a
 respectable recall. `compare_risk_detect.py` prints these; `plot_risk_detect_thresholds.py`
 draws the sweep.
 
+### The risk type, asked two ways
+
+The panels above score a probability. Whether the **type** was right is asked
+separately, over **distinct** gold defects — deduplicated on the defect text,
+since one recorded defect can sit on several provisions of one contract and
+counting it five times would weight the score by how often a drafter copied a
+paragraph. `compare_risk_detect.py` reports both:
+
+| metric | asks |
+|---|---|
+| `wins` | the gold type outscored the other |
+| `named` | the gold type was listed at all, wherever it ranked |
+
+They come apart because the output is a list. A provision can carry several real
+defects; the court construed one; the model may name that one at 0.18 and a
+different, equally real one at 0.44. `wins` counts that as a type error, `named`
+as a hit. **The gap between them is how much of the type error is a ranking
+difference rather than a missing judgement.**
+
+`named` is an upper bound on finding the court's defect, not a measure of it —
+it credits any issue of the right type on the right provision, whatever that
+issue describes. §10's alignment check is the instrument for the stricter
+question.
+
 `compare_risk_detect.py` scores the run. Given `--against PATH` it scores two,
 but only on the clauses **both** have covered, joined on `(contract_id,
 clause_id)` — a partial run against a full one would differ as much in which
@@ -324,40 +348,51 @@ that scores it cannot disagree about what a column means.
 
 ## 8. Results
 
-**Not yet run on the current dataset.** The dataset was rebuilt when step 1 and
-step 2 were reordered (see [DATASET.md](DATASET.md) §3): clause boundaries, the
-positive set and the ids all changed, so the previous run's `preds.csv` cannot
-be joined to it and its numbers are not comparable. The run has to be repeated.
+Over 5,505 provisions of 50 contracts, 50 sessions, nothing left unjudged.
+[REPORT.md](REPORT.md) has the write-up; the short form:
 
-The superseded run and its write-up are on
-`2026.9.3_legacy_multi_issue_experiment`. For the record, so that the repeat has
-something to be read against — over 11,636 provisions of 100 contracts, 100
-sessions, 1,254 turns, nothing left unjudged:
+| panel | positives | ROC-AUC | P@0.5 | R@0.5 | flagged |
+|---|---:|---:|---:|---:|---:|
+| risky vs not | 121 | **0.827** | 0.53 | 0.26 | 1.1% |
+| risk type 1 — intrinsic | 87 | **0.792** | 0.45 | 0.25 | 0.9% |
+| risk type 2 — relational | 51 | **0.712** | 0.71 | 0.20 | 0.3% |
 
-| panel | positives | ROC-AUC | PR-AUC | P@0.5 | R@0.5 | flagged |
-|---|---:|---:|---:|---:|---:|---:|
-| risky vs not | 190 | 0.899 | 0.361 | 0.35 | 0.53 | 2.5% |
-| risk type 1 — intrinsic | 141 | 0.898 | 0.326 | 0.31 | 0.50 | 2.0% |
-| risk type 2 — relational | 81 | 0.854 | 0.149 | 0.21 | 0.22 | 0.7% |
+Clause length alone ranks the same rows at **0.731** — the floor each panel has
+to clear, and risk type 2 does not clearly clear it. On distinct gold defects
+the type was right (`wins`) on 80% of type 1 and 45% of type 2, and was `named`
+at all on 83% and 61%. The defect sat on a flagged provision 97% and 95% of the
+time: detection is not where this loses.
 
-Bootstrap 95% CI on the main panel was [0.844, 0.949]. Cost was 1,890 input,
-8.6M cache-create, 55.8M cache-read and 2.4M output tokens over 7.6 hours of
-container time — **$174.35 at API-equivalent rates**, billed to a subscription
-rather than charged; caching absorbed 85% of the input side. Expect the repeat
-to cost about the same: the evaluation set is 11,921 provisions against 11,636.
+**The sample is stratified** — 25 of the 50 contracts carry a gold risk type 2
+and 25 do not, so that there would be enough relational defects to say anything
+about them. Prevalence is 2.20% against the corpus 1.61%, and no rate from this
+run estimates the corpus.
 
-**Read the repeat against the length baseline, not against the table above.**
-Length alone now ranks provisions at within-contract ROC-AUC **0.728**, where
-the superseded build gave 0.523. That is not a regression in the pipeline —
-DATASET.md §6 sets out why the old figure was the artifact — but it does mean a
-headline AUC has a much higher floor to clear than it did, and the two builds'
-numbers must not be put side by side as though they measured the same thing.
+Cost: **$104.52 at API-equivalent rates** over 50 sessions, billed to a
+subscription rather than charged.
 
-**Run-to-run variance is unquantified**: no seed, no temperature control. One
-repeat under an earlier design moved ROC-AUC by ~0.02 and recall@0.5 by ~0.10,
-which is the scale against which small differences should be judged.
-`compare_risk_detect.py --against` exists to measure this properly and has not
-been used for it yet.
+### Run-to-run variance, measured
+
+No seed, no temperature control, and the variance is now quantified rather than
+guessed at. One configuration run twice, unchanged, over the same 4 contracts:
+
+| | provisions whose type changed | mean per-provision \|Δp\| |
+|---|---:|---:|
+| same prompt, two runs | **101 / 650 = 15.5%** | **0.080** |
+| across a prompt change | 78 / 650 = 12.0% | 0.081 |
+
+**Two runs of one prompt differ as much as two prompts do.** Over the eight
+distinct type-1 defects in those contracts the same prompt scored 3/8 and then
+1/8. The cause is visible in the issue text: where the type flipped between
+runs, the median similarity between what was named the first time and the second
+was 0.12, against 0.20 where it held. The model is not re-typing a stable
+finding, it is naming a different defect, and the type follows the finding.
+
+The practical consequence is that **a single-run difference in ROC-AUC, or in a
+40-defect cell, is not an effect.** Three successive prompt revisions aimed at
+the type boundary each moved the metric by less than this floor. Running one
+configuration three times, and reporting a spread, is the precondition for the
+next comparison. `compare_risk_detect.py --against` is how two runs are joined.
 
 ---
 

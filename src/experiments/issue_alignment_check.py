@@ -22,12 +22,17 @@ Recall was not computable before: one passage per provision collapsed several
 defects into one target, so what was reported as recall was really target
 coverage, an upper bound.
 
-**Scope.** Only issues whose provision AND risk type both match the gold label.
-An issue on a provision no court construed has no passage to check it against,
-and an issue of the wrong type is already counted wrong by risk detection's
-one-vs-rest panels. Precision here is therefore conditional on the provision and
-type being right; recall is not — it is over every gold issue in the corpus,
-including those on provisions the agent said nothing about.
+**Scope.** Every issue the agent named on a provision some court construed. An
+issue on a provision no court construed has no passage to check it against and
+is out of reach; nothing else is filtered. In particular the candidates are NOT
+restricted to the issue's own risk type — a defect filed under type 2 can be the
+same defect an agent named under type 1, and that case is the one this run most
+needs to see. The type comparison happens afterwards, from the matched defect's
+own type, not by withholding candidates from the judge.
+
+Precision is therefore conditional only on the provision being right. Recall is
+over the gold issues of the contracts actually run, including those on
+provisions the agent said nothing about.
 
 **Control.** `--control` pairs every issue with defects that are not its own.
 The judge should reject those. If it does not, it is not discriminating and the
@@ -64,7 +69,8 @@ SHARDS = "issue_alignment_check"
 
 FIELDS = ["job_id", "contract_id", "clause_id", "citation", "clause_name",
           "taxonomy", "taxonomy_provenance", "type", "prob", "issue",
-          "matched", "matched_key", "gold_issue", "alignment", "determinable",
+          "matched", "matched_key", "matched_type", "gold_issue",
+          "alignment", "determinable",
           "court_defect", "evidence", "reason"]
 
 
@@ -100,12 +106,11 @@ def render(cands):
 
 
 def jobs(preds, dataset):
-    """One job per named issue whose provision and risk type both match gold.
+    """One job per named issue sitting on a provision some court construed.
 
-    The candidates are the gold issues of that provision whose fine code falls
-    under the coarse type the agent named — `1.1` and `1.3` both answer type 1.
-    An issue with no candidate is out of scope: either the provision was never
-    construed, or it was construed only under the other type.
+    The candidates are EVERY defect recorded in that provision, whatever risk
+    type each was filed under. An issue with no candidate is out of scope: the
+    provision was never construed, so there is no passage to check it against.
 
     Keyed on (contract_id, clause_id, type, ordinal) so a provision carrying two
     issues of one type yields two jobs that cannot collide in the shard store.
@@ -124,15 +129,13 @@ def jobs(preds, dataset):
         if src is None:
             continue
         here = by_clause.get((r["contract_id"], r["clause_id"]), [])
+        if not here:
+            continue
+        cands = [{**g, "id": f"g{n}"} for n, g in enumerate(here, 1)]
         seen = {1: 0, 2: 0}
         for it in json.loads(r["issues"]):
             t = it.get("type")
             if not it.get("issue") or t not in (1, 2):
-                continue
-            cands = [{**g, "id": f"g{n}"} for n, g in
-                     enumerate((x for x in here
-                                if x["risk_type"].startswith(str(t))), 1)]
-            if not cands:
                 continue
             seen[t] += 1
             out.append({
@@ -183,10 +186,15 @@ def scramble(js, mode="corpus", seed=0):
     return out
 
 
-def type_def(t):
-    """The taxonomy lines for one risk type, as the prompt's `type_def`."""
-    return "\n".join(f"  [{c}] {txt}" for c, txt in sorted(lib.RISK_TYPES.items())
-                     if c.startswith(str(t)))
+def type_def():
+    """The whole taxonomy, as the prompt's `type_def`.
+
+    Both risk types, because a candidate can be of either: the judge matches
+    defects, not types, and must be able to read a candidate filed under the
+    other type without taking that as a reason to reject it.
+    """
+    return "\n".join(f"  [{c}] {txt}"
+                     for c, txt in sorted(lib.RISK_TYPES.items()))
 
 
 def judge(job, log_as):
@@ -194,7 +202,7 @@ def judge(job, log_as):
                 model=MODEL, log_as=log_as,
                 citation=job["citation"], contract_id=job["contract_id"],
                 clause_name=job["clause_name"], clause_text=job["clause_text"],
-                type_def=type_def(job["type"]), issue_text=job["issue"],
+                type_def=type_def(), issue_text=job["issue"],
                 candidates=render(job["candidates"]))
     if a is None:
         return None
@@ -209,6 +217,10 @@ def judge(job, log_as):
     a["matched"] = hit["id"] if hit else ""
     a["matched_key"] = hit["key"] if hit else ""
     a["gold_issue"] = hit["issue"] if hit else ""
+    # The matched defect's OWN risk type, so a cross-type match -- the agent
+    # naming the court's defect but filing it under the other type -- stays
+    # visible downstream instead of folding into a plain hit.
+    a["matched_type"] = hit["risk_type"] if hit else ""
 
     # Three ways to score zero, kept consistent so the column means one thing:
     # an undecidable passage, no candidate chosen, and a score the model itself
@@ -278,7 +290,7 @@ def report(res, threshold, n_gold, n_reachable, label=""):
     # measure, and that is a risk-detection miss, not a wrong reason.
     if n_gold:
         print(f"\n  RECALL     {len(found):4d}/{n_gold:<4d} = "
-              f"{len(found)/n_gold:6.1%}   of every gold issue in the corpus")
+              f"{len(found)/n_gold:6.1%}   of every gold issue in the contracts run")
     if n_reachable:
         print(f"    reachable only          {len(found):4d}/{n_reachable:<4d} = "
               f"{len(found)/n_reachable:6.1%}   (gold issues this check could "
@@ -292,6 +304,15 @@ def report(res, threshold, n_gold, n_reachable, label=""):
     print(f"\n  by risk type")
     for t in (1, 2):
         print(f"    type {t}                  {rate([r for r in rows if r['type'] == t])}")
+
+    # The failure this check was widened to see: the agent named the defect the
+    # court construed, and filed it under the other risk type. Risk detection's
+    # type panels score these as errors; here they are hits with a type note.
+    xt = [r for r in rows if r["alignment"] >= threshold and r.get("matched_type")
+          and not str(r["matched_type"]).startswith(str(r["type"]))]
+    print()
+    print(f"  cross-type                {len(xt)} aligned issue(s) named a "
+          f"defect filed under the OTHER risk type")
     print(f"\n  by taxonomy provenance")
     for p in ("westlaw", "model"):
         print(f"    {p:<22}{rate([r for r in rows if r['taxonomy_provenance'] == p])}")
@@ -337,13 +358,19 @@ def main():
 
     preds = list(csv.DictReader(open(PREDS, newline="", encoding="utf-8")))
     dataset = list(csv.DictReader(open(DATASET, newline="", encoding="utf-8")))
-    gold = gold_issues(dataset)
+    # Recall is over the gold issues of the contracts this run actually
+    # covered. A contract never attempted is a gap in the run, not a defect
+    # this check failed to find, and counting it here would quietly deflate
+    # every recall number by however much of the corpus was left unrun.
+    run_contracts = {r["contract_id"] for r in preds}
+    gold = {k: g for k, g in gold_issues(dataset).items()
+            if g["contract_id"] in run_contracts}
     js = jobs(preds, dataset)
     reachable = {c["key"] for j in js for c in j["candidates"]}
-    print(f"{len(js)} issue(s) with provision and risk type both matching gold, "
-          f"over {len({(j['contract_id'], j['clause_id']) for j in js})} provision(s)")
-    print(f"{len(gold)} gold issues in the corpus, {len(reachable)} reachable "
-          f"by this check")
+    print(f"{len(js)} issue(s) on provisions some court construed, over "
+          f"{len({(j['contract_id'], j['clause_id']) for j in js})} provision(s)")
+    print(f"{len(gold)} gold issues in the {len(run_contracts)} contract(s) "
+          f"run, {len(reachable)} reachable by this check")
 
     if args.rejudge_below is not None:
         prior = {r["job_id"]: float(r["alignment"]) for r in
