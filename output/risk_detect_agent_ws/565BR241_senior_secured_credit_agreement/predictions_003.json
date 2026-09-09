@@ -1,0 +1,94 @@
+{"judgments": [
+ {"clause_id": "c101", "issues": [
+   {"issue": "The definition describes the Guarantee Agreements as guarantees \"with respect to the Obligations\" without qualification, whereas the EGL Guarantee Agreement actually delivered caps EGL's liability at $250,000,000 after the Commercial Operations Date and terminates on the EGL Guarantee Release Date. Whether the credit agreement's description or the executed guarantee governs the scope of the guarantee is a live question.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c102", "issues": [
+   {"issue": "\"Guarantor\" is defined disjunctively as \"either of (i) the Parent or (ii) EGL, as the case may be,\" while the recitals and covenants speak of \"the Guarantors\" collectively. Whether obligations expressed by reference to \"the Guarantor\" bind both, and whether they are joint, is not resolved.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c103", "issues": []},
+ {"clause_id": "c104", "issues": []},
+ {"clause_id": "c105", "issues": []},
+ {"clause_id": "c106", "issues": []},
+ {"clause_id": "c107", "issues": [
+   {"issue": "Clause (i) captures obligations \"in respect of any Working Capital Bank Facility,\" a capitalized term the Agreement never defines; the defined term is \"Working Capital Bank Financing.\" The mismatch leaves the scope of that limb of Indebtedness uncertain.", "type": 1, "prob": 0.17}
+ ]},
+ {"clause_id": "c108", "issues": []},
+ {"clause_id": "c109", "issues": []},
+ {"clause_id": "c110", "issues": []},
+ {"clause_id": "c111", "issues": []},
+ {"clause_id": "c112", "issues": []},
+ {"clause_id": "c113", "issues": []},
+ {"clause_id": "c114", "issues": [
+   {"issue": "This account is to receive insurance, expropriation, asset-sale and equity proceeds, while the Escrow Account definition requires the Borrower to deposit \"all Cash and receivables ... or payments otherwise received by Borrower\" into the Escrow Account. The two deposit directions overlap and neither yields to the other.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c115", "issues": [
+   {"issue": "A replacement insurance adviser need only be an \"independent, professional and reputable insurance advisory firm appointed,\" with no appointing party or approval standard identified. The cross-reference is also left incomplete as \"Section 5.07(b\".", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c116", "issues": []},
+ {"clause_id": "c117", "issues": [
+   {"issue": "The Intercreditor Agent is appointed \"by the Lenders under an Intercreditor Agreement\" that, under the Intercreditor Agreement definition, need only be entered into \"if and when\" the parties agree, yet the Agents definition already treats the Intercreditor Agent as one of the Agents. The office may never come into existence while provisions addressed to the Agents assume it does.", "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c118", "issues": [
+   {"issue": "The Intercreditor Agreement must be \"in form and substance satisfactory to the Borrower and the Required Lenders,\" but the Supplier Financing definition states that the Supplier Financing \"shall be subject to an Intercreditor Agreement\" as a condition of that financing. A document whose existence depends on future agreement is made a precondition to financing already contemplated.", "type": 2, "prob": 0.17}
+ ]},
+ {"clause_id": "c119", "issues": []},
+ {"clause_id": "c120", "issues": []},
+ {"clause_id": "c121", "issues": [
+   {"issue": "The definition mixes referents: it speaks of \"any Eurodollar Rate Borrowing\" and then of \"the Interest Period applicable to the Borrowing of which such Loan is a part,\" though no Loan has been introduced. The antecedent failure leaves the payment date for a Loan within a Borrowing to be inferred.", "type": 1, "prob": 0.14}
+ ]},
+ {"clause_id": "c122", "issues": [
+   {"issue": "Clause (b) is enumerated \"(i) ... and (iii)\" with no (ii), and the provisos are then lettered (a), (b) and (c), duplicating the lettering of the definition's own clauses (a) and (b). The broken enumeration makes it unclear what the provisos qualify.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c123", "issues": []},
+ {"clause_id": "c124", "issues": []},
+ {"clause_id": "c125", "issues": []},
+ {"clause_id": "c126", "issues": []},
+ {"clause_id": "c127", "issues": [
+   {"issue": "Limb (b) announces \"the sum of (i) ... plus the aggregate amount of all LC Disbursements outstanding,\" omitting the numeral (ii) and thereby blurring whether the second amount is Lender-specific or facility-wide. Read with limb (a)(ii) the same LC Disbursements may be counted twice.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c128", "issues": [
+   {"issue": "\"Lender\" includes \"any assignee ... that becomes a Project Lender pursuant to an Assignment and Assumption,\" but \"Project Lender\" is a recital term embracing suppliers' credit providers as well as term lenders. An assignee under Section 9.04 becomes a Lender, not a Project Lender, so the two definitions do not fit.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c129", "issues": []},
+ {"clause_id": "c130", "issues": [
+   {"issue": "This definition fixes the share as of the date the Borrower must prepay \"in accordance with Section 2.11(b),\" while the Cash Sweep Mechanism directs prepayment \"pro rata to each Lender in accordance with its Lender's Pro Rata Interest in accordance with Section 2.11(c)(vii).\" The two provisions point to different prepayment provisions for the same calculation.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c131", "issues": [
+   {"issue": "The definition caps expiry at the earlier of 36 months from issuance and four years from the date of the Agreement (December 29, 2014), yet clause (4) permits negotiation of a letter of credit up to December 30, 2014 — a day after the outer expiry. The internal dates cannot all be satisfied.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c132", "issues": []},
+ {"clause_id": "c133", "issues": [
+   {"issue": "The fallback applies only \"In the event that such rate is not available at the time of determination for any other Interest Period,\" so on its face no fallback exists for the Interest Period actually being priced. The stray word \"other\" defeats the substitute-rate mechanism.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c134", "issues": []},
+ {"clause_id": "c135", "issues": []},
+ {"clause_id": "c136", "issues": [
+   {"issue": "The list of Loan Documents ends with \"any other document designated from time to time as a Loan Document by the Lenders or the Facility Agent,\" allowing unilateral expansion of a defined category that carries covenants, defaults and cross-default consequences. The general catch-all stands against the enumerated specifics with no consent requirement.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c137", "issues": []},
+ {"clause_id": "c138", "issues": [
+   {"issue": "Long-Term Debt excludes installments due within one year from clauses (b) and (c) but not from clause (a), while Short-Term Debt separately includes \"installments on Long-Term Debt due within one (1) year.\" The two definitions overlap on the same amounts and Total Debt then adds them together.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c139", "issues": []},
+ {"clause_id": "c140", "issues": [
+   {"issue": "Clause (ii) turns on the Reuters \"LIBOO1\" screen rate, whereas the LIBO Rate definition prices off the Reuters \"LIBOR01\" screen. The disruption test and the rate definition refer to different pages, so it is unclear which screen governs.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c141", "issues": [
+   {"issue": "\"Material adverse effect on the business, financial condition, operations or performance or properties of the Borrower since March 31, 2010\" supplies no measure of materiality and fixes an arbitrary baseline date predating the Agreement. What change qualifies, and against what benchmark, is left entirely open.", "type": 1, "prob": 0.33}
+ ]},
+ {"clause_id": "c142", "issues": [
+   {"issue": "\"All material approvals and consents by any Person, including any Governmental Authority, required in connection with the Project\" combines an undefined materiality test with an open-ended \"including, but not limited to\" list. The Schedule 4.01(f) enumeration does not limit the term.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c143", "issues": []},
+ {"clause_id": "c144", "issues": []},
+ {"clause_id": "c145", "issues": []},
+ {"clause_id": "c146", "issues": []},
+ {"clause_id": "c147", "issues": [
+   {"issue": "Limb (ii) brings in \"any and all mining rights and leases of the Borrower with acknowledgment from the relevant Government Authorities or other Person which is a lessor consenting to such Mortgage,\" so mining leases are Mortgaged Property only if a third party consents. Whether unconsented mining leases are within the collateral is left unresolved by the words used.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c148", "issues": []},
+ {"clause_id": "c149", "issues": [
+   {"issue": "Clause (ii)(B) credits amounts \"deposited at such time in the DSRA, the Escrow Account or the Unrestricted Account established in accordance with the Collateral Account Agreement,\" but \"Unrestricted Account\" is used as a defined term and is nowhere defined in the Agreement. The arithmetic of clause (i) is also garbled — \"minus, (B) ... and (C) minus mark-to-market amounts ... that ... are less than twenty five million Dollars.\"", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c150", "issues": []}
+]}

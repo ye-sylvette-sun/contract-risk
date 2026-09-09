@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "45b7e3c9e5b9e16c7aaa8a6a5f81a7fd4c31a18afa768a3c8d42b7b70de7c2c2",
+  "document_chars": 7378,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3249,
+    "input_tokens_details": {
+      "cache_write_tokens": 3246,
+      "cached_tokens": 0
+    },
+    "output_tokens": 238,
+    "output_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "total_tokens": 3487
+  },
+  "response": [
+    {
+      "id": "rs_0e90ee57fb3c2020006aa1d276b9b087d0a6aa2742949717bf",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodJ6Rz7Z4mSz2tVLN6NHy_obX9npqnINbnmmSm-P0BWWWeYxbk0pieRaollMUmyPcSCTEoxwMV03p-Q7kt_El0JvFRQTAHk_zzRyOClw8_Sprn7JC2KsO2y8HpNDm-yC0g4UvWyTKGOslqJWcmgSsjXi_DMuargmzKwvPUyNKd1NorcmjqH_IPT3q-dUAHsrezdS6ooOhfgca_Ak-j1FLVXUYGmb6umaBX2U1wzrnRBNX6k_RLYpe7M1fxOND09NEszAur3cj4iRsIEvY8z8LJMb40cQc9yBdyVTOSdV7UgZA1zHj9vyJX5wtRV8Duw_jGlcCTFTWz4WVryzF2ZwLkuds77PigudEedjnaKo1ahIbGsaf8dds7DNp-fE1kVT-dcrcHnk0hIR7Q3tbWfWDHjrx9YXacLanEiwn-pOmjIxqQ9wT_oMs74PzSLWZeq-MohjAHzaBuQeXwvhH2SYlR3VaYvKuI7Yebhp-q3w3Ujrzil-GqUHn4NcNJcBKrlqHiVUEBEepc8AXoeXVvt-JEJWO6v8fc_N4GerbWcjVgYxYSWm8K0IfDGbAZr8FduCrV_QEf2liNOXM_rWN32Pm9y-h4gEXLZwjOk_dZV0xR2QO0JQ9jt6weFhXev1LOO_0hDvOcdQpu5bi4R5cU9Z1btY7OpOO4wVBNb7HhnyfQT87SKKcc6YfFkdv08F7-mQTJlnjhdVGZiJg88giIA2lG70PdVTgnDFtj5MCT2eWz95wlX9bpN3oLv0mWlz496sqlrecNKbFDFBGkOIB-NAfR1GljG7c8xbjhiiHidxhoaZ_ixl_QvESJ5I8xlLcXvl5hvz5JfLkXudW8DfSVkY7FHqXca1U-6pXPKfOJO00LUGHjWx9AUXRSTY1ltfsOhx0MI-s7sbqpO87xMenm5eURwHIin8Ni1_eWvwPB-WysSdBE8Hiw7l3DgjQ5eSWesXBFqoOvjZuiayacxYFI-SOWZRhp9q2VTRb_fBIXv5DSCtX_MK5YUHtqDtqFormA8BpKVE2DgVCnbicfsvybBEoG0RYxYhTPQvB1cVYMy2ULkGw_hMeBJYVGgyEjIPwVT_TyQvunB280pgeyfbbiaN0m4U3oaZJDh6IdG4cL2RoDAcUSo_paDGiieN2_dyxkd7vBX-1PU0U34mZFSLHDBR3D5Spen1AjQx3lOD1w3qKL1_pvZ79GSxL39EO7HetDqFNCX8_uXhjBUZoYlWF30AJuSlsu4VcKh6KADqsMaN0FKDwi_Po_eGcliWbk4-zexkhHrNg9cy1GOBHRfuK6NCN-EeuHqf9L1N1KG71ukSxzyAHe1Osp886GbFilb6TV8xcTaYXd_knoBcVEWbnLuyGdZ6uoPuO9FdEDvbBPN4r4Yomux8aW8g9G-ZszHkHMI9K4HJKhBOOhkMIbHgph8topbBjqat8AyhEkdEEFY1JxZsaUwtRinVRQFTJ0E6FozxtfTmwDQxIwv5EGzis_KQ9DCzZFIPOnj-PnOTPHlFBXnoNz_0YWDSpmXL2jpBzOoi6VXmgeJJ4a8ABS1634-OD-0iwqJwOnM35sys6Gg5WFtAT66dFJiJJucVKpdP2326GuXtBii-Gm6p5O1SQ7UURM0pCn6ulq2C_W4LaYAYY0qeNLzBVhSiqAYMbHemKY4yACcPl5kd9q5ABiCTdG8Z5MfF5XP4dg9uDN6rTw6QA7map7RbjyJa_S3x4XippZlyd4qn-WSu-6lPasCSJROKb4Eig5Dn37YVypLOBhS9UqJY0RcaEsgmQ0S-k_1tP064b3i6jf8d5ycsoS9jx0HV3z23lg==",
+      "status": null
+    },
+    {
+      "id": "msg_0e90ee57fb3c2020006aa1d2786f1c87d08f58ddaeefc15351",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"Neither candidate addresses the proposed distinction between permissible prospective rate changes and forbidden recoupment of prior losses. Both concern separate ambiguities in the unfair-discrimination condition.\",\"words_at_issue\":\"The proposed issue concerns “We will not distribute past gains or recoup prior losses, if any, by changing the rates,” particularly its silence on how to identify forbidden recoupment. Candidate g1 concerns “discriminate unfairly,” while g2 concerns “class of insureds” and whether a class may be redefined after issuance.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

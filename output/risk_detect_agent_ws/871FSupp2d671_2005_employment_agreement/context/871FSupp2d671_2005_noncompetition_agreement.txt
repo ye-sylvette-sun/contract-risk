@@ -1,0 +1,350 @@
+2:11-cv-12936-MOB-LJM Doc#11-2 Filed 10/17/11 Pg1of10 PgID158
+
+EXHIBIT A
+ Pe DO Ra be oe papa ee tn
+
+~-2:1120V-12936-MOB-LJM Doc #11-2 Filed10/17/11 Pg 20f10 PgID 159° ~~
+
+O
+
+EXECUTION COPY
+
+NONCOMPETITION AGREEMENT
+This Noncompetition Agreement (the “Agreement”) is made as of July KX, 2005,
+
+between Ajuba International, Inc., a Delaware corporation (the “Company”) and Devendra
+Saharia (the “Shareholder”). The Company and the Shareholder are referred to from time to time
+in this Agreement individually as a “Party” and together as the “Parties.”
+
+BACKGROUND
+
+A. Pursuant to the terms and conditions of the Stock Purchase Agreement, dated as
+of July ¥ _, 2005 (the “Stock Purchase Agreement”), among MiraMed Global
+Services, Inc., a Delaware corporation (“Buyer”) and Nader Samii, Devendra
+Saharia and Shakti Singh (collectively, the “Sellers”). Buyer is purchasing all of
+the issued and outstanding shares of common stock of the Company owned by the
+Shareholder.
+
+B. Buyer is unwilling to consummate the transactions under the Stock Purchase
+Agreement unless the Shareholder executes and delivers this Agreement.
+
+C. Capitalized terms not otherwise defined herein shall have the meaning ascribed to
+such term in the Stock Purchase Agreement.
+
+Now, therefore, the Parties hereby agree as follows.
+AGREEMENT
+Definitions,
+
+A. “Business” shall mean the business of providing claims processing, billing,
+
+balance resolution, adjudication of claims, accounts receivable management, bad
+debt collections, cash posting, denials and appeals, zero balance analysis,
+underpayment analysis, provider enrollment, inbound and outbound call center
+services, audits, consulting, data entry, data capture and data conversion of health
+insurance claims for hospitals and physicians in the United States.
+
+B. The “Company” shall mean Ajuba and its subsidiaries and any corporation or
+entity that now, or at any time after the date of this Agreement, is a successor
+(whether by purchase of all or substantially all of the business and/or assets,
+merger, consolidation or liquidation), subsidiary or affiliate of the Company.
+
+C. “Customer” shall mean (a) a client of the Buyer, or the Acquired Companies, (b)
+an entity which was a client of an Acquired Company at any time during the six _
+month period prior to the date of this Agreement or (c) an entity which was
+actively sought by the Buyer or by an Acquired Company as a prospective client
+during the twelve month period prior to the date of this Agreement and with
+
+whom the Shareholder had material contact while a shareholder of the Company.
+
+ C
+
+2:11-cv-12936-MOB-LJM Doc # 11-2 Filed 10/17/11. Pg 3 of 10° Pg ID 160 ~
+
+D. The “Restricted Period” shall mean the period commencing on the date of this
+Agreement and ending on the date that is three (3) years after the date of this
+Agreement.
+
+E. The “Restricted Area” shall mean the United States, its territories and
+protectorates.
+
+2 Non-Competition; Non-Solicitation.
+
+A. To induce the Buyer to enter into the Stock Purchase Agreement, in recognition of
+the highly competitive nature of the industries in which the Company conducts its
+business, and to further protect the goodwill of the Company and to promote and.
+preserve its legitimate business interests, the Shareholder agrees that during the
+Restricted Period, the Shareholder shall not:
+
+1. directly or indirectly in the Restricted Area engage in any activity which is
+in competition with the Business whether such engagement is as an
+officer, director, proprietor, employee, partner, investor (other than as a
+holder of less than 2% of the outstanding capital stock of a publicly traded
+corporation), consultant, advisor, agent, representative or otherwise;
+
+2. directly or indirectly, induce any Customer to patronize any business
+directly or indirectly in competition with the Business conducted by the
+Company, Buyer or any of their affiliates, canvas, solicit or accept from
+any Customer any such competitive business, or request or advise any
+Customer to withdraw, curtail or cancel any such customer’s business with |
+the Buyer, the Company or their affiliates; or
+
+3. directly or indirectly, recruit, solicit or otherwise induce or influence any
+employee, sales agent, or consultant of the Company, Buyer or their
+affiliates, or any person who served as such as any time during the six
+months prior thereto, to discontinue such employment, agency, or
+consultant relationship with the Company, Buyer or their affiliates, or
+employ or seek to employ, or cause any business which competes directly
+or indirectly with the Company or Buyer to employ or seek to employ any
+employee, sales agent, or consultant of the Company, Buyer or any of
+their affiliates.
+
+B, The Shareholder acknowledges and agrees that the restrictions contained in this
+
+Section 2 are reasonable in scope and duration and are necessary to protect the
+Company after the consummation of the transactions contemplated by the Stock
+Purchase Agreement and the value of the goodwill acquired thereby.. If any
+provision of this Section 2, as applied to any party or to any circumstance, is
+adjudged by a court to be invalid or unenforceable, the same will in no way affect
+any other circumstances or the validity or enforceability of the remainder of this
+Agreement. It is the intention of the Parties that a court shall enforce these
+restrictions to the fullest extent permitted by law. The Shareholder and the
+
+2
+
+ ©
+
+oo 9:41-CV-12936-MOB-LJM Doc# 11-2 Filéd 10/17/11 Pg 4of10 “Pg ID 161
+
+3.
+
+Company agree that, if any provision of this Section 2 should be adjudicated to be
+invalid or unenforceable, such provision shall be deemed deleted herefrom with
+respect, and only with respect to the operation of such provision in the particular
+jurisdiction in which such adjudication was made; provided, however, that to the
+extent any such provision may be made valid and enforceable in such jurisdiction
+by limitations on the scope of the activities, geographical area or time period
+covered, the Shareholder and the Company agree that such provision instead shall
+be deemed limited to the extent, and only to the extent, necessary to make such
+provision enforceable to the fullest extent permissible under the laws applied in
+such jurisdiction.
+
+The Shareholder acknowledges that in the event of his breach of the foregoing
+covenant, money damages would be an inadequate remedy. Accordingly, and
+notwithstanding any other provision of this Agreement, without prejudice to the
+rights of the Company to seek such damages or other remedies available to it, the
+Company shall be entitled to injunctive relief, specific performance or other
+equitable relief in any proceeding which the Company may bring to enforce the
+foregoing covenant not to compete on its express and explicit terms without the
+necessity of posting a bond.
+
+Confidentiality.
+
+A.
+
+-The Shareholder shall not disclose or use at any time, either during or subsequent
+
+to the Restricted Period, any Confidential Information of which the Shareholder
+currently has knowledge or of which he becomes aware during or after the
+Restricted Period, whether or not developed by the Shareholder. “Confidential
+Information” shall include information concerning the Company, the Company’s
+clients, the Buyer and the Buyer’s clients, not generally known in the business
+community, including, but not limited to, information concerning client names,
+price lists, sales and service records, equipment, methods, improvements, data,
+sales figures, projections, quotations, estimates, accounting and billing
+procedures, other records, trade secrets, reports, budgets and other financial
+information, the acquisition, installation and utilization of equipment and
+procedures, technological developments, “know how”, computer programs,
+developments, data, discoveries, ideas, concepts, computer programs, algorithms,
+protocols, systems and related documentation, and any other works of invention
+or authorship (whether or not patentable, copyrightable, or entitled to or eligible
+for other forms of legal protection), and the like. Confidential Information shall
+not include any information that (a) is or becomes publicly known through no
+wrongful act of the Shareholder; (b) is obtained by the Shareholder from a third
+party lawfully in possession of such information and having the legal right to
+transmit the same or (c) is lawfully required to be disclosed to any governmental
+agency or is otherwise required to be disclosed by law, provided that before
+making such disclosure the Shareholder shall give the Company an adequate
+opportunity to interpose an objection or take action to assure confidential
+handling of such information.
+
+ ome 1 1=CV-12936-MOB-LJM Doc#11-2 Filed 10/17/11 Pg5of10 Pg ID 162 —
+
+C)
+
+The Shareholder acknowledges and agrees that the Company's remedy at law for
+a breach or threatened breach of this Section 3 would be inadequate. Therefore,
+in the event of a breach by the Shareholder of the provisions of this Section 3, in
+addition to its remedy at law, the Company shall be entitled to obtain equitable
+relief in the form of specific performance, temporary restraining order, temporary
+or permanent injunction or any other equitable remedy which may then be
+available without the necessity of posting a bond. The provisions of this Section
+3 shall survive the termination of this Agreement. |
+
+No Disparagement. While this Agreement is in effect and indefinitely thereafter,
+regardless of any dispute that may arise in the future, no Party shall disparage, criticize or
+make statements to the detriment of any other Party, except as part of any dispute
+resolution proceeding related to any Agreement between the Parties.
+
+Miscellaneous.
+A. Entire Agreement; Third Party Beneficiaries. This Agreement (i) constitutes the
+
+entire agreement between the Parties pertaining to the subject matter of this
+Agreement and supersedes all prior and contemporaneous agreements,
+understandings, negotiations and discussions, whether written or unwritten, of the
+Parties with respect to such subject matter, and (ii) is not intended to confer, and
+shall not be deemed to confer, upon any person other than the Parties any rights or
+remedies under this Agreement except that the Buyer shall be deemed a third
+party beneficiary hereunder.
+
+No Waiver. No failure of any Party to exercise any power given it under this
+Agreement, or to insist upon strict compliance with any provision of this
+Agreement, and no custom or practice of the Parties at variance with the terms of
+this Agreement shall constitute a waiver of any Party’s right to demand strict
+compliance with the terms of this Agreement.
+
+Amendment. This Agreement may not be amended except by an instrument in
+writing signed by each Party.
+
+Representation. The Shareholder acknowledges that he has had the opportunity to
+have this Agreement reviewed by the legal counsel of his choice.
+
+Governing Law: Jurisdiction. This Agreement shall be construed under the laws
+of the State of Michigan without regard to conflict of laws principles. Any action
+or proceeding seeking to enforce any provision of, or based on any right arising .
+out of, this Agreement may be brought against any of the parties in the courts of
+the State of Michigan, County of Jackson, or, if it has or can acquire jurisdiction,
+in the United States District Court for the Eastern District of Michigan, and each
+of the parties consents to the jurisdiction of such courts (and of the appropriate
+appellate courts) in any such action or proceeding and waives any objection to
+venue laid therein. Process in any action or proceeding referred to in the
+preceding sentence may be served on any party anywhere in the world.
+
+ ee Ortt-cv-12936-MOB-LJM Doc#11-2 “Filed 10/17/11 Pg6o0f10 PgiD163 ©
+
+Successors and Assigns. This Agreement, and all rights and powers granted by
+this Agreement, shall bind and inure to the benefit of the parties and their
+respective successors and assigns; provided, however, that no party may assign or
+delegate its rights and obligations under this Agreement without the consent of the
+other party, except that the Company may assign or delegate its rights and
+obligations to an affiliate without such consent.
+
+Counterparts. This Agreement may be executed in two (2) or more counterparts,
+all of which shall be considered one and the same agreement, and shall become
+effective when one counterpart has been signed by each party and delivered to the
+other party hereto.
+
+Partial Invalidity. Subject to the provisions of Section 2(B), whenever possible,
+each provision hereof shall be interpreted in such manner as to be effective and
+valid under applicable law, but in case any one or more of the provisions
+contained herein shall, for any reason, be held to be invalid, illegal, or
+unenforceable in any respect, such invalidity, Wlegality, or unenforceability shall
+not affect any other provisions of this Agreement, and this Agreement shall be
+construed as if such invalid, illegal, or unenforceable provision or provisions had
+never been contained herein unless the deletion of such provision or provisions
+would result in such a material change as to cause completion of the transactions
+contemplated hereby to be unreasonable.
+
+Notices. All notices, request, demands, and other communications hereunder
+shall be in writing (which shall include communications by telex and facsimile)
+and shall be delivered (a) in person or by courier or overnight service, (b) mailed
+by first class registered or certified mail, postage prepaid, return receipt requested,
+or (c) by facsimile transmission, as follows:
+
+If to the Company:
+
+Ajuba International, Inc.
+744 West Michigan Ave.
+Jackson, Michigan 49201
+Attn: President, Tony Mira
+Telephone :
+
+Facsimile:
+
+with a copy (which shall not constitute notice) to:
+
+Dykema Gossett PLLC
+
+2723 South State Street, Suite 400
+Ann Arbor, Michigan 48104
+
+Attn: Barbara A. Kaye
+
+Telephone : (734) 214-7694
+Facsimile: (734) 214-7696
+
+ O
+
+If to the Shareholder:
+
+Devendra Saharia
+99 4th Street, Adithi (4C)
+Abiramapuram
+Chennai 600 018
+INDIA
+
+with a copy (which shall not constitute notice) to:
+
+Clark Hill PLC
+
+500 Woodward Avenue, Suite 3500
+Detroit, Michigan 48226
+
+Attn: John P. Hensien
+
+Telephone: (313) 965-8385
+Facsimile: (313) 965-8252
+
+or to such other address as the parties hereto may designate in writing to the other in accordance
+with this Section 5(J). Any party may change the address to which notices are to be sent by
+giving written notice of such change of address to the other parties in the manner above provided
+for giving notice. If delivered personally or by courier, the date on which the notice, request,
+instruction or document is delivered shall be the date on which such delivery is made and if
+delivered by facsimile transmission or mail as aforesaid, the date on which such notice, request,
+instruction or document.is received shail be the date of delivery.
+
+Signatures on following pages
+
+ This page intentionally left blank
+
+ —— ~ 2:41-¢v-12936-MOB-LJM Doc # 11-2°” Filed 10/17/11 Pg9of10 Pg ID 166
+
+oO
+o . The Parties have executed this Noncompetition Agreement as of the date first written above.
+
+COMPANY: SHAREHOLDER:
+
+AJUBA INTERNATIONAL, INC. DEVENDRA SAHARIA
+© By: Signature: Permowelre bbrand
+
+Print Name: Print Name: DEV EN DA : SAYA I RE
+
+Title: Address: 7% 4 th Stree d~ vi Aki on C eC \
+° : Abirauapurom , Cheunor -/8
+
+| Lote
+
+Te
+C ,
+@
+
+ swoon 9:44 =cv-12936-MOB-LJUM Doc # 11-2 Filéd 10/17/11 Pg 10 of 10~ Pg ID 167 ~~
+
+The Parties have executed this Noncompetition Agreement as of the date first written above.
+
+COMPANY:
+AJUBA INTERNATIONAL, INC,
+
+Ce
+Print Name: Fel Miro fel}
+
+Title: . oe CU airmpr
+
+SHAREHOLDER:
+DEVENDRA SAHARIA
+
+Signature:
+
+Print Name:
+
+Address:
+

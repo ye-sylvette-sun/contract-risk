@@ -1,0 +1,133 @@
+{"judgments": [
+ {"clause_id": "c101", "issues": []},
+ {"clause_id": "c102", "issues": [
+   {"issue": "The LIBOR definition breaks off at \"(or, if at least two such rates appear, the arithmetic mean of,\" so the rate cannot be computed from the text where more than one quotation appears. The default interest rate in Sections 13.1 and 13.2 depends on this incomplete definition.", "type": 1, "prob": 0.26}
+ ]},
+ {"clause_id": "c103", "issues": [
+   {"issue": "The definition of \"Loan\" ends at \"shall have the meaning assigned in Section,\" with no section number given. The Agreement's central defined term points nowhere on its face.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c104", "issues": []},
+ {"clause_id": "c105", "issues": []},
+ {"clause_id": "c106", "issues": []},
+ {"clause_id": "c107", "issues": []},
+ {"clause_id": "c108", "issues": [
+   {"issue": "The \"Margin Notice Deadline\" is left to the Confirmation, Schedule B or \"market practice,\" and no such time appears in the executed Schedule B. Whether a margin call must be met the same day under Section 9.6 turns on an hour the documents never fix.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c109", "issues": [
+   {"issue": "Section 25.37 fixes a Margin Percentage of not less than 100% subject to agreement under Section 24.2, while Schedule B ¶6 restates \"Margin Percentage\" on different terms and Schedule B ¶2 provides that the Schedule governs any inconsistency. Which percentage applies to a given Loan cannot be answered from Section 25.37 alone.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c110", "issues": [
+   {"issue": "The definition ends by providing that the Market Value determinations \"shall apply for all purposes under this Agreement, except for purposes of Section 13,\" while Section 13 itself supplies only a \"generally recognized source\" or last bid quotation chosen in the non-defaulting party's sole discretion. The valuation standard on default is thus carved out of the defined term without a substitute of equal content.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c111", "issues": []},
+ {"clause_id": "c112", "issues": []},
+ {"clause_id": "c113", "issues": []},
+ {"clause_id": "c114", "issues": []},
+ {"clause_id": "c115", "issues": [
+   {"issue": "\"Retransfer\" lists pledging, lending, selling \"or otherwise transfer[ring]\" the Collateral, a catch-all sitting against the enumerated dealings. Whether investing or commingling cash Collateral under Section 4.2 is a \"Retransfer\" is left to the general words.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c116", "issues": [
+   {"issue": "\"Securities\" is defined as \"securities or, if agreed by the parties in writing, other assets\" — a definition that defines the term by itself and then extends it to unspecified assets. The class of property that may be lent is therefore not fixed by the definition.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c117", "issues": []},
+ {"clause_id": "c118", "issues": []},
+ {"clause_id": "c119", "issues": []},
+ {"clause_id": "c120", "issues": [
+   {"issue": "The securities-contract characterization is qualified \"except insofar as the type of assets subject to the Loan would render such definition inapplicable,\" without saying who decides or by what test. Since Section 25.44 permits \"other assets\" to be lent, the exception may swallow the statement.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c121", "issues": [
+   {"issue": "Every transfer is stated to be \"a 'settlement payment' or a 'margin payment'\" without saying which, though the two carry different statutory consequences. The disjunctive leaves the characterization of any particular transfer unresolved.", "type": 1, "prob": 0.13}
+ ]},
+ {"clause_id": "c122", "issues": []},
+ {"clause_id": "c123", "issues": [
+   {"issue": "The FDIA provision runs into illegible and garbled text after \"'securities contract' and 'qualified financial,'\" so the conditions and consequences of insured-depository-institution status cannot be read from the instrument. Whether Wells Fargo Bank, N.A.'s status triggers these terms is unascertainable on the face of the document.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c124", "issues": [
+   {"issue": "Section 26.5 (FDICIA treatment) is wholly garbled, with the definitions of \"netting contract\" and \"covered contractual payment obligation\" unreadable. The provision as executed cannot be given a determinate meaning.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c125", "issues": [
+   {"issue": "Section 26.6 (master netting treatment) is likewise garbled, leaving the reference to \"master netting agreement\" status and to exchange or clearing organization rules unreadable. Its operative content cannot be determined from the text.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c126", "issues": [
+   {"issue": "The SIPA disclosure states that the collateral delivered to Lender may constitute the only source of satisfaction of Borrower's obligation if Borrower fails to return the Loaned Securities, which cannot be squared with Section 13.1's provision that Borrower remains liable for any excess of the Replacement Securities' price over the Collateral. Whether Lender's recourse is limited to the Collateral is left contradicted.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c127", "issues": [
+   {"issue": "The government-securities acknowledgment is largely illegible, so the scope of Lender's acknowledgment about the treatment of securities pledged by Borrower as Collateral cannot be read. What Lender is taken to have acknowledged is indeterminate.", "type": 1, "prob": 0.17}
+ ]},
+ {"clause_id": "c128", "issues": [
+   {"issue": "The Annex describes itself as governing transactions in which \"a party lending Securities ('Agent') ... is acting as agent,\" yet ¶1 speaks of the Principal performing \"the obligations of Lender or Borrower, as the case may be.\" Whether the Annex reaches an agent acting for a borrowing Principal is left unclear.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c129", "issues": []},
+ {"clause_id": "c130", "issues": [
+   {"issue": "Agent must supply \"such information in its possession necessary to complete all required fields in the format generally used in the industry\" and \"use its best efforts\" for optional information, neither standard being defined. What information is required and what effort suffices are both left at large.", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c131", "issues": [
+   {"issue": "If Agent fails to identify or allocate to an Approved Principal, Borrower may \"terminate any Loan with such Principal or Principals\" — a remedy exercisable against a Principal whose identity is by hypothesis undisclosed. The remedy also cuts across Section 6.1's notice-and-settlement-date termination mechanics.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c132", "issues": [
+   {"issue": "The limitation of Agent's liabilities — that Agent shall not be treated or liable as principal unless expressly agreed — cannot be squared with Section 11.1, which requires each party either to be liable as principal or to execute and comply with the agency Annex. Whether Wells Fargo answers as principal on these Loans is the very point the two provisions divide on.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c133", "issues": [
+   {"issue": "Annex I-A ¶4 deems the portion of each Loan allocable to a Principal a separate agreement with that Principal, which cannot stand with Section 18's single-agreement, cross-default and cross-Loan setoff regime. Which characterization governs a default by one Principal is left unresolved.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c134", "issues": [
+   {"issue": "The interpretation paragraph deems references to \"Lender\" (and to \"party\" and \"other party\") to mean the Agent's Principal, contradicting Section 1 and Section 25.28, which define Lender as the contracting party that lends the Securities. Whose rights and risks Sections 4.2, 8 and 13 attach to depends on which reading prevails.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c135", "issues": [
+   {"issue": "Annex II ¶1, the primary Market Value rule for exchange-quoted Securities, is garbled to the point that the applicable quotation, exchange and time cannot be read. Section 25.38 makes this Annex the governing definition of Market Value for every margin and remedy calculation.", "type": 1, "prob": 0.26}
+ ]},
+ {"clause_id": "c136", "issues": [
+   {"issue": "Annex II ¶2, dealing with Securities quoted otherwise than on an exchange, is illegible in its operative terms, so the alternative quotation source and time cannot be determined. The fallback valuation rule has no readable content.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c137", "issues": [
+   {"issue": "Annex II ¶3's market-practice valuation rule is garbled, leaving the trigger (\"except as provided in Section ...\") and the source of the quotation unreadable. What governs when no recognized quotation exists cannot be established from the text.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c138", "issues": [
+   {"issue": "Annex II ¶4's rule for Foreign Securities is garbled, so it cannot be told which Close of Trading or which market determines value. Valuation of Foreign Securities collateral is left indeterminate.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c139", "issues": [
+   {"issue": "Annex II ¶5, adjusting Market Value for accrued interest and for amounts credited under Section 8, is largely illegible. Whether accrued interest already transferred is added back cannot be read from the provision.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c140", "issues": [
+   {"issue": "Annex II ¶6 applies its Market Value determinations for all purposes of the Agreement \"except for purposes of Section 13,\" which leaves the default liquidation in Section 13 to be valued by a different and less specified standard. The carve-out cannot be reconciled with Section 13's own price mechanics.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c141", "issues": [
+   {"issue": "The Annex defines Term Loans as loans made \"against a pledge of cash Collateral,\" yet Annex III ¶1 makes every Loan of non-Equity Securities a Term Loan whatever the Collateral. The definition and the designation rule describe different populations of Loans.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c142", "issues": [
+   {"issue": "The default rule that \"[a]ll Loans of Securities other than Equity Securities shall be 'Term Loans' subject to this Annex\" cannot be squared with Section 6.1, under which either party may terminate any Loan on notice without charge. Under the Annex the same termination triggers replacement-loan and Breakage Fee obligations.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c143", "issues": [
+   {"issue": "On early termination the parties must \"use their best efforts to negotiate in good faith\" a Replacement Loan of \"comparable or other Securities\" — an agreement to agree with no fallback if negotiation fails except the Breakage Fee. What effort discharges the obligation, and what makes Securities comparable, are both undefined.", "type": 1, "prob": 0.28}
+ ]},
+ {"clause_id": "c144", "issues": [
+   {"issue": "Annex III ¶4 lets Lender keep the Terminated Loan's Collateral as Collateral for the Replacement Loan, while Section 4.3 obliges Lender to return the Collateral on the day the Loan is terminated. Whether Borrower's return right survives the roll into a Replacement Loan is unresolved.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c145", "issues": [
+   {"issue": "Annex III ¶5 charges the \"party requesting termination\" a Breakage Fee, which cannot be squared with Section 6.1's unqualified right of either party to terminate a Loan on notice. It also conditions the return of Collateral on no Default having occurred with respect to Borrower, unlike Section 4.3.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c146", "issues": [
+   {"issue": "The definition and computation of the \"Breakage Fee\" — the entire measure of damages for a failed Replacement Loan under Annex III ¶5 — is garbled and unreadable in the executed document. The amount payable on early termination of a Term Loan cannot be computed from the text.", "type": 1, "prob": 0.30}
+ ]},
+ {"clause_id": "c147", "issues": [
+   {"issue": "Schedule B names the contracting lender as \"Wells Fargo Bank, N.A.,\" while the Securities Lending Agreement appointing the lending agent for the participant's account names Wells Fargo Bank Minnesota, N.A. Which Wells Fargo entity is the \"Lender\" bound by this Agreement is not established by the recital.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c148", "issues": [
+   {"issue": "Schedule B ¶1 makes \"Annex I-A (Agency Annex)\" part of the Agreement, but Section 11.1(b) requires a party acting other than as principal to \"execute and comply fully with the provisions of Annex I.\" There is no Annex I, so the covenant and the list of applicable annexes do not match.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c149", "issues": [
+   {"issue": "Schedule B ¶2 resolves inconsistency only \"between the terms of the Agreement and this Schedule,\" saying nothing about conflicts with the Annexes that ¶1 makes part of the Agreement, or about the Confirmation hierarchy in Section 2.1. The order of precedence among Agreement, Annexes, Confirmation and Schedule is left incomplete.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c150", "issues": [
+   {"issue": "The provision states that the standard settlement date for Foreign Securities \"shall be the standard settlement date that would apply to a purchase or sale of such Foreign Securities ... in the principal market,\" defining the term by itself. It also leaves \"the principal market\" for Foreign Securities unidentified.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c151", "issues": [
+   {"issue": "The parties are bound to \"any uniform practices applicable to securities loans among members of\" two trade associations, \"as currently in effect, or successor provisions thereto,\" without identifying the documents or their content. What the Uniform Practices require — and when a successor provision changes them — is not ascertainable from the instrument.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c152", "issues": [
+   {"issue": "The added no-reliance representations are garbled beyond legibility after the introductory sentence, so what each party is representing about its own evaluation of each Loan cannot be read. The representations also overlap with, without matching, Section 10.2.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c153", "issues": [
+   {"issue": "Schedule B ¶6 restates the \"Margin Percentage\" definition in terms that conflict with Section 25.37's \"not less than 100%,\" and Schedule B ¶2 makes the Schedule govern; the restated percentages are moreover garbled in the executed copy. What margin level Borrower must maintain cannot be settled without construing the two definitions together.", "type": 2, "prob": 0.30}
+ ]}
+]}

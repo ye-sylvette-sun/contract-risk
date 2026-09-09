@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "95e1bbad4246f91d09ff2d7b89d0787164dfc0f18ad043ec152b1e2fcf53ef32",
+  "document_chars": 6139,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2893,
+    "input_tokens_details": {
+      "cache_write_tokens": 2890,
+      "cached_tokens": 0
+    },
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "total_tokens": 3197
+  },
+  "response": [
+    {
+      "id": "rs_0f46b4e60533864d006aa1d2a25ea087d082333b984f71df5b",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodKnRk8qUexsLgk4Q3brTGdhmZeToObr1JtVlWGb0CxaR3BWI4kL7sPWpgexVHbya5GXn7rGZ61HqxvQbPKp2CdwGrWuxkLBobn-BJhK6yUUV1eLofJgznpk0jr4iR-oBzqFZpn1a4GQWAd9HwN7Qnv6rLe3c-BJI0YvkIMHjw7d07yErsiUYKR5-32lcomZO7TD73aJvr5-LpUPzUVSE7bYrL2WXwncFVkpWb5CeYiYYM6-Ig8hLI09SpB-SFz_CVOXbUuXKU_5oZ2T2zHIV-cZH8XbflidXJYs7rFetrSfuZDYvnD7JGOXmlBrYNcO5AcIV1tjMFGs2-iu-Ald1ZDRuM4qDLnagcOEYPW-XxPOWeiVQ63qmDQYqvgQDAg9J01-wHio8zbRDXACx2TvWnS10z1GublJYJUIGcwjlshw43aiqx7ytUZyFpKxZDMRzZU5muzCqWAv6BnHYTAHXCwltCK4pH3fkwn2NPd3tHo_YwjqmEhkVsoB05SmG2MXtRfECqY7A-zKsfXWBvDo4eIucm59hIpyeR0AwGy6ATtFwb8n3lA6g_8CXxkQ_pK_LEDLcH0s8YNAllJffMjXrzuK3SJp7yuxlqs1weuLsoTQZfB1ugeIgnfzMHdddf0_DnEewaj4pwx1LKIyF37zAxcy-xVyDMZhlY71m-V9jmiFnnlAHBqVyG5xZXgjsQABEfInmrG8SRbaZ1hNTlB3-QwKiwPw6lXHU0UcLVNyrsYoVgcTrxD-z6Fma5Uax6kdsOWAqIy91l5TcPxlZIc-_OnyopHtUzYExHodnwSChJN_FTEfP885xXzUuq4B6jZaV7TRMfCp63nhgerFgmCqwwwGfaGSzcad8ZDXYFcCCAuPFW2lmc63EMlvkMonrOOuDbYuci0nMLoo4JHY3t-sPzp1BjYX1h4vpoDhor0TiEFzxfv3RVQVgstD9F6vmVR2VfCyeRbJ6mgceFZM4gJGK9mJQUq5PqXCM3TL0EGNkeX_bxNfZc1x4TKmzIFQHUKMWOg-xEN-g2qmSHHxJj_SWaKBD8Cr0xOFPbEMMAWNoYAEV2TGe6Txt1nUf8hDUwI0DcvsujsA7aApVa0fZF6P10OWxjcfoJ9MTQQzDESkwZIlcD7xayZZLr6eyFjvFRdx-ut1yrkkGnbSPSbyLVBd3ueQxbW2tOLN5tJ3fBuh6dczEtwfTj0YfVNAzZvZycTg3Ksr_JH7mhROB9WVi-KNZtVdAz3ZTO_oaDIAHEV5tWSyCOzh7-AO1CF2slOTZDyM-3eRsEwBeISb97voky3mEOiJq96oS871P_uwIeVJnyWNsa1ZDAZaj6fIfnCCzj6jc2DxQdJd7AKVEw6W81hHvlW5mybKknErbqL4Cd5EI3wRNofn7iT0E-w9AVmpiJgwz9WwjiCS18v53eGnK4Ck_d74qJ3oibPXpJu9bRIILpCvLg-lsTc-oA4F5mSvVN773Zu09z1S7-BfjQFUM-XFAh1UUgpKdoZZgLrFHa4lhVI41XW7BoC3fXzyCCLxGVHp6TeF8pxrhHFl9AI1J7fmR4UCIFlEZZAPONoKRlewWX32hFCw8EUvKLqQ0lAUY4Jh6wJdCytIM9Ycs3dbzS4C5ygdpPQDipdMDlFKhjIWhNbu1J4CgcIHwQKoXrN74rD6TSOYs-ccPdt4cB1ehaszS7dqiZ6ATHMmhHo1xseHnrsTDnnOtUXb-nfdTEULAkBodSsW7XkaUYlZl4KGSKOwmP3GisVQ_m4O8fLsOueNRSPsIi8P23HqLQTYeJ5Qmcfl7AUUvPSzBilcLohQPvS6d9Zf3kP5kR2UxAk6TKFSWlMYWSJo6HeclR8XhWQ59nCrYnC6SsKuPkP68Tf-CYdgEYSNb3BrByyPMyhuLAsgmiixaG3Z08AkMtA-0zIlWIus9AWrJfMcT0zoKTwArm1eUwJvkA==",
+      "status": null
+    },
+    {
+      "id": "msg_0f46b4e60533864d006aa1d2a4a47887d096ff1d1bb1a26734",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue challenges whether “through Tenant’s self-insurance,” especially when contrasted with Section 12.1’s cap, eliminates any requirement for carrier-issued building coverage. Candidate g1 instead concerns whether policies covering the Premises as an empty building satisfy the obligation to maintain an “all risk policy of insurance”; its incidental mention of self-insurance does not make that the recorded defect.\",\"words_at_issue\":\"The proposed issue turns on “Such insurance may be furnished ... through Tenant’s self-insurance,” the absence of a cap in Section 12.2, and the contrasting $500,000 cap in Section 12.1. Candidate g1 turns on “all risk policy of insurance” and whether coverage of the Premises merely “as an empty space” satisfies that coverage requirement.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

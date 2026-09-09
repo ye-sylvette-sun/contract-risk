@@ -1,0 +1,1155 @@
+{
+  "contract_id": "527BR351_secured_promissory_note_purchase",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061",
+    "c062": "c062",
+    "c063": "c063",
+    "c064": "c064",
+    "c065": "c065",
+    "c066": "c066",
+    "c067": "c067",
+    "c068": "c068",
+    "c069": "c069",
+    "c070": "c070",
+    "c071": "c071",
+    "c072": "c072",
+    "c073": "c073",
+    "c074": "c074",
+    "c075": "c075",
+    "c076": "c076",
+    "c077": "c077",
+    "c078": "c078",
+    "c079": "c079",
+    "c080": "c080",
+    "c081": "c081",
+    "c082": "c082",
+    "c083": "c083",
+    "c084": "c084",
+    "c085": "c085",
+    "c086": "c086",
+    "c087": "c087",
+    "c088": "c088",
+    "c089": "c089",
+    "c090": "c090",
+    "c091": "c091",
+    "c092": "c092",
+    "c093": "c093",
+    "c094": "c094",
+    "c095": "c095",
+    "c096": "c096"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The \"Effective Date\" is left blank (\"as of the __ day of [ ]\"), yet that date is the trigger for the Company's representations in Article 3 and for the expense cut-off in paragraph 5.5(a). A court would have to fix a date the instrument itself never supplies.",
+          "type": 1,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "Paragraph 1.1 fixes each Purchaser's obligation at the Note Subscription Amount \"set forth opposite each such Purchaser's name on the Schedule of Purchasers,\" but paragraph 2.2(a) lets the Company accept a subscription \"for a lesser amount\" and 2.2(c) issues the Note in the \"approved Loan Amount.\" Which figure is the contracted principal is not resolved.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The Loan Amount is \"adjusted from time to time in the records of the Company\" while the Note itself is issued in the Note Subscription Amount, and paragraph 1.7 makes re-issuance of Notes optional. Nothing says whether the Company's records or the face of the Note controls the debt owed.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The Company promises to certify the \"current Loan Amount\" but only \"as of the last day of the immediately preceding fiscal quarter,\" so the certificate is by definition not current. The internal mismatch leaves what must be certified uncertain.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "Paragraph 1.2(c) permits voluntary Loan Amount increases \"from time to time\" without limit of time, whereas paragraph 1.2(b) confines Noteholder-initiated increases to the Subscription Period defined in 2.1. Whether increases may be made after the Subscription Period closes is left open.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The roll-over right is conditioned on the Noteholder being a \"qualified investor at the time of the request,\" a term the Agreement never defines (paragraph 4.1(d) instead uses \"accredited investor\"). The standard the Noteholder must meet is therefore indeterminate.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "The Floating Rate is reset quarterly \"in the sole discretion of the Company\" yet the floor is expressed as not less than eight percent \"on an annualized basis for such calendar year\" — it is unclear whether 8% is a floor for each quarter or an annual average that a low quarter could be offset against. The reference to \"such calendar year\" also has no antecedent in a quarterly rate-setting sentence.",
+          "type": 1,
+          "prob": 0.44
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The Noteholder's prepayment right is subject to condition (C), the Company's determination \"in its sole and absolute discretion\" that prepayment will not adversely affect its \"obligations or liquidity,\" a standard with no measurable content. A court could be asked whether the right is illusory or subject to a good-faith limit.",
+          "type": 1,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The subparagraph turns on \"ERISA Plan Noteholders\" and on \"the Holding Period,\" neither of which is a defined term — paragraph 1.4(a)(ii)(A) defines only the \"Minimum Holding Period.\" The class of Noteholders eligible for discretionary prepayment and the period waived are both left uncertain.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "The pro rata payment rule is made \"[s]ubject to the provisions of paragraphs 1.4(a)-(b),\" which allow the Company to prepay any one or more Notes at any time in its discretion. The exception may swallow the rule, and a court would have to decide what the pro rata promise still guarantees.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "The proviso protects a Noteholder only against an amendment with \"discriminatory application\" to his Note, a phrase the Agreement never defines and which does not say whether uniform amendments that hurt some holders more than others qualify. The word \"discriminatory\" carries more than one reasonable meaning here.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "The extension power is granted \"in order to allow for an orderly liquidation of Portfolio Loans,\" leaving it unclear whether that purpose is a condition a court can police or mere recital, and \"orderly liquidation\" has no benchmark. A Noteholder could contest an extension made for other reasons.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "\"The Company may, but is not obligated to, re-issue Notes ... and then only upon the condition that the original Note is returned\" is grammatically tangled: the condition attaches to a purely permissive act, so it is unclear whether return of the original is a precondition to transfer or merely to re-issuance. The sentence also leaves unresolved what evidences the debt if the Company declines to re-issue.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The representation refers to \"any affiliated company\" of the Purchaser, a phrase that does not track the defined term \"Affiliate\" in paragraph 5.1(a) and has no stated test of affiliation. Whose services are covered is therefore uncertain.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The Subscription Period ends \"the last business day of the sixth full fiscal quarter following the fiscal quarter of the Initial Closing,\" a formula whose start and count are ambiguous where the Initial Closing itself may be moved to \"such other time as may be designated by the Company.\" The end date on which paragraph 1.2(b) depends cannot be computed with confidence.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "This paragraph requires a subscription agreement \"in the proposed Loan Amount\" while paragraph 1.1 and paragraph 2.2(d) call the same figure the \"Note Subscription Amount.\" The two defined terms are used interchangeably for what may be different numbers once the Company accepts a lesser amount.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The \"Pre-Qualification Period\" is defined only inside a negative covenant (\"the period of time prior to the Closing in which a Note is issued\"), so its commencement — deposit, delivery of subscription, or acceptance — is never fixed. That matters because interest and fees for that period are allocated by reference to it.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "The Note's issuance date is \"the date of the next Closing,\" but paragraph 2.1 says only that the Company \"expects\" to hold closings quarterly and that \"there is no assurance that there shall be any additional closings.\" Read together, an accepted subscriber's funds could sit in the Closing Account with no Note and no date certain.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "The refund obligation is measured by funds \"exceeding the Note Subscription Amount approved by the Company,\" whereas paragraph 2.2(a) speaks of the Company approving a \"Loan Amount.\" Which approved figure sets the refund is not stated.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "This paragraph identifies the Schedule of Purchasers as \"SCHEDULE A,\" but the preamble, paragraph 1.1 and the list of Schedules and Exhibits refer only to a \"Schedule of Purchasers\" with no Schedule A. The mis-citation leaves the operative record of Noteholders and amounts uncertain.",
+          "type": 1,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "The promise that repayment \"shall be secured\" by a security interest in the Company's assets cannot be read alone against paragraph 5.3(a), which lets the Manager grant liens senior to the Lien and subordinate or restrict the Noteholders' remedies. What security the Noteholders actually receive is determinable only by reading the two together.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "The subordination clause speaks of \"[t]he lien on the Fund's assets,\" but \"Fund\" is nowhere defined in this Agreement, which uses \"Company\" throughout. The defined term \"Lien\" is thus anchored to an undefined referent.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "Payment must be \"in readily available funds by personal check drawn on a U.S. bank,\" which is internally contradictory since a personal check is not readily available funds. Whether the deadline runs from receipt of the check or its clearance is left open.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "The roll-over is effective the first day of the fiscal quarter after acceptance, whereas paragraph 1.2(d) contemplates adding accrued interest to the Loan Amount \"as it becomes due and payable.\" The two dates need not coincide, leaving a gap in which interest neither compounds nor is paid.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "The Company is a Delaware limited liability company but the representation is of \"requisite corporate power,\" a concept that does not correspond to an LLC's powers under its operating agreement. The scope of what is being warranted is therefore uncertain.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "The representation is made \"as of the Effective Date,\" a date the preamble leaves blank, and again uses \"corporate power\" for a limited liability company. Both make the moment and the content of the warranty indeterminate.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "The representation covers \"the Series of Notes to be issued in such closing,\" but \"Series of Notes\" is never a defined term and \"such closing\" has no antecedent within this paragraph. What instruments are warranted enforceable is left to construction.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "The paragraph says required consents and filings \"will be effective at the Initial Closing or Additional Closing,\" which states a future condition rather than representing that they have been or will be obtained. Whether it is a representation at all, and who bears the risk of a missing filing, is unclear.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "The no-default representation is carved back for violations \"that would not have a material adverse effect on the Company,\" a phrase the Agreement never defines or bounds. The carve-out could be read to hollow out the representation entirely.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "The exemption representation is expressed in the present and future (\"are and will be exempt\") for Notes issued at closings that have not yet occurred, and is conditioned on the accuracy of every Purchaser's Section 4 representations. Its scope as an assurance to any individual Purchaser is uncertain.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "After enumerating specific permitted activities (owning, operating and selling foreclosed property, purchase and sale of Portfolio Loans, co-investment and co-lending), the paragraph adds the open-ended catch-all \"such other related activities ... as the Manager deems reasonably necessary or appropriate\" and \"any and all actions permitted in the Operating Agreement.\" Whether an activity such as unsecured lending to an affiliated fund falls within the enumerated purpose or the catch-all is precisely the kind of general-versus-specific question a court must resolve.",
+          "type": 1,
+          "prob": 0.45
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "Paragraph 3.8 confines the proceeds \"solely for the operations of its business,\" while paragraph 5.2 has the Purchasers consent to use of the proceeds \"for any purpose not prohibited by the Operating Agreement.\" The two cannot both be given full effect, and which controls a challenged use of proceeds is squarely in issue.",
+          "type": 2,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "Subparagraph (d) requires an \"accredited investor\" representation \"or, if the Purchaser is not able to make such representation,\" only sophistication, while paragraph 1.2(d) and Section 7 speak of \"qualified investors.\" The Agreement thus uses two different and undefined eligibility standards for the same holders.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "This covenant obliges the Purchaser to take further action \"as the Company may reasonably require,\" whereas paragraph 8.2 obliges the same person to sign whatever is \"necessary or expedient\" and \"appropriate in the judgment of the Manager.\" Two different standards govern the same duty to cooperate.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "The disclaimer that the Company and Manager \"owe no fiduciary or similar duties\" sits against the affirmative arm's-length and conflict-limiting obligations the Manager assumes in paragraphs 5.7(e)(i), 5.8 and 6.1(c). Whether those obligations survive, and are enforceable by Noteholders, as the disclaimer purports to strip all \"similar duties,\" requires reading the instrument as a whole.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [
+        {
+          "issue": "The proviso says \"Affiliate\" shall not include any Noteholder, yet paragraph 5.8 expressly regulates \"Noteholders who are also Affiliates of the Manager or Servicer.\" The definition and that paragraph cannot both be given effect as written.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "\"Private Client\" reaches \"any investor or client or their Affiliates for whom the Manager or its Affiliates provides loan or real estate brokerage, investment or lending services,\" with no limit of time, materiality or relationship. Because paragraph 5.7(b)(iv) exempts Private Clients from the affiliated-sale restrictions, the breadth of this term is consequential and contestable.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "The definition sweeps in any fund \"sponsored, promoted, owned or managed now or in the future by the Manager or its Affiliates,\" naming R.E. Loans, LLC, and the closing paragraph of 5.7(e) then excludes loans to such funds from the Related Party Loan limits. Read together, the definition removes the very transactions the related-party protections appear aimed at.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "The consent to use proceeds \"for any purpose not prohibited by the Operating Agreement\" cannot be squared with paragraph 3.8's covenant to use proceeds \"solely for the operations of its business.\" It also imports limits from an instrument the Purchasers are not party to and which may be amended from time to time.",
+          "type": 2,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [
+        {
+          "issue": "The paragraph says the Purchasers \"expressly agree to the provisions of paragraphs 5.2(a)-(f),\" but paragraph 5.2 has no subparagraphs; the intended reference is plainly to 5.3(a)-(f). The mis-citation leaves the scope of the consent to be corrected by construction.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The Manager's authority is said to run \"pursuant to the terms of the Operating Agreement and the Act,\" but \"Act\" is defined in paragraph 3.6 as the Securities Act of 1933, which cannot be what is meant here (evidently the Delaware LLC Act). The defined term is used in two irreconcilable senses.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "The authority to incur Company Borrowings, grant senior liens, subordinate the Lien and agree to standstills is expressed with only open-ended limits — \"may include, but are not limited to,\" \"by way of example and not of limitation,\" and terms \"as the Manager may deem commercially reasonable.\" The only constraint is self-judging, so what, if anything, the Noteholders' security is protected against is a question of construction.",
+          "type": 1,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [
+        {
+          "issue": "This paragraph lets the Company transact with the Manager, Servicer, Sponsored Investment Funds, Private Clients and Affiliates \"on such terms and conditions as the Manager, in its sole discretion, determines,\" while paragraph 5.7 imposes specific pricing and underwriting conditions on those very transactions. Whether the \"except to the extent prohibited by this Agreement\" clause fully preserves 5.7 is contestable.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "Co-Lending Activities may be entered \"on such terms and conditions as the Manager, in its sole discretion, determines,\" yet paragraph 5.8 requires that any Co-Lending Activity involving a Noteholder be no less advantageous than an arm's-length transaction and paragraph 6.1(f) imposes a structuring covenant. The sole-discretion grant and those constraints must be reconciled.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "Foreclosed property may be sold to the Manager, Servicer or their Affiliates \"on such terms and conditions as the Manager, in its sole discretion, determines,\" while paragraph 5.7(b) subjects precisely those sales to marketing, pricing and commission conditions. The two provisions pull in opposite directions on the same transaction.",
+          "type": 2,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [
+        {
+          "issue": "Portfolio Loans may be bought or sold from or to affiliated persons \"in [the Manager's] sole discretion,\" but paragraphs 5.7(c) and 5.7(d) impose mandatory conditions on those same purchases and sales. Which governs a challenged loan sale is a whole-instrument question.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": "The cap on Loan Services compensation is set by reference to fees \"payable pursuant to paragraphs 5.4(b)-(f),\" but paragraph 5.4 makes those fees payable to the Manager (or its designee), not to the Servicer. The two provisions do not line up on who is paid what, leaving the cap's operation unclear.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": "Subparagraph (d) measures Default Interest by what \"exceeds the regular state interest rate payable to the Company under the Portfolio Loan\" — \"state\" is a garbled term (evidently \"stated\") with no defined meaning. The amount of Default Interest payable to the Manager cannot be computed from the words used.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [
+        {
+          "issue": "This paragraph makes the Company bear \"all costs, fees, and expenses incurred ... by or on behalf of the Company, the Manager or their Affiliates,\" whereas the Private Offering Memorandum's compensation table states that \"[t]he Manager will bear the operating, legal and administrative expenses of the Company\" as Manager Expenses. The two allocations of the same expenses cannot both stand.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "The sentence defines \"Permitted Expenses\" as \"[t]he foregoing expenses and indemnifications,\" although no indemnification appears in the foregoing text (it first appears in 5.5(c)), and the defined term is then used nowhere else in the Agreement. The reach of the defined term is left to be reconstructed.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [
+        {
+          "issue": "The indemnity runs to \"the members, officers, employees, and consultants of the Company,\" but the proviso excludes only conduct constituting willful misconduct or gross negligence \"in performing or in failing to perform the Manager's duties.\" The carve-out does not fit the class indemnified, so whether non-Manager indemnitees are subject to any exclusion is unclear.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "The first sentence is a single, unpunctuated chain (\"with respect to an entity in which the Company has a debt or equity interest or is providing financing ... or with respect to which the Company is providing services on behalf of any pooled investment vehicle\") so that which payments the Manager may keep cannot be read off the words. The syntax leaves the scope of the Company's disclaimer of interest ambiguous.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "The Loan Origination Fee is left \"in an amount determined on a case-by-case basis,\" with no cap, benchmark or reasonableness standard, even though paragraph 5.6 makes it the Manager's property. The size of a permissible fee is therefore unconstrained by the text.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [
+        {
+          "issue": "The condition requires \"commercially reasonable efforts to sell any property ... at a fair price on the open market for at least ninety (90) days,\" with neither \"commercially reasonable efforts\" nor \"fair price\" defined or measured against anything. Whether the marketing condition was met is left wholly to argument.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [
+        {
+          "issue": "The price must be \"no higher than the independently appraised value\" and at the same time \"no lower than the total amount of the Company's 'investment' in the property,\" two limits that are impossible to satisfy whenever the Company's investment exceeds appraised value. The clause therefore may permit no sale at all, or must be construed to prefer one limit.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The Private Offering Memorandum states that the Manager will set a price for a defaulted loan or foreclosed property \"not less than\" the independently appraised value, the opposite of this clause's ceiling at appraised value. A Noteholder could argue the offering document controls the parties' understanding of the same affiliated-sale protection.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "\"[N]either the Manager, the Servicer, nor any of its Affiliates\" leaves the antecedent of \"its\" ambiguous as between the Manager and the Servicer. Which affiliates are barred from a commission is therefore uncertain.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [
+        {
+          "issue": "This clause disapplies the whole of the affiliated-sale protections in 5.7(b)(i)-(iii) whenever the buyer is a Sponsored Investment Fund or Private Client, categories defined so broadly in 5.1(b)-(c) that they cover most affiliated purchasers. Whether anything is left of 5.7(b)(i)-(iii) is a question of reading the paragraph as a whole.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "The condition reads \"the borrower shall not be default under the loan,\" omitting \"in,\" and \"default\" is neither defined nor qualified by materiality or grace period. Whether a technical or non-monetary default disqualifies a purchase cannot be answered from the text.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": "The price cap is the unpaid balance of \"principal, accrued interest and other charges owing thereunder,\" whereas the Private Offering Memorandum states the purchase price \"will not exceed the par value of the note or its fair market value, whichever is lower.\" The Agreement permits purchases at prices the offering document said would not be paid.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c061"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [
+        {
+          "issue": "The test is \"the loan underwriting criteria customarily applied by the Company with respect to loans made to or purchased from unrelated third parties,\" a standard that has no content for a newly formed company with no lending history. What criteria a court would apply is undetermined.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c062"
+    },
+    {
+      "clause_id": "c063",
+      "issues": [
+        {
+          "issue": "The test is \"net sales proceeds,\" a term not defined and not tied to any statement of what costs may be netted out. The floor for an affiliated sale is therefore uncertain.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c063"
+    },
+    {
+      "clause_id": "c064",
+      "issues": [
+        {
+          "issue": "A \"Related Party Loan\" exists only where \"the borrower is an Affiliate,\" but paragraph 5.1(a)'s definition of Affiliate expressly excludes any Noteholder and any limited partner or non-voting member of a Sponsored Investment Fund. Loans to those persons escape the related-party conditions altogether, which is only visible on reading the two together.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c064"
+    },
+    {
+      "clause_id": "c065",
+      "issues": [
+        {
+          "issue": "The cap is twenty percent \"of the Loan Portfolio\" — defined in 5.4(a) as outstanding Portfolio Loan principal — while the Private Offering Memorandum states the cap as 20% of \"total Company assets.\" The two measures give different limits on the same related-party exposure.",
+          "type": 2,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c065"
+    },
+    {
+      "clause_id": "c066",
+      "issues": [
+        {
+          "issue": "The Manager's take-out obligation is triggered by \"any material event of default by the borrower ... continuing for ninety (90) consecutive days,\" with \"material\" undefined and no time fixed for the purchase to occur. Both the trigger and the deadline would have to be supplied by construction.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c066"
+    },
+    {
+      "clause_id": "c067",
+      "issues": [
+        {
+          "issue": "This paragraph removes from \"Related Party Loan\" any loan whose borrower or co-borrower is a Sponsored Investment Fund or Private Client, and any Company Borrowing in which an Affiliate is co-borrower or guarantor, thereby exempting from 5.7(e)'s conditions the affiliated lending most likely to occur (5.1(c) names R.E. Loans, LLC). Whether the exclusion leaves 5.7(e)(i)-(iii) any operation is the central whole-instrument question.",
+          "type": 2,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c067"
+    },
+    {
+      "clause_id": "c068",
+      "issues": [
+        {
+          "issue": "Advances need only be \"on terms no less favorable to the Company than terms negotiated in an arm's length transaction,\" with no comparator, market or rate identified. The condition supplies no measurable standard for testing an affiliate advance.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c068"
+    },
+    {
+      "clause_id": "c069",
+      "issues": [
+        {
+          "issue": "Liens securing Advances must be subordinate both to Company Borrowings and to \"the Lien securing the Notes,\" yet paragraph 5.3(a) permits Company Borrowing liens senior to the Lien and the closing paragraph of 5.7(e) contemplates an Affiliate as co-borrower on a Company Borrowing. Where an Affiliate lends as part of a Company Borrowing the ranking directed here cannot be given effect.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c069"
+    },
+    {
+      "clause_id": "c070",
+      "issues": [
+        {
+          "issue": "The standard is that \"the terms and risk to the Company shall be no less advantageous\" than an arm's-length transaction \"in the same geographical market with comparable property as security\" — comparing \"risk\" across hypothetical transactions has no workable measure. Whether a Noteholder loan satisfied the paragraph is therefore open-ended.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c070"
+    },
+    {
+      "clause_id": "c071",
+      "issues": [
+        {
+          "issue": "The closing words — \"no provision of this Agreement shall be deemed to prohibit any such person from conducting such other businesses or activities\" — sit against the express restrictions on affiliated dealings in paragraph 5.7 and the covenants in 6.1 and 6.2. Read literally, 5.9 would override those limits whenever the Manager or an Affiliate acts for its own account.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c071"
+    },
+    {
+      "clause_id": "c072",
+      "issues": [
+        {
+          "issue": "Covenant (g) reads \"To make any mortgage loan, if as of the closing of such loan, aggregate principal of Portfolio Loans secured by real property located outside the United States ... exceeds twenty percent (20%)\" — the negative is missing, so the covenant as written obliges the Company to do the very thing the 20% cap was meant to forbid. The omission inverts the clause's meaning.",
+          "type": 1,
+          "prob": 0.48
+        },
+        {
+          "issue": "Covenant (b) requires all payments to be made ratably among outstanding Notes, but is expressly \"[s]ubject to its discretion to prepay all or a portion of certain Notes as provided in paragraph 1.4,\" which permits selective prepayment of particular Notes at any time. How much of the ratable-payment promise survives paragraph 1.4 is contestable.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c072"
+    },
+    {
+      "clause_id": "c073",
+      "issues": [
+        {
+          "issue": "Subparagraph (b) forbids any \"Lien (as defined in the Security Agreement)\" on the Collateral, while paragraph 2.3(b) defines \"Lien\" as the Noteholders' own security interest. The same capitalized term carries two conflicting definitions in the same instrument.",
+          "type": 2,
+          "prob": 0.27
+        },
+        {
+          "issue": "Subparagraph (c) bars paying salaries or bonuses in any month in which a \"Portfolio Management Fee\" is payable, but paragraph 5.4(a) defines that fee as the \"Management Fee.\" The prohibition is keyed to a term the Agreement does not define.",
+          "type": 1,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c073"
+    },
+    {
+      "clause_id": "c074",
+      "issues": [
+        {
+          "issue": "The covenant bars amendments that \"materially and adversely effect[] the economic interests of the Noteholders,\" a phrase left undefined and doubly uncertain because Noteholders hold only fixed-rate debt whose \"economic interests\" in an operating agreement are indirect. Which amendments cross the line cannot be told from the text.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c074"
+    },
+    {
+      "clause_id": "c075",
+      "issues": [
+        {
+          "issue": "Transfers are permitted only \"to qualified investors,\" a term used here and in paragraph 1.2(d) but never defined, and which does not match the \"accredited investor\" standard of paragraph 4.1(d). Who may take a Note is therefore indeterminate.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c075"
+    },
+    {
+      "clause_id": "c076",
+      "issues": [
+        {
+          "issue": "The power of attorney lets the Manager execute and file \"[t]his Agreement, the Security Agreement, and any amendments or cancellation thereof\" in each Noteholder's name, which cannot be squared with paragraph 10.5's requirement that modifications be approved by a Majority in Interest of Noteholders, or with paragraph 1.5's consent requirement for amendments to Notes. Whether the Manager may amend or cancel the very documents those paragraphs protect is a direct conflict.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c076"
+    },
+    {
+      "clause_id": "c077",
+      "issues": [
+        {
+          "issue": "It is ambiguous whether \"for the sole purpose of enabling the Manager to execute, acknowledge and file any instrument necessary to effect such transfer\" limits the entire irrevocable grant or only its survival after an assignment. The reach of an irrevocable power of attorney turns on that reading.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c077"
+    },
+    {
+      "clause_id": "c078",
+      "issues": [
+        {
+          "issue": "The covenant compels execution of \"any and all certificates, documents and other writings which may be necessary or expedient,\" as judged \"in the judgment of the Manager,\" with no subject-matter limit. \"Expedient\" sets no boundary on what a Purchaser can be required to sign.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c078"
+    },
+    {
+      "clause_id": "c079",
+      "issues": [
+        {
+          "issue": "\"The Manager will appoint a non-Affiliated collateral agent\" fixes no deadline, no consequence of non-appointment, and no compensation terms, while making the agent's acts \"binding on the Noteholders\" and giving its costs priority over payment to them. Whether and when the obligation is enforceable, and what happens to Noteholder remedies before appointment, are open.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c079"
+    },
+    {
+      "clause_id": "c080",
+      "issues": [
+        {
+          "issue": "The Collateral Agent may consent to subordination and standstill agreements \"on terms required by Manager,\" which cannot be squared with paragraph 9(a)'s statement that the Collateral Agent is appointed \"to collectively represent the Noteholders.\" An agent bound to the Manager's terms cannot simultaneously represent the holders whose security is being subordinated.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c080"
+    },
+    {
+      "clause_id": "c081",
+      "issues": [
+        {
+          "issue": "The consent threshold here is a \"Majority in Interest of Noteholders\" computed by excluding Notes held by Affiliates of the Company, Manager or Servicer, whereas paragraph 6.2 defines \"Majority in Interest\" by reference to all outstanding Notes with no such exclusion. The same defined term is given two different computations.",
+          "type": 2,
+          "prob": 0.23
+        }
+      ],
+      "dataset_clause_id": "c081"
+    },
+    {
+      "clause_id": "c082",
+      "issues": [
+        {
+          "issue": "The Agreement is said to bind and benefit \"the respective successors and assigns of the parties,\" although Section 7 makes the Notes non-negotiable and voids any assignment without the Company's consent. Whether a Purchaser has assigns at all is a question created by reading the two provisions together.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c082"
+    },
+    {
+      "clause_id": "c083",
+      "issues": [
+        {
+          "issue": "Delaware law is chosen \"as applied to agreements among Delaware residents,\" yet paragraph 10.8(d) measures Company Counsel's conduct by \"the California Rules of Professional Conduct\" and the Manager, Servicer and counsel are California actors. Which law governs the conflict-waiver provisions is left unresolved.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c083"
+    },
+    {
+      "clause_id": "c084",
+      "issues": [],
+      "dataset_clause_id": "c084"
+    },
+    {
+      "clause_id": "c085",
+      "issues": [
+        {
+          "issue": "The clause prescribes methods and effective dates for notices but the Agreement nowhere supplies addresses, e-mail addresses or facsimile numbers for the Company or the Purchasers. Where a notice must be sent for the deeming rules to operate is not stated.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c085"
+    },
+    {
+      "clause_id": "c086",
+      "issues": [
+        {
+          "issue": "Paragraph 10.5 requires the Company and a Majority in Interest of Noteholders to approve any modification effective \"with respect to all Purchasers,\" while paragraph 1.5 lets holders of more than fifty percent of unpaid principal amend or waive \"[a]ny term or provision of the Notes\" with the Company's consent. Because the Notes' terms are also terms of this Agreement, the two amendment mechanisms overlap and may conflict.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c086"
+    },
+    {
+      "clause_id": "c087",
+      "issues": [
+        {
+          "issue": "This paragraph preserves each Noteholder's cumulative remedies \"either under this Agreement, or by law or otherwise,\" while Section 9(a) commits the exercise of rights in the Collateral to a Collateral Agent whose actions \"shall be binding on the Noteholders\" and paragraph 5.3(a) permits standstill terms restricting those remedies. Whether an individual Noteholder may act alone is a whole-instrument question.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c087"
+    },
+    {
+      "clause_id": "c088",
+      "issues": [
+        {
+          "issue": "The integration clause names only this Agreement, its Exhibits, the Subscription Agreement, the Security Agreement and the Notes, omitting the private placement memorandum that paragraph 4.1(b) says each Purchaser received and relied on, and the Operating Agreement whose definitions the preamble incorporates. Whether representations in those documents bind the parties is directly in issue.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c088"
+    },
+    {
+      "clause_id": "c089",
+      "issues": [
+        {
+          "issue": "For paragraphs 10.8 and 10.9 \"Noteholder\" is expanded to include \"its principals, employees, agents or Affiliates,\" while paragraph 1.1 defines a Noteholder as the record owner of an outstanding Note and paragraph 5.1(a) excludes Noteholders from \"Affiliate.\" Who is bound by the conflict waivers depends on reconciling these definitions.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c089"
+    },
+    {
+      "clause_id": "c090",
+      "issues": [
+        {
+          "issue": "This paragraph states that Company Counsel \"is not representing, and will not represent, the Noteholders\" in connection with the Transactions, while paragraph 10.9(a) consents to Counsel's representation of Noteholders in matters \"of a similar nature to the Transactions\" and 10.9(b) contemplates simultaneous representation of a Noteholder holding an Other Noteholder Portfolio Interest. The two cannot both be taken at face value.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c090"
+    },
+    {
+      "clause_id": "c091",
+      "issues": [
+        {
+          "issue": "The Noteholder pays its own counsel \"except as otherwise specifically provided by this Agreement,\" but no provision of the Agreement provides otherwise. The exception has no identified referent, leaving room to argue one exists elsewhere in the transaction documents.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c091"
+    },
+    {
+      "clause_id": "c092",
+      "issues": [
+        {
+          "issue": "The Noteholder \"waives any present conflict of interest,\" a waiver limited by the word \"present\" even though the consent is directed at future disputes \"between such persons or entities or the Company and one (1) or more Noteholders.\" Whether conflicts arising later are waived is left ambiguous.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c092"
+    },
+    {
+      "clause_id": "c093",
+      "issues": [
+        {
+          "issue": "The consent covers representation of Noteholders \"in matters unrelated to the Transactions, including ... matters of a similar nature to the Transactions,\" which is internally contradictory: a matter of a similar nature is described as unrelated. The scope of the informed consent is uncertain on its face.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c093"
+    },
+    {
+      "clause_id": "c094",
+      "issues": [
+        {
+          "issue": "The paragraph turns on an interest in a \"Portfolio Loan Transaction,\" a capitalized term the Agreement never defines — paragraph 10.8(a) defines \"Portfolio Transactions\" and paragraph 3.7 uses \"Portfolio Loans.\" What interests count as \"Other Noteholder Portfolio Interests\" is therefore unclear.",
+          "type": 1,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c094"
+    },
+    {
+      "clause_id": "c095",
+      "issues": [
+        {
+          "issue": "Clause (ii) has each party acknowledge that in the Transactions Greenberg Traurig \"has represented solely the Company and/or the Sponsored Investment Fund or their respective Affiliates, and not any Noteholder,\" which sits against paragraph 10.9(b)'s consent to simultaneous representation of the Company and a Noteholder in transactions involving Other Noteholder Portfolio Interests. The acknowledgment and the consent describe incompatible states of affairs.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c095"
+    },
+    {
+      "clause_id": "c096",
+      "issues": [
+        {
+          "issue": "The legend permits sale, transfer, assignment or hypothecation whenever there is an effective registration statement or a satisfactory opinion of counsel, whereas Section 7 forbids any assignment or transfer without the Company's prior written consent, \"which consent may be withheld in its sole and absolute discretion.\" A holder satisfying the legend's conditions could still be blocked by Section 7.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c096"
+    }
+  ]
+}

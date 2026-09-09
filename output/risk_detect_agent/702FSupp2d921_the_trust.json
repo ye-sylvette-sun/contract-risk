@@ -1,0 +1,571 @@
+{
+  "contract_id": "702FSupp2d921_the_trust",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The execution date is left in an illegible/incomplete form (\"September _/3 %\", 1973\") and the party defined as trustee is rendered only as a garbled word (\"truatae\"), so the identity of the defined term and the date of the instrument must be reconstructed. A court could be asked to fix the date of the trust and confirm that \"The First National Bank of Sullivan County ... Trust Department\" is the entity meant by \"Trustee\" throughout.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "The written amount (\"Seventy-five and no/100 Dollars\") and the figure in parentheses (\"375.00\") do not agree, a mechanical error that changes the size of the initial corpus. A court would have to decide whether $75.00 or $375.00 was paid to the Trustee.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The bond's face amount is written as \"One Hundred and no/i00 Dollars ($100.09)\", the words and the numeral disagreeing, and the cash directed to be invested ($75 or $375 under I.A) does not match either. A court would have to construe what sum the Trustee was authorized to invest and in what denomination of bond.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The definition of \"Policies of Insurance\" is internally inconsistent — \"two (3) certificates\", the John Hancock policy attributed to a \"Tennessee Eastman Company\" group policy and the Metropolitan policy to Eastman Kodak, and both certificates given the identical number 819800. Because this defined term controls Articles I, II, III, IV and VI, a court would have to determine which policies actually fall within it.",
+          "type": 1,
+          "prob": 0.55
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "The assignment operates only on \"the said Policies of Insurance\" as defined in I.B, so its reach depends entirely on that misdescribed definition and does not on its face reach substitute or successor group coverage that the attached Absolute Assignment (c034) purports to capture. A court would have to decide whether coverage issued in substitution for the named policies passed to the Trustee under this clause.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "The reserved right to add is expressed in a mutilated sentence with words missing between \"from time [to time]\" and \"life which, when delivered to the Trustee\", leaving the class of addable property unstated. A court would have to supply what the Grantor reserved the right to add and on what terms it becomes trust property.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The vesting of \"all rights of absolute ownership\", including the power to surrender, cancel or convert the policies, cannot be squared with Article IV (c014), which says the Trustee \"shall be under no obligation or duty whatever except with respect to the safekeeping of the Policies of Insurance\". A court would have to decide whether the Trustee's ownership powers carry any correlative duty to preserve the coverage.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The clause makes the Trustee's receipts and releases \"binding and conclusive upon all persons interested in this trust\", which sits against Article XII (c031) making the Trustee answerable for its own bad faith or negligence. A court would have to decide whether beneficiaries are foreclosed by a trustee receipt from complaining of a negligent dealing with a policy.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "This clause incorporates the attached assignment documents \"as fully as if set out verbatim\", importing terms — including the New York choice of law in the Metropolitan assignment (c038) — that conflict with Article XI (c030) making the trust governed by Tennessee law. A court would have to decide which incorporated terms control the trust relationship.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "\"All other instruments reasonably required\" gives no standard for what the Grantor may be compelled to sign, and the relinquishment is expressly conditional (\"if any such rights and powers exist\"). A court would have to determine what, if anything, this clause actually transferred.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The clause disclaims any premium obligation but then imposes one — \"except that it shall apply any dividends received by it on the Policies of Insurance to the payment of premiums\" — which cannot be squared with Article IV (c014) stating the Trustee is under \"no obligation or duty whatever except with respect to the safekeeping\" of the policies. A court would have to decide whether the dividend-application duty survives Article IV.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "The sentence breaks off at \"it may accept the cash\" with the operative words (evidently \"cash surrender value\") missing before \"upon the forfeiture\", so the last remedy in the list is unstated. A court would have to reconstruct what the Trustee may accept and on what event.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "Proceeds of a forfeiture are to be \"distributed as hereinafter directed\", but Article VI (c019, c021) directs distribution only on the death of the Grantor's wife or the Grantor, giving no direction for a lifetime forfeiture. A court would have to decide when and to whom cash surrender proceeds received during the Grantor's life are payable.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "The blanket statement that the Trustee is \"under no obligation or duty whatever except with respect to the safekeeping\" of the policies cannot be squared with the affirmative duties imposed elsewhere — the dividend-application duty in Article III (c011) and the duties to invest, manage and pay income in Article VI.A (c019). A court would have to decide which duties the Trustee actually owes.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The duty to maintain or defend suits is conditioned on expenses being advanced or guaranteed \"in an amount and in a manner reasonably satisfactory to it\", an undefined standard resting on the Trustee's own satisfaction. A court would have to decide when a beneficiary's tender of expenses triggers the Trustee's duty to litigate.",
+          "type": 1,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The right to reimburse fees and costs \"out of any corpus or income of this trust\" is unqualified and collides with Article VI.A (c019), which directs the whole net income to the Grantor's wife for life. A court would have to decide whether the life beneficiary's income can be charged with litigation expenses benefiting remaindermen.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "\"Fair value\" is the only limit on the Trustee's purchase of assets from the Grantor's estate and is nowhere defined or tied to any method of valuation. A court would have to construe the term in a self-dealing transaction between the Trustee and the estate.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "The statement that the Trustee \"shall incur no liability\" for estate purchases or loans cannot be squared with Article XII (c031), which excepts the Trustee's own bad faith or negligence from its exculpation. A court would have to decide whether a negligent or bad-faith purchase from the estate is nevertheless immunized.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The life-income gift to Sarah Oneida Covington Scott carries an interlineated, partly illegible notation (\"Deceased July 1?, 19..\") added to the face of the instrument, whose effect is unstated. Because Article XIII (c033) makes the trust irrevocable and bars alteration or amendment, a court would have to decide whether the annotation has any operative effect on the dispositive scheme.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "The encroachment standard — \"the standard of living to which she has been accustomed during Grantor's life\", measured against \"any other income the Grantor's wife may have\" — supplies no ascertainable benchmark. A court would have to construe that standard and the scope of the Trustee's discretion to invade principal.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "The clause directs division into \"Two (2) equal parts, one of which shall be distributed to each of Grantor's children\" while in the same sentence including \"any later children born of Grantor's marriage\", so the fixed number of shares contradicts the open class of takers. A court would have to decide how the estate is divided if there are more than two children.",
+          "type": 1,
+          "prob": 0.47
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "The Trustee's power to \"fix values of property distributed in kind which shall be binding on the distributees\" is unqualified by any valuation standard, and sits against the Article XII (c031) exception preserving liability for negligence and bad faith. A court would have to decide whether a valuation binding on distributees is reviewable.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "Subparagraph (1) breaks off — \"To his then surviving lawful issue or adopted\" — with the noun and any per stirpes direction missing, and \"before becoming entitled to distribution hereunder\" fixes no ascertainable moment of entitlement. A court would have to supply the takers under (1) and decide when a child becomes \"entitled\".",
+          "type": 1,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "The clause holds a minor's share in trust \"until such beneficiary attains majority\", which is not the same term as the instrument's own definition of a minor as a person under eighteen in Article VII (c026), and it defers the outright distribution Article VI.B (c021) directs. A court would have to decide the age of termination and whether this section overrides the mandatory division on the wife's death.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "The facility-of-payment provision begins mid-sentence (\"...for the use of any beneficiary thereof who is a minor at the time of such payment\"), the subject and the payments it applies to having dropped out of the text. A court would have to reconstruct what payments the Trustee may discharge in this manner.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "The spendthrift protection is qualified at the outset by \"To the extent that such power may be lawfully limited by this instrument\", leaving the reach of the restraint to be settled by outside law rather than the text. A court would have to determine how far beneficial interests are in fact insulated from creditors and anticipation.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "The incorporation of statutory trust powers excludes \"Subparagraphs 1 through _ inclusive\" with the closing figure illegible or blank, so the scope of the powers actually granted cannot be determined from the instrument. A court would have to decide which statutory powers the Trustee holds.",
+          "type": 1,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "The successor trustee article stops mid-sentence at \"then the\", naming no successor and no appointment mechanism. A court would have to fill the gap and decide who may serve if the named bank resigns or is disqualified.",
+          "type": 1,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "The Tennessee governing-law clause cannot be squared with the New York choice-of-law clause in the Metropolitan absolute assignment (c038), which Article II (c009) incorporates into this Trust Agreement verbatim. A court would have to decide which law governs the assignment of the Metropolitan certificate.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "The exculpation, though badly garbled, excepts the Trustee's \"own bad faith or negligence\", which cannot be squared with Article V (c018) declaring that the Trustee \"shall incur no liability\" for purchases from or loans to the Grantor's estate. A court would have to decide which liability standard governs those transactions.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "The Grantor's relinquishment of \"all right to alter, amend, revoke [or] terminate\" sits against Article I.B (c006), in which the Grantor expressly reserves the right to add property to the trust from time to time, and against the interlineated notation on the face of Article VI.A (c019). A court would have to decide how far the irrevocability clause forecloses post-execution changes to the instrument.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "The absolute assignment reaches insurance \"provided now or at any time hereafter\" and under any group policy \"hereafter issued in substitution\", a scope wider than the two enumerated certificates that Article I.B (c004) makes the trust's \"Policies of Insurance\". A court would have to decide whether coverage substituted for the Metropolitan certificate is held on the trust's terms.",
+          "type": 2,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "Effectiveness is made conditional on execution of the Waivers and Consents \"set forth below\", but that block (c040) is itself incomplete on the face of the document, leaving the condition's satisfaction unverifiable. A court would have to decide whether the assignment ever became binding on Metropolitan and, if so, that it relates back to the assignor's signature date.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "The disclaimer of responsibility for \"the validity, effect and sufficiency of this assignment for any purpose whatsoever\" is unbounded and duplicates the assignee's own release (c042), leaving unclear whether the insurer disclaims even the effect of its own consent given in the Waivers and Consents (c040). A court would have to fix the scope of the disclaimer.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": "The sentence is mutilated — it joins \"Metropolitan shall not be responsible for the trustee's application\" to \"full discharge of Metropolitan's liability\" with the intervening words (the trustee's receipt operating as a discharge) missing from the page. A court would have to reconstruct what discharges Metropolitan on payment to the Trustee.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "This New York choice-of-law clause conflicts with Article XI of the Trust Agreement (c030), which fixes Tennessee as the situs and Tennessee law as governing \"in all respects\", the assignment having been incorporated into the trust by Article II (c009). A court would have to decide which state's law construes the assignment.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [
+        {
+          "issue": "The designation is rendered \"revocuby dosignates\", so it cannot be told whether the Trustee designated itself beneficiary revocably or irrevocably, and the class of beneficiaries designated is garbled. A court would have to construe who was designated and whether the designation could later be changed.",
+          "type": 1,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "The Waivers and Consents sentence is missing its operative verb — the Group Policyholder and Metropolitan \"hereby [waive] with respect to each above-stated Group Policy and Certificate, any provision therein against assignment\" — so what was waived is not stated. Because c035 makes the assignment binding only if these waivers are executed, a court would have to determine the content and fact of the waiver.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "The assignee accepts that the companies \"will not otherwise communicate to me with respect to my rights under the policies, including amendments thereto\", which sits against the later undertaking (c047) that billings \"and any other written communications\" will be mailed to the assignee's stated address. A court would have to decide what notice, if any, the Trustee-assignee was entitled to receive.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "The release runs to \"any responsibility for the sufficiency, validity, or effect of such assignment for any purpose\", wording broad enough on its face to cover the companies' own failure to give the communications promised in the same instrument (c041, c047). A court would have to fix the outer boundary of \"any responsibility ... for any purpose\".",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [
+        {
+          "issue": "The lapse is triggered by failure to make contributory payments \"as now or may be required in the future by Eastman\", an obligation whose content Eastman alone may define at any time. A court would have to decide what the assignee was required to pay and when coverage lapsed.",
+          "type": 1,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "Eastman's statement that it \"will look to no one else other than me\" — the Trustee-assignee — for contributory premiums cannot be squared with Article III of the Trust Agreement (c011), under which the Trustee \"may, but shall not be obliged, to pay premiums\" and bears no liability if they go unpaid. A court would have to decide whether the Trustee undertook a premium obligation the trust instrument disclaims.",
+          "type": 2,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [
+        {
+          "issue": "The consent to schedules and methods \"that may in the sole discretion of Eastman be changed from time to time\" is open-ended and displaces the specific quarterly-in-advance, 30-day terms described in the next sentence (c046). A court would have to decide what billing terms actually bound the assignee at any given time.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "The description of \"Eastman's present payment schedules and methods of billing\" is expressly provisional and is subject to unilateral change under c045, so it creates no fixed billing obligation. A court would have to decide whether the assignee could rely on quarterly advance billing with 30 days to pay.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "The undertaking to mail billings \"and any other written communications\" to the bank's Kingsport address sits against c041, in which the assignee accepts that the companies will not otherwise communicate with it about its rights. A court would have to decide whether notice of lapse or amendment had to be mailed to the Trustee.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [
+        {
+          "issue": "The reservation of Eastman's and Metropolitan's \"right to amend or terminate any of the Policies\" cannot be squared with the absolute assignment (c034) transferring to the Trustee all \"incidents of ownership\" and with Article II of the trust (c007) vesting the Trustee with the rights of absolute owner. A court would have to decide whose act controls when the group coverage is amended or ended.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "c048"
+    }
+  ]
+}

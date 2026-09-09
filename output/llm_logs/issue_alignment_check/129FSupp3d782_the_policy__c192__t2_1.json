@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "dae85f393ded477d1eef2a070fdd5af8fe3159388188ffd10b616bbfa6616491",
+  "document_chars": 5720,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2908,
+    "input_tokens_details": {
+      "cache_write_tokens": 2905,
+      "cached_tokens": 0
+    },
+    "output_tokens": 514,
+    "output_tokens_details": {
+      "reasoning_tokens": 264
+    },
+    "total_tokens": 3422
+  },
+  "response": [
+    {
+      "id": "rs_0711bb490407847d006aa1d259772087d0b2eda9422950b5af",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodJhKRbjCgtWi9JoUWnen1m85lOEx9V68n2I_Hjjd5H1AXVDQEKqIWSTdFO8oPzGEuAbl6NAqle3OQdhGTDW5bD2h71rXUHUO4VFiVRuYgjo4ZFjHHVKqSdVjexNB6gMm_7kCb6FEM2BRg2PQ4BAxW7xdaBBAAAIGNf_QcGGZZyzqs5KIpDUBmloGcw0y6MfsFO5xb9GBg1anp4nukxG3BL7V5eGoanoA66hBaHITCkt7y1UM8fBx3l33qp0xH24rgEJSUXBF20GfMsHO325tKUxk7TUvx1ZECqwnbvIBW54aVsE4tkBJ2UGy6pypz6VnymjAauzyzXMOooXbF01GfTiYk3JKKIe3bxBFT1oxwUnvLhK4phNMWobEMN_0GoT-hDTDe28iBWyu5r22nF3PX4Y7qurouqmSONixm_iHDCISWkqB5qStnprHrA9X3fLoH0ZDa6eFU4uLf4NjhZ2Pq0n8FjF5lmc65dRie5_noogDL4Y7JRJmQwBDKFx0V0SwvJbIIG70r9ExIpzzLKKbk8rvU1vvqQU8vQwRkbOvjP7hrumvQke_iWxWRr6PGOBs5xjkrq8_JrQ5m5oxcXpFqQ6zKO2p4tfniXW6itjIheK6GlP0WUpLWl-jTK7strebUWT7b2ZPBFpFKGONHGm0ZX6sflvhzX0ul5ZjC6WhvyNHMxYN0sTga1S1B-Zm1yto9U5dVhzcoSJ8hZW14IrG0ecSDwjsQhE8Bst7UHMyCSbsKFt-dNu2Z2_Ya283m4t_Tt86T1_na4LT8ERMaTjo16HXmIpQi2zbBPpHe0QcYKxN9YwE-M10p7Pp39bNzstOCweWxUXJI9P2y1H3fwT5K5-bGUVpjm3WmjxhKaXJZJu3s-cfKyA58RBC78DrPvkdEllNyVmIXXP7Z_78uQBMn6cw3KYW5XNkR8XgjaJSKBjgOeTbYDYm5cuRSSpkEJGSH6PmIqwpTcs33tDn94ELzXb-eyTCsVyj6o-brPWP9gW5P4MpwwvHZYLfB3WzfOv6kTfCYGBY9Br8aXXF-QlOoYyENNe4x7dHuU3x2Rgj2zmba4Z55O2wi6tiY79AVNuqr7nE9KWzlcGkzTbmV_bfWnggH5h9-_-M_1-xwVtih2IVxLQ5hzWg6qbvugjiCBM9WEj-hGLA-jKTjuFElGfhZQHJ8EIgztu_LU0koktnW900iY3RuIq7f3FBYSZF1RS2i4XdYAr6hX8LFKfCi-qkVHqcBzYgUxl1QkjWUZPSLXxu94NUnEmJHeowJL8kgb8iinYQTqiJxBPUjIHlAWDKNUeZv2o1KejrczyEn-aFhIuddZjqdby9kju_GF-Qseuj5afEGpZ4M9L5CFecapN8x9QrWWWIsamqbVPz3S3wNceV5128w9gB3WA8tNebovxInS4fCTq-xumBPRYEYjOL0otNeks2rnNTRTP2ehi9xg9vM3vcHZH6KceqqEuiaBf-0RRY6V4BEt6soREWerpkuxL4idMyc9tm3Y0CdT0nzRT_CeyWm46Q4yngeJN82O-O7vOeLAKxdTqBuLyJParYmihXxorAXnNP1dHeHk6yPEjkm_djSlc9KEFinqilqtTDwZU5TS-w_ot75Vi2w0OqvSd88xufcGHlFFkp7oJ8mUj8ZSN0EgyOCgB1b198YTIenkGKEjkBspRXJe25WwmWuvwoRgde2BBbDTL9FoMMha1FYMsSpZcYpfYZMdRWkZtcD-aAtnQYfEemuOKdHTvsqYzl8PWaL-QbMm9_ezfNvSOiQQDgZbMIj_enQbAfVGGBovNlV8xUFDqrgAwJOZiCq52hmPVqMAIRtYZSc8CpExh5mIPi3xBt0gi6tE_lFsPXtuc2aWJZKDKQ7yoQj5a7cy5yb5ic7q0wJwcpQMk9LxpDyREV7DmGna6pkfUeKhrxI7xnvWHrxX_7eFV5qKn0beH-UzkMmJSESP5y2KPPLo5slM8Jti_6uD4yMk-sywfJrO_IwF0XctnF2l_HLQSuhPc5UQ9gAk3EhDKi9dRdSP55Y58KNVihwASh-p96ALFrqVkHr2tcK_eFcsg-2DkcoIIIEqcva0LDZCurD_QM2RsV59R6rTVN_-fkq95m2R_SR_UepHZHuUMLVrikMnusPdGqyO0QZGmED5IMKaTrqVIgZPsT6cxH_i7fowRj9fE2GZ8A6olT4mHc18nplAbeBK-9ZhQITFKjLbKVi1D26cFPuxwyb4pVVkryI86B0yERoi9Zn6Xj58wnlLId-NnmUOyX8tLygbhdfFBwCTRZbjiCbLL15vwLljD-IwVDTbxtE17-4QneaJyqlAGKW_NrsKZATvOudkaydGbvrXEhRMVGNbYnszMIYI0lTP1o62H5vOBx2rS1_VjzVAOXzZbXL_YWXyvD8beTigVdwX8Bgndqw5e2MRxG7qvOqiqu2Twq2i-xBl72BwAKS4P314bGEP3nZRWEA9D_Z6lPxgospCBVB8FkxGdqYsgtnuMAGEfZr4NLI_bvObK_HVvBWjvfdwRN3vkFjDQocJKc_l_z8vm2aghFcIIfsjv4YuN5VrczEalsk5azc6E958MNJ70i9UsMiWsgfkL6VFauwa__XPSPwzBoGvMZbphIGzLKR1JtFmcNDIUo3MVQgZJ7cFyZrr7Kaz_sVAfbIzIQkou6_AO9734newI_LozdRIz8JGkzhc9CBvdjOufRH3TUZWGZWRAtrFq8Uva_OE6YqRPge7GrRQ7RvF303JaIMxdws5FONglT6_OK8JicU6h8Y6Re6hLhSGjk4I701ffKzMtDCWgqAm3NK8qOTImHvsMo5cIoQ_WKQjQhVghdky4ULrUZcqA_LIg8Psg0BoAesbtfDYa1Bg=",
+      "status": null
+    },
+    {
+      "id": "msg_0711bb490407847d006aa1d25e6f9c87d0826b0056e4db0072",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"g1\",\"evidence\":\"The parties provide two possible interpretations of the interplay between the forum-selection clause and the Endorsement. Rembrandt’s interpretation is that the Endorsement is meant as an amendment and thereby changes the Policy’s general jurisdiction and venue terms. (PI. Resp. at 1.) Illinois Union posits that the Endorsement merely conveys personal jurisdiction over it and has no impact on the forum-selection clause. (Def. Reply at 1.)\",\"determinable\":true,\"alignment\":0.95,\"reason\":\"Both identify the same conflict between the Endorsement’s promise to submit to any competent court and the Policy’s New York-exclusive forum clause. The candidate adds the parties’ competing constructions—personal-jurisdiction consent versus amendment—but addresses the precise defect proposed.\",\"words_at_issue\":\"The proposed issue concerns “submit to the jurisdiction of any court of competent jurisdiction” and its conflict with Section IX.I.’s “exclusive jurisdiction of the State of New York.” Candidate g1 concerns those same words and the same cross-provision conflict, asking whether the Endorsement merely grants personal jurisdiction or instead amends the New York-exclusive clause.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{"judgments": [
+ {"clause_id": "c201", "issues": []},
+ {"clause_id": "c202", "issues": []},
+ {"clause_id": "c203", "issues": [
+   {"issue": "The availability period ends September 30, 2013, yet Section 2.06(a) permits Letters of Credit to be issued to June 30, 2013 with expiries up to December 29, 2014, and Section 2.06(e) converts any later LC Disbursement automatically into a Term Loan. Term Loans can therefore arise after the availability period has lapsed and the commitments have terminated.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c204", "issues": [
+   {"issue": "The last sentence is broken — \"shall be set forth or in the Assignment and Assumption or Accession Agreement\" — leaving unclear whether some other place of record was intended. It also does not say which document controls if both exist for the same Lender.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c205", "issues": []},
+ {"clause_id": "c206", "issues": []},
+ {"clause_id": "c207", "issues": []},
+ {"clause_id": "c208", "issues": [
+   {"issue": "The Term Loan Maturity Date is fixed at January 1, 2020, a date that can never be a Business Day under the Business Day definition, while Section 2.09 requires the final installment to be paid \"on the Term Loan Maturity Date.\" The date definition and the payment mechanics do not fit together.", "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c209", "issues": []},
+ {"clause_id": "c210", "issues": [
+   {"issue": "Total Commitment is fixed at US$250,000,000, increasable only by Accession Agreements, yet the Financial Closure definition requires Total Commitments to equal US$530,000,000 and the recitals describe term lending of that amount. The definition cannot deliver the aggregate the rest of the Agreement assumes.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c211", "issues": [
+   {"issue": "Clause (b) adds \"Short-Term Debt and Working Capital Bank Finance,\" using a term the Agreement never defines; the defined term is \"Working Capital Bank Financing.\" Since Short-Term Debt already subtracts Working Capital Bank Financing, the undefined addition also risks double counting.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c212", "issues": []},
+ {"clause_id": "c213", "issues": [
+   {"issue": "Limb (b) defines \"Transactions\" to include \"the completion and operations of the Project and any matters related thereto,\" a boundless category that then feeds Transaction Costs and the representations made with respect to the Transactions. What is \"related thereto\" cannot be delimited from the text.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c214", "issues": [
+   {"issue": "The definition restricts payments to amounts \"in the Unrestricted Account,\" a capitalized term that is used here and in the Net Debt and Permitted Project Change definitions but is never defined in the Agreement. The only permitted source of repayment is therefore an undefined account.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c215", "issues": []},
+ {"clause_id": "c216", "issues": [
+   {"issue": "The definition names a closed class — \"namely, the Export-Import Bank of India and the Central Bank of India\" — while also describing generically \"the providers of supplier financing to EPIL.\" Whether another upstream financier can ever become an Upstream Supplier Financing Creditor is left to an expressio unius argument.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c217", "issues": [
+   {"issue": "The closing condition is ungrammatical — \"require a mandatory prepayment ... on the same terms as the required by the Loans\" — and does not say whether it qualifies only limb (b)(iii) or the whole fraction. The composition of the denominator, and hence the creditor's share, turns on that unresolved reading.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c218", "issues": []},
+ {"clause_id": "c219", "issues": []},
+ {"clause_id": "c220", "issues": []},
+ {"clause_id": "c221", "issues": []},
+ {"clause_id": "c222", "issues": []},
+ {"clause_id": "c223", "issues": [
+   {"issue": "Section 1.03 requires all terms \"of an accounting or financial nature\" to be construed in accordance with GAAP, yet defined financial terms such as Cash Available and Adjusted Tangible Net Worth are built on non-GAAP concepts like \"standalone net profits after taxation\" and \"bad or doubtful expenses not provided for.\" Which controls when the defined formula departs from GAAP is not addressed.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c224", "issues": [
+   {"issue": "Section 2.01 says the undrawn Term Loan Commitment \"shall lapse automatically at the end of the Term Loan Availability Period\" and that no Term Loan may exceed a Lender's Unused Commitment, but Section 2.06(e) converts LC Disbursements into Term Loans automatically whenever they occur, including after that date. The lapse rule and the automatic conversion cannot both operate.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c225", "issues": []},
+ {"clause_id": "c226", "issues": []},
+ {"clause_id": "c227", "issues": []},
+ {"clause_id": "c228", "issues": [
+   {"issue": "Tranche B availability extends to \"any remaining amount of the Initial Lender Tranche A Total Commitment to the extent not previously borrowed,\" whereas Section 2.02(a)(ii) makes that same remaining Tranche A amount available only on satisfaction of the Section 4.02 conditions. The Tranche A remainder is subject to two different condition sets.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c229", "issues": []},
+ {"clause_id": "c230", "issues": [
+   {"issue": "The proviso that \"no proceeds shall be used to fund or maintain the DSRA\" cannot be squared with Section 2.06(j), under which amounts paid on an Event of Default are deposited into the DSRA \"as supplemental to the Required Amount,\" and with the Section 5.15 obligation to fund the DSRA. The permitted-use restriction and the funding obligations pull in opposite directions.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c231", "issues": [
+   {"issue": "The Borrower's discretion to request non-ratable Loans is made \"subject to Section 2.03(c),\" which deals only with Eurodollar Rate Borrowings and funding through branches, not with allocation or size; the minimum-amount and number limits sit in Section 2.03(d). The internal cross-reference appears to point to the wrong subsection.", "type": 1, "prob": 0.17}
+ ]},
+ {"clause_id": "c232", "issues": []},
+ {"clause_id": "c233", "issues": [
+   {"issue": "\"Each Borrowing shall be comprised entirely of Eurodollar Rate Borrowings\" defines a Borrowing by reference to Borrowings, and under the Borrowing definition a Borrowing may be an LC Exposure, which bears no LIBO-based Interest Period. The sentence cannot be applied to every Borrowing as defined.", "type": 1, "prob": 0.17}
+ ]},
+ {"clause_id": "c234", "issues": [
+   {"issue": "\"In not more than fifteen (15) Borrowings\" does not say whether the cap runs per Lender, per tranche or across the whole facility, or what happens to a request that would exceed it. The minimum-amount carve-out for the balance of an Unused Commitment compounds the uncertainty.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c235", "issues": [
+   {"issue": "The section provides that if a Eurodollar Rate Borrowing is unavailable under Section 2.14 \"the Lenders may make the requested Borrowing ... but they shall have no obligation to do so,\" which cannot be squared with Section 2.01 and Section 2.03(b), under which the Lenders' several Term Loan Commitments are binding obligations to fund. A market-disruption event would convert a committed facility into a discretionary one.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c236", "issues": [
+   {"issue": "This section requires the Escrow Agent to make funds \"available to the Borrower for the purposes specified by the Borrower in its applicable Borrowing Request,\" while the Escrow Account definition says amounts in that account are \"to be applied in accordance with the Cash Sweep Mechanism as set forth in the Collateral Account Agreement.\" The two release regimes for the same account are not reconciled.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c237", "issues": [
+   {"issue": "The section makes issuance subject to \"the applicable limitations on the Initial Lender Tranche A Commitment set forth in Section 2.02(a),\" a term that is not defined; the defined terms are Initial Lender Tranche A and Initial Lender Tranche A Total Commitment. Which limit constrains letter of credit issuance is therefore uncertain.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c238", "issues": [
+   {"issue": "The documentary requirements are enumerated in five specific alternatives and then closed with \"(vi) such other documents as may be specified by the Issuing Bank from time to time.\" That open catch-all after a specific list leaves the Borrower's condition to satisfaction indeterminate.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c239", "issues": [
+   {"issue": "This expiration rule (the earlier of 36 months from issuance and four years from the date of the Agreement, i.e. December 29, 2014) sits against the Letter of Credit definition, which allows issuance up to June 30, 2013 and negotiation \"not later than December 30, 2014.\" A letter of credit negotiated on the last permitted day would already have expired.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c240", "issues": [
+   {"issue": "Automatic conversion of every LC Disbursement into a Term Loan takes no account of the limit in Section 2.01 that a Term Loan arising by automatic conversion \"shall not exceed the Unused Commitment of such Lender,\" nor of the lapse of commitments at the end of the Term Loan Availability Period. The conversion mechanic and the commitment limits conflict.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c241", "issues": [
+   {"issue": "The section preserves the Issuing Bank's liability for direct damages \"caused by such Issuing Bank's failure to exercise care when determining whether drafts and other documents presented ... comply,\" and then deems care to have been exercised absent gross negligence, wilful misconduct or fraud. The saving proviso and the deeming sentence largely cancel each other.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c242", "issues": [
+   {"issue": "This paragraph gives the Issuing Bank \"the final word\" on documentary compliance and bars the Borrower from questioning it absent gross negligence, wilful misconduct or fraud, which cannot be squared with Section 2.06(f)'s preservation of liability for a failure to exercise care in examining documents. The two paragraphs set different standards for the same decision.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c243", "issues": []},
+ {"clause_id": "c244", "issues": [
+   {"issue": "The Borrower \"grants the Lenders a security interest in all funds and investments in such account,\" whereas under the Security Agreement and Security Documents definitions all Liens are granted to the Security Agent for the ratable benefit of the holders of the Secured Obligations. Who holds the cash collateral security, and for whom, is inconsistent across the instrument.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c245", "issues": [
+   {"issue": "The subsection enumerates \"(i) ... and (iii)\" with no clause (ii), reproducing the same broken enumeration as the Interest Period definition. It is unclear whether a provision was dropped from the election mechanics.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c246", "issues": []},
+ {"clause_id": "c247", "issues": []},
+ {"clause_id": "c248", "issues": []},
+ {"clause_id": "c249", "issues": [
+   {"issue": "The subsection lets Lenders cancel Unused Commitments \"upon prior written notice to the Borrower ... immediately upon such notice ... for any reason,\" and then says that except where cancellation is due to credit deterioration the Lenders \"shall endeavor to provide prior notice.\" The mandatory prior-notice requirement and the best-efforts notice sentence contradict each other.", "type": 1, "prob": 0.32}
+ ]},
+ {"clause_id": "c250", "issues": [
+   {"issue": "The Borrower's right to reduce commitments arises only \"if the Project costs shall have been reduced below one billion ninety seven million Dollars (US$1,097,000,000)\" — a figure that appears only as a current estimate in the recitals. Whether that recital estimate fixes the operative benchmark, and who measures the reduction, is left open.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c251", "issues": [
+   {"issue": "The proviso that payments falling on a non-Business Day be made \"on the next preceding Business Day\" cannot be squared with the further proviso that the final installment \"shall be paid on the Term Loan Maturity Date,\" which is January 1, 2020 and can never be a Business Day. The two provisos give different dates for the last payment.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c252", "issues": []}
+]}

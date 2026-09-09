@@ -1,0 +1,723 @@
+{
+  "contract_id": "527BR351_liquidating_trust_agreement",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061",
+    "c062": "c062"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The opening sentence has no operative verb — \"This Liquidating Trust Agreement ..., by and among [parties], executed in connection with the Chapter 11 Plan ..., which provides for the establishment of a liquidating trust\" is a fragment that never states what the parties do. A court asked what this paragraph itself effects would have to supply the missing predicate.",
+          "type": 1,
+          "prob": 0.18
+        },
+        {
+          "issue": "All capitalized terms not defined here take their meaning from the Plan \"as the same may be amended,\" a document not attached, so the content of terms such as \"Effective Date\" and \"Reserved Claims\" can shift after execution. Read with Section 9.8, which makes the Plan control over this instrument, the definitional referent is indeterminate.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "This recital states the Trust is created \"pursuant to, and to effectuate, the Plan\" and could be argued to control the operative scope of the Trustee's authority in Sections 3.2 and 3.5, which are stated to be exercisable \"except as set forth in this Trust Agreement or the Plan.\" A party could invoke the recital to narrow operative powers to those the Plan expressly confers.",
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The recital says the Trust is created \"on behalf of, and for the benefit of, the holders of allowed Class 2 claims\" only, which cannot be squared with Section 3.6, which directs the Trustee to make distributions to holders of Class 1 claims from the proceeds of the assets securing those claims. A court would have to decide whether the recital's exclusive statement of beneficiaries controls the operative distribution provision.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The recital fixes the \"sole purpose\" as liquidation for the benefit of allowed Class 2 claim holders, which conflicts with Section 3.6's mandate that the Trustee also distribute to holders of Class 1 claims and with Section 1.1(b)'s assumption of unpaid Plan obligations. A court would have to decide whether the recital's \"sole purpose\" limits those operative provisions.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "The \"Register\" is defined and its maintenance is required only in this recital; no operative provision obliges the Trustee to create or maintain it, yet Sections 2.1, 4.7(a), 6.2 and 9.6 all depend on it. A court would have to decide whether a recital can be the source of that operative duty.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "\"[E]ach and every asset of the estate\" is not defined or itemized, leaving open whether it reaches causes of action that belong to individual noteholders rather than to the estate, and whether it captures claims not yet identified at the Effective Date. The scope of the transferred \"Trust Assets\" is the term on which the Trustee's standing to sue turns.",
+          "type": 1,
+          "prob": 0.35
+        },
+        {
+          "issue": "The transfer is stated to be \"free and clear of any lien, claim or interest in such property of any other person or entity,\" which cannot be squared with Section 3.6, which presupposes surviving liens by directing distributions to Class 1 claim holders \"from the proceeds of sales or other disposition of the assets securing said claims.\" It is also in tension with Section 1.1(b), which takes the same assets subject to listed liabilities.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "This subsection transfers the Trust Assets \"subject to the following liabilities,\" which contradicts Section 1.1(a)'s transfer of the same assets \"free and clear of any lien, claim or interest.\" A court would have to reconcile the two sentences of the same section.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "This subsection says the Trustee \"shall be entitled to transfer to the Trust any and all assets of the Debtor,\" although Section 1.1(a) already effects the transfer of every estate asset automatically upon the Effective Date. Whether any asset remains to be transferred, and in whose name, cannot be answered from either provision alone.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The section directs that Trust Assets be treated for tax purposes by \"the holders of allowed Class 3 claims,\" while every other reference in the same sentence and in the rest of the instrument (Recitals, Sections 1.1, 2.1, 3.6) is to Class 2. The reference to Class 3 is on its face a scrivener's error that changes who is bound by the tax treatment.",
+          "type": 1,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "The mandatory custodian requirement is defined only by an open-ended illustration — \"a custodian (such as a qualified bank or a company that is a member of a national securities exchange)\" — with no definition of \"qualified\" and no stated class into which other custodians must fall. Whether a given depository satisfies this sentence cannot be determined from the words used.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "This section fixes the record holders as \"the holders of allowed Class 2 claims,\" but Section 2.2 permits Liquidating Trust Interests to be transferred on written notice, after which the record holder is no longer a Class 2 claimant. Section 3.6's direction to distribute \"to holders of Class 2 claims\" then cannot be squared with the Register-based definition.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The general prohibition on \"any steps, directly or indirectly, to facilitate the development of a secondary market\" sits against four enumerated specifics, all of which are public-market activities, leaving unclear whether ordinary transfer assistance falls inside the ban. Whether the list confines the general words or merely illustrates them is a live general-versus-specific question.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "This section grants the Trustee \"exclusive authority over administration of the Liquidating Trust,\" which cannot be squared with Section 3.3(e), under which the Trustee is supervised by, reports to, and must obtain the approval of the Committee for dispositions of assets worth $5,000 or more. A court would have to decide which of the two governs administration.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The duty to act \"in an expeditious but orderly manner\" and \"not unduly prolong the duration of the Liquidating Trust\" states two standards that pull against each other with no benchmark or deadline to measure either. Nothing in the section says how the tension between speed and orderliness is resolved.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "Subsection (l) authorizes the Trustee to \"pay any fees and reimburse the of expenses of any professionals or employees employed by PCCC\" — \"PCCC\" is an entity that appears nowhere else in the instrument or the definitions, and the phrase \"reimburse the of expenses\" is grammatically incomplete. Both the payee and the obligation are unascertainable from the text.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "The enumerated powers, in particular (x) to \"sell, auction, lease, rent, encumber or transfer any Trust Assets ... as the Trustee shall deem advisable\" and (dd) to retain professionals \"without approval of the Bankruptcy Court,\" cannot be squared with Section 3.3(e), which conditions any disposition of an asset worth $5,000 or more on Committee approval. The introductory \"subject to the foregoing\" does not name Section 3.3 as a limit.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The subsection contains a misspelling that reverses part of its sense (\"shall not take actions snconsistent with the Plan\") and a garbled qualifier — \"shall not take actions inconsistent with the orderly liquidation of the Trust Assets and distributions to beneficiaries as are required by applicable law\" leaves it unclear whether \"as are required by applicable law\" modifies the distributions or the whole prohibition. The reach of the restriction turns on that mechanical defect.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "The flat ban on commingling Trust Assets with \"the property of any other person\" sits uneasily with Section 1.4, which permits registration of Trust Assets in the name of a nominee and requires use of a custodian, and with Section 4.6, which permits demand deposits at any bank the Trustee deems appropriate. Whether pooled custodial or deposit arrangements breach this subsection is not answerable from it alone.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "This subsection forbids any action that would subject the Trust to registration under the Investment Company Act of 1940, while Section 6.1 expressly contemplates that the Trustee may determine the Trust \"is required to comply with the registration and reporting or other requirements of ... the Investment Company Act of 1940\" and must then act to comply. The two provisions cannot both be given effect if registration becomes required.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "This subsection limits the Trustee's compensation and expense reimbursement \"to the extent, and in the manner provided in, the Plan,\" which cannot be squared with Section 4.7(a), which fixes hourly rates and lets the Trustee raise them on ten days' notice without Bankruptcy Court approval. Which of the two sets the compensation ceiling would have to be construed.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "The Committee-approval requirement for any disposition of an asset with gross fair market value of $5,000 or more is immediately followed by a carve-out permitting \"any other action with respect to such assets ... without obtaining approval of the Committee,\" and \"any other action\" is not bounded. The exception is capable of being read to swallow the rule — for example a settlement or compromise of a claim worth far more than $5,000.",
+          "type": 1,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "The two-pronged quorum definition overlaps at exactly three members: prong (1) makes three members a quorum while prong (2) provides that if membership \"is reduced to three or fewer\" all members must be present. With three members the provision gives two inconsistent answers.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "This subsection sends every Trustee-Committee dispute to the Bankruptcy Court on five days' notice, but Section 9.4 gives the Bankruptcy Court exclusive jurisdiction only \"[f]or so long as the Chapter 11 Case may be pending.\" The two read together leave no forum specified for such a dispute after the case is closed.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "A holder's access right is qualified by three undefined standards — \"purposes reasonably related to such holder's interests,\" \"does not constitute an undue burden on the Trustee,\" and \"is not detrimental to the Liquidating Trust\" — with no measure and no stated decision-maker. Whether a particular request qualifies cannot be answered from the words used.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "This section lets the Trustee control and dispose of Trust Assets \"without prior or further authorization,\" which cannot be squared with Section 3.3(e), which requires Committee approval for any disposition of an asset worth $5,000 or more. Its opening carve-out refers only to the Trust Agreement and the Plan generally, not to that specific restriction.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "This section directs distributions to holders of Class 1 claims, which cannot be squared with the Recitals and Sections 1.1(a) and 2.1, which establish the Trust \"on behalf, and for the benefit, of holders of allowed Class 2 claims\" alone and make Class 2 claimants the only Liquidating Trust Interest holders. Whether Class 1 claimants have any enforceable right against this Trust turns on that conflict.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "The qualifying parenthetical is mispunctuated — \"(including the receipt by the Trustee of a private letter ruling if the Trustee so requests one, or the receipt of an adverse determination by the Internal Revenue Service) upon audit if not contested by the Trustee)\" — with an unmatched closing parenthesis that detaches \"upon audit if not contested.\" It cannot be told whether the audit condition qualifies the adverse determination or the whole grantor-trust filing duty.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "This section is numbered \"3.8,\" the same number already used by the immediately preceding \"Reporting by the Trustee\" section, so any cross-reference to Section 3.8 has two possible referents. The duplication is a mechanical numbering error that affects which text a reference picks up.",
+          "type": 1,
+          "prob": 0.22
+        },
+        {
+          "issue": "This section speaks of \"proceeds of borrowings, if any,\" but no provision of the instrument grants the Trustee power to borrow — Section 3.2's enumerated powers omit borrowing and Section 4.7(b) merely assumes borrowing \"in accordance with the terms of this Trust Agreement.\" Whether borrowing is authorized at all can only be answered by reading the whole instrument, which does not answer it.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "The exception — \"except that the Trustee may deal with the Trust Assets as permitted by herein\" — is both grammatically incomplete (\"as permitted by herein\") and capable of swallowing the fiduciary-capacity limitation that precedes it. What the Trustee may do outside a fiduciary capacity is left undetermined.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "This section imposes an affirmative duty to \"exercise reasonable business judgment in liquidating the Trust Assets,\" which cannot be squared with Section 4.3(a), which exculpates the Trustee from liability for every act or omission short of willful misconduct, gross negligence or fraud. A court would have to decide whether the reasonable-business-judgment duty is enforceable at all.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "The class of exculpated persons shifts inside a single sentence: the protected group is defined as agents or representatives \"of the Trustee,\" but the acts protected are those taken in the capacity of an agent or representative \"of the Liquidating Trust.\" Whether a professional retained by the Trust but not by the Trustee is covered turns on that mismatch.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "This subsection gives the Trustee unqualified protection for acts taken \"in accordance with advice or opinions rendered\" by counsel, with no carve-out, while Section 4.3(a) preserves liability for willful misconduct, gross negligence and fraud. Whether reliance on advice immunizes conduct that Section 4.3(a) excepts is the question the two leave open.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "The indemnity covers \"all liabilities, losses, damages, claims, costs and expenses ... arising out of or due to their actions or omissions\" with no requirement that the acts be within the scope of the indemnitee's duties to the Trust. The only limit is the willful misconduct/gross negligence/fraud proviso, leaving the outer boundary of covered conduct unstated.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": "Advances and reimbursement are made available to \"the Trustee, the Committee, or members of the Committee,\" but the clawback obligation on an adverse determination is imposed only on \"the Trustee.\" By expressio unius the Committee and its members keep advanced funds even if their conduct was fraudulent, a gap on the face of the subsection.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [
+        {
+          "issue": "This subsection limits the Trustee's indemnity to amounts \"not covered by insurance, if any,\" which cannot be squared with Section 4.3(d)'s obligation to \"periodically advance or otherwise reimburse on demand\" the Trustee's expenses or with Section 4.3(c)'s unqualified indemnity. Whether advancement must await a coverage determination is left unresolved.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "The statement that \"any opinion of counsel shall be full and complete authorization and protection in respect to any action taken\" gives absolute protection, which cannot be squared with Section 4.3(a)'s preservation of liability for willful misconduct, gross negligence and fraud. A court would have to decide whether counsel's opinion defeats the Section 4.3(a) exceptions.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "Third parties may rely on the Trustee's authority \"[i]n the absence of actual knowledge to the contrary\" and need not inquire, which cannot be squared with Section 3.3(e)'s requirement of Committee approval for dispositions of assets worth $5,000 or more. Whether an unapproved sale binds the Trust depends on reconciling the two.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "The second sentence is self-contradictory as drafted: the permissible investments \"shall be limited to include only those investments, or shall be expanded to include any additional investments, as the case may be,\" without saying who decides which branch applies or when. The enumerated list in (a)-(c) may accordingly be either narrowed or enlarged by an unspecified mechanism.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [
+        {
+          "issue": "This subsection sets fixed hourly rates and lets the Trustee raise them once a year on ten days' notice \"without approval of the Bankruptcy Court,\" which cannot be squared with Section 3.3(d), under which compensation and reimbursement \"shall be limited to the extent, and in the manner provided in, the Plan.\" Which instrument caps the Trustee's fees would have to be construed.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "The subsection is conditioned on the Trustee being \"unable to borrow funds ... in accordance with the terms of this Trust Agreement,\" but no provision of the instrument authorizes borrowing — Section 3.2's enumerated powers do not include it and Section 3.3(a) restricts activities to orderly liquidation. The condition presupposes a power the whole instrument never grants.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "The temporal clause is garbled: the duty applies \"while serving as Trustee under this Trust Agreement following the termination of this Trust Agreement or following the earlier of his or her removal or resignation,\" which describes a period that cannot exist. Whether confidentiality survives termination, removal or resignation turns entirely on repairing that sentence.",
+          "type": 1,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "The closing relative clause has no clear antecedent — \"unless the Bankruptcy Court otherwise determines or consents to an earlier effective date, which shall be the date that appointment of a successor Trustee becomes effective\" leaves it unclear whether \"which\" refers to the earlier date, the proposed effective date, or the resignation generally. The date the Trustee's service ends is the thing left uncertain.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [
+        {
+          "issue": "The section defines \"Cause\" in detail for removal by the Bankruptcy Court and then, in the next sentence, permits the Committee to remove the Trustee \"without cause,\" which renders the Cause definition largely inoperative. Which removal route governs, and whether the Cause standard constrains the Committee at all, is unresolved on the face of the provision.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": "The acceptance instrument must be \"in form satisfactory to the successor Trustee\" — the very person executing it — so the requirement imposes no check by the Bankruptcy Court, the Committee or the outgoing Trustee. On its face the condition is circular and gives the successor sole control over its own qualification.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": "This section binds the Agreement to and for the benefit of the Trustee's \"heirs, legal and personal representatives, successors or assigns,\" which cannot be squared with Sections 5.1 and 5.2, under which only the Bankruptcy Court or the Committee may appoint a successor Trustee. Whether the office can pass to an heir or assignee is the tension left open.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [
+        {
+          "issue": "This section directs the Trustee to comply with, or qualify for exemption from, the Investment Company Act of 1940 if compliance is required, while Section 3.3(c) flatly forbids the Trust or the Trustee from taking \"any action that would result in the Liquidating Trust becoming subject to registration\" under that Act. The two provisions give contradictory instructions in the same event.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "The annual holder statement is due only \"[p]romptly following the end of each calendar year,\" a term that fixes no deadline and is measured against nothing else in the instrument. When the Trustee is in breach of the reporting duty cannot be determined from the words used.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [
+        {
+          "issue": "The redistribution sentence turns on Trust Assets that are \"not duly claimed,\" but no provision of the Agreement establishes any claiming procedure, deadline or notice against which \"duly\" could be measured. What forfeits a holder's distribution is therefore unstated.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "The amendment power runs to \"[a]ny substantive provision,\" a term left undefined and drawing a line between substantive and other provisions that appears nowhere else in the instrument. Which provisions the Trustee and Committee may alter — and who may alter the rest — cannot be determined from the section.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "This section states that the Agreement \"may be amended to comply with such federal income tax laws, which amendments may apply retroactively,\" naming no actor and no approval requirement, which cannot be squared with Section 8.1's requirement that amendments be made by the Trustee only upon Committee approval. Whether a tax-driven retroactive amendment needs Committee consent is left open.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [
+        {
+          "issue": "The section vests in the Trust \"[a]ny attorney-client privilege, work-product privilege or other privilege or immunity to which the estate or the Debtor are entitled\" without distinguishing the Debtor's own privileges in matters unrelated to the Trust Assets. The reach of \"the Debtor\" as a privilege holder after the Effective Date is unstated.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [
+        {
+          "issue": "The Debtor \"shall relinquish to the Trustee all of its books and records\" without qualification, exception or right to retain copies, in contrast to the reasonableness qualifiers governing the further-assurances sentence immediately before it. Whether records unrelated to the Trust Assets, or needed for the Debtor's own tax and corporate obligations, are covered is unaddressed.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "The section applies California law \"and federal bankruptcy law to the extent applicable\" without saying which governs a conflict, and confers exclusive Bankruptcy Court jurisdiction only \"[f]or so long as the Chapter 11 Case may be pending,\" naming no forum thereafter. Both the governing-law hierarchy and the post-closing forum are left unresolved.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "The notice provision gives addresses only for the Trustee and for holders of Interests, omitting the Debtor and the Committee, both of which are parties to the Agreement and entitled to notices under Sections 3.3(f) and 9.3. By expressio unius there is no prescribed method of giving them notice.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [],
+      "dataset_clause_id": "c061"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [
+        {
+          "issue": "This section incorporates the Plan and makes the Plan control over any inconsistent provision, which cannot be squared with Section 8.1's grant of power to the Trustee and Committee to amend or waive substantive provisions of this Agreement, since any amendment departing from the Plan would be void on adoption. The Plan is also amendable under the Preamble, so the controlling text can change after execution.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c062"
+    }
+  ]
+}

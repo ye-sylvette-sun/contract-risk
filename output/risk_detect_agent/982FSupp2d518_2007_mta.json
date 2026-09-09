@@ -1,0 +1,329 @@
+{
+  "contract_id": "982FSupp2d518_2007_mta",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "\"Recipient\" is defined collectively to mean both Dr. June personally and the Trustees of the University of Pennsylvania, so it is unclear whether each obligation binds the individual scientist, the institution, or both jointly. The signature block, which calls separately for \"Recipient Scientist\" and an \"Institution Official,\" makes the collective definition harder still to apply.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "\"[W]e ask that you and your Institute agree to the following terms and conditions\" is precatory in form, leaving open whether the letter states a request or imposes binding conditions. It also frames agreement as something to occur \"[b]efore receiving the materials,\" raising a question whether assent is a condition precedent to any transfer.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The Materials are identified as the \"anti-CD19-138 chimeric receptor construct,\" a garbled designation that does not match the \"anti-CD19-BB-ζ chimeric T-cell receptor construct\" named in the parties' 2003 Collaboration and Materials Transfer Agreement. The identity of what was actually transferred under this 2007 letter is therefore uncertain on the face of the definition.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "The definition sweeps in \"any progeny, portions, unmodified derivatives and any accompanying know-how or data\" but stops at \"unmodified\" derivatives, while Section 5 reaches products \"derived from the Materials\" or that \"could not have been produced but for\" them. Whether the lentiviral vector clone Recipient was authorized by Section 3 to make is itself a \"Material\" cannot be answered from the definition alone.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The acknowledgment that the Materials \"are or may be the subject of patent(s), pending patent application(s) or other proprietary right\" is expressly contingent, so it fixes nothing about what St. Jude actually owns. \"[O]ther proprietary right\" is an unbounded catch-all following two specific intellectual-property categories.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "The carve-out \"[e]xcept as provided in this Agreement\" presupposes rights granted elsewhere in the letter, but no provision grants any express licence; the only candidate is Section 3's permitted-purpose language. Whether Section 3 is a licence or merely a use restriction can only be resolved by reading the two together.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "\"[S]ole responsibility for any and all receipt, storage, handling, disposition, transfer and uses of the Materials in compliance with all applicable Federal, State and local laws\" mixes an allocation of responsibility with a compliance covenant, and it is unclear whether Recipient promises legal compliance or merely bears the risk of non-compliance. The trailing \"including, but not limited to\" clause about human-subjects laws does not bound the obligation.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The \"sole purpose\" is stated as producing a GMP lentiviral vector clone \"in quantities sufficient to complete a Phase I clinical trial to be conducted at the Recipient's clinical facilities,\" leaving it ambiguous whether the permitted use is only manufacture of the clone or extends to conducting the trial itself, and what quantity is \"sufficient.\" Neither \"Phase I clinical trial\" nor the point at which the purpose is exhausted is defined.",
+          "type": 1,
+          "prob": 0.55
+        },
+        {
+          "issue": "The single-purpose limitation cannot easily be squared with Section 5, which expressly contemplates that Recipient may file a patent application or commercialize a product derived from the Materials. If use is confined to the Phase I purpose, Section 5's commercialization machinery has nothing to operate on.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "\"[A]nother institution\" is undefined, so it is unclear whether it captures only academic institutions or also contract manufacturers, corporate collaborators and affiliated hospitals. The prohibition on Materials being \"taken or sent\" also leaves open whether it reaches derivative constructs made by Recipient.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "\"[P]rovided to a commercial entity\" is not defined and does not say whether licensing rights in, or supplying data or derived constructs to, a company counts as providing the Materials. The parenthetical excepting \"obligations imposed upon grantee institutions of the U.S. government\" invites an expressio unius reading that all other third-party licensing obligations are caught.",
+          "type": 1,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "Section 4 requires only that Recipient furnish St. Jude with \"a copy of any publication\" after the fact, while Section 5 requires submission of any proposed publication thirty days in advance for review. Read together it is unclear whether Section 4 states the whole publication obligation for ordinary results and Section 5 a narrower one, or whether both apply to every paper.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The acknowledgment of St. Jude's ownership of \"the Materials and any progeny thereof\" sits against the later sentence in the same section that \"[o]wnership shall follow inventorship according to US patent law.\" Which rule governs inventions and constructs generated by Recipient from the Materials cannot be determined without reconciling the two.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "The obligation to \"contact St. Jude to determine ownership interests, if any\" prescribes no timing, no procedure and no consequence if the parties disagree, so it is unclear whether it is an enforceable covenant or an agreement to agree. \"[C]ommercializes a product\" and \"could not have been produced but for the use of the Materials\" are likewise undefined triggers.",
+          "type": 1,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "\"Ownership shall follow inventorship according to US patent law\" cannot be squared with the opening sentence of the same Section 5, in which Recipient acknowledges St. Jude's ownership of the Materials and all progeny. A construct invented by Recipient's personnel would be Recipient's under this sentence and St. Jude's under the first.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "\"[T]he results of such research using the Materials\" has no clear antecedent: \"such research\" may refer only to the patent- or commercialization-related work described in the immediately preceding sentences, or to all research using the Materials. The scope of the thirty-day pre-publication submission duty turns entirely on that referent.",
+          "type": 1,
+          "prob": 0.55
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The Materials are disclaimed as \"experimental in nature\" and given with no warranty of fitness, yet Section 3 authorizes their use to make a GMP clinical vector for dosing patients in a Phase I trial. Whether the blanket disclaimer survives that expressly contemplated clinical application is a question only the two provisions together raise.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The exclusion of \"indirect, incidental or consequential damages\" runs in St. Jude's favour only and says nothing about Recipient, while Section 7 makes Recipient liable to indemnify \"any and all claims ... of any nature whatsoever.\" Whether the exclusion caps anything Recipient owes under Section 7 is left open.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "The indemnity covers claims \"arising out of or related to Recipient's acceptance, use and disposal of the Materials\" with no carve-out for St. Jude's own negligence or willful misconduct, unlike the parties' 2003 agreement, which contained one. \"[R]elated to\" is also unbounded, leaving unclear whether claims about St. Jude's own conduct fall inside it.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The aggregate limit is written as \"Three Million ($1,000,000) dollars,\" so the words and the figures state different amounts. The required aggregate coverage cannot be determined from the provision as written.",
+          "type": 1,
+          "prob": 0.44
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "Termination is available if Recipient \"breaches any term,\" with no materiality threshold, and the agreement fixes no term or expiration date at all. Whether any breach however trivial triggers the right, and how long the MTA otherwise runs, are both left open.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "The duty to \"immediately cease use\" and \"return all Materials and progeny\" cannot readily be squared with Section 3, which authorizes Recipient to consume the Materials in manufacturing a GMP lentiviral vector and to dose patients in a Phase I trial. What must be returned once the Materials have been incorporated into a clinical product is unresolved between the two provisions.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "\"Sections 5, 5 and 7 shall survive\" names section 5 twice, and the letter in fact contains two separate paragraphs numbered 5 and no paragraph 6, so which provisions survive termination is indeterminate. The reference to \"expiration\" also has no counterpart, since the MTA states no term.",
+          "type": 1,
+          "prob": 0.45
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "The no-oral-modification clause is unaccompanied by any integration or superseder clause, so it does not say whether this 2007 letter modifies, replaces or coexists with the parties' 2003 Collaboration and Materials Transfer Agreement covering the same construct. Whether the earlier agreement's terms were amended \"in writing signed by an authorized representative of each party\" by this letter is left to construction.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "The letter requires return of a copy \"signed by you and by an authorized official of your institution,\" leaving open whether both signatures are a condition of formation and what the effect is if one is missing or undated. The execution block, which provides separate lines for the Recipient Scientist and the Institution Official, makes that question live.",
+          "type": 1,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "\"The Materials will be forwarded to you upon receipt of the signed letter\" makes delivery turn on the signature required by the preceding execution paragraph, so if the Materials were shipped before or without a fully executed copy it is unclear whether the terms attach at all. Whether this sentence states a condition precedent or merely describes logistics is the question.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c028"
+    }
+  ]
+}

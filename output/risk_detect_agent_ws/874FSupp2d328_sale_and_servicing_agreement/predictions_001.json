@@ -1,0 +1,106 @@
+{"judgments": [
+  {"clause_id": "c001",
+   "issues": [
+     {"issue": "The parties clause names only six signatories, yet the Agreement imposes operative duties on the Servicer, the Custodian, the Class S Certificateholder and the Note Insurer (e.g. Sections 2.01(b), 2.02(a) and 4.06(a)), none of whom executes it. Whether those non-signatories are bound or benefited can only be resolved by reading the parties clause against those sections.", "type": 2, "prob": 0.24},
+     {"issue": "The Issuing Entity is identified here as \"GPMF Trust 2007-HE1\" while the cover page of the same instrument and the Mortgage Loan Purchase Agreement name \"Greenpoint Mortgage Funding Trust 2007-HE1\". The identity of the entity taking title to the HELOCs turns on reconciling the two names.", "type": 2, "prob": 0.13}
+   ]},
+  {"clause_id": "c002", "issues": []},
+  {"clause_id": "c003",
+   "issues": [
+     {"issue": "Section 1.01 incorporates Appendix A to the Indenture \"except as otherwise expressly provided herein or unless the context otherwise requires\", giving no rule for a term (such as Repurchase Price or Recordation Event) that is defined or used differently in the two documents. \"Unless the context otherwise requires\" supplies no boundary for deciding which definition governs.", "type": 1, "prob": 0.22}
+   ]},
+  {"clause_id": "c004", "issues": []},
+  {"clause_id": "c005", "issues": []},
+  {"clause_id": "c006", "issues": []},
+  {"clause_id": "c007", "issues": []},
+  {"clause_id": "c008",
+   "issues": [
+     {"issue": "The floating-reference rule makes every referenced agreement mean that agreement \"as from time to time amended, modified or supplemented\", so amendments to the Servicing Agreement or the Mortgage Loan Purchase Agreement would change obligations under this Agreement automatically. Whether that displaces the consent protections for amendments is left open by the clause's own words.", "type": 1, "prob": 0.16}
+   ]},
+  {"clause_id": "c009",
+   "issues": [
+     {"issue": "Section 2.01(a) recites that the conveyance is made \"in consideration of the Issuing Entity's delivery of the proceeds from the sale of the Notes and the Certificates to the Sponsor\", while the Preliminary Statement recites that the Depositor acquires the HELOCs from the Sponsor in consideration for its transfer of the Certificates and Note proceeds, and that the Depositor acquires the Notes and Certificates from the Issuing Entity. The two accounts of who gives consideration to whom cannot both be right.", "type": 2, "prob": 0.22},
+     {"issue": "The proviso that none of the Indenture Trustee, Securities Administrator, Master Servicer or Issuing Entity assumes or may fund Draws sits against the same sentence's statement that Draws are transferred to the Issuing Entity as part of the Trust Estate, and against Section 2.01(b), under which the Securities Administrator directs funds to reimburse Draw advances. Who bears the Draw-funding obligation must be construed from the two subsections together.", "type": 2, "prob": 0.26}
+   ]},
+  {"clause_id": "c010",
+   "issues": [
+     {"issue": "Section 2.01(b) requires additional balances to be funded first from \"collections of principal deposited in an account managed by the Servicer\", an account this Agreement nowhere defines or identifies among the Protected Account, the Collection Account and the Master Servicer Collection Account. \"The purchase price for any additional balance\" is likewise undefined.", "type": 1, "prob": 0.27},
+     {"issue": "The subsection makes the Class S Certificateholder the ultimate funder of Draws and binds it \"by accepting such Certificate\", although Section 2.01(a) provides that no transaction party assumes any obligation to fund Draws and the Class S Certificateholder is not a party to this Agreement. Whether an enforceable funding obligation exists must be read out of the two subsections together.", "type": 2, "prob": 0.24}
+   ]},
+  {"clause_id": "c011",
+   "issues": [
+     {"issue": "The subsection states only that \"it is not intended\" that any HELOC be a high-cost loan while adding that \"the Depositor so represents and recognizes\", leaving it ambiguous whether this is an enforceable representation or a mere statement of intention. Nothing in the subsection attaches a remedy to its breach.", "type": 1, "prob": 0.31},
+     {"issue": "Clause (v) incorporates the \"then current\" Standard & Poor's LEVELS Glossary while simultaneously fixing it as \"now Version 5.7 Revised, Appendix E attached as Exhibit 6 to the Mortgage Loan Purchase Agreement\". Whether the test is the version in force from time to time or the attached version is not resolved by the words used.", "type": 1, "prob": 0.24}
+   ]},
+  {"clause_id": "c012",
+   "issues": [
+     {"issue": "The delivery list mis-numbers its clauses, using \"(ii)\" twice (the blank Assignment of Mortgage and the recorded Mortgage), so the enumerated items (iv), (v) and (vii) relied on elsewhere do not correspond to the intended documents. Section 2.02(a) compounds this by citing \"subsections (b)(iv), (v) and (vii) of Section 2.01\", a subsection (b) that contains no such clauses.", "type": 1, "prob": 0.26},
+     {"issue": "Subsection (d) requires the title insurance policy under (d)(v) to be delivered \"on or before the Closing Date\", while Section 2.01(e)(ii) contemplates delivery of a copy up to 180 days after the Closing Date. The two deadlines for the same document cannot both be given effect.", "type": 2, "prob": 0.23}
+   ]},
+  {"clause_id": "c013",
+   "issues": [
+     {"issue": "The recording obligation is triggered only \"upon the occurrence of a Recordation Event\", a term nowhere defined in this Agreement and left to Appendix A of the Indenture under Section 1.01. When the Sponsor's duty to record arises therefore cannot be determined from this instrument.", "type": 1, "prob": 0.25}
+   ]},
+  {"clause_id": "c014",
+   "issues": [
+     {"issue": "This clause allows a copy of the title policy to be furnished \"within 180 days of the Closing Date\", which cannot be squared with Section 2.01(d), which requires the title insurance policy under (d)(v) to be delivered on or before the Closing Date. Which deadline governs a missing title policy is left to construction.", "type": 2, "prob": 0.22}
+   ]},
+  {"clause_id": "c015",
+   "issues": [
+     {"issue": "The Officer's Certificate must state that prepayment amounts were deposited in \"the related Collection Account\", an account this Agreement does not define; Section 4.06(a) requires payoff amounts to go to the \"Protected Account\" and Sections 2.02-2.04 use the \"Master Servicer Collection Account\". Which account the certificate must speak to depends on reconciling those provisions.", "type": 2, "prob": 0.24}
+   ]},
+  {"clause_id": "c016",
+   "issues": [
+     {"issue": "The sole-remedy sentence makes substitution or repurchase the only remedy \"available to the Indenture Trustee, the Issuer, the Depositor and any Noteholder\", conspicuously omitting the Note Insurer and the Certificateholders, who are given notice and enforcement rights throughout this Section and are third-party beneficiaries under Section 2.02(j) of the Insurance and Indemnity Agreement (which also imposes an indemnity obligation on the Sponsor). Whether the Note Insurer is confined to the repurchase protocol turns on that omission.", "type": 2, "prob": 0.47},
+     {"issue": "The first paragraph makes any Material Defect repurchasable, while the Final Certification paragraph adds that the defect must \"materially and adversely affect the interests of the Noteholders, Certificateholders or the Note Insurer\", so the same defect carries two different triggers. The subsection also cites \"subsections (b)(iv), (v) and (vii) of Section 2.01\", which do not exist.", "type": 1, "prob": 0.34}
+   ]},
+  {"clause_id": "c017",
+   "issues": [
+     {"issue": "The opening words condition the subsection on a HELOC \"purchased by the Sponsor in accordance with Subsections 2.02(a) or (b) above\", but (b) is this subsection itself and the breach-repurchase provision is Section 2.03. The self-referential cross-reference leaves the repurchase mechanics' scope in doubt.", "type": 1, "prob": 0.30},
+     {"issue": "The closing sentence makes repurchase or substitution the sole remedy for a Material Defect available to the Issuing Entity, Noteholders, Certificateholders, Indenture Trustee and Owner Trustee, but omits the Note Insurer, whom Section 2.02(j) of the Insurance and Indemnity Agreement makes a third-party beneficiary with indemnity rights. Whether the Note Insurer is bound by this exclusivity clause must be construed from the two instruments together.", "type": 2, "prob": 0.38}
+   ]},
+  {"clause_id": "c018",
+   "issues": [
+     {"issue": "The assignment purports to convey rights in the Mortgage Loan Purchase Agreement \"including but not limited to the Depositor's rights and obligations pursuant to the Servicing Agreement or this Agreement\", and then makes repurchase the sole remedy \"for any breach thereof\" without an identifiable antecedent. Whether \"thereof\" means a breach of the Mortgage Loan Purchase Agreement, the Servicing Agreement or this Agreement is left open.", "type": 1, "prob": 0.30},
+     {"issue": "The parenthetical reserving to the Sponsor the right to enforce the Servicer's representations and warranties under the Servicing Agreement stands against Section 4.02(b), which obliges the Master Servicer to enforce the Servicer's obligations for the benefit of the Issuing Entity, Indenture Trustee, Noteholders and Note Insurer. Which party controls enforcement against the Servicer cannot be answered from either provision alone.", "type": 2, "prob": 0.20}
+   ]},
+  {"clause_id": "c019",
+   "issues": [
+     {"issue": "The repurchase trigger is a breach that \"materially and adversely affects the value of the interests\" of the listed parties in the related HELOC, a standard the Agreement nowhere quantifies and which does not say whether it is measured loan by loan or across the pool. The related question of what counts as \"discovery\" starting the 90-day clock is equally unbounded.", "type": 1, "prob": 0.48},
+     {"issue": "The closing sentence confines the remedy to \"the Issuing Entity, the Noteholders or the Indenture Trustee on their behalf\", omitting the Note Insurer, while Section 2.02(n) of the Insurance and Indemnity Agreement deems certain breaches material and gives the Insurer indemnity against losses in addition to repurchase. The two cannot both be given full effect against the Note Insurer's claim.", "type": 2, "prob": 0.41}
+   ]},
+  {"clause_id": "c020",
+   "issues": [
+     {"issue": "The Sponsor is directed to deliver Substitute HELOC documents \"in accordance with the provisions of the Mortgage Loan Purchase Agreement and Subsection 2.02(b) of this Agreement\", but the document-delivery and review time periods are in Section 2.02(a); Subsection 2.02(b) sets out only repurchase payment mechanics. The cited subsection contains none of \"the time periods set forth in those Subsections\".", "type": 1, "prob": 0.26},
+     {"issue": "The absolute bar on any substitution after two years from the Closing Date cannot be squared with Section 2.02(a), which allows a cure period to run and permits substitution where \"the time to cure such defect expires prior to the end of the second anniversary\", and with Section 2.05(a), which defers repurchase or substitution until an Opinion of Counsel is delivered. A defect noticed late leaves the two provisions pulling in opposite directions.", "type": 2, "prob": 0.22}
+   ]},
+  {"clause_id": "c021",
+   "issues": [
+     {"issue": "The Opinion of Counsel condition applies only to a HELOC \"that is not in default or as to which default is not reasonably foreseeable\", and neither \"default\" nor \"reasonably foreseeable\" is given any measure here. Whether a given delinquent HELOC falls inside or outside the condition is therefore contestable.", "type": 1, "prob": 0.28}
+   ]},
+  {"clause_id": "c022",
+   "issues": [
+     {"issue": "Section 2.05(b) requires repurchase of a non-qualified mortgage \"within 90 days of such discovery\" and in the manner of Section 2.03, while Section 2.05(a) provides that \"notwithstanding any contrary provision\" no repurchase under Section 2.03 may be made without a REMIC Opinion of Counsel for a non-defaulted loan. The two subsections of the same Section impose contradictory commands on the same repurchase.", "type": 2, "prob": 0.24},
+     {"issue": "The Indenture Trustee and Owner Trustee \"shall require the Sponsor, at its option, to either\" substitute or repurchase, leaving it unclear whose option \"its\" refers to. The choice between the two remedies is thus unassigned.", "type": 1, "prob": 0.19}
+   ]},
+  {"clause_id": "c023", "issues": []},
+  {"clause_id": "c024",
+   "issues": [
+     {"issue": "The Depositor warrants that it has \"full corporate power\", though Section 2.06(i) of the same Section represents that it is a Delaware limited liability company, which has no corporate power or corporate organs. What is being warranted has to be read out of the two clauses together.", "type": 2, "prob": 0.20}
+   ]},
+  {"clause_id": "c025",
+   "issues": [
+     {"issue": "This clause warrants authorization \"by all necessary corporate action\" and non-conflict with \"the certificate of formation or by-laws\", terms that do not fit the limited liability company described in Section 2.06(i), which has an operating agreement rather than by-laws. Whether the warranty reaches the Depositor's actual constitutive documents is a matter of construing the two clauses together.", "type": 2, "prob": 0.17}
+   ]},
+  {"clause_id": "c026", "issues": []},
+  {"clause_id": "c027", "issues": []},
+  {"clause_id": "c028",
+   "issues": [
+     {"issue": "Clause (vi) ends with \"or\" and clause (vii) begins \"with respect to any other matter which...\", a fragment with no subject or verb of its own, so the representation about litigation cannot be read as a complete sentence. The disjunctive \"or\" also makes the two clauses alternatives rather than cumulative warranties.", "type": 1, "prob": 0.29}
+   ]},
+  {"clause_id": "c029",
+   "issues": [
+     {"issue": "The Depositor warrants that \"immediately prior to the transfer and assignment to the Issuing Entity, each Mortgage Note and each Mortgage were not subject to an assignment or pledge\", although under Section 2.01(a) and the Mortgage Loan Purchase Agreement the Depositor took the same loans by assignment from the Sponsor moments earlier. The warranty also speaks of Mortgage Notes while Section 2.01(d)(i) requires delivery of Credit Line Agreements.", "type": 2, "prob": 0.22}
+   ]},
+  {"clause_id": "c030", "issues": []}
+]}

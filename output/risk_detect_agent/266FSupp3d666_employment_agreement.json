@@ -1,0 +1,737 @@
+{
+  "contract_id": "266FSupp3d666_employment_agreement",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The preamble states that \"Certain capitalized terms are defined in Section 8 of this Agreement,\" but Section 8 is \"Legal Matters\" and the definitions are in Section 9. The mis-numbered internal reference leaves the reader to guess which section supplies the defined terms.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "The statement that the Corporation \"desires to assure itself of Executive's employment\" and that Executive \"desires to be employed ... on the terms and conditions set forth in this Agreement\" can be argued as a commitment to continued employment, which cannot be squared with the at-will disclaimer in Section 5(a). It is a purpose/recital-style clause urged against the operative termination term.",
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The heading coins the defined term \"Effective Date\" but the sentence fixes only a \"start date,\" leaving it unclear whether the Effective Date is August 15, 2014 or the July 9, 2014 execution date used by Section 14 (\"effective, as of its stated date of execution\"). Section 17 compounds this by making employment effective on the Effective Date.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The Corporation's reserved right to move Executive \"in another management position assigned to Executive by the Corporation's Board of Directors\" cannot easily be squared with Section 9(d)(ii), which makes a material reduction of Executive's \"duties and responsibilities or title\" without his consent a Good Reason. The two provisions give opposite answers to whether reassignment is permitted unilaterally.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "\"The next salary adjustment is scheduled for April 1, 2015\" is ambiguous as to whether it promises an increase on that date or merely a review, given the preceding sentence making adjustment discretionary with the Board. \"Annual review for adjustment\" sets no benchmark or direction for the adjustment.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "The Executive is given a \"right to receive an annual bonus in the amount of $140,000\" yet the same sentence conditions it on satisfying KPIs \"established by the Corporation in accordance with its standard KPI system,\" a standard nowhere fixed in the Agreement. It is ambiguous whether the bonus is a fixed entitlement or wholly discretionary, and whether the $140,000 is annual or per semi-annual payment.",
+          "type": 1,
+          "prob": 0.52
+        },
+        {
+          "issue": "The condition that Executive \"remains an employee of the Corporation in good standing on the date of payment\" must be read against Section 5(b), which cuts off all rights to bonuses that would become payable after termination. Whether a bonus earned for a completed half-year survives termination before the payment date is unresolved between the two provisions.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The matching contribution commences \"at such time when the Company is able to make such matching contribution under the Plan,\" a condition of indefinite duration resting entirely on the Corporation's own ability, and \"the Company\" is not a defined party in this Agreement (the party is \"the Corporation\"). Neither the trigger nor the actor is fixed.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "Eligibility to participate in the \"Stock Option Plan (subject to approval by the Board and the Corporation's policies)\" makes the benefit wholly contingent, and no Stock Option Plan is identified or attached. Whether the clause confers anything is a question of construction.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "\"All reasonable out-of-pocket business expenses\" is undefined and measured only against the Corporation's own \"standard policies,\" which are not attached or described. Reasonableness has no benchmark in the Agreement.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The clause declares Executive an at-will employee terminable \"for any reason or no reason ... at any time,\" then in the same sentence entitles him to \"ninety (90) days prior notice\" if terminated without Cause. Whether the ninety-day notice is a condition of termination, a payment obligation, or defeated by the at-will language is left open.",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "The clause twice refers to the termination date \"specified in accordance with this Section 4,\" but the notice provisions are in Section 5 and Section 4 is Compensation and Benefits. The mis-numbered self-reference makes the operative mechanism uncertain.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The cut-off of all post-termination salary, bonuses and benefits cannot be squared with Section 18 (Survival), which makes \"Sections 4 through 18, inclusive\" — including the Section 4 compensation obligations — survive termination. Which of the two governs post-termination compensation is unresolved.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "\"Any bona fide amounts not in dispute\" is self-limiting and undefined: it does not say who decides whether an amount is bona fide or in dispute, or when the dispute must arise. The offset right's scope therefore has no ascertainable boundary.",
+          "type": 1,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "The defined \"Business\" is an enumerated list of software and IT services closed by no catch-all, so whether the Corporation's other lines of activity fall inside \"Business\" (and thus inside the non-compete's \"Competitive Enterprise\") is open. The list's scope drives the reach of every restrictive covenant.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "This warranty that Executive is \"not a party to any restrictive covenant\" duplicates and is narrower than Section 7(ii), which warrants he is bound by no employment, non-compete or confidentiality agreement. Which representation controls if they diverge is not addressed.",
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The prohibition on engaging in \"any new transactions, deals or relations of any kind including but not limited to\" the listed activities is a catch-all far broader than the enumerated specifics that follow, and \"inconsistent, or incompatible with interests or obligations of the Corporation\" has no ascertainable boundary. The clause's actual reach can only be settled by construction.",
+          "type": 1,
+          "prob": 0.45
+        },
+        {
+          "issue": "The restriction runs \"During the Term of this Agreement and for a period of twenty-four (24) months after termination,\" but \"Term\" is a capitalized term that is defined nowhere in the Agreement, and no Section 9 definition supplies it. It is also unclear whether \"termination of this Agreement\" means termination of employment.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The parenthetical says \"capitalized terms used but not defined herein are defined below,\" yet \"Competitive Enterprise\" is defined above in the Conflict of Interest paragraph and \"Affiliate\" is defined both below in Section 6 and again in Section 9(a). Which definitions this covenant borrows must be worked out from the instrument as a whole.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "\"Solicit\" is defined to include communication \"regardless of by whom initiated\" and any \"advising, encouraging or requesting\" of any person to take or refrain from any action, which sweeps in responses to unsolicited approaches and ordinary conversation. The term has no workable limit as drafted.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "\"Client\" is defined circularly (\"means any customer, Client or prospective client\") and extends to any prospective client \"whose identity became known to the Executive,\" a category with no boundary. What counts as a protected Client is therefore indeterminate.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "This Section 6 definition of \"Affiliate\" (ten percent ownership or control of any Person) conflicts with Section 9(a), which defines \"Affiliate\" for purposes of the whole Agreement as an entity controlling, controlled by or under common control with the Corporation. Two different meanings are available for the same capitalized term used in the same covenants.",
+          "type": 2,
+          "prob": 0.33
+        },
+        {
+          "issue": "The definition includes \"members of the Family of such Person,\" but \"Family\" is capitalized and defined nowhere in the Agreement. Its scope is left entirely open.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "This Section 6 definition of \"Person\" sits alongside the Section 12(e) definition of \"person,\" which enumerates a different list (including groups, syndicates, cooperatives and governmental bodies). Which list governs the capitalized \"Person\" used in the Affiliate definition is unresolved.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "\"The abovementioned provision\" is singular and unidentified: it may refer only to the Non-Solicitation of Clients covenant, or to the Conflict of Interest covenant, or to all of the preceding covenants. The breach that triggers this damages remedy cannot be fixed from the words used.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "The carve-out \"unless prior written consent is given by the Executive\" makes the Executive the consenting party to his own prohibited hiring, which is a manifest drafting error for the Corporation. Read literally the covenant is self-defeating.",
+          "type": 1,
+          "prob": 0.4
+        },
+        {
+          "issue": "The $50,000-per-employee \"fixed damages\" cannot be squared with the Remedies paragraph of Section 6, which entitles the Corporation to recover all profits and \"any damages suffered by the Corporation\" for breach of any covenant. Whether the liquidated sum is exclusive or cumulative is left open.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "\"Confidential Information\" is defined as all information \"belonging to, used by, or in the possession of the Corporation\" across an open list \"of every kind and character,\" with only public-domain carve-outs, and the use/disclosure ban runs \"at any time\" without limit. The category has no ascertainable outer boundary.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "The definitions of \"Assigned Inventions\" and \"Retained Inventions\" overlap and are set out in a sentence with unbalanced parentheses, so it is unclear whether an Invention conceived by Executive outside his employee capacity is assigned or retained. The grammar of the parenthetical changes which category prevails.",
+          "type": 1,
+          "prob": 0.3
+        },
+        {
+          "issue": "The carve-out for \"the materials listed on Exhibit B attached hereto\" refers to an exhibit the Agreement does not contain — only Exhibit A is attached and incorporated by Section 3. What, if anything, is carved out of the assignment cannot be determined from the instrument.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "The duty to keep records of \"all inventions\" is in lower case and untied to the defined \"Invention,\" while the ownership sentence speaks of \"Assigned Inventions other than Retained Inventions\" even though Retained Inventions are by definition not assigned. Whether records of Retained Inventions must be kept and surrendered is left uncertain.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "The power-of-attorney sentence is triggered \"[i]f the Corporation is unable because of the Corporation's mental or physical incapacity ... to secure the Corporation's signature,\" when the intended subject in each instance is the Executive. As written the condition can never occur for a corporate entity.",
+          "type": 1,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "The NDA is executed \"[s]imultaneously herewith\" but is not attached or described, and Section 14 declares this Agreement the exclusive understanding superseding any \"contemporaneous agreement.\" Whether the NDA survives the integration clause — and it must, since Section 9(b) makes breach of the NDA a Cause event — requires reading the two together.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "\"The duration of every restriction set forth in this section will be extended by any period during which the Executive is in breach of his obligations\" is an open-ended tolling term with no cap, and \"this section\" is not identified (Section 6 contains many separately headed covenants). The extended duration of the covenants cannot be computed from the text.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "\"Intentionally disparage\" and \"any public statement reflecting negatively\" are undefined and expressly extend \"irrespective of the truthfulness\" of the statement, with no time limit on the obligation. What speech is forbidden, and for how long, is left to construction.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "The savings sentence preserves \"any other provision of this letter,\" although the instrument is an Agreement and not a letter, leaving the object of the severance clause misdescribed. The mismatch invites argument about what document the reformation provision operates on.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "Excusing the Corporation from \"paying or performing any liability or obligation owed to the Executive (including compensation)\" on any breach of any covenant cannot be squared with Section 4, which makes salary and bonus payable as consideration for services rendered. The two provisions give opposite answers on forfeiture of earned compensation.",
+          "type": 2,
+          "prob": 0.29
+        },
+        {
+          "issue": "The clause creates rights in a \"Third Party Beneficiary\" defined by reference to the Section entitled \"Third Party Enforcement; Assignment; Successors,\" but Section 10 addresses only assignment and identifies no third-party beneficiary other than an assignee. Who may enforce the covenants must be pieced together from the two provisions.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "The representation that Executive is bound by no \"confidentiality agreement with any other person or entity\" overlaps the narrower warranty in the \"Other Restrictions\" paragraph of Section 6, and sits oddly with the NDA he executes simultaneously. Which warranty governs a conflict is not stated.",
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "The parties \"consent to\" New York jurisdiction and \"stipulate that a proper and convenient venue\" is New York, without saying the forum is exclusive. Whether the clause is permissive or mandatory is a standard question of construction on these words.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "This fee-shifting term makes the \"losing party\" reimburse the \"prevailing party,\" while the Remedies paragraph of Section 6 entitles the Corporation to reimbursement of all enforcement costs regardless of who prevails. Which allocation applies to a covenant suit cannot be answered from either provision alone.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "This Agreement-wide definition of \"Affiliate\" (control-based, tied to the Corporation) conflicts with the separate \"Affiliate\" definition in Section 6, which uses a ten percent ownership test and reaches Family members of any Person. The restrictive covenants use the term without saying which definition governs.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": "Clause (v) makes it Cause to have \"breached the Restrictive Covenants set forth in Section 5 of this Agreement,\" but Section 5 is Termination and the Restrictive Covenants are Section 6. The mis-numbered cross-reference leaves the covenant-breach trigger pointing at the wrong provision.",
+          "type": 1,
+          "prob": 0.33
+        },
+        {
+          "issue": "Clause (v) also makes any breach of \"this Agreement, or the NDA, or any material Corporation policy or other agreement\" a Cause event, a catch-all that swallows the four specific grounds enumerated before it. Whether Cause requires misconduct of the enumerated kind or any breach at all is left open.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "\"Disability\" turns on inability to perform essential duties \"even with reasonable accommodations,\" \"all as determined by the Board in its good faith judgment,\" with no minimum duration of incapacity specified. Because Section 5(a) makes employment terminate automatically on Disability, the absence of any time threshold or objective medical standard is consequential.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [
+        {
+          "issue": "\"Good Reason\" is elaborately defined but the term appears nowhere else in the instrument: Section 5 gives Executive no right to resign for Good Reason and Section 4 attaches no payment to such a resignation. The definition's meaning and effect can only be assessed by reading it against a Termination section that never uses it.",
+          "type": 2,
+          "prob": 0.45
+        }
+      ],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "This section is the one the Remedies paragraph of Section 6 invokes to create a \"Third Party Beneficiary,\" yet it confers enforcement rights only on an \"assignee or successor in interest\" and never designates a third-party beneficiary. The two provisions must be read together to know who beyond the Corporation may enforce the covenants.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "The requirement that any amendment be in a signed writing sits against Section 19(b), by which the parties \"agree to work in good faith to amend this Agreement\" for Section 409A purposes. Whether that obligation can produce an amendment absent a signed writing is unresolved between the two.",
+          "type": 2,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "This severability rule (an unenforceable covenant is simply severed) overlaps the Judicial Modification paragraph of Section 6, which requires that overbroad restrictions be \"blue penciled\" and reformed rather than struck. Which treatment a court is to apply to an overbroad restrictive covenant is left in doubt.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "\"Law\" is defined to include only United States state and federal common law, yet the Judicial Modification paragraph of Section 6 contemplates enforcement \"under the laws of each jurisdiction in which enforcement is sought\" and the Territory covers the CIS and Europe. The definition cannot be applied to the foreign jurisdictions the covenants reach.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "This definition of \"person\" enumerates a different set of entities than the capitalized \"Person\" defined in Section 6 for the Affiliate test. Which definition applies where the two lists diverge is not addressed anywhere.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": "Notices must be \"addressed to the addresses for the parties listed below,\" but the signature page leaves the Executive's address blank, so the clause's only address mechanism fails as to him. Whether notice to Executive can be validly given at all is a question raised by reading the section with the signature page.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": "Headings are declared to form no part of the Agreement, yet other provisions operate by heading — the Remedies paragraph refers to the \"Section entitled 'Third Party Enforcement; Assignment; Successors',\" and the Section 6 covenants are identified only by their headings. The disclaimer and those cross-references cannot both be given full effect.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [
+        {
+          "issue": "This clause makes the Agreement effective \"as of its stated date of execution\" upon exchange of counterparts, while Section 17 makes employment under the Agreement effective on the Effective Date and Section 2 fixes that as August 15, 2014. The operative date of the instrument depends on reconciling the three.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "The integration clause supersedes any \"contemporaneous agreement,\" which on its face would swallow the NDA that Section 6 says was executed \"[s]imultaneously herewith\" and that Section 9(b) makes a Cause trigger. Whether the NDA survives this clause is a direct question of the two provisions read together.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "Making employment \"effective on the Effective Date\" cannot be squared with Section 14, under which the Agreement becomes effective as of its stated date of execution when counterparts are exchanged. The period between July 9 and August 15, 2014 is governed by neither provision clearly.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [
+        {
+          "issue": "Survival of \"Sections 4 through 18, inclusive\" carries Section 4 (Compensation and Benefits) past termination, which cannot be squared with Section 5(b), under which all rights to salary, bonuses and benefits cease on termination. Which provision governs post-termination pay is squarely in issue.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [
+        {
+          "issue": "The six-month delay operates only \"if the Corporation determines\" that Executive is a specified employee, leaving the trigger to one party's unilateral determination with no standard. Whether the delay applies at all is therefore not ascertainable from the text.",
+          "type": 1,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "The parties merely \"agree to work in good faith to amend this Agreement\" so that it is 409A-compliant while preserving economic effect — an agreement to agree with no term specified and no fallback if they fail. What either party is bound to do cannot be determined from the words.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [
+        {
+          "issue": "This acknowledgment says only that Executive \"was afforded sufficient opportunity to consult with legal counsel,\" whereas Section 7 has him represent that he \"has consulted with independent legal counsel\" regarding his rights. The two statements about the same fact are not consistent.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "Exhibit A makes the Managing Director accountable for P&L and for managing \"strategic client accounts,\" which does not line up with Section 3's description of accountability for \"selected clients\" and line management of \"all personnel involved in service delivery.\" Because Exhibit A is incorporated, the actual scope of the position must be settled between the two.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": "The responsibilities \"include, without limitation, the following,\" so the enumerated business-development and delivery items do not bound the duties that can be assigned. What falls within the role — and therefore what a \"material reduction\" of duties under Section 9(d)(ii) would be — has no ascertainable limit.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c061"
+    }
+  ]
+}

@@ -1,0 +1,1319 @@
+{
+  "contract_id": "88FSupp3d1156_product_contamination_insurance_policy",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061",
+    "c062": "c062",
+    "c063": "c063",
+    "c064": "c064",
+    "c065": "c065",
+    "c066": "c066",
+    "c067": "c067",
+    "c068": "c068",
+    "c069": "c069",
+    "c070": "c070",
+    "c071": "c071",
+    "c072": "c072",
+    "c073": "c073",
+    "c074": "c074",
+    "c075": "c075",
+    "c076": "c076",
+    "c077": "c077",
+    "c078": "c078",
+    "c079": "c079",
+    "c080": "c080",
+    "c081": "c081",
+    "c082": "c082",
+    "c083": "c083",
+    "c084": "c084",
+    "c085": "c085",
+    "c086": "c086",
+    "c087": "c087",
+    "c088": "c088",
+    "c089": "c089",
+    "c090": "c090",
+    "c091": "c091",
+    "c092": "c092",
+    "c093": "c093",
+    "c094": "c094",
+    "c095": "c095",
+    "c096": "c096",
+    "c097": "c097",
+    "c098": "c098",
+    "c099": "c099",
+    "c100": "c100",
+    "c101": "c101",
+    "c102": "c102",
+    "c103": "c103",
+    "c104": "c104",
+    "c105": "c105",
+    "c106": "c106",
+    "c107": "c107",
+    "c108": "c108",
+    "c109": "c109",
+    "c110": "c110",
+    "c111": "c111",
+    "c112": "c112",
+    "c113": "c113",
+    "c114": "c114",
+    "c115": "c115",
+    "c116": "c116"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The Declaration Page names the Insured as \"TRI-UNION SEAFOOD\" without any entity designation, while Condition 3.7 defines Insured as the \"sole proprietorship, partnership or corporation listed on the Declaration Page.\" A court could be asked whether the actual contracting entity (an LLC named Tri-Union Seafoods) falls within that closed list.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The $3,000,000 Section 1.1 limit is stated \"Each Insured Event and in the aggregate,\" yet the separately stated Policy Aggregate Limit is also $3,000,000, so it is unclear whether the section limits stack or are all subsumed in one $3,000,000 cap. The conflict is with the Policy Aggregate Limit line and Condition 5.19.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "The Governmental Recall limit of $3,400,000 exceeds the Policy Aggregate Limit of $3,000,000, so the two cannot both be given effect for a single recall claim. The conflict is with the Policy Aggregate Limit line and Condition 5.19 (\"Insurers' liability will be limited to the amounts stated on the Declaration Page\").",
+          "type": 2,
+          "prob": 0.32
+        },
+        {
+          "issue": "The figure \"$3,400,000\" is out of line with the $3,000,000 stated for every other coverage section and for the aggregate, and reads as a typographical error in the numeral. A court could be asked to reform or read down the stated amount.",
+          "type": 1,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "The $3,000,000 Section 1.3 limit is expressed as both per-event and aggregate while the Policy Aggregate Limit states the same figure for the whole policy, leaving it unclear whether this limit is additional to the other section limits. The tension is with the Policy Aggregate Limit line and Condition 5.19.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The Section 1.4 limit is stated as $3,000,000 per event and in the aggregate, which cannot be added to the other section limits without breaching the $3,000,000 Policy Aggregate Limit. The conflict is with the Policy Aggregate Limit line and Condition 5.19.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The Policy Aggregate Limit is stated as \"$3,000,000 Each Insured Event and in the aggregate,\" which cannot be reconciled with four separate section limits (1.1 through 1.4) each stated at $3,000,000 or more. A court would have to decide whether the aggregate caps all sections combined or merely restates each section's limit.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "The declared Rehabilitation Expenses sub-limit is made \"part of the Accidental Contamination or Malicious Product Tampering limit of liability,\" while definition 3.20 sub-limits Rehabilitation Expenses to 25% of the limit \"associated with the applicable Insured Event,\" which includes Governmental Recall. The two cannot both be given effect for a Governmental Recall claim.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "\"Crisis Consultants' Costs: Unlimited\" cannot be squared with Section 2, which makes all listed cost items \"subject to the Limits of Liability stated on the Declaration Page,\" and with the Policy Aggregate Limit. Condition 5.19 attempts a carve-out for Crisis Consultant Costs, leaving the interaction of the three provisions to be construed.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The sub-limit is expressed as \"5 Consultant days\" rather than a sum of money, and nothing in the Policy defines what a consultant day costs or comprises. The term therefore supplies no measurable cap on Pre-incident Consultant Costs.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "The entry simultaneously states \"No Sublimit Applies\" and then describes what \"this sub-limit\" does not do, so it is self-contradictory as to whether third-party recall costs under 3.18(vi) are capped. A court could be asked which half of the sentence controls.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "The Declaration states the Self-Insured Retention as \"per Insured Event,\" while Condition 5.14 says the retention \"will apply separately to each and every Loss,\" so the number of retentions applicable to a single recall is in doubt. The conflict is with Condition 5.14 (and the \"apportioned\" retention assumed by Condition 5.7).",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "The premium figure is redacted/illegible on the face of the Declaration Page, so the consideration recited in the insuring agreement (\"In consideration of the premium paid\") cannot be verified from the instrument. A dispute over premium earned on cancellation under Condition 5.8 would have no stated base figure.",
+          "type": 1,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The Specified Insured Products are \"All topical and ingestible products manufactured and distributed by the Insured,\" whereas definition 3.9(i) covers only products \"reported to the Insurer in the Application or by addendum\" and covers products merely manufactured, handled, distributed or prepared. Whether the Declaration broadens or is narrowed by 3.9 is left open.",
+          "type": 2,
+          "prob": 0.29
+        },
+        {
+          "issue": "The qualifier \"based on sales of $ 540 m.\" has no stated operative effect — it is not framed as a warranty, a limit, or a coinsurance/averaging trigger. A court could be asked whether it conditions coverage on the accuracy of that sales figure.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "\"Period of Indemnity: 1 YEAR\" fixes a length but no commencement date, and the term, though used in definitions 3.3 and 3.11, is nowhere defined in Section 3. When the year begins — discovery, the Insured Event, or the start of lost sales — is unresolved.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "The Declaration lists \"Law: The Supreme Court of The State of New York,\" naming a court where a body of law belongs, and \"Jurisdiction: New York State.\" As a choice-of-law designation the entry is unintelligible on its face.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "This New York law-and-jurisdiction entry cannot be squared with the Service of Suit endorsement (SL-704 CA), listed as effective on this same Declaration Page, under which the Insurer agrees at the Insured's request to submit to any court of competent jurisdiction in the United States. Which of the two governs the forum for a California insured is squarely in issue.",
+          "type": 2,
+          "prob": 0.52
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "Section 1 extends reporting to \"thirty (30) days after non-renewal of the Policy,\" while Condition 5.19 extends it to thirty days \"after the expiration of this Policy\"; the two describe different triggering events for the same tail. A claim reported after a renewal or a cancellation rather than a non-renewal would fall between them.",
+          "type": 2,
+          "prob": 0.29
+        },
+        {
+          "issue": "Coverage is conditioned on the Insured not being \"aware and could not reasonably have been aware of circumstances which could produce Loss\" at inception, but \"circumstances which could produce Loss\" has no stated threshold of likelihood or specificity. The scope of that constructive-knowledge bar is left to argument.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "Coverage requires that use or consumption \"has resulted in or would result in\" visible physical symptoms of Bodily Injury, without stating the degree of probability or the evidentiary showing that \"would result\" demands. Whether contaminated product that sickened no one satisfies this prong is the central ambiguity of the grant.",
+          "type": 1,
+          "prob": 0.55
+        },
+        {
+          "issue": "The time window is written as \"three hundred and sixty five days (385) days,\" so the words and the parenthetical numeral give different periods, and \"days\" is repeated. A court would have to decide whether 365 or 385 days controls.",
+          "type": 1,
+          "prob": 0.36
+        },
+        {
+          "issue": "This grant requires a bodily-injury or property-damage consequence, whereas Section 1.2 Governmental Recall requires only that the product be \"injurious to health or unfit for human consumption\" with no such consequence; the same contamination can qualify under one and not the other. How the two grants and their separate limits interact for a single recall must be construed.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "Coverage turns on an \"official recall order ... issued by the competent authorities,\" but neither \"official recall order\" nor \"competent authorities\" is defined, and in the United States food recalls are ordinarily conducted voluntarily at an agency's request rather than by order. Whether an FDA-prompted voluntary recall triggers this section is the obvious dispute.",
+          "type": 1,
+          "prob": 0.45
+        },
+        {
+          "issue": "Alternative (ii) covers the case where \"a recall order by the competent authority is imminent,\" with no definition of imminence and no benchmark for judging it. The word admits of a wide range of reasonable meanings.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "This grant expressly covers malicious tampering committed \"by anyone including an employee of the Insured,\" while Exclusion 4.4 excludes Loss involving any \"deliberate act, including any dishonest, willful, illegal, fraudulent, criminal or Malicious act committed by the Insured's directors, officers or trustees.\" Where the tamperer is an officer or director the grant and the exclusion cannot both be given effect.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "Section 1.4 defines the extortion trigger by reference to a threat to commit Malicious Product Tampering \"as set forth in 1.3,\" but 1.3 requires as an element that the act actually render the product unfit or create that impression publicly — something a mere threat cannot yet have done. Reading 1.4 through 1.3 makes the extortion grant partly self-defeating.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "Loss is confined to \"reasonable and necessary\" expenses incurred \"directly and solely in connection with\" a covered Insured Event, and none of those qualifiers is defined or measured against any benchmark. In a recall with mixed causes, \"solely\" in particular has no workable boundary.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": "Item 2.2 is called \"Pre-incident Consultant Costs\" but the only definition supplied is 3.14 \"Pre-incident Crisis Consulting Costs,\" and the Declaration Page uses a third name, \"Pre-incident Crisis Consultant Costs.\" Whether the listed Loss item is the defined item has to be worked out across the three provisions.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "The twelve-month cap opens with \"Except as otherwise provided with respect to Business Interruption Expense and Extortion Costs,\" but the Policy nowhere else provides a different period for those items — the Period of Indemnity is set only on the Declaration Page and 3.10 fixes no incurral window. The carve-out points to provisions that do not exist.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "Adverse Publicity is defined as reporting of \"an actual or alleged Accidental Contamination or Malicious Product Tampering,\" while Sections 1.1 and 1.3 in turn make \"Adverse Publicity implying such\" itself an Insured Event. The definition is circular, and whether mere allegation in the media triggers coverage absent any actual contamination must be construed against 1.1.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "\"Clear, identifiable, internal or external visible physical symptoms of injury, sickness or disease\" is ambiguous as to whether \"visible\" qualifies internal symptoms as well as external ones, and as to what makes a symptom \"clear\" and \"identifiable.\" The phrase carries the whole weight of the Bodily Injury requirement in Section 1.1(i).",
+          "type": 1,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "Business Interruption Expense is measured over \"the Period of Indemnity,\" a bolded term that appears nowhere in the Section 3 definitions and is given only as \"1 YEAR\" on the Declaration Page. The provision cannot be applied without deciding when that year starts.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "The class of recoverable consultants is \"independent food-safety, public relations, security or similar consultants,\" and \"similar\" has no stated boundary against the three enumerated specialties. Whether, for example, laboratory, legal or logistics consultants are \"similar\" is open.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "\"Destruction Costs\" is defined only as the expense of destroying \"unused packaging and point of purchase marketing material\" of recalled product, not the cost of destroying the recalled product itself. The heading and the defined scope pull in opposite directions on the largest destruction expense of a recall.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "Extra Expense is limited to expense incurred \"for the sole purpose of reducing Loss\" during the time necessary to clean or repair the location, a purpose test with no stated measure where cleaning also serves ordinary operational ends. The word \"sole\" makes the boundary of the list in (i)–(iii) uncertain.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "Insured is defined as a single \"sole proprietorship, partnership or corporation listed on the Declaration Page,\" yet Conditions 5.6 and 5.20 speak of \"all other Insureds\" and \"more than one Insured.\" Whether the Policy contemplates multiple insureds cannot be resolved from this definition alone.",
+          "type": 2,
+          "prob": 0.23
+        },
+        {
+          "issue": "The enumeration \"sole proprietorship, partnership or corporation\" omits limited liability companies, and the expressio unius reading would leave an LLC outside the definition. The named insured here bears no entity designation at all.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "Definition 3.8 lists \"Insured Products Extortion\" while the coverage grant at 1.4 is headed \"Insured Product Extortion\" and 3.10 defines \"Insured Product Extortion Costs.\" The mismatch between the defined and the used forms is relational to Section 1.4.",
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "3.9(i) covers only products \"reported to the Insurer in the Application or by addendum,\" while the Declaration Page describes the Specified Insured Products as \"All topical and ingestible products manufactured and distributed by the Insured.\" Whether an unreported product line is insured turns on which of the two controls.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "\"Variations of existing products and/or new blends\" are automatically covered without notice, but neither \"variation\" nor \"new blend\" is defined and the boundary against a \"newly developed product\" requiring sixty days' notice under 3.9(ii) is undrawn. The same product change can plausibly be characterised either way.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": "3.10 defines Extortion Costs as \"costs including the following,\" an open-ended formula, whereas Section 2 states that \"Loss under this Policy includes only the following\" enumerated items. Whether unenumerated extortion costs are recoverable requires reconciling the two.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "Loss of Gross Revenue is computed as projected sales revenue less saved variable costs less increased sales of other products in the line, while Condition 5.28(iii) directs that it \"be assessed by the Insurers based on an analysis of the profits generated\" in the twelve months before the event. The two measures — projected net revenue versus historic profit — do not yield the same number.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "\"Malicious\" requires an act done \"with the intention that such act becomes known to the Insured or the public at large,\" an intent element that is both subjective and unqualified as to proof. Covert contamination intended never to be discovered would fall outside the definition on which Sections 1.3 and 1.4 depend.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "Policy Period is defined to end at expiration or cancellation, yet Section 1 and Condition 5.19 both deem losses reported up to thirty days afterwards (measured, respectively, from \"non-renewal\" and from \"expiration\") to be within the Policy Period. The definition and the two extensions have to be read together to fix the reporting deadline.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "\"Pre-incident\" consulting costs are defined as costs of consultants hired \"to directly assist the Insured in mitigation of an Insured Event,\" which presupposes the very event the costs are said to precede. The definition is internally at odds with its own label.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [
+        {
+          "issue": "Pre-Recall Expenses are defined by reference to ascertaining the potential effect of \"Malicious Product Tampering, Accidental Contamination or Insured Product Extortion\" — the enumeration omits Governmental Recall, the fourth Insured Event under 3.8. On an expressio unius reading, testing done for a governmental recall is not covered.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "Recall Costs are costs \"to inspect and withdraw such affected Insured Product(s)\" — \"such affected\" has no antecedent in the sentence, and the pairing of \"inspect and withdraw\" leaves it unclear whether the value or disposal of the withdrawn product is included. The scope of the core recall coverage turns on those words.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [
+        {
+          "issue": "Rehabilitation Expenses are those incurred \"to re-establish the Insured's Product(s) to the reasonably projected level of sales or market share anticipated prior to the Insured Event,\" a purpose that is unbounded in time and indistinguishable from ordinary advertising. Nothing states how the projected level or its attainment is to be measured.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": "3.20 sub-limits Rehabilitation Expenses to 25% of the limit \"associated with the applicable Insured Event,\" while the Declaration Page's Rehabilitation Expenses sub-limit confines the benefit to the Accidental Contamination or Malicious Product Tampering limits. For a Governmental Recall the two cannot both be applied.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": "Replacement Costs are the costs of replacing affected product \"with product(s) of similar value,\" without saying whether value means cost of manufacture, wholesale price or retail sales value. The measure of indemnity for replaced stock is therefore undetermined.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [
+        {
+          "issue": "The Terrorism definition covers \"intentional, Malicious and wrongful alteration or contamination\" of products — the same conduct that Section 1.3 insures as Malicious Product Tampering — and Exclusion 4.15 then removes it except where the Insured or an Insured Product is the direct target. Where the targeting is disputed, grant and exclusion overlap.",
+          "type": 2,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "Exclusion 4.9(ii)–(iii) removes Loss involving matters arising after \"the Insured, employee, officer or director\" has \"actual or constructive knowledge of a defect or deviation in the production, preparation or manufacture\" — neither \"defect or deviation\" nor whose knowledge counts is defined, and 4.9(iii) is a subject-less fragment. In a processing-failure recall this exclusion could swallow the coverage.",
+          "type": 1,
+          "prob": 0.4
+        },
+        {
+          "issue": "Exclusion 4.12(i) excludes recalls initiated due to \"the failure of an Insured Product to accomplish its intended purpose,\" which on a broad reading defeats the Governmental Recall grant in Section 1.2 for product that is unfit for human consumption. A court would have to reconcile the exclusion with the coverage it purports to leave intact.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [
+        {
+          "issue": "Condition 5.1 declares that the application statements \"are the basis of the coverage\" and are incorporated into the Policy, without saying whether they are warranties or mere representations or what consequence inaccuracy carries. Its relationship to the avoidance remedy in 5.12 is left to be inferred.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "The suit limitation runs \"twenty four (24) months after a final Statement Of Loss has been submitted,\" but Condition 5.28(vi) forbids submitting that statement earlier than twelve months after the event and the Policy nowhere requires it ever to be submitted. Read together, the limitation period may never begin, or may be shortened past usefulness.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [
+        {
+          "issue": "Where an additional exposure is declined, it \"will remain covered only until the Insurer informs the Insured in writing of the declinature,\" leaving unclear whether losses first discovered before that notice but continuing afterwards remain covered. The cut-off point is stated without reference to when Loss is incurred or discovered.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "Appraisal is triggered \"on the written demand of either\" party, which makes it compulsory, yet Condition 5.10 states that \"all claims and disputes will be litigated\" in the named New York courts. Which mechanism governs a dispute over the amount of Loss cannot be told from either provision alone.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [
+        {
+          "issue": "The cooperation duty extends to \"attending hearings and trials ... assisting in effecting settlements and in conducting litigation, arbitration or other proceedings,\" although this is a first-party indemnity policy with no duty to defend and Exclusion 4.5 removes third-party claims and defense costs entirely. What proceedings the Insured must assist in is unclear once 4.5 is read with it.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "The Authorization Clause has the first Insured act \"on behalf of all other Insureds,\" but definition 3.7 recognises only the single entity listed on the Declaration Page as the Insured. Who the \"other Insureds\" are, if anyone, can only be answered by reading the two together.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": "Condition 5.7 directs that \"the apportioned Self-Insured Retention as calculated under Condition 5.14\" be subtracted, but Condition 5.14 as printed says only that the retention applies separately to each and every Loss and provides no apportionment method. The cross-reference points to a calculation that does not exist, and the number 5.14 is also carried by the Choice of Law condition.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c061"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [],
+      "dataset_clause_id": "c062"
+    },
+    {
+      "clause_id": "c063",
+      "issues": [],
+      "dataset_clause_id": "c063"
+    },
+    {
+      "clause_id": "c064",
+      "issues": [
+        {
+          "issue": "The clause says that on cancellation by the Insurer \"the Insurer will retain the pro-rata portion of the premium,\" then refers to payment of \"any unearned premium,\" so it is unclear whether the retained pro-rata share is the earned or the unearned part. The sentence can be read either way.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c064"
+    },
+    {
+      "clause_id": "c065",
+      "issues": [],
+      "dataset_clause_id": "c065"
+    },
+    {
+      "clause_id": "c066",
+      "issues": [
+        {
+          "issue": "This condition requires that \"all claims and disputes will be litigated in the Supreme Court of the State of New York ... or in the U.S. District Court for the Southern District of New York,\" which cannot be squared with the Service of Suit endorsement, under which the Insurer agrees at the Insured's request to submit to the jurisdiction of any court of competent jurisdiction within the United States. Which controls the forum for a California insured is the plain point of conflict.",
+          "type": 2,
+          "prob": 0.6
+        },
+        {
+          "issue": "The condition is numbered 5.14, the same number carried later by the Self-Insured Retention condition, so the cross-reference in Condition 5.7 to \"Condition 5.14\" is ambiguous. The duplication is on the face of the numbering.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c066"
+    },
+    {
+      "clause_id": "c067",
+      "issues": [
+        {
+          "issue": "Condition 5.11 makes the Insured responsible for \"the Coinsurance amount stated on the Declaration Page,\" but the Declaration Page states no coinsurance amount or percentage at all. The calculation directed here, and the deduction assumed by Condition 5.7, cannot be performed.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c067"
+    },
+    {
+      "clause_id": "c068",
+      "issues": [
+        {
+          "issue": "The Policy is declared \"null and void\" for non-disclosure of a material fact \"whether or not fraudulent\" by any Insured, without any qualification of materiality or reliance and without stating whether avoidance is prospective or ab initio. The breadth of \"non-disclosure ... whether or not fraudulent\" is the obvious point of contest.",
+          "type": 1,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c068"
+    },
+    {
+      "clause_id": "c069",
+      "issues": [
+        {
+          "issue": "The Insured must not disclose the existence of the Policy \"to any person or party whether within or outside the Insured,\" yet the Policy elsewhere contemplates dealings that require disclosure — reimbursing customers' recall costs under 3.18(vi) and purchasing other or excess insurance under 5.17 and 5.24. The prohibition and those provisions pull against each other.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c069"
+    },
+    {
+      "clause_id": "c070",
+      "issues": [
+        {
+          "issue": "Condition 5.14 says the Self-Insured Retention \"will apply separately to each and every Loss,\" while the Declaration Page states each retention as \"per Insured Event.\" Whether one retention or many apply to a single recall depends on which formulation governs.",
+          "type": 2,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c070"
+    },
+    {
+      "clause_id": "c071",
+      "issues": [
+        {
+          "issue": "The Insured must \"exercise due diligence to do all things reasonable and practical\" and \"make all reasonable efforts to mitigate,\" none of which is defined or measured against any benchmark, and the clause does not say what the consequence of falling short is. Whether it is a condition precedent or a mere covenant is left open by its own words.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c071"
+    },
+    {
+      "clause_id": "c072",
+      "issues": [
+        {
+          "issue": "This condition is numbered 5.18, the same number carried by the Inspection and Audit condition that immediately follows, so a reference to \"Condition 5.18\" is ambiguous. The duplicated numbering appears on the face of the Policy.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c072"
+    },
+    {
+      "clause_id": "c073",
+      "issues": [
+        {
+          "issue": "Condition 5.17 permits other insurance \"over the Limit of Liability\" only if the Insurer is notified in writing when it is acquired, while Condition 5.24 permits other insurance on the same terms with no notice requirement and makes this Policy primary. The two conditions govern overlapping ground on different terms.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c073"
+    },
+    {
+      "clause_id": "c074",
+      "issues": [
+        {
+          "issue": "The clause provides that \"any premium due for exposures which exist but were not reported will be determined through audit,\" although the Declaration Page states a flat premium and the only other adjustment mechanism is the additional-premium provision in Condition 5.3. Whether the Insurer may charge additional premium outside 5.3 has to be worked out between the two.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c074"
+    },
+    {
+      "clause_id": "c075",
+      "issues": [
+        {
+          "issue": "Condition 5.19 deems losses reported \"up to thirty (30) days after the expiration of this Policy\" to be timely, while Section 1 gives the same thirty-day tail measured from \"non-renewal of the Policy.\" The two triggers are different events and cannot both fix the reporting deadline.",
+          "type": 2,
+          "prob": 0.28
+        },
+        {
+          "issue": "Condition 5.19 states that all expenses and costs \"except for Crisis Consultant Costs\" are part of Loss subject to the aggregate limit, whereas Section 2 lists Crisis Consultant Costs at 2.1 as an item of Loss \"subject to the Limits of Liability stated on the Declaration Page.\" Whether consultant costs erode the aggregate turns on which provision prevails.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c075"
+    },
+    {
+      "clause_id": "c076",
+      "issues": [],
+      "dataset_clause_id": "c076"
+    },
+    {
+      "clause_id": "c077",
+      "issues": [],
+      "dataset_clause_id": "c077"
+    },
+    {
+      "clause_id": "c078",
+      "issues": [
+        {
+          "issue": "Written notice must be given \"within 5 days or as soon as is practicable, whichever is earlier,\" which is self-contradictory: a fixed five-day deadline and an elastic practicability standard cannot be compared for earliness. As a condition precedent to the Insurer's obligations the deadline it sets is indeterminate.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "Sub-paragraph (iv) requires the Insured to \"comply with Condition 8., Statement of Loss,\" but the Policy has no Condition 8 and no condition titled Statement of Loss — the nearest is Condition 5.28, Computation of Loss. The condition precedent points to a provision that does not exist in the instrument.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c078"
+    },
+    {
+      "clause_id": "c079",
+      "issues": [
+        {
+          "issue": "This clause requires all notifications to go to Starr Adjustment Services in Atlanta, while Condition 5.23 requires notices to be given to a party \"at its address shown on the Declaration Page,\" which for the Insurer is 399 Park Avenue, New York. Notice given to one address rather than the other could be attacked under the other provision.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c079"
+    },
+    {
+      "clause_id": "c080",
+      "issues": [
+        {
+          "issue": "Condition 5.23 directs all notices to the address \"shown on the Declaration Page\" subject to the opening words \"except as indicated to the contrary herein,\" while Condition 5.22 specifies a different Atlanta claims address and the Crisis Procedures page adds a third route. Which address satisfies a notice obligation must be resolved across those provisions.",
+          "type": 2,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c080"
+    },
+    {
+      "clause_id": "c081",
+      "issues": [
+        {
+          "issue": "Where a Kidnap and Ransom or Extortion policy exists \"this Policy will co-insure all losses,\" but \"co-insure\" is not defined and no method of sharing — equal shares, proportionate to limits, or otherwise — is stated. The Coinsurance defined elsewhere in 5.11 means something entirely different.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c081"
+    },
+    {
+      "clause_id": "c082",
+      "issues": [
+        {
+          "issue": "Salvage and recoveries \"accrue entirely to the benefit of the Insurer until the sum paid by the Insurer has been recovered,\" while Condition 5.30 subrogates the Insurer only \"to the extent of such payment\" to the Insured's rights of recovery. The allocation of a recovery exceeding or falling short of the payment is governed by both provisions on different terms.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c082"
+    },
+    {
+      "clause_id": "c083",
+      "issues": [
+        {
+          "issue": "The clause says \"the Insurer's right to salvage will not be restricted by the Insured\" and in the next breath that the Insured \"will have full right to the possession of all goods\" and \"will retain control of all damaged goods.\" The two sentences cannot both be given full effect over the same goods.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c083"
+    },
+    {
+      "clause_id": "c084",
+      "issues": [],
+      "dataset_clause_id": "c084"
+    },
+    {
+      "clause_id": "c085",
+      "issues": [
+        {
+          "issue": "Sub-paragraph (ii) directs that a provision capable of being construed as invalid be read down to be enforceable, while sub-paragraph (i) directs that an invalid provision simply be severed. The same defective provision falls within both, and nothing says which remedy applies first.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c085"
+    },
+    {
+      "clause_id": "c086",
+      "issues": [
+        {
+          "issue": "Provisions in conflict with \"the statutes or regulations of the state wherein this Policy is issued\" are amended to conform, but the Policy does not say where it is issued — it was countersigned in New York, delivered to a California insured, and carries a California-specific Service of Suit endorsement. Which state's statutes are imported is genuinely open.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c086"
+    },
+    {
+      "clause_id": "c087",
+      "issues": [],
+      "dataset_clause_id": "c087"
+    },
+    {
+      "clause_id": "c088",
+      "issues": [
+        {
+          "issue": "Detailed claims must be made \"as soon as practicable\" with a computation of Loss, while Condition 5.28(vi) forbids submission of the final statement of loss earlier than twelve months after the event. The two timing rules in the same condition point in opposite directions.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c088"
+    },
+    {
+      "clause_id": "c089",
+      "issues": [
+        {
+          "issue": "This sub-paragraph gives the Insurers the power to \"determine the amount of any Loss,\" while Condition 5.4 provides that if the parties fail to agree on the amount of Loss it will be fixed by appraisers and an umpire. Whether the Insurer's determination is binding or merely a first step depends on reading the two together.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c089"
+    },
+    {
+      "clause_id": "c090",
+      "issues": [
+        {
+          "issue": "Loss of Gross Revenue is here assessed on \"profits generated\" during the twelve months before the Insured Event, whereas definition 3.11 measures it as projected sales revenue less saved variable costs during the Period of Indemnity. The historic-profit and projected-revenue measures conflict.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c090"
+    },
+    {
+      "clause_id": "c091",
+      "issues": [
+        {
+          "issue": "The Insurer is to apply \"standard accounting principles as recognized by the relevant regulatory authorities in the Insured's jurisdiction,\" without identifying either the principles or the authorities, and \"the Insured's jurisdiction\" is itself undefined. The phrase supplies no determinate accounting standard.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c091"
+    },
+    {
+      "clause_id": "c092",
+      "issues": [],
+      "dataset_clause_id": "c092"
+    },
+    {
+      "clause_id": "c093",
+      "issues": [
+        {
+          "issue": "The final statement of loss may not be submitted before twelve months and must be submitted within twenty-four months, while Condition 5.2 bars suit unless commenced within twenty-four months after that statement is submitted. The interaction of the window and the suit limitation determines whether a claim can be timely presented and timely sued upon.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c093"
+    },
+    {
+      "clause_id": "c094",
+      "issues": [
+        {
+          "issue": "\"Nothing in the clause shall be deemed to override the provisions of the Notice of Loss clause\" does not say which clause \"the clause\" is — the immediately preceding sub-paragraph (vi) or the whole of Condition 5.28. The reach of the saving sentence is uncertain on its face.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c094"
+    },
+    {
+      "clause_id": "c095",
+      "issues": [
+        {
+          "issue": "The Valuation Clause puts the burden on the Insured to demonstrate the probable level of sales \"with reasonable certainty,\" while Condition 5.28(ii) states that \"the Insurers shall determine the amount of any Loss.\" Who fixes the counterfactual sales level, and on what standard of proof, is answered differently by the two provisions.",
+          "type": 2,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c095"
+    },
+    {
+      "clause_id": "c096",
+      "issues": [],
+      "dataset_clause_id": "c096"
+    },
+    {
+      "clause_id": "c097",
+      "issues": [
+        {
+          "issue": "The clause says \"Words bolded have special meaning and are defined,\" but the Policy as executed does not consistently bold its defined terms and uses several terms (for example Period of Indemnity and Coinsurance) that are never defined at all. Identifying which words carry the special meaning cannot be done by the stated rule.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c097"
+    },
+    {
+      "clause_id": "c098",
+      "issues": [
+        {
+          "issue": "Customer Loss of Gross Profit is payable only where \"the Insured has a legal obligation to reimburse or pay that customer,\" without saying whether a contractual, statutory or judicially determined obligation is required or whether a voluntary settlement suffices. The trigger of this added coverage rests entirely on that undefined phrase.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c098"
+    },
+    {
+      "clause_id": "c099",
+      "issues": [],
+      "dataset_clause_id": "c099"
+    },
+    {
+      "clause_id": "c100",
+      "issues": [
+        {
+          "issue": "The replacement Exclusion 4.5 still excludes any \"claim made by a third party arising out of or in connection with the use or consumption of the Insured Product(s)\" but carves out Customer Loss of Gross Profit, which by definition A arises from a customer's claim against the Insured. Where the customer's claim is for lost profit the exclusion and the carve-out must be reconciled.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c100"
+    },
+    {
+      "clause_id": "c101",
+      "issues": [
+        {
+          "issue": "The endorsement adds a $3,000,000 Customer Loss of Gross Profit limit \"each Insured Event and in the Aggregate\" without saying whether it sits inside or on top of the $3,000,000 Policy Aggregate Limit on the Declaration Page, and the endorsement's own closing sentence says nothing shall vary the Policy's limits. The two cannot be applied together without a construction.",
+          "type": 2,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c101"
+    },
+    {
+      "clause_id": "c102",
+      "issues": [
+        {
+          "issue": "The endorsement adds a $250,000 retention \"per Insured Event\" for Customer Loss of Gross Profit without stating whether it applies in addition to the Section 1.1 or 1.2 retention for the same event. Condition 5.14's \"each and every Loss\" formulation makes the stacking question live.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c102"
+    },
+    {
+      "clause_id": "c103",
+      "issues": [
+        {
+          "issue": "It is a condition precedent that the Insured provide \"satisfactory documentary evidence\" of the customer's calculation, without saying satisfactory to whom or by what standard. A wholly subjective satisfaction test would place the added coverage at the Insurer's discretion.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c103"
+    },
+    {
+      "clause_id": "c104",
+      "issues": [
+        {
+          "issue": "The sentence that \"nothing herein contained shall be held to vary, alter, waive or change any of the terms, limits or conditions of this policy except as set forth above\" sits against an endorsement that does vary Section 2, Section 3, Exclusion 4.5, the limits and the retentions. The scope of \"except as set forth above\" has to be worked out against each amendment the endorsement makes.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c104"
+    },
+    {
+      "clause_id": "c105",
+      "issues": [],
+      "dataset_clause_id": "c105"
+    },
+    {
+      "clause_id": "c106",
+      "issues": [
+        {
+          "issue": "The endorsement defines \"the Company\" as Starr Surplus Lines Insurance Company, while the Policy itself uses the defined terms \"Insurer\" and \"Insurers\" throughout and never uses \"Company.\" Whether obligations expressed in the endorsement bind the same party as the Policy's obligations requires reading the two vocabularies together.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c106"
+    },
+    {
+      "clause_id": "c107",
+      "issues": [
+        {
+          "issue": "\"This applies in California\" does not say whether the endorsement is limited to suits brought in California, to risks located there, or is simply the California-approved form of a clause that operates generally. That single sentence controls the reach of the Service of Suit undertaking.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c107"
+    },
+    {
+      "clause_id": "c108",
+      "issues": [
+        {
+          "issue": "The Insurer's agreement to \"submit to the jurisdiction of a court of competent jurisdiction within the United States\" at the Insured's request cannot be squared with Condition 5.10, which requires that all claims and disputes be litigated in the New York Supreme Court for New York County or the Southern District of New York. Whether the endorsement supersedes or merely supplements the forum clause is the central relational question.",
+          "type": 2,
+          "prob": 0.62
+        },
+        {
+          "issue": "The clause submits to the Insured's chosen court and then reserves the Insurer's rights \"to remove an action ... or to seek a transfer of a case to another court,\" so it is ambiguous whether it confers a forum choice at all or merely waives objections to personal jurisdiction. The two sentences point in opposite directions.",
+          "type": 1,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c108"
+    },
+    {
+      "clause_id": "c109",
+      "issues": [],
+      "dataset_clause_id": "c109"
+    },
+    {
+      "clause_id": "c110",
+      "issues": [
+        {
+          "issue": "\"All other terms and conditions of this Policy remain unchanged\" would preserve Condition 5.10's New York forum clause, which the body of this same Service of Suit endorsement contradicts. Which sentence yields — the saving clause or the undertaking above it — is exactly what a court would be asked to decide.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c110"
+    },
+    {
+      "clause_id": "c111",
+      "issues": [
+        {
+          "issue": "The Crisis Procedures page states that \"no prior written consent will be required\" for the use of red24, while definition 3.14 makes Pre-incident Crisis Consulting Costs recoverable only for consultants \"hired with the Insurer's prior written consent\" and contains no pre-approval carve-out of the kind found in 3.4. Whether red24's costs are recoverable without consent depends on which text governs.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c111"
+    },
+    {
+      "clause_id": "c112",
+      "issues": [],
+      "dataset_clause_id": "c112"
+    },
+    {
+      "clause_id": "c113",
+      "issues": [
+        {
+          "issue": "The list of consultant types the Insured may request includes \"Producer Defect,\" which is not one of the four Insured Events defined in 3.8 (Accidental Contamination, Governmental Recall, Malicious Product Tampering, Insured Products Extortion). Its appearance invites an argument that the Policy contemplates a category of incident the coverage sections do not.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c113"
+    },
+    {
+      "clause_id": "c114",
+      "issues": [],
+      "dataset_clause_id": "c114"
+    },
+    {
+      "clause_id": "c115",
+      "issues": [],
+      "dataset_clause_id": "c115"
+    },
+    {
+      "clause_id": "c116",
+      "issues": [
+        {
+          "issue": "This page states that the Company \"must be notified in writing as soon as is practible,\" whereas Condition 5.22(iii) requires written notice \"within 5 days or as soon as is practicable, whichever is earlier.\" The claims-procedure page and the policy condition set different written-notice deadlines for the same event.",
+          "type": 2,
+          "prob": 0.23
+        }
+      ],
+      "dataset_clause_id": "c116"
+    }
+  ]
+}

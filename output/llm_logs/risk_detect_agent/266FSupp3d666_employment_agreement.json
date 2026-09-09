@@ -1,0 +1,88 @@
+{
+  "contract_id": "266FSupp3d666_employment_agreement",
+  "model": "claude-opus-5",
+  "effort": "high",
+  "n_provisions": 61,
+  "container_rc": 0,
+  "image": "contract-risk-judge:0.2.139",
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 10,
+  "duration_ms": 222051,
+  "total_cost_usd": 1.2633,
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 68084,
+    "cache_read_input_tokens": 190302,
+    "output_tokens": 19491,
+    "output_tokens_details": {
+      "thinking_tokens": 9710
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 68084,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 43,
+        "cache_read_input_tokens": 67993,
+        "cache_creation_input_tokens": 3322,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3322
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 14,
+      "outputTokens": 19491,
+      "cacheReadInputTokens": 190302,
+      "cacheCreationInputTokens": 68084,
+      "webSearchRequests": 0,
+      "costUSD": 1.263336,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "0e643c8c-4761-4b01-99d5-d0d3ab622234",
+  "errors": null,
+  "result": "61 judgments written (c001–c035 in `predictions_001.json`, c036–c061 in `predictions_002.json`).",
+  "path_denials": [],
+  "rate_limits": {
+    "seven_day": {
+      "status": "allowed_warning",
+      "utilization": 0.77,
+      "resets_at": 1789228800
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 61,
+  "n_wanted": 61,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

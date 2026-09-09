@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "5fa2cd24f1c138514578bd3ef58903a28ec413c33aeecb90e0beb0164f7dc4e9",
+  "document_chars": 9243,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3702,
+    "input_tokens_details": {
+      "cache_write_tokens": 3699,
+      "cached_tokens": 0
+    },
+    "output_tokens": 278,
+    "output_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "total_tokens": 3980
+  },
+  "response": [
+    {
+      "id": "rs_009bd6b296961cdf006aa1d2df630087d0b2d3d44297f937b1",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodLjPPxWdEJLxuZmngW_HOmBDiHSfWEc9ZUxsvg0G-QOb3xqXcKGfTBIVo8f5_PsC-HmO882MtqUeuluNrrCBe6VJD-fs9g6ArgIx7SduhgXPb6jACIxHX6L3mBu1NVGWQanYN94JiIg1FUSSF5KtuxrRj_DKo2b_PIPIMMDzUwBnFmx-UqvvSPp2Y8X0Y2-44Q62f3fqC9TEUCu2Oo5UPUQNgcvJusdLU6mdKsw0SY9-9QY2sVZ_i9eWznRF1693TQuuP6L2mnEEnZsWJnTCiy6k3Q5wsJzygIiQ1lYF_uAcjGkaDIJP_uhtzi9UHGrrEy1ScL2OuPSTvVIViDFkey5vUahL_93uG3d4gIQ7_msD1nvrapYaAZzr1rjn66-s8p3euhJWzC-U4LJ_k2CNpsS70gGNnOW38k-WKKXkQIFxHER3ZBOErEQ0EPdtAJq7clxGNNXtBUL0l1quZEpuA5e252g6TxWVfiMhvYu-PVGUV1pKEr_B2C0Mxz0c-U43j9OOJqzxJI3xqJ6rKbpMh6YQsMqhwRKQSILHFSNUNvlHCsAjDyiosNgEXQrs5rE8Nmgg_EQHKKU8DzXPlOljLSrRSQKRwJGk6te-4IN9AqYQuZUyPshSkbfrVyNZpcjtQkw_8RLDgvCWjG42HbKV0WpdA88gK6Og1VlIQI9wvDOLy3X3UB7SZmjDbbunmjvCA2VFwWN2-CrtQqPCxdFZHuKKKwzaD_t6SDwLkSDOfC_JRNMQoPTPEpkLsAHdiYFx2U8PtcZNvhpkgdSN8dDIvZgOWMhS7jrVwB1ObLCEABzqPjO2iqSvnPr_1c-h1S_-JsYiEm83jhdQSYDijhc1o4TEzzciURENW8DTtZuIYKF3DE9dYARMf7pFJF0g_MSsxHdlKQO3HCU5fO0fnW3mKDtO-Nv-qyr_NxYyPlWXRT2rOFyrIAk-VvvVECHhWQXW_KYQWfqLxzqyu1A0wNkB2uGPuYtafAZ69XgesKpiJ3uUbUrelU_t4aOgBphYT9y1YYkJhTQaOutbWvCkjSrD9WZ-vHp0bYGvcJhuU6QnJCsjrDfqHcPUi4mPXHl1e9yRgWoYc-G2UAKO9PofYwELeXgielskb7qr7WyjnL7-wt9gFio7rL8qyz9ar8tAoWRB9tBQeTTx50_f9RPCXlFel11kJCG14R0CCUPlb1WC33p5sbr7fnOUbzUkLZZPvKvhhlUSekwW7tJnGJHSbMG6lGoSBbISTK2lW07r6sH3QIE9Cgo-jzJxVcEXkAGYkTPhzJiIaDdewEliraJv6BYD7_S2raqqOwzHBSItGLdk8HNEr6s4b5FIvcXltADkhQeEZeWFux3AhgxCJ6HPLXASeusvWDb-SqHzW7u_E-HZ-eSgeb-gv7c-MP7PhsYy-gfbSnEUHnwfSCuVIh6k3UhvIayElEBVizsn0aNQLs7I2YfmRlHY9tYZS-JMF87tlkdWf8vP5w4gIQjZCrXGcrgki9ICFoBnX6rTjwV4WdkqaVmy-fxqv8pwA37VralZkjpKOLnxLERWED4W8tLrHco0o1oUPcDHH3ycZcbM1nZmdEzsOKoFkL8onCuydOo80YT2UU_8UTYmtgJLmuYGAvL13wRn3Y9GViy3-xnw8mu8yW6HdlcsA93p7hlUIlHeRL3g6bASjTNMTZa0cv77hn4wZKR2__KaNrEgsUcMzkcOhphsKRmvcb_SjGH28KrIWigeJStSx6PDIfTR56kzLQkoTkjBAANypb5d6d4oF3KqpXOCMo2qUtzvfiu7MOAbzp9KAxebGK0XFCm8c5MDTYxY-UFbx5eQ0mvjInDIgUYGAA3dYwrngtttA0zSWaSUvoLVeznBK98Izjs0uqDOmC9MBXofAdhlklEFREh2A_uhVxO6h4=",
+      "status": null
+    },
+    {
+      "id": "msg_009bd6b296961cdf006aa1d2e1700c87d0b79298ce470dcd80",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges a conflict between the Event-of-Default limitation in the definition and the separate Buyer’s Margin Amount provision. Candidate g1 instead concerns whether Market Value of the MBS is an unstated input to Termination Value, so it identifies a different silence and relationship between calculations.\",\"words_at_issue\":\"The proposed issue turns on “in connection with any early termination ... as a result of the occurrence of an Event of Default” and its alleged conflict with the Buyer’s Margin Amount provision requiring a calculation as of any date. Candidate g1 turns on the definition’s listed loss-and-cost components—particularly its silence about Market Value of the MBS—and whether Market Value enters the Termination Value calculation.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

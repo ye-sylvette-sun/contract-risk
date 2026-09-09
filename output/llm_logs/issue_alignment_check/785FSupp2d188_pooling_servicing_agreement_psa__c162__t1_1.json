@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "ad903fff2b7c7c1a83bf651cda4500912c0188b1dbe049e858dc0d690f9d23ef",
+  "document_chars": 2719,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2166,
+    "input_tokens_details": {
+      "cache_write_tokens": 2163,
+      "cached_tokens": 0
+    },
+    "output_tokens": 279,
+    "output_tokens_details": {
+      "reasoning_tokens": 105
+    },
+    "total_tokens": 2445
+  },
+  "response": [
+    {
+      "id": "rs_0f79c1a0cc785bc2006aa1d360273c87d09960b6ac6234fdb2",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodNkcG7eErakICHkogPU2x-IuIY5sowUWw7XcJiKTTjZ6Sp7-0xVc9fSemPujRUSYWgPIQhCgPdzd34dIGMnSrg3k1EU0VGKcuyNsM1cLhQcBzxEtSjNxeNwiBouMyYld9s_nWR1FVj8REyLJK1QsPQXXV3J1BcFVYmdesq7O4gbgt3EIhOJZBvUNyL92gllqT3yTYLBrNz77g6UoX8DbNcNPiF_GmUdCPWOEGgY0_kyFd-ZBWCLHO66YAzzrHuwUE36YYqEK247qSfSWCgM3n-G3zPOH8B0DwgJR4pX3Wj41WvXTW3FTX_J1kvIQnkiDRykGOlnsaFjl3MxalHAMoV_OUuKbTMBT2pUySunNImv4WYHGzDuxmpGb_grSGseEvORhm2GGB0ZdGlLuOPnsDqfM_buEboe83FjulZLdwdQlSlwnmMNWb0kw3AhEFiKctBS7M-AMnuOl3hxFo2-M5o07L34cqIb8VV7Gz-BiI8Y7TGTMukxftegq1Jf1fVfLOLFJy32CSDFSiBov_DtIwcFtrf_5bN2FyeGw7C9AriYH_RdaQ6J_ZYofgLKZzcsaeZR8Sf1zgUp9cJhHx3g-X7ryYZdn5H6EZsi5LBNpE05ZNXz4mgvs8_JxtRQIPdKjSq2huDLCBwxaqjxJ5immDAfYW-3Sa6zSLpAKfFTS3GMUFlmXz-RjCItqWGc4vOI5d5y6SG-bQIShse0QEW8t34j2oNHTdTz9HhRE6jW09SnNX0duI1JR8gksA-4AA6Zvubct5X2KqumHV4UKKAsVJxpxbtbiSJG58wRBnYAQzrQ1y3FMpi60oi9I6MriWqMEpkBqoZsiQ3sVJPYDPpbfQYDf_LglqlqD1t4JBIDZ-7OV5VnsNY7OAiVT1uDcNlN9WzTDcLaPZethKlZ31FTwCRlhzLa0rOFoY_IgJ_FKhcyJYyG4pW13WL2Pzt1i48b7-smm3OAscMtNVL6LtTI3j_xXvfSqEhk4SeUgKEW2iloJSd9oOSkYra09rObYYsOEGddT9AYKueo0JAlkRX5bSQfFEXuw_J4jN11jPJLtftPEGQtY4XWKZgcI8CkWmMFWuaiMoGVJfgXQAJXrpaybVcvv6ExxtZ7xlsBnFvwQxqF5N0V68UdnWZ2Gbh-RIcrmewDgI2HyqhgPI4_isQX-v3pcFr-hgNN9k5MkGjlOs-FhgouR-UFPH7p2s-xV4jRqgbARzhY_vyDIahiA7Ep13M7yGJSPNOjiWz5R3V-L7HP0L4iFakcUVTnOiitI2Djil3MOCUxfWtR4KkSJ12Ose5P5MzQOOL5sZ9_V9uvk4AN4j6asoN6I9Kf3C2_khkmW_oIG0rFVLK3-I563_QtHWdaSQ0Kk9RT0rX7cPXggpqusBNdmeMUBkXUHFF9HTxOsGc4Nj-XFw94RLZ2pjEZiHgnO1r-ecpZTZqyE6xAbQxaH8DY3cRPy6mieG4sYPTOYJqEAiJrBhKmCEvBsz8LlpQtgqBhOJTegYGwAJszsdL7KpyINCTUjyaNKMbc263PB_Gezq3Sy8R32xPsfZH7FF4-E0_pVzvuX7OVozJl_U10LJVizteN4SY9TQDan2rCMDDedQCrpyp7E02Zr688BnAeA42bR301nYeF2eZLGo3j8FNTeW1X4nLqNb4-188fuiwWCzoGY5tWe_i7xP6GCXKvBIGI7YI0SgjVep1uwD1nqdUIo5iKwRXI2lHl53QFE8lDpbVzfeF1lrRbDfB2qtq_89bpRAnSMkIQgHE26GBeVxLmvSpmgFUOVeAZSqjLu6BUWfnszAIQQp9UpvRKKb0ITlk_yKqiHpySmppsMwqJiL8dnU2LCiXPgGgUAXqhlQtkaoyzEcDeRUYOrLTR6HbDRA==",
+      "status": null
+    },
+    {
+      "id": "msg_0f79c1a0cc785bc2006aa1d362141c87d088756ecbcc8aa5e0",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges that the definition’s closing catch-all lacks a limiting principle for obligations “owing” to the insurer. Candidate g1 instead identifies redundancy between the separately defined class-specific reimbursement amount and Assured’s interpretation of the payment waterfall in section 4.02(a)(3), so it is a different defect.\",\"words_at_issue\":\"The proposed issue turns on the closing words “any amounts with respect to the Class 2-A-3 Certificates owing to the Certificate Insurer and remaining unpaid,” particularly the absence of a limitation on “owing.” Candidate g1 concerns the separate definition as a whole and its asserted redundancy under section 4.02(a)(3), not the breadth of the closing phrase.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

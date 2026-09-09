@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "07e894bd7118688b2f0765c43873dcaf589488a251d3c5e06180332adc3c2a30",
+  "document_chars": 4772,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2704,
+    "input_tokens_details": {
+      "cache_write_tokens": 2701,
+      "cached_tokens": 0
+    },
+    "output_tokens": 283,
+    "output_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "total_tokens": 2987
+  },
+  "response": [
+    {
+      "id": "rs_07adc8cbec3f6b65006aa1d322aa7887d0b8f11bec4ddff60a",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodMnOu6mF6LhvlapN2A-VTh6I-STlQfu1NVFyqfmhkapgAhKuLPlTyBpfARWQ8AazuUwZHZzuOzeeJHAkrU7hSAfQkATFTqAbwb_NnD2O4b_NTYdPThCi65cGeKNRwe_4o_E-eVzEBRSEP2XCQnd8DsqIWPXjkp_hfcygjd9mMY-PPo-6kRoAGRXkn0hz0VMmN7SnLxy7Dl5aRZBGzhTQF5__XatqhKYm2ZR8kMKPl_DDT2wK1SUlrX_IWT2kc-etJsVOiWZiSPfN9mEu9ahHuLywDZMfRvNvC43DZLYlSCZ2lAuD19NG1qz0K5d37I5-KuMGxuG5DuyAPR3gqPmjmjG5ojCTMxxb7Zci2Ir_z36_hiy8lRv1nDxdYwlloLedLdensKPVxuhU39WszX_fDGpzfJIb1cb4gQRIZAunIJgUnIVFxseEqgMOO9AiBvxQL2Zku768bSM2UM3FhiED0rvpZT1yS8HKPrUwWLB3jf8d7yErUL5KuIxxXgK-WWd0lPSaNHvlpFloe4RcSoKQdiXeHFRbY6WP5GJ52kug3eaoH-HELBBVPvnQIl3cpue6HN9HV0oOpVf9_OhemsbZ8ujs7cuJCO8qHGynQj2ImsAGoeo10sDpdm4cQeKWdv26Qi5svNSyA9o33pGakjTkYUI5u7QJ8-78wGaBlBRdceL7_hQtWyUyKYKysehqCIRqmtZqgjHqIW_Upf96pTkCt0QgTyTx0NM-8eZ6sKjZo7s1woQ_De9g8IiGQHGBj3EoQU4j40X6uInP--e_Bjbk3qujq2qc0CtB0CbCAI5Zi-Zmg-b4np9FH9sxcEVJTwRRkd_Q7APMmJQW8G7PJo7iJ7PUDYsVxYUH5yU91vrAacNQZne4-msYMcUY8_dAXKn_qYMuydcXH6krx5nVZLQ3iyAXl8MPrD4NTFJBSeALfmMk71hMlb2PJDhVF1NIOYuyUmCkjtDkM1qDsnK4s_lrhqzd5_f7hKovU_TiTjI48tmxtfioD0W2suwF97xtiKQMjTXYoUdZ0x4zqC8oz7cL5DFzFluaPmmoJ7wEC-l1NA0a0ryLv0PklUD8XvHSM77fXUISzGsV1Nd1lBfHWkS57GHwjJoJaP9Enx0W-a56oXH97I0eAlMg8dE_nGNCB8n94MJ_YGqcJaeZZTZeHvseldvAY-x3xrrdcmCQtZ_kVydys60RsJarqv6oI9tRin7KcyfyUsR79CIjlhqZzPlUyUliX-PjexZNhzRfxhpXIuRTqSDeR2zqE77zzNIQSCVXQqHLzXAIVdNuSkhf27TkSAXjLm3hhnTCwZjDKLznInqT9Nm8FqY5_du2aQMxiWWqukXR_5ZgGkNkDl5kN52tVDR3oUbZLMRIEUKOcxwYA9m0wsVnitEvlBpmY45BT4kZ6OtZGcoXf0nYzYTaW0qFh7Loo7-gdgLQVsQMbZ8IMQaRnxSevsts7b6uL6H2ve5s180twLCOF52v4aisBUY9YO8YJociShg5tYsA0CBpPm-HmCUsce9inKfxO67dh2z19UV25sugJpctLDVIpAnoOTEQ_uhmYgZB7W9-vP5VfTnwm_VjROpFSHWya6bR4VtrKsptI0U8sb5dTaUWC2LgieLq_KwxplIPpwkkK9MNNO8YoKzxBNHoK5mv9S3P5KjJs4wNaTOh0AtgwWZ_A11DVmawW0m7uFV-N2hakPDXzJOsAhUV_3uR-Zo2GSu7m6hKqB-c3sdYsSMtgZBf3x1V1hHJD8kLYmFgsihcABQaM7d_YBW6fQvxt-1LFc6syejBnF1HnWolzBOHXCwu0IwX4I8dvFr9KnhLk38ajxFIhwx8JY=",
+      "status": null
+    },
+    {
+      "id": "msg_07adc8cbec3f6b65006aa1d3243bc087d0b5e124c73cc230b8",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges a conflict between two denominator measures: the NPA’s Loan Portfolio and the Private Offering Memorandum’s total Company assets. Candidate g1 instead concerns which loans fall within “Related Party Loans,” specifically the exclusion for loans to a Sponsored Investment Fund; it does not identify a conflict over the denominator.\",\"words_at_issue\":\"The proposed issue turns on “twenty percent (20%) of the Loan Portfolio” and its alleged conflict with “total Company assets” in the Private Offering Memorandum. Candidate g1 turns on “all outstanding Related Party Loans” together with the separate definitional exclusion for loans whose borrower or co-borrower is a Sponsored Investment Fund, which determined whether MF08’s loans to R.E. Loans counted at all.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": [
+   {"issue": "The clause that \"this Confirmation shall govern\" any inconsistency cannot be squared with Paragraph 3(b) of the June 15, 2005 Master Repurchase Agreement, which provides that in the event of any conflict between a Confirmation and the Agreement \"this Agreement shall prevail.\" It also sits against its own preceding sentence that all provisions of the Agreement govern this Confirmation.", "type": 2, "prob": 0.58}
+ ]},
+ {"clause_id": "c002", "issues": [
+   {"issue": "The all-capitals notice describes a \"VOLUNTARY EARLY TERMINATION\" at Counterparty's request and an \"EARLY TERMINATION PRICE\" set by BCI as if it were the non-defaulting party. No such Counterparty-requested termination or price mechanism appears in the Early Termination Right provision, which gives a termination right only to Buyer.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c003", "issues": []},
+ {"clause_id": "c004", "issues": [
+   {"issue": "\"Private Label MBS (AAA)\" describes the Purchased Securities only by class and rating, and it is unclear whether the parenthetical \"(AAA)\" is mere description or a condition of eligibility. The Credit Rating provision treats the rating as operative without saying what this parenthetical promises.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c005", "issues": []},
+ {"clause_id": "c006", "issues": []},
+ {"clause_id": "c007", "issues": [
+   {"issue": "The Seller is named \"Thornburg Mortgage Inc.,\" while the Master Repurchase Agreement of June 15, 2005 was entered into with \"Thornburg Mortgage Incorporated.\" Whether the two designations denote the same contracting entity is left to inference.", "type": 2, "prob": 0.08}
+ ]},
+ {"clause_id": "c008", "issues": []},
+ {"clause_id": "c009", "issues": []},
+ {"clause_id": "c010", "issues": [
+   {"issue": "\"Contractual Currency\" is defined in the Master Repurchase Agreement only in Annex III, and then only for International Transactions, so its use in this domestic USD Confirmation is unanchored. Nothing in the Confirmation says what work the designation does.", "type": 2, "prob": 0.10}
+ ]},
+ {"clause_id": "c011", "issues": [
+   {"issue": "The Repurchase Date for each Subsequent Transaction is fixed as the 14th day of the month \"next succeeding month following the Subsequent Transaction,\" which is circular because the Subsequent Transaction commences on the prior Repurchase Date. The parallel clauses in Confirmations 3, 4 and 8 instead measure from \"the Purchase Date for such Subsequent Transaction.\"", "type": 1, "prob": 0.27}
+ ]},
+ {"clause_id": "c012", "issues": [
+   {"issue": "The rate for the remainder of the Transactions is stated as \"p.a., fixed, adjusted,\" with no adjustment mechanism, trigger or benchmark identified anywhere in the Confirmation. It is also unstated when \"the remainder of the Transactions\" begins if the twelve-month Libor period is cut short.", "type": 1, "prob": 0.33}
+ ]},
+ {"clause_id": "c013", "issues": []},
+ {"clause_id": "c014", "issues": []},
+ {"clause_id": "c015", "issues": [
+   {"issue": "\"Notwithstanding the foregoing\" has no identifiable antecedent: the entries immediately preceding are the Pricing Rate and Buyer's Margin Percentage, neither of which a termination right displaces. What the clause is meant to override is left open.", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "The Initial Transaction is defined by reference to \"the first Repurchase Date specified below,\" but the Repurchase Date entry appears above this one in the Confirmation, not below. The cross-reference points nowhere on its face.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c017", "issues": [
+   {"issue": "Subsequent Transactions are deemed entered into on terms \"(other than the Purchase Date and Repurchase Date) identical to the Initial Transaction,\" which cannot be squared with the Pricing Rate provision under which later Transactions bear a different fixed rate. The two provisions cannot both be given effect for the later rolls.", "type": 2, "prob": 0.33}
+ ]},
+ {"clause_id": "c018", "issues": [
+   {"issue": "The Final Repurchase Date is made subject to the Business Day convention \"set out under 'Repurchase Date',\" while the Repurchase Date provision in turn defines the Final Repurchase Date as the \"last Repurchase Date.\" The two definitions are circular.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c019", "issues": [
+   {"issue": "On a Downgrade Event Seller must deliver \"Securities acceptable to Buyer, in Buyer's discretion,\" with no standard of acceptability and no time limit for performance. Because the Purchased Securities are described as AAA, any one-notch downgrade triggers the duty with no materiality floor.", "type": 1, "prob": 0.28}
+ ]},
+ {"clause_id": "c020", "issues": [
+   {"issue": "\"Termination Value\" turns on what the Calculation Agent thinks \"necessary to compensate the non-defaulting party fairly,\" measured by what a hypothetical \"Dealer of recognized standing\" would charge, with no requirement that any actual quotation be obtained. Neither \"fairly\" nor \"transactions similar to the Transaction\" is defined.", "type": 1, "prob": 0.48},
+   {"issue": "Termination Value is defined only for early termination \"as a result of the occurrence of an Event of Default,\" yet the Buyer's Margin Amount provision requires it to be computed as of any date as if Buyer were the non-defaulting party. The definition and that provision cannot both be read literally.", "type": 2, "prob": 0.33}
+ ]},
+ {"clause_id": "c021", "issues": [
+   {"issue": "The defaulting party owes Termination Value \"in addition to\" amounts payable under Paragraph 11 of the Master Repurchase Agreement, which already awards replacement-transaction and hedge-termination costs under Paragraph 11(g). Whether the Termination Value carve-out for \"amounts payable ... under Paragraph 11\" avoids double recovery is unresolved.", "type": 2, "prob": 0.32}
+ ]},
+ {"clause_id": "c022", "issues": [
+   {"issue": "This provision redefines \"Buyer's Margin Amount\" to include the Positive or Negative Termination Value, which cannot be squared with Paragraph 2(c) of the Master Repurchase Agreement, where the term is simply the Buyer's Margin Percentage applied to the Repurchase Price. Paragraph 3(b) of that Agreement provides that the Agreement prevails over a conflicting Confirmation.", "type": 2, "prob": 0.45}
+ ]},
+ {"clause_id": "c023", "issues": [
+   {"issue": "Requiring Margin Deficits and Margin Excesses to be calculated \"independently\" for two groups of Transactions cannot be squared with Paragraph 4(a) of the Master Repurchase Agreement, which measures a Margin Deficit against the aggregate Market Value of all Purchased Securities under all Transactions. It also sits against Paragraph 12's single-agreement and set-off provisions.", "type": 2, "prob": 0.32}
+ ]},
+ {"clause_id": "c024", "issues": [
+   {"issue": "The provision makes Barclays Capital Inc. the sole determiner of the Termination Value that drives its own margin calls, and of the Pricing Rate, without stating any standard, source or method here. The only qualifier, \"in good faith,\" sits in a different provision, and \"BCI\" is defined only in the all-capitals warning.", "type": 1, "prob": 0.32}
+ ]},
+ {"clause_id": "c025", "issues": [
+   {"issue": "The provision assumes Buyer may apply Income constituting a Principal Payment under clause (ii) of the second sentence of Paragraph 5 of the Agreement, but Annex I ¶3 (Purchase Price Maintenance) requires Buyer to transfer such Income to Seller under clause (i) and forbids application under clause (ii). Annex I ¶2 provides that the Annex governs any inconsistency with the Agreement.", "type": 2, "prob": 0.45}
+ ]},
+ {"clause_id": "c026", "issues": [
+   {"issue": "\"[E]qual or better quality\" and \"similar characteristics\" are undefined standards for substitute securities, with no rating, benchmark or measure supplied. Only the third condition, Market Value, is tied to a defined term.", "type": 1, "prob": 0.32},
+   {"issue": "Putting substitution wholly at \"Buyer's sole and absolute discretion\" under Paragraph 9(a) cannot be squared with Paragraph 9(c), added by Annex I ¶4 of the Master Repurchase Agreement, which gives Seller a right on notice to substitute substantially the same Securities subject only to Buyer's election to refuse and then offer termination. Annex I ¶2 provides that the Annex governs.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c027", "issues": [
+   {"issue": "The two-per-month cap cannot be squared with the Principal Payments provision, under which Seller \"may at any time substitute other Securities\" for a Principal Payment, or with the Credit Rating provision's unqualified duty to substitute on a Downgrade Event. Which controls in a month already exhausted is unstated.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c028", "issues": [
+   {"issue": "The clause deems substitutes for \"the Purchase Securities\" to be Purchased Securities, using a term that is defined nowhere; the defined term in the Agreement is \"Purchased Securities.\" The class of replaced instruments is left to inference.", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c029", "issues": [
+   {"issue": "The non-reliance representation is made only \"on the Contract Date\" and carves out \"information and explanations related to the terms and conditions of this Transaction,\" leaving open whether Barclays' pre-trade valuation statements fall inside or outside the carve-out. The line between an \"explanation\" of terms and \"investment advice\" is not drawn.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c030", "issues": [
+   {"issue": "\"[C]apable of assessing the merits of and understanding\" the Transaction states no measurable standard, and the closing sentence mixes a representation of capacity with an actual assumption of risk. Whether \"assumes the risks\" operates as a waiver is unclear.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c031", "issues": [
+   {"issue": "The disclaimer that \"the other party is not acting as a fiduciary for, or an adviser to, it\" sits against the Calculation Agent provision, under which Barclays alone determines the Termination Value and Pricing Rate binding on Seller. Whether that appointment creates duties the disclaimer purports to negate is left open.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c032", "issues": [
+   {"issue": "The provision requires a response within three Business Days by signing and both faxing and mailing the Confirmation, while the immediately following provision says failure to respond does not affect validity or enforceability. Whether signature is required at all is unresolved.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c033", "issues": [
+   {"issue": "Making the Transactions valid and enforceable despite no response cannot be squared with Paragraph 3(b) of the Master Repurchase Agreement, under which the Confirmation is conclusive evidence of the terms \"unless ... specific objection is made promptly after receipt.\" The two allocate the consequences of silence differently.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c034", "issues": [
+   {"issue": "\"This facsimile shall be the only documentation in respect of the Transactions\" read literally excludes the Master Repurchase Agreement and its Annexes, which the Governing Agreement provision says this Confirmation forms part of and is subject to. Both sentences cannot be given their plain effect.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c035", "issues": [
+   {"issue": "\"[I]nformation ... concerning its clients and prospective clients\" leaves \"its\" without a clear antecedent among Barclays Bank PLC and its several affiliates, so whose client information may be shared is unclear. Barclays Bank PLC is also not a party to this Confirmation or to the Agreement.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c036", "issues": [
+   {"issue": "The clause that \"this Confirmation shall govern\" any inconsistency cannot be squared with Paragraph 3(b) of the June 15, 2005 Master Repurchase Agreement, which provides that in the event of any conflict between a Confirmation and the Agreement \"this Agreement shall prevail.\" It also sits against its own preceding sentence that all provisions of the Agreement govern this Confirmation.", "type": 2, "prob": 0.58}
+ ]},
+ {"clause_id": "c037", "issues": [
+   {"issue": "The all-capitals notice describes a \"VOLUNTARY EARLY TERMINATION\" at Counterparty's request and an \"EARLY TERMINATION PRICE\" set by BCI as if it were the non-defaulting party. No such Counterparty-requested termination or price mechanism appears in the Early Termination Right provision, which gives a termination right only to Buyer.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c038", "issues": []},
+ {"clause_id": "c039", "issues": [
+   {"issue": "\"Private Label MBS (AAA)\" describes the Purchased Securities only by class and rating, and it is unclear whether the parenthetical \"(AAA)\" is mere description or a condition of eligibility. The Credit Rating provision treats the rating as operative without saying what this parenthetical promises.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c040", "issues": [
+   {"issue": "Three CUSIPs are listed against a single aggregate Purchase Price with no allocation of price or face amount among them. The Subsequent Transactions provision rolls \"the same face amount of equivalent Purchased Securities,\" which cannot be computed security by security from this entry.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c041", "issues": [
+   {"issue": "This entry names only the Buyer, and Confirmation 2 nowhere identifies the Seller. That omission cannot be squared with Paragraph 3(b) of the Master Repurchase Agreement, which requires each Confirmation to \"identify Buyer and Seller.\"", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c042", "issues": []},
+ {"clause_id": "c043", "issues": []},
+ {"clause_id": "c044", "issues": [
+   {"issue": "\"Contractual Currency\" is defined in the Master Repurchase Agreement only in Annex III, and then only for International Transactions, so its use in this domestic USD Confirmation is unanchored. Nothing in the Confirmation says what work the designation does.", "type": 2, "prob": 0.10}
+ ]},
+ {"clause_id": "c045", "issues": [
+   {"issue": "The Repurchase Date for each Subsequent Transaction is the 28th day of \"the next succeeding month following the Subsequent Transaction,\" which is circular because the Subsequent Transaction commences on the prior Repurchase Date. Confirmations 3, 4 and 8 instead measure from \"the Purchase Date for such Subsequent Transaction.\"", "type": 1, "prob": 0.27}
+ ]},
+ {"clause_id": "c046", "issues": [
+   {"issue": "The rate for the following Subsequent Transactions is stated as \"p.a., fixed, adjusted,\" with no adjustment mechanism, trigger or benchmark identified anywhere in the Confirmation. Nor is it said how the twenty-four-month Libor period interacts with an early termination.", "type": 1, "prob": 0.33}
+ ]},
+ {"clause_id": "c047", "issues": []},
+ {"clause_id": "c048", "issues": []},
+ {"clause_id": "c049", "issues": [
+   {"issue": "\"Notwithstanding the foregoing\" has no identifiable antecedent: the entries immediately preceding are the Pricing Rate and Buyer's Margin Percentage, neither of which a termination right displaces. What the clause is meant to override is left open.", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c050", "issues": [
+   {"issue": "The Initial Transaction is defined by reference to \"the first Repurchase Date specified below,\" but the Repurchase Date entry appears above this one in the Confirmation, not below. The cross-reference points nowhere on its face.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c051", "issues": [
+   {"issue": "Subsequent Transactions are deemed entered into on terms \"(other than the Purchase Date and Repurchase Date) identical to the Initial Transaction,\" which cannot be squared with the Pricing Rate provision under which later Transactions bear a different fixed rate. The two provisions cannot both be given effect for the later rolls.", "type": 2, "prob": 0.33}
+ ]},
+ {"clause_id": "c052", "issues": [
+   {"issue": "The Final Repurchase Date is made subject to the Business Day convention \"set out under 'Repurchase Date',\" while the Repurchase Date provision in turn defines the Final Repurchase Date as the \"last Repurchase Date.\" The two definitions are circular.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c053", "issues": [
+   {"issue": "On a Downgrade Event Seller must deliver \"Securities acceptable to Buyer, in Buyer's discretion,\" with no standard of acceptability and no time limit for performance. Because the Purchased Securities are described as AAA, any one-notch downgrade triggers the duty with no materiality floor.", "type": 1, "prob": 0.28}
+ ]},
+ {"clause_id": "c054", "issues": [
+   {"issue": "\"Termination Value\" turns on what the Calculation Agent thinks \"necessary to compensate the non-defaulting party fairly,\" measured by what a hypothetical \"Dealer of recognized standing\" would charge, with no requirement that any actual quotation be obtained. Neither \"fairly\" nor \"transactions similar to the Transaction\" is defined.", "type": 1, "prob": 0.48},
+   {"issue": "Termination Value is defined only for early termination \"as a result of the occurrence of an Event of Default,\" yet the Buyer's Margin Amount provision requires it to be computed as of any date as if Buyer were the non-defaulting party. The definition and that provision cannot both be read literally.", "type": 2, "prob": 0.33}
+ ]},
+ {"clause_id": "c055", "issues": [
+   {"issue": "The defaulting party owes Termination Value \"in addition to\" amounts payable under Paragraph 11 of the Master Repurchase Agreement, which already awards replacement-transaction and hedge-termination costs under Paragraph 11(g). Whether the Termination Value carve-out for \"amounts payable ... under Paragraph 11\" avoids double recovery is unresolved.", "type": 2, "prob": 0.32}
+ ]},
+ {"clause_id": "c056", "issues": [
+   {"issue": "This provision redefines \"Buyer's Margin Amount\" to include the Positive or Negative Termination Value, which cannot be squared with Paragraph 2(c) of the Master Repurchase Agreement, where the term is simply the Buyer's Margin Percentage applied to the Repurchase Price. Paragraph 3(b) of that Agreement provides that the Agreement prevails over a conflicting Confirmation.", "type": 2, "prob": 0.45}
+ ]},
+ {"clause_id": "c057", "issues": [
+   {"issue": "Requiring Margin Deficits and Margin Excesses to be calculated \"independently\" for two groups of Transactions cannot be squared with Paragraph 4(a) of the Master Repurchase Agreement, which measures a Margin Deficit against the aggregate Market Value of all Purchased Securities under all Transactions. It also sits against Paragraph 12's single-agreement and set-off provisions.", "type": 2, "prob": 0.32}
+ ]},
+ {"clause_id": "c058", "issues": [
+   {"issue": "The provision makes Barclays Capital Inc. the sole determiner of the Termination Value that drives its own margin calls, and of the Pricing Rate, without stating any standard, source or method here. The only qualifier, \"in good faith,\" sits in a different provision, and \"BCI\" is defined only in the all-capitals warning.", "type": 1, "prob": 0.32}
+ ]},
+ {"clause_id": "c059", "issues": [
+   {"issue": "The provision assumes Buyer may apply Income constituting a Principal Payment under clause (ii) of the second sentence of Paragraph 5 of the Agreement, but Annex I ¶3 (Purchase Price Maintenance) requires Buyer to transfer such Income to Seller under clause (i) and forbids application under clause (ii). Annex I ¶2 provides that the Annex governs any inconsistency with the Agreement.", "type": 2, "prob": 0.45}
+ ]},
+ {"clause_id": "c060", "issues": [
+   {"issue": "\"[E]qual or better quality\" and \"similar characteristics\" are undefined standards for substitute securities, with no rating, benchmark or measure supplied. Only the third condition, Market Value, is tied to a defined term.", "type": 1, "prob": 0.32},
+   {"issue": "Putting substitution wholly at \"Buyer's sole and absolute discretion\" under Paragraph 9(a) cannot be squared with Paragraph 9(c), added by Annex I ¶4 of the Master Repurchase Agreement, which gives Seller a right on notice to substitute substantially the same Securities subject only to Buyer's election to refuse and then offer termination. Annex I ¶2 provides that the Annex governs.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c061", "issues": [
+   {"issue": "The two-per-month cap cannot be squared with the Principal Payments provision, under which Seller \"may at any time substitute other Securities\" for a Principal Payment, or with the Credit Rating provision's unqualified duty to substitute on a Downgrade Event. Which controls in a month already exhausted is unstated.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c062", "issues": [
+   {"issue": "The clause deems substitutes for \"the Purchase Securities\" to be Purchased Securities, using a term that is defined nowhere; the defined term in the Agreement is \"Purchased Securities.\" The class of replaced instruments is left to inference.", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c063", "issues": [
+   {"issue": "The non-reliance representation is made only \"on the Contract Date\" and carves out \"information and explanations related to the terms and conditions of this Transaction,\" leaving open whether Barclays' pre-trade valuation statements fall inside or outside the carve-out. The line between an \"explanation\" of terms and \"investment advice\" is not drawn.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c064", "issues": [
+   {"issue": "\"[C]apable of assessing the merits of and understanding\" the Transaction states no measurable standard, and the closing sentence mixes a representation of capacity with an actual assumption of risk. Whether \"assumes the risks\" operates as a waiver is unclear.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c065", "issues": [
+   {"issue": "The disclaimer that \"the other party is not acting as a fiduciary for, or an adviser to, it\" sits against the Calculation Agent provision, under which Barclays alone determines the Termination Value and Pricing Rate binding on Seller. Whether that appointment creates duties the disclaimer purports to negate is left open.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c066", "issues": [
+   {"issue": "The provision requires a response within three Business Days by signing and both faxing and mailing the Confirmation, while the immediately following provision says failure to respond does not affect validity or enforceability. Whether signature is required at all is unresolved.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c067", "issues": [
+   {"issue": "Making the Transactions valid and enforceable despite no response cannot be squared with Paragraph 3(b) of the Master Repurchase Agreement, under which the Confirmation is conclusive evidence of the terms \"unless ... specific objection is made promptly after receipt.\" The two allocate the consequences of silence differently.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c068", "issues": [
+   {"issue": "\"This facsimile shall be the only documentation in respect of the Transactions\" read literally excludes the Master Repurchase Agreement and its Annexes, which the Governing Agreement provision says this Confirmation forms part of and is subject to. Both sentences cannot be given their plain effect.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c069", "issues": [
+   {"issue": "\"[I]nformation ... concerning its clients and prospective clients\" leaves \"its\" without a clear antecedent among Barclays Bank PLC and its several affiliates, so whose client information may be shared is unclear. Barclays Bank PLC is also not a party to this Confirmation or to the Agreement.", "type": 1, "prob": 0.15}
+ ]}
+]}

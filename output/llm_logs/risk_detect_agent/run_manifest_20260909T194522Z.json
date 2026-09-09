@@ -1,0 +1,207 @@
+{
+  "run": "agent",
+  "started_utc": "2026-09-09T19:45:22+00:00",
+  "finished_utc": "2026-09-09T20:15:43+00:00",
+  "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "C:\\Users\\jnhsy\\miniconda3\\envs\\contract-risk\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "claude-agent-sdk": "0.2.139",
+    "anthropic": "0.122.0",
+    "httpx": "0.28.1",
+    "matplotlib": "3.8.4",
+    "openpyxl": "3.1.2"
+  },
+  "cli_path": "C:\\Users\\jnhsy\\miniconda3\\envs\\contract-risk\\Lib\\site-packages\\claude_agent_sdk\\_bundled\\claude.exe",
+  "cli_version": "2.1.233 (Claude Code)",
+  "cli_on_path": "C:\\Users\\jnhsy\\.local\\bin\\claude.EXE",
+  "git_commit": "c79af23f56573745cb682aca1752c4d53cfece87",
+  "git_dirty": true,
+  "model": "claude-opus-5",
+  "effort": "high",
+  "max_turns": 100,
+  "billing": "subscription",
+  "options": {
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Write"
+    ],
+    "allowed_tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Write"
+    ],
+    "system_prompt": "sha256:cf3c3a720e64203e668d51c058095fc72bed8a56f7f92dc05e763546b8ed791e",
+    "mcp_servers": {},
+    "strict_mcp_config": true,
+    "permission_mode": "acceptEdits",
+    "continue_conversation": false,
+    "resume": null,
+    "session_id": null,
+    "max_turns": 100,
+    "max_budget_usd": null,
+    "disallowed_tools": [
+      "Bash",
+      "BashOutput",
+      "KillShell",
+      "Edit",
+      "NotebookEdit",
+      "WebFetch",
+      "WebSearch",
+      "Task",
+      "Skill",
+      "TodoWrite",
+      "SlashCommand"
+    ],
+    "model": "claude-opus-5",
+    "fallback_model": null,
+    "betas": [],
+    "permission_prompt_tool_name": null,
+    "cwd": "/work",
+    "cli_path": null,
+    "settings": null,
+    "add_dirs": [],
+    "env": {},
+    "extra_args": {},
+    "max_buffer_size": null,
+    "debug_stderr": "<TextIOWrapper>",
+    "stderr": null,
+    "can_use_tool": null,
+    "hooks": {
+      "PreToolUse": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Write"
+      ]
+    },
+    "user": null,
+    "include_partial_messages": false,
+    "include_hook_events": false,
+    "fork_session": false,
+    "resume_session_at": null,
+    "resume_drops_turn": null,
+    "agents": null,
+    "setting_sources": [],
+    "skills": [],
+    "sandbox": null,
+    "plugins": [],
+    "max_thinking_tokens": null,
+    "thinking": null,
+    "effort": "high",
+    "output_format": null,
+    "enable_file_checkpointing": false,
+    "session_store": null,
+    "session_store_flush": "batched",
+    "load_timeout_ms": 60000,
+    "task_budget": null,
+    "task_prompt": "sha256:5b72fb737334672f023cb19c9573541129e3b860b5d4b25d8905f40b9b8bfe57"
+  },
+  "seed": null,
+  "container": {
+    "image": "contract-risk-judge:0.2.139",
+    "image_id": "sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec",
+    "auth": "token",
+    "parallel": 6,
+    "dockerfile_sha256": "b4e4d7cb54f32ad1b3152bbd3e8c035eec5d626f6517390762e184ee6f5b4ea2",
+    "entrypoint_sha256": "9201749b1587e393c3065f5816b52d1883b35270559ceec9c9f891108c405c4d",
+    "isolation_sha256": "d216d8460831e446b039d18bbe3594043962621723b40b3f1b5298a9cd493b34"
+  },
+  "contract_order": [
+    "161FSupp3d970_policy_of_insurance_number",
+    "252FSupp3d52_agreement_for_network_operator",
+    "35FSupp3d725_confirmations",
+    "359FSupp3d268_leases",
+    "298FRD417_director_s_officer_s",
+    "129FSupp3d782_the_policy",
+    "18FSupp3d456_phoenix_accumulator_universal_life",
+    "177FSupp3d561_2012_13_student_handbook",
+    "2FSupp3d296_lease",
+    "35FSupp3d725_master_repurchase_agreement_mra",
+    "177FSupp3d561_2011_12_edition_of",
+    "694FSupp2d794_umbrella_liability_policy_number",
+    "88FSupp3d1156_product_contamination_insurance_policy",
+    "215FSupp3d756_oil_and_gas_lease",
+    "35FSupp3d725_thornburg_s_mra_with",
+    "694FSupp2d794_excess_cession_reinsurance_agreement",
+    "20FSupp3d709_nols_student_agreement_including",
+    "808FSupp2d552_trademark_license_and_cooperation",
+    "266FSupp3d666_employment_agreement",
+    "702FSupp2d921_the_trust",
+    "122FSupp3d1157_broker_dealer_agreement",
+    "814FSupp2d930_workout_agreement",
+    "268FSupp3d61_contract",
+    "809FSupp2d582_memorandum_of_understanding_mou",
+    "57FSupp3d920_management_agreement",
+    "88FSupp3d27_e_mployment_b_inding",
+    "252FSupp3d52_guaranty_agreement",
+    "809FSupp2d582_april_28_2008_letter",
+    "694FSupp2d106_confidential_disclosure_agreement",
+    "122FSupp3d1157_proposal_to_provide_investment"
+  ],
+  "examples": [
+    {
+      "kind": "type1",
+      "contract_id": "562FSupp2d260_settlement_agreement_the_agreement",
+      "codes": [
+        "1.1"
+      ],
+      "n_defects": 7,
+      "clause_ids": [
+        "c002",
+        "c003",
+        "c004"
+      ]
+    },
+    {
+      "kind": "type2",
+      "contract_id": "118FSupp3d802_membership_agreement",
+      "codes": [
+        "2.2"
+      ],
+      "n_defects": 2,
+      "clause_ids": [
+        "c044",
+        "c046"
+      ]
+    },
+    {
+      "kind": "mixed",
+      "contract_id": "299FSupp3d836_comcell_assignment",
+      "codes": [
+        "1.1",
+        "2.2"
+      ],
+      "n_defects": 3,
+      "clause_ids": [
+        "c088",
+        "c099"
+      ]
+    }
+  ],
+  "env_removed": "swept in container; see per-contract _session.json",
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  },
+  "prompt_sha256": {
+    "risk_detect.md": "d08b437fe55a3b907d42b7f017919d4876245ffea55f3117c755e67361e16a15",
+    "risk_detect.schema.json": "feadee4bee6e0a7702cc883419503dc3c5108904331fd7036e34bc2a88336ed3"
+  },
+  "input_sha256": {
+    "dataset": "dd4b74668d6b86e0e3f754b4305db69726251482d18f8792cbf8cfb517257838",
+    "contracts": "db24c041ffe47368a4fcb46f814c0cbb620a74250fb2e99a6ef6a1bc6b008182"
+  },
+  "contracts_run": 30,
+  "cost_usd_api_equivalent": 57.12,
+  "models_seen": [
+    "claude-opus-5"
+  ]
+}

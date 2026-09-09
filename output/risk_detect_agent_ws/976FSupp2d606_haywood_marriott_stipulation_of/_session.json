@@ -1,0 +1,82 @@
+{
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 8,
+  "duration_ms": 90007,
+  "total_cost_usd": 0.7147,
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 47723,
+    "cache_read_input_tokens": 95598,
+    "output_tokens": 7585,
+    "output_tokens_details": {
+      "thinking_tokens": 4145
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 47723,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 9,
+        "cache_read_input_tokens": 43885,
+        "cache_creation_input_tokens": 7069,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7069
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 10,
+      "outputTokens": 7585,
+      "cacheReadInputTokens": 95598,
+      "cacheCreationInputTokens": 47723,
+      "webSearchRequests": 0,
+      "costUSD": 0.714704,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "20cca3be-35c5-4266-81a5-3f3e06fcaeaf",
+  "errors": null,
+  "result": "22 judgments written.",
+  "path_denials": [],
+  "rate_limits": {
+    "seven_day": {
+      "status": "allowed_warning",
+      "utilization": 0.8,
+      "resets_at": 1789228800
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 22,
+  "n_wanted": 22,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

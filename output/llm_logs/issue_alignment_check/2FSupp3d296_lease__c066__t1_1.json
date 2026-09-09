@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "0b40a6d738d5720010a1bb1ee517a9e0571051ce6bba4970a7a88fdfcbc489f3",
+  "document_chars": 7456,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3270,
+    "input_tokens_details": {
+      "cache_write_tokens": 3267,
+      "cached_tokens": 0
+    },
+    "output_tokens": 222,
+    "output_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "total_tokens": 3492
+  },
+  "response": [
+    {
+      "id": "rs_02eeffd60c47cd94006aa1d2a6824087d0b4f23138c17c2ecf",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodKqys99jibZGnExBXZIpmxXuUViM2UcpVm-R-VmJBMaJZA1YEbE1tD6QwefzC8WlgMi3sMQ7FP3Vd2u2imTpeztfdvvBVRBmyV5GAD7v0sNjUHHbX4mU_hXs1MH7RS9wLQpvqqbcDl234V2Kj1hQmONjBXkIYRH4Vx3fUIno01jg4czZYj6F_qbVhjfYMlLeeHZxvIGeBp3tOnSRQIrTCi9FskmR4UQQKFNDMwzJLf7aL1MRFxURVBataci7S_eu-IHdz20b_f0KPw9RpPyp0CH9vQkAO-UXpucK04OIYZjLf9YF6cFEmsW93BEEkE18iB1K-7sZrR7o41MH9K1wyd-fXFp2dqdNp_4HWBzH9_9B3txlQU5KQd8ML-FEviMLuTN4YbZFfF1TF3uk07kHG9lgrAi5lxVg0iNNfFY2u6kTEudRj6Cn4oZ-A0HZu28EBJo8CXLgEtR--wTqxTJYy9PwZg3lVY6pOmwLmJABucu0Lffz3ht3rHyb32Y7X_1hiS6brK5zMROZD7XsqODmlZBn1ky5bods-V_slW_ifzO8kr7BTxLZz3KgPtuYR8FCVOVeEG_aUdEtik8s0dlOhVGVbDFk0pRCE92pif9BNQDctb0zuEQytrcyn9qt4lH8h5Gi4bphwZ1Tb3trAK6A72ebmciWfPgt-CInw_jrbpd2xWVnFWBSwubvUw7eE7pailVzrX7EbCHPdoSfofUQaN0U2u6L7gVbIehCx8RqWBze5pCMJnd4NSe1dYq2oV-M8AoYT7qzqlAz2EPb3imZ9YfsxfliWa4SSicDTiatOM-3pBu00qLsmC0UMAUK2caN_Oa4JGcZ0qRaH35eSelFrZjPj_iNKrCelAw37MSy9TRPEz0x5zhvCW3sRCvoumbbf076EDhPCgGX3wyNR1wPLnzO9kknNqRXBl81cQf3oc5ATOL6SvVTrg8YZn9A6cvD5M2O_cybm5v4yTI6-Zste-z7rIH3wQzDK471e1zhgmuHQbA6HLNhJ1rwR4oO0Q9G3OGqHZFwMANe6C3SUPyCG9M2_DjIoGQbYqwfwpVWkjPgnq5LMWOm0VzayXn1WrSo5SF_WrkGdMllH137u4QyW8yjwbK87OYZ3KtMtL4sG8y2RkLuQw5B6o8pyUpRJQqYa8-zqIP8JdMrv7T3_yAAleLAD83O8xvvrUGuovvNu4XbUAMNK5p0wWJyCxwDtnVTiNTN-LGhq4-rS1p9cbntCVE2LwtvfP4Aq2Q52y8bKAmPMI9xC8ju84E7dESxaKJTCS8bsq9_Y3AxskEhK81KmCORqElOCypXOedyYDdJr3CHV6xU7CTv097REAtyvBFLi1EwMH3hAXPmT0eYvSmrbwteRA_yvOaB3a7IGQ78NG19B9IU5tvEpjdFRTTnonkclBxcfiZSzOKv0VsBdrhsmmZYBPmT4VR9CvsqOR8Wstw-sZtGv0Gdya4nSYd79J1UbHG7AmqI_UCl0bT_djoPnB856cp--QpQRBPT_WC3BPNJ42TaVUbSeTJ71wfMOMClgdQzWvaIEmVGOHXrEVwEmif4T3Ts75RdvZhtlpzTYV1g6tcipoP-lntBCCa28f5ieoRq3wdJ-Pn6Fyy91mjX14Xwg==",
+      "status": null
+    },
+    {
+      "id": "msg_02eeffd60c47cd94006aa1d2a80ad087d0b4cfc9553f712843",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns uncertainty in clause (b)’s trigger and cure process, whereas g1 concerns whether the express prohibition on accelerating rent also bars recovery of future rent as damages. These are distinct defects involving different language.\",\"words_at_issue\":\"The proposed issue turns on clause (b)’s phrases “after Tenant is aware of same” and “diligently proceed,” plus its silence as to written notice and a fixed cure period. Candidate g1 turns on the separate sentence stating that Landlord “shall not have any right to accelerate” rent and whether that language precludes recovery of future rents as damages.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

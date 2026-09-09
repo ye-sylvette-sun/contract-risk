@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "85ac9236db625057f4ba088a7be06e919d0a009c23ca8623ba47b3707dbd90d7",
+  "document_chars": 5982,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2963,
+    "input_tokens_details": {
+      "cache_write_tokens": 2960,
+      "cached_tokens": 0
+    },
+    "output_tokens": 304,
+    "output_tokens_details": {
+      "reasoning_tokens": 115
+    },
+    "total_tokens": 3267
+  },
+  "response": [
+    {
+      "id": "rs_0a2f4ae0b4b33da3006aa1d259a77887d09115846eb7839d61",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodJe0pVegbP3kTblEiUzugvdFlRBJt2r8_Jvmq0HyrtqiA5yEnwCHSsm7cGJujI-jlkLY6LmqZLIo7LtaqxrNgCa86RLev5tNOuEnEEkLg5NPWVGQQQ86DcJapcAnPfM_HrfeLIGH0Xhjb_2hLN1gfmwufFqSqxjs3RKJVvzTeiRzjnNU33LtSr8GcoRU0MpAxsdOQGFlG-ZqH3nsEgJAhQSxlo05zzsnAYcWvbU3M0aVwMkqbptG-VKrmEBbOcRfprdXIvSj_MTHW6_TbDZja2ZL203b_3vC6Imwae0wP4UPRVE4fYbXjlqW1pj_LtIXA1u57zmmfyPp5gfxVQLIbFBMy9kBygsf9Mj5uPlaTlw4WV9sGvL6EoRE8MrP4Pm362cAhl2qMbYc2SL9ubBfyp7sBCr3p3LkSR1JQXhSKGKa1YnLE5r6SYmEZNwCz6oEAAeen-mIzHKEbim04kA2K6dlUYn1VlzlCj2bgr5eanB77VxscZrNh9SdFDzgN5MzCZhFgGTzZhvN_ijJRlnINIBEh1jtJsatPcXMBducL8Cw9lKt5wzcVQJFtTJLd1L927g_XVNLN3-gg9eWLDHkKdt_UBnysI8JoB_o5APyP37D9xKj_YsIHXXUYvpO-KTv96nem61Jf8oWBH2oMQBeMMh1OgwRti3yp_DrtN1c9QK-q-E1dgP8oBtTPIu6-9qpXasRP4F6HWKrKvhAfeTKb0oS09Zzc8g9Bb3_a-UbXL0fLMGu0rbU56V7qmcseJhCouBLkvV3Pb7PUmcqa-VzKFLDKoZV7IGUQXowm4wt-SGltEniNLHiwG7F4ncxpq2P75LxLFYBGVMJT9pHDVkigTDVkP2mNu1sLkPgb_n2q08YfDfa20auqR7KAFeO8o_notQcAaL9G8WYy8271-5Mmm4xwxOIT3Lpa8_-qcF9tv6DGV3PBuHtWcd9tARVP2M7Ghi6V8vEpF1w0Y1LqQltY3HyOKgZmN0D0zuHNKInLFUvJVWVLoGkzJqUPb_qC8SStpNlse5ey-7qBVdzpc5arPXmbVHV8s7clq6nRH6oaPW--DbKaHxOs99FBtVJ7IxNiQtV90-WTkryQipvHldH0KS_JyAvHX6fLS4np-rnbVg4UvoBSs69Fm6mWKs_0QPw96ynNwi0AQv259VTzMOMObk-GksUo5w_yX2-K7DNliRgqgi8nQIlfWteLwWZABTpV6OHocToDvwApWxT7EMuRL42HqBvuY2zYYWbb2-kwrJ_1RmaqA6gnbr7-OXUjMOu4L4pMb9pLAOBQFm7tpYBooPk4oikOK6OFH3NGO3b1ska2x_XzgxqDgZWymxu_au5dX8d4ONak-Ss6RaqxqsAW2CmkMC3Bumgr0wJLA44CwjIXqGnbADI-lSIKwZSwAEof_na0Rr8Z5QvcemNKLUTInzix50EVjO2DB_Q_wBNp0v3gF8LaRDTLmFt6F9A94g_mDM07FvVcZ0u5wRVduRNkpaJ2onnty7fBgETiHHHHwSwL1m-v7PYz3jKu6STWkGp9JLmV-qQvYKmmtqhPokzTreYdtQrBxS0TR_yOb9AifQ2RVcxiQiBZae8bSWlcVHDRAdqNjjpU2QQw1uOmWJUxAglf5m5z3KSiQyAHicdKK3lK_dqmzUvzDzMezF_lg7p4XVFn-s1sgZdLV6cC6BD-d3h3xqO9t9fXbZomth7oA_jRdlv1Bo1ac_sYDbrY1kJi0vr978HakGu55ePmnVU4AXmIwJMSyUPblyO6JYoMRhDInbh4e6PDbLAeVv5qBMOKzCPSoQSOAEEWb1fC7cXa0zvrl_g6XFC1QNObHntil5HV3YOKc9kvCETG-pLS70X76Fgx7SviA53TZm1hDufSh7Tlpa9D5mJEAstDgmft65hbpANZMM3UWzL4WZQSAP35z94iZlMWVBPWu2LlChdxxn5WLKSlvgvGPWgUiFX_S4mEwMudkc0olGXJGr3a8LHBe8",
+      "status": null
+    },
+    {
+      "id": "msg_0a2f4ae0b4b33da3006aa1d25c14f487d096992614c7b6d353",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges internal uncertainty in the clause’s identification of a forum and its preservation of removal. Candidate g1 instead identifies a conflict with the separate Endorsement and concludes that the Endorsement supplanted an otherwise unambiguous New York forum requirement, so it is not the same defect.\",\"words_at_issue\":\"The proposed issue concerns “exclusive jurisdiction of the State of New York,” the unclear referent of “such court,” and the sentence preserving removal to federal court. Candidate g1 concerns the conflict between “exclusive jurisdiction of the State of New York” and the separate Endorsement’s promise to submit to “any court of competent jurisdiction”; it does not concern the clause’s use of “State,” “such court,” or its removal language as sources of internal uncertainty.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

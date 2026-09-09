@@ -1,0 +1,1961 @@
+{
+  "contract_id": "18FSupp3d456_phoenix_accumulator_universal_life",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061",
+    "c062": "c062",
+    "c063": "c063",
+    "c064": "c064",
+    "c065": "c065",
+    "c066": "c066",
+    "c067": "c067",
+    "c068": "c068",
+    "c069": "c069",
+    "c070": "c070",
+    "c071": "c071",
+    "c072": "c072",
+    "c073": "c073",
+    "c074": "c074",
+    "c075": "c075",
+    "c076": "c076",
+    "c077": "c077",
+    "c078": "c078",
+    "c079": "c079",
+    "c080": "c080",
+    "c081": "c081",
+    "c082": "c082",
+    "c083": "c083",
+    "c084": "c084",
+    "c085": "c085",
+    "c086": "c086",
+    "c087": "c087",
+    "c088": "c088",
+    "c089": "c089",
+    "c090": "c090",
+    "c091": "c091",
+    "c092": "c092",
+    "c093": "c093",
+    "c094": "c094",
+    "c095": "c095",
+    "c096": "c096",
+    "c097": "c097",
+    "c098": "c098",
+    "c099": "c099",
+    "c100": "c100",
+    "c101": "c101",
+    "c102": "c102",
+    "c103": "c103",
+    "c104": "c104",
+    "c105": "c105",
+    "c106": "c106",
+    "c107": "c107",
+    "c108": "c108",
+    "c109": "c109",
+    "c110": "c110",
+    "c111": "c111",
+    "c112": "c112",
+    "c113": "c113",
+    "c114": "c114",
+    "c115": "c115",
+    "c116": "c116",
+    "c117": "c117",
+    "c118": "c118",
+    "c119": "c119",
+    "c120": "c120",
+    "c121": "c121",
+    "c122": "c122",
+    "c123": "c123",
+    "c124": "c124",
+    "c125": "c125",
+    "c126": "c126",
+    "c127": "c127",
+    "c128": "c128",
+    "c129": "c129",
+    "c130": "c130",
+    "c131": "c131",
+    "c132": "c132",
+    "c133": "c133",
+    "c134": "c134",
+    "c135": "c135",
+    "c136": "c136",
+    "c137": "c137",
+    "c138": "c138",
+    "c139": "c139",
+    "c140": "c140",
+    "c141": "c141",
+    "c142": "c142",
+    "c143": "c143",
+    "c144": "c144",
+    "c145": "c145",
+    "c146": "c146",
+    "c147": "c147",
+    "c148": "c148",
+    "c149": "c149",
+    "c150": "c150",
+    "c151": "c151",
+    "c152": "c152",
+    "c153": "c153",
+    "c154": "c154",
+    "c155": "c155",
+    "c156": "c156",
+    "c157": "c157",
+    "c158": "c158",
+    "c159": "c159",
+    "c160": "c160",
+    "c161": "c161",
+    "c162": "c162",
+    "c163": "c163",
+    "c164": "c164",
+    "c165": "c165",
+    "c166": "c166",
+    "c167": "c167",
+    "c168": "c168",
+    "c169": "c169",
+    "c170": "c170",
+    "c171": "c171",
+    "c172": "c172",
+    "c173": "c173",
+    "c174": "c174",
+    "c175": "c175",
+    "c176": "c176",
+    "c177": "c177",
+    "c178": "c178",
+    "c179": "c179",
+    "c180": "c180",
+    "c181": "c181",
+    "c182": "c182",
+    "c183": "c183",
+    "c184": "c184",
+    "c185": "c185",
+    "c186": "c186",
+    "c187": "c187",
+    "c188": "c188",
+    "c189": "c189",
+    "c190": "c190",
+    "c191": "c191"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "This face-page promise is to pay \"the Death Benefit\" in a lump sum, but Section 6 (Death Proceeds) makes the amount actually payable the Death Benefit plus rider insurance less any Policy Debt. A beneficiary could argue the cover-page promise controls the amount payable at death.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "\"Replacements,\" which triggers the 60-day rather than 10-day return window, is nowhere defined in the policy. The provision also promises a refund of premium while simultaneously deducting withdrawals and loans from a policy declared \"void from its beginning.\"",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The Schedule states \"Additional Ratings Not Applicable\" while the same page classifies the Insured as \"Percentage Substandard 150.0%\" and the Policy Acceptance Form amendment states \"Base policy is rated.\" Which of these governs the rating charge under Section 9(d) is open to construction.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "This notice conditions continuation on \"the Net Policy Value, less Policy Debt,\" but Section 3 defines Net Policy Value as already being Policy Value less Policy Debt, so debt is deducted twice. Section 11's Grace Period test uses Net Policy Value alone.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "This notice states the policy \"will not lapse at any time\" before the end of the Guaranteed Death Benefit Period if the Total Cumulative Premium Test is met, but Section 11 provides that the policy goes into default whenever Policy Debt exceeds Policy Value, with no carve-out for that period. The two cannot both be given full effect.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "The Surrender Charge note says the charges \"will reduce on a monthly basis to equal zero over time, as shown in this table,\" while the table shows only annual amounts as of the beginning of each Policy Year. The rate and method of the monthly reduction between Policy Years is left unstated.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "The Rider Information line shows a Benefit Amount of \"None\" and no rider charge for the Living Benefit Rider, while the rider itself specifies a Maximum Accelerated Benefit of $250,000. Whether the Schedule Page or the rider fixes the benefit is contestable.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The Table of Values sets a \"Maximum Annual Premium\" of $1,000,000 while the same table sets a Guideline Single Premium of $4,195,289.66 that Section 4 permits to be paid, and Section 4 forbids refusing any premium needed to prevent termination. Which limit governs a large single payment is unresolved.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "This footnote asserts an unqualified right to \"change ... the amount of cost of insurance deducted,\" whereas Section 9 permits re-determination only on a basis that does not discriminate unfairly within a class and forbids recouping prior losses. A policyholder challenging a rate increase would say the two cannot be read together.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "This notice flatly promises Additional Interest on amounts above the Policy Value Benchmark Amount, but the Section 9 table sets the Additional Interest Rate at 0% whenever the credited rate is under 4.25%, and the Guaranteed Minimum Interest Rate is only 4%. Read with Section 9 the promised credit may never arise.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "The unisex Monthly Factor is stated as \"4.0032737\" where the sex-distinct factor in the same table is 1.0032737, an evident transcription error that would quadruple the divisor used in the Net Amount at Risk calculation. The correct figure must be supplied by construction.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "\"Attained Age\" is defined as \"the Age plus the number of whole years that have elapsed since the Policy Date,\" but \"Age\" is itself defined as the person's age on the given date, so the elapsed years are counted twice. This drives the Age 100 Anniversary, the Maturity Date and the Minimum Death Benefit Percentages.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "\"Business day\" is defined as \"any day that we are open for business,\" a term whose content is fixed unilaterally by the insurer and has no calendar boundary. Values under Sections 9, 15 and 25 turn on it.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "After enumerating a death certificate and a court order, the definition adds the catch-all \"any other proof acceptable to us,\" leaving the sufficiency of proof to the insurer's judgment. Whether the catch-all is limited by the enumerated specifics is a classic ejusdem generis question.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "\"In force\" is defined by reference to the Grace Period provision, but Section 11 contemplates a policy \"in default\" yet still within a 61-day grace period, and Section 6 pays proceeds for a death during that period. Whether a defaulted policy is \"in force\" for purposes of Sections 6, 14 and 15 is unsettled.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "A writing counts only if \"satisfactory to us,\" and the definition extends to \"such other medium electronic or otherwise that we may from time to time make available,\" neither of which has a fixed standard. Every owner election in the policy depends on this term.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "\"Issue Date\" is defined only by the effect it has (the date from which Suicide Exclusion and Incontestability run) and not by any event, so the definition is circular. It gives no rule for fixing the date if the Schedule Page entry were disputed.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "The \"Maturity Date\" is defined as the date the Insured reaches Attained Age 100, yet Section 8 expressly provides for coverage, credited interest and death benefits continuing after the Age 100 Anniversary. Whether the policy matures and ends on that date, or continues, is left open.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "The definition ends \"that you intend to be pay on a regular modal basis,\" an ungrammatical and unpunctuated clause. The garble leaves unclear whether the Planned Premium is an obligation or a mere intention.",
+          "type": 1,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "This definition computes Policy Value by daily accumulation with interest, while Section 9 credits interest only on each Monthly Calculation Date and adds Additional Interest on the same monthly cycle. The two accumulation mechanics are not obviously reconcilable.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "The \"Preferred Loan\" definition presupposes a loan carried over from a previously issued policy, but Section 1 shows a Preferred Loan Amount at Issue of $0, so the defined category may have no application here. Section 1's Preferred Policy Loan Interest Rate and credited rate nonetheless assume it exists.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": "The definition of \"Surrender Value\" is truncated in the instrument (\"and less ~any-unpaid.issue. charges a\"), leaving the final deduction incompletely stated. Net Surrender Value, the Grace Period test after year 9 and the surrender payment all depend on it.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "\"We,\" \"us\" and \"our\" are defined to \"refer only to the Company,\" but the Living Benefit Rider defines \"We (Our, Us)\" as Phoenix Life Insurance Company \"or its subsidiaries.\" The two definitions of the same pronouns cannot both hold.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "This section directs that the policy be read to maintain tax qualification \"notwithstanding any other provisions of the policy to the contrary\" and reserves a right to adjust terms, potentially overriding Sections 5, 6 and 10. Its reach against the operative benefit provisions is a question of priority between provisions.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "This test ends \"In no event, however, will we refuse to accept any premium necessary to prevent the policy from terminating,\" which cannot be squared with Section 4's reserved right to refuse premiums that would fail the elected test or with Section 10's statement that such payments will not be processed. Which controls when a lapse-preventing premium would breach the guideline limit is unresolved.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "The Cash Value Accumulation Test is set out as operative although Section 1 records that the Guideline Premium Test was elected and Section 4 says the election cannot be changed. Whether its reserved right to modify the Section 2 Death Benefit Percentages retroactively applies to this policy at all is contestable.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "The right to reduce is made \"subject to the Minimum Total Face Amount\" but ignores the separate \"Minimum Total Face Amount Decrease\" of $10,000 stated in the Section 1 Table of Values. The two Section 1 limits on a requested reduction are not tied together here.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "Death during the Grace Period reduces proceeds by \"any outstanding Policy Charges due,\" while Section 11 says that on death in default the insurer deducts \"all Monthly Deductions due and unpaid.\" Policy Charges is the broader term, and the two deduction measures conflict.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "This sentence says a withdrawal reduces the Death Benefit by reducing the Total Face Amount under Option A, while Section 15 prescribes a different sequence when the Death Benefit then equals the Minimum Death Benefit. The two accounts of a withdrawal's effect on the Option A death benefit do not match.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [
+        {
+          "issue": "The insurer's right to distribute Policy Value or demand evidence of insurability is triggered when the Net Amount at Risk \"exceeds our guidelines and limitations that may be in effect\" — a standard set outside the contract and nowhere defined. Its content is entirely within the insurer's control.",
+          "type": 1,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "The provision ends with the mangled sentence \"You are limited to one surrender charges for this policy,\" which fuses the one-change-per-Policy-Year limit with the surrender charge sentence and states neither. The number of permitted option changes per year cannot be read off the text.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "The Guaranteed Death Benefit promises that coverage will not terminate \"regardless of Policy Value\" if the Total Cumulative Premium Test is met, but Section 11 puts the policy into default whenever Policy Debt exceeds Policy Value with no exception for that period. Both cannot be given effect on those facts.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [
+        {
+          "issue": "The test reads \"total premiums paid by you less partial withdrawals, since policy issue, less policy debt,\" and the placement of the commas leaves the order and scope of the two subtractions unclear. Section 1's version of the same test omits the policy-debt subtraction entirely.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [
+        {
+          "issue": "The Monthly Guarantee Premium may be modified on \"a change in risk classification,\" but nothing in the policy states when or on what basis the insurer may reclassify an in-force insured. The trigger is therefore open-ended.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "Unpaid monthly deductions are \"carried over as a charge to be deducted from such future Policy Value(s) as may later exist,\" without saying how that carried-over charge interacts with the Section 11 default tests once the guarantee period ends. Section 11 measures default against required Monthly Deductions only.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "After the Age 100 Anniversary the Death Benefit is the greater of Total Face Amount or Policy Value, dropping the Minimum Death Benefit Percentage comparison that Section 6 makes part of every Option A calculation. Section 8 says Section 6 applies \"except as follows,\" leaving the displacement ambiguous.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": "This provision says that after the Age 100 Anniversary \"we will not accept any further premium payments,\" which conflicts with Section 4's statement that \"In no event, however, will we refuse to accept any premium necessary to prevent the policy from terminating.\" Section 8 itself contemplates a post-100 default for excess Policy Debt.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c061"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [],
+      "dataset_clause_id": "c062"
+    },
+    {
+      "clause_id": "c063",
+      "issues": [
+        {
+          "issue": "The policy is said to go into default after the Age 100 Anniversary when Policy Debt exceeds Policy Value, but the only cure Section 11 allows is payment of additional premiums, which the immediately preceding Section 8 paragraph forbids after that date. The default has no stated cure.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c063"
+    },
+    {
+      "clause_id": "c064",
+      "issues": [
+        {
+          "issue": "This warning that the policy \"may not qualify as life insurance\" after Attained Age 100 sits against Section 4's command that the policy be interpreted \"to ensure or maintain qualification as a life insurance contract ... notwithstanding any other provisions.\" Which statement governs the insurer's post-100 obligations is contestable.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c064"
+    },
+    {
+      "clause_id": "c065",
+      "issues": [
+        {
+          "issue": "The provision deducts \"a Sales Charge which will not exceed the amount shown in Section 1,\" treating Section 1's fixed percentages (10%/7%/5%) as a ceiling rather than the charge itself. Whether the insurer may charge less, or by what standard, is left open.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c065"
+    },
+    {
+      "clause_id": "c066",
+      "issues": [],
+      "dataset_clause_id": "c066"
+    },
+    {
+      "clause_id": "c067",
+      "issues": [
+        {
+          "issue": "This states that Monthly Deductions are due until the Age 100 Anniversary, while Section 14 provides that once Overloan Protection is exercised \"no further monthly deductions will be assessed.\" The two end-points for deductions are stated without cross-reference.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c067"
+    },
+    {
+      "clause_id": "c068",
+      "issues": [
+        {
+          "issue": "The (a)-(e) list of Monthly Deduction components includes \"charges for any applicable Additional Ratings shown in Section 1,\" a charge that appears nowhere in Section 1's Monthly Deduction table, which instead lists an Overloan Transaction Charge. The two enumerations of what makes up the Monthly Deduction do not match.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c068"
+    },
+    {
+      "clause_id": "c069",
+      "issues": [
+        {
+          "issue": "The rate factors are enumerated — sex, Age, Risk Classification, Basic and Supplemental Face Amount, Net Amount at Risk and duration — and expressio unius would make that list exhaustive, so that rates may not be set by reference to unlisted characteristics. The sentence is also expressly limited to rates \"as of the Policy Date,\" saying nothing about later re-determinations.",
+          "type": 1,
+          "prob": 0.58
+        }
+      ],
+      "dataset_clause_id": "c069"
+    },
+    {
+      "clause_id": "c070",
+      "issues": [
+        {
+          "issue": "Rates \"will be based on our expectations of future mortality, persistency, investment earnings, expense experience, capital and reserve requirements, and tax assumptions\" — a list of unquantified factors with no stated weighting or benchmark, and \"based on\" fixes no relationship between expectations and rates. Whether a rate increase is permitted by this language is precisely what an insured would litigate.",
+          "type": 1,
+          "prob": 0.56
+        },
+        {
+          "issue": "The factors listed here differ from the factors listed in the immediately preceding Cost of Insurance Charge sentence (sex, Age, Risk Classification, face amounts, Net Amount at Risk, duration), and the policy never says how the two lists relate. An insured would argue the earlier, closed list limits the factors usable under this one.",
+          "type": 2,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c070"
+    },
+    {
+      "clause_id": "c071",
+      "issues": [],
+      "dataset_clause_id": "c071"
+    },
+    {
+      "clause_id": "c072",
+      "issues": [
+        {
+          "issue": "Re-determination is permitted \"on a basis that does not discriminate unfairly within any class of insureds,\" but \"class of insureds\" is undefined and the insurer alone would draw the class boundaries. Whether a rate increase applied to a sub-group (by face amount or issue age) is within \"any class\" is the core construction question.",
+          "type": 1,
+          "prob": 0.66
+        },
+        {
+          "issue": "\"We will not distribute past gains or recoup prior losses, if any, by changing the rates\" gives no test for distinguishing a permitted prospective re-pricing from a forbidden recoupment of losses already incurred. The sentence's coverage of an increase driven by past adverse experience is genuinely doubtful.",
+          "type": 1,
+          "prob": 0.44
+        }
+      ],
+      "dataset_clause_id": "c072"
+    },
+    {
+      "clause_id": "c073",
+      "issues": [
+        {
+          "issue": "The Net Amount at Risk formula subtracts (a) from the greater of (b) or (c) while defining (c) by reference to (a), so the same quantity appears on both sides of the comparison. The resulting figure for Option B, in particular, is not readily determinate from the text.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c073"
+    },
+    {
+      "clause_id": "c074",
+      "issues": [
+        {
+          "issue": "The sentence stating how the credited interest rate is set is broken in the instrument (\"we will:cred itinterest-on-the-Policy-Value——— anticipation of future investment earnings...\"), so the standard governing the insurer's rate-setting cannot be read. What remains is a power to change rates \"in our sole discretion.\"",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c074"
+    },
+    {
+      "clause_id": "c075",
+      "issues": [],
+      "dataset_clause_id": "c075"
+    },
+    {
+      "clause_id": "c076",
+      "issues": [],
+      "dataset_clause_id": "c076"
+    },
+    {
+      "clause_id": "c077",
+      "issues": [],
+      "dataset_clause_id": "c077"
+    },
+    {
+      "clause_id": "c078",
+      "issues": [
+        {
+          "issue": "The Benchmark Amount is keyed to \"the Total Face Amount at issue\" even though the policy elsewhere allows the Total Face Amount to be reduced, increased or reset to 101% of Policy Value. Whether the benchmark is frozen at issue while other provisions move the face amount is left unaddressed.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c078"
+    },
+    {
+      "clause_id": "c079",
+      "issues": [
+        {
+          "issue": "The Additional Interest Rate table gives \"50%\" for credited rates of at least 4.25% but under 4.50%, plainly a mis-transcription of 0.50% sitting beside a 4.00% entry for higher rates. The table's column headings are likewise garbled, so the applicable rate must be reconstructed.",
+          "type": 1,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c079"
+    },
+    {
+      "clause_id": "c080",
+      "issues": [],
+      "dataset_clause_id": "c080"
+    },
+    {
+      "clause_id": "c081",
+      "issues": [
+        {
+          "issue": "This says that if a premium would disqualify the policy as a life insurance contract \"we will not process such payment,\" which cannot be squared with Section 4's assurance that in no event will the insurer refuse a premium necessary to prevent termination. The lapse-avoidance case falls in the gap between them.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c081"
+    },
+    {
+      "clause_id": "c082",
+      "issues": [
+        {
+          "issue": "The middle of this provision is unreadable (\"Unless we agree oth ===gre-subject-to-the-Maximum-Annual-Premium-shol 6 Overloan Protection\"), so the exception to, and the source of, the Maximum Annual Premium limit cannot be determined from the text. Whether additional premiums are capped, and by whom, must be construed.",
+          "type": 1,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c082"
+    },
+    {
+      "clause_id": "c083",
+      "issues": [
+        {
+          "issue": "The right to \"either refund the premium or require evidence of insurability\" when a payment increases the Death Benefit disproportionately is hard to square with Section 4's promise never to refuse a premium needed to prevent termination. A lapse-preventing premium could fall within both.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c083"
+    },
+    {
+      "clause_id": "c084",
+      "issues": [
+        {
+          "issue": "This measures default in the first five Policy Years against \"the Net Policy Value,\" while the Section 1 notice describes the same test as \"the Net Policy Value, less Policy Debt.\" The two statements of the same lapse trigger differ by the amount of the Policy Debt.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c084"
+    },
+    {
+      "clause_id": "c085",
+      "issues": [],
+      "dataset_clause_id": "c085"
+    },
+    {
+      "clause_id": "c086",
+      "issues": [],
+      "dataset_clause_id": "c086"
+    },
+    {
+      "clause_id": "c087",
+      "issues": [
+        {
+          "issue": "This unconditional Policy Debt default applies \"on any Monthly Calculation Date,\" including during the Guaranteed Death Benefit Period in which Section 7 promises coverage will not terminate regardless of Policy Value. Which provision governs a debt-driven default in the first five years is unresolved.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c087"
+    },
+    {
+      "clause_id": "c088",
+      "issues": [
+        {
+          "issue": "Notice must be sent \"at least 15 days and not more than 45 days prior to termination of coverage,\" a window that must be fitted inside the 61-day grace period running from default under the same Section 11. The interaction of the two periods, and the effect of a late notice, is not stated.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c088"
+    },
+    {
+      "clause_id": "c089",
+      "issues": [
+        {
+          "issue": "The Reduced Paid-Up Benefit provision is fragmentary in the instrument (\"-after-this.policy.has..been..in-force.for.at.least.one.full ~=lapsed-to-a- -\"), so the election right, its conditions and the resulting benefit are not stated. What the owner may elect must be supplied by construction.",
+          "type": 1,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c089"
+    },
+    {
+      "clause_id": "c090",
+      "issues": [
+        {
+          "issue": "The exclusive list of termination events omits the Maturity Date shown in Section 1, even though Section 3 defines that date as the policy's maturity. Whether the policy ends on the Maturity Date or continues under Section 8 turns on this omission.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c090"
+    },
+    {
+      "clause_id": "c091",
+      "issues": [
+        {
+          "issue": "Reinstatement requires \"evidence of insurability satisfactory to us,\" a standard fixed entirely by the insurer with no stated criteria. The five-year window is also measured from the date of default rather than the date of termination, two different dates under Section 11.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c091"
+    },
+    {
+      "clause_id": "c092",
+      "issues": [],
+      "dataset_clause_id": "c092"
+    },
+    {
+      "clause_id": "c093",
+      "issues": [
+        {
+          "issue": "This says the Suicide Exclusion \"will not begin anew\" on reinstatement, whereas Section 21 provides that on reinstatement the incontestable period runs afresh for two years. The asymmetry between the two post-reinstatement periods invites argument about which was intended.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c093"
+    },
+    {
+      "clause_id": "c094",
+      "issues": [
+        {
+          "issue": "The opening of the loan provision is missing in the instrument — the text begins mid-sentence at \"request. A loan may not be taken after you have exercised Overloan Protecti\" — so the grant of the right to borrow and its conditions are absent. The scope of the loan right must be reconstructed.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c094"
+    },
+    {
+      "clause_id": "c095",
+      "issues": [
+        {
+          "issue": "The proviso that Maximum Loan Value \"will not be less than the Preferred Loan Amount plus accrued interest ... but in no event greater than the current Policy Value\" sets a floor and a ceiling that can each override the lesser-of formula, without saying which prevails. The result where the floor exceeds the Surrender Value is indeterminate.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c095"
+    },
+    {
+      "clause_id": "c096",
+      "issues": [],
+      "dataset_clause_id": "c096"
+    },
+    {
+      "clause_id": "c097",
+      "issues": [
+        {
+          "issue": "The first sentence is broken in the instrument (\"Loan.interest_will.accrue.on.a.daily.basis.from.the.date.of\"), leaving the date from which interest accrues unstated. The remainder assumes an accrual start date that the text no longer supplies.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c097"
+    },
+    {
+      "clause_id": "c098",
+      "issues": [
+        {
+          "issue": "\"A change in the Interest Rate\" is capitalised but undefined, and the policy uses that phrase for both the credited interest rate under Section 9 and the loan interest rates under this same section. Which rate change cannot cause a lapse is genuinely ambiguous.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c098"
+    },
+    {
+      "clause_id": "c099",
+      "issues": [
+        {
+          "issue": "This grants the right to repay Policy Debt \"at any time prior to the death of the Insured and while the policy is in force,\" while the Overloan Protection paragraph of the same section provides that \"No additional loans or loan repayments will be allowed.\" The two rights of repayment cannot both stand after Overloan Protection is exercised.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c099"
+    },
+    {
+      "clause_id": "c100",
+      "issues": [
+        {
+          "issue": "Condition 2 requires that \"the Policy Debt is equal to 96% of the Policy Value,\" but the very next paragraph assumes a loan balance \"in excess of 96% of the Policy Value\" and requires repayment of the excess. Whether the trigger is equality or a threshold cannot be resolved within the section.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c100"
+    },
+    {
+      "clause_id": "c101",
+      "issues": [
+        {
+          "issue": "This paragraph presupposes a loan balance \"in excess of 96% of the Policy Value,\" while the eligibility conditions immediately above require that the Policy Debt \"is equal to 96% of the Policy Value.\" The exercise condition and the repayment mechanic describe different states of the account.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c101"
+    },
+    {
+      "clause_id": "c102",
+      "issues": [],
+      "dataset_clause_id": "c102"
+    },
+    {
+      "clause_id": "c103",
+      "issues": [],
+      "dataset_clause_id": "c103"
+    },
+    {
+      "clause_id": "c104",
+      "issues": [
+        {
+          "issue": "Reducing the Total Face Amount to 101% of Policy Value takes no account of the Minimum Total Face Amount of $100,000 and Minimum Basic Face Amount stated in Section 1. Whether those Section 1 floors survive the automatic reduction is unaddressed.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c104"
+    },
+    {
+      "clause_id": "c105",
+      "issues": [
+        {
+          "issue": "\"No further premium payments will be accepted\" is absolute, while Section 4 states that in no event will the insurer refuse a premium necessary to prevent the policy from terminating. The two commitments collide once Overloan Protection is in effect.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c105"
+    },
+    {
+      "clause_id": "c106",
+      "issues": [],
+      "dataset_clause_id": "c106"
+    },
+    {
+      "clause_id": "c107",
+      "issues": [
+        {
+          "issue": "\"No further monthly deductions will be assessed\" after Overloan Protection cannot be squared with Section 9's statement that Monthly Deductions \"are due until the Age 100 Anniversary,\" which admits only the Section 8 exception. Section 9 does not carve out Overloan Protection.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c107"
+    },
+    {
+      "clause_id": "c108",
+      "issues": [
+        {
+          "issue": "This bars loan repayments outright, while the Loan Repayment paragraph of the same section permits repayment \"at any time prior to the death of the Insured and while the policy is in force\" and Section 8 says loan repayments \"will continue to be accepted.\" Which prevails after Overloan Protection is exercised is contestable.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c108"
+    },
+    {
+      "clause_id": "c109",
+      "issues": [
+        {
+          "issue": "Loan interest continues to accrue although no repayments are allowed and no deductions are taken, so Policy Debt will eventually exceed Policy Value — the very event Section 11 makes a default. That defeats the promise in the same section that Overloan Protection \"will keep your policy in force.\"",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c109"
+    },
+    {
+      "clause_id": "c110",
+      "issues": [
+        {
+          "issue": "The provision assesses \"a one-time Overloan Transaction Charge\" and then says in the next breath that \"There is no additional charge for this benefit,\" and the sentence is cut off before the exception is completed. The contradiction on its face requires construction.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c110"
+    },
+    {
+      "clause_id": "c111",
+      "issues": [
+        {
+          "issue": "\"After we receive your written request to surrender the policy, no insurance will be in force\" ends coverage on receipt, while Section 12 terminates the policy on \"the date the policy is surrendered for its Net Surrender Value\" and Section 25 lets payment be deferred up to six months. The moment coverage ceases is stated differently in the two places.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c111"
+    },
+    {
+      "clause_id": "c112",
+      "issues": [
+        {
+          "issue": "Condition (c) forbids a withdrawal reducing the Basic Face Amount below \"the Minimum Face Amount shown in Section 1,\" a term Section 1 does not use — it lists a Minimum Total Face Amount and a Minimum Basic Face Amount. Which figure limits a withdrawal must be construed.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c112"
+    },
+    {
+      "clause_id": "c113",
+      "issues": [],
+      "dataset_clause_id": "c113"
+    },
+    {
+      "clause_id": "c114",
+      "issues": [
+        {
+          "issue": "The Minimum Death Benefit sequence — reducing the Death Benefit by the withdrawal \"multiplied by the applicable Minimum Death Benefit Percentage until the Death Benefit is equal to the Total Face Amount\" and then applying \"such excess withdrawal amount\" dollar for dollar — leaves \"excess\" without a defined referent. The resulting face amount after a withdrawal is not readily computable.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c114"
+    },
+    {
+      "clause_id": "c115",
+      "issues": [],
+      "dataset_clause_id": "c115"
+    },
+    {
+      "clause_id": "c116",
+      "issues": [],
+      "dataset_clause_id": "c116"
+    },
+    {
+      "clause_id": "c117",
+      "issues": [],
+      "dataset_clause_id": "c117"
+    },
+    {
+      "clause_id": "c118",
+      "issues": [],
+      "dataset_clause_id": "c118"
+    },
+    {
+      "clause_id": "c119",
+      "issues": [
+        {
+          "issue": "This makes any transfer of ownership for consideration ineffective unless the insurer is first given a right to bid, while Section 18 permits the owner to \"assign any interest in this policy without the consent of any person other than an irrevocable Beneficiary.\" A collateral or absolute assignment for value falls squarely under both.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c119"
+    },
+    {
+      "clause_id": "c120",
+      "issues": [
+        {
+          "issue": "The provision is broken in the instrument (\"Gonsent-of-any-~beneficiary-not-irrevocably.-named-or-any-contingent.owne s.not.reauired..f.there.is..no0 'Insured, your estate will be the Beneficiary\"), so the default-beneficiary rule and the consent rule cannot be read as written. Who takes when no named beneficiary survives must be reconstructed.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c120"
+    },
+    {
+      "clause_id": "c121",
+      "issues": [
+        {
+          "issue": "Death proceeds are to be paid \"in equal shares\" to the beneficiaries \"as stated in the application,\" yet the application's Beneficiary Designation provides for percentage shares and says equal sharing applies only \"unless otherwise specified.\" The two rules diverge where the application allocates unequal percentages.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c121"
+    },
+    {
+      "clause_id": "c122",
+      "issues": [
+        {
+          "issue": "A beneficiary change \"will take effect as of the date it was signed by you\" but is \"subject to any payments made or actions taken by us\" before receipt, so the change is both retroactive and defeasible. The status of a change signed before but received after the Insured's death is unresolved.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c122"
+    },
+    {
+      "clause_id": "c123",
+      "issues": [
+        {
+          "issue": "The free right to assign \"any interest in this policy\" opens with \"Except as otherwise provided in this policy,\" and Section 17 bars any transfer for consideration, including a collateral or absolute assignment, unless the insurer is first offered a right to bid. Whether Section 17 is such an exception, and how far it cuts down this section, is contestable.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c123"
+    },
+    {
+      "clause_id": "c124",
+      "issues": [
+        {
+          "issue": "The adjustment is to the benefit \"which would have been purchased at the correct age or sex by the most recent Cost of Insurance charge deducted under Section 9,\" a phrase whose grammar does not yield a computation. Whether the recalculation uses one month's charge or the whole premium history cannot be read off the text.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c124"
+    },
+    {
+      "clause_id": "c125",
+      "issues": [],
+      "dataset_clause_id": "c125"
+    },
+    {
+      "clause_id": "c126",
+      "issues": [
+        {
+          "issue": "This conversion clause measures the suicide period from the issue of an original term policy, while the preceding paragraph measures it from this policy's Issue Date, and nothing in Section 1 or the application indicates a conversion. Which period applies, and whether this paragraph has any operation here, is open.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c126"
+    },
+    {
+      "clause_id": "c127",
+      "issues": [
+        {
+          "issue": "The exclusion restarts only for \"an applied for increase in death benefit,\" which by its terms excludes increases arising automatically under the Minimum Death Benefit or Option B. Section 10 separately treats an insurability-supported premium increase as restarting the exclusion, so the boundary of \"applied for\" matters.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c127"
+    },
+    {
+      "clause_id": "c128",
+      "issues": [
+        {
+          "issue": "The operative incontestability promise is missing from the text, which begins mid-sentence at \"the Issue Date, except' for-any™p insurability,\" so the two-year period and its exception cannot be read. What the insurer has agreed not to contest must be supplied by construction.",
+          "type": 1,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c128"
+    },
+    {
+      "clause_id": "c129",
+      "issues": [],
+      "dataset_clause_id": "c129"
+    },
+    {
+      "clause_id": "c130",
+      "issues": [
+        {
+          "issue": "Payment on a contested face amount is \"the higher of a return of any paid premium required by us for the contested face amount or the sum of any Monthly Deductions made under this policy for the contested face amount,\" and neither quantity is defined for a flexible-premium policy where premiums are not allocated to face amounts. The measure of recovery is indeterminate.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c130"
+    },
+    {
+      "clause_id": "c131",
+      "issues": [],
+      "dataset_clause_id": "c131"
+    },
+    {
+      "clause_id": "c132",
+      "issues": [
+        {
+          "issue": "The entire-contract clause is immediately qualified by the statement that later written requests \"may become part of the policy,\" which cannot be squared with the requirement in the same section that any change be in writing signed by an executive officer and countersigned. When a post-issue request becomes part of the contract is left uncertain.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c132"
+    },
+    {
+      "clause_id": "c133",
+      "issues": [],
+      "dataset_clause_id": "c133"
+    },
+    {
+      "clause_id": "c134",
+      "issues": [
+        {
+          "issue": "This requires every change to be signed by an executive officer and countersigned, while the preceding paragraph of the same section says additional written requests submitted after issue \"may become part of the policy\" without any such formality. The two formation rules for post-issue changes conflict.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c134"
+    },
+    {
+      "clause_id": "c135",
+      "issues": [
+        {
+          "issue": "\"Clerical errors\" is undefined and the right to correct extends to \"our administration of the policy,\" giving the insurer a unilateral power whose boundary against substantive change is unstated. A disputed recalculation of values could be characterised either way.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c135"
+    },
+    {
+      "clause_id": "c136",
+      "issues": [
+        {
+          "issue": "The opening of the Annual Statement provision is unreadable (\"nniversary-we:will:send-you=-without-charge ach-Policy Year which-ineludes:\"), so the timing and the trigger for the statement cannot be determined. Only the list of contents survives.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c136"
+    },
+    {
+      "clause_id": "c137",
+      "issues": [
+        {
+          "issue": "This permits a fee \"not to exceed $50\" for an illustrative report requested \"at any other time,\" while the next paragraph of the same section promises one such projection annually without charge. The two fee regimes for the same report overlap and differ.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c137"
+    },
+    {
+      "clause_id": "c138",
+      "issues": [
+        {
+          "issue": "This paragraph gives one free projection a year and a $50 cap on additional ones, duplicating and partly contradicting the preceding paragraph's flat $50 fee for a report requested at any other time. Which paragraph governs a second request in a Policy Year is unclear.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c138"
+    },
+    {
+      "clause_id": "c139",
+      "issues": [
+        {
+          "issue": "Proceeds \"may not be assigned or withdrawn before becoming payable without our agreement,\" while Section 18 lets the owner assign any interest in the policy without anyone's consent and Section 15 permits withdrawals as of right. The insurer's consent requirement cannot stand with those sections.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c139"
+    },
+    {
+      "clause_id": "c140",
+      "issues": [
+        {
+          "issue": "The right to defer surrender and withdrawal payments for six months sits against Section 15, which fixes the Net Surrender Value as of the business day the request is received. Who bears the change in value during the deferral is not addressed.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c140"
+    },
+    {
+      "clause_id": "c141",
+      "issues": [
+        {
+          "issue": "The rider is \"subject to all of the provisions contained in the policy\" \"[e]xcept as stated in this rider,\" a general subordination that gives no rule for the many points where the rider's terms (its own definitions of \"We,\" its face amount reductions) differ from the policy's. Which text yields on a given point must be worked out case by case.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c141"
+    },
+    {
+      "clause_id": "c142",
+      "issues": [],
+      "dataset_clause_id": "c142"
+    },
+    {
+      "clause_id": "c143",
+      "issues": [],
+      "dataset_clause_id": "c143"
+    },
+    {
+      "clause_id": "c144",
+      "issues": [],
+      "dataset_clause_id": "c144"
+    },
+    {
+      "clause_id": "c145",
+      "issues": [
+        {
+          "issue": "The rider defines \"We (Our, Us)\" as \"Phoenix Life Insurance Company, or its subsidiaries,\" whereas Section 3 of the policy provides that those pronouns \"refer only to the Company.\" Whether a subsidiary can perform or bind under the rider turns on which definition governs.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c145"
+    },
+    {
+      "clause_id": "c146",
+      "issues": [
+        {
+          "issue": "The Eligible Amount excludes \"any supplemental rider death benefits,\" a phrase that does not track the policy's own categories of Basic and Supplemental Face Amount and rider benefits. Whether a Supplemental Face Amount is excluded from the Eligible Amount is genuinely ambiguous.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c146"
+    },
+    {
+      "clause_id": "c147",
+      "issues": [
+        {
+          "issue": "Limitation 3 forbids a Requested Benefit \"less than the lower of 25% of the policy face amount or $50,000,\" and \"policy face amount\" is not a defined term in a policy that speaks of Total, Basic and Supplemental Face Amounts. The floor it sets therefore cannot be computed with certainty.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c147"
+    },
+    {
+      "clause_id": "c148",
+      "issues": [
+        {
+          "issue": "The Maximum Accelerated Benefit is \"the amount shown on the first page of this rider\" ($250,000), while the policy's Section 1 Rider Information line shows a Benefit Amount of \"None\" for this rider. The two schedules of the same benefit disagree.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c148"
+    },
+    {
+      "clause_id": "c149",
+      "issues": [],
+      "dataset_clause_id": "c149"
+    },
+    {
+      "clause_id": "c150",
+      "issues": [
+        {
+          "issue": "\"Terminal Illness\" is an illness \"expected to result in the insured's death within six months based on evidence satisfactory to us\" — a prognosis standard with no stated medical criterion and satisfaction judged by the insurer. Eligibility for the entire rider turns on that term.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c150"
+    },
+    {
+      "clause_id": "c151",
+      "issues": [
+        {
+          "issue": "The rider states \"There is no premium charge for this rider,\" yet the Payment Made to You section deducts a \"then current Administrative Charge\" of up to $300 from the accelerated benefit. Whether the rider is in truth charge-free is a question the two passages answer differently.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c151"
+    },
+    {
+      "clause_id": "c152",
+      "issues": [
+        {
+          "issue": "The payment is fixed by discounting at \"our then current discounting rate,\" a rate the insurer sets and which is nowhere published or tied to a named index in this sentence. The size of the accelerated payment turns entirely on it.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c152"
+    },
+    {
+      "clause_id": "c153",
+      "issues": [
+        {
+          "issue": "\"Our discounting rate will be subject to the higher of: 1. 5%; or 2. the Published Monthly Average\" does not say whether that higher figure is a floor the rate must meet or a ceiling it may not exceed. Since a higher discount rate reduces the owner's payment, the difference is substantial.",
+          "type": 1,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c153"
+    },
+    {
+      "clause_id": "c154",
+      "issues": [
+        {
+          "issue": "The floor compares the proportionate cash surrender value with \"the discounted value,\" a term not used in the discounting paragraph, which speaks of the discounted Requested Benefit before the administrative charge. Which figure is the comparator is ambiguous.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c154"
+    },
+    {
+      "clause_id": "c155",
+      "issues": [
+        {
+          "issue": "The provision is fragmentary in the instrument (\"The discounted del any other 5 then current Administrative Charge...\"), so what is deducted from the discounted benefit besides the Administrative Charge cannot be read. The net payment to the owner is not determinable from the text.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c155"
+    },
+    {
+      "clause_id": "c156",
+      "issues": [
+        {
+          "issue": "The request is void only if the insurer receives written notice of the death \"during this period,\" leaving the consequence unstated where death occurs before payment but notice arrives afterwards. \"This period\" also has no clearly fixed endpoint.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c156"
+    },
+    {
+      "clause_id": "c157",
+      "issues": [
+        {
+          "issue": "The list of values \"reduced by the Proportion\" runs into garbled numbering (\"Oo PWN any policy debt\") and includes policy debt, so it is unclear whether the owner's debt is reduced as a benefit or merely rescaled. The enumeration cannot be read as written.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c157"
+    },
+    {
+      "clause_id": "c158",
+      "issues": [
+        {
+          "issue": "This paragraph governs reductions in subaccounts of the Variable Universal Life Separate Account, but the policy to which the rider is attached is a non-variable flexible premium universal life policy with a Guaranteed Minimum Interest Rate. Whether the paragraph has any application here is open.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c158"
+    },
+    {
+      "clause_id": "c159",
+      "issues": [
+        {
+          "issue": "Future values are to be determined \"in a manner consistent with that under the original policy, as adjusted to reflect the above reductions,\" without specifying how the Surrender Charge schedule and Cost of Insurance rates are re-derived. \"Consistent with\" supplies no method.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c159"
+    },
+    {
+      "clause_id": "c160",
+      "issues": [
+        {
+          "issue": "The rider makes the owner \"responsible to pay the premiums ... in order to keep the policy in force,\" while the base policy is a flexible premium contract under which Section 1 and Section 10 require no premium other than the Minimum Initial Premium. The two accounts of the owner's premium obligation differ.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c160"
+    },
+    {
+      "clause_id": "c161",
+      "issues": [
+        {
+          "issue": "Proof must be \"evidence satisfactory to us\" from a licensed physician who is not the owner or a family member, with no stated criterion of sufficiency. The insurer's satisfaction is the only test of entitlement.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c161"
+    },
+    {
+      "clause_id": "c162",
+      "issues": [],
+      "dataset_clause_id": "c162"
+    },
+    {
+      "clause_id": "c163",
+      "issues": [],
+      "dataset_clause_id": "c163"
+    },
+    {
+      "clause_id": "c164",
+      "issues": [
+        {
+          "issue": "This bars payment to satisfy creditors' claims \"to the extent that we have written notice thereof,\" while Section 24 makes proceeds exempt from creditors only \"to the extent allowed by law.\" The two creditor-protection standards are stated on different terms.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c164"
+    },
+    {
+      "clause_id": "c165",
+      "issues": [
+        {
+          "issue": "The rider terminates on \"Payment of any benefit under this rider,\" which on its face ends the rider even where only a small Proportion of the Eligible Amount has been accelerated. Whether a partial acceleration exhausts the benefit is not addressed.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c165"
+    },
+    {
+      "clause_id": "c166",
+      "issues": [
+        {
+          "issue": "The declaration's compound negative — \"no insured has applied to any insurance company ... without receiving the exact policy applied for or had any symptoms, diseases or disorders for which advice has been sought\" — does not parse consistently across its two limbs. What is being declared about symptoms is grammatically unclear.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c166"
+    },
+    {
+      "clause_id": "c167",
+      "issues": [
+        {
+          "issue": "This makes \"Home Office approval of form #519B ... necessary before the policy is in effect,\" adding a condition of effectiveness not found in Section 10, which conditions coverage on underwriting approval and receipt of the Minimum Initial Premium. The two lists of conditions precedent differ.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c167"
+    },
+    {
+      "clause_id": "c168",
+      "issues": [
+        {
+          "issue": "The amendment states that the \"[b]ase policy is rated,\" while Section 1 records \"Additional Ratings Not Applicable\" and Section 9 makes rating charges a component of the Monthly Deduction only when shown in Section 1. Whether and how a rating charge may be assessed is left in conflict.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c168"
+    },
+    {
+      "clause_id": "c169",
+      "issues": [
+        {
+          "issue": "\"Premiums are payable as shown on the schedule page of this policy\" reads as an obligation, whereas the Schedule Page states only a Planned Premium and warns that even paying it may not keep the policy in force. The policy is a flexible premium contract that requires no scheduled payment.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c169"
+    },
+    {
+      "clause_id": "c170",
+      "issues": [
+        {
+          "issue": "The amendment sets the subsequent planned annual premium at $299,526, while the application filled out by the insured records a different subsequent planned annual premium figure. Which controls the Planned Premium is a matter of construing the amendment against the application it amends.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c170"
+    },
+    {
+      "clause_id": "c171",
+      "issues": [
+        {
+          "issue": "The first-year anticipated annual premium of $299,526 conflicts with the first-year anticipated premium of $103,397 stated in the application, and neither is reconciled with the Minimum Initial Premium of $31,950 in Section 1. The premium actually required in year one is not determinable from the documents together.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c171"
+    },
+    {
+      "clause_id": "c172",
+      "issues": [
+        {
+          "issue": "The amendment decreases \"the face amount of the base policy\" to $6,000,000, using a term that matches neither the Basic Face Amount nor the Total Face Amount as defined in Section 5. Whether the decrease is to the Basic or the Total Face Amount matters to the Supplemental component and the Surrender Charge table.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c172"
+    },
+    {
+      "clause_id": "c173",
+      "issues": [
+        {
+          "issue": "The amendment names the trust as primary beneficiary while Section 17 provides that beneficiaries take \"as stated in the application or as later changed\" and the application's designation is itself incomplete. Whether the amendment or the application controls the designation could be contested.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c173"
+    },
+    {
+      "clause_id": "c174",
+      "issues": [
+        {
+          "issue": "\"Delivery expiry is 11/12/2007\" states a date without saying what expires or what follows if the policy is delivered later. The endorsement supplies no operative consequence.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c174"
+    },
+    {
+      "clause_id": "c175",
+      "issues": [
+        {
+          "issue": "This makes the declaration and amendments \"part of the application and ... part of the policy,\" while Section 22 requires that any change to the policy be signed by an executive officer and countersigned. Whether these unsigned amendments alter policy terms is a question of priority between the two.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c175"
+    },
+    {
+      "clause_id": "c176",
+      "issues": [
+        {
+          "issue": "The application's beneficiary paragraph is scrambled in the instrument (\"payments wili ha shared equally by all primary ben beneilelarles who survive the Proposed insured. Only lhe Owner has the right te c...\"), so the default sharing rule and the right to change beneficiaries cannot be read. Its terms must be reconstructed.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c176"
+    },
+    {
+      "clause_id": "c177",
+      "issues": [
+        {
+          "issue": "The Total Face Amount applied for is illegible (\"$_2)_ Jo, WD\") and cannot be matched against the $6,000,000 in Section 1 or the amendment decreasing the base policy to that figure. The amount originally applied for is indeterminate on the face of the document.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c177"
+    },
+    {
+      "clause_id": "c178",
+      "issues": [
+        {
+          "issue": "The application's premium entries (103,397 and 153,597) conflict with the amendment's $299,526 and with the Planned Premium of $299,526 in Section 1, and the death benefit boxes use \"Option 1/Option 2\" labels the policy does not use. Which document fixes the elected option and premium requires construction.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c178"
+    },
+    {
+      "clause_id": "c179",
+      "issues": [
+        {
+          "issue": "This offers a temporary allocation to \"the Money Market subaccount until the end of the Right to Cancel Period,\" although this policy has no subaccounts and its cover page grants a right to return rather than a Right to Cancel Period. The election has no counterpart in the policy issued.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c179"
+    },
+    {
+      "clause_id": "c180",
+      "issues": [],
+      "dataset_clause_id": "c180"
+    },
+    {
+      "clause_id": "c181",
+      "issues": [],
+      "dataset_clause_id": "c181"
+    },
+    {
+      "clause_id": "c182",
+      "issues": [
+        {
+          "issue": "The authorization begins mid-sentence with the insurer's name, so the sources authorised to release information — the antecedent of \"any of the above sources\" — are missing from the text. The scope of the consent cannot be read as written.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c182"
+    },
+    {
+      "clause_id": "c183",
+      "issues": [],
+      "dataset_clause_id": "c183"
+    },
+    {
+      "clause_id": "c184",
+      "issues": [
+        {
+          "issue": "The consent extends to \"any agency employed by Phoenix to collect and transmit such information,\" an unbounded class of recipients identified only by the insurer's own engagement of them. No limit on onward use is stated in this sentence.",
+          "type": 1,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "c184"
+    },
+    {
+      "clause_id": "c185",
+      "issues": [],
+      "dataset_clause_id": "c185"
+    },
+    {
+      "clause_id": "c186",
+      "issues": [
+        {
+          "issue": "The paragraph is garbled in the instrument (\"| panginave been correctly recorded. == and-the- Medical Information_Bureau_\"), splicing the acknowledgment of the Notice of Information Practices with an unrelated recording clause. What is being acknowledged cannot be determined.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c186"
+    },
+    {
+      "clause_id": "c187",
+      "issues": [
+        {
+          "issue": "The authorization is \"valid for 24 months from the date it is signed unless otherwise required by law\" yet may be revoked only \"prior to the time the Insurance coverage has been placed in force,\" and the preceding paragraph extends it to consultations occurring after signature. The duration and revocability of the consent do not sit together.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c187"
+    },
+    {
+      "clause_id": "c188",
+      "issues": [
+        {
+          "issue": "The sentence begins mid-clause (\"have reviewed this application\") and attributes the statements to \"the proposed insured\" while warranting them true \"to the best knowledge and belief of the undersigned,\" who may be the owner. Whose knowledge is being certified is ambiguous.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c188"
+    },
+    {
+      "clause_id": "c189",
+      "issues": [],
+      "dataset_clause_id": "c189"
+    },
+    {
+      "clause_id": "c190",
+      "issues": [
+        {
+          "issue": "This conditions coverage on five events, including that \"the premium required for issuance of the policy has been paid in full during the lifetime of the insured,\" whereas Section 10 and the cover page condition coverage only on underwriting approval and receipt of the Minimum Initial Premium. The two statements of when insurance takes effect differ.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c190"
+    },
+    {
+      "clause_id": "c191",
+      "issues": [
+        {
+          "issue": "The application is \"attached to and made a part of the policy,\" while Section 22 permits use of an application statement only if a copy is attached to the policy when issued and treats each statement as a representation and not a warranty. The unqualified incorporation here is broader than Section 22 allows.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c191"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "dcae09559b610643175e6012868b4410d693d0bc059ab60e9b23e769f014886c",
+  "document_chars": 9205,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3499,
+    "input_tokens_details": {
+      "cache_write_tokens": 3496,
+      "cached_tokens": 0
+    },
+    "output_tokens": 291,
+    "output_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "total_tokens": 3790
+  },
+  "response": [
+    {
+      "id": "rs_0667a616603289c2006aa1d35a896887d0a21f267c74e9f5f3",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodNeemikVdRFhbC_dOTDeHfp19FiyK_k8gi7JFokxRtCgySstrzOvSUFKBhDGnHgmths691VEA558XLP0FK5akswp-S8rjJsruol8XAQpN9VytLMlkNMsEn66XAMvE0Khmw4vIBA32hqIuluG315HADI9X4X_Df5JRj-JWuIgyR4hjT-GDpsYY3aMWhlQnoVc_w0ugGWIPfhPIZPUOcwxcrvmRXIP01DA_Fd_AbOnyvs3aXEIMUJkz_VDn1uStiSVLHdx6HKgg72-PYPqjlHePQPfCWzDcfPHwPpT7_pSsa0G7VLbh0-PJY_oDPcJ98ZL29fEzciwvU3p4sxQVBHZ4egFQDlcekRN85rOy3a8KytdEUquA-m3qU4zbhl2n_HySf-TqsVbRuu6Pw1rQPEtEoQRtk8-fF4DLfPNdyq2azaVHLEKl_yamJEQv1QMhc8f4BjJ0xnxQxhO1JpnlrsJ80C1LVFJCIhOXi9fzSsFOGe7TnvTbTdNJPgcCQ6gtNp-ZXL7BCMwQqpgoPbtrok2gLchhLtE2PeGLj3o0BH9QlRvxrUkGsB6sYPZTfObnDn4G7F0QAiz52MZfM_NdW-BiGsz5QwOYE-XTPfuu53ghgb3U5o_ZOJvrX8PRp1edNQzlhewvI6Cg4cp1XIPfRQGk-wGgo2idxm-pRcR7QNmhKsvpFVR5qqJfE38xpO4ypsiDozuwzf4W95-9OQgY2UNUdg9vxqMC49XL79SRmKtohOIaPl4AiCbQxwoFlcdhGRsSh045oXHWFfvQYkwL7iYrX9iwbQFXIpHvoJpde6R0GbPGFHD92xU8TsTnJwEBGMDNKVt3QonMSbrbm-TrJXBEXeGKjZeIkgf9uY7Logyuv_11V0s5Km-aQcT-GeoZN-Wo9uJU5QhF_GbLcOK3ojPLqNOEqEs_Nfd6u1jg3fzoIzQkHMTvwWCKO3Bgs97oScs84wK66yOOAsmPiU414Le77U0loyde9mv4RVGPzfdPP2tLbLpOgz4qCZNvqNT0m16EIKvIdhzkRCQiyX9f-hv1P6wjb7DD6KaMF-VLcWCRlJ2KaCYb63Zd7x7semfc_BKRS9HXvVx6uJO7bj5L8h3lGGfoKa7bJxVKNKF7dC3wz_NUEppd9BVKS92I1CSQ5IyyX7lKoeg5pzwBty_ztpcNGAhlT71i2ItPIZ0J4YztCIbdA25MrfMjlCxQt8wySB46R7FuUosFvcIo-gl_QVZQPsvnz7HbwyDQB-PRjSwR3hzDmjAvANU3Dvz1I1GrShWi2PXxKnkRYAOER28CivqeSGaoxzuzcS7HQ0P38iP0hKNsESW46F2o2yg9K-SwmXxTw1LIPSiws7uZdgMS8me-CrJuZAOx4KtyGbzYsvCQbUE0jeDQnuPW4sKQVKDj9Y7RXLBYed6t5Ec0qV7kR7Ahc-YrliO57WSJttWGc3qxea4JvRsmgC4f5mJlOUGZe1BFcbJWnhjllWDC3Icnrma6nCJRrZPCXvmL5BHXoP9gSBcnhgfSD6OVtKvkynHYi97NBC0pEnnBDsv2nVJqokOjZ5Ifkh_goFTByekFvVLCD_0HICg75qNk9F83hkPOIJGcaf0j0j4jjTUAZTloSyiaNOuWk4Bl7-FnEGjLgP6xrcrh3DNsHT54g20m7yhI0NEV9uCVuV0vaO7fXl0Oi3VxNoOiv_uDdJtiRdPjXuXBdx2H-2AWvLgFgSlhITSVOqNBEyXhQmT7NwploHTr3DGJ0zIzowcxk78jtBLGZMasTyMwRS79d8rgNrNedRHg_Yx2V3BvOJ_HGkH1AmLLdsA0wa_674BQMwCigtnLUnJyyhxtk=",
+      "status": null
+    },
+    {
+      "id": "msg_0667a616603289c2006aa1d35c1f4887d09548e42bb0a1d187",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns the absence of any rule governing post-termination commissions and its interaction with sections 7 and 8. Candidate g1 instead concerns whether Lovejoy’s reading of the House Accounts provision would circumvent and nullify the enumerated termination methods; it is a different defect despite involving the same termination provision.\",\"words_at_issue\":\"The proposed issue turns on section 16’s silence about commissions for orders accepted or shipped after termination, read with section 7’s phrase “as long as this Agreement remains in force” and section 8’s shipment-based payment timing. Candidate g1 turns on the annual-renewal and sixty-day-notice language, the enumerated termination grounds, and “mutual written agreement,” asserting a conflict with Lovejoy’s claimed power under the House Accounts provision to reclassify every account.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

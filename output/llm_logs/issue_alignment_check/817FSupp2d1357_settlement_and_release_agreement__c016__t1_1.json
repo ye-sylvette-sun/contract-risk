@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "bf43bc13bd252ff698b69a16af0eb930c6f4298b6625c8065c1489d880fbc331",
+  "document_chars": 7405,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3097,
+    "input_tokens_details": {
+      "cache_write_tokens": 3094,
+      "cached_tokens": 0
+    },
+    "output_tokens": 260,
+    "output_tokens_details": {
+      "reasoning_tokens": 81
+    },
+    "total_tokens": 3357
+  },
+  "response": [
+    {
+      "id": "rs_0cdfe8be5f28f659006aa1d390d9f087d0894d403bd42ae311",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodOUutbCr6dhlxl40d0wW9lujrXa4D9LHbGxtnS6shDWRK5KkNTDNF2p7JULQ_iAIM48sneoioLj-D4hzFIcceqhYQw37QCt3V43E3q2Pn85W8uGA7O0-nVAFdgse08Sjzd4kpLXRVeb3FnrhYQ4YK62TJ--oy6apwlMvvrNgC_5SG6YvIQ8eu-23IVbszTuAoQzIxGwaLO61wrMhpynuUkpgOU9NmEiLO_NfHj14fGCftjzVvrkcWc6_HsPInzNY3K8ZyHGXuZcXlAJ1Oobq5hERdt0DQpz0hL5ODzhER2o6MG636AxvFIrqN_Apn4DwpYKl0ZUsBqidvO2f7viPXhFpkKtVt3A_HNCzNm9DUC7XTt80j81TeJbCfaIRxrM58I6W1mwy0hmBGSZAjB18aBvjwTrliewdVDs-mu1Df7fBguR3bGO0b1Oex9h2VRf8nm2ax3c26I2WmpoE2qv9sRoq84TJIW73BobYqYWjF7X8zruelWu4UsLKJMkgEo4h_RcNgEyrKdu4pBe5bfWCGE8aTrDEnvNhviz8Unv2imYQt1Kpm68MX89zirPaD9yebsXeccnTgS7gbP8dP7ODDi7wEDGTiQ92BGa4gG4GJyLJIdAL0LQRNP0pbeBiBKypXdzA95QDXryuB5jZPQ8dd4Cfzo7ufr2hEhLJf1KgUQjoBD0ObcIblULNg2imZi1sj5VUqUEIK8XPTmkSsJ5D9qMu7yqJW6w4VzVMZJmOMsfK2-v6QFRngb5PY5ZnVFG0wwiDcrPy99nGq8ozi7j7NUaQ3r_4fBktlkUCITKYq7a_9AOK95nzr2HbX2W4sUns1bQvr-51M0ZTIyzyGnNUiToFNCRm-9xY_XljAJT1iLCto2ulZ5rmQe-4lHVjR-REOBabyTEy0XbaJ_3AeSwVHttCX8ekPGhR2_oGFCvHOFI7igkMoIk0mxGHdu5kIqwdGHxfoiNbOABTx7htz_Wv_uCwTTS9QFglkepzRzOgcxcxRf5eY2vNnv9jqj9TqFDuA6uh7NSp-VNF8msQ_lGlB5yBlh1Ja02jBQ6p5e8_urj3RdrOj90pOqD5qjXd96RIbRdxTr8EwtEIg7GFIDpJqHttIQJYb_cF1NZa85C6jPch6Zhlz6cK-cP_bAyjdUnZ2haAuBUX7RtcHkHOZkVAIhmDv4f_FL0AColeVXRmeGK2Ezc_pvU3GAtpNBeuFbmb0FUai44umM-qStppFrxMj5VhaA4mvwuFx6qGQRQFluBdl8l2TLQUKx2U7BbbGLg4COMwSSzmpK4iW2IgsvHi_8oCY-8kRI9dZeu8kBhk5RqRA139F-X6bdpoXOlXCoeBEUKPTsVIS63Hk5lPBO46iI2AtLRM4n-YfQWDUUI5F2Ax1cR4S5Vs_6PjWOKrs7UhvOIkVqBSFpOTfwSLldqqta2fgRXAuD5UFFFlEDmSwFiNeseK91SZKiuDuLMTCXMny0zF6oBtEArnLTxpfx9z7iehRUYaxa6wPNnQwiUKYMygBRABOgi__cf5m3tELOAFrrvp0XsUvOQ4rCv7C9AR-YYV3lvp7yJ4I0guxJwgQKoRL0geqXRkkH923HSk0ik70UdnYxam1NUbnfhgj8FtDQ5vHpgooCcBjHPYgs4wRiT_o8kFtN2VILRcqHBY9k9vLGCHgomukiXAF1kjIGi3sRHxm7FwX5g6Wy1SX-nrPlDoKs=",
+      "status": null
+    },
+    {
+      "id": "msg_0cdfe8be5f28f659006aa1d3923b5c87d099aa6e1a432546dd",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue challenges uncertainty in who is “privy” and what constitutes “detriment,” whereas g1 concerns what information is encompassed by “the terms of this Release and the terms of the settlement of this claim.” These are distinct alleged defects involving different words.\",\"words_at_issue\":\"The proposed issue turns on “person not party or privy to this settlement,” particularly undefined “privy,” and on “used to the detriment of the Parties,” particularly the absence of a measure of detriment. Candidate g1 instead turns on “the terms of this Release and the terms of the settlement of this claim” and whether that phrase covers only written contractual provisions or also oral conditions and the underlying actions’ facts and existence.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

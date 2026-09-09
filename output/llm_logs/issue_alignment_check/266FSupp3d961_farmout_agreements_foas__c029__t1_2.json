@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "9041f3d900b2395baa7783e80593f3b252b0272b83d2b4baca533ba482307f0e",
+  "document_chars": 4554,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2620,
+    "input_tokens_details": {
+      "cache_write_tokens": 2617,
+      "cached_tokens": 0
+    },
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "reasoning_tokens": 97
+    },
+    "total_tokens": 2867
+  },
+  "response": [
+    {
+      "id": "rs_047be8cdfe78f196006aa1d28fb21c87d0a80bf830c3775e3c",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodKUTskIHfFHrneXpgLefh5shvkA0woBFpxHDzbPeQ2jwwLEZ7Jax2p39gYz63-LTXjEBjqSTq6ugdM30kPSxkOnUIwS3Dpd8zdzJ85uNN0JIX-CEN7DUhEdPuv90tRWmsQLMXPzD7PXH6NZKipSOOPTpx4i6C8qlC7293QayWtajerVYs6ptpULPVQizRpkidCocKtCTS6eoquR44WlF1DKpiP7Z6UacgeuQGY9o9R80bX7pKiE2gezFMtj879LL5vxlJPSuqScFt-zQIa6DeMFZ9SYEEOq3YhrRzYsOBzqgnmB4BYGL0LiszJXj3fgfDA1bEI9mMFig7UEblYw0p39poBUmbr-2cni_7xWI1uuw2LFaVOsjeHs5MLmkSckJYLH8f_OVeY_ZnBi1xbCd7YzlZFU1Gc84_uZfTK4ZCA5cpF5fwm8T_M1i1FB6KISUgJw70eZcKORvQMwRv_-6amArUTf4NszGwioPF7GRn7efwKslzWsQKYJWE1ePEjL-TNE8qgHV9XpuT7QHcHwJJ1BkEuZpOdnN0baj9B1QXfUeiEvI-W78X-HqBXWW0r_HWYDrF_wp5vlZtdYAKe0fKTjycxTm2IkdGedX71ZY5AVwDy8_fsd-Pf0LODl4SD0pkKvta-0RZ3zF3cNxqhMtRNzlxPZLtEBmLIKM4uMQ_fe8oX-8DubqWWbsTqmNFH01X0Z48s_N9YV5Nuo0hzPkvqlEQdqznG4CQoF1pZjIHXjHTiCvdj8oOuIAK6e6XP2mx0YcokaeT-a4zjZKP_F7JVDzALdvelqDbOLab9Mduq4GEtgRWbhJzmiNT1JWKEEBaKU6F0H4rGsfhm0Ya7r0aBIASV8ApGXpmnM9LQFBLuF-R2GutNFRyIDz6-NLLzjHvdSfjCqgTYkXUj6803FySwBuaEKHOREfOTOoxfUhc8eNMRZljxnLkjAOlEGZ3k9APlLn0GW9vXqd9fMtobfW-LOogE3JqGm9YaM-2vRj1og--IVJUYwggYgDTsJHvExjBt-o35z7VBq7-rIeXqio9WSoKhqVgJWWBtcwJ4OpHuFEMTSpqN3x-CVdA_t9W9KquxQnvBOqQozH71bgD2gKaDgmzRQONZZHAIwGuzBxxNZVLPIS4zveca2pPuBnkLXEnbAP26UrFAsxNzUbI-iSx7Q9SXh6GHxqdwzBy8RSP8jYieVc_p6IOwKtG5S_KNKyuQmdE0kRhsRZBtN_vg3tcX9iE6ubE2yhHoKe-hLXPW_xv8sOoPrvAHtxoWYbpIiSpGyykkY1kT53CPlBMa9Wy_XU_Mm3lILOER29-97uGrTTQHfRJiD3sXciTQ-xEhIuqRvDHn076X44md5mjNQezL6utnItrP61hCme2ZgpRBGgj3wGDFinKPbJoyZFSUaCi-VvevpXplHhg4hT9kE5SAMkveDbcwbGM3Z3ph4lyPaYkm5CbG_ep-VQ92ibQFRS_fdeffDX_dR-TDmTmibYFUHKbyOF9YiU1EZScGvP04cejuoRzQhK2oe4WYRAltXAa-beXyk_QBY5aKhhDENGRT-0QbqARW1ISCEeBpmQcQ1fuvqONXWYxe6BJNn1yeHwyEvWWUTeRH6lCcbSafiLI2SDB-SYxodHCWTeZYheeLSuG5I0Qim_5Ss_QJDLDobOhJOYRSrJtwLzWDzRjJtm1Jh5Tiu24bB_vxI4TTwJ2QPk22COHeyjryQESAJfYJZVWGKnCYJkCboKKhfKUew9ZGRFmqYO15-IQwZ-H2Dgsep_6QDC8mRs0tOoYOzni-cbTDo",
+      "status": null
+    },
+    {
+      "id": "msg_047be8cdfe78f196006aa1d2919b3887d09eabff56d46fbb7e",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns an unreadable reduction trigger and whether costs may be deducted, whereas g1 concerns whether “gas” encompasses NGLs. These are distinct alleged defects involving different language.\",\"words_at_issue\":\"The proposed issue targets the proportionate-reduction wording “if Farmor's interest in the acreage is less than one hundred percent (100%) or the working interest” and the silence of “gross proceeds ... without deductions of any kind” regarding post-production costs. Candidate g1 instead targets the term “oil and/or gas,” specifically whether “gas” includes liquid NGLs.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

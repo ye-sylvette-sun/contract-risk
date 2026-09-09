@@ -1,0 +1,231 @@
+{
+  "run": "agent",
+  "started_utc": "2026-09-09T20:45:09+00:00",
+  "finished_utc": "2026-09-09T21:34:54+00:00",
+  "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Jul  9 2026, 14:26:47) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "C:\\Users\\jnhsy\\miniconda3\\envs\\contract-risk\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "claude-agent-sdk": "0.2.139",
+    "anthropic": "0.122.0",
+    "httpx": "0.28.1",
+    "matplotlib": "3.8.4",
+    "openpyxl": "3.1.2"
+  },
+  "cli_path": "C:\\Users\\jnhsy\\miniconda3\\envs\\contract-risk\\Lib\\site-packages\\claude_agent_sdk\\_bundled\\claude.exe",
+  "cli_version": "2.1.233 (Claude Code)",
+  "cli_on_path": "C:\\Users\\jnhsy\\.local\\bin\\claude.EXE",
+  "git_commit": "c79af23f56573745cb682aca1752c4d53cfece87",
+  "git_dirty": true,
+  "model": "claude-opus-5",
+  "effort": "high",
+  "max_turns": 100,
+  "billing": "subscription",
+  "options": {
+    "tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Write"
+    ],
+    "allowed_tools": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Write"
+    ],
+    "system_prompt": "sha256:cf3c3a720e64203e668d51c058095fc72bed8a56f7f92dc05e763546b8ed791e",
+    "mcp_servers": {},
+    "strict_mcp_config": true,
+    "permission_mode": "acceptEdits",
+    "continue_conversation": false,
+    "resume": null,
+    "session_id": null,
+    "max_turns": 100,
+    "max_budget_usd": null,
+    "disallowed_tools": [
+      "Bash",
+      "BashOutput",
+      "KillShell",
+      "Edit",
+      "NotebookEdit",
+      "WebFetch",
+      "WebSearch",
+      "Task",
+      "Skill",
+      "TodoWrite",
+      "SlashCommand"
+    ],
+    "model": "claude-opus-5",
+    "fallback_model": null,
+    "betas": [],
+    "permission_prompt_tool_name": null,
+    "cwd": "/work",
+    "cli_path": null,
+    "settings": null,
+    "add_dirs": [],
+    "env": {},
+    "extra_args": {},
+    "max_buffer_size": null,
+    "debug_stderr": "<TextIOWrapper>",
+    "stderr": null,
+    "can_use_tool": null,
+    "hooks": {
+      "PreToolUse": [
+        "Read",
+        "Grep",
+        "Glob",
+        "Write"
+      ]
+    },
+    "user": null,
+    "include_partial_messages": false,
+    "include_hook_events": false,
+    "fork_session": false,
+    "resume_session_at": null,
+    "resume_drops_turn": null,
+    "agents": null,
+    "setting_sources": [],
+    "skills": [],
+    "sandbox": null,
+    "plugins": [],
+    "max_thinking_tokens": null,
+    "thinking": null,
+    "effort": "high",
+    "output_format": null,
+    "enable_file_checkpointing": false,
+    "session_store": null,
+    "session_store_flush": "batched",
+    "load_timeout_ms": 60000,
+    "task_budget": null,
+    "task_prompt": "sha256:5b72fb737334672f023cb19c9573541129e3b860b5d4b25d8905f40b9b8bfe57"
+  },
+  "seed": null,
+  "container": {
+    "image": "contract-risk-judge:0.2.139",
+    "image_id": "sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec",
+    "auth": "token",
+    "parallel": 6,
+    "dockerfile_sha256": "b4e4d7cb54f32ad1b3152bbd3e8c035eec5d626f6517390762e184ee6f5b4ea2",
+    "entrypoint_sha256": "9201749b1587e393c3065f5816b52d1883b35270559ceec9c9f891108c405c4d",
+    "isolation_sha256": "d216d8460831e446b039d18bbe3594043962621723b40b3f1b5298a9cd493b34"
+  },
+  "contract_order": [
+    "785FSupp2d188_pooling_servicing_agreement_psa",
+    "97FSupp3d548_pooling_and_servicing_agreement",
+    "527BR351_loan_and_security_agreement",
+    "303FSupp3d236_multiemployer_collective_bargaining_agreement",
+    "97FSupp3d548_mortgage_loan_purchase_agreement",
+    "93FSupp3d375_personal_deposit_account_agreement",
+    "565BR241_senior_secured_credit_agreement",
+    "527BR351_mortgage_fund_08_note",
+    "894F3d509_delaware_river_basin_compact",
+    "303FSupp3d236_fund_s_trust_agreement",
+    "767FSupp2d1191_master_securities_loan_agreement",
+    "467FSupp2d115_operating_agreement_and_members",
+    "874FSupp2d328_mortgage_loan_purchase_agreement",
+    "874FSupp2d328_insurance_and_indemnity_agreement",
+    "565BR241_the_guarantee_agreements",
+    "99FSupp3d585_asset_purchase_and_product",
+    "940FSupp2d123_the_agreement",
+    "283FSupp3d240_original_policy",
+    "976FSupp2d606_employment_contract",
+    "527BR351_secured_promissory_note_purchase",
+    "303FSupp3d236_1992_reapportionment_agreement",
+    "871FSupp2d671_2005_employment_agreement",
+    "68FSupp3d317_2008_agreement",
+    "767FSupp2d1191_confidential_memorandum_for_the_2",
+    "874FSupp2d328_financial_guaranty_insurance_policy",
+    "68FSupp3d317_2009_agreement",
+    "266FSupp3d961_farmout_agreements_foas",
+    "787FSupp2d118_employment_agreement_agreement",
+    "109FedCl1_agreement_for_purchase_and",
+    "767FSupp2d1191_october_24_2000_declaration",
+    "364FSupp3d990_clinic_master_lease_and",
+    "555BR369_settlement_agreement_between_debtors",
+    "767FSupp2d1191_confidential_memorandum_for_the",
+    "527BR351_liquidating_trust_agreement",
+    "303FSupp3d236_1987_welfare_fund_contribution",
+    "874FSupp2d328_sale_and_servicing_agreement",
+    "364FSupp3d990_the_2010_agreement",
+    "328FSupp3d317_kelly_agreement",
+    "328FSupp3d317_laborde_agreement",
+    "721FSupp2d613_license_agreement_with_the",
+    "767FSupp2d1191_custody_agreement",
+    "940FSupp2d123_1989_amendment",
+    "982FSupp2d518_2007_mta",
+    "364FSupp3d990_the_2012_agreement",
+    "467FSupp2d115_venture_agreement",
+    "871FSupp2d671_2005_noncompetition_agreement",
+    "779FSupp2d416_lovejoy_inc_kamco_industrial",
+    "785FSupp2d188_policy",
+    "976FSupp2d606_haywood_marriott_stipulation_of",
+    "131FSupp3d635_restricted_cash_agreement_to",
+    "767FSupp2d1191_securities_lending_agreement_sla",
+    "817FSupp2d1357_settlement_and_release_agreement",
+    "817FSupp2d1357_certificate_of_insurance",
+    "982FSupp2d518_2003_mta"
+  ],
+  "examples": [
+    {
+      "kind": "type1",
+      "contract_id": "562FSupp2d260_settlement_agreement_the_agreement",
+      "codes": [
+        "1.1"
+      ],
+      "n_defects": 7,
+      "clause_ids": [
+        "c002",
+        "c003",
+        "c004"
+      ]
+    },
+    {
+      "kind": "type2",
+      "contract_id": "118FSupp3d802_membership_agreement",
+      "codes": [
+        "2.2"
+      ],
+      "n_defects": 2,
+      "clause_ids": [
+        "c044",
+        "c046"
+      ]
+    },
+    {
+      "kind": "mixed",
+      "contract_id": "299FSupp3d836_comcell_assignment",
+      "codes": [
+        "1.1",
+        "2.2"
+      ],
+      "n_defects": 3,
+      "clause_ids": [
+        "c088",
+        "c099"
+      ]
+    }
+  ],
+  "env_removed": "swept in container; see per-contract _session.json",
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  },
+  "prompt_sha256": {
+    "risk_detect.md": "d08b437fe55a3b907d42b7f017919d4876245ffea55f3117c755e67361e16a15",
+    "risk_detect.schema.json": "feadee4bee6e0a7702cc883419503dc3c5108904331fd7036e34bc2a88336ed3"
+  },
+  "input_sha256": {
+    "dataset": "835dc527d9863bbcaf46b0146d17e8810b99dda70661c3e5a6512a4094e7dc56",
+    "contracts": "db24c041ffe47368a4fcb46f814c0cbb620a74250fb2e99a6ef6a1bc6b008182"
+  },
+  "contracts_run": 54,
+  "cost_usd_api_equivalent": 112.35,
+  "models_seen": [
+    "claude-opus-5"
+  ]
+}

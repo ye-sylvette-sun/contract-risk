@@ -1,0 +1,87 @@
+{
+  "is_error": false,
+  "stop_reason": "end_turn",
+  "num_turns": 22,
+  "duration_ms": 635602,
+  "total_cost_usd": 4.4004,
+  "usage": {
+    "input_tokens": 40,
+    "cache_creation_input_tokens": 182768,
+    "cache_read_input_tokens": 1959970,
+    "output_tokens": 63703,
+    "output_tokens_details": {
+      "thinking_tokens": 24259
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 182768,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 91,
+        "cache_read_input_tokens": 178534,
+        "cache_creation_input_tokens": 7465,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 7465
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard"
+  },
+  "model_usage": {
+    "claude-opus-5": {
+      "inputTokens": 40,
+      "outputTokens": 63703,
+      "cacheReadInputTokens": 1959970,
+      "cacheCreationInputTokens": 182768,
+      "webSearchRequests": 0,
+      "costUSD": 4.400440000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "canonicalModel": "claude-opus-5",
+      "provider": "firstParty"
+    }
+  },
+  "session_id": "4e049b12-8d79-474d-8860-c0c4638fd7fa",
+  "errors": null,
+  "result": "All 242 provisions judged: 49 (Chambers) + 50 (Richard Witter) + 52 (John Witter) + 45 (Scholz) + 46 (Day) written across `predictions_001.json` through `predictions_005.json`.\n\n242 judgments written.",
+  "path_denials": [
+    {
+      "tool": "Read",
+      "file_path": "/home/judge/.claude/projects/-work/4e049b12-8d79-474d-8860-c0c4638fd7fa/tool-results/toolu_01WzxRvtkWcRidrXP2dADdjM.txt"
+    }
+  ],
+  "rate_limits": {
+    "seven_day": {
+      "status": "allowed_warning",
+      "utilization": 0.78,
+      "resets_at": 1789228800
+    }
+  },
+  "models_seen": [
+    "claude-opus-5"
+  ],
+  "top_ups": [],
+  "n_judged": 242,
+  "n_wanted": 242,
+  "parse_notes": [],
+  "trajectory_saved": true,
+  "env_removed": [],
+  "env_set": {
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY": "1",
+    "CLAUDE_CODE_DISABLE_CLAUDE_MDS": "1",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "DISABLE_AUTOUPDATER": "1",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  }
+}

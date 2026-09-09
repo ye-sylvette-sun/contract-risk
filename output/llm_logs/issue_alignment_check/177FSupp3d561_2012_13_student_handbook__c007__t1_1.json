@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "7a3b80b7fd46a8ccbdd45121fff0a3ced546c59a47455f20bec5b860def15970",
+  "document_chars": 3774,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2438,
+    "input_tokens_details": {
+      "cache_write_tokens": 2435,
+      "cached_tokens": 0
+    },
+    "output_tokens": 292,
+    "output_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "total_tokens": 2730
+  },
+  "response": [
+    {
+      "id": "rs_00c3efb06a5d2b6f006aa1d26a7e6487d0b4f18ee4806ff245",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodJw2BCDxueG9AQUum9K3AnCQ_rGVA-49mwVJSJyFLwDoa-HLozXZ3E-kv2h3xMUJWhZ0IsSIl0-Bwpp7SmhgdRuhJI13fDHhIVkkXiUjyEcf0iD0sApSci9WivDfZs_q-WCt4vO_y8oS2uUKxwQTfTVEC9HrPc97gh75-l9hSKJ20hzkraEBtFH83nZSzpwzwx1ZR71XRnJc1sToD3xoHVw5HiQmTV5hXfBhSzv3K8zzkbRqfCS7wFuFbRdVbTODcs3upvBKjOea-PsZT7iErN0UBUW8BIpHh9eQ9Tt35TeOCTxj6iRc6vlL-E5dz08BUmXxuZaA_r0HhyKydD5zNzTsQZOXAnibQnAgyx13t4gdYmwXIH0YQw1DqtfF-BpjNyrS2sYQwgb2nEO3qV4faR_nUvmoUKMaWXioyXV1b-OEVZyzrsj732aIF_hedPW-zqD3nYErX2sCCJuEj6UqvxlH_86FmUwnPdUUhtHOKmmK5OGAx2GX_3yl64VGXz5sIvblgaxC2O6jqaMgL8-BNVyIu8F3vRXlBzI8WzknlvFdXQUzGegrlHkZYG0jRPQ3cbZI4XM2oLuzMCvmN_Cs-rP3XetZrgHjUVI1N01H_Wv7Zu2Uvf1TVaEpb-aHVW03Ip0TI_uyw4hq9wSNLkEgsXvShcDGKiXmh7TKD8n80uB4rCgHa03YNMQu2HoEMqXL9hdGTO5Ew_n7CAoAIktqnGY67m1hzhBj4C5DryMzRAIpDIo8YJWa637Tssb8rEQrCKFjH0TCA4-feRvYDZQ1ScIp-zy0syEauvfKXO2JrFS5jyVAcB_KoxgDP3OGoEdfWtbNa9VMQaLh_X4o3QZW5jduUQzFCFze5D_7rMCQbDMVyt6aUcME_msBFR3JnrTrXo8X0_CJZh2S02e8v9Xou3wJaHhTNy9l1Y4susdYznhctkc48DQXRQ0kDTbSNzZXT-0eH2Dl--MdEZuQJCSbz7WSPAbjNdethtcH6qSzhx4spe8ix2c5De3pPlq2is7bfxLzzxaqUPXqlQzYyv5WUUOE4uc7sEPhN9VyA_ebhELiD4GlUTVN7cXu0blYUrFHG_AA-mxUGgYWlwBcynKU6b2Bp9hXEk_Ldigs0ukF9pUNofSb6Wjcn-bpv76EOhcQiJhL0nBduFN7fX8TyGsD7L0pqeJ6HAARJPyaGxJB7g0LwMS_433WP01aMLEijg0zY6kMyLR43WUIaKq56dtgdzOI0d-OvIjIXwbbqx7gMuWPELe-sej_fGiI0ydPHgTEm0MPGW1S5AuZzF1kGn6dzngIY-FcqF4jnq3q6d38m3r6KQfa8c7kX5ZlEp6RCOgg8avt2zntHAwkF0ZDmfxNykOL1UD6d2KDYndUvnam881eQ1c_rm_FJuHJOuj1X20YUagXtOMQ1dbj1_Pk9ZsrKOuv5bJ_CsEXsb8B3FEHBI5OYgvZvfBVYjVgXCcUrSBu4jbbDvJ-ObBI-sg64cAxZ-dkwXakTWxfqwogOspPzM_w6YnNp6A05a8CRbTJW9p5e9q7jnRuj0pSEI4vku1R2h9G5Pa55_jH7KGCOn2b44KT5ii0-JMQzG4Cq3-xORHxJk2YSyclBI5UyuaTu_0TwsFvrlfm4W9TxJTj1CCGN48P269K-M5HGhD1QbkN9MbrQjc6x25gVOyfAKIZgtBeeUlrqaShcsDs9G60IvAqkQXkxCjiaD2YPZsgshIrCU5A4t59ZIJB65nBiLz1ykkpu9O1AagWrNJ1cv0meKDAr5BWtef5vlny2mRfnhAo6FOJzSppZXcX2HC-hdSUsAONDQbwQeNHkMotxFJYY_ZQdFzhCN2HhmfhGb2ffVO9DFSxPSx",
+      "status": null
+    },
+    {
+      "id": "msg_00c3efb06a5d2b6f006aa1d26d2a9887d0bc5c157287960ebb",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges that several prohibitions lack severity, intent, or reasonableness thresholds. Candidate g1 instead concerns whether the examples and reference to “violence” bring nonviolent unwanted sexual contact within § 2.1.d, a distinct list-scope and definitional problem.\",\"words_at_issue\":\"The proposed issue concerns the bare terms “intimidates,” “harasses or bullies,” “unwanted physical contact,” and “endangers the health, safety, or welfare,” specifically their silence as to severity, intent, and reasonableness. Candidate g1 concerns “physically harms or is considered unwanted physical contact” together with the examples “hitting, pushing, or physical altercations/violence of any kind,” and whether that wording classifies nonviolent unwanted sexual contact as “violence.”\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

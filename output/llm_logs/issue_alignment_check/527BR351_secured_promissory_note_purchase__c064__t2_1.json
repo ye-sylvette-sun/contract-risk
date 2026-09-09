@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "87c000906bd80ad42362e961c629e376c792460f6245c868daff8ad5fe22b67f",
+  "document_chars": 5245,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2798,
+    "input_tokens_details": {
+      "cache_write_tokens": 2795,
+      "cached_tokens": 0
+    },
+    "output_tokens": 366,
+    "output_tokens_details": {
+      "reasoning_tokens": 169
+    },
+    "total_tokens": 3164
+  },
+  "response": [
+    {
+      "id": "rs_063cbb30b35fc791006aa1d322080c87d0ad91fae11fb98c48",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodMnB3_8TMfkxUpqH-BaSOQ_yQWLlyOI7BdftGEmkwaGmnvXgZXbOMUwmhMlEYw-0Z6DffCJYAF_mSNy_Rg5qdJAru08-ZwihZ9c_N4UUdCJKDD0SHGkA33lqIqPei5VfycPcnauL3fsPVURWp97LLrKpXKIe4J1UdxHEDgzHpS0fQFzbeO5GoFm5QquNPxL8jv9yEXL-epTjm7LJK4l1d6okQKCZPFh70IAtUafwOVcnbpj4lgj1EBRd0oOh2iozZwrldXv3En3-LJ4227ElCa-xRyTBcl-o31E6YH1f0V9SnnglJp7j2EMVjlRfmtSQDz8uMDo5kihkr8NoliwZGZVz4pSnkTU5dBIL3RQpduXyUJLxmWBRkwSdcmG0MWwaDQg3JOawwBNFcPgOyCezDcQNoCTinHrKGPFD_3gkW39DHFg66vkr1qt-D6YZFCpyJiz8NrmNroOYQ8DXxZNt6JepBRiR21VX3EdyIGxkxACaXJSiZGEZnin7toO8IXEp2_iiAdEWWxwHVSf1uAgVimDYzriF8Vw7ks9Dzfs8tMR65oEpetkMeknODmEVX_EQP2zGPfFThU87MkADIS-Vxorn-COsTkvEMRlI30BcLNmq-uj6V0AnDoQX94LXfUVVjeJEtYmXHwakzTxwKSiznQAwJIBEKt8a-U2SMIcZS4FhqCox0qm5x07UbWEjQGmhMwSEB0jq7a5jsWDTm_OuAM6J7psLE3Vhoyf6j1Ws00U1BHiAkRoF0QZGivXQ0ThuGPKFUcjoYrTTAU823QYoJC_wkNWzw34FIn1fHuMm1bT4jVqGvMM3K08Qr9u8-DoIuYnOLvn8vYQnPquxJ7DsV4xVLv16VZm0XVNoZtlz8Ia84HiSHTq-OYWc-zmczscAnfManefFk1quzGtRi9NjjN0CUYCoqyTlzmI0Lws8DXl4PtZrwfXdZ92zGGYq3u3QspIjSoQqo3z_Pi5f9hQf9JDP7PuSPGwxjas9O0vuUwoHdAZICt0BOGqVhH2z53LXbsyTOA83_zA-wvLpxnUVKI6JjRt5Qd4ufKKwkUoNIlOeau9ZCbLpxGuLAocE5Bow96yAc_q1_MrN44Hqb_y_vwhfHOivnqEPmcBsC7wDhVkImlPOq4AsHCd5MKWhGTcI4mn7rGYC0b6oQBjlYRwT36yM0Hki97Z-J6oVVuMCGbbyZ0_JiI8LB-69Yg1Bfi778Z2Pu_NLE83niS6s30hfmr0qsPH5f1Y9kO8MW8d_-Qmo7MxOidIAft4Mh5XnZ_fzD5mGYE8o4_ogRFuxMXJNirkvDMxfdNk01BWhNqAsAXaWZDh46nxUMp63iDMUhuBMygJsaHFkotLALDZAwsrl1TiWzTE32lrXTqaeiMjj7T7un_Qec8LoZQq4hEp6ZCOF0DIoqqK-yzJ2UjhCpyy7xGOqxs_Q0mcL5GQ3QA-Uo_qiRynRZptpKIQAmmVktFVOtdeOay6yR_DEdYGACbqqDOGj9OkTEOsBLcxutLumTsGtzUYQsc7RxSimOlZhPYooP4qwMfNXlLkGmz4a-KuY2M6hedNTekK8UpujUcMz8USWyRbgccuU88lLl_sITzAKlbvWEqYQFTC5hNnTFvd5b1sWLq0pE6nqIeZXeqXdVNeSrRkMK2UWPL70-_7Bf_s-4yquWAB5QVdkj9zszvZR1i6tjArhjmNzicXiYEkoztOFwUo9so0iiVxjfQLVIeGO1NNFsk9gfQ-t61QzjXUlgeYiNHLdai6u6tjp4mIfRlhtSKcaVqbDwKzWEFHFZjDX7EzMD02ZEsVulLHD6WjwY2x0LMLn4D2KqKfkYhZVh9u9458jGGuFzRkaOGZFq4q4uc_1OF-EXRo6vKRvVYGQ6LDSs4S3-RHaqNpFMKa72DKKRsa-iTFps0mztp3SYuN1ehv6uL2qWiFf7B3KvW4HileaHDxN0GEXcUyQXxdTT-hTsqy2RJ4GY2ia5WEkLv2Ptol9xrJ5ujP4FJ__ggNAydIDdueU_1oXOG_rW5YTBau_i81zjFsZT-G-U20ce4OT44ZPmTqPvH5luPEGDClzwyjIKKbgE3YPvLSXPB2-M9WEXN90GqXjlY80HxtENDZ8EcrxmqlsDCEUuhqg-V9SLDRl_limhy3EkdjWhi59TeZ-miANQsMCLjW7CekEaRsl74rMqsR7wtWHykIZejtA0SXy2mMM_8BFV0ZJxNBZTKYfwTYwA7X4JlS7sL0EOUhWLRdNofKBhAQ8mRSDsixDm50xZpLniX7aO7sHHbSIwPli1eMaTBrzIRvmnliy10RHJvZ482xJcBBYfBBoCBeFBfqrZHAcXX-Ha20d_yZADwKwVs=",
+      "status": null
+    },
+    {
+      "id": "msg_063cbb30b35fc791006aa1d32480a887d0961523a2dda0e6ed",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue and g1 both concern entities escaping § 5.7(e), but they identify different exclusions in different text. The proposal relies on exclusions from the definition of “Affiliate,” whereas g1 concerns the separate express exclusion of loans whose borrower or co-borrower is a Sponsored Investment Fund; therefore, no recorded defect names the same defect.\",\"words_at_issue\":\"The proposed issue turns on “the borrower is an Affiliate” and § 5.1(a)’s asserted exclusion of Noteholders and certain investors from “Affiliate.” Candidate g1 instead turns on the final paragraph of § 5.7(e), which directly excludes a loan where “the borrower or co-borrower is a Sponsored Investment Fund,” together with § 5.1(c)’s inclusion of R.E. Loans within that term.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

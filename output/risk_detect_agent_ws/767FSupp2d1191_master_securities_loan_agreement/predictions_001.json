@@ -1,0 +1,131 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": [
+   {"issue": "Section 1 fixes \"Lender\" as the party to this Agreement that lends the Securities, but Annex I-A (Party Acting as Agent) ¶5 deems references to \"Lender\" to mean the Agent's undisclosed Principal. Whether Wells Fargo or its lending Principals is the \"Lender\" for purposes of this Agreement cannot be settled from Section 1 alone.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c002", "issues": [
+   {"issue": "A Confirmation becomes \"conclusive evidence\" of the Loan terms unless \"specific objection is made promptly after receipt,\" and \"promptly\" is given no period or benchmark. The consequence of silence is total, so the length of the objection window is a live question.", "type": 1, "prob": 0.26}
+ ]},
+ {"clause_id": "c003", "issues": [
+   {"issue": "Section 2.2 says no Loan occurs until both the Loaned Securities and the Collateral have been transferred, which cannot be squared with Section 4.1 (Collateral may follow the securities up to Close of Business) and Section 4.4 (which presupposes a one-sided transfer under an existing Loan). Whether a Loan exists during that interval is left open.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c004", "issues": [
+   {"issue": "The delivery deadline is \"the Cutoff Time,\" which Section 25.16 leaves to Schedule B or, failing agreement, to \"market practice\"; Schedule B fixes no such time. The transfer deadline in this section therefore has no ascertainable content on the face of the instrument.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c005", "issues": [
+   {"issue": "Section 3.2 requires a schedule and receipt only \"for each Loan in which Lender is a Customer,\" while Section 2.1 treats a schedule and receipt \"in accordance with Section 3.2\" as a general means of confirming any Loan. Whether the schedule-and-receipt route is available for non-Customer Loans is unresolved.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c006", "issues": [
+   {"issue": "The security interest springs up if a Loan \"is deemed to be a loan of money,\" without saying by whom, under what law, or at what time such a deeming occurs. The trigger for the fallback pledge is therefore indeterminate.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c007", "issues": [
+   {"issue": "Section 4.1 lets Collateral arrive as late as Close of Business on the day the Loaned Securities are transferred, while Section 2.2 provides that no Loan occurs until the Collateral has been transferred. The two cannot both describe the same intervening period.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c008", "issues": [
+   {"issue": "The same sentence permits Lender to \"use or invest the Collateral, if such consists of cash, at its own risk\" and then obliges a non-Broker-Dealer Lender to \"segregate Collateral from all securities or other assets in its possession.\" Whether cash Collateral may be commingled and reinvested, and what \"at its own risk\" allocates, are both left in doubt by these words.", "type": 1, "prob": 0.36},
+   {"issue": "Read with Annex I-A ¶5, which deems \"Lender\" to mean the Agent's Principal, the phrase \"at its own risk\" places cash-collateral investment loss on the Principal rather than the investing Agent. That reading cannot be squared with Annex I-A ¶3's limitation of the Agent's liabilities as drafted.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c009", "issues": [
+   {"issue": "Section 4.3 requires Lender to transfer back \"the Collateral (as adjusted pursuant to Section 9),\" but Section 25.11 defines Collateral to include the securities in which cash collateral has been \"invested or reinvested\" and their proceeds. Whether Lender must return the original cash amount or only the reinvestment assets at whatever value cannot be determined from the two read together.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c010", "issues": [
+   {"issue": "The \"absolute right to the return\" of Collateral or Loaned Securities on a failed exchange sits against Section 2.2, under which no Loan has even arisen until both transfers occur, and against Section 4.2's lien attaching on transfer. Which regime governs the unmatched transfer is unclear.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c011", "issues": [
+   {"issue": "The proviso listing permissible substitute Collateral breaks off after \"(a) consist only of cash,\" so the categories of acceptable substitution cannot be read from the text. \"Reasonable notice ... taking into account all relevant factors\" likewise sets no measurable period.", "type": 1, "prob": 0.30}
+ ]},
+ {"clause_id": "c012", "issues": [
+   {"issue": "Option (c) permits Borrower to transfer \"such other Collateral to Lender as may be acceptable to Lender,\" giving Lender an unbounded veto with no standard of acceptability. Whether Lender must act reasonably in refusing substitute Collateral is unstated.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c013", "issues": [
+   {"issue": "Both the Loan Fee and the Cash Collateral Fee are payable \"at such rates as Borrower and Lender may agree,\" fixing no rate and no fallback if no rate is agreed. The pricing term is an agreement to agree.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c014", "issues": [
+   {"issue": "For Government Securities, fees fall due \"at such other times, if any, as may be customary in accordance with market practice,\" a payment date with no ascertainable content in the document. Which market's practice governs is not said.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c015", "issues": [
+   {"issue": "Fees become payable \"immediately in the event of a Default,\" yet Section 12.8 makes non-payment of fees a Default only after notice and a cure period running to the next day's Cutoff Time. The acceleration and the cure regime pull in opposite directions.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "Section 6.1(b) lets Borrower terminate a cash-collateralized Loan on any Business Day, while Annex III makes all Loans of non-Equity Securities \"Term Loans\" and Annex III ¶5 charges a Breakage Fee to the party requesting early termination. Whether the 6.1(b) right is free-standing or conditioned by the Annex is unresolved.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c017", "issues": [
+   {"issue": "Section 6.2 requires Lender to transfer the Collateral \"upon such transfer by Borrower,\" but the cross-referenced Section 4.3 permits the return to slip to the next day on which a transfer may be effected under Section 15. The simultaneity this section promises is not what Section 4.3 delivers.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c018", "issues": [
+   {"issue": "The carve-out reads \"Except as set forth in Sections 3.1 and 8.2,\" but Section 3.1 concerns Lender's transfer of the Loaned Securities and has nothing to except from Borrower's incidents of ownership; the intended reference is evidently Section 8.1 (Lender's right to Distributions). The mis-citation changes what is excepted from Borrower's ownership rights.", "type": 1, "prob": 0.25}
+ ]},
+ {"clause_id": "c019", "issues": [
+   {"issue": "Borrower's waiver of voting rights in Collateral operates only \"if Lender may, pursuant to Section 4.2, Retransfer Collateral,\" and Section 4.2 permits Retransfer only if Lender is a Broker-Dealer or Borrower has defaulted. Whether a bank Lender's Collateral is caught by the waiver depends on a status question the section does not answer.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c020", "issues": [
+   {"issue": "Lender's entitlement to all Distributions on Loaned Securities stands against Section 7.1, which gives Borrower \"all of the incidents of ownership\" including the right to transfer the securities to others. What Lender is owed when Borrower has on-lent or sold the securities is worked out only by reading the two together.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c021", "issues": [
+   {"issue": "The sentence governing non-cash Distributions after a Loan has terminated breaks off at \"Borrower shall forthwith transfer the ...,\" leaving the object and timing of that obligation unstated. The conditioning of payment on Lender \"not [being] in Default\" also has no stated consequence if the condition fails.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c022", "issues": []},
+ {"clause_id": "c023", "issues": []},
+ {"clause_id": "c024", "issues": [
+   {"issue": "The gross-up is triggered by \"any withholding or other tax, duty, fee, levy or charge required to be deducted or withheld,\" a catch-all whose outer edge against the enumerated fiscal charges is undefined. Whether non-tax deductions fall within \"Tax\" is open.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c025", "issues": []},
+ {"clause_id": "c026", "issues": [
+   {"issue": "The limitation turns on a Payee having \"failed timely to provide\" a certificate or documentation, with no deadline stated anywhere for its provision. \"Timely\" has no benchmark in the Agreement.", "type": 1, "prob": 0.13}
+ ]},
+ {"clause_id": "c027", "issues": []},
+ {"clause_id": "c028", "issues": [
+   {"issue": "The operative condition reads \"transfer of cash cash or other property by Lender would give rise to a Margin Deficit,\" omitting the parallel Borrower branch that the following words (\"Borrower or Lender (as the case may be)\") presuppose. As written the crediting mechanism cannot be applied to a Borrower transfer.", "type": 1, "prob": 0.28}
+ ]},
+ {"clause_id": "c029", "issues": [
+   {"issue": "Section 9.1 fixes a hard 100% daily collateralization test when Lender is a Customer, while Sections 9.2 and 25.37 measure margin by the \"Margin Percentage,\" which Schedule B ¶6 restates at a different level. Which figure governs a Loan to a Customer Lender is not settled by this section.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c030", "issues": [
+   {"issue": "Section 9.2 measures the Margin Deficit on the aggregate of all Loans, while Section 9.1 imposes a per-Loan 100% test and Section 9.4 allows loan-by-loan valuation only by agreement. Which basis controls absent an express agreement is left open.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c031", "issues": []},
+ {"clause_id": "c032", "issues": []},
+ {"clause_id": "c033", "issues": [
+   {"issue": "The agreed threshold applies to \"the respective rights of Lender and Borrower under Sections 9.2 and 9.3\" but is silent on Section 9.1's mandatory daily 100% mark when Lender is a Customer. Whether a threshold can cut down the Section 9.1 duty is not addressed.", "type": 2, "prob": 0.13}
+ ]},
+ {"clause_id": "c034", "issues": [
+   {"issue": "Everything turns on the \"Margin Notice Deadline,\" which Section 25.36 leaves to the Confirmation, Schedule B or, failing that, \"market practice\"; no time is set in the executed Schedule B. The same-day/next-day divide therefore rests on an unfixed hour.", "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c035", "issues": []},
+ {"clause_id": "c036", "issues": [
+   {"issue": "This no-reliance representation overlaps with, but is worded differently from, the further no-reliance representations added by Schedule B ¶5, which Schedule B ¶2 says governs in case of inconsistency. Which formulation measures a reliance claim is not resolved.", "type": 2, "prob": 0.13}
+ ]},
+ {"clause_id": "c037", "issues": [
+   {"issue": "The representation is qualified by compliance with \"Section 11.1(b),\" which requires execution of and compliance with \"Annex I,\" but Schedule B ¶1 makes \"Annex I-A\" the applicable agency annex. The chain of cross-references does not close on an existing document.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c038", "issues": []},
+ {"clause_id": "c039", "issues": [
+   {"issue": "The permitted purposes are short sales and failures to receive, \"or as otherwise permitted pursuant to Regulation T,\" a catch-all sitting against two enumerated specifics. How far the general words extend beyond the listed purposes is open.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c040", "issues": [
+   {"issue": "The subsection makes \"Lender\" the party deemed to represent that it is an \"exempted borrower\" under Regulation T or a market maker financing its activities — a representation that on its face belongs to Borrower, and it also refers back to \"subsection (6)\" rather than subsection (a). As written the substituted representation is given by the wrong party.", "type": 1, "prob": 0.30}
+ ]},
+ {"clause_id": "c041", "issues": []},
+ {"clause_id": "c042", "issues": [
+   {"issue": "Section 11.2 lets Borrower satisfy financial-disclosure demands with its \"most recent publicly-available financial statements,\" while Section 17.4(b) requires audited and unaudited statements of Borrower's financial condition before any Loan is made. The two disclosure standards are not reconciled.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c043", "issues": [
+   {"issue": "Lender's remedies must be exercised \"in a commercially reasonable manner,\" a standard the Agreement nowhere defines, and the same section lets Lender elect a deemed purchase at a price \"obtained from a generally recognized source\" in its sole discretion. What makes the repurchase or sale commercially reasonable is precisely what a defaulting Borrower would contest.", "type": 1, "prob": 0.28}
+ ]},
+ {"clause_id": "c044", "issues": [
+   {"issue": "Borrower may elect \"in its sole discretion\" to be deemed to have bought Replacement Collateral or sold the Loaned Securities at a price \"obtained from a generally recognized source or the last bid quotation,\" with no requirement that the chosen source be reasonable. The deemed-price mechanism and the commercial-reasonableness standard in the same section pull apart.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c045", "issues": [
+   {"issue": "Section 13.3(b) lets the non-defaulting party establish the pricing source \"in its sole discretion,\" which cannot be squared with Sections 13.1 and 13.2 requiring purchases and sales to be made \"in a commercially reasonable manner.\" Whether the valuation is reviewable for reasonableness turns on which controls.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c046", "issues": [
+   {"issue": "Preserving \"any rights otherwise available ... under any other agreement or applicable law\" sits against the detailed and apparently exhaustive liquidation formulae of Sections 13.1 and 13.2. Whether the contractual measure of damages is exclusive is left open by this saving clause.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c047", "issues": []},
+ {"clause_id": "c048", "issues": []},
+ {"clause_id": "c049", "issues": [
+   {"issue": "A transfer day is excluded if \"the transferee is closed for business at its address set forth in Schedule A,\" but Schedule A lists several addresses in different states for each party without designating one for this purpose. Which office's closure blocks a transfer is not determinable.", "type": 1, "prob": 0.14}
+ ]},
+ {"clause_id": "c050", "issues": [
+   {"issue": "The section defines \"securities\" to include security entitlements \"except in this Section 15,\" so the one Section governing transfers of securities uses the term in a sense different from the rest of the Agreement. The clause listing the transferor's steps also breaks off mid-sentence at \"(within the meaning of.\"", "type": 1, "prob": 0.20}
+ ]}
+]}

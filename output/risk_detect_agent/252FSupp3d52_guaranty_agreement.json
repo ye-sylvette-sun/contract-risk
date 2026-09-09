@@ -1,0 +1,251 @@
+{
+  "contract_id": "252FSupp3d52_guaranty_agreement",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The enabling-statute citation is garbled as \"Chapter 40]\" rather than Chapter 40J of the General Laws, and MTC is identified by two names (Massachusetts Technology Park Corporation and its d/b/a Massachusetts Technology Collaborative). A court could be asked which entity, with what capacity, is the contracting party and beneficiary.",
+          "type": 1,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "The recital states only that MTC and Network Operator \"are considering entering into\" the Network Operator Agreement, while the operative Section 2.1 guarantees obligations \"under the Network Operator Agreement\" as though it exists. A court could be asked whether the guaranty attaches to the agreement in fact executed (and how it interacts with NOA Section 12.14, which makes the NOA binding only on delivery of this guaranty).",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "\"[T]o enhance the security sought by MTC of the Network Operator\" is a garbled phrase whose object is unclear, and \"as provided herein\" leaves the extent of the promised security to the operative terms. A court could be asked whether the recited purpose of securing MTC's position expands or is limited by the Section 2.1 cap.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "The cap sentence says liability ends \"should Guarantor advance to MTC funds up to said amount,\" which does not say whether money spent performing the Guaranteed Obligations or paid to third parties (including \"the costs of causing the substituted performance\") counts toward the $4,000,000. The meaning of \"advance to MTC\" against the guarantee of performance in clause (a) is squarely open to construction.",
+          "type": 1,
+          "prob": 0.74
+        },
+        {
+          "issue": "It is unclear whether the $4,000,000 limit caps only monetary liability or also extinguishes the obligation to \"perform all such obligations of the Network Operator\" in kind. The provision promises full performance and then caps \"this guaranty\" in dollars, without saying which of the two prevails.",
+          "type": 1,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "Section 2.2 keeps the guaranty \"in full force and effect until all obligations of Network Operator under the Network Operator Agreement have been fulfilled,\" which cannot be squared with Section 2.1's statement that once $4,000,000 is advanced \"Guarantor shall have no further obligation or liability.\" The parenthetical \"(except as noted in section 2.1 above)\" qualifies only \"unconditional,\" not the duration language.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "Section 2.3 preserves liability despite \"any compromise, settlement, release, renewal, extension, indulgence, change in or modification\" of Network Operator's obligations, while Section 2.1 defines the Guaranteed Obligations as those \"changed in accordance with the terms of the Network Operator Agreement.\" A court could be asked whether the Guarantor remains bound to obligations altered otherwise than as the NOA permits.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "Subparagraph A reads \"the performance or observance by Network Operator, Guarantor of any of the agreements,\" a punctuation/omitted-conjunction error that leaves it unclear whether MTC's waiver of the Guarantor's own performance is included among the events that do not impair the Guarantor's obligations. Read one way it would let MTC waive the Guarantor's duties without discharging them.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "Section 2.5 gives the Guarantor a right to cure \"within the time period, if any, provided Network Operator in the Network Operator Agreement,\" but Section 3.2.A makes an Event of Default arise only after Network Operator has failed to cure within that same period. The two cannot both be given effect without deciding whether the Guarantor's cure window has already expired when MTC's direct-action right arises.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The section first waives \"all other notices in connection with the delivery, acceptance, performance, or default under the Network Operator Agreement\" and then guarantees the Guarantor \"contemporaneous notice\" of any declared default, leaving the scope of the waiver and the meaning of \"contemporaneous\" open. It also says late notice \"shall only postpone the time for performance\" without stating by how long.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "Section 3.1 contemplates a breach being \"duly waived by the other party so empowered to act\" without formality, while Section 4.4 makes no waiver effective unless in writing and signed by MTC. A court could be asked which controls an asserted oral or implied waiver.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "Section 3.2 conditions MTC's remedies on an Event of Default, including a thirty-day cure period where the NOA specifies none, but Section 2.1 makes the Guarantor liable simply \"should Network Operator default in any of its payment or performance obligations.\" A court could be asked whether demand on the Guarantor requires an Event of Default under 3.2 or merely a default under 2.1.",
+          "type": 2,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "Section 4.1 makes the guaranty inure to the benefit of Network Operator, a non-signatory, although the second recital says the guarantee is issued \"for the direct benefit of MTC.\" A court could be asked whether Network Operator has enforceable rights under an instrument its parent gave for MTC's benefit.",
+          "type": 2,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "This severability clause is duplicated by a second, differently worded severability sentence within Section 4.6 (\"rendered inoperative or illegal by operation of law or otherwise\"). A court could be asked which trigger governs when a provision is unenforceable for reasons other than operation of law.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "Section 4.3 requires the Guarantor to notify MTC in writing that a payment \"is made under this Guaranty,\" which bears directly on Section 2.1's cap measured by funds \"advance[d] to MTC.\" A court could be asked whether undesignated payments count toward the $4,000,000 limit.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The clause makes an \"amendment\" effective if it is \"in writing and signed by MTC,\" omitting any requirement of the Guarantor's signature. A court could be asked whether an amendment binding the Guarantor can be made by MTC's signature alone.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "Notices are \"effective the business day following the date sent delivered via overnight courier,\" a garbled phrase that does not say whether effectiveness runs from dispatch or from delivery. That matters for the contemporaneous-notice and cure timing provisions.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "The choice-of-law sentence says the Guaranty is governed \"exclusively\" by Massachusetts law, while the dispute-resolution provisions of the Network Operator Agreement incorporated by the last sentence of Section 4.6 provide for decision under Massachusetts law \"and any applicable federal law.\" A court could be asked whether \"exclusively\" displaces federal law, including the Federal Arbitration Act.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The sentence says that in such cases \"the principle of Severability shall govern,\" a circular reference to an undefined principle rather than a stated rule of reformation or excision. Its trigger (\"rendered inoperative or illegal by operation of law or otherwise\") also differs from Section 4.2's.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "The final sentence incorporates \"[a]ll other provisions relating to dispute resolution or arbitration contained in the Network Operator Agreement,\" but NOA Article 11 makes IPT escalation and binding arbitration a mandatory condition precedent to any suit, which cannot be squared with this section's scheme of litigation in Middlesex County unless MTC elects arbitration. A court would have to decide which regime controls a dispute with the Guarantor.",
+          "type": 2,
+          "prob": 0.62
+        },
+        {
+          "issue": "The clause conditions arbitration and litigation on the parties failing \"to resolve any dispute between them through mediation, or [being] unable to convene mediation within 60 days,\" yet nothing in the Guaranty (or in NOA Article 11, which provides for IPT negotiation and arbitration) creates any mediation obligation or procedure. The precondition therefore has no defined content or trigger.",
+          "type": 1,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c020"
+    }
+  ]
+}

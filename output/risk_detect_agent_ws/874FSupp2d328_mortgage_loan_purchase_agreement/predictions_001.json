@@ -1,0 +1,87 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": []},
+ {"clause_id": "c002", "issues": [
+   {"issue": "The recital says the HELOC Seller's representations and the remedies for their breach will be assigned to the Issuer only \"to the extent provided in the related Assignment Agreement,\" while Section 2.03 of the Sale and Servicing Agreement has the Depositor assign all of its right, title and interest in this Agreement to the Issuing Entity. Who may enforce the Section 7 representations, and against whom the sole-remedy clause runs, turns on which of these controls.", "type": 2, "prob": 0.24}]},
+ {"clause_id": "c003", "issues": [
+   {"issue": "The \"Free Writing Prospectus\" is defined only by a date, with no issuer, subject matter or content identified, and the term is then never used in any operative provision. Its scope would have to be construed from outside the instrument.", "type": 1, "prob": 0.12}]},
+ {"clause_id": "c004", "issues": [
+   {"issue": "The definitions cascade — undefined capitalized terms take their meaning from the Sale and Servicing Agreement, which in turn defers to Appendix A of an Indenture that is not part of this instrument. Terms used throughout Section 7 such as \"Revolving Credit Loan Schedule,\" \"Equity LTV\" and \"Note Insurer\" are not defined anywhere in this Agreement.", "type": 1, "prob": 0.30}]},
+ {"clause_id": "c005", "issues": [
+   {"issue": "The Acquisition Price is left blank (\"$ * ___ plus $ * in accrued interest\"), so the single most material price term of the sale is not stated in the writing. What the Purchaser owed under Section 2(c) cannot be determined from the document.", "type": 1, "prob": 0.35}]},
+ {"clause_id": "c006", "issues": []},
+ {"clause_id": "c007", "issues": []},
+ {"clause_id": "c008", "issues": [
+   {"issue": "This defines the Custodial Agreement as being among the Depositor, HELOC Seller, Master Servicer, Indenture Trustee and LaSalle Bank as Custodian, while the Insurance and Indemnity Agreement defines the same document as among the Indenture Trustee, Depositor, Sponsor and LaSalle Bank as master servicer and custodian. The two descriptions of the same instrument do not match.", "type": 2, "prob": 0.11}]},
+ {"clause_id": "c009", "issues": [
+   {"issue": "\"Custodian\" is defined as LaSalle Bank, yet Section 5(a) repeatedly refers to \"the HELOC Seller's Custodian\" as a place where Mortgage Files may be held. Whether that is the defined Custodian or some other bailee of EMC is not resolved.", "type": 2, "prob": 0.15}]},
+ {"clause_id": "c010", "issues": [
+   {"issue": "The Cut-off Date is given as a bare calendar date while the Insurance and Indemnity Agreement defines it as the close of business on February 15, 2007. Section 4(a) allocates payments \"due on or before the Cut-off Date,\" so the missing time of day has consequences.", "type": 2, "prob": 0.10}]},
+ {"clause_id": "c011", "issues": [
+   {"issue": "\"Deleted HELOC\" is defined by reference to \"Substitute HELOC,\" which is in turn defined as a loan substituted for a Deleted HELOC. The pair of definitions is circular and neither fixes the point at which a loan becomes deleted.", "type": 1, "prob": 0.09}]},
+ {"clause_id": "c012", "issues": [
+   {"issue": "Due Date is keyed to a \"Scheduled Payment\" set forth in the Mortgage Note, but Section 7(hh) says Minimum Monthly Payments are due on the first day of each month and Section 7(uu)/(vv) compute payments by Billing Cycle. Which instrument fixes the Due Date for a revolving line is left unsettled.", "type": 2, "prob": 0.17}]},
+ {"clause_id": "c013", "issues": []},
+ {"clause_id": "c014", "issues": [
+   {"issue": "\"EMC Flow Loans\" is defined by reference to \"a flow loan purchase agreement\" that is never identified by date or counterparty. Section 4(b) carves the Mortgages related to EMC Flow Loans out of the delivery accommodations, so the class of loans excluded cannot be identified from the writing.", "type": 1, "prob": 0.25}]},
+ {"clause_id": "c015", "issues": [
+   {"issue": "The Cut-off Date Balance is fixed at $666,016,193, while Section 2(a) requires the aggregate outstanding balance to equal that figure yet also sweeps in \"all additional balances resulting from related Draws\" made after the Cut-off Date. The fixed figure and the open-ended balance cannot both measure what was sold.", "type": 2, "prob": 0.16}]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "\"HELOCs: Any of the HELOCs that are identified as such on the Mortgage Loan Schedule\" defines the term by itself. The definition is circular and throws the entire identification of the assets sold onto a schedule prepared by the seller.", "type": 1, "prob": 0.21}]},
+ {"clause_id": "c017", "issues": []},
+ {"clause_id": "c018", "issues": []},
+ {"clause_id": "c019", "issues": []},
+ {"clause_id": "c020", "issues": []},
+ {"clause_id": "c021", "issues": [
+   {"issue": "\"Mortgage\" is limited to an instrument creating a lien on \"an interest in an estate in fee simple in real property,\" yet Sections 7(k), 7(mm) and 7(zz) expressly contemplate HELOCs secured by leasehold estates and ground leases. Leasehold-secured loans cannot be squared with the fee-simple-only definition.", "type": 2, "prob": 0.27}]},
+ {"clause_id": "c022", "issues": [
+   {"issue": "The Mortgage File is defined as the items in Exhibit 1, while Section 7(gg) warrants that the Mortgage File contains the documents listed in Section 2.01 of the Sale and Servicing Agreement. The two document lists are not the same, so what a complete Mortgage File is depends on which provision governs.", "type": 2, "prob": 0.22}]},
+ {"clause_id": "c023", "issues": [
+   {"issue": "\"Mortgage Rate: the annual rate of interest borne by a Mortgage Note as stated herein\" — \"herein\" points to this Agreement, which states no rate, where \"therein\" (the Mortgage Note) was plainly meant. The error matters because Net Mortgage Rate is built on this definition.", "type": 1, "prob": 0.22}]},
+ {"clause_id": "c024", "issues": []},
+ {"clause_id": "c025", "issues": [
+   {"issue": "Net Mortgage Rate is computed from the Servicing Fee Rate, Master Servicing Fee Rate and LPMI Fee, none of which is defined in this Agreement, and the defined term is then used nowhere in it. Its content can only be supplied from outside the instrument.", "type": 1, "prob": 0.12}]},
+ {"clause_id": "c026", "issues": [
+   {"issue": "An Opinion of Counsel may be given by the HELOC Seller's own counsel and need only be acceptable to the Indenture Trustee and Securities Administrator, yet under Section 6(a) such an opinion relieves the Seller of recording and Section 2.05 of the Sale and Servicing Agreement requires opinions addressed to the Note Insurer as well. The Note Insurer's role in accepting the opinion is left unreconciled.", "type": 2, "prob": 0.15}]},
+ {"clause_id": "c027", "issues": []},
+ {"clause_id": "c028", "issues": [
+   {"issue": "This defines \"Purchase Price\" for repurchases, but the Sale and Servicing Agreement (Sections 2.02, 2.03, 2.04) requires the Sponsor to repurchase at the \"Repurchase Price,\" a differently defined amount. Which measure EMC owes on a repurchase of the same loan is left to be construed between the two agreements.", "type": 2, "prob": 0.30}]},
+ {"clause_id": "c029", "issues": []},
+ {"clause_id": "c030", "issues": [
+   {"issue": "Clause (vii) requires a Substitute HELOC to \"have a maximum Mortgage Rate determined in accordance with then current underwriting standards,\" without saying whose standards or as of when. The criterion sets no measurable ceiling and is the only one of the nine conditions with no fixed benchmark.", "type": 1, "prob": 0.23}]},
+ {"clause_id": "c031", "issues": [
+   {"issue": "\"Securities Act\" is defined a second time here although the recitals already defined it to include the Commission's rules and regulations promulgated thereunder. The two definitions of the same term differ in scope.", "type": 2, "prob": 0.08}]},
+ {"clause_id": "c032", "issues": []},
+ {"clause_id": "c033", "issues": [
+   {"issue": "\"Value\" is defined but appears nowhere else in the Agreement, while the loan-quality representations turn instead on LTV, CLTV and Equity LTV (Section 7(kkk)) and on appraisals under Sections 7(x) and 7(y). The orphan definition invites argument that it supplies the appraisal standard those provisions leave open.", "type": 2, "prob": 0.11}]},
+ {"clause_id": "c034", "issues": [
+   {"issue": "The sale is conditioned on satisfaction of \"the conditions set forth in Section 11 hereof,\" but Section 11 is Fees and Expenses; the conditions to closing are in Section 10, as Section 2(c) itself recites. The cross-reference is wrong on its face.", "type": 1, "prob": 0.40}]},
+ {"clause_id": "c035", "issues": [
+   {"issue": "\"the closing for the issuance of the Securities\" uses a capitalized term that is nowhere defined in this Agreement, which defines only \"Notes\" and \"Certificates.\" Whether Securities means both, or only the classes sold in the Public Offering, is unresolved.", "type": 1, "prob": 0.20}]},
+ {"clause_id": "c036", "issues": [
+   {"issue": "This requires the Purchaser to pay the Acquisition Price and also to \"deliver the Securities to the HELOC Seller,\" while the recitals say only that \"[c]ertain Certificates will be transferred by the Purchaser to the HELOC Seller as partial consideration\" and the Acquisition Price is defined as cash alone. What the Seller was entitled to receive at closing cannot be squared across the two.", "type": 2, "prob": 0.25}]},
+ {"clause_id": "c037", "issues": [
+   {"issue": "This creates and names the \"Mortgage Loan Schedule,\" yet a dozen representations in Section 7 (for example 7(h), 7(hh), 7(kk) and 7(uu)) warrant facts by reference to a \"Revolving Credit Loan Schedule\" that is defined nowhere. Whether the two are the same document has to be construed.", "type": 2, "prob": 0.20}]},
+ {"clause_id": "c038", "issues": [
+   {"issue": "Each sentence ends with the trailing phrase \"and all payments thereof,\" which duplicates or expands the entitlement to \"scheduled payments\" just granted without saying what further payments (prepayments, draws, recoveries) it captures. The line between the Seller's and the Purchaser's collections is left uncertain.", "type": 1, "prob": 0.18}]},
+ {"clause_id": "c039", "issues": [
+   {"issue": "The closing sentence obliges the Seller to record \"the Mortgage and intervening assignments, if any, and the assignment of the Security Instrument\" within 180 days \"unless such assignment is not required to be recorded under the terms set forth in Section 6(a),\" but Section 6(a) excuses only assignments of the Security Instrument and says nothing about recording the Mortgage itself. The exception does not fit the duty it qualifies.", "type": 2, "prob": 0.27}]},
+ {"clause_id": "c040", "issues": [
+   {"issue": "The paragraph recites that \"the Master Servicer agrees that it will not\" alter the MERS codes, but the Master Servicer is not a party to this Agreement, which is only between EMC and the Purchaser. A purported covenant by a stranger to the instrument is unenforceable as written.", "type": 1, "prob": 0.24}]},
+ {"clause_id": "c041", "issues": [
+   {"issue": "The parties acknowledge that the HELOCs \"will ultimately be assigned\" to the Indenture Trustee \"on the date hereof\" — a future, indefinite word paired with a fixed present date. Section 4(b) describes the same transfer as occurring through the Issuer under the Sale and Servicing Agreement and the Indenture on the Closing Date.", "type": 1, "prob": 0.19}]},
+ {"clause_id": "c042", "issues": [
+   {"issue": "This preserves the Purchaser's \"rights to demand cure, repurchase, substitution or other relief as provided in this Agreement\" notwithstanding any examination, while the closing paragraph of Section 7 makes cure, repurchase and substitution the \"sole and exclusive remedy.\" What \"other relief\" survives the sole-remedy clause is left to be construed.", "type": 2, "prob": 0.16}]},
+ {"clause_id": "c043", "issues": [
+   {"issue": "The Custodian is said to \"acknowledge receipt of each HELOC,\" whereas Section 2.02(a) of the Sale and Servicing Agreement has the Custodian acknowledge receipt of the Mortgage File for each HELOC, without review. Whether the initial certification certifies receipt of the loan or merely of a file is a real difference.", "type": 2, "prob": 0.15}]},
+ {"clause_id": "c044", "issues": [
+   {"issue": "The first sentence requires the Indenture Trustee or Custodian to review the Mortgage File items and certify that all documents have been executed, received and relate to the scheduled HELOCs; the last sentence says the Custodian is \"under no duty or obligation to inspect, review or examine said documents.\" The two sentences of the same subsection cannot both be given effect.", "type": 1, "prob": 0.30}]},
+ {"clause_id": "c045", "issues": [
+   {"issue": "\"Material Defect\" is defined here as a missing, unexecuted or unrelated document, while Section 2.02(a) of the Sale and Servicing Agreement defines the same term to include a document that \"does not conform on its face to the review criteria specified in this Section.\" The same defined term carries two different scopes across the linked agreements.", "type": 2, "prob": 0.29},
+   {"issue": "The Seller must \"correct or cure any such Material Defect within 90 days from the date of notice\" and, failing that, must substitute or repurchase \"within 90 days of the date of notice\" — both periods run from the same notice date, so the repurchase deadline expires simultaneously with the cure period. The sequence of obligations is internally impossible as drafted.", "type": 1, "prob": 0.26}]},
+ {"clause_id": "c046", "issues": [
+   {"issue": "This subsection directs what \"the Indenture Trustee ... shall\" do on any repurchase or substitution, but the Indenture Trustee is not a party to this Agreement, which is between EMC and the Purchaser alone. The release machinery for a Deleted HELOC therefore depends on the Sale and Servicing Agreement rather than on these words.", "type": 1, "prob": 0.15}]},
+ {"clause_id": "c047", "issues": [
+   {"issue": "A failure to provide recording evidence or an Opinion of Counsel \"shall be considered a Material Defect, and the provisions of Section 5(c) and (d) shall apply,\" but Section 5(c) is only the interim-certification provision and contains no cure, substitution or repurchase machinery. Which remedy the cross-reference triggers must be construed.", "type": 2, "prob": 0.24}]},
+ {"clause_id": "c048", "issues": [
+   {"issue": "The subsection declares the conveyance to be \"a sale\" and expressly not a pledge, then in the same breath deems the Agreement a security agreement granting a first priority security interest if a court holds otherwise. The character of the conveyance — and what the Purchaser owns as against EMC's creditors — is left to be construed from these competing declarations.", "type": 1, "prob": 0.15}]}
+]}

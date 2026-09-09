@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "de3e5c444062d9678c812c2f6676644bbe0cdca42bd66a83ace8f755cf5653c5",
+  "document_chars": 3777,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2356,
+    "input_tokens_details": {
+      "cache_write_tokens": 2353,
+      "cached_tokens": 0
+    },
+    "output_tokens": 195,
+    "output_tokens_details": {
+      "reasoning_tokens": 63
+    },
+    "total_tokens": 2551
+  },
+  "response": [
+    {
+      "id": "rs_0b97174543b88024006aa1d375918487d0a3309b5eabd86cb5",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodN4MoYB_7XS_JIiEctWiYPOKXI4xX0fY5x7HFQZLNp6ob42kAotdILWGCk8Dvgn77TWNd5OXdB3tRN_Wk0rny6c-Xlwo8VprTtFJxYShkWpHIKEknT_Dak720zpb5Cim-SfSQ7hkU-DjZMRGiwCptwUIVy2ylxwPdV-6vvEBLKloMpj83TSxWjhIHvbCF-6qacqObpM3RJFFv4wCFZ2vf22CQyLvGf09W2zQDDEG0YOz3QhMR3xZfOgkZKwe2hUQIRar7epi2Q0BPuAXI1TEl1iVR6Bkhw8bWRbfJJDHWG1rhm0RzGoje9Jr0NmDLoFoiDDuiiVJp_e8KQ21IlOzrwc5l4_dGuGteQZKB8lB8b7F8ULAC-BPJMzVuSb9hyIb68Hh33epECfFOh3avADQmBZNgkXIiPbp5XEysrNOBc-IfwyJq0k6ZI35iCjECRrWgtRARzhuhU7L0yUfGYw4Y0RtiLyjcZpwhXa3fNJN_gLRdbPwHKyEznm6CR8FGNp6sRAEVZhyVEwQYDu21VI4MrjKXIiJPRkHCiz0gzZKkQTtGuQAzzXXPWOgelz21Ono-bwXeHHZsGnJ_82lZjFl30Gq2xgcYNqPlZWMX04OJ5COOk5il05NcXpz2ITitRIBo44fYEqEWajBh-h2900gs1sFXrPbgaQY5mu_7TIy1fDPIg5KB2FAZq4Nr0lq9SOVaeVyqOO0ktNcRfznAAfnWVNh4HX8E3KOOs5-pnChstQCod35LAJ3BPalm8lElxvlwzQxRTiYF1hoNsrd7waWiiow-XLjAb8n1WPsPIuQ2Yv697I0HGWU8xRvnN2dBBDbt-PZmC3zSErfzl5LeDK7SsZXukPcXgVXFEtxUurbroe6L3FgHtLemuIArQPOwAj94DzyOuW6iOYGltEOE5GFQJiyUKVRmcjkxqnFbXmkNVVk1DfsSSEivNju6sM0u-KmxiRuHdWliI30WYZCb8RbOmBf4BHSgJR9yTKBz16AfnSq1ZI1uszuTubBRDDrcU76gE0-CjOhrhL4r7hjkq5nJYSC6ls5iRa62Hb4KGxh_uDo60u3r9PU0Ogr8ZBN06SekWXpCN6ukqY86nRdWOsgVHg2An8D7x7uLj15U_AeQsRy-ZBLiRRvBMnqtKX4jQyVGXRKcI3eVJGmSqXwjgJxUiTG2k97TY3hjM91hmo2RPeqA2YfVUKY6i1KU0bxL3MnDN2MxK1oWc-pE25aJ0pJWw3ks7C_gRZK3Cgdz60eilNGI_0R7KtaYoenD7o3t38OV57iHFCL_XMeg7eKiFecZh73ysFYUZLjMqDJKqXr7QnnCYnpNwWBsc6IyTn0dGmZf88EemgQpQGkjSeG4WeEISbiNtgHaK1uwFhQkjGTa0SH4TU3QwwONtL4LJfaCC0ATuXP9YXkusIyBgh5G9wTIxxGlUrTNVOaJ4k0Tz1rrqYno-z5arKtolK1_ceLaSkdg5Z7kd0J-ExLt8HhTrTG3dodlue5RBhi5zvW_J2zOI9_1OkSfgPDtxbAuMlk2dwDh7eF_x7a_HVl_hvOtelUjzcWuSJPPVmzJ4H3H8WAcePU_g=",
+      "status": null
+    },
+    {
+      "id": "msg_0b97174543b88024006aa1d3768d8087d0a5fb5edc6aa50af4",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue challenges the undefined standard governing whether cross-promotion is required, whereas g1 identifies competing meanings of “locations” that determine which advertisements or geographic places are covered. These are distinct defects involving different words.\",\"words_at_issue\":\"The proposed issue concerns “when practical and appropriate” and the clause’s silence about a benchmark or decision-maker for that standard. Candidate g1 concerns the word “locations,” specifically whether it means places where both parties maintain facilities or the geographic reach of the promotional material.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

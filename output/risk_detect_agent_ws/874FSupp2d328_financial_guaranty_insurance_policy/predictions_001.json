@@ -1,0 +1,129 @@
+{"judgments": [
+  {"clause_id": "c001", "issues": [
+    {"issue": "The face of the Policy promises \"the full and coinplete payment of the Scheduled Payments\" unconditionally and irrevocably, but the Endorsement's \"Scheduled Payment\" definition (c031) defers all principal to the Final Scheduled Payment Date in 2032 and c034 carves out further sums. What is guaranteed cannot be determined from this sentence once the Endorsement is read with it.", "type": 2, "prob": 0.36}
+  ]},
+  {"clause_id": "c002", "issues": [
+    {"issue": "The payment timing here (the later of one Business Day after receipt of a Payment Notice or the Business Day on which Scheduled Payments are due) cannot be squared with c041 of the Endorsement, which sets the later of 12:00 noon on the first Business Day after receipt and 12:00 noon on the Payment Date to which the Deficiency Amount relates. Which timetable governs turns on the precedence clause at c064.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c003", "issues": [
+    {"issue": "Subrogation \"to the extent of any payment by XLCA hereunder\" cannot be squared with c051, which makes any subrogation right acquired on a payment under the Policy subordinate and junior in all respects to prior indefeasible payment in full of the Owners. The two provisions give the same right different content.", "type": 2, "prob": 0.22}
+  ]},
+  {"clause_id": "c004", "issues": [
+    {"issue": "XLCA is discharged once funds are deposited in the specified account whether or not they are properly applied by the Securities Administrator or claimed by an Owner, which cannot be squared with c070, by which the Securities Administrator undertakes to see the funds applied to the Deficiency Amount, or with the guarantee to Owners in c001. Whether misapplication leaves Owners with a claim on the Policy is unresolved.", "type": 2, "prob": 0.25}
+  ]},
+  {"clause_id": "c005", "issues": [
+    {"issue": "This guarantee covers payments \"recovered or recoverable\" and is conditioned on funds not being \"otherwise available in accordance with Endorsement No. 1,\" while c017 and c043 require that the payment actually have been returned under a final, nonappealable order before any Avoided Payment is owed. The trigger for the avoided-payment cover differs between the face of the Policy and the Endorsement.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c006", "issues": [
+    {"issue": "The clause forbids endorsement or modification \"without the written consent of XLCA\" and names no other consenting party, leaving open whether XLCA may itself endorse or modify the Policy unilaterally. Read with c064, which gives an endorsement precedence over the Policy, the no-cancellation promise may be worth less than it appears.", "type": 1, "prob": 0.24}
+  ]},
+  {"clause_id": "c007", "issues": []},
+  {"clause_id": "c008", "issues": [
+    {"issue": "The catch-all \"nor against any risk other than Nonpayment and Avoided Payment\" sits against the enumerated specifics that follow (prepayment, acceleration, tax-related shortfalls including interest and penalties), so the reach of the general exclusion is uncertain. The parenthetical \"other than at the sole option of XLCA\" also leaves unclear which of the listed items the option qualifies.", "type": 1, "prob": 0.24}
+  ]},
+  {"clause_id": "c009", "issues": []},
+  {"clause_id": "c010", "issues": [
+    {"issue": "This sends undefined capitalized terms to the Endorsement, while c016 of the Endorsement sends terms undefined there on to the Indenture, which is not attached; terms actually used (Current Interest, Note Principal Balance, Extraordinary Trust Fund Expenses Cap) appear in neither instrument in the record. The chain of referral leaves core coverage terms unfixed.", "type": 2, "prob": 0.22}
+  ]},
+  {"clause_id": "c011", "issues": []},
+  {"clause_id": "c012", "issues": [
+    {"issue": "The Endorsement heading gives the policy number as CA036078, while Exhibit A and the Policy itself use CA03607A. Because c054 requires every notice to \"specifically refer to the number of this Policy,\" the discrepancy is not merely cosmetic.", "type": 2, "prob": 0.12}
+  ]},
+  {"clause_id": "c013", "issues": [
+    {"issue": "The Obligor is named \"GreenPoint Mortgage Funding Trust 2007-HE1\" and labelled the \"Issuing Entity,\" whereas the Sale and Servicing Agreement identifies the issuing entity as \"GPMF Trust 2007-HE1\" and the Policy elsewhere uses \"Obligor\" and \"Issuing Entity\" interchangeably. Which entity's obligations are insured depends on reconciling the two descriptions.", "type": 2, "prob": 0.15}
+  ]},
+  {"clause_id": "c014", "issues": [
+    {"issue": "The Class A-1 and Class A-2 amounts stated here ($507,837,000 and $132,870,000) do not match the amount shown on the face page of the Policy ($13,249,000 Class A), and the series is written \"2007-HEL\" rather than 2007-HE1. The identity and size of the Insured Obligations is therefore stated inconsistently across the instrument.", "type": 2, "prob": 0.15}
+  ]},
+  {"clause_id": "c015", "issues": [
+    {"issue": "The Beneficiary is LaSalle Bank as Securities Administrator, but the recital of the Insurance and Indemnity Agreement states that the Insurer issued the Policy \"in favor of the Indenture Trustee on behalf of the Issuer and for the benefit of the Holders of the Insured Notes\" — a different payee and a different class of beneficiaries. Which document identifies the true claimant is a live question.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c016", "issues": [
+    {"issue": "This refers undefined terms to the Indenture, while c010 of the Policy refers them to the Endorsement, producing a two-step chain to an instrument that is not attached to the Policy. Which source supplies the meaning of a term defined differently in the two is unresolved.", "type": 2, "prob": 0.20}
+  ]},
+  {"clause_id": "c017", "issues": [
+    {"issue": "\"Avoided Payment\" is defined here as a payment voided in an Insolvency Proceeding and actually \"returned by a holder of Insured Notes as required by a final, nonappealable order,\" while c043 separately defines \"Avoided Payment\" as a payment an Owner \"is required to return\" following a Preference Event. The Endorsement thus contains two definitions of the same defined term with different triggers.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c018", "issues": [
+    {"issue": "The final limb — \"a day ... on which the jurisdiction in which the Indenture Trustee ... is located, are authorized or obligated by law or executive order to be closed\" — has lost its subject, so what must be closed (banking institutions in that jurisdiction, presumably) is not stated. The grammatical breakdown changes when a claim day counts.", "type": 1, "prob": 0.28}
+  ]},
+  {"clause_id": "c019", "issues": [
+    {"issue": "The Deficiency Amount turns entirely on \"Current Interest,\" \"Accrual Period\" and \"Note Principal Balance,\" none of which is defined in the Policy or the Endorsement and none of which appears in the Sale and Servicing Agreement; they are reachable only through c016's referral to an Indenture not attached. The amount payable is therefore not computable from the Policy alone.", "type": 2, "prob": 0.20}
+  ]},
+  {"clause_id": "c020", "issues": [
+    {"issue": "The Final Scheduled Payment Date is fixed as \"the Payment Date occurring in December 2032\" without tying it to the stated maturity of the Insured Notes under the Indenture. If the Notes' final payment date differs, which date controls the principal guarantee under c031 is unclear.", "type": 1, "prob": 0.14}
+  ]},
+  {"clause_id": "c021", "issues": []},
+  {"clause_id": "c022", "issues": [
+    {"issue": "\"Insolvency Proceeding\" reaches proceedings \"by or against any Person,\" and \"Person\" in c029 is defined at large, so nothing ties the proceeding to the Issuing Entity or to any transaction party. The boundary of the term is left open.", "type": 1, "prob": 0.20}
+  ]},
+  {"clause_id": "c023", "issues": [
+    {"issue": "The definition identifies the sponsor party as \"EMC Mortgage Company,\" whereas the Insurance and Indemnity Agreement it purports to define is by and among \"EMC MORTGAGE CORPORATION\" as Sponsor. The misnomer puts in issue which agreement and which party the Policy's reimbursement and interest-rate references point to.", "type": 2, "prob": 0.20}
+  ]},
+  {"clause_id": "c024", "issues": [
+    {"issue": "The definition first describes Insured Amounts as the portion of Scheduled Payments unpaid by reason of Nonpayment, then deems that portion \"equal to the related Deficiency Amount,\" two measures that need not coincide. Which limb controls when the unpaid Scheduled Payment exceeds the Deficiency Amount is left unsaid.", "type": 1, "prob": 0.28}
+  ]},
+  {"clause_id": "c025", "issues": [
+    {"issue": "The definition rests on \"Charge-Off Amounts ... allocated to reduce the Note Principal Balance,\" a term nowhere defined in the Policy or Endorsement, and does not say who makes the allocation or under which provision. The building block of the principal component of coverage is undefined.", "type": 1, "prob": 0.20}
+  ]},
+  {"clause_id": "c026", "issues": [
+    {"issue": "The definition uses \"the Note Insurer,\" a term never defined in the Policy or the Endorsement, which elsewhere identify the insurer only as XLCA. Whether the two labels denote the same party, and where the term takes its meaning from, is left to the referral chain.", "type": 1, "prob": 0.18}
+  ]},
+  {"clause_id": "c027", "issues": [
+    {"issue": "\"Nonpayment\" is the failure to receive \"in full\" funds legally available to pay \"all or a portion of\" the Scheduled Payment — a self-contradictory formulation. It is unclear whether a partial receipt is a Nonpayment of the whole or only of the shortfall.", "type": 1, "prob": 0.25}
+  ]},
+  {"clause_id": "c028", "issues": [
+    {"issue": "\"Owner\" excludes \"any of their respective affiliates,\" a term the Policy nowhere defines and which is not bounded by time or degree of control. A noteholder later becoming affiliated with a servicer or the Depositor may drop out of coverage without any stated test.", "type": 1, "prob": 0.20}
+  ]},
+  {"clause_id": "c029", "issues": [
+    {"issue": "The enumerated list of entity types is joined by \"and\" rather than \"or\" and omits categories such as associations, estates and joint-stock companies, with no catch-all. Read literally the definition requires all listed forms at once and excludes unlisted ones.", "type": 1, "prob": 0.13}
+  ]},
+  {"clause_id": "c030", "issues": [
+    {"issue": "Reimbursement Amounts carry interest \"at the rate set forth in the Insurance Agreement,\" which is not stated here, and c051 subordinates XLCA's recovery to prior payment in full of the Owners. Whether Reimbursement Amounts are subject to that subordination or preserved by c052 is unresolved.", "type": 2, "prob": 0.18}
+  ]},
+  {"clause_id": "c031", "issues": [
+    {"issue": "\"Scheduled Payment\" includes principal only on the Final Scheduled Payment Date (and otherwise only charge-off amounts), which cannot be squared with the face-page guarantee in c001 of \"the full and complete payment of the Scheduled Payments\" on the Insured Obligations. The Endorsement narrows what the Policy's operative sentence promises.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c032", "issues": [
+    {"issue": "The exclusion runs to acceleration \"as a result of any optional redemption, in whole or in part, or any other cause,\" a catch-all sitting against a single enumerated specific. Whether mandatory acceleration following an event of default falls within \"any other cause\" is left to construction.", "type": 1, "prob": 0.27}
+  ]},
+  {"clause_id": "c033", "issues": [
+    {"issue": "\"Without regard to any deceleration\" appears to be a mechanical error for \"acceleration\"; as written the sentence tells the reader to disregard something the Policy nowhere contemplates. The correction changes what the insurer must pay after an acceleration it declines to honour.", "type": 1, "prob": 0.24}
+  ]},
+  {"clause_id": "c034", "issues": [
+    {"issue": "Clause (i)'s general words \"or other sum payable by the Issuing Entity by reason of any default\" sit against the enumerated exclusions (ii)-(v) (Relief Act Shortfalls, Net WAC Cap Rate Carryover Amounts, prepayment interest shortfalls, taxes). How far the general catch-all extends beyond default interest and penalties is unclear.", "type": 1, "prob": 0.25}
+  ]},
+  {"clause_id": "c035", "issues": [
+    {"issue": "The exclusion turns on the \"Extraordinary Trust Fund Expenses Cap,\" a term defined nowhere in the Policy or Endorsement and absent from the Sale and Servicing Agreement, which uses only \"Extraordinary Trust Fund Expenses.\" Whether any cap exists, and at what level, cannot be answered from the instrument.", "type": 1, "prob": 0.25}
+  ]},
+  {"clause_id": "c036", "issues": [
+    {"issue": "The proviso terminates the Term by reference to \"the Holders of Insured Notes,\" a term the Policy never defines — it defines \"Owner\" at c028 — while the Insurance and Indemnity Agreement defines \"Holder\" by referring back to the Policy, closing a circle. Who must return an Avoided Payment to trigger the proviso is therefore undetermined.", "type": 2, "prob": 0.24}
+  ]},
+  {"clause_id": "c037", "issues": [
+    {"issue": "The clause fixes no deadline for delivering a Payment Notice relative to the Payment Date and does not say what makes a notice \"appropriately completed\" or what follows if it is not. Whether a defective notice starts the payment clock in c041 is left open.", "type": 1, "prob": 0.16}
+  ]},
+  {"clause_id": "c038", "issues": [
+    {"issue": "Only two methods of presentation are listed — delivery of the original and facsimile transmission — so by implication e-mail or courier presentation is ineffective. The exclusivity of the enumerated list is not stated either way.", "type": 1, "prob": 0.15}
+  ]},
+  {"clause_id": "c039", "issues": [
+    {"issue": "\"As soon as reasonably practicable\" and the requirement to \"simultaneously confirm transmission by telephone\" set no measurable standard, and the provision does not say whether either step is a condition of XLCA's duty to pay under c041. Failure to telephone could be argued to defeat a facsimile claim.", "type": 1, "prob": 0.22}
+  ]},
+  {"clause_id": "c040", "issues": [
+    {"issue": "The deeming of a late-arriving Payment Notice as received at 9:00 a.m. the next Business Day cannot be squared with c055, which makes each Payment Notice \"effective only upon actual receipt by XLCA.\" One provision constructs receipt while the other insists on the fact of it.", "type": 2, "prob": 0.28}
+  ]},
+  {"clause_id": "c041", "issues": [
+    {"issue": "The Endorsement's timetable (later of noon on the first Business Day after receipt and noon on the Payment Date to which the Deficiency Amount relates) conflicts with the face of the Policy at c002 (later of one Business Day after receipt or the Business Day on which Scheduled Payments are due). The conflict must be resolved through c064.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c042", "issues": [
+    {"issue": "Payment is directed to the \"Policy Payments Account established pursuant to the Indenture,\" while c004 treats deposit in \"the account specified in the Payment Notice\" as discharging XLCA and c067 lets the Securities Administrator nominate the receiving account. The three provisions point to potentially different accounts.", "type": 2, "prob": 0.22}
+  ]},
+  {"clause_id": "c043", "issues": [
+    {"issue": "This paragraph defines \"Avoided Payment\" and \"Final Order\" (an order whose appeal period has expired without an appeal having been filed, requiring an Owner to return a payment) in terms that differ from the definition of \"Avoided Payment\" already given at c017 (returned as required by a final, nonappealable order). The same defined term carries two triggers within the Endorsement.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c044", "issues": [
+    {"issue": "The 2:00 p.m. next-Business-Day deadline is measured from receipt of the documents required \"under clauses (x) through (z) of the preceding paragraph,\" but c046 conditions payment in the alternative case on further \"evidence satisfactory to XLCA.\" Whether the deadline runs from the clause (x)-(z) documents alone is unclear.", "type": 2, "prob": 0.15}
+  ]},
+  {"clause_id": "c045", "issues": [
+    {"issue": "The deemed-receipt rule for avoided-payment documents conflicts with c055, which makes deliveries to XLCA effective \"only upon actual receipt.\" The provision also gives no rule for documents received before 10:00 a.m. on a Business Day.", "type": 2, "prob": 0.17}
+  ]}
+]}

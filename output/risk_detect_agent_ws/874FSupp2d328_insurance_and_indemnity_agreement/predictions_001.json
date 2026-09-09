@@ -1,0 +1,93 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": [
+   {"issue": "The fallback chain sends undefined capitalized terms to the Policy and then the Indenture, but terms actually used in this Agreement — \"Seller\" in Section 3.02(a), \"Collateral\" in Section 2.01(j), \"Rating Agencies\" — are defined in none of the three. The interpretive rule therefore leaves operative terms without any assigned meaning.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c002", "issues": [
+   {"issue": "\"1119 Parties\" is a closed list of six named entities with no provision for successors or replacements (e.g. a successor servicer or trustee), so the Section 2.05(o) no-affiliation representation is frozen to those six names. Expressio unius makes any later-appointed transaction party fall outside the term.", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c003", "issues": []},
+ {"clause_id": "c004", "issues": []},
+ {"clause_id": "c005", "issues": []},
+ {"clause_id": "c006", "issues": [
+   {"issue": "\"Commission\" is defined as the Securities and Exchange Commission while \"SEC\" is separately defined as the same agency, and the two terms are used in different operative provisions (2.02(e)(i) and 2.02(m) versus 2.05(i)). A court could be asked whether the two defined terms were meant to carry different content.", "type": 2, "prob": 0.10}
+ ]},
+ {"clause_id": "c007", "issues": []},
+ {"clause_id": "c008", "issues": []},
+ {"clause_id": "c009", "issues": [
+   {"issue": "The definition points to \"Section 2.02(c)(ill)\", a garbled cross-reference; the Data Tape is in fact defined in Section 2.02(c)(iii)(A). The mechanical error leaves the source of the definition to be reconstructed.", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c010", "issues": []},
+ {"clause_id": "c011", "issues": []},
+ {"clause_id": "c012", "issues": []},
+ {"clause_id": "c013", "issues": []},
+ {"clause_id": "c014", "issues": []},
+ {"clause_id": "c015", "issues": [
+   {"issue": "The definition opens an enumeration with \"(i)\" and never supplies a \"(ii)\", indicating an omitted limb, and it is frozen to fiscal years ended November 30, 2004-2006. Section 2.01(h)'s reference to \"the most recent Financial Statements\" and 2.02(c)(i)'s ongoing annual statements cannot sit comfortably in that fixed definition.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c016", "issues": [
+   {"issue": "\"Holder\" is said to take its meaning from the Policy, but the Policy defines \"Owner\" of the Insured Obligations and never defines \"Holder\". The term used throughout this Agreement (including the Policy definition in 1.01 and Section 2.02(c)) therefore has no assigned meaning in the instrument it points to.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c017", "issues": [
+   {"issue": "\"[T]he first January 31 to occur thereafter\" does not say thereafter from what — the No Form 15D Notice or January 31, 2008 — so a notice given in late 2007 either extends the date by a year or by nothing at all. The extension mechanism can be read to be self-cancelling.", "type": 1, "prob": 0.28}
+ ]},
+ {"clause_id": "c018", "issues": []},
+ {"clause_id": "c019", "issues": []},
+ {"clause_id": "c020", "issues": []},
+ {"clause_id": "c021", "issues": []},
+ {"clause_id": "c022", "issues": [
+   {"issue": "The definition cross-refers to \"Section 2.03()\", which is the Negative Covenants section and contains no such definition; \"Insurer Financial Statements\" is actually defined in Section 2.05(l). The broken cite leaves the defined term without a stated source.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c023", "issues": []},
+ {"clause_id": "c024", "issues": []},
+ {"clause_id": "c025", "issues": [
+   {"issue": "The term is spelled \"Tnsurer Information\" and is cross-referenced to Section 3.04(a)(v), an indemnification provision, while the representation using \"Insurer Information\" is in Section 2.05(e). The mismatch between where the term is defined and where it does its work is a mechanical defect.", "type": 1, "prob": 0.14}
+ ]},
+ {"clause_id": "c026", "issues": []},
+ {"clause_id": "c027", "issues": []},
+ {"clause_id": "c028", "issues": [
+   {"issue": "Limb (a)(ii), \"the then applicable rate of interest on the Insured Notes\", does not say which rate applies where the Insured Notes comprise two classes (A-1 and A-2) bearing different rates. The formula cannot be computed without choosing between them.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c029", "issues": [
+   {"issue": "\"Material Adverse Change\" is expanded by \"any material adverse change in the business, financial condition, results of operations or properties ... which might have such effect\", so a mere possibility of impairment satisfies the test. The trigger word \"might\" has no boundary and this term controls covenants, defaults and reporting throughout Article II.", "type": 1, "prob": 0.25}
+ ]},
+ {"clause_id": "c030", "issues": []},
+ {"clause_id": "c031", "issues": []},
+ {"clause_id": "c032", "issues": [
+   {"issue": "After enumerating the Prospectus, Prospectus Supplement and Free Writing Prospectus, the definition adds a catch-all for \"any other offering document in respect of the Securities prepared by or on behalf of the Depositor that makes reference to the Policy\". Whether marketing or investor materials outside the enumerated three fall within it is left open.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c033", "issues": [
+   {"issue": "The catch-all limb captures only \"each other document contemplated by any of the foregoing to which the Depositor, the Owner Trustee, the Master Servicer, the Servicer, the Indenture Trustee or the Trust is a party\", omitting EMC/the Sponsor and the Insurer though EMC-side instruments (the Purchase Agreement, the Depositor Purchase Agreement, the Assignment Agreement) are enumerated. Expressio unius leaves EMC's other transaction documents outside the term on which nearly every covenant depends.", "type": 1, "prob": 0.28},
+   {"issue": "The enumerated list includes the \"Certificate of Trust\" and the \"Administration Agreement\", neither of which is defined in Article I or identified anywhere else in this Agreement. Their identity must be supplied from outside the instrument.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c034", "issues": [
+   {"issue": "The definition turns on \"any Mortgage Loan\", a term this Agreement never defines and which sits against the recitals' and Article II's consistent use of \"HELOCs\" for the asset pool. Whether \"Originators\" reaches the originators of the HELOCs is therefore left to inference.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c035", "issues": []},
+ {"clause_id": "c036", "issues": []},
+ {"clause_id": "c037", "issues": [
+   {"issue": "The Policy is defined as \"issued by the Insurer in favor of the Indenture Trustee, for the benefit of the Holders\", but the Financial Guaranty Insurance Policy No. CA03607A filed in the case names LaSalle Bank National Association, as Securities Administrator, as the Beneficiary and pays it, not the Indenture Trustee. Who holds and may claim under the Policy cannot be squared as between the two documents.", "type": 2, "prob": 0.35}
+ ]},
+ {"clause_id": "c038", "issues": [
+   {"issue": "\"Premium\" is defined by three simultaneous references — payable \"in accordance with this Insurance Agreement\", \"as 'Premium Amounts' pursuant to the Premium Letter\" and \"in accordance with the Indenture\" — without saying which governs on a conflict. The circularity leaves the amount and timing of Premium indeterminate on the face of the definition.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c039", "issues": []},
+ {"clause_id": "c040", "issues": [
+   {"issue": "The recitals define the \"Purchase Agreement\" and the \"Servicing Agreement\" as the same instrument — the Seller's Purchase, Warranties and Servicing Agreement dated October 18, 2004 as amended by Amendment Number One — differing only in the inclusion of the September 2006 term sheets. Yet Section 1.01's \"Operative Documents\" lists them as two separate documents, so the two defined terms overlap and cannot both be given independent effect.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c041", "issues": []},
+ {"clause_id": "c042", "issues": []},
+ {"clause_id": "c043", "issues": []},
+ {"clause_id": "c044", "issues": [
+   {"issue": "\"SEC\" duplicates the separately defined \"Commission\", and the two are used in different provisions (2.05(i) and (l) versus 2.02(e) and (m)) of the same instrument. A court could be asked whether the drafters intended a distinction between the two labels.", "type": 2, "prob": 0.09}
+ ]},
+ {"clause_id": "c045", "issues": []},
+ {"clause_id": "c046", "issues": []},
+ {"clause_id": "c047", "issues": []},
+ {"clause_id": "c048", "issues": [
+   {"issue": "\"Servicer Information\" is confined to information \"contained under the heading 'The Servicer'\" in the Offering Document, so servicer-related disclosure appearing under any other caption falls outside both the Section 2.04(e) representation and the Section 2.01(m) carve-out. The caption-based boundary is the whole of the definition.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c049", "issues": []},
+ {"clause_id": "c050", "issues": [
+   {"issue": "\"Transaction\" is defined by open reference to everything \"contemplated by the Operative Documents\" plus everything \"described in the Offering Document\", with no boundary. Because \"material adverse effect upon the Transaction\" is the trigger in 2.01(a), (i), 2.02(e) and elsewhere, the vagueness is operative.", "type": 1, "prob": 0.12}
+ ]}
+]}

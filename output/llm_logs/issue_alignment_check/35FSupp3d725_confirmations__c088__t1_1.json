@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "384b20c1e927e0d8e2ac59c00829a99ea469d31d6695cc7f2f3a32f6ae5c3622",
+  "document_chars": 9297,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3535,
+    "input_tokens_details": {
+      "cache_write_tokens": 3532,
+      "cached_tokens": 0
+    },
+    "output_tokens": 274,
+    "output_tokens_details": {
+      "reasoning_tokens": 106
+    },
+    "total_tokens": 3809
+  },
+  "response": [
+    {
+      "id": "rs_07bf1c8a1a737bd5006aa1d2e2900487d08ddc507ee1fccd07",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodLn8vgugHnYR4ktW6cB5DhofehEk8s_Kz9jpV_wFCaJxQ8cImSVlWI5DZU2FLfIUB1vpggI_SrpCu6kpf1LjRNA0jOEFhsoTxhn9oaGdcM3hYAeDxLmyYwIuBgOqVPVJT3E80GRwaojl0aFx4cbxmnd6mdrRnCX6kZVRE0kg0WpFmr9Jp4EixRBJIL6BBDEiwdofO2nuSFw0SOG8lYANqBTI-IXRQSjYYH87OUaBJkXpEzfJExcijaKwtBrBJMRfEndkJqTQvRyG7Qpi42ShcpDTn7cA6Fi5NTpR_YqZaIujJErHVPhaR3daWS8QtdBd0w_7X1j4XwxHa9SetVLBIk07zY45OJH-aX2_YzzrEMtuCxx88A4Sx5DKX7ef-k3j3Xv4BCA4Afz3PJs6522nYeKPoIR2_JSOQd7Kdcs_LoI_W-ewkcQP1u2deIkbx2iclEYbh2Rr-fQccVNkjKVuxLIjb_KcVCEgOniimQnghgEP8slg1Lv8ZX9iWPZq4L3_x6qTcPyJFkZYth1H01iyR5zNAGUjJ6gvEtca-by-WluADCscuNOsjaHgNQZc4KjMtMxVRS5czLLqf41F-r7L2CoMK-MpQkokObLn_akOs22DcEohbmyAoqVqHgKq69sLJ6m4ah-UiGH_pc-rOp9wTksviw29PW4X68ziYOmkeuZMbBSBr8PcznX6Wffm4NY_MBFJYunYFZR9zgNZ3STTLZE3r9R4j98eZtnrHR3MUBzMqe3P9WEuIcGSInCPdKR_HbEK1NVhW10EDLcjlux73s6feDC3E3je9R7ErjrmNnBtHSFlGPjETlh5cF6OZLSapleNZ0KbxOepXkAXRyJmQBQBClMEJTGr0SgATqwNONT86je9d-L8OD_5cL8bzfdH0LxRcaYSsWiCqUMNyfm0LL7pMRr0Dz-ERFNi4v6Xqec29Jxm3Odo5oyPUK0TKmQSCQR-AsxDu9u8ew-WLTDN4Tvk_oKrTRUOEFzjhqABhyn1PnKeio8wA6NfEtOnKc64qCWp0WrrDkLEvcyL_e7yrLfcpgERsRB_3W68VuY8Qj1ODqd1TlCeaIlrMLzUtpCsUXgfzMVBLhQC2FGRkDHD94Jc1e0HPDudng7k88PWpDl1K6R3GWYI4060FuxaCLFbOEGZyB2uqyOBbefaeXF55xcplP1EbI0nHyKUiftwfSNsI2CZWNRZ3-ARii2pp2D9DMTbKyXLJtPixCD09Ce5Bcvs3qsecWY8VCd3xZQJDR5JSrUcx2dESIC8YDrBt9e49voWzjnjdODHBb23fw8R5Ysx2l_bF-UYIBySwPyxJ8rhXbHuctw1xN_Y7WTlaVgsDuxCAKuU1vo9HTfe9NTeXcy3_BP79yq31Z_PUi0nrZNsOe36aNlAy_TzwNqR3Teup-do_YaP_IcTLgCS2V-ay0pIiUn9X6IqTXjcTNZM0-KCkIIDeJMOJYSF6DiFO-0uG9RW40xsmIRHAUhFP5nmNX9HxrEt968e5Xg7z1j5DxUXsS3erhsy6z0o7shg1rc2ELQcKfQ_XJGewKMz4nawO3FXg2sSoQTlkn2EYRCz8H4iCMvQnTM55EdzbZMCjFt_eA-xydR0ofKZDtRve4xQ1XUtIcDz_ITBOy-6m_y2NLcwYbFFl3vhFOsLmSKzRQHNbRFw9tBeqrRNlslnF-J1M7Q80ScZXlFihWdZFnP9RDcBzmaafv_j-vGfKuRpgNiznppZ9-Z6wSNSDC_r34RHYHjOffWneQhJSb7pQK9hehbhDCEM8EMh9ejWS9z-V97BTUfg3tdvcgLf9Oa9AKIftZOhUN3veRj9TwkiJmlLeq-tb-T617pcn_-YywTkWtzltVCzaFXBPPv8z0cqMJFfz4DFyqGKBktk0ulhK17wXr3ncQ=",
+      "status": null
+    },
+    {
+      "id": "msg_07bf1c8a1a737bd5006aa1d2e4792487d0ab8512b39da9c234",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue challenges the indeterminacy and discretion in the hypothetical-dealer measure, whereas g1 concerns whether Market Value of the MBS enters the Termination Value calculation. These are distinct silences involving different inputs and contractual language.\",\"words_at_issue\":\"The proposed issue turns on “determined by the Calculation Agent in good faith,” “necessary to compensate ... fairly,” the hypothetical “Dealer,” and “transactions similar to the Transaction,” particularly the absence of definitions or an actual-quotation requirement. Candidate g1 instead turns on the definition’s silence about whether “Market Value of the MBS” is an input to Termination Value and its relationship to the separate margin-call calculation.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

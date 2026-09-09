@@ -1,0 +1,89 @@
+{"judgments": [
+  {"clause_id": "c001", "issues": [
+    {"issue": "The handwritten Lease/License Start Date and End Date are illegible and no number of months is stated, so the term cannot be fixed from the face of the form. Lease Section 1 and License Section 5.1 both send the reader to \"Block A on Page 1\" for a \"period of months\" that this entry never supplies.", "type": 1, "prob": 0.44}
+  ]},
+  {"clause_id": "c002", "issues": [
+    {"issue": "The package states two prices, $15,000.00 and a \"special discount per Denis $10,000.00,\" with a garbled \"Total 0,125.00,\" so the amount actually owed is indeterminate. It is also unclear whether the $300.00/hour, 60-month support entitlement is prepaid in the license price or billed separately.", "type": 1, "prob": 0.30},
+    {"issue": "The package's description of what is licensed (\"Loosening and Recovery Protocols\" and \"Protocols as needed for personal injury, or rehab\") cannot be squared with the enumerated grant in License Section 2, which licenses only \"ARP loosening and recovery,\" \"ARP Therapy Protocol Limited\" and 60 minutes of support. A court would have to decide which list defines the licensed Systems.", "type": 2, "prob": 0.29}
+  ]},
+  {"clause_id": "c003", "issues": [
+    {"issue": "The \"Yearly Consulting Plan $5200.00\" is presented as an \"Option\" with no indication on the form whether it was elected, and no statement of how it interacts with the five-year term. Whether \"weekly for a minimum of 20 minutes a week\" is an enforceable promise or an unelected add-on is left open.", "type": 1, "prob": 0.20}
+  ]},
+  {"clause_id": "c004", "issues": [
+    {"issue": "\"ITIS AFDA VIOLATION TO RESELL\" is a garbled reference (apparently \"an FDA violation\") whose legal content cannot be read off the words. The prohibition is expressed only as a bar on \"resale,\" leaving open whether leasing, sublicensing or use of the ARP on paying clients is caught.", "type": 1, "prob": 0.31}
+  ]},
+  {"clause_id": "c005", "issues": [
+    {"issue": "The Lessee is identified as \"ARP Wave Austin, Garrett Salpeter,\" so it is ambiguous whether the individual, the business entity, or both are the contracting Lessee. The address given here (Ste 210) also differs from the address on page 1 (Ste 100).", "type": 1, "prob": 0.42},
+    {"issue": "The grant covers \"the equipment, machinery and appurtenances described above,\" but nothing above this paragraph describes any equipment, quantity or serial number. What property is leased must therefore be supplied from outside the words.", "type": 1, "prob": 0.24}
+  ]},
+  {"clause_id": "c006", "issues": [
+    {"issue": "Section 1 starts the term on \"the first day of the month following the date of shipment,\" while License Section 5.1 starts the parallel term on the \"lease/license start date set forth in Block A of Page 1.\" The two commencement rules for a single combined instrument cannot both be given effect.", "type": 2, "prob": 0.34}
+  ]},
+  {"clause_id": "c007", "issues": [
+    {"issue": "Rent is \"the sum shown in Block B above,\" but this individual form contains no Block B and page 1 states only a lump-sum license price plus shipping, not a monthly rental. The monthly payment obligation cannot be quantified from the instrument.", "type": 2, "prob": 0.38}
+  ]},
+  {"clause_id": "c008", "issues": [
+    {"issue": "This paragraph makes commencement of the term and the due date of payment contingent on the absence of a 48-hour inspection notice, while Section 1 fixes commencement at the first day of the month following shipment. Which trigger controls is left unresolved.", "type": 2, "prob": 0.22}
+  ]},
+  {"clause_id": "c009", "issues": [
+    {"issue": "The Lessor's promise to \"repair defects to the equipment free of charge during the term\" sits against Section 8, which puts the entire risk of loss on the Lessee and makes the Lessee \"liable to repair the equipment at its expense\" whenever Lessor deems it repairable. A court would have to decide which repair obligation governs a given defect.", "type": 2, "prob": 0.32}
+  ]},
+  {"clause_id": "c010", "issues": [
+    {"issue": "The closing sentence says no defect \"SHALL RELIEVE LESSER OF THE OBLIGATION UNDER THIS LEASE\" — \"LESSER\" is a mechanical error for \"LESSEE,\" and read literally it relieves no one of anything. The mistake reverses which party's obligations survive a defect.", "type": 1, "prob": 0.28}
+  ]},
+  {"clause_id": "c011", "issues": [
+    {"issue": "The liability cap is \"THE TOTAL AMOUNT OF RENT PAID BY THE LESSEE... UNDER THE LEASE,\" but Section 2's rent refers to a nonexistent Block B and page 1 charges a lump-sum license fee rather than rent. The measure of the cap cannot be computed without deciding what counts as \"rent\" under this instrument.", "type": 2, "prob": 0.26}
+  ]},
+  {"clause_id": "c012", "issues": [
+    {"issue": "Section 7 contemplates alterations, changes, additions or improvements with the Lessor's prior written consent, while Section 8 states flatly \"There shall be no modification of the ARP Unit.\" Whether consented-to modification is possible at all is a conflict between the two.", "type": 2, "prob": 0.25}
+  ]},
+  {"clause_id": "c013", "issues": [
+    {"issue": "Section 8 makes the Lessee liable to repair the equipment at its own expense and to keep the ARP Unit in good repair, which cannot be squared with Section 4's promise that Lessor will repair defects free of charge during the term. The allocation of repair cost for a non-negligent defect is left in doubt.", "type": 2, "prob": 0.30}
+  ]},
+  {"clause_id": "c014", "issues": [
+    {"issue": "The \"payable in all events\" undertaking is qualified by \"unless the obligation to pay the same shall be terminated pursuant to the express provisions of this Lease,\" while Section 12(d) lets the Lessor terminate the Lease as to any or all equipment. Whether termination under Section 12 ends the rent obligation is unresolved.", "type": 2, "prob": 0.16}
+  ]},
+  {"clause_id": "c015", "issues": [
+    {"issue": "The Lessee must pay \"all license fees\" imposed by any governmental authority, a phrase that also names the very fees payable to Licensor under the accompanying License Agreement. The overlap in the term \"license fees\" invites competing readings.", "type": 1, "prob": 0.09}
+  ]},
+  {"clause_id": "c016", "issues": [
+    {"issue": "Surrender is triggered by \"expiration or earlier termination,\" but Section 1 gives the Lessee an annual renewal option on payment of unspecified fees, so it is unclear whether the equipment must be returned at the end of the original 60-month term. The interaction of the two provisions decides whether the paid-up five-year licensee keeps the unit.", "type": 2, "prob": 0.14}
+  ]},
+  {"clause_id": "c017", "issues": [
+    {"issue": "The default trigger refers to a representation or document \"furnished to the Lessee in connection with the transaction\" proving false — a mechanical reversal of the parties, since only documents furnished to the Lessor could sensibly put the Lessee in default. As written the Lessor may declare a default on the strength of its own false statement.", "type": 1, "prob": 0.27},
+    {"issue": "The section makes any default under \"the License Agreement or any other agreement executed with ARP WAVE, LLC\" a default here, sweeping in other ARP Wave instruments such as the clinic and later Bronze agreements. Which agreements are cross-defaulted, and whether later-signed ones qualify as \"signed contemporaneously,\" must be worked out against those documents.", "type": 2, "prob": 0.20}
+  ]},
+  {"clause_id": "c018", "issues": [
+    {"issue": "The indemnity runs to claims \"arising out of, connected with, or resulting from the equipment\" without excepting the Lessor's own negligence or the Lessor's design and manufacture of the unit. Whether it covers claims caused by the Lessor is the ambiguity.", "type": 1, "prob": 0.22}
+  ]},
+  {"clause_id": "c019", "issues": [
+    {"issue": "This safety covenant, placed in the Lease, binds \"the Licensee\" and enforces \"the Protocols licensed... under the License Agreement,\" duplicating License Section 10.4. Which instrument's default and remedy provisions apply to a breach of it is left unclear.", "type": 2, "prob": 0.24}
+  ]},
+  {"clause_id": "c020", "issues": [
+    {"issue": "The bar on permitting \"the equipment... to be used by anyone other than the Lessee or the Lessee's employees\" is ambiguous as applied to the transaction's evident purpose of applying the ARP to paying clients. Whether treating a client is prohibited third-party \"use\" is not resolved by the words.", "type": 1, "prob": 0.28}
+  ]},
+  {"clause_id": "c021", "issues": [
+    {"issue": "Section 15 provides that no assignee of the Lessor need perform any duty of the Lessor, which cannot be squared with Section 4's repair warranty running to the Lessee for the term. After assignment the Lessee's repair right would have no obligor.", "type": 2, "prob": 0.20}
+  ]},
+  {"clause_id": "c022", "issues": []},
+  {"clause_id": "c023", "issues": [
+    {"issue": "The second sentence authorizes Lessor to apply against amounts \"owing Lessor hereunder any amounts which might from time to time be owed to Lessor... by Lessee\" — a mechanical error, since a setoff requires amounts owed by Lessor to Lessee. As written the sentence is circular and accomplishes nothing.", "type": 1, "prob": 0.27}
+  ]},
+  {"clause_id": "c024", "issues": [
+    {"issue": "Section 18 declares the Lease \"the entire agreement between the parties,\" yet the same signed instrument contains the page-1 pricing terms and the ARP Wave License Agreement, which has its own integration clause in Section 7. Which writing integrates what, and whether the front-page terms survive, is a conflict between these clauses.", "type": 2, "prob": 0.42}
+  ]},
+  {"clause_id": "c025", "issues": [
+    {"issue": "Joint and several liability applies \"if there is more than one Lessee named,\" and the Lease grant names \"ARP Wave Austin, Garrett Salpeter\" — so whether two Lessees are named, and whether Salpeter is personally liable, turns on this clause read with the granting paragraph. The instrument contains no guaranty resolving the point.", "type": 2, "prob": 0.21}
+  ]},
+  {"clause_id": "c026", "issues": []},
+  {"clause_id": "c027", "issues": [
+    {"issue": "Venue is limited to \"the Hennepin County, Minnesota, Federal or State District Court,\" but no federal district court is organized by Minnesota county, so the designated federal forum is ambiguous. Whether the clause is mandatory and what court it actually identifies would have to be construed.", "type": 1, "prob": 0.41}
+  ]},
+  {"clause_id": "c028", "issues": [
+    {"issue": "Lease Section 22 permits notice by personal delivery, prepaid telegram, or registered or certified mail, while License Section 8 requires all notices to be sent by facsimile or overnight courier. For a single signed instrument the two notice regimes cannot both govern.", "type": 2, "prob": 0.29}
+  ]},
+  {"clause_id": "c029", "issues": []},
+  {"clause_id": "c030", "issues": [
+    {"issue": "The License Agreement's parties clause leaves the Licensee blank — it reads \"and (Licensee\")\" with no name — so the licensed party is not identified in the operative words. Whether the Licensee is Garrett Salpeter individually or ARP Wave Austin must be supplied from the Lease and the notice block.", "type": 1, "prob": 0.44}
+  ]}
+]}

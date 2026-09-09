@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "e0a1a9d6b8aec7b88031171479d861e8e4e021fbd6aa9c668a8d1ca83c8bd264",
+  "document_chars": 5805,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2850,
+    "input_tokens_details": {
+      "cache_write_tokens": 2847,
+      "cached_tokens": 0
+    },
+    "output_tokens": 441,
+    "output_tokens_details": {
+      "reasoning_tokens": 264
+    },
+    "total_tokens": 3291
+  },
+  "response": [
+    {
+      "id": "rs_0655610ca9081afd006aa1d39372cc87d0ad3d85e2a1c15cfa",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodOcNyHW0CELXYNYZY6B1zKsFr20DL4J_mg2RSOJSb9dK2cpZlDHZn1diCylS-qIAxGqlC15jj28x-LT5fX-rACxqRjhD85LUfsK7OgsyayAsBcF-oY1XTRfLmRJOQ-a2_9vBd-2nO9lmuth44Pm_syGWQfnWcVTlU6LATc-yqThIMHoFbkZ1yCvkdazKKC0uaYC5vV6fZxvPwJzA2WyTzy92ksOBfFYtG7JI0J-nSEIRT3lpxN3IzGsLQENYvsCk_v5RVy-gyW9SehTXHGYazwlxjicd-HN-AQdw883lYTL3-ZaQBqWmlWeau_tn5h36KhaKs9UvGkmtI-fY6mfFaOrc5h7VFUNjFr4SpyUT4fnTYXdzOn43zjbQVxjPpD4_3uTtAsgfbYPLYjSP-OJlzIjRpk9_TEKI19WpuAFZqTtd2uT4XqU3xyd8Z049Mgw4PInFgodkqgQRFZP6KEudEr8srnsLShmD7hIYmt8Sz9-EexNzMVoY42P6swUrfsGtXHFo_b6r9_oXo4g7CG2VPYpDloNQ26R3EL4KA0jRHtWF2v7CKaE6T1y59KItWlKW9m689UlBngOCufY0pcXgqSv8CAtD3OpiVjftc9jJZZRGtVCassOtUUWUlEpdaipqokV4KIPWSkK0zrRbiE1qMNa2dvEiFe3HUyixCLSvrIy82FNcT1X55q2qKjrHvlVMN3ONL2h5ijHjTx3Bis2XVgAo-rgPBfqMjIfF7zzTRrYr-o8W8KCXUqHi2LngEFp93tQ35lleqR2tSQqw9ZgzkOJUO6bCc6hs3ewqUXHrCTGUtJjus3UKhCtODC570zLKrnEsNE6wQ_Lv4WQLfUtzPMMrpSp4G0YpES7sN1eVlaIGN-nkJCn4w-5Lm4EHpXCDl0zgTE8YUvMnnqE_jChlDuh1w3-Dj-JVLgm9TW3h8uMhBvOATNIhlvaDk0fbQ9G9WoPS8l6vKVukn-EkLPGIRZBFDZSMRECisdqkztxFq4kD11a0yTZqTJ4ZQ4h9J0alJB9jYl-hBTsc4MGFB3MXE2VOIAKU4HlpZz66LZmzgxOfvbplGauDCF4jQaOfoAdk__yFGj8xiadNmHLI3LTwQ9spbXuk7aCheaCGorI3aOH3_QyFC8YH_M4lhZqJ1WxMgbES6IzB_BO4DuA6f2kjMtvSVnt1CcRS-PBPUgLnP4lJZQNAPCAoQp4wy9VP0rFWNSeLG6-JttaJxllN--atB02ACa04MRE51Lt0oRMXl6xC73Yr_kZHZQPEP88HJmabJ8pxVMpnYmoZd7_BR5g0qQFcuKncnRdsv6R4-Qc9xbFko0SBvbaihUtYz1k4ojdh1mBSOeICnRCI_8oz_iZTx7f5FX2xZ3WBJ8sMtlVkj1mhpmzA9B5aI-ghEvTgXMiNOgkcqv-ZQ0vTbm3BNW2LXAPFxE84p-c44NZmV190AEmtoUgFuEZHQxV0tLQcxH3TUOQAvjMmE2m0mRrxqsEvgc_lYO9ZqnEURRVPpXGBb-AYPyakl-skRURMbS3kOTCtCqLM1Njk0Bfbe1IFddayxr0bmFZm48O6PdzKUfaQcGiYTsP38DFAGLfdwDr8gWSir0f8dLtSwaDXQSNAONeQ4H5QRBnK0J2K9aS-h8AFx9IimYGbCcA4TH5IY_tjDRilpIpF3qgQbJf-WWdpBnplwAiNl3ht_8FGAKxdb5nSrwkCLLLHBR1tJeJo3vbh43KzRqxmXbYNdlPoUTR1OrYQJmGxe5u3ipQkdIe-sUlwv1aHrgv--rUe7worEPkJDJsoMLP-8_2XznIwQPv3ZxeQ046FwS0IHypYPwQwghJhn3tnV6Fm-LBG2tn_QF3jwG7xvFwt6j5HMlvQsoI4oBxJweCAgv2hyknHVbUVkC8umhK7A5MKxXjKAUnFlRFlp_Tw1fO6MDnWwf6GjQ0MjuKU4W3pYLht9H3HwNkwXI-ArFfvA-M9rKljeQM6nReIRFxo9h4o0sQTiNuWJ5BXsegdbsEhvRdh2JkzWP5A7Me_EqVmQ2AC8ohNTSSLlB-WPagOz5xfJjo1-3b9B5JwIcwzO20i44s0c2Pm75s8zGh12hGdOtlT4g7gPNECBr9ksrTSWvtvEQxusIfGS2gFSXQjI5LTc4MLyU_QhmTc20Sm14WZp8pUBJkBtkUj3dUIpFfNT8GIHvo13GwJTizpQrGEWbz0nOQFiFasG8RI2dFUziBTeEQRFSa5bOduNi6bz1uhXP7D9oKMstJqhZ8N24B4jWDtFiCYUT03TVZRWewvmGhS5zTwhpPVbAxzwwR5KreyorDjsQ1dydJ6EL8B7et1m_bAD9L5YQh2fKUqydhOJ7GtaVArhXSb-3OkLD6xG8DPme4hIgVtWHMVsyCKE7IKrjoa4XYK55cRdWyfcMn_PPkITCxtf_03FRhy556DQf4801jH34SQpt087UCR0NcQ3LxgptJIhFkNePCcLk5ZgZ9h9FkQEyx_OXTZ7iBo0DjpIJINuwWz7_BgDANQ0xoSDxAUF_2MNXC_wDD8frIRil40DuZ-C5i0qE3xS18Pd_CacqoU-DEd-6om8-mcQ9c7UhRAuxdB_bMnA1Vm8xAfW_intS1kThCa6qOoQoRdqSRJLff1nB6FCj7ojKMCmUTL1GQdBooOs7dZsHztb4mgdAoKCPDCDe5Y8luH9BYebiKbH3acQqUXxqjX7Ozu6Cw3gv10oPwTIg6SZfFLmGmI5WyUDBteReAGUG41iHKJmocnMMmRxsRPn_HO-flrN4ARNVj5srFvIAxp9H1nJvoNTlyUSkF3euO9jAu251fghHyvh6sXWmHnohbV-YfT2tb-FLGE2xTbzIP1tZJdqjVl66oiKNWzcOGi29SZA3FmScHNDbwjHpkqeLuQPBMc8z463PjXpss_OfVHwk0YNGl-mHoDHYYMJIjBewtn_HSW6Dpu4G72dE-DVMPUJCaL0-O_uqlw5c28DoWtfFEbbXr5w8OclsORZM6AKDa-Sv2-5d8s1AUKr43AYEhhW6S0Lpb9SvEI09amlwZYHnX5rF0bb5lY9Y=",
+      "status": null
+    },
+    {
+      "id": "msg_0655610ca9081afd006aa1d3990da087d0831dfd218c8314da",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"Although both concern the nondefault language, they identify different issues. The proposed issue alleges uncertainty in deciding whether a delinquent HELOC is in default or foreseeably headed for default, while g1 construes the provision as confirming that repurchase may occur before any loan default; it does not identify ambiguity in those thresholds.\",\"words_at_issue\":\"The proposed issue turns on the undefined words “default” and “reasonably foreseeable” in “not in default or as to which default is not reasonably foreseeable.” Candidate g1 turns on the same conditional sentence, but specifically on its recognition of repurchase or substitution for a HELOC that is not yet in default, rather than on uncertainty over what counts as default or reasonable foreseeability.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

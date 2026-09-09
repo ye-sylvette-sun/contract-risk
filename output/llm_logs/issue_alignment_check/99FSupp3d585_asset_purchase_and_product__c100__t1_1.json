@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "119fa592ee61100c169f54f20771e4d6ad5c1608aa239ea6129bd47fcd1fb8aa",
+  "document_chars": 5394,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2683,
+    "input_tokens_details": {
+      "cache_write_tokens": 2680,
+      "cached_tokens": 0
+    },
+    "output_tokens": 231,
+    "output_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "total_tokens": 2914
+  },
+  "response": [
+    {
+      "id": "rs_08ec3f073e5fc95a006aa1d3c0588087d0b7ffd9bffc4ec314",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodPDCySEG5nqsCiD2NfBQdhVvAezxcY6FgBTpNO01w3GK2vD8Sq6QIrzI5HxSD_VWIpM0_Z5XkwuFxnDI_0dp6AWuueQupXHwU_Dc-2dpGcMEYjpWVEfNbcSLaDn9hYreq63dEk3Jj2FiShifSP7Vdum_bzJ4ZnbiW1oMiyy-hYhQwUkmHGlpumZNROkZ8rK9Z5m8cqm3cNyjZE7GqaqQ3rpbqShbUyLI3HyuDFgeJL871mPnoWfAu4ZqilaMAeCVOCx4t1a9sCwW_81TTW-kNAPCfrujOhi88qQIPbNFN_jdgB3ixMgF461iFUMWuzIqoNDir-SltR85xL-H1_7nq_Ur1tsL0Mx6aHTWhqV4muZDYBPOtda1RPJxE9F0Bz9R3WFuG7fuoz6CYDEBQsGYPqrxVKwvInO1SqwavZrpTbisHxWRQ02L1OYBoyQpWe0T6tEX0kQthbu7tnT0c6zDcWBSd2Fayj4nTZtZlAz1YQntQzs3ljyD2Iec6yJq1isqLvX_PDap5zTjaC4WCRcmYIsBMMIh0ttMJpyI6vCTcwy7B36vhdXPOiM0SfCsqoaciDAazhpDAzgr4ubjt0oW-cVLKOJz7iAUY5zrgWq0lkqqzz2BVXoQCn_Po5fr1Twsp5nwTv0ALTwIgZw1UG30IAzKaSSntUTkKLaHmshP4IYfU-XKooR3v9G84P-Ol6M1B-wr1-_5qD8w07p5A5Mx5jHy1hFVBAuRJbRsYGQfuj5YmvWkNbJ7Th136VAHH8wxCXA56U028t-0XIFBgENpwmDn4K2P9innDF08ldwE4g5ioNxzVOnLKklzYwyK9JWzzBkskLWbzy5QXO7Pk3saG8j1D50V6CrwaLF4Oy5-ByXolLCXXK0y5V5f5gOmJKxdXFulvPdRV5utxLS4kzDCE-QMsssIyaD1A-vvvhsHZD3K5m8Ftju1XmFdbxnqNzqu2mH0qplOdzJCH18qhssFj4VRKmEocxYsh6bLWQ_BSQpEa1U_oGXlxOsINYdl-qGdRGuL1CQwFdIJ5SVq0uj2sA8A3fZMR99FP1jL5BzRMIk9BuLSAOlcu6o-r5KGfZy3cVmdg3cgRkwmY70s6VO8YFGdpcmeYe11VZ8iI_2RTBTSHz8ah-y4I7mIcezyJtouMQU66vkbTVsIAg9kl2rZJBYPoqYxBbzK9FQ8KG6-j2jR2TsCIa_S19_A9o5zQyVHhDBWaXZ1i7Lfihs62huoNWGl_L3gdiYTckt5wne1-nF44nlLrwUmi7bU4cVnb2V8ScVXUrhm8iMwcAKQ9kyReUY7_V0VVRYNbI2yi7zgSg_zx4-Xx9uubQCQh0_Mpx5QViRvqpR5nRaSCeq6rtFitYJQ9-JQPtq9e9YOp2vhlg31UrMR2gG0myoDSAPdeMekaQsDQEEAEmwZvCB5_cpnr-AIJjuMqM-UxOO8PR8tlCqAoXYFul7z_SnTB5qoQ9zgFcvJ0BP3mr_GW1ea5OiThdXr79_9tWhrrXPuUF-Br0Tmn6nWAqHGH1kuoN8pkU-XKmBNmJmWhhHJ8vsYsKv2kCwL0_CfbAlTZlKYJ3Ym3dyyVrgGCxUqmQmbuJ4xfdTMbv-5pbqn-SqK-UdyyQqjn40WP364jl0JSmj2p-rnUaC_Ro=",
+      "status": null
+    },
+    {
+      "id": "msg_08ec3f073e5fc95a006aa1d3c146ac87d0bd97dfcab328eaed",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges an internal conflict between the post-mediation remedies sentence and the sole-and-exclusive-means sentence. Candidate g1 instead addresses whether “may ... require” makes mediation optional or a mandatory prerequisite to suit, so it is a different defect.\",\"words_at_issue\":\"The proposed issue turns on the interaction between “either Party may pursue any and all legal or equitable remedies” and “the procedures set forth in this paragraph shall be the sole and exclusive means of resolving any and all Disputes.” Candidate g1 turns on “either Party may, by written notice to the other, require” and whether that language mandates mediation before suit.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

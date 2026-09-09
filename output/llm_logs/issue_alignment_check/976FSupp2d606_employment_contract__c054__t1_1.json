@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "66aec4892b9cda145a599a71e868518927995007311fe2526ef65896e7af1c25",
+  "document_chars": 7139,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3190,
+    "input_tokens_details": {
+      "cache_write_tokens": 3187,
+      "cached_tokens": 0
+    },
+    "output_tokens": 241,
+    "output_tokens_details": {
+      "reasoning_tokens": 85
+    },
+    "total_tokens": 3431
+  },
+  "response": [
+    {
+      "id": "rs_01e94432d2f2c3bb006aa1d3ab891887d092b399871b5751b6",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodOvIzf8CcX3qTKDQYDCo4lAzp6Ooph3paQXrh4MGhaHia7eRcWD6C_E_fZNK-29ihFF4AA0wUVggIkE5wDaYFo7yo1HbenQgK-xKlF9z9oDns_CmZtiHpDwI9VGpPbtRyY34W40pjp2Gg-rdf01o3TZ-fXm_3JERyvftN9jPU7qdAXbra_KaRrMz9jmoJD2KdKz8oYTt__NRdgmEGVPR-U6xkc2hgkFzfxeWmJZLQ0khxe4o7geBBoqp_aNHYm8qIjzdCEY6KlBJ1y0kIJdaxbnCARqJQtcRymO9V3AlEY37DeVCwY0v9RJ3PV5vZ9PBmbRHTvNibp7d2rHo7QAcpla9uS6UVU4kJYq64ZNFpMkPPfXfG3AtT0TIgGCue44q31a4G-Zor0zZY27mekGKPkcF7bhcRuOBm2UfGTJnZ40eGVakxAwW4HixTaLk7je0FB7589YvhiFIuAaFPqFQoRLS-esAG3L2olws5Qz8xgOKQZXjR2bldf5rRc_ztK-FGcZkXWpkQJkGYqAcs2JPxiST4Bou5H7OzJoKAHSkT3hStJxLktytaoJgthsT4d0iVe2tgQyv412TgPlgYbZ4hLyFGo356wq4mz5LPtIG7WDeUvRkKi2d-anFDhYmD8SgfGsBLwQ7baLaYr8iW2i0aVTDw5cvYlNZEcDomJFi0mfzwIni56FbWZcPOh04Vo6U7k8Z_tdMgY5sEQsuu8zUmriyfKEL6KVRuAg3oGtWY83X5EwYlkxQfy7Ex0TU_NZtNqfo-y3MclIMw3TqZ3nG-cKl4KEfnTlZ_SuTJULtx_eQZP0xNZ7CmUfMd-6505tKePpShOCoNqnZO8CTvz2CLB9Ho9ci9wON2DeDrBQ1jr8cOFZY6I35G5VFh-vESFqdxCqr9zpyJzlmQozjJtwiekDSokhQF2T3_LxzUE2ZzyCncufzfNW714DFrEVJ_ugdFGwfEDBN2DgCGDZtD5kYbqXLDs1rFsBkX02TGjx8FCJW_a7W38S4nfJfy27zElKcJmcFSeqRm_qm6NC5VZOsvws3JEQ1u_is_a6LKcDvTrWJgzAVWSmnhXrnTxcRX5JoqHseSszgev0TKK07mD4P9wjAAJ5IPq9B66CmV_-NYum-soOojx03eFvd2nXD2HaM4ZMq1uYSJ8iAvVmxGF4bDb_4-Jq_4eD3-yaWZwJeiG9TLvTrtbOcOJzsQyEY2fOPZgj5so5JAn5Dc-B49hRTi25C_5lr2-84oHYwUiYzPBx_hcU2IJRs0WnIePtNm2XwUAuKNTXPHVqSlXo9JFve5LRPc8_ZxS5Z-OZf3IFj5z9w3dkI38E46DdAm-w0piAwK2X9lXu5dL5nP3zpQ5o8wlNtripZrnFPZkDV7DTFGYjUiJfomDT-dw-xWWp1dKOKBwhVVIQaFgmASx7Y_2FVNZ9PYlieQ_rxa6vztLLu5UaJVFtwm_Gzk76Dp-moY6VPSbr86eNy-Z9QBUhHNCUFu4jhx6GYMc_M8jodBdmekhNZ8awNCDpGcc85kUS2Lv_HukYrauyKQCbB_JDLZCS4a4gpsjXIXbSz7GShqmg0yYAn38vSzTzd-nppmxd8lDAWVSe28jLPjGku1UQFyKZreM5iuQ8qe4i6PbRwl3DLtgrPwXEF7M3BovO7DFxAB2mKLwQz26b0umrSB9Hm6jRKS6Ly94aiCA0u-46jwUnjlMcegAlriVavjAYXglOurQot_YaCAg_XcqtlDBpOtGvwaKBfNX0X4PJvFDwJpC_8wmF1mc=",
+      "status": null
+    },
+    {
+      "id": "msg_01e94432d2f2c3bb006aa1d3ad02fc87d0acb846230d5292dd",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns what conduct qualifies as “just cause,” particularly conduct outside enumerated grounds. Both recorded defects instead concern the breadth of “all further obligations,” so neither names the same defect.\",\"words_at_issue\":\"The proposed issue turns on “just cause,” its definition in the following paragraph, and whether it reaches conduct short of enumerated grounds. Candidate g1 concerns whether “all further obligations” includes obligations under a separate buyout agreement; g2 concerns the same phrase and paragraph 14.1’s omission of limiting language comparable to “hereunder” in paragraphs 14.4 and 14.10.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

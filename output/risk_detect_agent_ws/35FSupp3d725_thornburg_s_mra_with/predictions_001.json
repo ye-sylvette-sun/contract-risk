@@ -1,0 +1,125 @@
+{"judgments": [
+ {"clause_id": "c001", "issues": [
+   {"issue": "\"Securities\" is defined to mean \"securities or other assets,\" a catch-all with no boundary on what assets may be made the subject of a Transaction. The same sentence makes the Agreement govern \"unless otherwise agreed in writing,\" leaving open what writing suffices to displace it.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c002", "issues": [
+   {"issue": "The definition of \"Act of Insolvency\" ends each list with catch-alls — \"or similar law,\" \"or similar official,\" \"an order having a similar effect\" — whose reach beyond the enumerated proceedings is undefined. A court could be asked whether a foreign or non-judicial proceeding is a \"similar law\" proceeding.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c003", "issues": [
+   {"issue": "\"Additional Purchased Securities\" is limited to Securities provided under Paragraph 4(a), but Paragraph 4(a) permits the margin call to be met with cash, and Paragraph 2(p) then folds only Additional Purchased Securities into \"Purchased Securities.\" The status of margin cash under the Purchased Securities definitions is left unresolved.", "type": 2, "prob": 0.13}
+ ]},
+ {"clause_id": "c004", "issues": []},
+ {"clause_id": "c005", "issues": [
+   {"issue": "The Buyer's Margin Percentage is whatever percentage is \"agreed to by Buyer and Seller,\" with no requirement that the agreement be in writing or in a Confirmation, and only a formula fallback in the absence of agreement. Whether a percentage set in a Confirmation or by course of dealing can be changed unilaterally is left open.", "type": 1, "prob": 0.11}
+ ]},
+ {"clause_id": "c006", "issues": []},
+ {"clause_id": "c007", "issues": [
+   {"issue": "\"Income\" sweeps in \"any principal thereof\" together with \"other distributions,\" an unbounded catch-all after two enumerated specifics (interest, dividends). Whether principal paydowns on mortgage-backed Securities are \"Income\" payable to Seller under Paragraph 5 turns on this term.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c008", "issues": []},
+ {"clause_id": "c009", "issues": []},
+ {"clause_id": "c010", "issues": [
+   {"issue": "No Margin Notice Deadline is fixed anywhere in Annex I or this Agreement, so the definition defaults to the deadline \"established in accordance with market practice,\" a standard the instrument nowhere describes. The timing of a margin call, and therefore whether a default under Paragraph 4 occurred, rests on that undefined market practice.", "type": 1, "prob": 0.30}
+ ]},
+ {"clause_id": "c011", "issues": [
+   {"issue": "\"Market Value\" depends on a price \"obtained from a generally recognized source agreed to by the parties,\" with neither \"generally recognized source\" nor the mechanism for agreement defined, and with the whole formula qualified by \"unless contrary to market practice.\" For illiquid securities without a quoted bid, the definition supplies no determinable value.", "type": 1, "prob": 0.38},
+   {"issue": "Annex I.7 supplants the \"source agreed to by the parties\" with named vendors and, failing those, with Credit Suisse First Boston (Hong Kong) Limited or its affiliates as pricing source. The two provisions cannot both be given effect on who fixes Market Value when no vendor price exists.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c012", "issues": []},
+ {"clause_id": "c013", "issues": []},
+ {"clause_id": "c014", "issues": [
+   {"issue": "\"Prime Rate\" is tied to the rate \"published in The Wall Street Journal\" with no fallback if that publication ceases to publish such a rate. The default interest rate under Paragraph 11(h) depends on this single unhedged reference.", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c015", "issues": []},
+ {"clause_id": "c016", "issues": []},
+ {"clause_id": "c017", "issues": []},
+ {"clause_id": "c018", "issues": [
+   {"issue": "The definition lists only dates determined under Paragraph 3(c) or 11 as deemed Repurchase Dates, but Annex I.4(d)(1) creates a further deemed Repurchase Date on a Tax Event. Read against the Annex, the enumeration is incomplete and invites an expressio unius argument.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c019", "issues": [
+   {"issue": "The Repurchase Price is fixed \"as of the date of such determination,\" but the provision does not say who makes that determination or when it occurs for demand and accelerated Transactions. That leaves the price payable open to competing calculations.", "type": 1, "prob": 0.14}
+ ]},
+ {"clause_id": "c020", "issues": []},
+ {"clause_id": "c021", "issues": [
+   {"issue": "The Seller's Margin Percentage is whatever percentage is \"agreed to by Buyer and Seller,\" with no requirement of writing and only a formula fallback in the absence of agreement. How and when such an agreement is made or altered is left undefined.", "type": 1, "prob": 0.10}
+ ]},
+ {"clause_id": "c022", "issues": [
+   {"issue": "Paragraph 3(a) allows a Transaction to be agreed orally, while Paragraph 3(b) makes the written Confirmation together with the Agreement \"conclusive evidence\" of the terms and Paragraph 17 requires writings for any modification. Which set of terms governs an orally agreed Transaction that is later confirmed differently cannot be settled from 3(a) alone.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c023", "issues": [
+   {"issue": "The last sentence provides that in a conflict between a Confirmation and this Agreement \"this Agreement shall prevail,\" but Annex I.3 amends that very sentence to give the Confirmation priority, and Annex I's preamble likewise makes the Supplemental Terms prevail. The two cannot both be given effect on which document controls a conflicting Confirmation term.", "type": 2, "prob": 0.45},
+   {"issue": "The Confirmation becomes \"conclusive evidence\" unless \"specific objection is made promptly after receipt,\" and neither \"promptly\" nor the required form of objection is defined. Whether an objection was timely is therefore unmeasurable on the face of the clause.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c024", "issues": [
+   {"issue": "A demand for termination must be made \"no later than such time as is customary in accordance with market practice,\" a deadline the Agreement never fixes. Whether a same-day demand was timely turns entirely on that undefined custom.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c025", "issues": [
+   {"issue": "The margin call turns on \"the aggregate Market Value of all Purchased Securities\" without saying which party determines that value or on what basis, and permits Buyer to insist on \"additional Securities reasonably acceptable to Buyer.\" Both the trigger and the acceptable cure are left to a standard the provision does not supply.", "type": 1, "prob": 0.32}
+ ]},
+ {"clause_id": "c026", "issues": [
+   {"issue": "The Margin Excess right depends on the same undefined Market Value determination and the parenthetical cross-adjustment for Transactions in which the Seller acts as Buyer is opaque. Which party computes the excess, and against what valuation, is not stated.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c027", "issues": [
+   {"issue": "Same-day performance is keyed to the \"Margin Notice Deadline,\" which Paragraph 2(i) leaves to market practice because Annex I fixes no such deadline. Read with 2(i), this provision cannot say whether transfer was due the same day or the next.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c028", "issues": [
+   {"issue": "Attribution of margin cash requires an agreement between Buyer and Seller and supplies no default rule if none is reached. With Purchase Price under 2(o) turning on such attribution, the gap has price consequences.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c029", "issues": []},
+ {"clause_id": "c030", "issues": []},
+ {"clause_id": "c031", "issues": [
+   {"issue": "Buyer's choice between remitting Income and applying it against the repurchase obligation is left to what \"Buyer shall reasonably determine in its discretion,\" with no benchmark for that discretion. Whether Buyer may withhold Income and simply credit it is contestable on these words.", "type": 1, "prob": 0.20}
+ ]},
+ {"clause_id": "c032", "issues": [
+   {"issue": "Paragraph 6 deems a pledge and security interest only \"in the event any such Transactions are deemed to be loans,\" while Paragraph 8 states that all of Seller's interest passes to Buyer on the Purchase Date and Annex I.2 restates the sale intent. Whether Buyer holds title or a security interest is a question the instrument as a whole leaves open.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c033", "issues": []},
+ {"clause_id": "c034", "issues": [
+   {"issue": "Paragraph 8 declares that all of Seller's interest passes to Buyer on the Purchase Date and lets Buyer rehypothecate, which sits uneasily with Paragraph 6's deemed pledge and security interest if the Transactions are recharacterized as loans. Read together, the two provisions describe different property arrangements over the same Purchased Securities.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c035", "issues": [
+   {"issue": "The disclosure retains unselected bracketed alternatives — \"[will]* [may]**\" and \"[its clearing bank] [third parties]**\" — so the parties never chose which text applies. The extent to which commingled securities are subject to Seller's liens is therefore unstated.", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c036", "issues": [
+   {"issue": "Paragraph 9(a) permits substitution only \"subject to agreement with and acceptance by Buyer,\" but Paragraph 9(b) deems Buyer to have accepted in retained-custody Transactions and Annex I.11's new 9(c) gives Seller a substitution right subject only to Buyer's election to refuse. The three regimes give different answers to whether Buyer's actual consent is needed.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c037", "issues": [
+   {"issue": "This subparagraph deems Buyer to have agreed and accepted in advance, which cannot be squared with Paragraph 9(a)'s requirement of Buyer's agreement and acceptance for any substitution. The proviso's \"Market Value at least equal\" test also depends on the contested Paragraph 2(j) valuation.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c038", "issues": [
+   {"issue": "Representation (ii) that each party will engage in Transactions \"as principal\" sits against Annex I.6, under which Credit Suisse First Boston Corporation acts as Agent for both Buyer and Seller in every Transaction. Whether the agency structure is consistent with the repeated principal representation is a question only the whole instrument raises.", "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c039", "issues": [
+   {"issue": "Clause (iii) makes any failure \"to comply with Paragraph 4\" an immediate Event of Default with no notice or cure period, while clause (iv) gives Buyer one business day's notice for Paragraph 5 — and Paragraph 4 compliance depends on a Market Value the Agreement leaves to one party's calculation. Whether a disputed margin call can put a party in default is unresolved on these words.", "type": 1, "prob": 0.30}
+ ]},
+ {"clause_id": "c040", "issues": [
+   {"issue": "The option is \"deemed to have been exercised immediately\" on an Act of Insolvency, yet the same subparagraph requires notice of exercise \"as promptly as practicable\" except in that case, leaving the moment of acceleration to be reconstructed after the fact. When the deemed exercise occurred fixes the Repurchase Date and hence the amounts owed.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c041", "issues": [
+   {"issue": "Clause (ii) lets the nondefaulting party retain all Income paid after exercise, which stands against Paragraph 5's rule that Seller is entitled to all Income as if the Securities had not been sold. The two provisions must be reconciled to know what happens to Income after a deemed acceleration.", "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c042", "issues": [
+   {"issue": "Transfer of title is conditioned on \"tender by the nondefaulting party of payment of the aggregate Repurchase Prices,\" without saying what constitutes tender or how it interacts with the netting rights in Paragraph 12 and Annex I.8. What must actually be paid before the Securities pass is left unclear.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c043", "issues": [
+   {"issue": "The liquidation remedy rests on sales \"in a recognized market (or otherwise in a commercially reasonable manner)\" at prices the nondefaulting party \"may reasonably deem satisfactory,\" and subparagraph (e) has the parties acknowledge that the Securities are traded in a recognized market. Whether the disposition of illiquid securities met those undefined standards is exactly what the words leave open.", "type": 1, "prob": 0.36},
+   {"issue": "Subparagraph (e) lets the nondefaulting party set the pricing source \"in its sole discretion\" only \"[u]nless otherwise provided in Annex I,\" and Annex I.7 does provide pricing sources for Market Value. Which regime governs default-date pricing cannot be answered without reconciling the two.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c044", "issues": []},
+ {"clause_id": "c045", "issues": [
+   {"issue": "The freeze applies only where the defaulting party is Buyer, so nothing states whether the Price Differential in Paragraph 2(r) continues to accrue after acceleration when the defaulting party is Seller. The asymmetry only appears when the definition and this subparagraph are read together.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c046", "issues": [
+   {"issue": "Paragraph 11(g) makes the defaulting party liable for hedge-termination costs and \"any other loss, damage, cost or expense directly arising\" from the default, while Annex I.13 bars liability for any indirect, incidental, special or consequential loss under any circumstances. The two cannot both be given full effect as to hedge and replacement-transaction damages.", "type": 2, "prob": 0.34}
+ ]},
+ {"clause_id": "c047", "issues": []},
+ {"clause_id": "c048", "issues": [
+   {"issue": "The preservation of \"any rights otherwise available ... under any other agreement or applicable law\" sits against Annex I.13's absolute bar on punitive and consequential damages and Annex I.14's exclusive forum. Whether other-agreement remedies survive those limits is a whole-contract question.", "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c049", "issues": [
+   {"issue": "Annex I.8 deletes Paragraph 12 \"in its entirety\" and substitutes a broader single-agreement and setoff clause covering all transactions and agreements between the parties. Whether any part of this original Paragraph 12 retains effect, and which text governs netting, is squarely in issue.", "type": 2, "prob": 0.38}
+ ]},
+ {"clause_id": "c050", "issues": [
+   {"issue": "Paragraph 13 permits all notices, demands and requests — including margin calls under Paragraph 4 and default notices under Paragraph 11 — to be made orally, while Paragraph 17 requires writing signed by both parties for any modification or waiver and the Agreement makes notice timing decisive. Whether an oral margin call not confirmed in writing is effective cannot be answered from this paragraph alone.", "type": 2, "prob": 0.22}
+ ]}
+]}

@@ -1,0 +1,1359 @@
+SECURED PROMISSORY NOTE PURCHASE AGREEMENT
+
+by and among
+
+MORTGAGE FUND °08 LLC
+a Delaware limited liability company
+
+AND
+
+PURCHASERS
+
+dated
+
+346972413
+
+Case: 12-04137 Doc#75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 2 of
+27
+
+
+TABLE OF CONTENTS
+
+Page
+
+1. Amount and Terms of the Loams ......... ee ccssessecsesceecetesrsenteees seneneee sessaneneneensnenererseeeresers veal
+1.1 Issuance of Notes RRP ERE RTE F RUE SE SHEER TEE HEE EER EEE ERAS REE EERE REET ONT REE EE AEE ERRE ARRAN EERE EEE EE ]
+
+1.2 Changes in Loan Amounts... essere esecaeengegenecanecnnesaneeeterterrens secunaenneeeeesneeea
+
+1.3 Interest......... RSPR RR TREE RTE EEE EEE HPS REE ERAA ER HEE EE EEE TEER EERE SEER HEE SHC MEE ERE EERE EERE TERRE EERE ERNE TEE ETH 2
+
+1.4 Payment of Interest and Principal ........0.. eee sesecseaeassueeaesatsenseeees eserseseeesseres
+
+1.5 Amendment; Waiver... ee esa vece veseeeseseeeesaenceaseussoneersaes seceeavnatenenanasenaanens 3
+
+1.6 Maturity Date Pee Ree S ee eee SE ee PERSE AAEHEEREEARREH EE EN ERE REE E EERE EEE SHEE PSE SEER PHATE RHE KP RRE ESTHET RARER TERETE 4
+
+1.7. Re-Issue of Notes; Lost, Stolen or Mutilated Notes ...........:ceeseeresers evsaresarecoreeees &
+
+1.8 Purchase of Notes Not In Connection with Services ................ pnsdeesagesnunesanaeeseaneess 4
+
+2. Closings.... AERA ARERERET EEE SE EEE APHREEFFEEHRAEERE FES ETE PEFR EEK HERR HRA ERR HK REE RP REET RETHEEHE EERE ERAERRAEREAE RRR EERE ERE PERE EE TE Ee ktet 4
+2.1 Closings PRERSRRR FRET RRR ER ERE RRSP RR STS ERE ERRE REE SEERA E ERE EE REE EE EEE RR SHREEREEER EE ERMA REET RRA ER ES 4
+
+22 Delivery eee Re POE EERE EE EMAAR EAR EEE REE PANE EE TEETER ET ee AHH EE RASA ERR RP RAT EERE PREP E TERED eer ee eee 4
+
+2.3. Security Agreement ........0.. es vesanecessecteesnectsesenuaeesensuceesessereer® ensersaaeeessneatneeees 6
+
+2.4 Funding of Additional Loan Amounts............ ee seceesenees sesgucevanecnsenecenessenuerseees 6
+
+3. Representations, Warranties and Covenants of the Company............csccseeeees pervecgteerneenee O
+3.1 Organization, Good Standing and Qualification... ccc ceeentenerreeees oud
+
+3,2 Corporate Power SEERA EEE ES RHEE EEE REEF ERR ERR ERNE EERE EERE NHR PRE EE FREE RREE RE REAA AAR EH ERE ARS 7
+
+3.3 Authorization SSR ERE SESE REE EERE REET EP ee REESE EE REET EERE EAE HAE KEE RREE REE ERE EEE EEE EE ee 7
+
+3.4 Governmental Consents HOFRESESEEEKAAREEAERARARERRAE REARS RRE ERD PR TERRE HRT REE ERE SERS RAE EER ER ARERR RE REE 7
+
+3.5 Compliance with Other Instruments... sevevanesaeeuaeeeaseneeauueasesenesnenenecatecnes 7
+
+3.6 Offering REPRE EERE EERSTE EE ERE TET EERE Ee PORES EEEKEET EE EER EET TRAE RTT ERE RARE PATHE KFT TERE PETERS REE EER be elt wees 7
+
+3.7 Company Purpose PP RER EERE EE ERSTE REAR RMA eS ROE EEE EER EEE OEE EEE ERATE REE EH 8
+
+3.8 Use of Proceeds.....0....cccccescesesssceeeseecssersnerssvesseveees seeaneageecaeeeaeecaeecaeecateratecetenatonse 8
+
+4, Representations and Warranties of the Purchasers SRE RRARESSSRERARHEETARER EAT PERE ERE ETE HR ER SHAPER EAEH EET EEE HBO 8
+4.1 Qualifications to Purchase Notes............... dessesentneceesenatencesuapensenneeenssaeeensensseresreneerss 8
+
+4.2 Further Assurances SOTTO RETESET P REESE EERE ERAA RENNER ERE EERE EERE REE ee SETHE AHEERREEE BETH 9
+
+4.3. Purchasers Not Members; No Fiduciary Duties ..................... peecevengeesecenssaeesnnaeeees 9
+
+5. Permitted Activities and Uses of Loan Proceeds............ eceneegeee sasaneaaneaanscuseesueeteenesnanensereeeress 9
+5.1 - Certain Definitions... .cccccseccseecsesceressseceseeesseeeessersseess seseneegpaagnsceeccueecanersetenatenss 9
+
+5.2. Use of Investor Loan Proceeds ...........ccccesseereees ereenueaeseaseaaeeeneseascesseeseateereeseatensers 10
+
+5.3. Certain Company and Manager Undertakings. 0.0.0.0... essssssecenereseres cstsseseerereeess LO
+
+5.4 Compensation RSA ARASH RAERMREERSCA REFER TA ESS RESETS SHAE RRA RSH ERENT Pee HSES HERES E REESE EERE EERE REET EEE REE REE 11
+
+5.5 EXPOMS€S oo... ccscceescsescenersseceseeerersersreerens sicteeeseerseseeeaauesuedenuasnneneucaneenedeataruareaenaeonsees 12
+
+5.6 Other Fees and Compensation PREAH RHR REE RRR geen ee FERRARA RRR ETRE RE EO Re PERE EE TEETH DERE RE ERE 13
+
+ei-
+
+346172113
+
+Case: 12-04137 Doc# 75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 3 of
+27
+
+
+TABLE OF CONTENTS
+(continued)
+Page
+5.7 Affiliated Transactions............:ceesseene seaseesenesenesennert races senanecaesensecaneceteeserees wae 13
+5.8 | Noteholder Transactions................ peeeecacecennegeeereaes beasceeeeneeauecntsenscnssenteresenes sescareeee LS
+5.9 Outside Activities SERRE BREE SPPFERE EAR AH EEE EE REO REECE MEER RARER TERRE Reece Oe EERE EERE ASR REE 15
+6. Operating Covenants of the Company............. seganesceeesenseueenee rene seessenvennnecenscussensersusrenerranes 16
+6.1 Affirmative Covenant .........c::cccesesessenrenes desepneaquesenceteccnseenenvenees peeneseneeeesennecuaeeaes 16
+6.2 Prohibited Action RECEERER EERE AEE RE ee ee SPARSE RAE RATER RE ER TER TT ER ET SEEKS EEE RENTER RAE EEE KEES ERE TERE Re 17
+6.3 Adverse Amendments SENET REESE PCE CREA TERT ERE TE Re REEMA E RETR ERE EEE ERE EE ee SERRE RRA LER EH ERE 17
+7, Transfer of Notes SOVERRT ERED ERE EREAER MARR REEL eR SEER EAE KHER ERROR EEE EEE E ESCAPE EAFERARESSRAERRAHRES ERR ERAT EKER EEE 7
+8. Power of Attorney Ree RE REE SCHR REEER REAR ERE REE ee SSAA ARENA ERE RET RATE SSCA EET EE ERRATA HERA ERE HE RESCH ATER RESETS 18
+8.1 Power of Attorney by Noteholders ....... seseneegeeuensneeonnesasereeerseres seveeeeaneeueeeteeeneneseees 18
+8.2 Covenant to Sign Document... cceeseeceeeesereeeens peedenenesnaneguacneeonnestsneneorsereenees 18
+9. Appointment of Collateral Agent............. eee seneangaseacneeenansnneneereaeesesens veeeseseneacenenenevaners 18
+10. Miscellaneous ganawaunaevuuevnaes eevee enag TERETE RATHER EEE PRET EE HECKER EKA RARER SAAT AREER TK ERE ERT RT EP RF RHE PEAKE RARER AH 19
+10.1 Binding Agreement eR RET He PEPER EERE ESA ARRAERETH PRATER RET HE SE SEERA AGREE EH REE REET EERE REE KET PP EEE * 19
+16.2 Governing Law PREPS E FREER EEA RNR RE REE Te PRUE SESE SREP ES ESE SESS EERE EERE SSR ES eS SEEE REE RES HRA 19
+10.3 Counterparts SOKA ARAERHARSRHR HHT KERR ERE RE Pee KE EAAE SHRED RERSE KRESS F HERE E EEE 19
+10.4 Notices 00... eeeeeees desea cedgeegesanenssneeceavaneerass seedenengaeeneneseneusunsanseeseeneseanerss srscovee 19
+10.5 Modification; Waiver.. AAT RESTA E RET ERED SPEER EE REET EEE RANE EEE EERE TAREE REET Ee A a al 20
+10.6 Exercise of Remedies by Noteholders ......0.. eee seaveceauesaeeasecasenanennerenesanesaes 20
+10.7 Entire Agreement eee RR EHP HERERRAA RRR ERA EERE RE RT RRR ER SERRE AERA ERE EERE REESE REE EEE ERE EEN EERE EE weed 20
+10.8 Company Representation.........0...... esedeneeeseaneecusecueceetessaerectesersaveners pecengnaesnecnenenees 20
+10.9 Acknowledgement and Waiver of Conflicts......... peceedneeeeadeesneasteceusenseseneaeecasersas 21
+SCHEDULES AND EXHIBITS
+Schedule of Purchasers
+
+Exhibit A: Form of Secured Promissory Note
+Exhibit B: Form of Security Agreement
+Appendix A: Copy of Mortgage Fund *08 Limited Liability Company Operating Agreement
+
+346972913
+
+-ii-
+
+Case: 12-04137 Doc# 75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 4 of
+
+2/
+
+
+MORTGAGE FUND ’08 LLC
+SECURED PROMISSORY NOTE PURCHASE AGREEMENT
+
+Tus SECURED PROMISSORY NOTE PURCHASE AGREEMENT (the “Agreement”) is made
+asofthe _ day of [ ] (the “Effective Date’) by and among MORTGAGE FUND °08 LLC,
+a Delaware limited liability company (the “Company’”), and the persons and entities named on
+the Schedule of Purchasers attached hereto, as the same may be amended from time to time as
+provided herein (individually, a “Purchaser” and collectively, the “Purchasers’). Terms not
+defined herein shall have the meanings provided in the Limited Liability Company Operating
+Agreement of the Company dated October 26, 2007 (copy of which is attached hereto as
+APPENDIX A, for convenience), as it may be amended from time to time (the “Operating
+Agreement’).
+
+AGREEMENT
+
+Now, THEREFORE, in consideration of the representations, warranties, covenants and
+conditions set forth below and in the Subscription Agreement between each Purchaser and the
+Company, the Company and each Purchaser, intending to be legally bound, hereby agree as
+follows:
+
+1. AMOUNT AND TERMS OF THE LOANS
+1.1 Issuance of Notes
+
+Subject to the terms of this Agreement, each Purchaser, severally and not jointly,
+agrees to lend to the Company the amount set forth opposite each such Purchaser’s name on the
+Schedule of Purchasers attached hereto (such Purchaser’s “Note Subscription Amount’), to be
+paid against the issuance and delivery by the Company of a secured promissory note for such
+amount in substantially the form attached hereto as ExuHipiT A. Notes shall be purchased in units
+of $1.00. The minimum Note Subscription Amount shall be 20,000 Units or U.S. $20,000,
+except as may be permitted in the sole discretion of the Company. Each secured promissory note
+issued and delivered by the Company pursuant to this Section 1.1 shall be referred to herein as a
+“Note” and collectively as the “Notes”, and effective upon the purchase of the Note, such
+Purchaser shall be deemed a “Noteholder” for so long as he remains record owner of the Note
+and the Note is outstanding.
+
+12 Changes in Loan Amounts
+
+(a) The aggregate amount required to be loaned to the Company by each
+Purchaser on a given date pursuant to paragraph 1.1 or which a Noteholder elects to contribute
+pursuant to paragraphs 1.2(b), 1.2(c) or 1.2(d), shall be referred to herein as the “Loan Amount’,
+and the aggregate Loan Amounts by Purchasers to the Company shall collectively be referred to
+as the “Total Loan Amount? or “Loan’”). Although a Note will be issued initially to each
+Purchaser in the principal amount of the Note Subscription Amount, the Loan Amount shall be
+adjusted from time to time in the records of the Company to reflect increases in the Loan by such
+
+346172793
+
+Case: 12-04137 Doc#75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 5 of
+27
+
+
+Purchaser, as Noteholder, as provided in paragraphs 1.2(b), 1.2(c) or 1.2(d), and the accrual and
+payment of interest and principal with respect to the Note (without distinction, “Note
+Adjustments’). Upon no less than three (3) business days’ prior written request, the Company
+will certify to a Noteholder the current Loan Amount and the cumulative Note Adjustments with
+respect to his Note effective as of the last day of the immediately preceding fiscal quarter.
+Without limiting the foregoing, the Company may post from time to time on a secure Company
+website or other form of electronic communications such information about the Loan Amount
+and the cumulative Note Adjustments with respect to a Note as the Company, in its sole
+discretion, deems useful or advisable.
+
+(b)  Noteholder Requests to Increase Loan during Subscription Period. At any
+time during the Subscription Period (as such term is defined in paragraph 2.1 below), a
+
+Noteholder may request to increase his Loan Amount to the Company, provided such request is
+made in writing and is funded as provided in paragraph 2.4 below or as may otherwise be
+requested by the Company. Notwithstanding the foregoing, the Company may reject for any
+reason or for no reason any request for an increase in the Loan Amount by a Noteholder.
+
+(c) Company Requests for Voluntary Loan Increases. No Noteholder shall be
+obligated to increase its Loan Amount to the Company in excess of its Note Subscription
+Amount. However, from time to time the Company may request or permit by written notice or
+announcement to one or more Noteholders, voluntary increases in such Noteholders’ Loan
+Amounts in excess of their Note Subscription Amounts. Any voluntary increases made by a
+Noteholder pursuant to this paragraph 1.2(c) shall be deemed to increase the Loan Amount of
+such Noteholder by the amount of such voluntary increase, subject to the provisions of
+paragraph 2.4 below. The Company may terminate for any or no reason its request for or
+permission to make voluntary increases in Loan Amounts at any time, with or without notice.
+Furthermore, the Company may reject for any reason or for no reason a Noteholder’s acceptance
+of the Company’s request for a voluntary increase in Loan Amounts.
+
+(d) Noteholder Requests to Re-invest Accrued Interest. At any time during
+the period that his Note is outstanding, a Noteholder may request that the Company reinvest all
+
+or a portion of his accrued interest with respect to the Note by adding such amount to his Loan
+Amount as it becomes due and payable, provided that the Noteholder is a qualified investor at
+the time of the request, and the request is made in writing or as may otherwise be required by the
+Company (an “Interest Roll-over Request’). Notwithstanding the foregoing, the Company may
+reject for any reason or for no reason any Interest Roll-over Request.
+
+1.3 Interest
+
+Each Note shall bear simple interest at the Floating Rate on the outstanding
+principal amount from the date of the Note until payment in full. The Floating Rate is a variable
+interest rate established by the Company from time to time, and in the sole discretion of the
+Company, subject to increase or decrease on the first day of each calendar quarter with respect to
+subsequent quarters, provided, however, that in no event shall the Floating Rate be less than eight
+percent (8.00%) on an annualized basis for such calendar year. Interest shall be due and payable
+quarterly in arrears on the first (1“) day of each quarter for interest accrued the previous quarter,
+
+2
+346172113
+
+Case: 12-04137 Doc#75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 6 of
+27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page82 of 268
+
+and shall be calculated on the basis of a 90-day quarter and 360-day year, prorated for the
+number of days in a partial quarter.
+
+1.4 Payment of Interest and Principal
+
+(a) | The Company may prepay all or a portion of a Note without penalty as
+follows:
+
+(i) at any time, in the discretion of the Company;
+
+(ii) | upon request by the Noteholder (a “Prepayment Request”), on the
+last day of any quarter during or after which all of the following conditions have been satisfied,
+
+(A) no less than one (1) year after the issue date of the Note
+(the “Minimum Holding Period’),
+
+(B) the Company has received no less than sixty (60) days’
+prior written notice of such Prepayment Request, except to the extent such notice has been
+waived in writing by the Company; and
+
+(C) the Company has determined, in its sole and absolute
+discretion that such prepayment will not adversely affect the Company’s obligations or liquidity.
+
+(b) Without limiting the provisions of paragraph 1.4(a) above, in the sole and
+absolute discretion of the Manager, the Company may prepay all or any portion of principal or
+interest of any one or more Notes:
+
+(i} of ERISA Plan Noteholders who have submitted Prepayment
+Requests (even prior to the expiration of the Holding Period) for the purpose of meeting ERISA
+plan distribution requirements;
+
+(ii) to ensure that the Company remains exempt from the ERISA “Plan
+Asset” Regulations under Title 29 of the U.S. Code of Federal Regulations, or
+
+(iii) to meet any regulatory compliance requirement for a Noteholder or
+the Company.
+
+(c) Subject to the provisions of paragraphs 1.4(a)-(b) and 1.5, all payments of
+the Notes will be made pro rata among Noteholders according to the relative principal amounts
+of outstanding Notes, and all payments to a Noteholder shall be allocated first to accrued but
+unpaid interest and then to principal.
+
+1.5 Amendment; Waiver
+
+Any term or provision of the Notes may be amended or waived with the consent
+of the Company by Noteholders entitled to receive more than fifty percent (50%) of the
+agpregate unpaid principal amounts of all outstanding Notes; provided, however, that except as
+specifically provided in this Agreement, no amendment, to the extent it has discriminatory
+
+_3-
+346172113
+
+Case: 12-04137 Doc# 75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 7 of
+27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page83 of 268
+
+application to a Note, shall be effective as to such Note without the consent of the Noteholder
+adversely affected by such discriminatory application.
+
+16 Maturity Date
+
+The maturity date of a Note shall be December 31, 2014 (the “Maturity Date’).
+The Company may extend the Maturity Date by up to six months in order to allow for an orderly
+liquidation of Portfolio Loans by providing no less than ninety (90) days prior written notice to
+Noteholders of such extension. Any extension of the Maturity Date shall apply to all outstanding
+Notes.
+
+1.7 Re-Issue of Notes; Lost, Stolen or Mutilated Notes
+
+The Company may, but is not obligated to, re-issue Notes to reflect Note
+Adjustments or the assignment or transfer of any Note, and then only upon the condition that the
+original Note is returned to the Company. In the event that a Note is lost, stolen, mutilated or
+destroyed, the Company shall, on such terms as to indemnity or otherwise as it may reasonably
+impose (which shall, in the case of a mutilated Note, include the surrender thereof), issue a new
+Note of like denomination and tenor of the Note so lost, stolen, mutilated or destroyed. In the
+event that a replacement Note is issued, the Company shall not be obligated to honor the
+presentment of the original Note in the event that it is located subsequently.
+
+1.8 Purchase of Notes Not In Connection with Services
+
+The Company and each Purchaser, as a result of arm’s length bargaining, agree
+that neither such Purchaser nor any affiliated company has rendered any services to the Company
+in consideration for the purchase of the Note pursuant to this Agreement.
+
+2. CLOSINGS
+2.1 Closings
+
+The initial closing of the sale and purchase of Notes pursuant to paragraph 1.1
+shall take place on or about December 1, 2007, or at such other time as may be designated by the
+Company (the “Initial Closing’). The Company may, in its discretion, continue to accept
+subscriptions for the purchase of Notes through the last business day of the sixth full fiscal
+quarter following the fiscal quarter of the Initial Closing (the “Subscription Period’). The
+Company expects to hold closings of the purchase and sale of Notes on the first day of each
+calendar quarter during the Subscription Period or at such other times as it may determine.
+There is no minimum Total Loan Amount upon which the Initial Closing may be held, and there
+is no assurance that there shall be any additional closings after the Initial Closing. There is no
+maximum Total Loan Amount for which the Company may issue Notes.
+
+2.2 Delivery
+
+(a) Purchasers seeking to purchase Notes at the Initial Closing or at any
+subsequent closing of the issuance of Notes hereunder (each an “Additional Closing”, together
+with the Initial Closing, each a “Closing”), or as may otherwise be instructed by the Company,
+
+-4-
+346172113
+
+Case: 12-04137 Doc# 75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 8 of
+27
+
+
+shall deliver to the Company a subscription agreement in the proposed Loan Amount and funds
+in the amount of such Purchaser’s applicable Loan Amount as provided in paragraph 2.2(b)
+below. The Company may, in its sole and absolute discretion, decline or accept the subscription
+of the prospective Purchaser. If the Company accepts such subscription, it may, in its sole and
+absolute discretion, accept such subscription for a lesser amount than the Loan Amount proposed
+in the subscription agreement.
+
+(b) Payment of the subscribed Loan Amount shall be made by cash deposit to
+a pooled bank account maintained by the Company exclusively for deposit of prospective
+investor loan funds pending acceptance of their subscription to purchase a Note (the “Closing
+Account’) or as otherwise required in the subscription agreement between such Purchaser and
+the Company. The Closing Account shall be maintained by the Company with an independent
+banking institution and shall be segregated from the Company’s general bank accounts. The
+Company shall not be obligated to pay interest to any Purchaser with respect to any funds held in
+the Closing Account or by the Company during the period of time prior to the Closing in which a
+Note is issued with respect to such Purchaser’s Loan Amount (the “Pre-Qualification Period’).
+Any interest or fees paid to the Company on account of Purchaser’s funds with respect to the
+Pre-Qualification Period may be retained by the Company in consideration of the costs of
+management associated with accepting the subscription and issue the Note, and any interest or
+fees paid directly to the Purchaser with respect to the Pre-Qualification Period may be retained
+by the Purchaser.
+
+(c) Upon acceptance of a Purchaser’s subscription agreement and receipt of
+the Loan Amount approved by the Company, the Company shall issue and deliver to such
+Purchaser a Note in favor of such Purchaser payable in the principal amount of the approved
+Loan Amount. The issuance and date of the Note shall be the date of the next Closing occurring
+after acceptance by the Company of such Purchaser’s subscription agreement and confirmed
+deposit by Purchaser in the Closing Account of funds for the approved Loan Amount. At the
+time of such Closing, the Company is authorized to transfer funds equal to the approved Loan
+Amount from the Closing Account to the Company’s general accounts.
+
+(d) A prospective Purchaser may withdraw its subscription agreement or
+amend its subscription agreement to increase or to decrease its proposed Note Subscription
+Amount upon demand, at any time prior to the acceptance by the Company, and by written
+notice as provided therein. A prospective Purchaser’s funds in the Closing Account shall be
+returned by the Company, without interest, within five (5) business days after receipt by the
+Company of notice of the withdrawal by the prospective Purchaser or the rejection by the
+Company of his subscription agreement. Any funds belonging to a Purchaser in the Closing
+Account exceeding the Note Subscription Amount approved by the Company shall be returned to
+the Purchaser within five (5) business days after the Closing in which his Note is issued,
+
+(e) Purchasers to whom Notes are issued shall be included in the records of
+the Company on the Schedule of Purchasers attached hereto as SCHEDULE A, as it may be
+amended from time to time,
+
+~5-
+346172113
+
+Case: 12-04137 Doc# 75-1 Filed: 09/16/13 Entered: 09/16/13 15:56:26 Page 9 of
+27
+
+
+2.3. Security Agreement
+
+(a) Performance of the Company’s obligations to repay the Loans and
+amounts due under the Notes shall be secured under a security agreement in the form attached
+hereto as EXHIBIT B (the “Security Agreement’), pursuant to which the Company shall grant to
+the Noteholders a security interest in the Company’s assets, as set forth therein. The Company
+will deliver to each Noteholder with the delivery of the Note an executed copy of the Security
+Agreement made effective as of the date of the Initial Closing.
+
+(b) The lien on the Fund’s assets established by the Security Agreement (the
+“Lien”) will be subordinate to the liens of any Company Borrowings, as provided in
+paragraph 5.3(a) of this Agreement.
+
+2.4 Funding of Additional Loan Amounts
+
+(a) Payment of the amount of any commitment to fund an additional Loan
+Amount pursuant to paragraphs 1.2(c) and 1.2(d) shall be due as of the first day of the next
+following month, or such other date as determined by the Company with notice to the Noteholder
+so affected (the “Increase Effective Date”). Payment by the Noteholder of such increase shall
+be made in readily available funds by personal check drawn on a U.S. bank received by the
+Company no less than ten (10) days prior to the Increase Effective Date, or by wire transfer of
+funds in U.S. dollars wired no less than 24 hours prior the Increase Effective Date, to Company
+bank account with a non-affiliated bank designated by the Company from time to time for the
+purpose of receiving and pooling funds from Noteholders (the “Pre-Jnvestment Account’), so
+that such funds are available to the Company as of the Increase Effective Date. The Company
+may, but is not obligated to, waive the time of receipt provided in the previous sentence, Subject
+to acceptance by the Company of such Noteholder’s request to increase its Loan Amount,
+transfer of such payment shall be made from the Pre-Investment Account to the Company’s
+general accounts on the Increase Effective Date, and Note Adjustments reflecting the increase in
+the Loan Amount shall be made effective as of the date of such transfer. The Company shall not
+be obligated to pay interest to any Noteholder with respect to the period of time that funds are
+held in the Pre-Investment Account. Any interest or fees paid to the Company with respect to
+the Pre-Investment Account may be retained by the Company in consideration of the costs of
+management associated with accepting and administering increases in Loan Amounts,
+
+(b) The roll-over of amounts of accrued interest pursuant to an Interest Roll-
+over Request shall be effective as of the first day of the fiscal quarter immediately following the
+date of acceptance of such Interest Roll-over Request by the Company, and Note Adjustments
+shall be made accordingly.
+
+3. REPRESENTATIONS, WARRANTIES AND COVENANTS OF THE COMPANY
+
+The Company hereby makes each of the following representations and warranties to each
+Purchaser, effective as of the Effective Date, the Initial Closing and the date of each Additional
+Closing.
+
+~-G-
+346172113
+
+of 27
+
+
+3.1 Organization, Good Standing and Qualification
+
+The Company is a limited liability company duly formed, validly existing and in
+good standing under the laws of the State of Delaware. The Company has the requisite corporate
+power to own and operate its properties and assets and to carry on its business as now conducted
+and as proposed to be conducted.
+
+3.2 Corporate Power
+
+The Company will, as of the Effective Date, have all requisite corporate power to
+execute and deliver this Agreement and the Security Agreement and, at the Initial Closing or
+Additional Closing, have al] requisite corporate power to issue each Note to be issued at such
+closing.
+
+3.3 Authorization
+
+All corporate action on the part of the Company and its manager or managers
+(collectively, the “Manager”) necessary for the authorization, execution, delivery and
+performance of this Agreement by the Company and the performance of the Company’s
+obligations hereunder, including the issuance and delivery of the Notes, has been taken or will be
+taken prior to the issuance of such Notes. This Agreement, the Security Agreement, and the
+Series of Notes to be issued in such closing, when executed and delivered by the Company, shall
+constitute valid and binding obligations of the Company enforceable in accordance with their
+terms, subject to laws of general application relating to bankruptcy, insolvency, the relief of
+debtors and, with respect to rights to indemnity, subject to federal and state securities laws.
+
+3.4 Governmental Consents
+
+All consents, approvals, orders, or authorizations of, or registrations,
+qualifications, designations, declarations, or filings with, any governmental authority, required
+on the part of the Company in connection with the valid execution and delivery of this
+Agreement, the Security Agreement, and the offer, sale and issuance of the Notes (to be issued in
+the Initial Closing or Additional Closing, as applicable) will be effective at the Initial Closing or
+Additional Closing, as applicable.
+
+3.5 Compliance with Other Instruments
+
+The Company is not in violation or default of any term of its operating agreement,
+or of any provision of any mortgage, indenture or contract to which it is a party and by which it
+is bound, other than such violation(s) that would not have a material adverse effect on the
+Company. The execution, delivery and performance of this Agreement and the Notes and the
+consummation of the transactions contemplated hereby or thereby will not result in any such
+violation.
+
+3.6 Offering
+
+Assuming the accuracy of the representations and warranties of the Purchasers
+contained in Section 4 hereof, the offer, issue, and sale of the Series of Notes to be issued at such
+
+-7-
+
+346172113
+
+
+of 27
+
+
+closing are and will be exempt from the registration and prospectus delivery requirements of the
+Securities Act of 1933, as amended (the “4cf’), and have been registered or qualified (or are
+exempt from registration and qualification) under the registration, permit, or qualification
+requirements of all applicable state securities laws.
+
+3.7. Company Purpose
+
+The primary purpose of the Company is to source, make and services loans
+secured by deeds of trust or mortgages on real property located primarily in the United States,
+and to engage in such other related activities, including without limitation the ownership,
+operation and sale of real and personal property foreclosed or otherwise acquired in connection
+with such loans, the purchase and sale of Portfolio Loans, or the co-investment, co-ownership or
+co-lending with respect to any of the foregoing activities, as the Manager deems reasonably
+necessary or appropriate to the foregoing purpose, including any and all actions permitted in the
+Operating Agreement.
+
+3.8 Use of Proceeds
+
+The Company shall use the proceeds of the Loan solely for the operations of its
+business, and not for any personal, family or household purpose.
+
+4. REPRESENTATIONS AND WARRANTIES OF THE PURCHASERS
+4.1 Qualifications to Purchase Notes
+
+Each Purchaser makes each of the following representations and warranties to the
+Company, effective as of the date of each Closing in which such Purchaser participates
+hereunder:
+
+(a) that it is acquiring the Notes to be issued at such Closing (collectively, the
+“Securities”) solely for its own account and beneficial interest for investment and not for sale or
+with a view to distribution of the Securities or any part thereof, has no present intention of selling
+(in connection with a distribution or otherwise), granting any participation in, or otherwise
+distributing the same, and does not presently have reason to anticipate a change in such intention;
+
+(b) that it (i)has received, read, and understood the private placement
+memorandum of the Company and has received all the information it has requested from the
+Company and it considers necessary or appropriate for deciding whether to acquire the
+Securities, (ii) has had an opportunity to ask questions and receive answers from the Company
+regarding the terms and conditions of the offering of the Securities and to obtain any additional
+information necessary to verify the accuracy of the information given the Purchaser, and (i11} has
+such knowledge and experience in financial and business matters that it is capable of evaluating
+the merits and risk of this investment;
+
+(c} that it understands that investment in the Securities involves a high degree
+of risk, and represents that it is able, without materially impairing its financial condition, to hold
+the Securities for an indefinite period of time and to suffer a complete loss of its investment; and
+
+- 8 -~
+346772713
+
+
+of 27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page88 of 268
+
+(d) that it is an “accredited investor” as such term is defined in Rule 501 under
+the Act, or, if the Purchaser is not able to make such representation, each Purchaser, either alone
+or with his purchaser representative(s), has such knowledge and experience in financial and
+business matters that he is capable of evaluating the merits and risks of the prospective
+investment, within the meaning of Rule 506(b){2)(ii) of the Act.
+
+4,2 Further Assurances
+
+Each Purchaser agrees and covenants that at any time and from time to time it will
+promptly execute and deliver to the Company such further instruments and documents and take
+such further action as the Company may reasonably require in order to carry out the full intent
+and purpose of this Agreement and to comply with state or federal securities laws or other
+regulatory requirements.
+
+4.3 Purchasers Not Members; No Fiduciary Duties
+
+Each Purchaser hereby acknowledges and agrees that he shall not become a
+member of the Company as a result of the execution of this Agreement or the Security
+Agreement or the purchase and issuance of the Notes hereunder. Each Purchaser hereby further
+acknowledges and agrees that the Company and its Manager owe no fiduciary or similar duties
+to the Noteholders and that the relationship of a Noteholder to the Company is that of a creditor
+only.
+
+5. PERMITTED ACTIVITIES AND USES OF LOAN PROCEEDS
+5.1 Certain Definitions
+
+For purposes of the provisions in this Article 5 and elsewhere as specified in this
+Agreement, certain capitalized terms shall have the following definitions:
+
+(a) “Affiliate” of a party shall mean any entity under control of, controlled by
+or under common control with such party, and shall include their respective principals,
+managers, managing members, officers, directors, members, partners or controlling shareholders,
+provided, however, that “Affiliate” shall not include any Noteholder or a limited partner or non-
+voting member of a Sponsored Investment Fund.
+
+(b) “Private Client’ shall mean any investor or client or their Affliliates for
+whom the Manager or its Affiliates provides loan or real estate brokerage, investment or lending
+services, other than the Company, a Noteholder or a Sponsored Investment Fund.
+
+(c) “Sponsored Investment Fund’ shall mean any investment fund, mortgage
+lending fund, mortgage investment pool or other investment funds sponsored, promoted, owned
+or managed now or in the future by the Manager or its Affiliates, including without limitation,
+R.E. Loans, LLC, a California limited liability company, but excluding the Company.
+
+~9-
+
+346172113
+
+
+of 27
+
+
+5,2 Use of Investor Loan Proceeds
+
+The Purchasers hereby expressly consent to the use by the Company of the
+proceeds of the Loans for any purpose not prohibited by the Operating Agreement, including
+without limitation for the purposes, compensation and activities expressly identified in this
+Agreement.
+
+5.3 Certain Company and Manager Undertakings
+
+Purchasers hereby expressly agree that the Manager has power and authority to
+take such actions on behalf of the Company and to cause the Company to enter into such
+transactions as it may determine, in its sole discretion, pursuant to the terms of the Operating
+Agreement and the Act. Without limiting the foregoing, and for avoidance of doubt, the
+Purchasers expressly agree to the provisions of paragraphs 5.2(a)-(#).
+
+(a) The Manager may borrow money, guarantee indebtedness or otherwise
+incur indebtedness on behalf of the Company, for the purpose of accomplishing the objectives of
+the Company (“Company Borrowings”) on such terms as it may determine in its discretion. The
+terms of a Company Borrowing, may include, but are not limited to, the provision of a security
+interest in the assets of the Company that is senior to the Lien and the interests of the
+Noteholders in the Collateral, or the execution of one or more agreements or instruments that
+provides to such senior lender rights to enforce remedies with respect to the Company Borrowing
+that subordinate or otherwise restrict the rights of the Noteholders to enforce their remedies
+under the Security Agreement or this Note Purchase Agreement, or diverts revenues of the
+Company for purposes of enforcing the payment of the Company’s obligations under the
+Company Borrowings. Such terms may provide, by way of example and not of limitation, for
+the payment of principal and interest on the Company Borrowing on a priority basis under
+specified circumstances from certain income and assets of the Company, including from
+revenues and income generated by Portfolio Loans and from proceeds payable to the Company
+with respect to Portfolio Loan principal, or for a standstill or forbearance in connection with the
+enforcement of the exercise of the Company’s rights and remedies with respect to the Collateral
+in favor of the exercise by the lender under the Company Borrowing of its rights and remedies.
+The Purchasers agree that the Manager may enter into terms and agreements with respect to the
+subordination of the Lien and the enforcement of rights of the lender under any Company
+Borrowing as the Manager may deem commercially reasonable. The Manager is hereby
+authorized by the Purchasers to enter into, execute and deliver such subordination agreements
+and other agreements and instruments on behalf of the Company or the Noteholders as the
+Manager may determine are appropriate to negotiate or comply with the terms of a Company
+Borrowing or, as applicable, to cause the Collateral Agent to take action to effect such result.
+
+(b) The Company may enter into such operating and portfolio transactions
+with the Manager, Members, Servicer, Sponsored Investment Funds, Private Clients,
+Noteholders, their respective Affiliates, or other persons, as may be within the general scope and
+purpose of the Company, on such terms and conditions as the Manager, in its sole discretion,
+determines, except to the extent prohibited by this Agreement.
+
+~10-
+
+346172113
+
+
+of 27
+
+
+(c) |The Company may act as a co-lender, co-guarantor or enter into inter-
+creditor agreements in connection with one or more Portfolio Loans with the Manager,
+Members, Servicer, Sponsored Investment Funds, Private Clients, Noteholders, their respective
+Affiliates, or other persons (“Co-Lending Activities”), on such terms and conditions as the
+Manager, in its sole discretion, determines, except to the extent prohibited by this Agreement.
+
+(d) | The Company may hold real and personal property collateral acquired
+through the foreclosure of a Portfolio Loan or through the work-out or restructuring of a
+Portfolio Loan, or sell such foreclosed property to the Manager, Members, Servicer, Sponsored
+Investment Funds, Private Clients, Noteholders, their respective Affiliates, or other persons, on
+such terms and conditions as the Manager, in its sole discretion, determines, except to the extent
+prohibited by this Agreement.
+
+(e) The Company may purchase or sell Portfolio Loans to or from the
+Manager, Members, Servicer, Sponsored Investment Funds, Private Clients, Noteholders, their
+respective Affiliates, or other persons, on such terms and conditions as the Manager, in its sole
+discretion, determines, except to the extent prohibited by this Agreement.
+
+(f} The Company may enter into an agreement with an Affiliate or non-
+Affiliated person, as the Manager, in its discretion may select (the “Servicer”), for the purpose of
+providing portfolio loan sourcing, origination, brokerage, due diligence, administration, or
+related services to the Company, as provided in the Operating Agreement (the “Loan Services’),
+provided, however, that the aggregate compensation paid by the Company for Loan Services
+shall not exceed the amount of the Loan Servicing Fee, Default Fee Percentage, Default Interest,
+Commissions and Loan Fees, and Documentation Fees payable pursuant to paragraphs 5.4(b)-(f},
+and expenses reimbursable to the Servicer shall be subject to the limitations described in
+paragraph 5.5(a). The initial Servicer shall be Bar-K, Inc., a California corporation and Affilate
+of the Manager. The Manager may remove the Servicer af any time in its discretion.
+
+5.4 Compensation
+
+The Company shall be entitled to pay cash fees to the Manager (or a designee of
+the Manager) in the following amounts and at the following times:
+
+(a) On the first day of each calendar month a monthly portfolio management
+fee equal to 0.0833% (1.0% on an annualized basis) of the aggregate principal amount of all of
+the Company’s outstanding Portfolio Loans (the “Lean Portfolio”) as of the last day of the
+immediately preceding calendar month, pro rated at the end of the term for any partial calendar
+month based on a 30 day calendar month (the “Management Fee”);
+
+(b} A Loan Servicing Fee calculated as an amount, payable monthly, equal to
+0.0833% monthly (1.0% on an annualized basis) of the total unpaid principal balance of each
+Portfolio Loan with respect to which Loan Services are rendered, payable only as interest with
+respect to such Loan is received by the Company (the “Loan Servicing Fee”). Any unpaid Loan
+Servicing Fee shall accrue without interest until paid in full, except to the extent waived in
+writing by the Manager or Servicer. To the extent that components of the Loan Servicing Fee
+are paid directly by or on behalf of the Portfolio Loan borrower to the Servicer, its designee or
+
+-l]-
+
+346172113
+
+
+of 27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page91 of 268
+
+Affiliate, they shall be the property of the Servicer, such designee or Affiliate and the Company
+shall have no interest in them;
+
+(c) Ten percent (10%) of late charges paid with respect to delinquent Portfolio
+Loan payments, payable as such charges are received by the Company (“Default Fee
+Percentage”);
+
+(d) Default interest collected from a Portfolio Borrower to the extent it
+exceeds the regular state interest rate payable to the Company under the Portfolio Loan (“Default
+Interest’),
+
+(e) Loan brokerage commissions, renewal and forbearance fees with respect
+to Portfolio Loans as and when paid by Portfolio Borrowers to the Company (“Comunissions and
+Loan Fees”); and
+
+(f) Portfolio Loan processing and documentation fees paid by Portfolio
+Borrowers (“Documentation Fees”).
+
+5.5 Expenses
+
+(a) | The Company shall bear all costs, fees, and expenses incurred on or after
+the Effective Date by or on behalf of the Company, the Manager or their Affiliates in connection
+with the formation, organization, reorganization, operation and general administration of the
+Company, including without limitation legal and accounting fees and expenses incident thereto,
+taxes, insurance, and costs of reporting to Noteholders (“Company Expenses”). Without
+limiting the foregoing, Company Expenses shall also include any direct out-of-pocket costs of
+the Manager or its Affiliates incurred from time to time on behalf of the Company, and any
+extraordinary expenses of the Company, including any indemnification expenses pursuant to the
+Operating Agreement. Company Expenses shall not include expenses incurred in connection
+with the provision of the Loan Services; such expenses shall be borne by the Manager or the
+Servicer.
+
+(b) | The Company shall reimburse the Manager and any of its Affiliates or any
+Members for any direct out-of-pocket costs incurred from time to time that are Company
+Expenses. The foregoing expenses and indemnifications shall be referred to as “Permitted
+Expenses’.
+
+(c) The Company shall be permitted, in the discretion of the Manager, to
+indemnify the members, officers, employees, and consultants of the Company to the maximum
+extent permitted by law in connection with the activities of the Company and the Manager,
+provided that such activities did not result from conduct which constitutes willful misconduct or
+gross negligence in performing or in failing to perform the Manager’s duties under the operating
+agreement of the Company. The Company may advance expenses incurred by an indemnified
+party in defending a claim or proceeding covered by the preceding sentence upon an undertaking
+by such indemnified party to repay such amounts if it is ultimately determined that such party
+was not entitled to such indemnification.
+
+~12-
+346972913
+
+
+of 27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page92 of 268
+
+5.6 Other Fees and Compensation
+
+Any construction, brokerage, property management or development or similar
+compensation for services or payment on account of any debt, equity or incentive interest owned
+by the Manager or its Affiliates (whether in the form of cash, securities or other property), that is
+received by the Manager or such Affiliate with respect to an entity in which the Company has a
+debt or equity interest or is providing financing (or proposes to acquire a debt or equity interest
+or provide financing) or with respect to which the Company is providing services on behalf of
+any pooled investment vehicle, or any Loan Origination Fee as provided in paragraph 5.7(a)
+below, shali remain the property of the Manager or such Affiliate, and the Company shall have
+no interest therein. Any banking, administrative or similar fee payable or rebated by a third party
+to the Manager on account of the Company’s operations, management of the Company’s capital
+or deposit of the Company’s funds shall remain the property of the Manager and the Company
+shall have no interest therein.
+
+5.7 Affiliated Transactions
+
+(a) Loan Origination Fees. The Company may purchase loans from the
+Manager, the Servicer, Sponsored Investment Funds, Private Clients, Noteholders or their
+respective Affiliates, or enter into Co-Lending Activities or Joan transactions in which the
+Company, the Manager, the Servicer or the Affiliate of any of them will act as a broker in
+arranging the loan, for which it will receive a brokerage, origination, renewal or forbearance fees
+from the borrower in an amount determined on a case-by-case basis (a ‘Loan Origination Fee”).
+
+(b) Sale of Real Estate to the Manager, Servicer, Sponsored Investment
+Funds, Private Clients or their Affiliates. In the event the Company becomes the owner of any
+real property by foreclosure on a Portfolio Loan, the Company may sell such property to the
+Manager, the Servicer, a Sponsored Investment Fund, a Private Client or to their respective
+Affiliates, provided:
+
+(1) No foreclosed property will be sold to the Manager, the Servicer or
+its Affiliate unless the Manager has first used commercially reasonable efforts to sel] any
+property on behalf of the Company at a fair price on the open market for at least ninety (90)
+days.
+
+(i) Inthe event any property is sold to the Manager, the Servicer or its
+Affiliate, the net purchase price must be more favorable to the Company than any third-party
+offer received. The purchase price will also be: (1) no higher than the independently appraised
+value of such property at the time of sale, and (ii) no lower than the total amount of the
+Company’s “investment” in the property. The Company’s investment includes, without
+limitation, the following: the unpaid principal amount of the Company’s loan, unpaid interest
+accrued to the date of foreclosure, expenditures made to protect the Company’s interest mn the
+property such as payments to senior lienholders and for insurance and taxes, costs of foreclosure
+{including attorneys’ fees actually incurred to prosecute the foreclosure or to obtain relief from
+stays in bankruptcy), and any advances made by the Manager or its Affiliate, if any, on behalf of
+the Company for any of the foregoing. The Company may provide seller-financing at market
+
+-13-
+346172113
+
+
+of 27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page93 of 268
+
+rates to the purchaser in an amount no less than ninety percent (90%) of the purchase price. Such
+seller-financing provided by the Company shail not be deemed a Related Party Loan.
+
+(iii) | Subject to the provisions of paragraph 5.7(b)(iv) below, neither the
+Manager, the Servicer, nor any of its Affiliates shall receive a real estate commission in
+connection with such a sale.
+
+(iv) Notwithstanding the foregoing, the restrictions described in
+clauses (i)-(iii) of this paragraph 5.7(b) shall not apply to sales to Sponsored Investment Funds or
+Private Clients. The sale of any property to a Sponsored Investment Fund or Private Client shall
+be for a purchase price (x) no less than the independently appraised value of such property at the
+time of sale, and (y)no lower than the total amount of the Company’s “investment” in the
+property, as such investment is calculated pursuant to clause 5.7(b)(ii) above. The Manager,
+Servicer, or its Affiliates may receive real estate commissions in connection with a sale to a
+Sponsored Investment Fund or Private Client that, in the aggregate, do not exceed amounts
+customarily provided for such services to third parties in connection with like kind transactions
+in the geographic area of the property.
+
+(c) Purchase of Loans from the Manager, Servicer, Sponsored Investment
+Funds, Private Clients or their Affiliates. The Company may purchase existing loans for its
+
+portfolio from the Manager, Servicer, a Sponsored Investment Fund, Private Client or any of
+their respective Affiliates, provided that the following conditions are met:
+
+(i) At the time of purchase the borrower shall not be default under the
+loan;
+
+(ii) | The purchase price for such loan does not exceed the unpaid
+balance of principal, accrued interest and other charges owing thereunder; and
+
+(iii) The loan satisfies the loan underwriting criteria customarily
+applied by the Company with respect to loans made to or purchased from unrelated third parties.
+
+(d) Sale of Loans to Manager, Servicer, Sponsored Investment Fund, Private
+Client or Affiliates. The Company may sell existing Portfolio Loans to the Manager, the
+
+Servicer, a Sponsored Investment Fund, Private Client or their respective Affiliates, but only so
+long as the Company receives net sales proceeds from such sale in an amount equal to the total
+unpaid balance of principal, accrued interest and other charges owing under such loan, or the fair
+market value of such loan, whichever is greater. Notwithstanding the foregoing, none of the
+Manager, the Servicer, any Sponsored Investment Fund, Private Client or the Affiliate of any of
+them, shall be obligated to purchase any loans from the Company or to guarantee any payments
+under any Portfolio Loan, except as provided in paragraph 5.7(e)(ili) below.
+
+(e} Loans to Related Parties. The Company shall not make or purchase any
+loan for its portfolio in which the borrower is an Affiliate (a “Related Party Loan”), unless all of
+the following conditions are satisfied:
+
+(i) the underwriting standards applied to any Related Party Loan shall
+be consistent with those customarily applied by the Company to loans to non-Affiliates, and the
+
+-14-
+346172113
+
+
+of 27
+
+
+loan terms and conditions shall not be more favorable to the Affiliate in any material respect than
+the Company would make available to an unrelated borrower in a comparable loan transaction
+negotiated at arm’s length;
+
+(ii) | immediately after making or purchasing any Related Party Loan,
+the aggregate unpaid principal balance of all outstanding Related Party Loans shall not exceed
+twenty percent (20%) of the Loan Portfolio; and
+
+(iii) | the Manager shall purchase (or cause the Servicer or an Affiliate to
+purchase) from the Company any Related Party Loan with respect to which any material event of
+default by the borrower has occurred and is continuing for ninety (90) consecutive days, for a
+purchase price which is no less than the sum of the aggregate amounts of all principal and
+accrued interest then outstanding on such Related Party Loan.
+
+For purposes of this Agreement, Investors acknowledge and agree that a Related Party
+Loan shall not include any (i) Company Borrowing in which the Manager or any Affiliate is
+required by the lender to be a co-borrower or fo act as guarantor, or (ii) any loan in which the
+borrower or co-borrower is a Sponsored Investment Fund or a Private Client.
+
+(f) Affiliate Loans to the Company. The Manager, Members or other
+Company Affiliates may, but are not required to, make loans or advances of capital to the
+Company from time to time for the purpose of accomplishing any objective of the Company
+(“Advances”), provided, however, that both of the following conditions are met:
+
+(1) such Advances shall be on terms no less favorable to the Company
+than terms negotiated in an arm’s length transaction; and
+
+(ii) | any liens securing such Advances shall be subordinate to the liens
+securing any Company Borrowings and the Lien securing the Notes.
+
+5.8 Noteholder Transactions
+
+The Company, as lender, may enter into a loan transaction with a Noteholder or
+its Affiliate, as borrower or co-borrower or in which the Noteholder has a direct or indirect
+interest in the borrower or co-borrower, or as a participant in a Co-Lending Activity directly or
+indirectly with a Noteholder or its Affiliate, upon such terms and conditions as the Manager may
+determine in its discretion; provided, however, that the terms and risk to the Company shall be no
+less advantageous to the Company than if such loan or Co-Lending Activity were made pursuant
+to an arm’s length transaction with a person or entity not Affiliated with the Noteholder in the
+same geographical market with comparable property as security. Notwithstanding the foregoing,
+transactions with Noteholders who are also Affiliates of the Manager or Servicer shall be subject
+to the provisions goveming transactions with Affiliates provided in paragraph 5.7.
+
+5.9 Outside Activities
+
+Each Purchaser hereby acknowledges and agrees that the Manager and its
+members, employees, and affiliates shall be entitled to have business interests and engage in
+business activities in addition to those relating to the Company, and may engage in the
+
+~|5-
+346772113
+
+
+of 27
+
+
+ownership, operation and management of businesses and activities for their own account and for
+the account of others, including, without limitation, with respect to Sponsored Investment Funds
+and Private Clients, without having or incurring an obligation to offer any interest in such
+properties, businesses or activities to the Company or to any Noteholder, and no provision of this
+Agreement shall be deemed to prohibit any such person from conducting such other businesses
+or activities.
+
+6. OPERATING COVENANTS OF THE COMPANY
+
+At such times as the Company has not repaid in full all principal and interest under all
+outstanding Notes, the Company shall comply with the following covenants, unless Noteholders
+holding a majority of the aggregate principal amounts of Notes consent in writing otherwise:
+
+6.1 Affirmative Covenants
+
+Until the satisfaction of its obligation to pay principal and interest on all
+outstanding Notes, the Company agrees as follows:
+
+(a) To perfect the security interest of the Noteholders in the assets of the
+Company pursuant to the Security Agreement promptly upon the issuance of the Notes;
+
+(b) Subject to its discretion to prepay all or a portion of certain Notes as
+provided in paragraph 1.4 and in the Notes, to make all payments ratably among the outstanding
+Notes in proportion to the aggregate principal and interest amounts payable under each such
+Note until paid in full;
+
+(c} To require the principals of the Manager to devote such amount of their
+business time to the operations of the Company and the Manager as is reasonably necessary to
+effectively manage the affairs of the Company and the Manager;
+
+(d) To keep Company books in accordance with generally accepted
+accounting principles consistently applied, or in the discretion of the Company, in accordance
+with the International Financial Reporting System (IFRS), and to be audited at the end of each
+fiscal year by an independent public accountant selected by the Company. Such books and
+records shall be open to inspection by the Members and Noteholders, or their accredited
+representatives, at any reasonable time during normal business hours after reasonable advance
+notice;
+
+{e) To transmit to the Noteholders (a) such tax reporting information as ts
+reasonably required to enable the Noteholders to complete their income tax returns with respect
+to their investment in the Notes and (b) such reports and financial statements as the Company, in
+its discretion, may determine, provided that such reports and statements may be provided
+through a limited-access, secure website provided by the Company;
+
+(f) To use commercially reasonable efforts to prevent the structure of any Co-
+Lending Activity from constituting an investment in a fractionalized mortgage, interest in a
+mortgage pool, tenancy in common or other security;
+
+-16 -
+346172113
+
+
+of 27
+
+
+(g) | To make any mortgage loan, if as of the closing of such loan, aggregate
+principal of Portfolio Loans secured by real property located outside the United States and its
+Territories exceeds twenty percent (20%) of the aggregate principal of all Portfolio Loans; and
+
+(h) To perform its obligations under this Agreement, the Subscription
+Agreement, the Notes and the Security Agreement.
+
+6.2 Prohibited Action
+
+Until the Company’s payment in full of principal and interest on all outstanding
+Notes, the Company shall not undertake any of the following actions without the consent of
+Noteholders holding Notes with aggregate Principal balances exceeding fifty percent (50%) of
+ageregate Principal balances of all outstanding Notes (a “Majority in Interest’):
+
+(a) —_ Enter into any merger, consolidation, voluntary dissolution or liquidation;
+
+(b) Directly or indirectly, create, permit or suffer to exist any Lien (as defined
+in the Security Agreement) on or in the Collateral, or in any portion thereof except as permitted
+pursuant to the Security Agreement or this Agreement with respect to a Company Borrowing,
+but instead shall defend the Collateral (as defined in the Security Agreement) against and take
+such other action as is necessary to remove any such Lien;
+
+(c) Pay directly any salaries or bonuses during any month in which a Portfolio
+Management Fee is payable by the Company;
+
+(d) Confess a judgment or settle any claim that the Company may have
+against a Member, including, without limitation, the Manager or their respective Affiliates (other
+than a Sponsored Investment Fund); or
+
+(e) Permit the withdrawal of its sole remaining Manager.
+6.3 Adverse Amendments
+
+The Company shall not amend the Operating Agreement in a manner that
+materially and adversely effects the economic interests of the Noteholders, except to the extent
+approved by a Majority in Interest of Noteholders.
+
+7. TRANSFER OF NOTES
+
+The Notes are non-negotiable and shall not be assigned or transferred without the prior
+written consent of the Company, which consent may be withheld in its sole and absolute
+discretion. Any attempted assignment or delegation of a Note without the consent of the
+Company shall be null and void. Without limiting the foregoing, any transfer of the Note shall
+be to qualified investors only and in compliance with the federal and state securities laws
+governing the offer and sale of unregistered securities.
+
+-l7-
+
+346172113
+
+
+of 27
+ Case3:14-cv-00993-SI| Documenti7-1 Filed08/05/14 Page97 of 268
+
+8. POWER OF ATTORNEY
+8.1 Power of Attorney by Noteholders
+
+(a) Each of the Noteholders irrevocably constitutes and appoints the Manager,
+acting by and through any of its executive officers, as his true and lawful attomey-in fact, with
+full power and authority for him, and in his name, place and stead, to execute, acknowledge,
+publish and file:
+
+(i} This Agreement, the Security Agreement, and any amendments or
+cancellation thereof required under the laws of the State of Delaware;
+
+(ii) | Any certificates, instruments and documents, as may be required
+by, or may be appropriate under, the laws of any state or other jurisdiction in which the
+Company is doing or intends to be doing business; and
+
+(iii) | Any documents or instruments which may be required to effect the
+continuation of the Company or to comply with state or federal securities with respect to the
+issuance of the Notes.
+
+(b) The foregoing grant of authority is a special power of attorney coupled
+with an interest, is irrevocable, and shall survive the death of the undersigned or the delivery of
+an assignment by the undersigned of a Note for the sole purpose of enabling the Manager to
+execute, acknowledge and file any instrument necessary to effect such transfer.
+
+8.2 Covenant to Sign Documents
+
+Without limiting the power of attorney granted in paragraph 8.1 above, each
+Purchaser covenants, for himself and his successors and assigns, to execute, with
+acknowledgement or verification, if required, any and all certificates, documents and other
+writings which may be necessary or expedient to carry out the transactions contemplated by this
+Agreement, including, without limitation, all such filings, records or publications necessary or
+appropriate in the judgment of the Manager to comply with the applicable laws of any
+jurisdiction in which the Company shall conduct its business.
+
+9, APPOINTMENT OF COLLATERAL AGENT
+
+(a) The Manager will appoint a non-Affiliated collateral agent or indenture
+trustee (collectively, the “Collateral Agent’) to collectively represent the Noteholders in
+connection with the exercise of their rights and obligations under the Security Agreement with
+respect to the Collateral. Actions of the Collateral Agent shall be binding on the Noteholders.
+The Collateral Agent shall have such powers and authority as may be granted in the Security
+Agreement, including the discretion to incur costs and hire legal counsel and other professional
+services on behalf of the Noteholders and the Collateral Agent for the purpose of pursuing their
+rights and interests under the Security Agreement, the costs of which will have priority of
+payment from the Collateral. In the event that the Noteholders’ rights under the Collateral are
+exercised and the Company does not have an obligation to indemnify the Noteholders or, if the
+Company does have an obligation to indemnify the Noteholders but is unable to do so, the
+
+-18-
+346172113
+
+
+of 27
+
+
+Collateral Agent shall be entitled to payment of his own compensation, any indemnification
+defense and award, and his costs, including without limitation for his attorneys’ fees, from the
+Collateral prior to the payment of the Noteholders from the Collateral.
+
+(b) The Collateral Agent is authorized to consent to or enter into such
+agreements and instruments in connection with the exercise of Noteholder rights with respect to
+the Collateral on terms required by Manager, including without limitation for the purpose of
+consenting on behalf of the Noteholders to subordination, standstill or other agreements or terms
+of a Company Borrowing, but only to the extent that such terms or actions are not prohibited
+under this Agreement or the Security Agreement.
+
+(c) | The Manager may substitute or replace a Collateral Agent in its discretion
+with another qualified Collateral Agent that is not affiliated with the Company, the Manager or
+the Servicer, provided that, unless required by law, during any period that the Company is in
+default under the Notes or payment of the Notes has been accelerated, no such substitution may
+be made without the consent of a Majority in Interest of Noteholders, excluding from such
+calculation the Principal amounts of Notes held by Noteholders who are also Affiliates of the
+Company, Manager or Servicer.
+
+10. MISCELLANEOUS
+10.1 Binding Agreement
+
+The terms and conditions of this Agreement shall inure to the benefit of and be
+binding upon the respective successors and assigns of the parties. Nothing in this Agreement,
+expressed or implied, is intended to confer upon any third party any rights, remedies, obligations,
+or liabilities under or by reason of this Agreement, except as expressly provided in this
+Agreement.
+
+10.2 Governing Law
+
+This Agreement shall be governed by and construed under the laws of the State of
+Delaware as applied to agreements among Delaware residents, made and to be performed
+entirely within the State of Delaware, without giving effect to conflicts of laws principles.
+
+10.3. Counterparts
+
+This Agreement may be executed in two or more counterparts, each of which
+shall be deemed an original, but all of which together shall constitute one and the same
+instrument.
+
+10.4 Notices
+
+All notices required or permitted hereunder shall be in writing and shall be
+deemed effectively given: (a} upon personal delivery to the party to be notified; (b) when sent
+by confirmed telex, electronic mail or facsimile if sent during normal business hours of the
+recipient, if not, then on the next business day; (c) five (5) days after having been sent by
+registered or certified mail, return receipt requested, postage prepaid; or (d) one (1) day after
+
+-19-
+346172113
+
+
+of 27
+
+
+deposit with a nationally recognized overnight courier, specifying next day delivery, with written
+verification of receipt.
+
+190.5 Modification; Waiver
+
+No modification or waiver of any provision of this Agreement or consent to
+departure therefrom shall be effective with respect to all Purchasers unless in writing and
+approved by the Company and a Majority in Interest of the Noteholders. Notwithstanding the
+foregoing, any Noteholder may waive or modify the application of any provision of this
+Agreement with respect to his own Note, with the consent of the Manager. Any notice provision
+or provision as to the time in which a Purchaser or Noteholder is required to perform its
+obligations hereunder may be waived by the Company in its discretion. No modification or
+waiver of any time of performance or failure to perform any term of this Agreement shail be
+construed as the modification or waiver of such time or term in the past or in the future, or of the
+performance of any other term hereof, except as may be expressly agreed in writing by the party
+granting such waiver. In no event shall a modification or waiver, whether mutual, approved, in
+writing or otherwise, be binding on any party to the extent such waiver would result in the
+violation of any federal or state laws, including securities or lending laws.
+
+10.6 Exercise of Remedies by Noteholders
+
+It is agreed that no delay or omission to exercise any nght, power or remedy
+accruing to each Noteholder upon any breach or default of the Company under this Agreement
+shall impair any such right, power or remedy, nor shall it be construed to be a waiver of any such
+breach or default, or any acquiescence therein, or of or in any similar breach or default thereafter
+occurring; nor shall any waiver of any single breach or default be deemed a waiver of any other
+breach or default theretofore or thereafter occurring. It is further agreed that any waiver, permit,
+consent or approval of any kind or character by Noteholder of any breach or default under this
+Agreement, or any waiver by any Noteholder of any provisions or conditions of this Agreement
+must be in writing and shail be effective only to the extent specifically set forth in writing and
+that all remedies, either under this Agreement, or by law or otherwise afforded to the Noteholder,
+shall be cumulative and not alternative.
+
+10.7 Entire Agreement
+
+This Agreement and the Exhibits hereto, the Subscription Agreement, the Security
+Agreement, and the Notes constitute the full and entire understanding and agreement between the
+parties with regard to the subject matter hereof and no party shall be liable or bound to any other
+party in any manner by any representations, warranties, covenants and agreements except as
+specifically set forth herein or therein.
+
+10.8 Company Representation
+Each Investor hereby agrees and acknowledges that:
+
+(a) Greenberg Traurig LLP (“Greenberg Traurig’) has been retained as the
+Company's general legal counsel by the Company in connection with the transactions
+contemplated by this Agreement, and in such capacity it has provided or will provide legal services
+
+-20-
+346172113
+
+
+of 27
+ Case3:14-cv-00993-SI Documenti7-1 Filed08/05/14 Page1i00 of 268
+
+to the Company, to the Manager and to the Servicer with respect to the Company’s formation and
+offering for purchase and sale of Notes issued by the Company (the “Formation and Offering
+Transactions”). In addition, Greenberg Traurig has represented and is now representing the
+Company in connection with certain of its Portfolio Loans, and the Manager and Servicer expect to
+retain Greenberg Traurig as legal counsel with respect to certain of the Company’s Portfolio Loans
+in the future (collectively, the “Portfolio Transactions.) Additionally, the Manager may retain
+Greenberg Traurig to provide legal services to the Company, the Manager and their Affiliates in
+connection with general management and operation of the Company (the “Operating Matters”,
+and together with the Formation and Offering Transactions and the Portfolio Transactions, the
+“Transactions’). Greenberg Traurig shall be referred to herein individually as “Company Counsel
+or as “Greenberg Traurig”, as applicable. For purposes of this paragraph 10,8 and paragraph 10.9
+below, the term “Noteholder” shall also include its principals, employees, agents or Affiliates.
+
+(b) Company Counsel is not representing, and will not represent, the
+Noteholders in connection with their purchase of Notes, the Transactions or any dispute that may
+arise between the Noteholders, on the one hand, and the Manager, the Company or their
+respective Affiliates, on the other (the “Company Legal Matters’’).
+
+(c) Each Noteholder will, if it wishes counsel on a Company Legal Matter,
+retain its own independent counsel with respect thereto and, except as otherwise specifically
+provided by this Agreement, will pay all fees and expenses of such independent counsel.
+
+(d) | Each Noteholder hereby agrees that Company Counsel may represent the
+Company or the Manager or any of their Affiliates in connection with any and all Company
+Legal Matters (including any dispute between such persons or entities or the Company and
+one (1) or more Noteholders) and waives any present conflict of interest with Company Counsel
+regarding Company Legal Matters arising by virtue of any representation or deemed
+representation of such Noteholder or the Company on account of Company Counsel’s
+representation described in subparagraph 10.8(a) above. Notwithstanding the foregoing, no
+consent or acknowledgment by Noteholder in this paragraph 10.8 or paragraph 10.9 below
+authorizes Company Counsel to undertake any representation which is prohibited by the
+California Rules of Professional Conduct or similar and applicable rules in any other jurisdiction
+(“Rules of Conduct’) despite the granting of a voluntary and informed consent.
+
+10.9 Acknowledgement and Waiver of Conflicts
+
+(a) In addition to the acknowledgment, waiver and consent in paragraph 10.8
+above with respect to representation by the Company Counsel, each party to this Agreement
+(i) acknowledges that Company Counsel may have in the past performed and may now or in the
+future represent one or more Noteholders or their affiliates in matters unrelated to the
+Transactions, including representation of such Noteholders or their Affiliates in matters of a
+similar nature to the Transactions, and (ii) gives its informed consent to Company Counsel’s
+representation of the Noteholders or their Affiliates in any such matters unrelated to the
+Transactions, including without limitation matters of a similar nature to the Transactions. The
+applicable Rules of Conduct require that Greenberg Traurig inform the parties hereunder of this
+representation and obtain their consent.
+
+-21-
+346172113
+
+
+of 27
+ Case3:14-cv-00993-SI Documenti7-1 Filed08/05/14 Page1i01 of 268
+
+(b) In addition, the Company and each Noteholder acknowledge that one or
+more Noteholders may have now or in the future a direct or indirect interest in a Portfolio Loan
+Transaction other than by virtue of its ownership of a Note (“Other Noteholder Portfolio
+Interests”). Each party to this Agreement hereby acknowledges (i) that Company Counsel will
+represent the Company or a Sponsored Investment Fund, or their Affiliates, principals,
+stockholders, directors, members or employees in transactions involving Other Noteholder
+Portfolio Interests, and (ii) gives its informed consent to Greenberg Traurig’s representation of
+such Company, Sponsored Investment Fund, Affiliate, principal, stockholder, director, member
+or employee in any transactions involving Other Noteholder Portfolio Interests. Without limiting
+the foregoing acknowledgement, consent and waiver, each party to this Agreement
+acknowledges (x) that Company Counsel may represent both the Company or such affiliated
+persons and the Noteholder holding the Other Noteholder Portfolio Interest in transactions with
+third parties, and (y) hereby gives its informed consent to such simultaneous representation by
+Company Counsel of the Company (or such affiliated persons) and the Noteholder holding the
+Other Noteholder Portfolio Interest, subject to the specific consent of the Noteholder holding the
+Other Noteholder Portfolio Interest to such representation with respect to such third party
+transaction.
+
+(c) Furthermore, Greenberg Traurig has served as outside legal counsel to the
+Company or its Affiliates and has negotiated, or will in the future negotiate, the terms of certain
+of the Transactions on behalf of the Company or its Affiliates, and not infrequently has
+simultaneously represented both the Company and its Affiliates, with their permission, in
+Transactions among themselves. In addition, Greenberg Traurig has served as outside legal
+counsel to Sponsored Investment Funds or their Affiliates simultaneously with its representation
+of the Company or its Affiliates in the negotiation of the terms of the Transactions permitted
+under this Agreement, with their permission. Greenberg Traurig expects in the future to continue
+such dual representation with the permission of the Affiliated parties or the Sponsored
+Investment Fund, as appropriate, with their permission. Each party to this Agreement hereby
+(i) acknowledges that it has been informed of and has had an opportunity to ask for and have
+obtained information relevant to such representation, including disclosure of the reasonably
+foreseeable adverse consequences of such representation, (11) acknowledges that with respect to
+the Transactions, Greenberg Traurig has represented solely the Company and/or the Sponsored
+Investment Fund or their respective Affiliates (or will in the future represent the Company and/or
+the Sponsored Investment Fund or their respective Affiliates), and not any Noteholder or any
+principal, stockholder, director, member, employee or Affiliate of any Noteholder, and (iii) gives
+its informed consent to Greenberg Traurig’s representation of the Company and Sponsored
+Investment Funds or their respective Affiliates in the Transactions.
+
+[REST OF PAGE INTENTIONALLY LEFT BLANK; SIGNATURE PAGE FOLLOWS NEXT. |
+
+-22-
+346172113
+
+
+of 27
+
+
+IN WITNESS WHEREOF, the parties have executed this SECURED PROMISSORY NOTE
+PURCHASE AGREEMENT as of the date first written above.
+
+COMPANY: PURCHASERS:
+
+MORTGAGE Funpb °08 LLC
+
+By The Mortgage Fund LLC,
+
+its Manager
+By: By:
+Kelly Ng, Name:
+Manager ,
+Title:
+
+THE SECURITIES TO BE ISSUED UNDER THIS AGREEMENT HAVE NOT BEEN
+REGISTERED UNDER THE SECURITIES ACT OF 1933, AS AMENDED, AND MAY NOT
+BE SOLD, TRANSFERRED, ASSIGNED OR HYPOTHECATED UNLESS THERE IS AN
+EFFECTIVE REGISTRATION STATEMENT UNDER SUCH ACT COVERING SUCH
+SECURITIES OR THE COMPANY RECEIVES AN OPINION OF COUNSEL FOR THE
+HOLDER OF THESE SECURITIES, REASONABLY SATISFACTORY TO THE
+COMPANY, STATING THAT SUCH SALE, TRANSFER, ASSIGNMENT OR
+HYPOTHECATION IS EXEMPT FROM THE REGISTRATION AND PROSPECTUS
+DELIVERY REQUIREMENTS OF SUCH ACT.
+
+SIGNATURE PAGE TO
+SECURED PROMISSORY NOTE PURCHASE AGREEMENT
+
+MORTGAGE FuND 708 LLC
+346172113
+
+
+of 27

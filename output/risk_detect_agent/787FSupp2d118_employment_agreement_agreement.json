@@ -1,0 +1,780 @@
+{
+  "contract_id": "787FSupp2d118_employment_agreement_agreement",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061",
+    "c062": "c062",
+    "c063": "c063",
+    "c064": "c064",
+    "c065": "c065",
+    "c066": "c066",
+    "c067": "c067",
+    "c068": "c068",
+    "c069": "c069",
+    "c070": "c070",
+    "c071": "c071",
+    "c072": "c072",
+    "c073": "c073",
+    "c074": "c074",
+    "c075": "c075"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The Employment Period is said to end \"as provided in Section 4,\" but Section 4(a) fixes no term at all and merely lists termination events, so the \"period\" has no ascertainable end date. Section 4(b) then speaks of termination \"during the term of this Agreement,\" a term the instrument never sets.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "Employee is made subject to \"Employee's manager or supervisor as designated by the Company from time to time,\" while Section 4(f)(iii) defines Cause by reference to failure to perform duties \"as reasonably directed by the CEO or his designees.\" Whose direction governs, and whether the Company may unilaterally change the reporting line or the position without consequence, cannot be settled from either provision alone.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "\"Reasonable best efforts\" and \"full business time\" are qualified by a proviso allowing \"a reasonable amount of time to charitable or other similar activities,\" with no measure of what amount is reasonable and no boundary on what counts as \"similar\" to charitable. The catch-all sits directly against the full-business-time promise.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The defined term \"Base Salary\" is attached to the $350,000 figure effective January 1, 2006, yet the very next sentence calls the $425,000 pre-2006 rate the \"Base Salary\" too, leaving the referent of \"Base Salary\" in Sections 4(b) and 4(c) uncertain. \"Subject to review ... on an annual basis\" also does not say whether review can reduce the figure.",
+          "type": 1,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "This sentence labels $425,000 as the \"Base Salary\" while Section 3(a) defines \"Base Salary\" as the $350,000 reviewable figure, so the two cannot both fix the defined term. Which figure the severance measure in Section 4(b) (\"his or her Base Salary described in Section 3(a)\") picks up is left open.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "Entitlement to participate in \"all of the Company's employee benefit programs (including cash bonus programs) for which managerial employees ... are generally eligible\" is measured by an undefined class (\"managerial employees\") and is subject to amendment at will, so it is unclear whether it confers anything. Whether the Section 20 Sign-On Bonus falls inside \"cash bonus programs\" is also unresolved.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "\"All reasonable expenses\" is bounded only by Company policies \"in effect from time to time,\" which the Company may change unilaterally, so the scope of the reimbursement duty is indeterminate.",
+          "type": 1,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "Clause (i) says the Employment Period \"will terminate upon Employee's resignation, death or Disability,\" without stating whether Disability terminates automatically on the CEO's determination or requires notice, and the cross-reference is mangled (\"Section 4(f\"). The automatic-termination language leaves no room for the Company to elect otherwise.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "Severance is triggered by termination without Cause \"during the term of this Agreement,\" but the Agreement nowhere fixes a term, and the entitlement is to \"his or her Base Salary described in Section 3(a),\" which states two different salary figures. Both the trigger period and the amount are open to construction.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "The Severance Period cuts off if Employee \"becomes employed by or is engaged as a consultant or independent contractor on a full-time basis (i.e. 30 or more hours per week),\" but the 30-hour gloss is stated for the consultant/contractor branch and it is unclear whether it also qualifies \"becomes employed by.\" Whether medical and dental continuation ends along with the payments is likewise unaddressed.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "Payment may be suspended \"during such times as Employee is in breach of Sections 5, 6 or 7,\" with no mechanism for determining that a breach has occurred and no statement whether suspended amounts are later restored if the breach is cured or disproved. \"In breach\" is asserted unilaterally by the payor.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The release must be \"in form and substance reasonably satisfactory to the Company,\" with no form attached, no deadline for execution, and no limit on what the Company may demand be released. The condition can be read to let the Company defeat the severance obligation by insisting on terms.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "On resignation, death or Disability this provision limits Employee to \"only ... his or her Base Salary through the date of termination,\" while Section 20 makes any unpaid Sign-On Bonus payable in full within 30 days upon resignation, death or Disability. The word \"only\" cannot be squared with the Section 20 acceleration.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "This provision excepts only Section 4(b) and terminates all rights to \"bonuses ... which accrue or become payable after the termination of the Employment Period,\" yet Section 20 states the Sign-On Bonus is earned at signing and that unpaid amounts become payable within 30 days after termination. The two provisions cannot both be given effect as to the unpaid Bonus.",
+          "type": 2,
+          "prob": 0.44
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The offset right reaches \"any amounts Employee owes the Company or its affiliates,\" without limiting it to liquidated or undisputed debts or providing any notice or determination procedure. Whether it may be used against the Section 20 Bonus or Section 4(b) severance is unstated.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "\"Disability\" turns on \"any physical or mental incapacitation\" producing 120 days of inability \"during any twelve-month period,\" \"as determined by the CEO in his good faith judgment,\" making the trigger dependent on an unreviewable-seeming unilateral judgment. Whether the 120 days must be consecutive and how the deemed 120th-day occurrence date is fixed are left open.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "Clause (i) reads \"the entering of a guilty plea or conviction of a felony or any other act or omission involving dishonesty, disloyalty or fraud,\" so it is unclear whether the \"any other act or omission\" catch-all requires a plea or conviction at all or reaches uncharged conduct. Clause (v), \"any other material breach of this Agreement,\" further swallows the enumerated specifics.",
+          "type": 1,
+          "prob": 0.41
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "\"Confidential Information\" is defined as any \"information, observations and data ... concerning the business or affairs of the Company or any of its affiliates obtained by him or her while employed,\" with no carve-out for the Employee's general skill, knowledge, or publicly available information. The definition's outer boundary is set only by the temporal fact of employment.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "Delivery is required of documents \"to the extent containing Confidential Information or Work Product,\" a limit that cannot sensibly be applied to physical items and says nothing about partially containing materials or electronically stored copies. \"At any other time the Company may request\" also imposes an unbounded recurring obligation.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "\"Work Product\" captures anything relating to the Company's \"actual or anticipated business, research and development or existing or future products or services\" that is \"conceived, developed or made by Employee while employed,\" without regard to whether it was made on Company time or with Company resources. \"Anticipated\" and \"future products or services\" have no ascertainable boundary.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "The acknowledgment turns on \"similar services requiring the use of such Trade Secrets\" for an entity \"competing with the Company or engaged in a similar business,\" and neither \"similar services\" nor \"similar business\" is defined or bounded. These undefined terms are the predicate for the covenant that follows in Section 7(a).",
+          "type": 1,
+          "prob": 0.23
+        }
+      ],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "Clause (iv) bars participation in \"any business in which he would be reasonably likely to employ, reveal, or otherwise utilize Trade Secrets\" in \"any geographical area in which the Company or any of its affiliates conduct business,\" a restraint whose reach depends on a speculative likelihood judgment rather than any identified line of business. Clause (ii)'s flat bar on hiring any current or recent employee is also untethered to any solicitation by Employee.",
+          "type": 1,
+          "prob": 0.52
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "\"Participate\" is defined to include \"any direct or indirect interest in any enterprise\" as \"creditor, owner or otherwise,\" with the only carve-out being sub-5% passive ownership of listed stock, so ordinary passive interests such as mutual funds or private holdings appear to be caught. The \"or otherwise\" catch-all following the enumerated roles has no limiting principle.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "Employee's stipulation that the Section 7(a) covenant \"is reasonable with respect to its duration, geographical area and scope\" sits against Section 7(c), which expressly contemplates that a court will hold those same restrictions unreasonable and substitute narrower ones. The two provisions take opposite positions on the covenant's reasonableness.",
+          "type": 2,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "This acknowledgment of a worldwide geographic scope cannot be squared with Section 7(a)(iv), whose only geographic limit is \"any geographical area in which the Company or any of its affiliates conduct business.\" Whether the covenant is worldwide by acknowledgment or bounded by actual areas of operation is left to construction.",
+          "type": 2,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "The no-hardship acknowledgment rests on Employee having \"general business skills which may be used in industries other than those in which\" the Company operates, which is in tension with Section 7(a)(iv)'s bar on any business where he would be \"reasonably likely to ... utilize Trade Secrets\" anywhere the Company does business. The premise of the acknowledgment is contradicted by the breadth of the covenant it supports.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "The Section 7(a) covenants are to be \"construed as agreements independent of any other provision(s)\" and to survive an order terminating other provisions, which is difficult to reconcile with Section 8's statement that Sections 5, 6 and 7 are given \"in consideration of ... employment with the Company.\" Whether a failure of the Company's own obligations excuses the covenants is left unresolved.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "Section 7(c) directs a court to substitute \"the maximum period, scope or geographical area reasonable under such circumstances,\" while Section 12 directs that an invalid or unenforceable provision be treated \"as if [it] had never been contained herein.\" Reformation and excision are opposite instructions to the same court on the same restrictive covenants.",
+          "type": 2,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "The parties agree that money damages \"may not be an adequate remedy,\" a permissive formulation that concedes nothing definite and does not stipulate irreparable harm. Whether it supports the injunctive relief Section 7(d) then contemplates is open.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "The Protection Period is tolled on a merely \"alleged breach or violation\" until it \"has been duly cured,\" so an unproven allegation can extend the restraint indefinitely and \"duly cured\" is nowhere defined. The tolling has no outer limit and no mechanism for resolving a disputed allegation.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "The stated consideration for Sections 5, 6 and 7 is \"employment with the Company\" plus unspecified \"additional good and valuable consideration as set forth in this Agreement,\" without identifying what that additional consideration is. Whether continued at-will employment alone supports the covenants must be construed.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "Section 9 bars Employee from becoming \"engaged in, render[ing] services for, or permit[ting] his or her name to be used in connection with any business other than the business of the Company\" without written consent, which cannot be squared with the Section 2(b) proviso permitting a reasonable amount of time on charitable or similar activities. The two set different permissions for outside activity during employment.",
+          "type": 2,
+          "prob": 0.23
+        }
+      ],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "Employee warrants he is \"not a party to or bound by any employment agreement, noncompete agreement or confidentiality agreement with any other person or entity,\" an unqualified representation with no carve-out for surviving obligations to prior employers and no knowledge or materiality limit. Whether it speaks as of the Effective Date only, or continuously, is unstated.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": "Notice to Employee goes \"to the address indicated in the Company's payroll records,\" an address controlled and maintained by the sender rather than stated in the Agreement, so a notice may be effective though sent to a stale address. The Employee has no stated way to verify or fix that address.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": "Notice is \"deemed to have been given when so delivered or mailed,\" which cannot be squared with the requirement in the preceding sentence of Section 11 that mailing be \"return receipt requested.\" Whether receipt matters at all is left in doubt.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [
+        {
+          "issue": "This directs that the Agreement be enforced \"as if such invalid, illegal or unenforceable provision had never been contained herein,\" whereas Section 7(c) directs a court holding the restrictive covenants unreasonable to substitute the maximum reasonable period, scope or area. Excision and judicial reformation are inconsistent instructions for the same defective covenant.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "The parties are obliged to \"negotiate in good faith a modification\" preserving \"the intent of the parties and the economic and other benefits\" of a provision whose validity is questioned, an agreement to agree with no standard, deadline, or consequence of failure. What happens if negotiation fails is unaddressed.",
+          "type": 1,
+          "prob": 0.19
+        }
+      ],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "The merger clause says this Agreement \"supersedes and preempts any prior understandings, agreements or representations ... relat[ing] to the subject matter hereof,\" yet Section 19 incorporates and Section 19(f) expressly preserves the pre-existing Equity/Option Agreements. Whether those equity documents survive the integration clause is a question the instrument leaves open.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "The Agreement is made enforceable by and binding on Employee's \"heirs, successors and assigns\" even though the very next clause forbids Employee to assign, and Section 4(a) terminates the Employment Period on death. Which obligations, if any, pass to an estate is not resolved.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "\"Affiliates\" are made intended third-party beneficiaries, but the term \"affiliates\" is used throughout Sections 2, 5, 6, 7 and 19 and is never defined anywhere in the Agreement. The class of persons entitled to enforce the covenants is therefore unascertained.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": "Massachusetts law is chosen to govern \"all issues and questions concerning the construction, validity, enforcement and interpretation of this Agreement,\" yet Section 19(e) directs that \"all or substantially all\" \"shall have the meaning given to such term under Delaware law.\" The clause also refers to \"the schedules hereto,\" though the Agreement has no schedules.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c061"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [
+        {
+          "issue": "The parties submit to the \"co-exclusive jurisdiction\" of the federal court for Massachusetts and Massachusetts state courts in Boston, a term with no settled meaning — it is unclear whether the clause is mandatory or merely permissive as to those two fora. Whether suit elsewhere is barred cannot be told from the words.",
+          "type": 1,
+          "prob": 0.29
+        }
+      ],
+      "dataset_clause_id": "c062"
+    },
+    {
+      "clause_id": "c063",
+      "issues": [],
+      "dataset_clause_id": "c063"
+    },
+    {
+      "clause_id": "c064",
+      "issues": [
+        {
+          "issue": "The sentence provides that no course of conduct or delay \"shall affect the validity, binding effect or enforceability of this Agreement,\" which addresses the Agreement's enforceability rather than waiver of a particular right or breach. Whether it operates as a non-waiver clause at all is a matter of construction.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c064"
+    },
+    {
+      "clause_id": "c065",
+      "issues": [
+        {
+          "issue": "\"Employee shall not be entitled to bind the Company in connection with this Agreement or any matter arising hereunder\" is unclear in scope for an officer whose duties necessarily involve acting for the Company. Read against Section 2(a), it is uncertain whether it limits only amendment/waiver authority under Section 18 or Employee's actual authority generally.",
+          "type": 1,
+          "prob": 0.21
+        }
+      ],
+      "dataset_clause_id": "c065"
+    },
+    {
+      "clause_id": "c066",
+      "issues": [
+        {
+          "issue": "\"Incentive Equity\" is defined by reference to \"any\" share option or purchase agreements with Parent, without identifying any document, grant, or number of shares, and Parent is not a party to this Agreement. What equity the Section 19 acceleration attaches to must be established from outside the instrument.",
+          "type": 1,
+          "prob": 0.23
+        }
+      ],
+      "dataset_clause_id": "c066"
+    },
+    {
+      "clause_id": "c067",
+      "issues": [
+        {
+          "issue": "Fifty percent acceleration on a Change of Control is stated to override the Equity Agreements \"[n]otwithstanding any provision to the contrary,\" but Section 19(f) provides that no provision of this Agreement shall \"limit or impair any of the terms and conditions of the Option Agreements.\" The override and the preservation clause pull in opposite directions.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c067"
+    },
+    {
+      "clause_id": "c068",
+      "issues": [
+        {
+          "issue": "The additional 50% is calculated \"after giving effect to the vesting provided in subsection (a) above,\" but subsection (a) provides no vesting at all — the 50% Change of Control acceleration is in subsection (b). The mis-citation makes the computation of the additional tranche indeterminate.",
+          "type": 1,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c068"
+    },
+    {
+      "clause_id": "c069",
+      "issues": [
+        {
+          "issue": "This provision applies pro rata treatment to \"the accelerated vesting provided for in each of Sections 19(a) and 19(b),\" but Section 19(a) provides no accelerated vesting; the two acceleration provisions are 19(b) and 19(c). \"Pro rata strip\" is also nowhere defined.",
+          "type": 1,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c069"
+    },
+    {
+      "clause_id": "c070",
+      "issues": [
+        {
+          "issue": "The definition labels two different limbs \"(ii)\" and the third limb is garbled by a duplicated passage, so it is unclear whether the share-sale limb is a separate trigger and where it begins and ends. The 20%-\"by value\" ownership test is also stated without a valuation date or method.",
+          "type": 1,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c070"
+    },
+    {
+      "clause_id": "c071",
+      "issues": [
+        {
+          "issue": "This preserves \"the Option Agreements,\" a term never defined in the Agreement; Section 19(a) defines \"Equity Agreements,\" and whether the two are the same set of documents is left to inference. The saving clause's subject matter is therefore uncertain.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c071"
+    },
+    {
+      "clause_id": "c072",
+      "issues": [
+        {
+          "issue": "The $800,000 Bonus is split into $264,000 payable March 24, 2006 and \"the remainder ... payable ratably over the following twelve months,\" without stating when that twelve-month run begins or what happens between the September 30, 2005 Effective Date and March 2006. \"Ratably\" against \"the Company's general payroll practices\" leaves the installment amounts and dates unfixed.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c072"
+    },
+    {
+      "clause_id": "c073",
+      "issues": [],
+      "dataset_clause_id": "c073"
+    },
+    {
+      "clause_id": "c074",
+      "issues": [
+        {
+          "issue": "Declaring the Bonus \"earned as of the date of this Agreement\" cannot be squared with Section 4(d), under which all rights to bonuses \"which accrue or become payable after the termination of the Employment Period\" cease on termination except as provided in Section 4(b). Whether an amount earned at signing but unpaid at termination survives is exactly what the two provisions answer differently.",
+          "type": 2,
+          "prob": 0.46
+        }
+      ],
+      "dataset_clause_id": "c074"
+    },
+    {
+      "clause_id": "c075",
+      "issues": [
+        {
+          "issue": "Acceleration of the unpaid Bonus on resignation, death, Disability or termination with or without Cause conflicts with Section 4(c), which limits Employee on a for-Cause or Section 4(a)(i) termination to \"only ... his or her Base Salary through the date of termination,\" and with Section 4(d)'s cessation of all post-termination bonus rights. Which provision controls the unpaid Sign-On Bonus is unresolvable from either alone.",
+          "type": 2,
+          "prob": 0.57
+        },
+        {
+          "issue": "The trigger reads \"upon the Employee's resignation, death or Disability ... and if the Employee is terminated by the Company at any time with or without Cause,\" so the conjunction \"and\" leaves it unclear whether the two events are alternative triggers or cumulative conditions. On its face the sentence requires both a resignation and a Company termination.",
+          "type": 1,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c075"
+    }
+  ]
+}

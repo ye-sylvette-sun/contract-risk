@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "5da1895afdded82c6209fb4718a84213f87cf3d03d9d61a92963a97b72b4ac4f",
+  "document_chars": 6146,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2890,
+    "input_tokens_details": {
+      "cache_write_tokens": 2887,
+      "cached_tokens": 0
+    },
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "reasoning_tokens": 70
+    },
+    "total_tokens": 3142
+  },
+  "response": [
+    {
+      "id": "rs_006ae0ea1faf6427006aa1d3643f8087d0bc67027febd931a4",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodNozCBsmYw3QZ6-hbsiHe-3Fq94WZM-MOawNRw34ZdByt7dv3a4tHrPJKKAuwTz3rgMKgYVTOqHPy_ynnDBSrg5Q_0EZtCvoAxnFi8WmR18B56Jv6x6bj1Z8CZ8gyE6OcmqDxzuXY1d5E5PJ6UwK1nDoxQFKce7NKfN7koVFbzB5nMT9PT6sG4VxVCPmpV9TOedubxgklPCmkHJHqADDFvr6vpslefwvQTBrDE1vDl_esGP9IkhIjYHnb8qadQDg7syZFwK1iQW17f3q0RMAxNZNpXumTIWs7xpeYIyn29u7dJ9zyUV5FnCM7LUT10SywM1z0ygI8X4jQEOQXiY90zqAzE1qbO3B6YEUqi2eIrCBqF5yPpwxXjKZ0r7PzP0D1hBDg4iegPfZGY-tn3eSuVQziQgKa9VFeUchBQ3Jhedr-PU7hZRuFKaJ3lRop6JEPgxlP32D-NPiKAhJ1glQcGoERjn5mWW2fEE8x19weYzEDOWqLBp7WjSBB8uZHcbqM3WylBw7Xp24pYna7D09V-_xcTOXaOJEsNPaCa7Xuilh0S1xiwXGP1MsDu8TOI9ZjieVZYdu8p8PnOBxHYq6ckokI65pEasu97rU5UQ-e9jjhoNKEp3IJUCNIyAgilnb1NOiHmWZ67FV-41C-PkaBk2FemXjJRtQSgd5AzwdCBvBSP_Wzl82BoJDvdgOti5rwXeTNBbC6a6VZd6SGTDhtRBwQGsSaQ7IyUQJroecs4s4KPw_H7Tu0qxJ102M6zbjuRvs8mK7Nj3fETW0KgJCu5s1yzc7mNlxOMK9I87KO7TP7XuBgM0-0LtduxLnqvcKsoOblM68GfWQgAqGg_ue_rYyJvCyYU0JYntxwasYqwbyYWMnPNkOw3jgTiwTbp7_tjnjvIHkPXvXdX6HiDRLxHjj0yfusxrLYSj9gFn6GlOHnnrCy84iAg-MDBftPqtCe3LK0dvQ7BQG7aqoC4h4cGvG0CU4tim87NlCvgYY0P5YgDOYfZH7Zf292cjpxczvezdp1GGRoSEYe_IvXQ5s0Ao20-nM2iHFOrO2sed5VJsEffD4vNGpoCIxyq_EIK2xBZM2VabkEa2taWdOb4gaaUknxNtH0xoPm9Oz49bSFVWMdPMZ9E8smpNWC3RAs3RCqq2ehFVzpW7j4SUxzpzzxm391lYn4Z6ug9Ha0TIbUk9foOi_bVOP_Y9KeHBgqZsMkcmqM-7I4QleG2zoQ6IFoNXC9D2LCBeDD7x8Qz7m-F997X3dMcFUpN6tKAxHuPtkwSMV6_Y98Xbs5EN9rHoZtb0iAtwgsBBy78qr5SdC8G5GOJWo_UF2iGj1LRkH4ozPHs0XHd2NXMI-qWEmRO5slQuS4Nn9O4z_WdKQWU2tcTKOliCfWzTo7HsS1dfxLgyypModL7eq5TkZye6u8rXbvI1EVFQfCGnjPP33-xWfYYRX_DXJXv90gcKy1a11RLcrNrWSr-agSfTt8v8kS-kUtmEDbgoiW-S_xBCULMMi9vWf1iaGroEZY7b_RAo8Id1hdqaTeDX17odSmG4_pS9AB1udbfHt3W12Wh8BOOM3o_WDho=",
+      "status": null
+    },
+    {
+      "id": "msg_006ae0ea1faf6427006aa1d36591e087d08f2c2f7204a80475",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges an erroneous cross-reference that anchors the certificate-outstanding deeming rule to Section 4.01 instead of Section 4.02. Candidate g1 instead concerns whether the separate “sources and manner provided herein” language makes waterfall payments an implementation of subrogation or an independent reimbursement right, so it records a different defect.\",\"words_at_issue\":\"The proposed issue turns on the first sentence’s cross-reference “within the meaning of Section 4.01” and claims that Section 4.02 was intended. Candidate g1 turns on clause (ii), particularly “only from the sources and in the manner provided herein,” and its relationship to the Section 4.02 waterfall and the subrogation right in clause (i).\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

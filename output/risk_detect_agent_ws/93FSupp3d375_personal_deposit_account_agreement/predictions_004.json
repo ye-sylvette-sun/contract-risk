@@ -1,0 +1,160 @@
+{"judgments": [
+ {"clause_id": "c195", "issues": [
+   {"issue": "The disclosure describes the transfers \"we are capable of handling\" and then warns that \"[s]ome of these may not apply to your Account\", without saying which apply to which account type. Which EFT rights a given customer actually has cannot be determined from the Part.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c196", "issues": [
+   {"issue": "Card use \"may be restricted in certain countries due to security risks\", identifying neither the countries nor the restrictions nor any notice. The scope of the reserved restriction is entirely open.", "type": 1, "prob": 0.13}
+ ]},
+ {"clause_id": "c197", "issues": [
+   {"issue": "The card \"may be cancelled after 13 months of inactivity\" with no notice requirement, while the EFT Termination clause provides that \"[t]he Bank may terminate the Electronic Funds Transfer Agreement by notifying you in writing\". Whether cancelling the card for inactivity requires that written notice is unresolved between the two.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c198", "issues": [
+   {"issue": "Direct deposits may be accepted into \"your Checking, Savings or Money Market Deposit Accounts\", whereas the neighbouring Pre-authorized Withdrawals and Telephone Transfers clauses limit the same services to \"Statement Savings or Statement Money Market Deposit Accounts\". Whether passbook and non-statement savings accounts are included differs between the clauses.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c199", "issues": []},
+ {"clause_id": "c200", "issues": []},
+ {"clause_id": "c201", "issues": [
+   {"issue": "A converted check \"is treated as an EFT and is not a negotiable instrument in its own right\", carrying EFT error and unauthorized-transfer protections, while the Part I Pre-authorized Drafts clause deems any debit initiated by a party to whom you gave Account information \"authorized by you\". The same point-of-purchase debit falls under two inconsistent regimes.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c202", "issues": []},
+ {"clause_id": "c203", "issues": [
+   {"issue": "The list of ATM capabilities is qualified by \"Note: Some of these services may not be available at all terminals\", without identifying which or where. The promise of ATM access is thereby left indeterminate.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c204", "issues": []},
+ {"clause_id": "c205", "issues": [
+   {"issue": "\"If a merchant receives authorization for a purchase, TD Bank cannot return that transaction unpaid even if your account is not in good standing\", yet the Processing Order and Overdrafts clauses treat items that overdraw the Account as fee-generating and describe overdrafts as advances made \"at our sole discretion\". Whether a fee can be charged for a transaction the Bank concedes it had no power to refuse is the question raised by reading them together.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c206", "issues": [
+   {"issue": "These are \"[t]he standard daily limits (per card)\", the word \"standard\" implying that other limits may be applied without saying when or how. What limit binds a particular customer is not fixed by the text.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c207", "issues": []},
+ {"clause_id": "c208", "issues": []},
+ {"clause_id": "c209", "issues": [
+   {"issue": "The customer agrees not to make the PIN available \"to anyone not authorized to sign on your Account\", which by implication permits sharing it with authorized signers. How transfers made by a person given the PIN are treated under the Unauthorized Transfers clause is left unclear by that carve-out.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c210", "issues": [
+   {"issue": "The customer may terminate \"by calling us and subsequently providing written notice\", without saying when termination takes effect or what happens between the call and the writing. The two-step requirement leaves the effective date of termination undetermined.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c211", "issues": [
+   {"issue": "\"For certain account types we will waive the fee for some non-TD ATM transactions as disclosed on the Personal Fee Schedule\" identifies neither the account types nor the transactions, deferring both to a document that may change. \"Certain\" and \"some\" carry the whole waiver.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c212", "issues": [
+   {"issue": "Reimbursement of third-party surcharges is promised only \"[f]or some Checking Account types\", with the qualifying types left to the Personal Fee Schedule. Which customers have the benefit cannot be told from the clause.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c213", "issues": [
+   {"issue": "The refund depends on bringing in an ATM receipt \"within 90 calendar days\" in lower case, and applies only to \"Accounts that Qualify for Surcharge Refunds\", a category identified nowhere in the Agreement. Both the period and the qualifying accounts are indeterminate.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c214", "issues": [
+   {"issue": "The exchange rate is \"a rate selected by Visa from the range of rates available in wholesale markets ... which may vary from the rate Visa itself receives, or the government-mandated rate in effect\", a disjunction that does not say which rate governs a given transaction. The customer cannot determine the applicable rate from the clause.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c215", "issues": []},
+ {"clause_id": "c216", "issues": [
+   {"issue": "This promises a monthly statement where \"the only possible transfers to or from your Account are direct deposits\", while the Periodic Statements clause promises monthly statements \"unless there are no checks written or no electronic transfers\" and the Part I statement clause excuses statements altogether for inactive Accounts. The three statement obligations cannot all be applied to the same Account.", "type": 2, "prob": 0.20}
+ ]},
+ {"clause_id": "c217", "issues": [
+   {"issue": "The monthly statement obligation is excused \"unless there are no checks written or no electronic transfers in a particular month\", so on its literal terms the absence of either category alone defeats the promise, though the sense requires \"and\". The disjunctive \"or\" is a mechanical defect that changes the meaning of the obligation.", "type": 1, "prob": 0.26}
+ ]},
+ {"clause_id": "c218", "issues": []},
+ {"clause_id": "c219", "issues": [
+   {"issue": "The notice obligation for varying payments is placed on \"the person (or organization) you are going to pay\", a third party who is not a party to this Agreement, and the customer's alternative election has no mechanism for being communicated. Who owes the customer the ten-day notice is left unresolved.", "type": 1, "prob": 0.18}
+ ]},
+ {"clause_id": "c220", "issues": [
+   {"issue": "A stop payment request must \"precisely identify the account number, date and amount of the payment\", yet the Notice of Varying Amounts clause immediately above contemplates pre-authorized payments whose amounts vary and are not known in advance. The precision requirement cannot be met for the very transfers this section covers.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c221", "issues": []},
+ {"clause_id": "c222", "issues": [
+   {"issue": "\"[Y]ou cannot place stop payments for purchases made by telephone, on the Internet, or with your Visa Debit Card\" cannot be squared with the preceding clause's statement that \"[p]re-authorized transfers from your Account(s) can be discontinued\", since a recurring pre-authorized payment may be charged to the Visa Debit Card. Which rule governs a recurring debit-card payment is unresolved.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c223", "issues": [
+   {"issue": "This clause makes the Bank \"liable for your losses or damages\" for failing to stop a timely-ordered pre-authorized transfer, while the Limited Liability clause bars liability absent bad faith and caps recovery at three months' fees and charges. The two liability rules cannot both govern the same failure.", "type": 2, "prob": 0.28}
+ ]},
+ {"clause_id": "c224", "issues": []},
+ {"clause_id": "c225", "issues": [
+   {"issue": "This states that \"[u]nless otherwise provided in the Agreement, you may not stop payment of electronic fund transfers\", while the Right to Stop Payment clause in the same Part expressly permits pre-authorized transfers to be discontinued. Whether the Agreement \"otherwise provides\" is left to the reader to work out.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c226", "issues": [
+   {"issue": "Framed as a safety tip, \"[t]he activity of the ATM facility is being recorded by a surveillance camera or cameras\" is a statement of present fact about every ATM facility, without qualification. Whether it is a representation the Bank must make good is the construction question.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c227", "issues": []},
+ {"clause_id": "c228", "issues": []},
+ {"clause_id": "c229", "issues": []},
+ {"clause_id": "c230", "issues": []},
+ {"clause_id": "c231", "issues": []},
+ {"clause_id": "c232", "issues": []},
+ {"clause_id": "c233", "issues": []},
+ {"clause_id": "c234", "issues": []},
+ {"clause_id": "c235", "issues": [
+   {"issue": "Ten specific exceptions to the Bank's liability are introduced by \"for instance\" and closed by \"There may be other exceptions stated in our Agreement with you\", so the enumerated list neither limits nor identifies the exceptions. Whether the list is exhaustive is exactly what a court would be asked to decide.", "type": 1, "prob": 0.29}
+ ]},
+ {"clause_id": "c236", "issues": [
+   {"issue": "The privacy promise is qualified by exceptions for \"certain routine disclosures necessary for the completion of a transfer\", disclosure \"to certain third parties with whom we have joint marketing agreements\" and \"to our affiliates as permitted by law\", none of which is bounded. The exceptions are broad enough to consume the undertaking not to disclose.", "type": 1, "prob": 0.22}
+ ]},
+ {"clause_id": "c237", "issues": [
+   {"issue": "Notice must be given \"within three (3) days\" of discovery, using neither of the Agreement's two defined day conventions. Whether Business Days or Calendar Days are meant is not stated.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c238", "issues": [
+   {"issue": "The clause says the customer \"will not be liable for unauthorized purchases made with your Debit Card when used as if it were a Visa Credit Card\" but then says he \"can be held liable for fraudulent use of your Card and/or PIN when PIN-based transactions are made\", without defining which transactions fall on which side. The $50/$500 tiers turn on that undefined distinction.", "type": 1, "prob": 0.27}
+ ]},
+ {"clause_id": "c239", "issues": [
+   {"issue": "This gives the customer sixty Calendar Days after the statement was mailed to report transfers he did not make, while the Part I statement clause bars any claim about a matter shown on a statement unless reported within thirty Calendar Days of mailing. The two deadlines for the same statement entry are irreconcilable.", "type": 2, "prob": 0.27}
+ ]},
+ {"clause_id": "c240", "issues": []},
+ {"clause_id": "c241", "issues": [
+   {"issue": "The Bank \"must hear from you no later than sixty (60) Calendar Days after we sent you the FIRST statement on which the problem or error appeared\", whereas the Part I Periodic Statement clause bars claims not reported within thirty Calendar Days of mailing. For an electronic transfer appearing on a statement the two notice periods conflict.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c242", "issues": [
+   {"issue": "\"[W]e may not provisionally credit your Account\" if a written complaint is not received within ten Business Days, leaving it uncertain whether the failure forfeits provisional credit or merely permits the Bank to withhold it, and whether it affects the underlying claim. \"May not\" is the phrase carrying the consequence.", "type": 1, "prob": 0.16}
+ ]},
+ {"clause_id": "c243", "issues": [
+   {"issue": "After setting out a forty-five day and a ninety day extended investigation period, the clause says \"[i]f we decide to do this, we will credit your Account\", without identifying which of the two extensions triggers the provisional credit obligation. The antecedent of \"this\" determines when the customer gets his money.", "type": 1, "prob": 0.23}
+ ]},
+ {"clause_id": "c244", "issues": []},
+ {"clause_id": "c245", "issues": []},
+ {"clause_id": "c246", "issues": [
+   {"issue": "The substitute-check refund procedure entitles the customer to his loss up to the amount of the check plus interest, while the Limited Liability clause caps any recovery from the Bank at three months' fees and charges and bars liability absent bad faith. Whether the cap applies to a substitute check refund claim is unresolved between them.", "type": 2, "prob": 0.17}
+ ]},
+ {"clause_id": "c247", "issues": [
+   {"issue": "A substitute check claim may be made \"within 40 Calendar Days\" of the mailing of the check or the statement, whichever is later, while the Part I Periodic Statement clause forbids asserting any claim about a matter shown on a statement unless notice was given within thirty Calendar Days of mailing. The two limitation periods for the same debit cannot both stand.", "type": 2, "prob": 0.25}
+ ]},
+ {"clause_id": "c248", "issues": [
+   {"issue": "Part VI uses \"this Agreement\" to mean the Night Depository Agreement alone and redefines \"you\" as \"the Depositor\", although the same phrase and pronouns are defined for the whole instrument at the front. Every later reference in Part VI to \"this Agreement\" is therefore ambiguous as between the two documents.", "type": 1, "prob": 0.26}
+ ]},
+ {"clause_id": "c249", "issues": [
+   {"issue": "The obligation falls on \"all new Depositors\", a capitalized term never defined and distinguished from the \"Existing Depositors\" of the next subparagraph only by the September 1, 2011 date. Who is a new as opposed to an existing Depositor is not stated.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c250", "issues": [
+   {"issue": "\"Existing Depositors\" may keep using their own containers, while the preceding subparagraph requires \"all new Depositors\" to use Bank-supplied disposable bags; neither term is defined and the classes are not exhaustive. A depositor who resumes the service after a gap falls into neither category.", "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c251", "issues": []},
+ {"clause_id": "c252", "issues": []},
+ {"clause_id": "c253", "issues": []},
+ {"clause_id": "c254", "issues": [
+   {"issue": "The clause deems the Carrier \"your exclusive agent when items are in transit\" even where, by its own first sentence, \"[w]e may arrange for and pay for a Carrier to collect deposits from you\". Whether a carrier selected, engaged and paid by the Bank can be the customer's exclusive agent is the question the clause creates.", "type": 1, "prob": 0.27}
+ ]},
+ {"clause_id": "c255", "issues": [
+   {"issue": "Liability here is excluded except for loss \"directly caused by our negligence or willful misconduct\", while the Part I Limited Liability clause excludes all liability \"unless we have acted in bad faith\" and caps damages at three months' fees. The Agreement thus states two different standards of care for the same Bank.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c256", "issues": []},
+ {"clause_id": "c257", "issues": [
+   {"issue": "\"[T]he determination of our employee is conclusive as to the contents of the bags\" makes the Bank the final judge of the amount deposited, while the next clause promises \"ordinary care and ... reasonable commercial standards\" in processing the bags. A conclusive determination leaves no room to test whether that care was exercised.", "type": 1, "prob": 0.27}
+ ]},
+ {"clause_id": "c258", "issues": [
+   {"issue": "This allows \"up to two Business Days following the day the bag is received\" to count and credit the deposit, while the Funds Availability Policy provides that funds deposited in a night depository are considered deposited on the next Business Day the Bank is open and available on that schedule. The two dating and crediting rules conflict, and this clause also says the Policy \"applies to all deposits\".", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c259", "issues": [
+   {"issue": "The undertaking to \"use ordinary care and adhere to the reasonable commercial standards of the banking business\" sits against the preceding clause making the Bank employee's count \"conclusive as to the contents of the bags\" and the Liability of Bank clause disclaiming responsibility for loss \"resulting from any cause whatsoever\". Whether the ordinary care promise is enforceable at all depends on reading the three together.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c260", "issues": [
+   {"issue": "Fees may be changed \"in the manner specified in the Deposit Account Agreement\", but that Agreement contains two different change-notice rules — the Amendments clause's notice \"as we determine is appropriate\" and Part II §7's thirty days' advance notice of fee changes. The cross-reference does not identify which manner is meant.", "type": 2, "prob": 0.16}
+ ]},
+ {"clause_id": "c261", "issues": []},
+ {"clause_id": "c262", "issues": [
+   {"issue": "This declares the Night Depository Agreement \"the entire agreement between you and us with respect to the use of the night depository service\", while the introduction to the instrument states that \"[t]his Agreement consists of Parts I-VI\" together with the Rate Sheets, Fee Schedules and grids. Whether Part VI stands alone or is one part of a single integrated contract is unresolved.", "type": 2, "prob": 0.26}
+ ]},
+ {"clause_id": "c263", "issues": [
+   {"issue": "Part VI controls over \"any provision of the Deposit Account Agreement relative to the night depository service\", but no criterion is given for when a general provision — the Limited Liability clause, the Funds Availability Policy, the Amendments clause — is \"relative to\" that service. The reach of the priority rule is what would be construed.", "type": 1, "prob": 0.23}
+ ]},
+ {"clause_id": "c264", "issues": [
+   {"issue": "Part VI is governed by \"the state laws that apply to your primary deposit account\", a term used nowhere else and undefined, whereas the Part I Governing Law clause looks to the jurisdiction of the Store where the Account was opened. Which law governs, and which account is \"primary\" for a customer with several, is not answerable from the text.", "type": 1, "prob": 0.24}
+ ]}
+]}

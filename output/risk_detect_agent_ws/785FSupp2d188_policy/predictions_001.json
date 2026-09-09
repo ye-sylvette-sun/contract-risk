@@ -1,0 +1,55 @@
+{"judgments": [
+  {"clause_id": "c001",
+   "issues": [
+     {"issue": "The insured \"Trust\" is identified only by reference — \"as described in Endorsement No. 1\" — and Endorsement No. 1 never states a trust name in terms, defining instead the Trustee, Trust Administrator and the Pooling and Servicing Agreement. A court could be asked what entity or trust fund the Policy actually covers.",
+      "type": 1, "prob": 0.15}
+   ]},
+  {"clause_id": "c002",
+   "issues": [
+     {"issue": "The schedule of insured Certificates is internally inconsistent on its face: it recites \"2008-OA2\" for one class and \"2006-OA2\" for the others, gives a principal amount of \"$1\", and identifies a class as \"424-2\". Which classes and amounts are in fact insured is a mechanical defect in the identification itself.",
+      "type": 1, "prob": 0.24}
+   ]},
+  {"clause_id": "c003",
+   "issues": [
+     {"issue": "The guaranty runs \"to each Trustee for the benefit of each Holder,\" but Endorsement No. 1 defines the Trustee as U.S. Bank while making Wells Fargo the Trust Administrator, and PSA Sections 12.04 and 12.06 give the Trust Administrator alone the power to claim on and hold the Policy. Who the guaranty is owed to, and who may enforce it, cannot be settled from this provision alone.",
+      "type": 2, "prob": 0.30}
+   ]},
+  {"clause_id": "c004",
+   "issues": [
+     {"issue": "This preference guaranty covers only an avoided \"distribution of principal,\" while the Endorsement's claim procedure (c019) is triggered by a court order that the Holder return \"principal or interest.\" The two cannot both be given effect as to avoided interest distributions.",
+      "type": 2, "prob": 0.24}
+   ]},
+  {"clause_id": "c005",
+   "issues": [
+     {"issue": "The condition of payment is a notice \"as described in\" a cross-reference that is left incomplete, so the notice content, recipient and timing are not fixed by the provision. A court would have to supply the referent from Endorsement No. 1 or PSA Section 12.04.",
+      "type": 1, "prob": 0.20}
+   ]},
+  {"clause_id": "c006",
+   "issues": [
+     {"issue": "Subrogation is expressed as to the Holders' \"rights to receive distributions with respect to each Certificate,\" which does not say whether it carries the Holders' contractual causes of action (for example against the loan seller) or only the right to trust-fund distributions. The scope of the subrogated \"rights\" is the term in doubt.",
+      "type": 1, "prob": 0.34},
+     {"issue": "This narrow distribution-based subrogation sits against the Endorsement's assignment provisions (c019 and c021), which purport to transfer to Financial Security \"all rights and claims of the Holder relating to or arising under the Insured Certificates,\" including causes of action against any person or entity. Which measure of succession governs is a question of reading the Policy as a whole with PSA Section 12.05.",
+      "type": 2, "prob": 0.28}
+   ]},
+  {"clause_id": "c007",
+   "issues": [
+     {"issue": "\"Holder\" is keyed to the registration books \"maintained by or on behalf of the Trustee,\" but Endorsement No. 1 (c016) and the PSA place certificate registration and Holder records with the Trust Administrator, Wells Fargo. Whose books determine Holder status is left unsquared between the two documents.",
+      "type": 2, "prob": 0.20}
+   ]},
+  {"clause_id": "c008",
+   "issues": [
+     {"issue": "The three operative terms \"Trustee,\" \"Guaranteed Distributions\" and \"Term of this Policy\" are given no content here at all, being pushed entirely into Endorsement No. 1, whose definitions of Guaranteed Distributions (c014) and Term (c015) are themselves qualified and open-ended. The Policy's core obligation therefore cannot be read off the Policy body.",
+      "type": 2, "prob": 0.16}
+   ]},
+  {"clause_id": "c009",
+   "issues": [
+     {"issue": "The Policy declares that it sets forth Financial Security's undertaking \"in full\" and shall not be \"modified, altered or affected by any other agreement or instrument,\" yet Endorsement No. 1 defines Guaranteed Distributions and the payment account by reference to the Pooling and Servicing Agreement (c014, c018). Whether and how the PSA can affect the Policy's meaning is a conflict within the instrument.",
+      "type": 2, "prob": 0.36}
+   ]},
+  {"clause_id": "c010", "issues": []},
+  {"clause_id": "c011",
+   "issues": [
+     {"issue": "The non-cancellation statement is absolute in form, yet Endorsement No. 1 (c015) defines a \"Term of this Policy\" that ends on a stated date. Whether coverage can end while the Policy cannot be cancelled is a tension between the two.",
+      "type": 2, "prob": 0.11}
+   ]}
+]}

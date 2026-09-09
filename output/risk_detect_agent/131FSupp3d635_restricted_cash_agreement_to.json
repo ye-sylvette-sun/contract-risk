@@ -1,0 +1,246 @@
+{
+  "contract_id": "131FSupp3d635_restricted_cash_agreement_to",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The parenthetical defining the employee party is broken off mid-phrase (\"You,\" \"you,\" \"your,\" or \"Fy and your heirs and successors), so it is unclear whether heirs and successors are themselves parties or merely covered. The same sentence binds \"affiliates and successors\" of the Company without identifying which affiliates.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "\"[T]he Company determines ... that the services are substantially complete\" uses an undefined standard — neither \"services\" nor \"substantially complete\" is defined anywhere in the Agreement, and the determination is left to the Company alone. A court could be asked what services were owed and when they became substantially complete.",
+          "type": 1,
+          "prob": 0.31
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "The promise to pay $60,300 is made \"subject to the terms and conditions of this Agreement,\" but §7 gives the Company sole and absolute discretion over interpretation and §12 lets it terminate the Agreement at any time, so the payment obligation's content only emerges from reading those provisions together. A court could be asked whether §1 confers any enforceable right at all once §7 and §12 are given effect.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The provision turns on \"IBAS terms\" and \"the provisions of IBAS (including appropriate reductions for hypothetical tax),\" an acronym and document never defined or attached to the Agreement. What tax result an IBAS assignee gets is therefore unascertainable from the instrument.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "This clause says the Payment \"may be affected by a change in your duties or position as set forth below,\" while §2(a) mandates that a transfer out of the initial position \"will be\" prorated. The permissive \"may be affected\" cannot be squared with §2(a)'s automatic proration.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "\"Company initiated severance\" is undefined, and the clause does not say whether an involuntary discharge for cause, a reduction in force, or a constructive discharge falls within it. That term alone decides whether a prorated Payment is owed.",
+          "type": 1,
+          "prob": 0.46
+        },
+        {
+          "issue": "Read with §4, which lets the Company terminate employment \"with or without cause and with or without notice,\" and §2(b), which forfeits on resignation or retirement, the Agreement leaves an involuntary termination that is not a \"severance\" unprovided for. A court would have to decide which of the two regimes such a termination falls under.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "\"[R]esignation or retirement (other than retirement in connection with a Company initiated severance)\" leaves the boundary between a voluntary resignation and a Company-driven departure undrawn, and does not carve out a resignation connected to a severance the way it carves out retirement. Whether a departure is a resignation or a severance under §2(a) decides forfeiture.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "Forfeiture turns on the Company's conclusion that \"you failed to meet performance expectations in your assignments and responsibilities,\" a standard with no defined benchmark and no stated process, and ground (vi) forfeits for violating the Code of Conduct \"in any respect.\" A court could be asked whether any objective limit constrains the Company's conclusion.",
+          "type": 1,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "The proviso applies \"in the case of certain leaves of absences\" without identifying which leaves, and says the unpaid amount \"may\" be accelerated, leaving the trigger and the obligation both indeterminate. The parenthetical list of leaves (\"military or sick leave, ... to enter governmental employment\") is also incomplete on its face.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "The bar on transfer runs \"until the Agreement has expired,\" but the Term provision allows the Agreement to be \"satisfied\" on an early date and §12 allows termination, so it is unclear when expiration occurs for this purpose. The exception for will and descent also sits oddly with §2(a)'s direct payment to the estate.",
+          "type": 1,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The Company's reserved right to terminate employment at any time \"with or without cause\" stands against §2(a), which promises a prorated Payment on a Company-initiated severance, and §2(b)/(c), which forfeit it. A court would have to say whether a no-cause termination triggers §2(a) proration or merely the at-will reservation here.",
+          "type": 2,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "Notice must be \"in writing or in such form as may be acceptable to the Company,\" a standard fixed by one party alone with no criteria. Notice is also \"deemed ... effectively given when mailed,\" without stating a method of mailing or proof of dispatch.",
+          "type": 1,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "The saving of rights runs against \"you or any other person,\" an unbounded class in a two-party agreement with no third-party obligations. Its relation to the forfeiture grounds it preserves rights alongside is left unstated.",
+          "type": 1,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "Any \"interpretation, construction or application\" by the Company in its \"sole and absolute discretion\" is declared \"final, binding and conclusive for all purposes,\" without saying whether this ousts judicial review or is merely subject to good faith. That is the term that decides whether the Company's forfeiture determinations under §2(c) can be contested.",
+          "type": 1,
+          "prob": 0.43
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The clause binds and benefits only \"each successor and assign of the Company,\" saying nothing of the employee's heirs and successors, whom the opening paragraph makes parties and to whose estate §2(a) directs payment. A court could be asked whether the omission of the employee's side is deliberate (expressio unius) or must yield to those provisions.",
+          "type": 2,
+          "prob": 0.17
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "The sentence \"[a]ny liability of the Company to any person with respect to a benefit under this shall be based solely upon any contractual obligations that may be created hereunder\" omits its noun after \"under this,\" leaving the scope of the limitation unclear. Whether it reaches liabilities beyond the Payment cannot be read off the text.",
+          "type": 1,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The Company may \"amend or terminate this Agreement at any time,\" which cannot be squared with §1's promise to pay $60,300 at the end of the Retention Period unless the savings clause for \"benefits or rights to which you are otherwise entitled ... immediately prior\" is read to protect an unvested Payment. A court would have to decide what, if anything, the employee is \"otherwise entitled\" to before the Retention Period ends.",
+          "type": 2,
+          "prob": 0.36
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "Forfeiture follows if you \"disclose or threaten to disclose\" information, a trigger left undefined and reaching statements short of actual disclosure. The carve-outs (spouse, accountant, tax advisor, lawyer, or as required by law) also do not say whether disclosure in litigating this Agreement is permitted.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c021"
+    }
+  ]
+}

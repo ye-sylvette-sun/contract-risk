@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "4492f2501fb427d18d49a5666aed0561ee5d8008524495e6f64f9e3ee92f07d3",
+  "document_chars": 6721,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3083,
+    "input_tokens_details": {
+      "cache_write_tokens": 3080,
+      "cached_tokens": 0
+    },
+    "output_tokens": 368,
+    "output_tokens_details": {
+      "reasoning_tokens": 155
+    },
+    "total_tokens": 3451
+  },
+  "response": [
+    {
+      "id": "rs_04d6636a7859cbff006aa1d2f4235c87d08d12fb436deaa39a",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodL65FPaAdAYdYkBbvF25q7qkzWJuG-afphfyY_lZZZYyKzYFhm0eM4T4CCmbxlwAjEiwqYZDdCu2Xsgd4xM6pdfrIRm1OEaUMCdiB8pDzxlFH2UCNzjsjOO178eWK-DI6f_LLO9RMYIcY6tQbr0ggahvlR9if55rZifstB7FHtmlPlr0T0Rygr6qFeNjUQbhKT2r9Rs8hrfyNsNGyflSwlYyFbIUeWa6Qm208kYhGOwSE54XE0aJjRL0quK-5dRHD7h4IXfyo8LqRjy-HVLs81QWxVZwrvoUc54KRPV3RZ_pbs4t6FuQ7KF7R2Wb-3oZF3f8ODJ_8GNNZEdf7pAWR4_z8GiRbQ97BSkSP7-xQz6nPC-eivNTMo3Z4DO-M4cmG0wgzn9w2hG-m14m80mIesoozS0ebttAaEqLk6F4qu7t7EubuqLgh5P0oMl9s11KG0r40ysOZfIdSVDdOgStRe18I4o8cfOlqOoJ7tJSwCNpabSx8qnA12KrR1vERDV_UbZ-WQfeBp5nSJSHuufJWxAXEOXOH1s9xSWmssIcsz6qap5xVWzFfEEq0n9KUXZ7sEsC7OVFyrR_q9XDfZaPp-g1ViuZqt4RW4Vswi6Tdl5wrFtr9bCrhKDvNAWllViI2Ma5htSbRPCczHp9plnZYPKFZnfYYz4umd0eFcVvNOWSljjRXMpmoruw4M_XhDWeKsV44tx2SfW0NM7A3hcSXf1j3DcF5XcLgNKwlzIzeHaFVxTLuZUMk4f94B32ZHkax70-IDRcR4QLW8Csk0JPICOa4pF2EAQTiTgEXoCrBPZK2gFUYOUH7C5B6od8zyjDHKkye5sYkZDR2CWo0sfshVP6DuJlmJLC4WU2BSXJJyew6Y1ABfgNFdW6ZJcmLNk77eaWc13A7mLKzTylAvGV9rCpHrPHPrBEiWCPBFvr0PHlf8KIVHd_sLgaMlO882ymdFTnlQRiTO__K4YwMBxlVNGhSNwBTZ3nHAi9iTs5ELtcOeQs8D2rxjdOZL_rZL6fPtML3Np1ncyX3wPvkKQOEnOI5tmsr1LXINzjmtlEA4z0CU4w3Lgwei72HbL2Gn_f3w9qySYESf6CRkwt--5FLRSCLDzYIh4HEfEbRtLhjDbLDxjIkgMZJQdjTiYhB3AYDGuTPm1f-iMmxMaIszV8c2Dvg7vQ-TOE5Jomd7DMC0ydeP1rriZBVRixuob8_NwUrrRiIcusDA22u69I9FXi8Bf6omsOiZURW-hVLMMkPhNrJ4tAjpl7TQCw5E1cCGVD93Rfyf0a_haElw_ARuNkQrpn8h86njiDcBxLvOCioQH8wheR2f3gvZjCkNg8HCkNH8fv73uepNmdfLsBTgLdkZ8A5qXN3mi9L_nOgHs_69PeLUPdbikl0YeouZWrcQutthTw3lKzOlQMEJH9SB8FHTYSyymx82qp6srGDC1KGwlM4_KRvZySoXcwgLbfbtFN3PPwuKBpkAaNdatR_0g0-YGPAFyc1nzBJ9NnH_jcuMKBpsXYZDC-iAiuX9iL1bndwieVctOb5oH_OuZKcKueWB06i9gv0y-duOM4x-tA75jhBIPsUDAksHAJFxFuT6HvfjTdyPwpGMnj3GzswmUuNj33IgkJQ0AcNM_hv_BM_Rkm8GPIPPdxDgBKXCTZJZBLIr7oczTfSVD9yggeFMyPIUmkO39A7JZEsLao_X0lKZNTn5E4TyTe-bhS0HjKXHPwwkNyALicTJBVRBDlKGEoxIS0mO1xrXlxtej7FSzjgAOsFyVMCpB9PjGhSj3Xunr4MKkHWESH_gfFk0utBn0vznq7uXkJTa0-KO81d9xX_ybUqKHsM0PQBgvzmwGbpbPY3xP017Ktj9yQVxtOvAZxry92ntKtfCFq_jHeoXbBd5NzPv2wOkQac_gJlfvbrXaz2MGoiWeOlIUp410E5xpxiojXS0s-Voy3MkqLM2bGd4avOLJugD3fYU_bspzpLRXqDZufN0au0w9xj8DTK1zzAZ879Zz091Cr3ZBgnSGbwBeYe18Zwz8LJLde_hJ4NdakArOGyOHz3IK6mycAkAu_i7GnZlfgFkdmojS8oV3ZlJ6X_Iq39GO6P1cIMnDJzZBa7hlLT_8TbTjYJ9KETx1AYY-C2wcWwDZ0SinXBTBGwT6hwJTMdNh8UGDSFDO9kqnYpma1n7N3M4taBqNt0zrf_N_oOxyx9B-VW6aOlR0XYjdEJM0yOo471yCubtHZSoWI0QE2hwB99OdORQw0GpPu1cAq8jx_8zPSdGcIS4JhcPFmvg64s71oaZXyD4kbxfQhDM9",
+      "status": null
+    },
+    {
+      "id": "msg_04d6636a7859cbff006aa1d2f7a0d887d08454b4c8458edfc9",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns an alleged mismatch between the Counterparty-requested voluntary early-termination mechanism and the separate Early Termination Right granted only to Buyer. Candidate g1 instead concerns whether Market Value is an input into Termination Value and whether Barclays may determine Market Value unilaterally for margin calls, so it identifies a different defect.\",\"words_at_issue\":\"The proposed issue turns on “AT THE REQUEST OF COUNTERPARTY,” “VOLUNTARY EARLY TERMINATION,” and “EARLY TERMINATION PRICE,” contrasted with the separate Early Termination Right provision’s grant of a right only to Buyer. Candidate g1 turns on “THE TERMINATION VALUE WILL REFLECT CHANGES IN THE MARKET VALUE OF THE PARTIES’ RESPECTIVE POSITIONS,” together with Barclays’ Calculation Agent designation and the MRA’s requirement that Market Value come from a “generally recognized source agreed to by the parties.”\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

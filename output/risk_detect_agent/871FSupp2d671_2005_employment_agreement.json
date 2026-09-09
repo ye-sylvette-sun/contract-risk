@@ -1,0 +1,1049 @@
+{
+  "contract_id": "871FSupp2d671_2005_employment_agreement",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025",
+    "c026": "c026",
+    "c027": "c027",
+    "c028": "c028",
+    "c029": "c029",
+    "c030": "c030",
+    "c031": "c031",
+    "c032": "c032",
+    "c033": "c033",
+    "c034": "c034",
+    "c035": "c035",
+    "c036": "c036",
+    "c037": "c037",
+    "c038": "c038",
+    "c039": "c039",
+    "c040": "c040",
+    "c041": "c041",
+    "c042": "c042",
+    "c043": "c043",
+    "c044": "c044",
+    "c045": "c045",
+    "c046": "c046",
+    "c047": "c047",
+    "c048": "c048",
+    "c049": "c049",
+    "c050": "c050",
+    "c051": "c051",
+    "c052": "c052",
+    "c053": "c053",
+    "c054": "c054",
+    "c055": "c055",
+    "c056": "c056",
+    "c057": "c057",
+    "c058": "c058",
+    "c059": "c059",
+    "c060": "c060",
+    "c061": "c061",
+    "c062": "c062",
+    "c063": "c063",
+    "c064": "c064",
+    "c065": "c065",
+    "c066": "c066",
+    "c067": "c067",
+    "c068": "c068",
+    "c069": "c069",
+    "c070": "c070",
+    "c071": "c071",
+    "c072": "c072",
+    "c073": "c073",
+    "c074": "c074",
+    "c075": "c075",
+    "c076": "c076",
+    "c077": "c077",
+    "c078": "c078",
+    "c079": "c079",
+    "c080": "c080",
+    "c081": "c081",
+    "c082": "c082",
+    "c083": "c083",
+    "c084": "c084",
+    "c085": "c085",
+    "c086": "c086",
+    "c087": "c087",
+    "c088": "c088",
+    "c089": "c089",
+    "c090": "c090",
+    "c091": "c091"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The execution/Effective Date is left blank (\"July ¥, 2005\"), so the date from which the Employment Term, the third-anniversary termination date and the Restricted Period run cannot be fixed from the instrument. Every duration in the Agreement depends on that missing date.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "\"Board\" is defined as the Board of Directors of Ajuba only, yet Section 2.1 has the Employee report \"directly to the Board (or selected designee of the Board of Directors of the Parent)\" and Schedule 2.1 has him report to the Chairman, so the body actually entitled to direct and terminate him is unclear. The defined term does not square with those reporting provisions.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "The definition is open-ended on both ends — \"such other entities serviced by the Company at any time\" and a catch-all \"and other related services\" appended to a long enumerated list — so the outer boundary of the restricted \"Business\" is indeterminate (ejusdem generis / expressio unius). Because Business is measured \"at any time during the Employment Term,\" its content also shifts with whatever the Company happened to do.",
+          "type": 1,
+          "prob": 0.44
+        },
+        {
+          "issue": "This definition of \"Business\" is materially broader than the definition of \"Business\" in Section 1.A of the contemporaneous Noncompetition Agreement, which is limited to listed services \"for hospitals and physicians in the United States.\" Two agreements of even date thus impose non-competes measured by different definitions of the same term.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "\"Code\" is defined but the Internal Revenue Code is never invoked anywhere in the operative text (Section 9.6 speaks only of withholding \"as required by law\"), leaving the definition without work to do. A reader must decide whether any tax-qualification concept was meant to be imported.",
+          "type": 2,
+          "prob": 0.06
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "\"Company Technology\" reaches anything \"known to the Employee as a consequence of or through the Employee's employment,\" which does not distinguish items he created from general knowledge or skill he acquired, and has no time boundary. The scope of what must be assigned and never used again turns on that undefined phrase.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The definition sweeps in \"all information, in whatever form, regarding Parent, the Company their Business and their clients\" without any exclusion for publicly available or independently known information, and the missing punctuation after \"the Company\" obscures whose Business is meant. The illustrative list beginning \"including, without limitation\" does nothing to bound it.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "Clause (b)(ii)'s test — first-year revenue exceeding \"the sum of (A) one percent (1%) of Ajuba's actual consolidated gross revenue ... and (B) the scheduled first-year gross revenue for such new contract\" — is circular, since the quantity measured is added to the threshold it must exceed. As drafted the condition can never be satisfied.",
+          "type": 1,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "\"Customer\" is keyed to \"the date of termination of this Agreement,\" a date the Agreement never defines (termination of employment, expiry of the Employment Term, and termination of the Agreement are different events). It also extends to mere prospects \"actively sought,\" an undefined measure of contact.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "Disputes over EBITDA are committed to \"the independent accountants regularly employed by Ajuba,\" the paying party's own auditors, with no standard, procedure or statement that their determination is final and binding. The provision also shifts between \"any fiscal year\" and the defined \"Fiscal Year.\"",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The Employment Term ends on \"the third anniversary of this Agreement,\" while Section 8.1 fixes termination at \"the third anniversary of the Effective Date\" — two measuring dates that need not coincide given the undated signature block. Because the Restricted Period in Section 1.14 runs three years from the end of the Employment Term, the discrepancy propagates.",
+          "type": 2,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "\"or such other 12-month period as may constitute Ajuba's fiscal year at any time hereafter\" lets one party unilaterally redefine the measuring period on which the Bonus tables in Section 2.2(b) depend. No notice or limit is attached.",
+          "type": 1,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "The \"Restricted Area\" here includes India, whereas Section 1.E of the contemporaneous Noncompetition Agreement defines the Restricted Area as \"the United States, its territories and protectorates\" only. The two instruments executed the same day therefore describe different geographic reach for materially identical covenants.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "The Restricted Period ends \"three years after the end of the Employment Term,\" but the Employment Term itself may end early under Article VIII or run to the third anniversary, and nothing addresses employment continuing past that anniversary — so the covenant's end date cannot be computed. The total restraint may run anywhere from three to six years.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "This Restricted Period conflicts with Section 1.D of the contemporaneous Noncompetition Agreement, which runs three years from the date of that agreement, so the same conduct is restrained for two different periods. Section 9.8 preserves both instruments without reconciling them.",
+          "type": 2,
+          "prob": 0.32
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [
+        {
+          "issue": "Section 2.1 requires the Employee to \"report directly to the Board (or selected designee of the Board of Directors of the Parent),\" while Schedule 2.1 — which the same section makes controlling — says he \"Reports to the Chairman of the Board of Ajuba International, Inc.\" The reporting line, which Section 8.4(a) makes relevant to Good Reason, cannot be read consistently.",
+          "type": 2,
+          "prob": 0.26
+        },
+        {
+          "issue": "The duties are \"the duties as are customarily performed by a President\" plus \"such other legally permissible and proper duties\" consistent with his \"position,\" none of which is bounded, and \"full professional and business-related time\" is not defined. Whether a change in assignment breaches this section governs the Good Reason analysis.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "The escalator says the Base Salary increases \"retroactive to the first business day of the year following the Fiscal Year in which such EBITDA was achieved,\" which is prospective rather than retroactive and leaves unclear whether the raise is permanent or repeats. It also does not say which Fiscal Year's EBITDA counts if the $3.5 million threshold is met more than once.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [
+        {
+          "issue": "The Bonus tables state discrete EBITDA points with no rule for EBITDA falling between the tiers or above the top tier, and the lead-in says only that the Employee is \"eligible to receive\" a bonus rather than entitled to one. Whether the Bonus is discretionary or formulaic is left open.",
+          "type": 1,
+          "prob": 0.34
+        }
+      ],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "This subsection entitles the Employee to participate in all benefit plans available to senior executives or employees generally, while Section 2.2(a) gives him the $18,800 Allowance expressly \"in lieu of receiving health, dental and other benefits afforded to Ajuba US employees.\" The two cannot both be given full effect.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "\"Substantially similar to the D&O Policy maintained by the Company immediately prior to the date hereof\" fixes no limits, retention or coverage terms and depends on an unattached prior policy. Whether a replacement policy complies is unmeasurable from the text.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "The commission is a percentage of \"net sales,\" and terminates twelve months after the contract \"goes live\" — neither term is defined anywhere in the Agreement. \"Samii,\" whose contracts trigger the 3% rate, is likewise never identified.",
+          "type": 1,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [
+        {
+          "issue": "The Reorganization Bonus is payable \"on the twelve month anniversary of the Effective Date\" only \"[i]f the foregoing actions have been completed,\" with no provision for completion after that date, and Schedule I makes completion depend on third parties' employment and lease terminations. Whether late completion earns the bonus at all is unaddressed.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "Reimbursement is limited to \"reasonable\" out-of-pocket expenses \"in accordance with Company policies\" and such records \"as may be reasonably required,\" with no policy attached or standard supplied. The Company effectively defines the measure of its own obligation.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "The confidentiality carve-outs here differ from those in Section 3.A of the contemporaneous Noncompetition Agreement, which excludes information publicly known and adds a duty to give the Company an opportunity to object before any legally compelled disclosure. The same disclosure could comply with one instrument and breach the other.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c025"
+    },
+    {
+      "clause_id": "c026",
+      "issues": [
+        {
+          "issue": "The return obligation is triggered only \"upon Employee's termination of employment,\" while paragraph 2 of the attached Separation Agreement requires immediate return of a differently defined and broader \"Company Information and Property.\" The two definitions of what must be surrendered do not match.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c026"
+    },
+    {
+      "clause_id": "c027",
+      "issues": [
+        {
+          "issue": "The Company may disclose the Agreement's terms \"except for legitimate business purposes,\" an undefined exception that on its face swallows the obligation. Nothing identifies who judges legitimacy or to whom disclosure may be made.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c027"
+    },
+    {
+      "clause_id": "c028",
+      "issues": [
+        {
+          "issue": "Section 4.1 reaches all inventions and technical information \"relating in any way to the Business which Employee has conceived, developed or acquired during the Employment Term,\" which is broader than \"Company Technology\" as defined in Section 1.4. Which formulation governs the assignment obligation is unresolved.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c028"
+    },
+    {
+      "clause_id": "c029",
+      "issues": [
+        {
+          "issue": "The Employee must \"return\" and thereafter never \"use any Company Technology,\" but Company Technology is defined in Section 1.4 as ideas and know-how \"known to the Employee,\" which cannot be returned or deleted. The clause thus operates as an unbounded, perpetual bar on using his own knowledge.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c029"
+    },
+    {
+      "clause_id": "c030",
+      "issues": [
+        {
+          "issue": "The covenant bars \"any activity which is in competition with the Business,\" a term defined in Section 1.2 by whatever the Company did at any time during the Employment Term and closing with \"other related services,\" so the prohibited conduct has no fixed boundary. \"Directly or indirectly\" and \"or otherwise\" compound the indeterminacy.",
+          "type": 1,
+          "prob": 0.4
+        },
+        {
+          "issue": "This covenant cannot be squared with Section 2.A.1 of the contemporaneous Noncompetition Agreement, which restrains the same person from the same conduct but with a narrower Business, a Restricted Area excluding India, and a Restricted Period running three years from that agreement's date. Section 9.8 expressly leaves both in force without saying which controls.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c030"
+    },
+    {
+      "clause_id": "c031",
+      "issues": [
+        {
+          "issue": "Clause (ii) forbids the Employee to \"accept from any Customer any such competitive business,\" which prohibits purely passive receipt of unsolicited business, and \"Customer\" as defined in Section 1.7 includes mere prospects. The line between solicitation and acceptance is not drawn.",
+          "type": 1,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c031"
+    },
+    {
+      "clause_id": "c032",
+      "issues": [
+        {
+          "issue": "The single sentence mixes a general non-solicitation with a no-hire limited to \"any employee in the United States or any employee in India having the title of Supervisor and above,\" leaving unclear whether the seniority qualifier attaches to Indian employees only or to both groups. The advertising proviso keyed to \"below the title of Supervisor\" turns on the same ambiguity.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c032"
+    },
+    {
+      "clause_id": "c033",
+      "issues": [
+        {
+          "issue": "The substitution of \"Core Business\" applies only where employment \"is terminated pursuant to Section 8.4,\" which covers both Company termination without cause and the Employee's own resignation for Good Reason or any other reason, so whether a voluntary resignation triggers the narrowing is unclear. The relief is also limited to subsection (a), leaving (b) and (c) measured by the wider \"Business.\"",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c033"
+    },
+    {
+      "clause_id": "c034",
+      "issues": [
+        {
+          "issue": "The acknowledgment that the restrictions are \"reasonable in scope and duration\" sits against Article VII, which contemplates that a court may find them \"overbroad or unenforceable\" and reform them. The two provisions take opposite positions on the covenants' enforceability.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c034"
+    },
+    {
+      "clause_id": "c035",
+      "issues": [
+        {
+          "issue": "The Employee warrants that except for \"this Agreement\" he is subject to no non-compete or nondisclosure commitment, yet Section 9.8 records that he is simultaneously bound by the Noncompetition Agreement of even date. The representation is false on the face of the instrument unless \"this Agreement\" is read to include that separate document.",
+          "type": 2,
+          "prob": 0.25
+        }
+      ],
+      "dataset_clause_id": "c035"
+    },
+    {
+      "clause_id": "c036",
+      "issues": [
+        {
+          "issue": "The warranty that performing his employment duties will not violate \"any other contract ... to which the Employee is a party\" must be read against the Noncompetition Agreement of even date preserved by Section 9.8, which restrains the very activities he is employed to perform. Whether that instrument is an \"other contract\" for this purpose is unaddressed.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c036"
+    },
+    {
+      "clause_id": "c037",
+      "issues": [
+        {
+          "issue": "The equitable-remedy clause is keyed to breaches of \"Articles I, IV or V\" (and later \"IW, IV or V\"), but Article I is the Definitions article and the confidentiality covenants are in Article III. As written, injunctive relief is not provided for breach of the confidentiality obligations at all.",
+          "type": 1,
+          "prob": 0.32
+        },
+        {
+          "issue": "The clause preserves \"the Company's rights under Article VII hereof,\" but Article VII is this Remedies article itself; the intended reference is evidently Article VIII (Termination). The self-reference leaves the preserved right unidentified.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c037"
+    },
+    {
+      "clause_id": "c038",
+      "issues": [
+        {
+          "issue": "Section 8.1 fixes termination on \"the third anniversary of the Effective Date,\" while Section 1.9 ends the Employment Term on \"the third anniversary of this Agreement.\" With the date of execution left blank, the two measuring points may diverge.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c038"
+    },
+    {
+      "clause_id": "c039",
+      "issues": [
+        {
+          "issue": "The notice-and-cure sentence gives the Employee \"an opportunity to cure such failure\" without saying which of the four grounds are curable — fraud, a felony conviction and failure to reside in India are not failures capable of cure. Whether cure is a condition precedent to any for-Cause termination is therefore open.",
+          "type": 1,
+          "prob": 0.27
+        },
+        {
+          "issue": "Clause (c) makes Cause out of a breach of \"Articles I, IV, V or VI,\" but Article I is Definitions and the confidentiality covenants are in Article III, so breach of confidentiality is not on its face a ground for Cause. The mis-citation changes the reach of the definition.",
+          "type": 1,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c039"
+    },
+    {
+      "clause_id": "c040",
+      "issues": [
+        {
+          "issue": "The clause preserves the Reorganization Bonus \"when otherwise payable in accordance with Section 2.2(e),\" but Section 2.2(e) is the Commissions provision and the Reorganization Bonus is Section 2.2(f). The mis-citation leaves the payment timing without a referent.",
+          "type": 1,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c040"
+    },
+    {
+      "clause_id": "c041",
+      "issues": [
+        {
+          "issue": "Severance is \"the compensation at the rate or level, as applicable, in effect on the date of such termination\" through the third anniversary, without saying whether \"compensation\" includes the Allowance, Bonus and commissions or only Base Salary. The later sentences dealing separately with Bonus and Reorganization Bonus cut both ways.",
+          "type": 1,
+          "prob": 0.33
+        },
+        {
+          "issue": "Section 8.4 gives the Employee the right to terminate \"for Good Reason or for any other reason pursuant to this Section 8.4,\" which triggers full severance, while Section 8.5 lets him terminate \"for any reason\" and pays only accrued Base Salary. A voluntary resignation falls within both provisions with opposite consequences.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c041"
+    },
+    {
+      "clause_id": "c042",
+      "issues": [
+        {
+          "issue": "This section pays only accrued Base Salary on the Employee's resignation, but Section 8.4 states that he \"shall have the right to terminate his employment with the Company for Good Reason or for any other reason pursuant to this Section 8.4\" and pays severance through the third anniversary. Which section governs a resignation without Good Reason is unresolved.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c042"
+    },
+    {
+      "clause_id": "c043",
+      "issues": [],
+      "dataset_clause_id": "c043"
+    },
+    {
+      "clause_id": "c044",
+      "issues": [
+        {
+          "issue": "Section 9.2 says an invalid provision is simply severed and the rest stands, while Article VII directs that a court \"shall modify\" an overbroad restriction and enforce it as modified. The treatment of an unenforceable covenant differs between the two clauses.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c044"
+    },
+    {
+      "clause_id": "c045",
+      "issues": [
+        {
+          "issue": "The second sentence limits waivers to the instance \"for which such written waiver was given,\" although nothing in the clause requires a waiver to be in writing in the first place. The mismatch leaves oral waivers unaddressed.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c045"
+    },
+    {
+      "clause_id": "c046",
+      "issues": [
+        {
+          "issue": "The Agreement may be assigned by \"the Company\" only on merger, sale of substantially all assets, or becoming a subsidiary, yet the closing sentence makes it binding on and beneficial to \"successors, assigns\" generally. Whether a successor entity that does not fit clause (a) or (b) may enforce the restrictive covenants is left open.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c046"
+    },
+    {
+      "clause_id": "c047",
+      "issues": [
+        {
+          "issue": "The Company's notice block gives a street address with no attention line or officer, while the Employee's block routes a courtesy copy to counsel, so it is unclear what constitutes effective service on the Company or the Board. The clause also gives no deemed-receipt rule for mailed notices.",
+          "type": 1,
+          "prob": 0.09
+        }
+      ],
+      "dataset_clause_id": "c047"
+    },
+    {
+      "clause_id": "c048",
+      "issues": [
+        {
+          "issue": "All payments are made subject to withholding \"on account of federal, state and local taxes,\" a US formulation, although the salary, bonus and severance are payable by Ajuba India to an employee resident in India. Which jurisdiction's withholding applies is not addressed.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c048"
+    },
+    {
+      "clause_id": "c049",
+      "issues": [
+        {
+          "issue": "Survival is granted to \"the ongoing provisions of this Agreement ... in accordance with their terms,\" without identifying which provisions are ongoing. Whether Articles III, IV and V survive expiry of the Employment Term turns entirely on that undefined phrase.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c049"
+    },
+    {
+      "clause_id": "c050",
+      "issues": [
+        {
+          "issue": "The integration clause carves out \"that certain Non-Competition Agreement of even date herewith,\" leaving two sets of restrictive covenants in force with different definitions of Business, Restricted Area and Restricted Period, and saying nothing about which controls. Article V and Section 2 of the Noncompetition Agreement therefore both apply to the same conduct.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c050"
+    },
+    {
+      "clause_id": "c051",
+      "issues": [
+        {
+          "issue": "The clause confers rights on no one \"other than the Parties,\" but \"Parties\" is nowhere defined in this Agreement (only in the attached Separation Agreement), and Ajuba India is a signatory while Parent is a non-signatory beneficiary. Who may enforce is thus imprecise.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c051"
+    },
+    {
+      "clause_id": "c052",
+      "issues": [
+        {
+          "issue": "Michigan law is chosen to govern an employment relationship performed in India by Ajuba India, whose employment obligations are addressed nowhere in the Agreement. Whether Michigan law can displace mandatory Indian employment law for the Ajuba India employment is left unresolved.",
+          "type": 1,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c052"
+    },
+    {
+      "clause_id": "c053",
+      "issues": [],
+      "dataset_clause_id": "c053"
+    },
+    {
+      "clause_id": "c054",
+      "issues": [
+        {
+          "issue": "The bar on any \"transfer, alienation, assignment ... of any benefits under this Agreement\" sits against Section 9.4, which makes the Agreement binding on and beneficial to the parties' \"heirs, successors, assigns, and personal representatives,\" and against Section 8.3, which contemplates payment to the Employee's estate. The provisions treat transferability of benefits differently.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c054"
+    },
+    {
+      "clause_id": "c055",
+      "issues": [
+        {
+          "issue": "This mutual non-disparagement is absolute and perpetual, with no exception, while Section 4 of the contemporaneous Noncompetition Agreement contains the same covenant subject to an express carve-out for statements made \"as part of any dispute resolution proceeding.\" Statements protected by one instrument breach the other.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c055"
+    },
+    {
+      "clause_id": "c056",
+      "issues": [],
+      "dataset_clause_id": "c056"
+    },
+    {
+      "clause_id": "c057",
+      "issues": [
+        {
+          "issue": "The clause says actions \"may be brought\" in the Michigan state and federal courts, which is permissive language that does not on its face make that forum exclusive, even though the parties also consent to jurisdiction and waive venue objections. Whether the clause is a mandatory forum-selection provision or merely consent to jurisdiction is the natural fight.",
+          "type": 1,
+          "prob": 0.4
+        }
+      ],
+      "dataset_clause_id": "c057"
+    },
+    {
+      "clause_id": "c058",
+      "issues": [
+        {
+          "issue": "The preamble leaves the Employee's name and the execution date blank and defines \"Company\" to mean both Ajuba entities collectively, so the parties to the Release cannot be identified from the form. Recitals A and B likewise leave the Employment Agreement date and separation date blank.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c058"
+    },
+    {
+      "clause_id": "c059",
+      "issues": [
+        {
+          "issue": "The release covers claims \"which occurred up to the date of this Agreement\" yet excludes \"only those to compel the payment of amounts due to Employee as provided in the Employment Agreement,\" leaving unclear whether contingent post-separation entitlements such as the Bonus, commissions and Reorganization Bonus survive. The breadth of the carve-out against the breadth of the release is the tension.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c059"
+    },
+    {
+      "clause_id": "c060",
+      "issues": [
+        {
+          "issue": "\"Company Information and Property\" is defined here to include \"all other assets, materials and information of any kind or nature,\" a catch-all wider than the \"Confidential Information\" and \"Company Technology\" that Sections 3.2 and 4.2 of the Employment Agreement require to be returned. The two return obligations are measured differently.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c060"
+    },
+    {
+      "clause_id": "c061",
+      "issues": [
+        {
+          "issue": "The Employee's non-disparagement obligation lasts only \"[f]or so long as Employee holds Restricted Stock Units,\" but Restricted Stock Units are not granted, defined or mentioned anywhere in the Employment Agreement or its schedules. The duration of the covenant is therefore unascertainable and may be zero.",
+          "type": 1,
+          "prob": 0.26
+        },
+        {
+          "issue": "This conditional, RSU-limited covenant cannot be squared with Section 9.13 of the Employment Agreement, which binds each party not to disparage the other \"[d]uring the Employment Term and thereafter\" without condition. The Release would narrow an obligation the Employment Agreement makes perpetual.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c061"
+    },
+    {
+      "clause_id": "c062",
+      "issues": [
+        {
+          "issue": "The paragraph is a sentence fragment — \"To never seek or accept employment with Company\" — with no subject or promissory verb, so it is unclear who undertakes what. The grammatical defect leaves the covenant's operation in doubt.",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c062"
+    },
+    {
+      "clause_id": "c063",
+      "issues": [
+        {
+          "issue": "The paragraph continues obligations \"as set out in his Employment Agreement\" but says nothing of the separate Noncompetition Agreement of even date preserved by Section 9.8, which contains its own non-competition and confidentiality covenants. Whether execution of the Release affects that instrument is unaddressed.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c063"
+    },
+    {
+      "clause_id": "c064",
+      "issues": [
+        {
+          "issue": "Cooperation is owed \"upon reasonable notice\" and only where requests \"do not require more than a reasonable amount of the Employee's time,\" neither of which is quantified, and it is open-ended in duration. The Company's reimbursement of \"lost wages\" is likewise unmeasured for a person with no wages.",
+          "type": 1,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c064"
+    },
+    {
+      "clause_id": "c065",
+      "issues": [],
+      "dataset_clause_id": "c065"
+    },
+    {
+      "clause_id": "c066",
+      "issues": [
+        {
+          "issue": "The Employee is made to acknowledge that he \"did so\" consult an attorney, a factual recital in a blank form that may be untrue at signing. Its effect on the validity of the ADEA release is left to be argued.",
+          "type": 1,
+          "prob": 0.08
+        }
+      ],
+      "dataset_clause_id": "c066"
+    },
+    {
+      "clause_id": "c067",
+      "issues": [
+        {
+          "issue": "The paragraph recites that the Employee \"has been given twenty-one (21) days\" to consider the Release, but nothing conditions the Company's severance obligation on the period actually elapsing, and paragraph 11 conditions payment only on signature and non-revocation. Whether a shorter actual review period defeats the release is unaddressed.",
+          "type": 1,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "c067"
+    },
+    {
+      "clause_id": "c068",
+      "issues": [
+        {
+          "issue": "The revocation mechanism requires notice to be postmarked or hand delivered to an addressee left entirely blank in the form, so the Employee cannot perform the condition as written. The clause also says the Agreement \"is not effective until this revocation period has expired\" without fixing the running date against the signature date.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c068"
+    },
+    {
+      "clause_id": "c069",
+      "issues": [
+        {
+          "issue": "Making \"the Company's obligations\" contingent on signature, non-revocation and a written confirmation does not identify which obligations are meant, and Section 8.4 of the Employment Agreement conditions severance only on \"execution without revocation\" of the Release. The added written-confirmation condition has no counterpart there.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c069"
+    },
+    {
+      "clause_id": "c070",
+      "issues": [],
+      "dataset_clause_id": "c070"
+    },
+    {
+      "clause_id": "c071",
+      "issues": [
+        {
+          "issue": "The Company may disclose the Release's terms \"only for legitimate business purposes,\" an undefined standard that leaves the scope of permitted disclosure to the discloser. The same undefined phrase appears in Section 3.3 of the Employment Agreement.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c071"
+    },
+    {
+      "clause_id": "c072",
+      "issues": [],
+      "dataset_clause_id": "c072"
+    },
+    {
+      "clause_id": "c073",
+      "issues": [
+        {
+          "issue": "This integration clause makes the Release the entire agreement \"regarding the matters set forth herein,\" while paragraph 5 and Section 9.8 of the Employment Agreement keep the employment and noncompetition covenants alive. Which matters are \"set forth herein\" and thereby superseded is unresolved.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c073"
+    },
+    {
+      "clause_id": "c074",
+      "issues": [],
+      "dataset_clause_id": "c074"
+    },
+    {
+      "clause_id": "c075",
+      "issues": [],
+      "dataset_clause_id": "c075"
+    },
+    {
+      "clause_id": "c076",
+      "issues": [
+        {
+          "issue": "This paragraph directs that an invalid provision be judicially modified or excised, whereas Section 9.2 of the Employment Agreement simply severs it and Article VII requires the court to reform overbroad restrictions. Three different savings regimes govern related documents.",
+          "type": 2,
+          "prob": 0.11
+        }
+      ],
+      "dataset_clause_id": "c076"
+    },
+    {
+      "clause_id": "c077",
+      "issues": [
+        {
+          "issue": "Violation releases the Company from its remaining obligations \"under the Severance Agreement,\" an instrument neither defined nor executed anywhere in this Agreement or its exhibits. The forfeiture therefore has no identified subject, and the sentence ends without a period.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c077"
+    },
+    {
+      "clause_id": "c078",
+      "issues": [
+        {
+          "issue": "The Schedule is captioned \"President of International Operations,\" while Section 2.1 appoints the Employee \"President of Ajuba India\" and \"President-International for Ajuba,\" and the duties described are only advisory \"recommendations\" to the Chairman and Board. The title and authority given here do not match Section 2.1.",
+          "type": 2,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c078"
+    },
+    {
+      "clause_id": "c079",
+      "issues": [
+        {
+          "issue": "This entry gives the Employee responsibility for \"Finance/Accounting/Cash Management (including Ajuba US and all subsidiaries),\" yet Section 8.4(a) provides that consolidation, elimination or outsourcing of cash management, accounting and sales and marketing is not a material diminution, and Section 2.1 deems the Schedule amended in that event. The stated responsibilities can be removed without breach.",
+          "type": 2,
+          "prob": 0.3
+        }
+      ],
+      "dataset_clause_id": "c079"
+    },
+    {
+      "clause_id": "c080",
+      "issues": [
+        {
+          "issue": "\"All Ajuba (India) employees report, directly or indirectly, to Devendra Saharia\" is stated absolutely, but Section 2.1 subjects his duties to instructions of the Board and Section 8.4(a) permits functions to be consolidated or outsourced without breach. The reporting guarantee cannot survive those provisions intact.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c080"
+    },
+    {
+      "clause_id": "c081",
+      "issues": [
+        {
+          "issue": "The Schedule says the Employee \"[r]eports to the Chairman of the Board of Ajuba International, Inc.,\" while Section 2.1 requires him to report \"directly to the Board (or selected designee of the Board of Directors of the Parent).\" Section 2.1 makes the Schedule control in the event of conflict with the Bylaws but not with Section 2.1 itself.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c081"
+    },
+    {
+      "clause_id": "c082",
+      "issues": [],
+      "dataset_clause_id": "c082"
+    },
+    {
+      "clause_id": "c083",
+      "issues": [
+        {
+          "issue": "The Employee's duty is only to \"oversee closing down the Ajuba UK operations,\" whereas Section 2.2(f) conditions the $200,000 Reorganization Bonus on the UK office actually being \"shut down\" as measured by third-party employment and lease terminations. Performance of the duty and earning of the bonus are governed by different standards.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c083"
+    },
+    {
+      "clause_id": "c084",
+      "issues": [
+        {
+          "issue": "The figures are introduced as what \"Employee estimates\" the annual costs to be, yet Section 2.2(f) describes Schedule I as setting forth \"the specific cost savings for each action.\" An estimate is not the specific cost savings the operative section assumes.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c084"
+    },
+    {
+      "clause_id": "c085",
+      "issues": [],
+      "dataset_clause_id": "c085"
+    },
+    {
+      "clause_id": "c086",
+      "issues": [
+        {
+          "issue": "The Employee's obligation is to oversee termination of the Novi lease, while Section 2.2(f) conditions the bonus on the Novi office being \"restructured\" — a broader event than lease termination. What counts as restructuring is left to the completion definition rather than the operative promise.",
+          "type": 2,
+          "prob": 0.13
+        }
+      ],
+      "dataset_clause_id": "c086"
+    },
+    {
+      "clause_id": "c087",
+      "issues": [],
+      "dataset_clause_id": "c087"
+    },
+    {
+      "clause_id": "c088",
+      "issues": [
+        {
+          "issue": "The risk assessment is a statement of belief expressly conditioned on the assumption that systems and functions are relocated and handled \"consistent with Ajuba's past practices,\" a condition outside the Employee's control. Section 2.2(f) nevertheless treats Schedule I as containing \"a reasonable risk assessment\" supporting the bonus.",
+          "type": 2,
+          "prob": 0.14
+        }
+      ],
+      "dataset_clause_id": "c088"
+    },
+    {
+      "clause_id": "c089",
+      "issues": [],
+      "dataset_clause_id": "c089"
+    },
+    {
+      "clause_id": "c090",
+      "issues": [
+        {
+          "issue": "The disclaimer that the Employee \"makes no representation or warranty regarding actual cost savings\" cannot be squared with Section 2.2(f), which conditions the Reorganization Bonus on actions taken \"in accordance with Schedule I ... which sets forth the specific cost savings for each action and a reasonable risk assessment.\" One provision treats the Schedule's figures as binding content, the other disclaims them.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c090"
+    },
+    {
+      "clause_id": "c091",
+      "issues": [
+        {
+          "issue": "Costs of the closure and restructuring are made \"the sole responsibility of Ajuba,\" although Section 2.2(f) makes Ajuba India the payer of the Reorganization Bonus and Section 1.1 treats Ajuba and Ajuba India as a single \"Company\" elsewhere. Which entity bears and which pays is not consistently allocated.",
+          "type": 2,
+          "prob": 0.1
+        }
+      ],
+      "dataset_clause_id": "c091"
+    }
+  ]
+}

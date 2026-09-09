@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "07d639e0b165c3145228808e05b4ce4da4298f32f99f3124b11ec8ab0b8709a0",
+  "document_chars": 12639,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 4665,
+    "input_tokens_details": {
+      "cache_write_tokens": 4662,
+      "cached_tokens": 0
+    },
+    "output_tokens": 247,
+    "output_tokens_details": {
+      "reasoning_tokens": 95
+    },
+    "total_tokens": 4912
+  },
+  "response": [
+    {
+      "id": "rs_08901772bae731fd006aa1d2973b5487d0bd6528f8e1d3495c",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodKbAZBLFLwzHZolSliSsWV6x7nNj7vnU7Y3WIzask7Bg1oCKP0UsOV8oH7-kemW0ZvHXqVJekBIK0r4F60OgjAJPU2_Xr_e-WSZKTTS23mWkoVYF4WC-Q-qXhWBhCerleCMNwHyO_NrjF5s6PbFg9QeWovoBasZi-Sq4UPGHkEWOwV9_RmVpkKGuq2x8lxolPyD9OkQYLBNYR7wLWi1UIaqDD73iRO_AUlu7RCncJjzqtPC4EWPAZ7GLWi8QUhJlzF_KrkQLV_Z1oytLZ6e_NyVCaxAuSoegdoCKuaIHIWPSObllidtPgWsyq2sdWP0QXraMIPytlhlId0ppkXBQ26-7YSfxZKl0-A9Gekbgle0vmWOFQJSDDwkui7GvhGS0foGfmdWg2U_9yPJVhePn8FRGeci3-0vHBXNO5cpYhkRPeCml9ycAgDOuYBTxMC7K49hs3QljKLepkvizAoSu_M1_hbevteh5OzlqRvBsdUNcVw1CKsApXUat5erF1Urls8raQuRJgTAbF_rfIn8aUXriBMJvSw8YG693i3ipmzaRoeL_eOMIxSziTrvahXmvdVsOeqHJL_KJm60nzj2RPWtwhqp1fBkuPqpdSCZ00rS4oY_r_fax1WheKMV20xDuDX7jhdoa7kUtZCUasS73YTrP8KBlbn6OpJD0ilzSZLPZiqdbneOmWg-p8MNE8qx75sQgOomo00NPJ8mIXToSW6vi-5eT6IfOWim1murDLk2O481UllSbSU2lrW_Fu1hMEtdRxoRRDnGaRjQRk0ZeRwvNl1T9RzfCuL3LGjviIfyMiUF0BZuAYjVw8_pwORZCH_TDn8jzikbFNrFA8u5JcDnJAqa49OASp6CzzD5jQ9hihypKfixFyruk5dEHc3gpkFFsEKQjr89s2ujjUB3Ci3zLbCltfZEtv6Q1sO1Ccil_Ie5kfpHjvH87x-CqaSl8Qc4flcsAyt5cUOZ7fn9fZi08DonUlfpOGNCgRD7j-7Tv6Lod_ep_PYyvNUV0ZiQ7g9UV-fdWwOQfOl1mZTYDZEt9PRphDZT6hGpf7ES-llOtaW38rxxxZqKrSqBiNaP4mo-abrhHkXkARwvmpPxGW7W7BoSUMbx3v6HVzboOyHHJ5XksVglgKrUuh96WhJjV-miP0vR2IM-T4KYf6tXYWcA1OmhsntyQfifkVTn8K66PFLyf-7t7VHXNPbagoREbYsdy8z0BllTRSCOzuoVStIIysqgJUrqvtUhlbpY-MRhglGwDqYckfKs94CoSBvXfItgmHThRCVuDoK7ezq2PBqGBXgpubfrcjca9PqQ-TZGVZ3OWwJhA1Afz1QKX9O1qADEH3pLYoHud-JOiiAFWmU-1Vr8EnjbXAIor71Ob0brDImNXdCKlf4dzGGBuCW91rBBQJqj4S8G0z2WBqokbtwiMce-ck8Z08ucVNuy6tAlbMz_fBy0PgN9xUBm8Kbq0NgN7XAHJWx15fTEjxZVkXt4yIX4od8TL7yvAiCWUAZJhiqLDY662oOtmCQS2wdgvPiPxPM-Fo4CCiAd83a11_GprCAZo7EWOKzNIiQ9IROKT0BSxe5Jqj5ssfYHK1lcDd2odH0nnoCmRvdgRnqVjtLZymJ2v6sSsbS5gdGJHt7qHPfwLGPFsC2urg2M0MnyaBf97wKp-iacWV4jzXEVFoAj9P9ZnydHTXYAu7gpRkHeetCudiRq6aq4PSK2-uIjIef3dAA8VxYb1_glEjB0VyY3mZ58PmxiEzTqb9bef1aqiupeNe7zJYAHVzLM468YcQum5xVbDKiGVrZ-dGbvtUCTXWBX4A2pRU5pSsAuwAQChgJ5ooMqfaw0QnZjn3h8l8BF",
+      "status": null
+    },
+    {
+      "id": "msg_08901772bae731fd006aa1d298f22087d0b0edd725401bc6d8",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns omitted mechanics governing possible annual price increases. Both recorded defects instead concern whether the monthly retainer is a flat fee or an advance deposit applied against billable time, so neither names the same defect.\",\"words_at_issue\":\"The proposed issue turns on “subject to a possible calendar year price Increase not to exceed 5%” and its silence about authorization, triggers, notice, and frequency. Candidate g1 turns on “monthly retainer of $30,000”; g2 turns on that same “monthly retainer” language as read with the hours-tracking and other contractual provisions.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

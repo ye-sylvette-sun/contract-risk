@@ -1,0 +1,125 @@
+{"judgments": [
+ {"clause_id": "c111", "issues": [
+   {"issue": "The Manager is said to bear 'the operating, legal and administrative expenses of the Company,' whereas Note Purchase Agreement §5.5(a) provides that the Company shall bear all costs, fees and expenses of its formation, operation and general administration, including legal and accounting fees. Who pays the Company's operating and legal costs is stated in opposite terms in the two documents.", "type": 2, "prob": 0.31}
+ ]},
+ {"clause_id": "c112", "issues": [
+   {"issue": "This term caps Company Expenses at the greater of $500,000 or 1% of outstanding Principal, whereas Note Purchase Agreement §5.5(a) makes the Company bear all costs of formation, operation and administration with no cap at all. Whether the Company's expense burden is capped depends on which document governs.", "type": 2, "prob": 0.26},
+   {"issue": "The cap phrase 'not to exceed a maximum of $500,000 or 1% of aggregate Principal of outstanding Notes, whichever amount is greater' is placed after 'organizational fees and costs' but before the listed taxes, accounting, audit, communications and rent, so it is unclear whether the ceiling covers the whole list or only organizational costs. The syntax leaves the scope of the cap undetermined.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c113", "issues": [
+   {"issue": "The reimbursement obligation is unlimited, which cannot be squared with the dollar ceiling on Company Expenses in the immediately preceding term (c112). A cap on the Company's expenses and an uncapped duty to reimburse the Manager for those same expenses cannot both operate.", "type": 2, "prob": 0.19}
+ ]},
+ {"clause_id": "c114", "issues": [
+   {"issue": "The Loan Service Fee is payable by the Company 'to the Servicer,' whereas Note Purchase Agreement §5.4 provides that the Company shall pay the Loan Servicing Fee to the Manager (or the Manager's designee). Who is the Company's payee for servicing compensation differs between the documents.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c115", "issues": []},
+ {"clause_id": "c116", "issues": []},
+ {"clause_id": "c117", "issues": []},
+ {"clause_id": "c118", "issues": [
+   {"issue": "Processing and documentation fees are put at 'approximately $1,000 - $2,000 per Portfolio Loan' here, while the Compensation to Management table in Section III states they are 'anticipated to average approximately $1,000 per loan.' The two statements of the same charge to Portfolio Borrowers do not agree.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c119", "issues": [
+   {"issue": "This provision routes borrower-paid fees and commissions to the Servicer, and to the Manager only where the Manager contracts directly with the Servicer, whereas Note Purchase Agreement §5.4(c)-(f) entitles the Manager to those amounts in all events. The entitlement to Commissions, Loan Fees and Documentation Fees is allocated differently by the two documents.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c120", "issues": [
+   {"issue": "Loan Service Expenses are placed on the Servicer alone, while Note Purchase Agreement §5.5(a) says such expenses 'shall be borne by the Manager or the Servicer.' Which affiliate must absorb them if the Servicer does not is left unresolved.", "type": 2, "prob": 0.13}
+ ]},
+ {"clause_id": "c121", "issues": [
+   {"issue": "The permission to take fees and equity interests in Portfolio Borrowers is made 'subject to restrictions with respect to Affiliated Transactions,' a capitalized term nowhere defined in the Memorandum. The only content for it lies in Note Purchase Agreement §5.7, to which this provision does not refer.", "type": 1, "prob": 0.21}
+ ]},
+ {"clause_id": "c122", "issues": [
+   {"issue": "The sentence says the Company will be restricted 'in the amount of compensation it may receive,' but the Company pays rather than receives the compensation described throughout Section V (c110, c114, c119). The word 'receive' inverts the restriction it purports to summarise.", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c123", "issues": [
+   {"issue": "'The Company's initial term will terminate at the Manager's election upon the first to occur of (i) ... or (ii)' does not say whether termination is automatic on the earlier event or requires an election the Manager may withhold indefinitely. The life of the Company, and hence of the Collateral, turns on that ambiguity.", "type": 1, "prob": 0.21}
+ ]},
+ {"clause_id": "c124", "issues": [
+   {"issue": "Transfers are permitted without consent 'for certain transfers to family trusts, to wholly-owned affiliates or by operation of law,' whereas Note Purchase Agreement §7 makes the Notes non-negotiable and forbids any assignment or transfer without the Company's consent, which may be withheld in its sole and absolute discretion, declaring any attempted transfer null and void. The two provisions cannot both be given effect on a transfer to a family trust.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c125", "issues": [
+   {"issue": "A Company Borrowing is defined here as a borrowing 'from an unaffiliated lender,' while Note Purchase Agreement §5.3(a) lets the Manager incur Company Borrowings on any terms it determines and §5.7(f) permits the Manager, Members and Affiliates to lend to the Company. Whether affiliate lending can obtain the priority described here must be construed.", "type": 2, "prob": 0.22}
+ ]},
+ {"clause_id": "c126", "issues": [
+   {"issue": "The consent requirement applies to the five listed actions 'among other restrictions,' a catch-all that leaves it unclear whether any action beyond the enumerated ones requires a Majority in Interest's approval. The specific list and the open-ended phrase pull against each other.", "type": 1, "prob": 0.23}
+ ]},
+ {"clause_id": "c127", "issues": [
+   {"issue": "The Manager is to devote such business time 'as may be necessary to perform its obligations,' while the Allocation of Management Time discussion (c051) says the Manager and Principals will devote 'only so much time ... as is reasonably required' and Note Purchase Agreement §6.1(c) fixes the standard as reasonably necessary to manage the Company effectively. Three different formulations of the same commitment appear.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c128", "issues": [
+   {"issue": "Reports beyond tax information are left to whatever 'the Manager, in its discretion, may determine,' whereas Note Purchase Agreement §6.1(d) obliges the Company to keep books audited annually by an independent accountant and open to Noteholder inspection on reasonable notice. The Noteholders' information rights are materially different under the two documents.", "type": 2, "prob": 0.24}
+ ]},
+ {"clause_id": "c129", "issues": [
+   {"issue": "The flat statement that Noteholders 'will not be allocated any tax items' cannot be squared with the recharacterization discussion (c142, c151), which contemplates that Noteholders may be treated as members receiving allocable Company income. Whether this term is a promise or an intention is left open.", "type": 2, "prob": 0.13}
+ ]},
+ {"clause_id": "c130", "issues": [
+   {"issue": "The sentence is ungrammatical and self-contradictory: 'The Company Agreement may not be amended without the approval of a Majority in Interest of Noteholders (i) violates the Company's obligations ... or (ii) modifies the general purpose of the Company' omits the conditional ('if the amendment'), so as written it forbids all amendments without consent. The consent trigger cannot be read off the words used.", "type": 1, "prob": 0.34},
+   {"issue": "Even repaired, this consent trigger — amendments that violate the Investor Documents or modify the Company's general purpose — differs from Note Purchase Agreement §6.3, which requires Majority in Interest approval for amendments that materially and adversely affect the Noteholders' economic interests. The class of amendments needing consent differs between the documents.", "type": 2, "prob": 0.21}
+ ]},
+ {"clause_id": "c131", "issues": [
+   {"issue": "The first sentence makes every modification or waiver of a Noteholder Agreement subject to approval by the Company and a Majority in Interest, while the second lets any individual Noteholder waive or modify any provision as to his own Note with only the Manager's consent. The two sentences give inconsistent answers on who may alter a Note's terms.", "type": 1, "prob": 0.23}
+ ]},
+ {"clause_id": "c132", "issues": [
+   {"issue": "Indemnification is denied only for 'willful misconduct or gross negligence,' whereas the earlier description of the same indemnity (c036) states the exclusion as 'fraud, bad faith or willful misconduct.' Conduct that is grossly negligent, or in bad faith, is covered under one formulation and excluded under the other.", "type": 2, "prob": 0.30}
+ ]},
+ {"clause_id": "c133", "issues": []},
+ {"clause_id": "c134", "issues": [
+   {"issue": "The power of attorney granted by Noteholders is described as covering 'documents that the Members have expressly agreed to execute,' but Noteholders are expressly not Members (c107, c018) and Note Purchase Agreement §8.1 grants the power for the Noteholders' own documents. The class of documents the Manager may sign in a Noteholder's name is misdescribed.", "type": 1, "prob": 0.25}
+ ]},
+ {"clause_id": "c135", "issues": []},
+ {"clause_id": "c136", "issues": [
+   {"issue": "The summary is stated to apply only to U.S. Holders who hold the Notes as 'capital assets,' yet the Gain or Loss discussion (c148) says any gain on disposition of a Note will generally be ordinary income because the Notes are contingent debt instruments. Whose tax position the summary actually describes is left unclear.", "type": 2, "prob": 0.12}
+ ]},
+ {"clause_id": "c137", "issues": []},
+ {"clause_id": "c138", "issues": []},
+ {"clause_id": "c139", "issues": []},
+ {"clause_id": "c140", "issues": []},
+ {"clause_id": "c141", "issues": []},
+ {"clause_id": "c142", "issues": [
+   {"issue": "This paragraph contemplates that Note ownership may be recharacterized as equity ownership in the Company, which cannot be squared with the flat statements that Noteholders will not own any equity interest and will be allocated no tax items (c018, c129). The recharacterization discussion undercuts the terms it is supposed to describe.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c143", "issues": []},
+ {"clause_id": "c144", "issues": [
+   {"issue": "The Notes are to be treated as 'contingent debt instruments' paying 'additional interest,' although the Note terms (c089, c092) provide only for a floating rate with an 8% floor and no contingent payment is described anywhere in the Memorandum. What the contingent element of the Notes is cannot be identified from the instrument.", "type": 2, "prob": 0.17}
+ ]},
+ {"clause_id": "c145", "issues": [
+   {"issue": "The paragraph defines and uses 'Comparable Yield' and then refers to a 'higher or lower Comparative Yield,' a term that appears nowhere else. The substitution leaves it uncertain whether a different measure is meant.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c146", "issues": []},
+ {"clause_id": "c147", "issues": [
+   {"issue": "The disclaimer that the 8% Comparable Yield 'does not constitute a projection or representation as to the amounts that Noteholders will actually receive' sits against the Executive Summary's 8% target (c012) and the 8% rate floor (c089). Whether 8% is a representation or merely a tax computation is left to construction.", "type": 2, "prob": 0.13}
+ ]},
+ {"clause_id": "c148", "issues": []},
+ {"clause_id": "c149", "issues": [
+   {"issue": "The parenthetical defines 'unrelated business taxable income' as '(UBT)', but every later use in the same discussion (c150, c151) is 'UBTI'. The defined abbreviation and the term actually used do not match.", "type": 1, "prob": 0.12}
+ ]},
+ {"clause_id": "c150", "issues": []},
+ {"clause_id": "c151", "issues": [
+   {"issue": "The paragraph states that if Noteholders were characterized as members 'amounts received with respect to the Notes would not be treated as UBTI,' and then immediately says income from Portfolio Loans funded by Company Borrowings and from foreclosed property would generate UBTI to such investors. The same recharacterization is said both to produce and not to produce UBTI.", "type": 1, "prob": 0.24}
+ ]},
+ {"clause_id": "c152", "issues": []},
+ {"clause_id": "c153", "issues": []},
+ {"clause_id": "c154", "issues": []},
+ {"clause_id": "c155", "issues": []},
+ {"clause_id": "c156", "issues": [
+   {"issue": "Plan Investors 'must not rely upon the Manager or its affiliates for investment advice,' whereas the Conflicts of Interest sections tell Noteholders they 'must rely on the good faith and integrity of the Manager and Servicer' (c038, c040, c050). The two instructions on reliance point in opposite directions for the same investor.", "type": 2, "prob": 0.14}
+ ]},
+ {"clause_id": "c157", "issues": []},
+ {"clause_id": "c158", "issues": []},
+ {"clause_id": "c159", "issues": [
+   {"issue": "The provision says the operation will be structured 'so as not to subject the Fund' to the Investment Company Act and then, 'in the alternative,' that the Company expects to rely on the section 3(c)(5) exemption — two inconsistent positions, and 'the Fund' is not the defined entity ('the Company'). What the Company has actually undertaken about registration cannot be determined.", "type": 1, "prob": 0.19}
+ ]},
+ {"clause_id": "c160", "issues": []},
+ {"clause_id": "c161", "issues": []},
+ {"clause_id": "c162", "issues": [
+   {"issue": "This section says only that the Company 'may be deemed a borrower and the Noteholders may be deemed lenders,' while the Executive Summary describes investors as 'loaning' their capital to the Company (c015) and as secured creditors (c018), and the Note Purchase Agreement §1.1 makes each Purchaser agree 'to lend to the Company.' Whether the relationship is a loan or a securities purchase is characterized inconsistently.", "type": 2, "prob": 0.15}
+ ]},
+ {"clause_id": "c163", "issues": [
+   {"issue": "The Usury discussion admits that the rates payable to Noteholders 'may exceed the applicable statutorily-defined usury rates,' which cannot be squared with the Company's unqualified obligation to pay a Floating Rate of no less than 8% (c089) and the guaranteed minimum return described in the Executive Summary (c016). Whether the promised rate is enforceable is thrown into doubt by this provision.", "type": 2, "prob": 0.18}
+ ]},
+ {"clause_id": "c164", "issues": [
+   {"issue": "The Company's compliance undertaking is limited to reliance on advisors and 'commercially reasonable efforts,' a standard the Memorandum never defines and against which no benchmark is given. The extent of the Company's usury-compliance obligation cannot be measured.", "type": 1, "prob": 0.15}
+ ]},
+ {"clause_id": "c165", "issues": [
+   {"issue": "This provision treats each Noteholder as a lender who may need a finance lender's licence in his own jurisdiction, whereas the offering is elsewhere described as a private placement of securities to accredited investors (c087, c160) who are merely passive purchasers (c203). Whether Noteholders bear licensing obligations turns on which characterization controls.", "type": 2, "prob": 0.18}
+ ]}
+]}

@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "3bd9b2ae049249389e1f6d2fec7834a1f5f5ebc4234ff17b5df2d32f2b64c90f",
+  "document_chars": 3896,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2382,
+    "input_tokens_details": {
+      "cache_write_tokens": 2379,
+      "cached_tokens": 0
+    },
+    "output_tokens": 185,
+    "output_tokens_details": {
+      "reasoning_tokens": 50
+    },
+    "total_tokens": 2567
+  },
+  "response": [
+    {
+      "id": "rs_05278de0d33faaa1006aa1d3768ab087d09d4b82ea19792f93",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodN5em6KUtRwJ70jTSkYU0MJPx8ECKRCDcawnTM4JOM2rw8c8XBlOaxncJEbx_OpfSC7rUf5P2F6uyNsA7BqOC5g6ZPIFfGdGjxlju0kM56UEb3O4yh0cNizgRCoFaBTjcf1DGJb557DgouuFZcbLtWFQ72q7fmFUUgS9zLF1d9neTBMPxXIHN7uY2LE_OKqLiLi3Evio1yv_0OwbVUWj995D5sdmd5Brxnc-z-HtBj6KfOini8WJKuqscG3QtjJJ8jUwuLh1jW5ijpPXX17KDCFUMZ-vORU-furaqzVcj73qSisan52ftSlVPxhWfofVZWpy6CRlKgj2UrJkPJfYqx8N4MlvgyaKjfKrgwZXvIDOPiOMou4Q2pv1ZkDX5a-LTd42UaFLkFYz-K2bvlu4Eu9xzQ9YAL-V5Y9RGByKleJ4EB6XoTrdA8C02Gj14JDAeKwfEqDSIlnvCeO7C9v3oroW6PB-A-g--ce420VvCHbZ-TA_UIpqQbmQ5Fjs7cBXvZE1kCIp-XDHg9lsyENHuesndZXgQlDpTLtAQteqPMH5N3yo-C2oolQBruUPCQJTlwDdAAeYsCUxdmpB_DDjpuy1XRhl1KmVlFC6FXLCBrzFTRo3nvEzCwG0QsnUuP1B5Z8Do52gBnNRr9PnHA7W1IR7zvM6lCz3MERr2veOZV6jNUq9gQ0-OEYRwLLA_Y2CTVYaTTCW3tKzKTPbxyXYialZSvaU_6vVH3Dj2eRS8RY9uGPpJ7QMaro7tbEnV9QFY2yrQMmPB8blOliyehlqghMKqbIbgbAkrr6lJG_a772nmvlrIub6jTvCLkIGGN6D4tNyf2lx-mL6b0MuL5NAatto4kPXJR00c7EBFu2jxRQL-rnXpV8SpJ00L2d9B5deT4GzHJb1yZRVTKJp8aQZQ9_2NPZgyXPFya7p3wsBC0rn_C8veET2w_LOv38GRHfra8tNT5yg4kqD7BHyOWEwYKlk0Adi41NCy8bNF5gN_O_9bohmrh8JhFXSDLNaU6UDyRQNCV9jmdZiCL9DNx6Ll51WC_gazxTPhyMI5SyiBWiw5Rsv9dWoRgl8SxoO0xzW0TOpCBuHZam__vSe8pdIxwUwwQTAVVwSOGl2p6KSPhyvBXlVd8bw3YYZhp69sVouNs0viqLbr7n9y_-wVLB2b48PH18OYH7RrI5-KbrPsomAdPP1bxde055kC0e54ZTDeima2kNCJBvpV1JI-1_KVZC5FGK1LJm32WrxP6fLeJpXN5OZTV0vHxFJpInxW29ns810RU2D4PRDEMrmyuMhR0EMxhPs0osHpN-srt-BSnY5PCoO2Jq12G3SvMCkQRZjxszH0EOF8h0NhFl7X_RVvU8W4a0x4H_thvfwbw_CGZHzWKIKSJkcc8UaZUB48UvflbpBv5uAEIhrYWo7EFx474yEeUwf5sZt-H2bpiDnGuM3rm7IPSdiY0SEaCzd-m0m7wskBht11oUdN2CHyijd0sDtQ==",
+      "status": null
+    },
+    {
+      "id": "msg_05278de0d33faaa1006aa1d377d18c87d0b5f1e079cbbd5aa7",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns Licensor’s apparent power to approve the promotional display it must itself supply, whereas g1 concerns the geographic meaning of “locations.” These are distinct alleged defects in different language of the provision.\",\"words_at_issue\":\"The proposed issue turns on “reasonably acceptable to Licensor” in the table-tent sentence and the resulting self-approval right. Candidate g1 turns on “locations” in the opening sentence—whether it means places where both parties maintain facilities or the geographic reach of the advertising.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

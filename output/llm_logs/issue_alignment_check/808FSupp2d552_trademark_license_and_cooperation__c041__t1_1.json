@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "ebc4aead8312ee372392f350f8d9ee183e752214de29a331b6ebabaa162b0b24",
+  "document_chars": 2756,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2270,
+    "input_tokens_details": {
+      "cache_write_tokens": 2267,
+      "cached_tokens": 0
+    },
+    "output_tokens": 352,
+    "output_tokens_details": {
+      "reasoning_tokens": 134
+    },
+    "total_tokens": 2622
+  },
+  "response": [
+    {
+      "id": "rs_034c1fa5c155211b006aa1d3749c6c87d09cee2e19a13b6a2d",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodN5UkFR87P6IAOgAR1k6x9Ik1xQ2o_Y9QqLCJq5OHKz9nf7KopNgfTVsfUXFiQUP7p3qIZYsKbKiNhlB7eM0VTcGCCBC_vyBhf4ggsjOnsZcAbYtwPQ_QnCu-3KZDGlzC-m-H8GzBXxAlU-woFbXEDqo4ga5R_SQ68RssJQG_lk4CImfyBgoZuc7cEX40TlGvrR4yOFpsIy_EVOd27-T4sgzpM5VAUwiMB0IOLsgotBNMs3pOCATL8Bk4Ko3sGbA5yH8IWc6jzgX98G886UZaE4KIh_ugTrSkhPiYdmSyW_yKRrCKMR4Gdx5WROuKWJBtIGh-AMyxI14jYR3X4rzA6HkZIKXPp4FnVwes9--6X6j7cYqMEKsSx2fj9HxpVveUWwziO_xY8MuJH3ebnpmEZwZIy-_a3rz_2BB-AYlxCJy9PB15_rrRxg2_ZuZRS8izbM1Y_RS5X26EVDgqDew6-0P8FtzEt_4IdkpQy8NnWVxcjOU0Or_7tLXuh9hDwJi74N8BX55qHlREdg_1XJ6zQwgRWTwO9gyuEnC0Z9SnfvxXa7aA2Rdikdp1XRTuniN82tfsBuHO5AINYxrtfDyKnGK9T9Im58IiUMSRmt1-gLEcv7aeFPmThldmHroZBG0Pu40hUGyurtEWGGqicySJdj99WDiUYG1xGjuVYFBYH9INKOBb4yAkJ9WDk0xuEBbDKWhyPrL9jA46HMIO_V_HKEDhBwAyXJ6LDo9S49H3vB2KYAtDgXqUEK7Ti-SelYQT4rQZrOTQVRa7II_AlRXxOoX-DnuY1rUqmH_EeSzim_PYs6HVKUL3hdqjxg5dAc2MuJoe5lND0wbd1_iqpc9UzuR997FoGsFGW4IoPkHd_Rx6bJIvrhjRwpOcSkgoOY4PZMDVpbABBB5WS8k6YPxo5rG5jM1GH_acUzf0_LQg61jPgxgsmEubFvcD8ZaWMuRd6roiTSoE81iF5xe3ir7Ri2QjlXzY5t3PFi2a_D33ZuPYrSCoo3wNnU1jKc_oA7N5zyr8Cg5ZjTSm5phLUWxYQd99eMF3VEUUgdidk1vDTUXZAHyc9fhADL4-dtgAmWygVJS5IzuBkUmm0QzWnXLaBxopV7_imWcWVHNY2FXfZhZENaghjfzBh7df7OEVBZwe9uiw5sq-464FsN5p_aJuap5qcO0ujvMCZWJhw66BFIdIotCpeOFujldsZm6g9abUTwEyH6_Nf7_CAWcxW4mCnqc5yCXVuHbJ4u9U8h5fgP3UCEeu8asL6SEG2PTU6e62W-LGdAvidreSSylqdKyqq-9cGaTklAPO4TxZCmgDkS-cTPkMpAVDYzxahwukLnZXIQ70kQQL4e4veAB_4GZ4k_Ax-bmBwQZkoxKGrapzumiErwPkMlA-BR-K9HlKwbMPX2CEAK54rrio7BtxosWIKHVhGxrZ3QZvwgxxFB0iVD6UVwuZN22OiYwEVH0YOoA3D9L0w4fuDuwrzg9loeyINJlNOPGxrB3RLUQ_y1g0LMrXiNcbZVyG5bOtPmhaTP4EjOfK8dJ6Tb1atEjeBnwSB5SXWYCZzxSXdQ-oNHLd3_EO2rstCsEyBskqfpYJARMgwLU15PEmHaBokVtp13L9CeEnRvI0-lq-S-ifySgs2zsrVB57Wfxtx7hI2o_9GXHymgKgyI3p7zKc3RmgTRBnBlditbUt6mEPC3v6YmltFkl1xUpHNZjCnF0Wv92tj58fMxiWJlgfDuJ6cWoQO1DaZadFcU3aENWlGnqewGpnK_AUGUIa69cEce11rnaE9SuzK3dj32aSuhEEjS-cpO0-KOCFWji0LSsKPhLGli2nhfdYUHAyuKM7ePv_bueuJrk9j2IquXcQacv8DdthWJl8-J95mY8NN2Xu0pD2KayDWlPCx7W7Tq3vmO3en30VUtUoUoStNQf9IBzs9RyntBdWSeo7AJ6YRWYvd-afQGY7ibs3o5yA9uzSn-VLXpzyvJwQK1IK5vOcyprFjX4UZ-9RoJ-4DjVZ8FUJHjapkpN17nCgrRz0QaftiEvxq-eQtOAnd5HJ_GmtceftGV78SHKaJB5g==",
+      "status": null
+    },
+    {
+      "id": "msg_034c1fa5c155211b006aa1d376f50c87d0b1d0e032f28c1e96",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"g1\",\"evidence\":\"The Hard Rock Defendants contend that there are no objective criteria to measure “best efforts” because “the genre of reality shows like ‘Rehab’ did not even exist” when the Agreement was executed.\",\"determinable\":true,\"alignment\":0.94,\"reason\":\"Both identify the same defect: the “best efforts” obligation allegedly lacks objective criteria by which performance can be measured. The proposed issue adds concerns about mutuality, open-endedness, and the absence of a cost ceiling, while g1 contextualizes the missing benchmark through the later-created reality-show genre, but these are variations on the same core complaint.\",\"words_at_issue\":\"The proposed issue concerns “use their best efforts to protect” and the clause’s silence about benchmarks, costs, and required protective actions. Candidate g1 concerns the same “best efforts” language and the alleged absence of objective criteria for measuring those efforts, particularly in relation to a reality-show genre that did not exist when the Agreement was signed.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

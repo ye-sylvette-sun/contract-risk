@@ -1,0 +1,319 @@
+{
+  "contract_id": "871FSupp2d671_2005_noncompetition_agreement",
+  "_id_map": {
+    "c001": "c001",
+    "c002": "c002",
+    "c003": "c003",
+    "c004": "c004",
+    "c005": "c005",
+    "c006": "c006",
+    "c007": "c007",
+    "c008": "c008",
+    "c009": "c009",
+    "c010": "c010",
+    "c011": "c011",
+    "c012": "c012",
+    "c013": "c013",
+    "c014": "c014",
+    "c015": "c015",
+    "c016": "c016",
+    "c017": "c017",
+    "c018": "c018",
+    "c019": "c019",
+    "c020": "c020",
+    "c021": "c021",
+    "c022": "c022",
+    "c023": "c023",
+    "c024": "c024",
+    "c025": "c025"
+  },
+  "judgments": [
+    {
+      "clause_id": "c001",
+      "issues": [
+        {
+          "issue": "The execution date is left illegible/blank (\"July KX, 2005\"), yet the whole running of the covenant depends on it because Section 1(D) measures the Restricted Period from \"the date of this Agreement.\" A court could be asked to fix when the three-year period began and ended.",
+          "type": 1,
+          "prob": 0.24
+        }
+      ],
+      "dataset_clause_id": "c001"
+    },
+    {
+      "clause_id": "c002",
+      "issues": [
+        {
+          "issue": "Recital A is an ungrammatical fragment: the \"Pursuant to the terms and conditions of the Stock Purchase Agreement ... among Buyer and Sellers\" clause has no verb, and the operative statement of what Buyer is purchasing is severed into a separate sentence. The date of the Stock Purchase Agreement is also left blank, so the recital does not identify the instrument it incorporates by date.",
+          "type": 1,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c002"
+    },
+    {
+      "clause_id": "c003",
+      "issues": [
+        {
+          "issue": "This recital locates the consideration for the covenant in Buyer's willingness to close the Stock Purchase Agreement, while the operative terms make the Company (not Buyer) the promisee, Buyer being only a third-party beneficiary under Section 5(A). A court could be asked whether the recital supplies the consideration and the sale-of-business character that makes the Section 2 covenant enforceable by the Company.",
+          "type": 2,
+          "prob": 0.26
+        }
+      ],
+      "dataset_clause_id": "c003"
+    },
+    {
+      "clause_id": "c004",
+      "issues": [
+        {
+          "issue": "This recital imports definitions from an unattached Stock Purchase Agreement, and Section 1(C) then uses \"Acquired Companies,\" a term defined nowhere in this instrument. Whether the covenant's key defined terms can be ascertained at all turns on reading this recital together with Section 1(C).",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c004"
+    },
+    {
+      "clause_id": "c005",
+      "issues": [
+        {
+          "issue": "The closing qualifier \"of health insurance claims for hospitals and physicians in the United States\" is ambiguous: it may modify only the data-conversion items in the list, or the entire enumerated set, and \"in the United States\" may describe where the customers are or where the services are performed. The scope of \"Business\" — and thus of the covenant — turns on which reading applies.",
+          "type": 1,
+          "prob": 0.38
+        },
+        {
+          "issue": "This definition of \"Business\" is narrower and differently worded than Section 1.2 of the contemporaneous Employment Agreement, which covers activities \"in the United States and India\" and is expressly non-exhaustive (\"including but not limited to\"). A court must decide which definition governs conduct restricted by both instruments.",
+          "type": 2,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c005"
+    },
+    {
+      "clause_id": "c006",
+      "issues": [
+        {
+          "issue": "The definition is circular and self-referential: \"Company\" is defined to include any entity that is a \"successor ... subsidiary or affiliate of the Company,\" using the term being defined, and \"Ajuba\" itself is never a defined term. The class of protected entities therefore has no ascertainable boundary.",
+          "type": 1,
+          "prob": 0.25
+        },
+        {
+          "issue": "The preamble defines \"Company\" as Ajuba International, Inc. alone, while this section expands the same defined term to subsidiaries, affiliates and future successors. A court could be asked which meaning \"the Company\" carries in the operative covenants and in Section 5(G).",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c006"
+    },
+    {
+      "clause_id": "c007",
+      "issues": [
+        {
+          "issue": "The \"material contact\" limiter and the twelve-month look-back attach only to clause (c), so clause (a) sweeps in every client of Buyer or the Acquired Companies with no temporal limit and no requirement that the Shareholder ever dealt with them. The reach of the non-solicitation covenant depends on whether that limiter is read across the whole definition.",
+          "type": 1,
+          "prob": 0.28
+        },
+        {
+          "issue": "\"Acquired Companies\" is used here but defined only in the unattached Stock Purchase Agreement via Background C, so the class of protected customers cannot be identified from this instrument. A court would have to read the two documents together to give the definition content.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c007"
+    },
+    {
+      "clause_id": "c008",
+      "issues": [
+        {
+          "issue": "This three-year period runs from the date of this Agreement, whereas Section 1.14 of the contemporaneous Employment Agreement defines \"Restricted Period\" as three years after the end of the Employment Term — potentially six years. A court must decide which period governs the Shareholder's post-employment competition.",
+          "type": 2,
+          "prob": 0.38
+        }
+      ],
+      "dataset_clause_id": "c008"
+    },
+    {
+      "clause_id": "c009",
+      "issues": [
+        {
+          "issue": "The Restricted Area here is the United States, its territories and protectorates, while Section 1.13 of the contemporaneous Employment Agreement defines the same term to include India, where the Shareholder resides and worked. A court would have to decide whether Indian activity is restricted, and which instrument's geographic scope controls.",
+          "type": 2,
+          "prob": 0.33
+        }
+      ],
+      "dataset_clause_id": "c009"
+    },
+    {
+      "clause_id": "c010",
+      "issues": [
+        {
+          "issue": "\"Engage in any activity which is in competition with the Business\" in any capacity \"or otherwise\" has no stated boundary, and the catch-all \"or otherwise\" follows an enumerated list of capacities (officer, director, employee, consultant, agent) inviting an ejusdem generis argument. The scope of prohibited conduct — and its reasonableness — is what a court would construe.",
+          "type": 1,
+          "prob": 0.45
+        },
+        {
+          "issue": "These covenants overlap but do not match Article V of the contemporaneous Employment Agreement, which contains its own non-compete, customer non-solicitation and employee non-solicitation with different carve-outs (e.g. the Supervisor-and-above limitation and the \"Core Business\" substitution in Article V(d)). A court must decide how the two sets of restrictions operate together against the same person.",
+          "type": 2,
+          "prob": 0.35
+        }
+      ],
+      "dataset_clause_id": "c010"
+    },
+    {
+      "clause_id": "c011",
+      "issues": [
+        {
+          "issue": "The section prescribes two inconsistent consequences for an invalid restriction — that it \"shall be deemed deleted herefrom\" and, in the proviso, that it \"instead shall be deemed limited\" — without stating which a court is to apply. The Shareholder's acknowledgment that the restrictions are \"reasonable in scope and duration\" also sits against the same section's assumption that a court may find them unenforceable.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c011"
+    },
+    {
+      "clause_id": "c012",
+      "issues": [
+        {
+          "issue": "\"The foregoing covenant\" and \"the foregoing covenant not to compete\" are ambiguous as to whether the equitable-relief right reaches all of Section 2, including the customer and employee non-solicitation subsections, or only the Section 2(A)(1) non-competition promise. The remedy's reach turns on which reading applies.",
+          "type": 1,
+          "prob": 0.27
+        }
+      ],
+      "dataset_clause_id": "c012"
+    },
+    {
+      "clause_id": "c013",
+      "issues": [
+        {
+          "issue": "\"Confidential Information\" is defined by an open-ended \"shall include ... including, but not limited to\" list qualified only by \"not generally known in the business community,\" a phrase with no stated benchmark. The obligation is also perpetual (\"at any time, either during or subsequent to the Restricted Period\"), so its outer limit is fixed only by that vague qualifier.",
+          "type": 1,
+          "prob": 0.34
+        },
+        {
+          "issue": "This definition and its carve-outs differ from Sections 1.5 and 3.1 of the contemporaneous Employment Agreement, which uses a different enumerated definition and permits disclosure \"to the extent disclosure is required by law\" without the advance-notice condition imposed here. A court would have to decide which confidentiality regime governs the same information.",
+          "type": 2,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c013"
+    },
+    {
+      "clause_id": "c014",
+      "issues": [
+        {
+          "issue": "The clause provides that Section 3 \"shall survive the termination of this Agreement,\" but the Agreement contains no term, expiration or termination mechanism anywhere, so there is no event for the survival language to operate on. A court could be asked what, if anything, the survival sentence adds to the perpetual obligation already imposed by Section 3(A).",
+          "type": 1,
+          "prob": 0.2
+        }
+      ],
+      "dataset_clause_id": "c014"
+    },
+    {
+      "clause_id": "c015",
+      "issues": [
+        {
+          "issue": "\"Disparage, criticize or make statements to the detriment of any other Party\" is unbounded — it is not limited to false statements and \"criticize\" and \"to the detriment of\" have no workable boundary — and it runs \"indefinitely.\" The exception for statements made \"as part of any dispute resolution proceeding related to any Agreement between the Parties\" is equally undefined in scope.",
+          "type": 1,
+          "prob": 0.42
+        },
+        {
+          "issue": "This mutual, indefinite non-disparagement promise differs from Section 9.13 of the contemporaneous Employment Agreement, which binds \"each party\" as to the other and their officers, directors and employees during and after the Employment Term. A court would have to decide which clause governs a given statement and whether the Employment Agreement's broader coverage of officers and affiliates applies here.",
+          "type": 2,
+          "prob": 0.18
+        }
+      ],
+      "dataset_clause_id": "c015"
+    },
+    {
+      "clause_id": "c016",
+      "issues": [
+        {
+          "issue": "This clause makes the Noncompetition Agreement the entire agreement on its subject matter and supersedes all \"contemporaneous\" agreements on that subject, yet the Employment Agreement executed the same day contains its own non-compete and non-solicitation covenants in Article V and, in Section 9.8, expressly preserves this instrument. A court must decide whether the Employment Agreement's restrictive covenants survive this integration clause or are superseded by it.",
+          "type": 2,
+          "prob": 0.42
+        }
+      ],
+      "dataset_clause_id": "c016"
+    },
+    {
+      "clause_id": "c017",
+      "issues": [],
+      "dataset_clause_id": "c017"
+    },
+    {
+      "clause_id": "c018",
+      "issues": [
+        {
+          "issue": "Amendment requires only the signature of \"each Party,\" defined in the preamble as the Company and the Shareholder, although Section 5(A) makes the Buyer a third-party beneficiary whose rights could be amended away without its consent. A court could be asked whether the Buyer's beneficiary rights can be altered by the two Parties alone.",
+          "type": 2,
+          "prob": 0.12
+        }
+      ],
+      "dataset_clause_id": "c018"
+    },
+    {
+      "clause_id": "c019",
+      "issues": [],
+      "dataset_clause_id": "c019"
+    },
+    {
+      "clause_id": "c020",
+      "issues": [
+        {
+          "issue": "Michigan law is chosen without regard to conflicts principles, yet Section 2(B) contemplates that Section 2 may be adjudicated and reformed \"under the laws applied in such jurisdiction\" in jurisdictions other than Michigan. A court could be asked whether another jurisdiction's non-compete law can ever be applied consistently with this clause.",
+          "type": 2,
+          "prob": 0.15
+        }
+      ],
+      "dataset_clause_id": "c020"
+    },
+    {
+      "clause_id": "c021",
+      "issues": [
+        {
+          "issue": "\"May be brought against any of the parties in the courts of the State of Michigan, County of Jackson\" is permissive in form, leaving it ambiguous whether the clause is a mandatory forum-selection provision or merely a consent to jurisdiction and waiver of venue objections. Whether suit may be brought elsewhere turns on that reading.",
+          "type": 1,
+          "prob": 0.28
+        }
+      ],
+      "dataset_clause_id": "c021"
+    },
+    {
+      "clause_id": "c022",
+      "issues": [
+        {
+          "issue": "The exception permitting \"the Company\" to assign to an affiliate without consent is difficult to square with Section 1(B), which already defines \"Company\" to include affiliates, subsidiaries and successors. A court could be asked whether the covenant is assignable to Buyer/MiraMed and whether the consent requirement has any content given that definition.",
+          "type": 2,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c022"
+    },
+    {
+      "clause_id": "c023",
+      "issues": [],
+      "dataset_clause_id": "c023"
+    },
+    {
+      "clause_id": "c024",
+      "issues": [
+        {
+          "issue": "The saving clause is disabled where deletion \"would result in such a material change as to cause completion of the transactions contemplated hereby to be unreasonable,\" but this Agreement contemplates no transactions of its own — the transactions are those of the Stock Purchase Agreement. The phrase \"transactions contemplated hereby\" therefore has no referent within the instrument, and \"unreasonable\" supplies no standard.",
+          "type": 1,
+          "prob": 0.22
+        }
+      ],
+      "dataset_clause_id": "c024"
+    },
+    {
+      "clause_id": "c025",
+      "issues": [
+        {
+          "issue": "The clause authorizes notice by facsimile, but the Company's telephone and facsimile lines are left blank and the Shareholder's notice block contains no facsimile number at all, so one of the three prescribed methods is unusable as against those parties. A court could be asked whether notice given by another means was effective.",
+          "type": 1,
+          "prob": 0.16
+        }
+      ],
+      "dataset_clause_id": "c025"
+    }
+  ]
+}

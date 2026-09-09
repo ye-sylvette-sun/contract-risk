@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "9185645c334c52bbf765ae24ac728d37a0ae3463311c7ce04dd2b29034a143a2",
+  "document_chars": 7669,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3304,
+    "input_tokens_details": {
+      "cache_write_tokens": 3301,
+      "cached_tokens": 0
+    },
+    "output_tokens": 264,
+    "output_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "total_tokens": 3568
+  },
+  "response": [
+    {
+      "id": "rs_05cc6b415afff24e006aa1d3a1456087d088ea5245b3089931",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqodOkY86SmvFr2Zgq6IPeZDYRFXzAmRV5p9SOJix413or664MwQlT2NBn4TDFAq58FPdwUKjhW8KxrlCJ1MUI_7npRP9C6xbaTgvBJuayjvFStnnsYyyIZYVG6qJrsnDEUX3VWm277d5LmZip1FakHfQ2p4x1FGFRq7R-Q6qo12HF5ZRoLpU_FLRgYPh-R_N1JiuDhD_sDAZfYVkhNGe-Fva1SvZOasm3VnSy1RB0RaGlXBYsQg2hMozapY4wudBjEPZqbgg-Ei9h1pQugL_xzSC8AvTv87GNdfJDVVRb94mt0QJi0B5iaxNsNt27F3kozgzlwodTfJKYx8_0Bx2dbFcMSRx8Hr6_ZWadAcOxBjMkycCbgz3F-RGAOvZxF6E60Wh9_rxjOT9D-THBaDRHDQIlb67Ysv-k35sp6FbVdKa04S3pDh08cjS3RMnqPcnWANvfSLWVzSZ3JCbJbN2H3Ui80JeMaSOEchXF7LlEiQgCZ1wJ269w-2JqGNwOqCECcRJ8KEfH1LOl6HGu81wG_EsFDmgCJFGWmTVXeZGKTJEjYpvhxJ2xhMvIoe6j6OhRqudaw1d3XsX5RWa8Q9wUUCMXMSHgkP9gepQNX25EBM_E7OxyCpwHClLxZyIru-B2sgRj_l9zq0FY3HvaThMqHwlgImwjlY-wBWDFKi79qOuXkPd9adajglW-Aj-U3IxytQZa5HzWwud7zrgIBoUOTN-9_g4dIf1RgmJ49mWVGooSpMopi8UmeUTpIDmxCIEcjhJWDNc5GEkix68tWw7PPzm2VfI2p0ZSYTsvRgy9ExgrG4jfngvRw1QfonlfoDuha2LfNBx45bVHz7KhYUyjeBQ7qzoKihSDOCVKReol6zWw-qqjVecsdZ-2H6DbaixNgI9pzk78w8Fb2p8xMZAYOFa6Ra4yH3_1PoNOwmRA5ZiN77FJeSIRgybQfcUsDvAju_dBMoXf9sbhd-BLjwS6xjvaM1pm7tHw0ZOIfYCzJuEd6syew23CnzU1_bpFFyj_3pYY09cVuZXaz3aNu5Shh9c6X27c_ufq4HV5m3p_hMHlsRz3iwLUf8r1_G0jZx6Vhjyl10OypfNNO0YOfB48kTyTTb911ZwKn_q_Aq-dczHOK3qrbpHjJtsfRnSA7M2k-51mEBwTa-vVv5sPk8bFENefWdJrk_Gk1-fhkZvJxXtEmnLIwHYbJo22op44wg2rgvTdScRtgdpxT049Kf7eQa6OZfXpP7A3mIshIBJQMF61wvwu3bkB9xcb4adecod-ZX1UWAregF8Bm5rVQFxGzRYrwN-d4oqUroqkGecIS4pqNf3BSewvke3keomFPohxPydJLO8lVtfPRtoAlF-9xuXysOxZSrLV2_pVTgVDQ_9lqhPY8Z-RejdsjyriUCZ_oTWMDha09QQ9hnlmbZHw3J3ubRjU_9YONYmG8dcW7nDcgEV77JoE0-YukTa-GvXllOF7v5DtVBpReKgrg90TfF9BDB7cOhKJRGPc1wPTHIRT3NMw-vybHYLboKjTZguJq1RfjHTPloiAw6chDXGTujmkKv_IPW8DYyDRxyVeeUp8rBBlvJgN6B0Mew-VLZocc9eJ0wvYtGDg-otLUaCucMO_ZtQvJ5cUErY7rjGe3kub4svCVzR5kh_1a64_1NQUmVuB6OBw2zi5kk3BzHsY5JMzL1lSVYuj8d0-GEDMivPQRJ7Qq9vaOwNXB42rgIzAch8lG_XJ-iwIFpLKo8Q4m3pliVSQXBGcBJfq_dMTpr-OqRw2L8OXSr37FCX1rBAAvP7HMau7RUSI243GRrn03Lt64Xj6a-7kHbTB7E5wiKPUkoo=",
+      "status": null
+    },
+    {
+      "id": "msg_05cc6b415afff24e006aa1d3a27a0487d0826b510c13025562",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue alleges an internal conflict between coverage of trade-secret/confidentiality claims and a separate equitable-relief carve-out. Candidate g1 instead concerns whether general discrimination and state-statute language covers claims under statutes not expressly named, so it identifies a different defect.\",\"words_at_issue\":\"The proposed issue turns on “violations of confidentiality or breaches of trade secrets” and its alleged conflict with c008’s carve-out for equitable relief involving trade secrets or confidential information. Candidate g1 turns on the discrimination list introduced by “including but not limited to,” the catch-all “any ... state ... statute,” and the omission of the names RICRA, FEPA, and CRPDA.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

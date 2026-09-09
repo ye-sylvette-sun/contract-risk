@@ -1,0 +1,53 @@
+{"judgments": [
+  {"clause_id": "c012",
+   "issues": [
+     {"issue": "\"Acceleration payment\" is not defined and the carve-out leaves it payable only at Financial Security's option, so it is unclear what accelerated amounts (early termination, repurchase-driven paydowns) fall outside the guaranty. The term and its boundary are the defect.",
+      "type": 1, "prob": 0.24}
+   ]},
+  {"clause_id": "c013", "issues": []},
+  {"clause_id": "c014",
+   "issues": [
+     {"issue": "The definition of \"Guaranteed Distributions\" is built out of carve-outs — Prepayment interest shortfalls, reductions resulting from application of the Net Rate Cap, withholding or other charges imposed by governmental authority, and amendments to the Pooling and Servicing Agreement not consented to by Financial Security — so what is actually guaranteed on each Distribution Date is uncertain. The excluded categories, particularly the Net Rate Cap reduction, are the terms in doubt.",
+      "type": 1, "prob": 0.42}
+   ]},
+  {"clause_id": "c015",
+   "issues": [
+     {"issue": "\"Term of this Policy\" is defined only by an incomplete formula ending \"on the date on which ...\", leaving no ascertainable termination date. Because the preference guaranty (c004) covers only distributions \"made during the Term of this Policy,\" the boundary matters and is not fixed.",
+      "type": 1, "prob": 0.26}
+   ]},
+  {"clause_id": "c016",
+   "issues": [
+     {"issue": "The Endorsement introduces Wells Fargo as \"Trust Administrator\" although the body of the Policy imposes and owes duties only to the \"Trustee\" (c003, c007). Which of the two entities makes claims and receives policy proceeds has to be worked out by reading the Policy with PSA Sections 12.04 and 12.06.",
+      "type": 2, "prob": 0.24}
+   ]},
+  {"clause_id": "c017",
+   "issues": [
+     {"issue": "\"Trustee\" is fixed as U.S. Bank in its capacity under the Pooling and Servicing Agreement, while the insuring clause guarantees payment \"to each Trustee\" in the plural and the Endorsement separately names a Trust Administrator (c016). The singular definition cannot be squared with the plural usage in c003.",
+      "type": 2, "prob": 0.17}
+   ]},
+  {"clause_id": "c018",
+   "issues": [
+     {"issue": "Payment of Guaranteed Distributions is to be wired to an account \"established pursuant to\" the Pooling and Servicing Agreement (the Policy Payments Account of PSA Section 12.04), which makes performance of the Policy depend on another instrument that c009 says shall not affect the Policy. The provision also contemplates that no such account may have been established, without saying where payment then goes.",
+      "type": 2, "prob": 0.23}
+   ]},
+  {"clause_id": "c019",
+   "issues": [
+     {"issue": "The required assignment sweeps in \"all rights and claims of the Holder relating to or arising under the Insured Certificates,\" then adds a catch-all reaching recoveries and \"claims based on contractual rights ... against any person or entity,\" though the operative context is a single avoided preference payment. Whether the general words extend beyond the enumerated preference recovery is the general-versus-specific defect.",
+      "type": 1, "prob": 0.33}
+   ]},
+  {"clause_id": "c020",
+   "issues": [
+     {"issue": "The delivery mechanic requires that the Insured Certificate be cancelled and reissued for the remaining balance and then delivered to Financial Security, without stating who bears the cancellation and reissuance or when surrender is due. The condition on receiving payment is left mechanically incomplete.",
+      "type": 1, "prob": 0.11}
+   ]},
+  {"clause_id": "c021",
+   "issues": [
+     {"issue": "The Trust Administrator purports to act \"on its behalf and on behalf of the Trustee and the Holders\" in assigning rights in respect of the Insured Certificates to Financial Security, which is broader than the subrogation Financial Security is given by c006 and than the automatic subrogation of PSA Section 12.05. How far Financial Security succeeds to Holder claims turns on reconciling the three.",
+      "type": 2, "prob": 0.32}
+   ]},
+  {"clause_id": "c022",
+   "issues": [
+     {"issue": "The further-assurances duty is to take such action and deliver such instruments as are \"reasonably requested or required by\" Financial Security, with no standard or outer limit on what may be demanded. \"Reasonably requested\" is the unbounded term.",
+      "type": 1, "prob": 0.14}
+   ]}
+]}
