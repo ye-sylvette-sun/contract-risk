@@ -1,4 +1,4 @@
-"""Issue-alignment check — was the agent right for the right reason, and which?
+"""Issue-alignment check — is the agent right for the right reason, and which?
 
 Risk detection measures ranking: did the model put the litigated provisions above
 the rest. It cannot tell whether it did so for the reason the court actually
@@ -10,30 +10,34 @@ never saw the agent's reasoning and is not the family being judged — whether t
 defect it named is one the court construed, judged against the court's own
 verbatim words.
 
-**What is new here is `matched`.** Step 2 records every distinct defect a court
-construed in a provision, each with its own passage, so the judge does not
-merely say "aligned" — it says WHICH recorded defect the agent found:
+The judge names WHICH recorded defect the agent found, not merely that it
+found one. Step 2 records every distinct defect a court construed in a
+provision, each with its own passage, so both sides of the count are defined:
 
     precision  of the issues the agent named, how many name a defect the
                court actually construed
     recall     of the defects the court construed, how many the agent found
 
-Recall was not computable before: one passage per provision collapsed several
-defects into one target, so what was reported as recall was really target
-coverage, an upper bound.
+**Scope.** Every issue the agent named on a provision the court construed, and
+every gold defect of that provision is a candidate. An issue on a provision no
+court construed is out of scope: there is no passage to check it against.
+Precision is therefore conditional on the provision being right; recall is not
+— it is over every gold defect in the corpus, including those on provisions the
+agent said nothing about.
 
-**Scope.** Only issues whose provision AND risk type both match the gold label.
-An issue on a provision no court construed has no passage to check it against,
-and an issue of the wrong type is already counted wrong by risk detection's
-one-vs-rest panels. Precision here is therefore conditional on the provision and
-type being right; recall is not — it is over every gold issue in the corpus,
-including those on provisions the agent said nothing about.
+**Risk type plays no part.** The judge is shown neither side's type, and a
+candidate is not filtered by it. The dataset's type labels come from the case's
+Westlaw key rather than from the passage, so gating on them discards matches
+where both sides name the same defect and classify it differently. Type
+agreement is measured separately, over the matched pairs, from `type` against
+`gold_type`.
 
-**Control.** `--control` pairs every issue with defects that are not its own.
-The judge should reject those. If it does not, it is not discriminating and the
-real numbers mean nothing, so run it before believing them:
+**Control.** `--control` pairs every issue with defects that are not its own:
+`corpus` draws them from another case, `case` from another provision of the
+same case. The judge should reject those. Its rate on them is the floor the
+real rate has to be read against, so run one before believing any number here:
 
-    python src/experiments/issue_alignment_check.py --control --out /tmp/align
+    python src/experiments/issue_alignment_check.py --control case --out DIR
 
 Usage:
     python src/experiments/issue_alignment_check.py                 # the real run
@@ -64,7 +68,8 @@ SHARDS = "issue_alignment_check"
 
 FIELDS = ["job_id", "contract_id", "clause_id", "citation", "clause_name",
           "taxonomy", "taxonomy_provenance", "type", "prob", "issue",
-          "matched", "matched_key", "gold_issue", "alignment", "determinable",
+          "matched", "matched_key", "gold_issue", "gold_type", "alignment",
+          "determinable",
           "words_at_issue", "evidence", "reason"]
 
 
@@ -100,12 +105,14 @@ def render(cands):
 
 
 def jobs(preds, dataset):
-    """One job per named issue whose provision and risk type both match gold.
+    """One job per named issue on a provision the court construed.
 
-    The candidates are the gold issues of that provision whose fine code falls
-    under the coarse type the agent named — `1.1` and `1.3` both answer type 1.
-    An issue with no candidate is out of scope: either the provision was never
-    construed, or it was construed only under the other type.
+    The candidates are EVERY gold issue recorded on that provision, whatever
+    type each side gave it. Type is not a filter here and is not shown to the
+    judge: the dataset's type labels come from the case's Westlaw key and
+    disagree with the court's own language often enough that gating on them
+    would throw away real matches. Whether the two types agree is computed
+    afterwards, from `type` against `gold_type`, as a separate measurement.
 
     Keyed on (contract_id, clause_id, type, ordinal) so a provision carrying two
     issues of one type yields two jobs that cannot collide in the shard store.
@@ -129,9 +136,7 @@ def jobs(preds, dataset):
             t = it.get("type")
             if not it.get("issue") or t not in (1, 2):
                 continue
-            cands = [{**g, "id": f"g{n}"} for n, g in
-                     enumerate((x for x in here
-                                if x["risk_type"].startswith(str(t))), 1)]
+            cands = [{**g, "id": f"g{n}"} for n, g in enumerate(here, 1)]
             if not cands:
                 continue
             seen[t] += 1
@@ -183,18 +188,12 @@ def scramble(js, mode="corpus", seed=0):
     return out
 
 
-def type_def(t):
-    """The taxonomy lines for one risk type, as the prompt's `type_def`."""
-    return "\n".join(f"  [{c}] {txt}" for c, txt in sorted(lib.RISK_TYPES.items())
-                     if c.startswith(str(t)))
-
-
 def judge(job, log_as):
     a = lib.ask("issue_alignment_check", job["job_id"], effort=EFFORT,
                 model=MODEL, log_as=log_as,
                 citation=job["citation"], contract_id=job["contract_id"],
                 clause_name=job["clause_name"], clause_text=job["clause_text"],
-                type_def=type_def(job["type"]), issue_text=job["issue"],
+                issue_text=job["issue"],
                 candidates=render(job["candidates"]))
     if a is None:
         return None
@@ -209,6 +208,9 @@ def judge(job, log_as):
     a["matched"] = hit["id"] if hit else ""
     a["matched_key"] = hit["key"] if hit else ""
     a["gold_issue"] = hit["issue"] if hit else ""
+    # The matched gold's own code, so issue alignment and type agreement are two
+    # independent columns rather than one conflated verdict.
+    a["gold_type"] = hit["risk_type"] if hit else ""
 
     # Three ways to score zero, kept consistent so the column means one thing:
     # an undecidable passage, no candidate chosen, and a score the model itself

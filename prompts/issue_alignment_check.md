@@ -15,13 +15,15 @@ found rather than only how many of the model's guesses were right.
 naming one defect in one provision, written in the same form, so they can be set
 side by side. The opinion passage is context: it shows what the court was
 construing and confirms the recorded sentence is faithful to it, but a court
-often disposes of several defects in one paragraph — 53% of the recorded defects
-share their passage with another defect of the same case — so the passage alone
-cannot tell two of them apart.
+often disposes of several defects in one paragraph, and more than half of the
+recorded defects share their passage with another defect of the same case, so
+the passage alone cannot tell two of them apart.
 
-Only issues whose provision and risk type both match the gold label reach this
-prompt. Whether the provision was risky is already known from the docket; the
-question is only whether the model was right **for the right reason**.
+Every issue the model named on a provision the court construed reaches this
+prompt, whatever risk type either side gave it. Whether the provision was risky
+is already known from the docket; the question is only whether the model was
+right **for the right reason** — and the right reason is a question about
+language, not about classification.
 
 Sections below are sent as the system prompt, the document, the instructions and
 the task, in that order — instructions after the document, so a rule sits next
@@ -43,6 +45,14 @@ court would probably have said, from the provision's general riskiness, or from
 your own view of the drafting. If the material does not settle it, say so — that
 outcome exists precisely so that you never have to guess.
 
+**Judge the language, not the classification.** Neither side's risk type is
+shown to you, and it is not what you are measuring. One defect is often
+described one way as trouble inside a phrase and another way as trouble between
+two provisions — that is two descriptions of one defect, not two defects. Ask
+which words of the provision each sentence is about and what each says is wrong
+with them. Where those agree it is a match, however differently the two are
+framed.
+
 ## DOCUMENT
 
 **Case:** {citation}
@@ -55,17 +65,13 @@ outcome exists precisely so that you never have to guess.
 {clause_text}
 ```
 
-### The risk type this issue was filed under
-
-{type_def}
-
 ### The proposed issue — written by a model that had the contract but NOT the opinion
 
 ```
 {issue_text}
 ```
 
-### The defects the court construed in this provision under this risk type
+### The defects the court construed in this provision
 
 Each candidate has two parts, and they do different jobs.
 
