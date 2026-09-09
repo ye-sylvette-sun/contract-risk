@@ -193,6 +193,46 @@ Where it lists **several**, decide from the passage you are citing which one
 - Different clauses of the same case may well carry different codes. That is
   expected, not a contradiction.
 
+#### How the court's own words show the type
+
+Courts do not label these types, but they do not treat them alike either, and
+the difference shows in the passage you are citing.
+
+**Where the court is working on a relation between provisions, it says so, and
+usually by name.** Each phrase below is several times more common in a
+relational defect's passage than in an intrinsic one, and the first two never
+appear in an intrinsic one at all:
+
+- `harmonize`, `harmonized`, `in harmony`
+- `irreconcilable`, `cannot be reconciled`
+- `surplusage`, `nugatory`, `superfluous`, `redundant`
+- would `render` something `meaningless`
+- `read as a whole`, `in its entirety`
+- `give effect to all`, `give effect to every provision`
+- the specific `controls`, `governs` or `prevails` over the general
+
+One of these is strong evidence the defect is relational: the court is reaching
+for a canon that only means anything when two texts are in play. Name the other
+text in your `issue` sentence.
+
+**Where the trouble is inside one provision, the court reaches for no canon at
+all.** There is no vocabulary to look for here, and you must not invent one.
+What the court DOES is the signal: it quotes a word or phrase of the provision
+and sets out the two readings the parties advanced of THAT language. The defect
+is the word, and your sentence should name it.
+
+**These are used for BOTH types and prove nothing on their own:** `ambiguous`,
+`ambiguity`, `unambiguous`, `plain meaning`, `plain language`, `ordinary
+meaning`, `reasonable interpretation`, `reasonably susceptible`, and `the term`
+or `the phrase` followed by a quotation. `Ambiguous` above all is the court's
+CONCLUSION, and a court reaches it as readily from two provisions that will not
+sit together as from one word carrying two meanings. `conflict` and
+`inconsistent` lean relational but appear in intrinsic passages too often to
+settle anything. So do `read together` and `read with`: any two provisions can
+be described as read together, including the two readings of a single ambiguous
+phrase, so those words are not evidence of anything on their own. Never assign a
+type because one of these appeared.
+
 ### When no listed clause is the answer
 
 Sometimes the language the court construed is not in the lists at all. That
@@ -252,10 +292,24 @@ return must be one of these.**
      clause. Usually one entry. For each:
 
      - `risk_type` — the single candidate code this defect falls under.
-     - `issue` — one sentence in your own words: which words of the clause, and
-       what was wrong with them. It must be specific enough that a *different*
-       defect in the same clause would need a different sentence, because that
-       is exactly the test for whether you are looking at one issue or two.
+     - `issue` — one sentence: which words of the clause, and what was wrong
+       with them. Write it in the court's own language for THIS dispute — the
+       terms it quotes, the readings it sets out — together with the standard
+       vocabulary for the type you assigned, so a defect of one type does not
+       read like a defect of the other. Do not quote the opinion at length. It
+       must be specific enough that a *different* defect in the same clause
+       would need a different sentence, because that is exactly the test for
+       whether you are looking at one issue or two.
+     - `type_evidence` — the court's own words, copied exactly from the passage,
+       that bear on WHICH TYPE this defect is. An empty string is a real and
+       common answer: for a defect inside one provision the court usually
+       reaches for no canon, and inventing one would be worse than saying so.
+     - `type_evidence_conflict` — true when those words point at a different
+       type than the code you assigned. This does happen. The candidates come
+       from the case's Westlaw keys, and where the case lists one candidate you
+       must use it even if the court's language for this particular defect
+       points the other way. Record that rather than hiding it: do not change
+       the code, and do not soften the `issue` sentence to make it agree.
      - `opinion_comment_start_line`, `opinion_comment_end_line` — the first and
        last line **in the opinion** of the passage showing this defect: the
        competing readings the parties advanced and the court's discussion of

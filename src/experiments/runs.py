@@ -252,24 +252,8 @@ def court_excerpt(comment, terms, cap=700, floor=300):
 # them: short enough to show whole, every recorded defect carrying the court's
 # own words, and opinion passages short enough that three of them do not crowd
 # out the contract being judged.
-#
-# The type-1 example teaches FOUR defects to the type-2 example's two, so the
-# three together run 5 type-1 to 3 type-2. Gold runs 2.3 to 1 (149 type-1
-# defects against 65), and a set of examples weighted the other way is one
-# suspect in the type-1 recall ceiling of 0.66 measured over 30 contracts —
-# a third of type-1 gold provisions never got a type-1 entry at any
-# probability. Suspect, not cause: the type test and the widened type-2
-# definition changed in the same round and would explain it equally well.
-#
-# Re-weighting them was TRIED and did not work. Swapping the type-2 example
-# for a one-defect contract took the examples from 4:3 to 5:2, and over the
-# same 29 contracts the model's own output went from 0.97:1 to 0.94:1 — it
-# does not copy the examples' type mix. Type-1 recall moved 0.66 to 0.70
-# while type-2 fell 0.74 to 0.49, both inside the noise floor. So the mix
-# here is 4:3 again, and the type-1 ceiling is a problem for the rules in
-# prompts/risk_detect.md, not for which contracts teach.
 EXAMPLE_CONTRACTS = {
-    "type1": "20FSupp3d709_nols_student_agreement_including",
+    "type1": "562FSupp2d260_settlement_agreement_the_agreement",
     "type2": "118FSupp3d802_membership_agreement",
     "mixed": "252FSupp3d52_guaranty_agreement",
 }

@@ -40,6 +40,7 @@ Usage:
     python src/step2_disputes.py [--case CITATION]
 """
 import argparse
+from pathlib import Path
 import concurrent.futures as cf
 from collections import Counter, defaultdict
 
@@ -103,10 +104,9 @@ def issues_of(reported, codes, opinion_lines):
 
     A duplicate is folded, and what makes two entries duplicates is the DEFECT
     they name — same code, same `issue` sentence — not the passage they cite.
-    Keying on the passage was tried first and was wrong: courts dispose of two
-    separate defects in one paragraph all the time, and it silently undid four
-    real splits in the first case it ran on. Two issues sharing a passage is
-    normal and stays.
+    Courts dispose of two separate defects in one paragraph all the time, so
+    two issues sharing a passage is normal and stays; keying on the passage
+    would silently fold real splits together.
 
     That leaves the substantive judgement — two wordings of one defect — with
     the prompt. Nothing here can tell those apart, and a similarity threshold
@@ -129,6 +129,12 @@ def issues_of(reported, codes, opinion_lines):
             continue
         seen.add(same)
         kept.append({"risk_type": code, "issue": i["issue"],
+                     # What the COURT said that bears on the type, and whether it
+                     # disagrees with the code. Where a case carries one candidate
+                     # the code is forced, so the disagreement is the only place
+                     # that fact can be seen at all -- it must survive to the row.
+                     "type_evidence": i.get("type_evidence", ""),
+                     "type_evidence_conflict": bool(i.get("type_evidence_conflict")),
                      "opinion_lines": [o1, o2],
                      "opinion_comment": lib.window(opinion_lines, o1, o2)})
     # Sorted so a re-run cannot reorder them; the issue text breaks the tie two
@@ -196,6 +202,8 @@ def check(cid, clause_id, reported, case, inventory, opinion_lines):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--case", help="one citation only")
+    ap.add_argument("--cases-file", metavar="PATH",
+                    help="a file of citations, one per line; runs exactly those")
     ap.add_argument("--parallel", type=int, default=4,
                     help="cases processed at once (default 4)")
     args = ap.parse_args()
@@ -216,8 +224,20 @@ def main():
         if inv["clauses"]:
             by_case[inv["citation"]].append(cid)
 
+    # A citation matching nothing is a typo or a stray carriage return, and
+    # silently running zero cases looks exactly like "already done". Fail loudly.
+    want = None
+    if args.cases_file:
+        want = {ln.strip() for ln in Path(args.cases_file).read_text(
+            encoding="utf-8").splitlines() if ln.strip()}
+        unknown = sorted(want - set(by_case))
+        if unknown:
+            raise SystemExit(f"{len(unknown)} citation(s) match no inventoried "
+                             f"case: {unknown}")
+
     todo = [(cit, sorted(ids)) for cit, ids in sorted(by_case.items())
-            if not (args.case and cit != args.case) and cit not in done]
+            if not (args.case and cit != args.case)
+            and (want is None or cit in want) and cit not in done]
 
     def one(citation, ids):
         """One case. Everything it has to say is collected and printed in a
@@ -319,8 +339,8 @@ def main():
           f"{len({c['contract_id'] for c in kept})} contracts won")
 
     # The distribution is the point of the multi-issue design, so it is printed
-    # rather than left to be worked out later: it is the recall denominator the
-    # issue-level scoring could not previously know.
+    # rather than left to be worked out later: it is the denominator issue-level
+    # recall is measured against.
     spread = Counter(len(c["issues"]) for c in kept)
     if spread:
         print("  issues per clause: " + ", ".join(

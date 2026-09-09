@@ -1,7 +1,11 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["case_desc", "disputed", "unlocated"],
+  "required": [
+    "case_desc",
+    "disputed",
+    "unlocated"
+  ],
   "properties": {
     "case_desc": {
       "type": "string",
@@ -13,7 +17,11 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["contract_id", "clause_id", "issues"],
+        "required": [
+          "contract_id",
+          "clause_id",
+          "issues"
+        ],
         "properties": {
           "contract_id": {
             "type": "string",
@@ -30,18 +38,30 @@
             "items": {
               "type": "object",
               "additionalProperties": false,
-              "required": ["risk_type", "issue",
-                           "opinion_comment_start_line",
-                           "opinion_comment_end_line"],
+              "required": [
+                "risk_type",
+                "issue",
+                "type_evidence",
+                "type_evidence_conflict",
+                "opinion_comment_start_line",
+                "opinion_comment_end_line"
+              ],
               "properties": {
                 "risk_type": {
                   "type": "string",
-                  "enum": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3"],
+                  "enum": [
+                    "1.1",
+                    "1.2",
+                    "1.3",
+                    "2.1",
+                    "2.2",
+                    "2.3"
+                  ],
                   "description": "The ONE risk type code this issue falls under. A CODE, e.g. \"1.1\" — not the Westlaw key label such as \"k152\", and no brackets. It must be one the task lists as a candidate for this case."
                 },
                 "issue": {
                   "type": "string",
-                  "description": "One sentence naming the specific defect the court construed: which words, and what was wrong with them. Concrete enough that a different defect in the same clause would need a different sentence. Your own words — do not quote the opinion at length."
+                  "description": "One sentence naming the specific defect the court construed: which words, and what was wrong with them. Write it in the court's own language for THIS dispute -- the terms it quotes, the readings it sets out -- together with the standard vocabulary for the type you assigned, so a defect of one type does not read like a defect of the other. Concrete enough that a different defect in the same clause would need a different sentence. Do not quote the opinion at length."
                 },
                 "opinion_comment_start_line": {
                   "type": "integer",
@@ -50,6 +70,14 @@
                 "opinion_comment_end_line": {
                   "type": "integer",
                   "description": "Last line in the OPINION of that passage."
+                },
+                "type_evidence": {
+                  "type": "string",
+                  "description": "The court's own words, copied EXACTLY from this issue's passage, that bear on WHICH TYPE this defect is -- a canon such as harmonize, irreconcilable, surplusage, render meaningless, read as a whole, give effect to every provision, or the specific controls the general. Empty string when the passage carries none, which is the common case for a defect inside one provision: courts reach for no canon there. Do NOT put ambiguous, plain meaning, reasonable interpretation or the term \"X\" here -- those are used for both types and show nothing."
+                },
+                "type_evidence_conflict": {
+                  "type": "boolean",
+                  "description": "True when those words point at a different type than the risk_type you assigned. Where the case lists one candidate code you must use it even if the court's language for this defect points the other way -- record the disagreement here rather than changing the code or softening the issue sentence. False when they agree, and false when type_evidence is empty."
                 }
               }
             }
@@ -63,8 +91,12 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["description", "why",
-                     "opinion_comment_start_line", "opinion_comment_end_line"],
+        "required": [
+          "description",
+          "why",
+          "opinion_comment_start_line",
+          "opinion_comment_end_line"
+        ],
         "properties": {
           "description": {
             "type": "string",
