@@ -188,9 +188,9 @@ def scramble(js, mode="corpus", seed=0):
     return out
 
 
-def judge(job, log_as):
+def judge(job, log_as, log_dir=None):
     a = lib.ask("issue_alignment_check", job["job_id"], effort=EFFORT,
-                model=MODEL, log_as=log_as,
+                model=MODEL, log_as=log_as, log_dir=log_dir,
                 citation=job["citation"], contract_id=job["contract_id"],
                 clause_name=job["clause_name"], clause_text=job["clause_text"],
                 issue_text=job["issue"],
@@ -222,7 +222,7 @@ def judge(job, log_as):
     return a
 
 
-def run(js, done, keep, log_as, parallel):
+def run(js, done, keep, log_as, parallel, log_dir=None):
     """Judge every outstanding job. `keep(job_id, record)` stores one result.
 
     The real run shards to disk so it can resume; the control keeps its results
@@ -233,7 +233,7 @@ def run(js, done, keep, log_as, parallel):
           f"({MODEL}, effort {EFFORT}, {parallel} at a time)")
 
     def one(i, j):
-        a = judge(j, log_as)
+        a = judge(j, log_as, log_dir)
         if a is None:
             print(f"  [{i}/{len(todo)}] {j['job_id']}: no answer", flush=True)
             return
@@ -364,6 +364,10 @@ def main():
         out_dir = Path(args.out)
         out_dir.mkdir(parents=True, exist_ok=True)
         tag = f"control_{args.control}"
+        # A control leaves nothing in output/, and that has to include its LLM
+        # logs: --out moves the results, and without this the logs would still
+        # land under output/llm_logs and outlive the diagnostic that wrote them.
+        log_dir = out_dir / "llm_logs"
         json_out, csv_out = out_dir / f"{tag}.json", out_dir / f"{tag}.csv"
         where = ("another case" if args.control == "corpus"
                  else "another provision of the SAME case")
@@ -371,7 +375,7 @@ def main():
         log_as = f"alignment_{tag}"
     else:
         json_out, csv_out = OUT, CSV_OUT
-        label, log_as = "", "issue_alignment_check"
+        label, log_as, log_dir = "", "issue_alignment_check", None
 
     if args.limit:
         js = js[:args.limit]
@@ -380,7 +384,7 @@ def main():
         res = {**(lib.read_json(json_out, {}) or {}), **lib.read_shards(SHARDS)}
     elif args.control:
         res = {}
-        run(js, res, res.__setitem__, log_as, args.parallel)
+        run(js, res, res.__setitem__, log_as, args.parallel, log_dir)
     else:
         res = lib.read_shards(SHARDS)
         run(js, res, lambda k, v: lib.write_shard(SHARDS, k, k, v),

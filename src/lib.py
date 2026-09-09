@@ -771,13 +771,16 @@ def schema(name):
     return json.loads((PROMPTS / f"{name}.schema.json").read_text(encoding="utf-8"))
 
 
-def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(), **fields):
+def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(),
+        log_dir=None, **fields):
     """One stateless call. Returns the parsed answer, or None if it did not land.
 
     `more` continues the conversation instead of starting a new one — the top-up
     needs this, since "you missed these" only means anything if the model can
     see what it already said. `log_as` names the log directory when one prompt
-    serves two experiments whose logs must stay separate.
+    serves two experiments whose logs must stay separate, and `log_dir` puts
+    that directory somewhere other than `output/llm_logs` — which is what a
+    diagnostic run needs, so it leaves nothing in `output/` at all.
 
     The document goes first and the instructions after it, so a rule sits beside
     the text it governs rather than tens of thousands of tokens above it.
@@ -792,7 +795,7 @@ def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(), **field
     p = prompt(name, **fields)
     a = _stream(name, model, effort, p, more)
 
-    d = LOGS / (log_as or name)
+    d = Path(log_dir) if log_dir else LOGS / (log_as or name)
     d.mkdir(parents=True, exist_ok=True)
     # The document is NOT stored. It is the numbered corpus text — several
     # hundred KB a call, many times everything else in the log put together —
