@@ -87,13 +87,45 @@ usually lower risk; a short phrase like `Free land` can be high risk.
 
 #### Assigning the type
 
-Ask **where the trouble lies**, not how you came to notice it. Where a defect
-genuinely sits across both, give it the type the dispute would most likely turn
-on. Three things that are easy to get backwards:
+Ask **where the trouble lies**, not how you came to notice it. One test settles
+most of it: **suppose the other provision did not exist — would this one still be
+in doubt?**
 
-- **The evidence you cite does not decide the type.** Pointing out where else a
-  term appears is ordinary support for an ambiguity. An issue stays type 1
-  however many cross-references it takes to demonstrate.
+- **Still in doubt — type 1.** This provision cannot be pinned down on its own.
+  The other provision is what one side cites to argue for its reading: evidence,
+  not the source of the trouble.
+- **No longer in doubt — type 2.** Read alone, each provision says something
+  definite. Setting the two side by side is what creates the problem.
+
+Put the defect into a question and count what is in doubt. **"Does this mean (a)
+or (b)?" is type 1** — one piece of text, two rival readings — and it stays type 1
+when (a) and (b) differ only in how this provision meets another section. **"Which
+of these two controls?", or "what do the two mean once read together?", is type
+2** — two pieces of text, each definite, one question about the pair.
+
+The same line shows in how a court would have to write the point up. **A
+relational defect makes a court reach for a canon**: it has to harmonize the two
+provisions, give effect to every provision, avoid rendering one of them
+surplusage or meaningless, or hold them irreconcilable and say which controls.
+Those moves mean nothing unless two texts are in play. **An intrinsic defect
+makes a court reach for no canon at all** — it quotes the word or phrase and sets
+out the two readings the parties press for THAT language. So ask which write-up
+your issue would need. Needs a canon, and names the other text: type 2. Needs
+only the quotation and the two rival readings: type 1.
+
+**Words that settle nothing either way:** `ambiguous`, `plain meaning`, `ordinary
+meaning`, `reasonable interpretation`, `read together`. A contract is called
+ambiguous as readily because two sections will not sit together as because one
+word carries two meanings, and any two provisions can be described as read
+together — including the two readings of a single phrase. Never let one of these
+decide a type.
+
+Where a defect genuinely sits across both, give it the type the dispute would
+most likely turn on. Three things that are easy to get backwards:
+
+- **Naming another provision does not make it type 2.** An ambiguity often has to
+  be shown by pointing somewhere else, and that is ordinary support for it. Apply
+  the test instead: does removing that provision remove the doubt?
 - **A term used inconsistently across the contract is normally type 1.** The
   defect is that the term was never pinned down; name the term.
 - **Type 2 is not only direct conflict.** A provision whose meaning only settles
@@ -155,9 +187,15 @@ that the provision is unsound.
 
 #### The three fields of an issue
 
-- `issue` — two sentences naming **this specific defect**. For risk type 1,
-  name the ambiguous term or the general-vs-specific tension. For risk type 2,
-  **name the other part of the instrument** this one has to be read against.
+- `issue` — two sentences naming **this specific defect**, written the way a
+  court's holding on it would read.
+  - **Type 1** — quote the word or phrase, then give the two readings: *the
+    phrase `X` was disputed as to whether it meant A or B*. The quotation and
+    the pair of rival readings are what make the entry specific; without them it
+    is a topic, not a defect.
+  - **Type 2** — name the other part of the instrument, then say what the pair
+    leaves unsettled: *`X` had to be read together with `Y` to determine whether
+    Z*, or *`X` cannot be squared with `Y`*.
   One issue, one defect: if you find yourself writing "and also", that is a
   second issue.
 - `type` — `1` if the trouble is inside this provision's own words; `2` if it

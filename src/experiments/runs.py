@@ -4,10 +4,6 @@ The dataset rows an experiment is given, the `preds.csv` row it produces, and
 the scoring both sides agree on. Shared, so the run and everything that reads
 its output cannot disagree about what a column means.
 
-There was a second arm — a one-shot LLM API call per contract — that this file
-was carved out of when that arm was retired. Only the agent run remains; the
-history is on `2026.9.3_legacy_multi_issue_experiment`.
-
 Imported by:
     risk_detect_agent.py      the run
     compare_risk_detect.py    scoring one or two runs
@@ -211,10 +207,12 @@ def court_excerpt(comment, terms, cap=700, floor=300):
     because a passage that argues about a clause quotes it; plus a smaller
     weight on words that mark a contest, so the excerpt lands on what was
     disputed rather than on the holding; minus citations, which is what
-    separates the argument from the recital of law around it. Cue words alone
-    were tried first and chose boilerplate twice out of three: a standard-of-
-    review paragraph is the densest "ambiguous … construe … interpret" text in
-    any opinion and is about no provision at all.
+    separates the argument from the recital of law around it.
+
+    Vocabulary overlap has to carry most of the weight: a standard-of-review
+    paragraph is the densest "ambiguous … construe … interpret" text in any
+    opinion and is about no provision at all, so cue words alone select
+    boilerplate.
     """
     text = (comment or "").strip()
     if len(text) <= cap:
@@ -241,21 +239,21 @@ def court_excerpt(comment, terms, cap=700, floor=300):
     return text[best[1]:best[2]].strip() if best else text[:cap]
 
 
-# The three worked contracts, named outright. One carries only risk type 1, one
-# only risk type 2, one both — the third shape had no instance at all before,
-# and it is the one that shows a contract failing in two different ways.
+# The three worked contracts, named outright rather than derived by a rule.
+# One carries only risk type 1, one only risk type 2, one both — between them a
+# contract failing in one way and in several.
 #
-# Named rather than derived. Every scoring rule tried here — shortest opinion,
-# cheapest per defect taught, fewest provisions, smallest share of the
-# evaluation set — picked a different three, and none of them expressed what
-# actually makes a contract worth teaching from. These were chosen by reading
-# them: short enough to show whole, every recorded defect carrying the court's
-# own words, and opinion passages short enough that three of them do not crowd
-# out the contract being judged.
+# What makes a contract worth teaching from does not reduce to a score. These
+# were chosen by reading them, against three requirements: short enough to show
+# whole, every recorded defect carrying the court's own words, and opinion
+# passages short enough that three of them do not crowd out the contract being
+# judged. `load_examples` checks the kind each one is filed under, so a rebuild
+# that changes what a court construed in them fails loudly rather than teaching
+# the wrong shape.
 EXAMPLE_CONTRACTS = {
     "type1": "562FSupp2d260_settlement_agreement_the_agreement",
     "type2": "118FSupp3d802_membership_agreement",
-    "mixed": "252FSupp3d52_guaranty_agreement",
+    "mixed": "299FSupp3d836_comcell_assignment",
 }
 
 
