@@ -87,10 +87,23 @@ usually lower risk; a short phrase like `Free land` can be high risk.
 
 #### Assigning the type
 
-Ask **where the trouble lies**, not how you came to notice it. Where a defect
-genuinely sits across both, give it the type the dispute would most likely turn
-on. Three things that are easy to get backwards:
+**Start with the words of this provision.** Can you point at a word or phrase
+**in it** that is the centre of the dispute — one that could be read more than
+one way, or whose reach is unclear? If you can, that is **type 1**, and naming
+that word is what the `issue` entry should do.
 
+Only when this provision's own words are not in doubt does the question become
+relational. Where a defect genuinely sits across both, give it the type the
+dispute would most likely turn on.
+
+Four things that are easy to get backwards:
+
+- **What a defect DOES does not decide its type.** A phrase whose reach is
+  unclear almost always shows its effect somewhere else: it decides how this
+  provision meets another section, an exhibit, an amendment. That is what an
+  unclear phrase does, not what is wrong with it. If the sentence you would
+  write names a word **of this provision**, it is type 1 — even when the
+  sentence goes on to say what that word does to another section.
 - **The evidence you cite does not decide the type.** Pointing out where else a
   term appears is ordinary support for an ambiguity. An issue stays type 1
   however many cross-references it takes to demonstrate.
@@ -98,7 +111,8 @@ on. Three things that are easy to get backwards:
   defect is that the term was never pinned down; name the term.
 - **Type 2 is not only direct conflict.** A provision whose meaning only settles
   once the contract is read as a whole is type 2 even when nothing contradicts
-  it. Two provisions that cannot both be given effect are one way in, not the
+  it — but only where the difficulty cannot be traced to a particular word
+  here. Two provisions that cannot both be given effect are one way in, not the
   only one.
 
 #### Reading the worked examples
