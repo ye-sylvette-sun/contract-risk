@@ -125,9 +125,16 @@ def main():
         print(f"  ! {len(blank)} returned no judgment ({n_pos} positive) "
               f"-- counted as not flagged")
 
-    # 0.00, 0.01, ..., 1.00 — evaluated at every 0.01; consecutive points are
-    # joined by line segments, which softens the staircase a little
-    thresholds = [i / 100 for i in range(101)]
+    # 0.01, 0.02, ..., 1.00 — evaluated at every 0.01; consecutive points are
+    # joined by line segments, which softens the staircase a little.
+    #
+    # Zero is left out on purpose. `s >= 0` is true of a provision the model
+    # scored 0, so t=0 flags the whole contract and posts recall 1.0 — a point
+    # no reader would operate at, drawing a vertical drop at the left edge that
+    # has nothing to do with the model's ranking. Where the ceiling matters it
+    # is the t=0.01 value: the recall available once silence is taken as a
+    # prediction of "not risky".
+    thresholds = [i / 100 for i in range(1, 101)]
     panels = []
     for title, score_of, is_pos in TASKS:
         scored = [(score_of(r), is_pos(r)) for r in rows]

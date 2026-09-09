@@ -252,9 +252,23 @@ def court_excerpt(comment, terms, cap=700, floor=300):
 # them: short enough to show whole, every recorded defect carrying the court's
 # own words, and opinion passages short enough that three of them do not crowd
 # out the contract being judged.
+#
+# The type-1 example teaches FOUR defects to the type-2 example's two, so the
+# three together run 5 type-1 to 3 type-2. Gold runs 2.3 to 1 (149 type-1
+# defects against 65), and a set of examples weighted the other way is one
+# suspect in the type-1 recall ceiling of 0.66 measured over 30 contracts —
+# a third of type-1 gold provisions never got a type-1 entry at any
+# probability. Suspect, not cause: the type test and the widened type-2
+# definition changed in the same round and would explain it equally well.
+#
+# The type-2 example teaches ONE defect for that reason, not because a
+# richer one was unavailable. Its two construed provisions carry the same
+# defect on both, so it shows one defect appearing twice rather than two
+# defects — a real shape, but not the one the mixed example already covers.
+# Its opinion passage is 274 characters, the shortest in the corpus.
 EXAMPLE_CONTRACTS = {
-    "type1": "562FSupp2d260_settlement_agreement_the_agreement",
-    "type2": "118FSupp3d802_membership_agreement",
+    "type1": "20FSupp3d709_nols_student_agreement_including",
+    "type2": "364FSupp3d990_the_2010_agreement",
     "mixed": "252FSupp3d52_guaranty_agreement",
 }
 
