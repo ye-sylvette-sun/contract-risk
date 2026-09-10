@@ -66,6 +66,18 @@ C_RECALL = "red"
 C_FLAGGED = "green"
 INK2 = "#52514e"
 
+# The two threshold figures are read as a pair, so their panels have to be the
+# same size on the page. `tight_layout` sizes them from whatever is left after
+# the header, and the headers differ — a two-row legend in one, a one-row legend
+# in the other — which silently made one figure's panels 6% shorter than the
+# other's. The box is therefore fixed here and the header drawn above it, with
+# the same numbers in both scripts. Changing one without the other reintroduces
+# the mismatch. `bbox_inches="tight"` is likewise not used: it crops to the ink,
+# so the saved canvas would again depend on the header.
+PANEL_BOX = dict(left=0.075, right=0.985, bottom=0.075, top=0.78,
+                 wspace=0.20, hspace=0.28)
+Y_TITLE, Y_SUBTITLE, Y_LEGEND = 0.985, 0.945, 0.932
+
 FLAG_DEFAULT = 0.5
 
 
@@ -183,10 +195,10 @@ def main():
     axes[1][0].set_ylabel("% of clauses flagged", fontsize=10)
 
     fig.suptitle(f"{run_title} — precision, recall, and flag rate across "
-                 f"risk-flagging thresholds", fontsize=14, x=0.5, y=0.985)
+                 f"risk-flagging thresholds", fontsize=14, x=0.5, y=Y_TITLE)
     # No "Exp 3" here: the experiments were renamed off those indices, and a
     # figure is the last place a stale one should survive.
-    fig.text(0.5, 0.935,
+    fig.text(0.5, Y_SUBTITLE,
              f"{subtitle}  ·  "
              f"{len(rows)} clauses from {n_contracts} contracts  ·  "
              f"the two risk-type panels are one-vs-rest",
@@ -196,13 +208,13 @@ def main():
                    label="Precision"),
         plt.Line2D([], [], color=C_RECALL, linestyle="--", linewidth=1.5,
                    label="Recall"),
-    ], loc="upper center", bbox_to_anchor=(0.5, 0.925), ncol=2, frameon=False,
-        fontsize=10, labelcolor=INK2)
+    ], loc="upper center", bbox_to_anchor=(0.5, Y_LEGEND), ncol=2,
+        frameon=False, fontsize=10, labelcolor=INK2)
 
-    fig.tight_layout(rect=(0, 0, 1, 0.925))
+    fig.subplots_adjust(**PANEL_BOX)
     os.makedirs(FIG_DIR, exist_ok=True)
     out = os.path.join(FIG_DIR, fig_name)
-    fig.savefig(out, facecolor="white", bbox_inches="tight")
+    fig.savefig(out, facecolor="white")
     print(f"-> {out}")
 
 
