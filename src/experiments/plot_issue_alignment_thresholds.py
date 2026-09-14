@@ -23,6 +23,11 @@ once. Dropping the alignment test would leave no way to say which defect an
 issue reached, so that variant is not drawn here — scoring a provision without
 regard to the reason is what the risk-detection figure already does.
 
+Above the highest probability the model assigned, nothing is flagged and
+precision is 0/0. The curve holds its last defined value there rather than
+inventing one: the tail is flat because there is nothing left to score, and
+the height it stops at is the precision of the last issues standing.
+
 **Null-text entries are excluded from the universe.** An entry with `issue:
 null` states a probability without naming a defect, so it can never be right for
 the right reason and scoring it here would only dilute the denominator.
@@ -131,7 +136,8 @@ def sweep(items, n_gold, n_clauses, thresholds):
     """(precision, recall, issues per clause).
 
     Recall counts DISTINCT gold issues matched, so two issues that name the same
-    defect are one hit.
+    defect are one hit. Where the threshold leaves no issue at all, precision
+    is 0/0 and holds its last defined value.
 
     The bottom row is issues kept per clause, not a percentage of the issues
     named: what a reviewer actually carries is the count per provision they
@@ -142,7 +148,7 @@ def sweep(items, n_gold, n_clauses, thresholds):
         f = [i for i in items if i["prob"] >= t]
         found = {i["matched"] for i in f if i["matched"]}
         tp = sum(1 for i in f if i["matched"])
-        prec.append(tp / len(f) if f else float("nan"))
+        prec.append(tp / len(f) if f else prec[-1] if prec else float("nan"))
         rec.append(len(found) / n_gold if n_gold else float("nan"))
         flag.append(len(f) / n_clauses if n_clauses else float("nan"))
     return prec, rec, flag

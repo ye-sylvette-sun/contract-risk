@@ -104,14 +104,19 @@ def load(preds):
 
 
 def sweep(scored, thresholds):
-    """(precision, recall, flagged %) per threshold; NaN where undefined."""
+    """(precision, recall, flagged %) per threshold.
+
+    Where the threshold flags nothing, precision is 0/0 and holds its last
+    defined value — the tail is flat because there is nothing left to score.
+    Recall is NaN only when a panel has no positives at all.
+    """
     n = len(scored)
     n_pos = sum(1 for _, y in scored if y)
     prec, rec, flag = [], [], []
     for t in thresholds:
         tp = sum(1 for s, y in scored if y and s >= t)
         fl = sum(1 for s, _ in scored if s >= t)
-        prec.append(tp / fl if fl else float("nan"))
+        prec.append(tp / fl if fl else prec[-1] if prec else float("nan"))
         rec.append(tp / n_pos if n_pos else float("nan"))
         flag.append(100.0 * fl / n)
     return prec, rec, flag
