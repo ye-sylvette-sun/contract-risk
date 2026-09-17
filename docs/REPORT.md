@@ -12,7 +12,7 @@ harness          one container per contract, contract-risk-judge:0.2.139
                  sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec
 auth             CLAUDE_CODE_OAUTH_TOKEN (subscription), never an API key
 evaluation set   84 contracts, 9,890 provisions, 3 example contracts held out
-gold             163 construed provisions, 225 recorded defects
+gold             163 construed provisions, 213 recorded defects
 cost             $169.47 at API-equivalent rates, 0 failed sessions
 ```
 
@@ -66,7 +66,7 @@ named, is it one of the defects recorded for that provision?
 ```
 209 issues judged over 161 provisions
  69 aligned  =  33.0%
- 69 distinct gold defects matched, of 225 in the corpus
+ 69 distinct gold defects matched, of 213 on the provisions judged  =  32.4%
 ```
 
 **The control is the number to read this against.** Re-pairing every issue with

@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "dfa89116b321dcbd90f51e80d110ce3f6e3e5f32dbc80564ea7f2cacf860ea34",
+  "document_chars": 5875,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2778,
+    "input_tokens_details": {
+      "cache_write_tokens": 2775,
+      "cached_tokens": 0
+    },
+    "output_tokens": 237,
+    "output_tokens_details": {
+      "reasoning_tokens": 68
+    },
+    "total_tokens": 3015
+  },
+  "response": [
+    {
+      "id": "rs_0d9c2e9d415e2a06006aab71f2c75c87d0a507a5374d66bddf",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqq3H2ToMW4TCSzLZ1MuaoXmu8ZaGfdLn1Q0c3iW49Bszt1RWL-uz8YxnJCivNoY0RE17w_vJFDq8fx4df-V78m66dyuF-2IhnhlbPGw0G1kD5-G0xPEh8qEr49ldGqzzL9y9d1retJG0aqM8bSuHZ5gIu_lTsmsA2u0Lm9LvYrtJNfOXE3Uf49rEV_eDfn7d5O5pzJxgO-Hxdl2x5hAoZw12-sAq3P2D7yIJg4p0OVqSFlErnnR4ar8Qc9RZiFmY5xHJYPk9Zt0Q49kb0UMJeioYTu36pyGf0pyJTjWLLLDJwjxRjW9PQNC_g9AIlv56L04sEGT40A6sLOrT8If7w_D08KL-667Pj75KbbI1vzp_L0Mlbe81nnR7ewD10Pojv6b8J1m7a6Vk1lbXBAdSRroEqcPE4JxG9x7kPLfAAqczSaixCwEoZuN6EoMMIpHuRNkRLrys8e1GyzF6jFrMpkplTEALlhhvjecRULMFVrhCvP1d_rFXSAL_PmAcJCc-W6Hp2sUIBukUuqiVL20fLlM2u8oeTxaYwTRXBck_63BEf68Q4yqQ24SRWkZnxG3OcRxmqkUm8DAh-JAMifX-CyLgDnktqnx1LygXx3SUP_Ihw54zNKw28y0Ty5JRJAKgsgtX5fXVY76Ms3LaqCuG-odx0NmhlORGTWh574YtcAFsJv0ZUyWr0bStKEvTHsAaTw7FjNHuBxAZh0Gua_n-jcWaaV7EialRgAhDMDrQ4_ryZPz3p9Xezbu5cnR0NrDd_7JkLrzOgCR_6jiorKaCrQbcWBD_dsOGdNRMWSGP4zOGKLofijRJIukLbdFtbV1cQ_yEpLH6MDpPueUzmZGa57MBq7BNAMLaiLlxzbhLg3BXiRxFDAabAZxXuHYdroo9BL1f1MrijFpUWmC5psvAxg9Us6Sxq0RlvU8EgdxlhJNPZbvyXEePvRi5ILN2g_Y3U0-EGFtW8AyWyQkcjcCVTU3o-F6rXHSDXIe7CL6NdGHso2TivbSVLr-qNKowTZjjwRdq4ghJ8sR5Sz9ZpKhDBaoCFmYHjwFVkPPVboDubsK4hsG4GEqYpatsIj3E9kpIgHNCqDAR1e22U5gSDjAnlRD4nYmGDzgdiG79QuFGPbtplR9B7MKF8D9q3rffvo6Do864Pf3LieFnRpEpLQ-pXeBqP7W0YDE1sKa9zkPngUai17ngVYgAyfQ7bmEyu0atgYkExMTPjcIe8u9uBiX8Js4nvTNcY_9-5Or1jl6-uats_kTcBkWe2c3L0YjtficNHLdnNhzLP5s_D6MePO0ndrv6ZQJz3L50iPl4uhqium9TsAHVyXPXRvEnOBZUYWiOXbXk2mFOZVAxRDE3Peg89Ciao1ZACgVIRNf2fX533ZvBXaF4bJjhdhV3b9q5x_GNqKl13Ae6DlAB_Xs6dHEzFxwO1W4ie9JsofVFGL3mHCaNFeJWOMPXwgz1mjxS79luiyTYUG2OQKwjxkW0PtvMxUnXO18xVWSzHEUAQkZ1qxTWklXOGZg-EyyQ6iYaR1Dq_9RezEzgDBpY6fZ2RwFgkISqL6lEglGMIAmUMHhDJskfXx2w=",
+      "status": null
+    },
+    {
+      "id": "msg_0d9c2e9d415e2a06006aab71f3d0a487d091fc83f78f8cd1ff",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns the scope of an exclusivity-of-remedy phrase that does not appear in this provision. The recorded defect instead concerns whether Section 10’s reference to representations or warranties “set forth in this Section 10” incorporates Accredited’s warranties in Exhibit 8 and therefore triggers MSMC’s backstop obligation.\",\"words_at_issue\":\"The proposed issue is about the phrase “sole and exclusive remedy under this Agreement or otherwise,” which is absent from the quoted provision. Candidate g1 is about “a representation or warranty set forth in this Section 10 made by Accredited” and its interaction with the cross-reference to the Accredited Assignment, Assumption and Recognition Agreement in Exhibit 8.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

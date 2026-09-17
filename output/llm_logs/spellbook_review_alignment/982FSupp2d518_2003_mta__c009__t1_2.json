@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "43f4d5f83f8cc44a38c36808a4e62b2cb645617f44d878524e0cd392dc60539a",
+  "document_chars": 6060,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 2938,
+    "input_tokens_details": {
+      "cache_write_tokens": 2935,
+      "cached_tokens": 0
+    },
+    "output_tokens": 262,
+    "output_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "total_tokens": 3200
+  },
+  "response": [
+    {
+      "id": "rs_0086646eae54977b006aab71f7315087d09c40b4496772d6f8",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqq3H75w0OFAERoP_oQq0Jf3APBkLcr42GsaRPCME-cwLaDXEpMb3BzX-KP9gtgGXQgNWn8xbBOatiyAM2hU3sqFxYmd28Gnm0FzTuTvxSq_rLLcPMJ1np-kkTG3SpXWA3LB_CvsG8YlS4zib_tRUR3L1wUhYZddr_OlJ9S-fNxwXmC-H-lT-zrRXj9wXiZjK9eOldiXwYbsoFxx-v2Tc_LHqytizQX8WHqSVzjg9uFMt9bmAAxtL4oQLe-9BaHcAOp7b9-zxSpmWrDKT1L4cZWKYLaqZumKzQQTCHYads-FC6qvShn6aaOuv6wTsQ0g_yP7trNB9flfk3nKtLavlV5myjU1vGLGu5CquWEXhy1VtXylzmTRiNj6m6tcKJGdnTxrRR-iIuzWy4BSI_CS3xsPMEmTczvTd7sz4ePwhE_UIWwSVFEW-tsZRy14qGIqnnIgPw0PiPoAuEPN_vcaXj2nihGqhlvEB0t_Uz6gwXGaNy9qd_Q8JquT2nOU4wkM5hN9sG26LdWtnh88XOvaKA-KAuv5sMeY5ksRSuhgd5oAjMKU-4knXg34isr7uRwDsZ3Ntd4quMGsAasA96tUp9go1WmLeRDCdOB171qP5_y_dwliCJqDd8qR9RYEh2SL2MVk31--dQoyoT2r4qZ6D2tbdr7alMrSkhdRHv2oxPtJLWz7eKYeVQIBsqKXsy-jFkaLE7Ta9jIvdFT84eWipnNgBmHWzgmEXu_AZr8FJTi7O_cWGPn-jFE5fzcE6jb_97Q2fym-aviNX1obHTXlfxm1u6iDMaaNszA3OM5I9vepCMFhaqhB19OqHY6qx-8o_d3Wu2IywpOhYToKHsPVfk6Cw3QjhSTVlY4YLDFukkTssEHhZ_qHUZN_5sOOAnJOMm_6h_mlBFyfin-pxoPVURJrMjlzB3S-g_vs-UXJIbruzrPeSWfA9uQEKmsLzXQ4iZTnlicrUkt2AzAR-px4IVtwNnObpSBAcsLSfQ3GQuBCv7GjOOjEeRNeBpr_8oVwvMfm4eEhnq72D1NfYP02DXQB21PQED2oKjWV-hwzCapTNLm4CdDZBlvckcNI-K8qeriqmPXUSU17eGhZdzkYxPJ67c-8svca9yxutfE5ZeQXmg0B3NgwMn2r9uUGi1uVT89P6S518DjJ8NKjK1NdbMY96RsqNKl8MwqObzXBR-U1zVlHlRzWiwpvSzh49TBsmdGeFOvLinYtNYgyDYX5fGUr1PIAhInF1JzqSwMOznv95hljq35uGuEUaUla34N4fRWeX-OBrEDfrzdcfN-Hukws0OX1KFaIjUGBQ8zygPJOYTz8LmEOjSiQNZH6kQzecSWbA6mW8pdiKxWgmJcK1MKNMFg2tJyOHIw54E6WJY-HGO2h1BSkqBQV7E-HsoGStIrd_0KYU7O_b1bgOebZjiOUkJu2DuyWFvxFDIM70CdeqFbn0txlBZ3AHmMIHyIqH7cBNf8PrvPQTIDP_zjWtrV_4logVPEy543MJKCajgFjX2T1YLOC3Qf-s8Nz40lEWDtA0RZ_AXsDfKrGBX1HNMhAIEsqn__MIT78rntdr36U4a27llfgePzLjvQlmR4i-GcvI37oU8kB9qv8fdab62IYsHlE7e93jW49prQ_EcQkI9w4g9KHC6F-fiwMgLZPJnnRXZMqQgFRZNzC4Z_Sl1rWkxDoEhDMxBV5yu1Y4CjPEneWaviOgUCowqW5Rltv_r7IyfGyhfUwVrbYOGE1XIeZ_u00UAOQ_ugGe9HApj9sO5J7DtCAmpVt4siXJtOhTkcM6IW9oSk1L2xfI5iaJK8V4eCcVPdKhI_6cMbaiLqT8EI11xpS4Yhjpv6n0gEqTaGOa-PqHFGtwEtnA3oT60YzFbsJGyXoMJPBvzkicdbDTaW0M=",
+      "status": null
+    },
+    {
+      "id": "msg_0086646eae54977b006aab71f8d45087d0a9359e4186a7b8a1",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"The proposed issue concerns the scope of inventions licensed to St. Jude, whereas g1 concerns whether a modified sequence qualifies as Material contained in a commercialized product. Although the passage mentions Penn’s rights in newly created substances, the recorded defect addresses different contractual words and a different boundary.\",\"words_at_issue\":\"The proposed issue turns on “any inventions that arise from the use of the Materials,” specifically whether “arise from” includes inventions chiefly attributable to UPenn’s own contributions. Candidate g1 turns on “product that contains Material,” together with the definition of Material, and whether copied-and-modified sequences must include a physical part of the transferred construct.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

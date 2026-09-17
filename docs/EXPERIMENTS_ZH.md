@@ -166,7 +166,7 @@ recall 天花板是阈值取 0.01 时可得的 recall —— gold 条款中拿�
 | | |
 |---|---|
 | precision | agent 说出的 issue 中，有多少说的是法院真正解释过的缺陷 |
-| recall | 语料中 225 个缺陷里，agent 找到了多少 |
+| recall | agent 评过的条款上共 213 个缺陷，它找到了多少 —— 三个 worked example 被持出，其 12 个缺陷不计入分母 |
 
 **判官是 `gpt-5.6-sol`，effort high** —— 刻意不使用被评模型所属的家族。
 

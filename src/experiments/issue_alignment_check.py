@@ -22,8 +22,9 @@ provision, each with its own passage, so both sides of the count are defined:
 every gold defect of that provision is a candidate. An issue on a provision no
 court construed is out of scope: there is no passage to check it against.
 Precision is therefore conditional on the provision being right; recall is not
-— it is over every gold defect in the corpus, including those on provisions the
-agent said nothing about.
+— it is over every gold defect on the provisions the run judged, including those
+the agent said nothing about. A defect on a provision the run never saw (the
+worked examples are held out) is not in the denominator.
 
 **Risk type plays no part.** The judge is shown neither side's type, and a
 candidate is not filtered by it. The dataset's type labels come from the case's
@@ -39,10 +40,19 @@ real rate has to be read against, so run one before believing any number here:
 
     python src/experiments/issue_alignment_check.py --control case --out DIR
 
+Any run that wrote predictions in the agent's format can be judged the same
+way: `--preds` names the file and `--name` the outputs (`output/<name>.json`,
+`output/<name>.csv`, shards and logs under the same name). Every run is judged
+under the one prompt, so the numbers are comparable; the Spellbook comparison
+gets there by restating its issues in the dataset's form first
+(`spellbook_review_types.py`), not by changing the judge.
+
 Usage:
     python src/experiments/issue_alignment_check.py                 # the real run
     python src/experiments/issue_alignment_check.py --parallel 8
     python src/experiments/issue_alignment_check.py --report        # score what exists
+    python src/experiments/issue_alignment_check.py \
+        --preds output/spellbook_review_preds.csv --name spellbook_review_alignment
 """
 import argparse
 import concurrent.futures as cf
@@ -60,11 +70,10 @@ csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 
 MODEL = lib.MODEL          # gpt-5.6-sol — NOT the family being judged
 EFFORT = "high"
+PROMPT = "issue_alignment_check"   # the strict, sentence-against-sentence check
 PREDS = lib.OUT / "risk_detect_agent_preds.csv"
 DATASET = lib.OUT / "dataset.csv"
-OUT = lib.OUT / "issue_alignment_check.json"
-CSV_OUT = lib.OUT / "issue_alignment_check.csv"
-SHARDS = "issue_alignment_check"
+SHARDS = "issue_alignment_check"   # the default --name; outputs are output/<name>.{json,csv}
 
 FIELDS = ["job_id", "contract_id", "clause_id", "citation", "clause_name",
           "taxonomy", "taxonomy_provenance", "type", "prob", "issue",
@@ -116,6 +125,12 @@ def jobs(preds, dataset):
 
     Keyed on (contract_id, clause_id, type, ordinal) so a provision carrying two
     issues of one type yields two jobs that cannot collide in the shard store.
+
+    Type 0 is an issue the run raised that is not a construction risk at all —
+    the agent never writes one; Spellbook's review does, and a pass classifies
+    them. It gets no job: it counts as an issue the run raised and is never
+    aligned, since the dataset records only what a court construed and a
+    commercial worry cannot match that except by accident of wording.
     """
     gold = gold_issues(dataset)
     by_clause = {}
@@ -189,7 +204,7 @@ def scramble(js, mode="corpus", seed=0):
 
 
 def judge(job, log_as, log_dir=None):
-    a = lib.ask("issue_alignment_check", job["job_id"], effort=EFFORT,
+    a = lib.ask(PROMPT, job["job_id"], effort=EFFORT,
                 model=MODEL, log_as=log_as, log_dir=log_dir,
                 citation=job["citation"], contract_id=job["contract_id"],
                 clause_name=job["clause_name"], clause_text=job["clause_text"],
@@ -280,7 +295,7 @@ def report(res, threshold, n_gold, n_reachable, label=""):
     # measure, and that is a risk-detection miss, not a wrong reason.
     if n_gold:
         print(f"\n  RECALL     {len(found):4d}/{n_gold:<4d} = "
-              f"{len(found)/n_gold:6.1%}   of every gold issue in the corpus")
+              f"{len(found)/n_gold:6.1%}   of every gold issue on the clauses judged")
     if n_reachable:
         print(f"    reachable only          {len(found):4d}/{n_reachable:<4d} = "
               f"{len(found)/n_reachable:6.1%}   (gold issues this check could "
@@ -320,6 +335,10 @@ def write_csv(rows, path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--parallel", type=int, default=4)
+    ap.add_argument("--preds", default=str(PREDS),
+                    help="predictions file in the agent's format")
+    ap.add_argument("--name", default=SHARDS,
+                    help="name of the outputs, shards and logs")
     ap.add_argument("--limit", type=int, default=0, help="run only N jobs")
     ap.add_argument("--threshold", type=float, default=0.5)
     ap.add_argument("--control", choices=["corpus", "case"], nargs="?",
@@ -333,23 +352,28 @@ def main():
                     help="only issues already scored below X in the real run")
     args = ap.parse_args()
 
-    if not PREDS.exists():
-        sys.exit(f"{PREDS} does not exist — run the risk-detection experiment "
-                 f"first, then this")
+    preds_path = Path(args.preds)
+    if not preds_path.exists():
+        sys.exit(f"{preds_path} does not exist — run the risk-detection "
+                 f"experiment first, then this")
+    shards = args.name
+    json_out, csv_out = lib.OUT / f"{shards}.json", lib.OUT / f"{shards}.csv"
 
-    preds = list(csv.DictReader(open(PREDS, newline="", encoding="utf-8")))
+    preds = list(csv.DictReader(open(preds_path, newline="", encoding="utf-8")))
     dataset = list(csv.DictReader(open(DATASET, newline="", encoding="utf-8")))
-    gold = gold_issues(dataset)
+    judged = {(r["contract_id"], r["clause_id"]) for r in preds if r["ok"] == "1"}
+    gold = {k: g for k, g in gold_issues(dataset).items()
+            if (g["contract_id"], g["clause_id"]) in judged}
     js = jobs(preds, dataset)
     reachable = {c["key"] for j in js for c in j["candidates"]}
-    print(f"{len(js)} issue(s) with provision and risk type both matching gold, "
+    print(f"{len(js)} issue(s) on a provision the court construed, "
           f"over {len({(j['contract_id'], j['clause_id']) for j in js})} provision(s)")
-    print(f"{len(gold)} gold issues in the corpus, {len(reachable)} reachable "
-          f"by this check")
+    print(f"{len(gold)} gold issues on the {len(judged):,} clauses judged, "
+          f"{len(reachable)} reachable by this check")
 
     if args.rejudge_below is not None:
         prior = {r["job_id"]: float(r["alignment"]) for r in
-                 csv.DictReader(open(CSV_OUT, newline="", encoding="utf-8"))}
+                 csv.DictReader(open(csv_out, newline="", encoding="utf-8"))}
         js = [j for j in js if prior.get(j["job_id"], 1.0) < args.rejudge_below]
         print(f"  restricted to {len(js)} issue(s) scored below "
               f"{args.rejudge_below} in the real run")
@@ -374,22 +398,21 @@ def main():
         label = f" — DIAGNOSTIC: candidates from {where}"
         log_as = f"alignment_{tag}"
     else:
-        json_out, csv_out = OUT, CSV_OUT
-        label, log_as, log_dir = "", "issue_alignment_check", None
+        label, log_as, log_dir = "", shards, None
 
     if args.limit:
         js = js[:args.limit]
 
     if args.report:
-        res = {**(lib.read_json(json_out, {}) or {}), **lib.read_shards(SHARDS)}
+        res = {**(lib.read_json(json_out, {}) or {}), **lib.read_shards(shards)}
     elif args.control:
         res = {}
         run(js, res, res.__setitem__, log_as, args.parallel, log_dir)
     else:
-        res = lib.read_shards(SHARDS)
-        run(js, res, lambda k, v: lib.write_shard(SHARDS, k, k, v),
+        res = lib.read_shards(shards)
+        run(js, res, lambda k, v: lib.write_shard(shards, k, k, v),
             log_as, args.parallel)
-        res = lib.merge_shards(SHARDS, OUT)
+        res = lib.merge_shards(shards, json_out)
 
     # A control's recall is meaningless against the real corpus — its jobs were
     # deliberately paired with the wrong defects — so only precision is scored.

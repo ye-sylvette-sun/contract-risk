@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["judgments"],
+  "properties": {
+    "judgments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["ref", "type", "subtype", "issue", "reason"],
+        "properties": {
+          "ref": {
+            "type": "integer",
+            "description": "The issue's [n] number."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["type1", "type2", "none"],
+            "description": "type1: trouble inside the provision's own words. type2: trouble in how the provision stands with another part of the instrument. none: not a construction risk — commercial exposure, a missing protection, a drafting preference."
+          },
+          "subtype": {
+            "type": "string",
+            "enum": ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3", "none"],
+            "description": "The taxonomy sub-code; none when type is none."
+          },
+          "issue": {
+            "type": "string",
+            "description": "For type1 and type2 only, else an empty string. The tool's finding restated as the dataset records defects: one or two sentences, past tense of a dispute. Type 1 quotes the word or phrase and gives the rival readings; type 2 names the other provision and what the pair leaves unsettled. Every term, reading and provision named must come from the tool's own text or the clause's words — nothing added, no advice, no party's interest."
+          },
+          "reason": {
+            "type": "string",
+            "description": "One or two sentences: what the tool is worried about, and why that is or is not something a court would construe. For type2, name the other provision."
+          }
+        }
+      }
+    }
+  }
+}

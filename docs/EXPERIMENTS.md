@@ -439,7 +439,7 @@ one an issue found. Two numbers follow instead of one:
 | | |
 |---|---|
 | precision | of the issues the agent named, how many name a defect the court construed |
-| recall | of the 225 defects in the corpus, how many the agent found |
+| recall | of the 213 defects on the provisions the agent judged, how many it found — the three worked examples are held out, and their 12 defects are not in the denominator |
 
 Two issues that match the same defect count once.
 

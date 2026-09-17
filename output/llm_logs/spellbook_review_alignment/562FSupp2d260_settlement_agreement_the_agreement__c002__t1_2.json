@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "57c180fcd4d8e8396a1559ee3a2194edb4c9e2991dd991ead550b50baf4bcf5e",
+  "document_chars": 7918,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3218,
+    "input_tokens_details": {
+      "cache_write_tokens": 3215,
+      "cached_tokens": 0
+    },
+    "output_tokens": 302,
+    "output_tokens_details": {
+      "reasoning_tokens": 75
+    },
+    "total_tokens": 3520
+  },
+  "response": [
+    {
+      "id": "rs_0c8cf8fd8cab9461006aab71e2da7087d0af5519500c75ea4e",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqq3HnTYiza3yNjgeeNjUdUUpdQAbRfY0YZOt1dMm8yL_fEX7-IvyOJo_hOhQvpf2K_4cQ2TdO_RVeUdhFOEqfQKCLzgyw3hcLR80Gr8ZjsBwnrzku7-DW_Z0tlL9rzdTBP_Ul-oDFBCBClCeIIBKxtFSPVz79_vPIxSpA8Nz10Wq3brsgOT0PsbNDOye5EROZZDLkvYH77Kh4Hoyfo99Y4-Yd5XCNTu7Mn8BEyWtSHEWg5RoFULfhQwLbXX8V3dDF-DSWbBeuipIuUz_uXRG12k5zhfTSeNucrbb9rs21uXN5zRXEapah-imV0nzQsk3Z7v0C06-XsxfgrpGVXq2w16y6BaBKYPRbUIl_0YAVlSy3iKaGrbe2qedCDspDg6eORKds6Tp9uyXEgxnw4zymMdaUJCJOiUV9-_cw01d_zkKQMmrRgz5jTz4WxlIYdbFMPWSjjTj-looVq42a68bkdWWuxclqMIYYyiBNzmwxFZHTjqkKvjatKKQBABBFRhXgHfa-myLvUloXO-5qFnOiTAHNE3sPgX3x0ABdrztlf9btdOMW8nxd866nQ_7m1MhA8PvGzVDqIRwAcv86fdyvYzVK1hzZAettlYCBFXtLwnitg7cXWU-h-ZwDtBEL4lJxBkVlZubKXOrTskekHQbMY_ooKb-BJfyVOdw9C5eApXN4DcqbdGiQO5V7H08dNhDhGU8KofJ7055NAgUuhyMxTDdqVPA_HSBPhdoTWrz_Lo61spR9CXDXvpWWZtwyixyRJ-ZpJbaOzMgUlmjVyKpoQjlcud-2gBClTOy80KNNBcoMBy1NsKnKtmfbPbQX4prA2lFUCF5mOAohjDEopNeVkUY1Wg3bOZffzHrvf2szTchyuYjqsu3CrrD0Nz9LnTcieexUb4Ut-9EofkcpQrwzXE5cfHxIEcCzJRagnq9Oykaf55yE_t1C2QEBgD4O_hqZwlKgF_dMhzE9J5xC9g-RZMLuzE8b7a5FeNfuWZhMUpTRnW6dqiz8J7CU1LJrzdya1k221mGu68zj7mMLP75JJK5HhjIYPhLhMXC_H4HF_hPsbwDGWYNMzPHHUYHf-UsIPfmjSqWSKWqaGIdVN0O0topsMkF_lug5BGx9LrtylHDXoP6iaRzEL9kiAgZF7oZxqG1Cp0LD4VPhqYihd-sCiphUgyZIhKfLj7dCoGjDl-sasygbS6AVo3KFXFQbbLzXAYu-4XzWUdPunD1pjamZp3V6xE5hRGFBrjSnM11pBO82mXa8aPPu5mwrAFMx_FcRipIhCXnGIOFCDqb0mKHYyk19b6icahOe4-3QFOcOzWAYdcRMp422b1mjL_ovSSJqAUwRY6HRhfa6RM2ebvRpwqsJd50u1D9gSyUcW19U42y6jPGhx85tj2XysDlGbEQMoUeY6UKDTzI-0T2Y63ocGrgD0gdEADGzNTRmSbO8D268IvB5w_k9kA04tjCNWwexCvG_tAckriHJQX8P4bTfHoHFGCqaLUJXKNTLE1xmLDU34P1TpDR3AjBJNtx3Hi5BX6x4M2ynroyTnmj8dQpP0rBY7iomsb4mFHJdcy_2H1mhTccgsjfJGYQIz3z4f6oDXyIu2mliqGQlKQ1RPwnHRZpEerfvHVhC_sgfZnRayIMtDeFugwlkSAauxAxJbTcaXbjp",
+      "status": null
+    },
+    {
+      "id": "msg_0c8cf8fd8cab9461006aab71e4003c87d086c5d9ba55428c2d",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"None of the recorded defects addresses whether the electronic-publications identification falls within Class 9 or whether omission of an express class designation creates uncertainty. The candidates instead concern registration versus use, the agreement’s application to future ARGUS registrations, and the scope of the asset-management and investment-advice exclusion.\",\"words_at_issue\":\"The proposed issue turns on “Electronic publications” and the absence of a Class 9 designation, especially compared with the express “in Class 16” and “in Class 36” designations later in the provision. Candidate g1 concerns “amend the identification of goods and services set forth in the application to register PETROLEUM ARGUS” and the provision’s silence about use; g2 concerns the reference to the specified PETROLEUM ARGUS application and silence about future applications for other ARGUS marks; g3 concerns the exclusion “information concerning asset management and investment advice relating to stocks and bonds” and whether it covers stock-price and earnings reporting.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}

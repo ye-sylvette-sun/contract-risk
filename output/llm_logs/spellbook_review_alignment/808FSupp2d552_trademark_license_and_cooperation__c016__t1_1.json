@@ -1,0 +1,51 @@
+{
+  "system": "You compare a proposed reading of a contract provision against what a United\nStates federal court actually said about that provision.\n\nYou are not deciding whether the provision is well drafted, whether it is risky,\nor whether the proposed reading is clever. Those questions are settled or\nirrelevant. You decide one thing: **does one of the recorded defects below name\nthe same defect the proposed issue names?**\n\nYou are comparing two SENTENCES about one provision. Do not reason from what a\ncourt would probably have said, from the provision's general riskiness, or from\nyour own view of the drafting. If the material does not settle it, say so — that\noutcome exists precisely so that you never have to guess.\n\n**Judge the language, not the classification.** Neither side's risk type is\nshown to you, and it is not what you are measuring. One defect is often\ndescribed one way as trouble inside a phrase and another way as trouble between\ntwo provisions — that is two descriptions of one defect, not two defects. Ask\nwhich words of the provision each sentence is about and what each says is wrong\nwith them. Where those agree it is a match, however differently the two are\nframed.",
+  "document_sha256": "9b309fe76be51f9b72af7b44d5a3e93994e2b9352b485196da78d14d59724756",
+  "document_chars": 6566,
+  "instructions": "**Your job is to pick at most one candidate.** Set `matched` to the id of the\ncandidate whose defect is the same as the proposed issue's, or to an empty\nstring when none of them is.\n\n**What counts as the same defect.**\n\nThe candidate and the proposed issue must be about the **same defect in this\nprovision**: the same words, the same silence, or the same conflict with the\nsame other text — not merely the same provision and the same general category\nof complaint.\n\n**Start by naming the words.** For the proposed issue, and for each candidate,\nsay which part of the provision it is about — the term, the sentence, the\nsilence, the cross-reference it turns on. Two defects pointing at different\nwords are different defects however similar the complaints sound; two pointing\nat the same words, with the same complaint about them, are the same defect.\nThat comparison is the judgement.\n\nThe proposed issue does not have to be the court's main point, and it does not\nhave to be phrased as the candidate is. It has to name the same problem.\n\n**What does NOT count.**\n\n- A candidate about a different defect of this provision — a different term, a\n  different conflict, a different silence.\n- The proposed issue names a real weakness that no candidate covers and no\n  passage shows the court engaging with. A defect can be genuine and still not\n  be the one litigated. That is an empty `matched`, not a low-scoring match.\n- The proposed issue is so general (\"this term could be read more than one way\")\n  that it would fit almost any dispute about almost any provision. Vagueness is\n  not alignment: if you cannot point to the words in a passage it corresponds\n  to, it does not match.\n\n**Where two candidates could fit**, choose the one whose passage supports it\nmost directly, and say in `reason` that the choice was close. Do not split the\ndifference by picking neither.\n\n**Partial alignment is expected and is what the score is for.** Having chosen a\ncandidate, score how far the two are the same thing:\n\n- **0.8–1.0** — the same defect: both sentences point at the same words of the\n  provision and make the same complaint about them.\n- **0.5–0.8** — clearly the same underlying problem, but the proposed issue\n  frames it differently, or names one part of a defect the court treated more\n  broadly (or the reverse).\n- **0.2–0.5** — related but not the same: same provision and same general kind\n  of problem, but the specific defect differs.\n- **0.0–0.2** — unrelated. Prefer an empty `matched` to a score in this band.\n\nAn empty `matched` scores 0.0.\n\n**Quote to check, after you have compared.** `evidence` must be a span copied\n**exactly** from the passage of the candidate you chose — the words showing the\ncourt engaged with what that recorded sentence describes. Copy it character for\ncharacter, including any OCR damage. This is a check on the recorded sentence,\nnot the comparison itself: if nothing in the passage shows the court construing\nthis provision at all, the recorded sentence cannot be relied on and\n`determinable` is false.\n\n**When you cannot tell.** A passage is cut from the opinion by line range and\nmay begin or end mid-argument. Set `determinable` to false, and score 0.0, when\nthe recorded sentence cannot be checked against its passage at all. Do NOT use\nit merely because the answer is close, and do not use it because a passage is\nlong or covers several defects — that is ordinary, and the recorded sentence is\nstill what you compare against.",
+  "task": "Does one of the recorded defects name the same defect the proposed issue names?\nIf so, which one, and how closely?\n\nAnswer as JSON matching the schema. Name the words each sentence is about\nbefore you decide, and quote from the chosen candidate's passage to confirm it\nbefore you settle on a score.",
+  "provider": "openai",
+  "model": "gpt-5.6-sol",
+  "ok": true,
+  "refusal": null,
+  "truncated": false,
+  "why": "",
+  "usage": {
+    "input_tokens": 3097,
+    "input_tokens_details": {
+      "cache_write_tokens": 3094,
+      "cached_tokens": 0
+    },
+    "output_tokens": 225,
+    "output_tokens_details": {
+      "reasoning_tokens": 78
+    },
+    "total_tokens": 3322
+  },
+  "response": [
+    {
+      "id": "rs_0a1f1832e9b0385d006aab71eb60a087d0ac8a96dcde3a66c9",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqq3HumbHO0FtBStq4SOPlWV6T-ngYG2TBBVP_ni2p-mT-9hcrvPY4r659UWPOECQa35o5yVj6KcNBqOZYgKOTsHCPxCEGmCQArc6XSsWb-cDnraXKZ9mbJ624YtHyfb9F8rQTZh3Fla4Q_baUsQyrvY4nV0YPssjmoyuL9DhLF6pYUv6F7Z4m4tqI8XQJ1l7N8wvlkp9GHS5xy1LNfj3IhLiW0yJ8t-sZkQxDOnqhBYyf6tNxhzDhxXqPsdScFCDCv-F8cjt4RuTCWMpsq3iBiEG2bvBpA0e8GweBLVlHyaI3VUTyhAZ30JFl-Haz4rLtP27_VEDX8IB0tWSmkg6vYaWrfurlxugkp3ngHbluE3sBN3RuaPokYp0rHWxFn8ophatPVG8-XQ7so8zcaQj5_aBtsUpdJhSjqAuBPgWPC4uQ9ybFOclow2bpF-1tJ3VLCL_p-SbdVjo3CbqRWxYFaU32Hc9lWXlymXKRyWhrGXIKrgzsOupJjKjEv29UmwQ9vPl3yIJWIRJKO2y74QDlD_aIKvqAgOexdIMUlCCBJSithMfjj0LODcfdszTICi1GVaQFlPPfVDaGm0ULyhMLmNAdSxakC7TZy_HAtYQHlVRMp3xyLq_QM4aH5fAZwgIkcUBewvFzgo74G2EP3qKR3SGQ3Ou1srB9YZyVf9njJRSdUflttQnFciy6cYb4L9yvj0NDGdGMX0fCQhzDQMRBMYeWIv1yf6JMF31qJqnLWWSvkFq4Qtq5tKSrtJAcpu1bkSnzrfOEbGH3FdOr16DXrTB07s7Vr0YbTOyV5W7lVamSVHcRMz3Y2taBikBHI513glA7f5FnfRv2SQdH_qcCmajKDMo46vQOUtQQ8n29q2dmR6EGc0ZNRqZLKMxfRHNZSIzjaUNvMkUB3jvZihRsKLw3uVxK2En7kgJjoWj9TIkgXwoLJSrn_ih6b6mv7ylyM12TY0GCpWFjfOPCn88tjVysD_j2kst72CDxBQ4kGveCDOCXraAq9Qo8WJi94SGZpXEWGrI3aTzG2XfHkm-JE6DxHYGOmM0CgySK8HOwxV1ySPF4DoYixpJ9BxRzWOnD_KnGXl3Zp6zisDJ2xsd1BabGhcQRZn6GnOg78D6k7fne3nVVKlp8wCcgXglKlT9RA3rZ5SdzDVvASNbSRS4iFxyk7Y2UfbHPw5dAfL6U0hQX6TgPfDrrTuKLO8XF_Xagnp6BDn2AVUpe16eUsf-taJEq_-mZPO6uphsDEZJayeS-HOeCJEMR9hfJS-vQi16qIi7fU2V6glxZyZs7rv_WOqCOq5hHDNR3xlqEAyvAnVPerxkREsJLP2_uEp5bP0nIGT_Z9MnuyQc5pmDFukR1pM7FE-miXV6ephWo4dApKmYa_czSUOE3pdZ7NQu-1eOzs7ugBSnzA5YjpoIzJ-7DJwqOP7ZBtQdNxIYab6We_73Or6Psf9zk6F7vWCAXABXB7NwE3f7bkkVMRZg58uKAhWL9pt1X478KGUhfKDpvZYG78ZC_dJqZ_j48Ldi7v0-IIjbRwe0rymiTXwFmatYZHJ-IuDcmMUZ9EfIRBVcijUZK6TcLU-OZrhZPQfnT0bbc-zNsSLetmOewlZLot_MTGr6nuJp0R1vPPTznjBXGEIr2dvbdp82gAKO56HDLMqNJkmmr",
+      "status": null
+    },
+    {
+      "id": "msg_0a1f1832e9b0385d006aab71ecacc087d09aa719fde6ee5063",
+      "content": [
+        {
+          "annotations": [],
+          "text": "{\"matched\":\"\",\"evidence\":\"\",\"determinable\":true,\"alignment\":0.0,\"reason\":\"Neither candidate addresses the qualification to Licensor’s ownership representation. The proposed issue therefore identifies a separate defect not recorded in g1 or g2.\",\"words_at_issue\":\"The proposed issue concerns the final sentence’s qualifier “subject only to whatever actions or inactions may have been taken or not taken by Morton regarding ownership of the rights.” Candidate g1 concerns the authorization for “promotion, advertising or marketing” and “broadcasting,” particularly whether it covered Rehab; candidate g2 concerns the scope of the term “exclusive license” and whether it barred other Hard Rock-branded ventures.\"}",
+          "type": "output_text",
+          "logprobs": [],
+          "parsed": null
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": "final_answer"
+    }
+  ]
+}
