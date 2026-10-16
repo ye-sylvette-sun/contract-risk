@@ -46,22 +46,28 @@ You are judging how hard it is to reach that understanding. Nothing else.
 
 ### What does not count
 
+Difficulty is how hard the case and its court defects are to **understand**:
+the contract, the dispute, and what the court construed. Two things can look
+like difficulty and are not:
+
 - **The number of court defects does not matter.** A case with ten defects
   that are each plain is easy; a case with one defect that takes an afternoon
   to grasp is hard. Judge how hard it is to understand the defects, never how
   many there are, and do not add time per defect.
-- **The length of the documents does not matter by itself.** A long contract
-  matters only where understanding a defect means piecing together provisions
-  scattered through it.
+- **The length of the documents does not matter by itself.** The reviewer
+  reads what understanding the defects requires, not every page. A long
+  contract adds difficulty only where understanding a defect means piecing
+  together provisions scattered through it; a long opinion, only where the
+  court's reasoning is spread through it.
 - **Whether the court was right, or how the case came out, does not matter.**
 
 ### What makes a case easy to understand
 
 - **The defect sits in one clause, often one phrase.** The court quotes the
   words and sets out the two readings.
-- **The doctrine is familiar.** A vague restrictive covenant, an undefined
-  standard of effort, an ambiguous notice requirement — general contract law
-  that a law-trained reader already knows. No industry knowledge is needed.
+- **The doctrine is familiar.** An undefined term, a vague standard, an
+  ambiguous condition or deadline — general contract law that a law-trained
+  reader already knows. No industry knowledge is needed.
 - **The court states the dispute plainly.** The reviewer can say in one
   sentence what was construed, after one read of the passage.
 
@@ -71,18 +77,18 @@ A case like that takes minutes, and the reviewer ends confident.
 
 Each of these adds time, and they compound:
 
-- **The transaction has to be learned first.** Who sold what to whom, what went
-  wrong, and **who wants what procedurally** — for example which side wants
-  arbitration and which wants federal court, and why. A reviewer can spend half
-  an hour on this before they can read a single defect.
-- **Specialised knowledge is needed.** Unfamiliar financial instruments, an
-  industry's regulatory scheme, arbitration rules, or a line of precedent the
-  court relies on. The reviewer ends up asking for background on the industry
-  and the product.
-- **The defect spans several provisions, or another document.** A merger clause
-  read against a forum-selection clause, plus a separate agreement between the
-  parties. The reviewer rereads the contract several times, and may skim all
-  of it.
+- **The transaction has to be learned first.** Who the parties are, what each
+  gave and got, what went wrong, and **who wants what procedurally** — which
+  forum, which remedy, which stage of the case, and why. A reviewer may have to
+  work this out before they can read a single defect.
+- **Specialised knowledge is needed.** A technical product or market, an
+  industry's regulatory scheme, a specialised body of law, or a line of
+  precedent the court relies on. The reviewer has to look up background before
+  the words at issue make sense.
+- **The defect spans several provisions, or another document.** One provision
+  read against another elsewhere in the instrument, or a term that makes sense
+  only against a separate agreement, schedule or document. The reviewer has to
+  reread the contract, and may need to go through much of it.
 - **The court's reasoning is hard to pin down.** The construction is entangled
   with a procedural ruling, spread across the opinion, carried by precedent
   rather than by the words, or the court decides on a narrow or procedural
@@ -105,13 +111,12 @@ end.
   and `score` must agree.
 - **`estimated_minutes`** — your estimate of how long a law-trained
   non-specialist needs to understand the case and every court defect well
-  enough to recognise each one in someone else's words. Reading the
-  material is included. Do not add a fixed amount per defect: the time is set
-  by how hard the defects are to understand, not by how many there are.
-
-Roughly a third of the queue was thought to be easy, a third hard and a third in
-between. That is only a rough first impression, not a quota. Judge this case on
-its own material.
+  enough to recognise each one in someone else's words. Count the reading that
+  understanding requires — the clause, the provisions it must be read with, the
+  court's reasoning, any background — not a read of every page. Do not add a
+  fixed amount per defect or per page: the time is set by how hard the case and
+  its defects are to understand, not by how many defects there are or how long
+  the documents run.
 
 ## DOCUMENT
 

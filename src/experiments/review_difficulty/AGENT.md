@@ -40,10 +40,17 @@ nothing else**:
   once and referred to after.
 
 It does **not** see the agent's issues or the judge's calls or scores. The
-prompt says explicitly that **the number of court defects, and the length of
-the documents, are not difficulty**: only how hard the case and its defects are
-to understand. The difficulty factors are Yiqin's, written without naming her
-two cases, so those two cases can validate the prompt.
+prompt says explicitly that difficulty is **how hard the case and its defects
+are to understand**, and that neither the number of court defects nor the
+length of the documents is difficulty in itself. The time estimate counts the
+reading that understanding requires, not a read of every page, and adds nothing
+per defect. The prompt gives no expected split across the three bands. The
+difficulty factors are Yiqin's, written without naming her two cases, so those
+two cases can validate the prompt.
+
+**The model is `gpt-6.1-sol`, effort `medium`** — on purpose not the alignment
+judge's `gpt-5.6-sol`. The two answer different questions about the same
+cases, and the analysis below sets one against the other.
 
 Output per case (`prompts/review_difficulty/review_difficulty.schema.json`):
 `difficulty` (easy / intermediate / hard), `score` (1–10; 1–3 easy, 4–6

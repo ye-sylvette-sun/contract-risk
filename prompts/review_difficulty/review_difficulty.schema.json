@@ -25,7 +25,7 @@
     },
     "estimated_minutes": {
       "type": "integer",
-      "description": "Minutes a law-trained non-specialist needs to understand the case and every court defect well enough to recognise each in someone else's words, reading included. Set by how hard the defects are to understand, not by how many there are."
+      "description": "Minutes a law-trained non-specialist needs to understand the case and every court defect well enough to recognise each in someone else's words, counting the reading that understanding requires, not a read of every page. Set by how hard the case and its defects are to understand, not by how many defects there are or how long the documents run."
     },
     "factors": {
       "type": "object",
@@ -85,7 +85,7 @@
               "description": "One sentence specific to this case: name the provision, term or background involved."
             }
           },
-          "description": "Specialised knowledge needed beyond general contract law: financial instruments, an industry's regulation, arbitration rules, a line of precedent."
+          "description": "Specialised knowledge needed beyond general contract law: a technical product or market, an industry's regulation, a specialised body of law, a line of precedent."
         },
         "defect_spread": {
           "type": "object",
