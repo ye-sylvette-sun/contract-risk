@@ -39,7 +39,7 @@ threshold can reach past it.
 model contributes over the length baseline is on type 1 and on the binary
 risky/not question; on the relational half it adds nothing measurable.
 
-Figure: `output/figures/risk_detect_agent_threshold_curves.png`.
+Figure: `output/risk_detect/figures/risk_detect_agent_threshold_curves.png`.
 
 ## 2. There is no usable operating point
 
@@ -96,7 +96,7 @@ labels come from the case's Westlaw key rather than from the passage. Type
 agreement is reported separately: of the 69 matched pairs, 52 (75.4%) agree on
 the coarse type. The other 17 name the same defect and classify it differently.
 
-Figure: `output/figures/issue_alignment_threshold_curves.png`.
+Figure: `output/issue_alignment/figures/issue_alignment_threshold_curves.png`.
 
 ## 4. What the two measurements say together
 

@@ -21,18 +21,17 @@ import httpx
 import openai
 import tiktoken
 
-# The DATASET BUILD runs on OpenAI; EXPERIMENT 3 runs on Claude. Not an
-# oversight: the experiment compares one API call against one Claude Code agent
-# session, and the CLI cannot be pointed at another provider — moving only its
-# one-shot arm would make the two arms differ in model as well as in delivery.
-# `provider_of()` reads the transport off the model name, so a call site that
-# names its model has already chosen its API.
+# The DATASET BUILD runs on OpenAI; the risk-detection experiment runs on
+# Claude. Not an oversight: that experiment is a Claude Code agent session, and
+# the CLI cannot be pointed at another provider. `provider_of()` reads the
+# transport off the model name, so a call site that names its model has already
+# chosen its API.
 MODEL = "gpt-5.6-sol"
 # Step 0b asks a shallow, visual question of every contract, so it runs on the
 # cheap model rather than the reasoning one. Named here, beside MODEL, so the
 # two are chosen together.
 CHEAP_MODEL = "gpt-5.6-terra"
-CLAUDE_MODEL = "claude-opus-5"      # the risk-detection experiment, both arms
+CLAUDE_MODEL = "claude-opus-5"      # the risk-detection experiment (the agent run)
 ENCODING = "o200k_base"      # what the OpenAI models tokenise with
 # The model's own ceiling, not a self-imposed budget: covers thinking and
 # response together, and only what is produced is billed, so there is nothing to
@@ -47,11 +46,21 @@ SLACK = 5                    # lines either side of the claimed window to search
 FURNITURE = 20               # a source line this short may be a stamp, not text
 
 ROOT = Path(__file__).resolve().parents[1]
-PROMPTS = ROOT / "prompts"
+PROMPTS = ROOT / "prompts"            # prompts/<name>/<name>.md + <name>.schema.json
 OUT = ROOT / "output"
-LOGS = OUT / "llm_logs"
-CONTRACTS = OUT / "contracts"
-OPINIONS = OUT / "opinions"
+
+# One directory per stage under output/, each holding its own results, its
+# `llm_logs/` and its `figures/`. Named here so a stage that reads another's
+# results finds them in one place.
+DATASET_OUT = OUT / "dataset"             # steps 0-3 and build_dataset.py
+RISK_DETECT_OUT = OUT / "risk_detect"     # the agent run
+ALIGNMENT_OUT = OUT / "issue_alignment"   # the issue-alignment check
+SPELLBOOK_OUT = OUT / "spellbook"         # the Spellbook comparison
+DIFFICULTY_OUT = OUT / "review_difficulty"
+
+LOGS = DATASET_OUT / "llm_logs"           # the dataset steps' logs; experiments pass log_dir
+CONTRACTS = DATASET_OUT / "contracts"
+OPINIONS = DATASET_OUT / "opinions"
 
 
 # Bulk inputs: gitignored and provided separately, but linked inside the repo —
@@ -276,7 +285,7 @@ def strip_ocr(raw):
     """Drop page markers, front-matter and figures (Datalab Marker artifacts).
 
     Run once, before anything else: line numbers index this text, the model sees
-    this text, and output/contracts/<cid>.md is written from it, so a line
+    this text, and output/dataset/contracts/<cid>.md is written from it, so a line
     number can never mean two things. Docket stamps are NOT removed here — that
     would shift every line number after them; `normalise()` drops them from the
     extracted span instead.
@@ -752,13 +761,13 @@ def _stream(name, model, effort, p, more=()):
 
 
 def prompt(name, **fields):
-    """prompts/<name>.md -> its four sections, filled in.
+    """prompts/<name>/<name>.md -> its four sections, filled in.
 
     Split into sections BEFORE substitution, so a heading inside an OCR'd
     document can never be read as a section marker.
     """
     fields.setdefault("clause_def", CLAUSE)
-    text = (PROMPTS / f"{name}.md").read_text(encoding="utf-8")
+    text = (PROMPTS / name / f"{name}.md").read_text(encoding="utf-8")
     parts = re.split(rf"^## ({'|'.join(SECTIONS)})\s*$", text, flags=re.M)
     sections = {parts[i]: parts[i + 1].strip() for i in range(1, len(parts), 2)}
     missing = [s for s in SECTIONS if s not in sections]
@@ -768,7 +777,7 @@ def prompt(name, **fields):
 
 
 def schema(name):
-    return json.loads((PROMPTS / f"{name}.schema.json").read_text(encoding="utf-8"))
+    return json.loads((PROMPTS / name / f"{name}.schema.json").read_text(encoding="utf-8"))
 
 
 def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(),
@@ -779,8 +788,9 @@ def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(),
     needs this, since "you missed these" only means anything if the model can
     see what it already said. `log_as` names the log directory when one prompt
     serves two experiments whose logs must stay separate, and `log_dir` puts
-    that directory somewhere other than `output/llm_logs` — which is what a
-    diagnostic run needs, so it leaves nothing in `output/` at all.
+    that directory somewhere other than `output/dataset/llm_logs` — which is how
+    an experiment keeps its logs in its own stage directory, and how a
+    diagnostic run leaves nothing in `output/` at all.
 
     The document goes first and the instructions after it, so a rule sits beside
     the text it governs rather than tens of thousands of tokens above it.
@@ -799,8 +809,8 @@ def ask(name, call_id, effort="high", model=MODEL, log_as=None, more=(),
     d.mkdir(parents=True, exist_ok=True)
     # The document is NOT stored. It is the numbered corpus text — several
     # hundred KB a call, many times everything else in the log put together —
-    # and the same text is already on disk under output/contracts/ and
-    # output/opinions/. Its digest and length are kept so a reader can still
+    # and the same text is already on disk under output/dataset/contracts/ and
+    # output/dataset/opinions/. Its digest and length are kept so a reader can still
     # prove what was sent, and `replay_anchors.py` reads the corpus instead.
     (d / f"{call_id}.json").write_text(json.dumps({
         "system": p["SYSTEM"],
@@ -876,11 +886,13 @@ def write_json(path, obj, quiet=False):
 # own result, where folding into one artifact after every call would rewrite the
 # whole of it each time — hundreds of megabytes of writes to store a few.
 
-def shard_dir(name):
-    return OUT / name
+def shard_dir(name, root=None):
+    """`<root>/<name>/`, the root being the stage directory (the dataset's by
+    default)."""
+    return (root or DATASET_OUT) / name
 
 
-def write_shard(name, filename, key, value):
+def write_shard(name, filename, key, value, root=None):
     """One unit's result, in its own file.
 
     `filename` and `key` differ where the artifact is keyed on something that is
@@ -888,15 +900,15 @@ def write_shard(name, filename, key, value):
     it under `44FSupp3d736`. The key travels inside the file so the merge does
     not have to invert that mapping.
     """
-    d = shard_dir(name)
+    d = shard_dir(name, root)
     d.mkdir(parents=True, exist_ok=True)
     write_json(d / f"{filename}.json", {"key": key, "value": value}, quiet=True)
 
 
-def read_shards(name):
+def read_shards(name, root=None):
     """{artifact key: value} over every shard of a step."""
     out = {}
-    d = shard_dir(name)
+    d = shard_dir(name, root)
     if d.is_dir():
         for p in sorted(d.glob("*.json")):
             s = read_json(p)
@@ -905,7 +917,7 @@ def read_shards(name):
     return out
 
 
-def merge_shards(name, path):
+def merge_shards(name, path, root=None):
     """Fold the shards into the artifact, verify, then delete them.
 
     Verified before deleting, and in that order: the merged file is written,
@@ -913,7 +925,7 @@ def merge_shards(name, path):
     landed. Only then are the shards removed. A step that dies before this point
     keeps them, and the next run resumes from them.
     """
-    shards = read_shards(name)
+    shards = read_shards(name, root)
     if not shards:
         return read_json(path, {}) or {}
 
@@ -928,7 +940,7 @@ def merge_shards(name, path):
             f"({missing[:3]}). The shards under {name}/ are intact — fix the "
             f"artifact and re-run rather than losing them.")
 
-    d = shard_dir(name)
+    d = shard_dir(name, root)
     for p in d.glob("*.json"):
         p.unlink()
     for p in d.glob(".*.tmp"):

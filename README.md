@@ -53,8 +53,9 @@ model says which of *those* the dispute turned on and `taxonomy_provenance`
 records that it did. The binary risky/not label never depends on this.
 
 **The classes are not matched on clause length, and this is the caveat to read
-first.** Positives run to a median 620 characters against the negatives' 343,
-and clause length alone separates them at ROC-AUC **0.691**. Any model's AUC has
+first.** Positives run to a median 619 characters against the negatives' 343,
+and clause length alone separates them at ROC-AUC **0.695** — **0.691** on the
+84-contract evaluation set the experiment is scored on. Any model's AUC has
 to be read against that baseline, and one of the findings is that on risk type 2
 the model does not beat it.
 
@@ -84,50 +85,76 @@ span and refuses to write unless it reproduces `clause_text` exactly.
 data/                    Westlaw headnotes, opinion text, the docket linking sheet
 contract_risk/           the Contract-Risk repo's new_approach/ — OCR'd contract text
 
-prompts/                 <name>.md (SYSTEM/DOCUMENT/INSTRUCTIONS/TASK) + <name>.schema.json
-  layout                    step 0b — is the scan an interleaved two-column page?
-  inventory                 step 1 — locate every clause of one contract
-  disputes                  step 2 — which listed clauses were disputed, over what
-  risk_detect               the risk-detection experiment's judging criteria
-  issue_alignment_check     did an issue match the dispute the court had?
+prompts/<name>/           <name>.md (SYSTEM/DOCUMENT/INSTRUCTIONS/TASK) + <name>.schema.json
+  layout/                   step 0b — is the scan an interleaved two-column page?
+  inventory/                step 1 — locate every clause of one contract
+  disputes/                 step 2 — which listed clauses were disputed, over what
+  issue_scope/              step 3 — what a reader must hold to see each issue
+  risk_detect/              the risk-detection experiment's judging criteria (SYSTEM only)
+  issue_alignment_check/    did an issue match the dispute the court had?
+  spellbook_issue_types/    type Spellbook's findings and restate them in the dataset's form
+  review_difficulty/        how hard is a case for a human to review?
 
-src/lib.py               paths, taxonomy, ask(), locate(), normalise()
-src/step0_corpus.py      0.  link cases, register documents        (no LLM)
-src/step0b_layout.py     0b. reject two-column scans        (cheap model, per contract)
-src/step1_inventory.py   1.  every clause of every contract       (LLM, per contract)
-src/step2_disputes.py    2.  which of those clauses were disputed (LLM, per case)
-src/build_dataset.py         assemble + validate -> dataset.csv   (no LLM)
-src/replay_anchors.py        re-score the locator against stored logs (no LLM, no cost)
+src/lib.py                paths, taxonomy, ask(), locate(), normalise()
+
+src/dataset/              building the dataset
+  step0_corpus.py           0.  link cases, register documents             (no LLM)
+  step0b_layout.py          0b. reject two-column scans                    (cheap model, per contract)
+  step1_inventory.py        1.  every clause of every contract             (LLM, per contract)
+  step2_disputes.py         2.  which of those clauses were disputed       (LLM, per case)
+  step3_issue_scope.py      3.  what each issue needs in order to be seen  (LLM, per case)
+  build_dataset.py              assemble + validate -> dataset.csv         (no LLM)
+  plot_dataset.py               the dataset figure: clauses per contract   (no LLM)
+  replay_anchors.py             re-score the locator against stored logs   (no LLM, no cost)
 
 src/experiments/
-  risk_detect_agent.py            THE risk-detection run: one agent session per contract, in a container
-  runs.py                         what a run reads and writes: dataset rows, the preds.csv contract, scoring
-  issue_alignment_check.py        was a named issue the defect the court actually construed?
-  plot_risk_detect_thresholds.py  the threshold figure
-  compare_risk_detect.py          ROC, precision, recall, flag rate (--against to compare two runs)
-  predictions.py                  reading the judgment files the agent writes
-  isolation.py                    what a session may see: tools, path hook, env
-  test_isolation.py               the path hook's cases (no cost, no API)
-  preflight.py                    one session, then audit it for leakage
-  manifest.py                     what the machine was, per run
-  lockgen.py                      regenerate the hash-pinned docker/requirements.lock.txt
+  runs.py                   shared: dataset rows, the preds.csv contract, scoring
+  predictions.py            shared: reading the judgment files the agent writes (also in the container)
+  risk_detect/
+    risk_detect_agent.py            THE risk-detection run: one agent session per contract, in a container
+    compare_risk_detect.py          ROC, precision, recall, flag rate (--against to compare two runs)
+    plot_risk_detect_thresholds.py  the threshold figure
+    isolation.py                    what a session may see: tools, path hook, env (also in the container)
+    test_isolation.py               the path hook's cases (no cost, no API)
+    preflight.py                    one session, then audit it for leakage
+    manifest.py                     what the machine was, per run
+    lockgen.py                      regenerate the hash-pinned docker/requirements.lock.txt
+  issue_alignment/
+    issue_alignment_check.py            was a named issue the defect the court actually construed?
+    plot_issue_alignment_thresholds.py  the issue-level threshold figure, alignment required
+  spellbook/
+    spellbook_review_types.py       type Spellbook's Risks & Negotiation issues (LLM, per contract)
+    spellbook_review_preds.py       Spellbook's review rewritten as a preds.csv
+  review_difficulty/
+    review_difficulty.py            how hard each case is for a human reviewer (LLM, per case)
 
-docker/Dockerfile                        the judging sandbox, base pinned by digest
-docker/judge_one.py                      the only code that runs inside it
+docker/Dockerfile         the judging sandbox, base pinned by digest
+docker/judge_one.py       the only code that runs inside it
 
-output/cases.json        cases in scope, with keys, headnotes and codes
-output/contracts.json    the document registry
-output/contracts/<cid>.md   document text, OCR furniture stripped
-output/layout.json       step 0b — the two-column verdict, with the model's evidence
-output/inventory.json    step 1 — every clause of every contract, its id and the flags
-output/disputes.json     step 2 — which ids were disputed, their issues and passages
-output/llm_logs/<step>/  full prompt, response and usage for every call
-output/dataset.csv       the dataset
-output/risk_detect_<run>_*   risk detection: predictions, raw answers, figures
-output/issue_alignment_check.*  one row per issue judged against the court's words
-output/llm_logs/risk_detect_agent/run_manifest_<stamp>.json
-                         SDK, CLI, interpreter, platform, git commit, the
-                         environment sweep, the options, and the input hashes
+spellbook/                a commercial tool's reviews of 20 contracts, for comparison (read-only)
+
+output/<stage>/           one directory per stage: its results, llm_logs/<step>/ and figures/
+  dataset/
+    cases.json              cases in scope, with keys, headnotes and codes
+    contracts.json          the document registry
+    contracts/<cid>.md      document text, OCR furniture stripped
+    opinions/<id>.txt       opinion text
+    layout.json             step 0b — the two-column verdict, with the model's evidence
+    inventory.json          step 1 — every clause of every contract, its id and the flags
+    disputes.json           step 2 — which ids were disputed, their issues and passages
+    issue_scope.json        step 3 — each issue's scope: clause / contract / case / external
+    dataset.csv             the dataset
+    llm_logs/<step>/        full prompt, response and usage for every call
+  risk_detect/
+    risk_detect_agent_preds.csv   one row per provision
+    risk_detect_agent/            raw answers + the id map, per contract
+    risk_detect_agent_ws/         each session's workspace, as mounted
+    llm_logs/risk_detect_agent/   request, trajectory and container log per contract, plus
+                                  run_manifest_<stamp>.json: SDK, CLI, interpreter, platform,
+                                  git commit, the environment sweep, the options, the input hashes
+  issue_alignment/          issue_alignment_check.{json,csv}: one row per issue judged against the court's words
+  spellbook/                spellbook_review_{types.json,preds.csv,alignment.json,alignment.csv}
+  review_difficulty/        review_difficulty.json: one difficulty assessment per case
 ```
 
 `data/` and `contract_risk/` are gitignored — they are large and provided
@@ -151,7 +178,7 @@ byte-identical to their source. Step 0 registers only the entries their
 ```sh
 pip install -r requirements.txt
 cat > .env <<'KEYS'
-OPENAI_API_KEY=sk-proj-...            # the dataset build (steps 0b, 1, 2)
+OPENAI_API_KEY=sk-proj-...            # the dataset build (steps 0b, 1, 2, 3)
 CLAUDE_CODE_OAUTH_TOKEN=sk-ant-oat01-...   # risk detection (`claude setup-token`)
 KEYS
 ```
@@ -195,14 +222,15 @@ part-way through a multi-hour run, which is why the token is preferred.
 Now the dataset:
 
 ```sh
-python src/step0_corpus.py       # 0.  no LLM
-python src/step0b_layout.py      # 0b. one cheap call per contract
-python src/step1_inventory.py    # 1.  one call per contract
-python src/step2_disputes.py     # 2.  one call per case
-python src/build_dataset.py      #     no LLM — validates, then writes
+python src/dataset/step0_corpus.py       # 0.  no LLM
+python src/dataset/step0b_layout.py      # 0b. one cheap call per contract
+python src/dataset/step1_inventory.py    # 1.  one call per contract
+python src/dataset/step2_disputes.py     # 2.  one call per case
+python src/dataset/step3_issue_scope.py  # 3.  one call per case with issues
+python src/dataset/build_dataset.py      #     no LLM — validates, then writes
 ```
 
-`--case "44 F.Supp.3d 736"` restricts any step to one citation, which is how to
+`--case "44 F.Supp.3d 736"` restricts any of steps 0–3 to one citation, which is how to
 try the pipeline end to end before paying for a full run. `step0b_layout.py` and
 `step1_inventory.py` also take `--contract <contract_id>`.
 
@@ -212,10 +240,10 @@ step 1 assigned — it cannot report a span. A boundary therefore cannot shift w
 what a court said about the clause, which is the one systematic difference
 between positives and negatives that has nothing to do with drafting risk.
 
-**Steps 0b, 1 and 2 are resumable.** Each writes its artifact after every call and
-re-runs only what is missing. To *redo* work already done — after a prompt change,
-say — delete that case or contract id from `inventory.json` / `disputes.json`
-first, or the step will skip it and you will conclude the change had no effect.
+**Steps 0b, 1, 2 and 3 are resumable.** Each writes its artifact after every call
+and re-runs only what is missing. To *redo* work already done — after a prompt
+change, say — delete that case or contract id from `inventory.json` /
+`disputes.json` / `issue_scope.json` first, or the step will skip it and you will conclude the change had no effect.
 Step 0b takes `--force` instead.
 
 Step 0 and `build_dataset.py` make no model calls, so the dataset is reproducible
@@ -225,11 +253,11 @@ Then the experiment:
 
 ```sh
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
-python src/experiments/test_isolation.py      # the path hook's cases, no cost
-python src/experiments/preflight.py --container   # one real session, then audit it
+python src/experiments/risk_detect/test_isolation.py      # the path hook's cases, no cost
+python src/experiments/risk_detect/preflight.py           # one real session, then audit it
 
-python src/experiments/risk_detect_agent.py --shuffle --parallel 8
-python src/experiments/plot_risk_detect_thresholds.py --run agent
+python src/experiments/risk_detect/risk_detect_agent.py --shuffle --parallel 8
+python src/experiments/risk_detect/plot_risk_detect_thresholds.py --run agent
 ```
 
 `--parallel` sets how many containers run at once; they are independent sessions
@@ -246,7 +274,7 @@ A log holds both the numbered document that was sent and the model's answer, so
 the locator can be re-scored offline at no API cost:
 
 ```sh
-python src/replay_anchors.py --logs output/llm_logs
+python src/dataset/replay_anchors.py --logs output/dataset/llm_logs
 ```
 
 It **replays** the anchors the model actually returned, which is how `ANCHOR_MATCH`

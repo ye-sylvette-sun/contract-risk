@@ -133,7 +133,7 @@ should meet the documents as they exist.
 ### Step 0 — build the corpus (no LLM)
 
 Join the Westlaw headnotes, the opinion text and the docket linking sheet; keep
-the cases in scope; register each contract to `output/contracts/`. The filings
+the cases in scope; register each contract to `output/dataset/contracts/`. The filings
 arrive OCR'd (`ocrmypdf --force-ocr`) and sliced to each named agreement's own
 lines — a verbatim line-range cut. An 8-word-shingle containment check at 0.90
 catches the same document filed twice under two names.
@@ -150,13 +150,13 @@ must **quote the interleaved lines back verbatim, with their line numbers** — 
 every rejection can be checked against the file rather than taken on trust.
 
 It rejects 14 of 117 contracts, mostly insurance policies with two-column
-endorsement pages. Nothing is deleted: `output/layout.json` keeps the verdict and
+endorsement pages. Nothing is deleted: `output/dataset/layout.json` keeps the verdict and
 the quoted lines, and step 1 skips the contract.
 
 ### From the linking sheet to the corpus
 
 Each filter with the count it leaves. Everything here is recomputable from
-`data/`, `contract_risk/generated/` and `output/{cases,contracts,layout}.json`.
+`data/`, `contract_risk/generated/` and `output/dataset/{cases,contracts,layout}.json`.
 
 | | agreements | cases |
 |---|---:|---:|
@@ -327,7 +327,7 @@ contract file alone, without any model output.
 
 ## 5. Cost
 
-Measured over the current build, from `output/llm_logs/`:
+Measured over the current build, from `output/dataset/llm_logs/`:
 
 | step | model | calls | input | output |
 |---|---|---:|---:|---:|
@@ -346,7 +346,7 @@ step 2 produced.
 
 Step 0 and `build_dataset.py` make no model calls, so the dataset rebuilds from
 the stored artifacts without an API key. Every call's full prompt, response and
-token usage is kept under `output/llm_logs/`.
+token usage is kept under `output/dataset/llm_logs/`.
 
 ---
 
@@ -354,7 +354,8 @@ token usage is kept under `output/llm_logs/`.
 
 - **Clause length separates the classes, and this is the headline caveat.**
   Positives run to a median 619 characters against the negatives' 343, and
-  length alone ranks them at ROC-AUC **0.691**. Any model's AUC must be read
+  length alone ranks them at ROC-AUC **0.695** — **0.691** on the 84-contract
+  evaluation set the experiment is scored on. Any model's AUC must be read
   against that baseline — the agent run beats it on risk type 1 and matches it
   exactly on risk type 2.
 

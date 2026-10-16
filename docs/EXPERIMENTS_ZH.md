@@ -82,8 +82,8 @@ risk type 2，一份两者都有。重复出现的段落和摘录以交叉引用
 ## 4. 怎么跑
 
 ```bash
-python src/experiments/preflight.py                        # 隔离自检，14 项
-python src/experiments/risk_detect_agent.py --parallel 6
+python src/experiments/risk_detect/preflight.py                        # 隔离自检，14 项
+python src/experiments/risk_detect/risk_detect_agent.py --parallel 6
 ```
 
 鉴权用 `CLAUDE_CODE_OAUTH_TOKEN`（订阅），容器只被传入这一个变量。
@@ -94,8 +94,8 @@ python src/experiments/risk_detect_agent.py --parallel 6
 
 agent 跑的是 Claude Code CLI，它可以加载 settings 文件、`CLAUDE.md`、memory、skill 和
 MCP server，而这些都不会出现在对话里。容器里没有 `~/.claude`、没有 settings、没有
-skill、没有托管策略，只有该合同的工作区被挂载 —— `dataset.csv` 和其他合同根本不在它的
-文件系统上。
+skill、没有托管策略，只有该合同的工作区被挂载（含同案其他文书 `context/`）——
+`dataset.csv` 和本案以外的合同根本不在它的文件系统上。
 
 `preflight.py` 逐项核对这些，并核对计费模型确实是所请求的那个。详见
 [REPRODUCIBILITY_ZH.md](REPRODUCIBILITY_ZH.md)。
@@ -116,10 +116,11 @@ skill、没有托管策略，只有该合同的工作区被挂载 —— `datase
 ## 7. 产物
 
 ```
-output/risk_detect_agent_preds.csv     每个条款一行
-output/risk_detect_agent/              模型返回的判断
-output/llm_logs/risk_detect_agent/     每次调用的请求、响应、用量、轨迹
-output/figures/                        阈值曲线图
+output/risk_detect/risk_detect_agent_preds.csv     每个条款一行
+output/risk_detect/risk_detect_agent/              模型返回的判断
+output/risk_detect/risk_detect_agent_ws/           每个 session 挂载的工作区
+output/risk_detect/llm_logs/risk_detect_agent/     每次调用的请求、响应、用量、轨迹
+output/risk_detect/figures/                        阈值曲线图
 ```
 
 ---
@@ -144,7 +145,7 @@ recall 天花板是阈值取 0.01 时可得的 recall —— gold 条款中拿�
 `risky` 上 0.99 的天花板意味着几乎每个条款都拿到了点什么，而不是几乎每个被解释的条款
 都被识别出来。
 
-图：`output/figures/risk_detect_agent_threshold_curves.png` 与
+图：`output/risk_detect/figures/risk_detect_agent_threshold_curves.png` 与
 `issue_alignment_threshold_curves.png`。[REPORT_ZH.md](REPORT_ZH.md) 解读它们。
 
 **运行间方差未量化**：没有随机种子，没有温度控制，同一 prompt 从未在这个数据集上跑过
@@ -202,8 +203,8 @@ issue 重新配对到不属于它的候选缺陷上：
 两者都写到 `output/` 之外：
 
 ```bash
-python src/experiments/issue_alignment_check.py --control corpus --out /tmp/ctl
-python src/experiments/issue_alignment_check.py --control case   --out /tmp/ctl
+python src/experiments/issue_alignment/issue_alignment_check.py --control corpus --out /tmp/ctl
+python src/experiments/issue_alignment/issue_alignment_check.py --control case   --out /tmp/ctl
 ```
 
 ### 控制组说明了什么

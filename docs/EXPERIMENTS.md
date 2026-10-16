@@ -27,56 +27,62 @@ How the material reaches the model:
 | | `agent` |
 |---|---|
 | shape | one Claude Code session per contract, in a container |
-| the contract | a file in a workspace |
-| worked examples | one `notes.md` per pair in the workspace |
+| the contract | a file in a workspace, with the case's other filings in `context/` |
+| worked examples | one `notes.md` per worked contract in the workspace |
 | reading | the model chooses — read, re-read, grep |
 | answer | a file the model writes |
 | model | `claude-opus-5`, effort `high`, ceiling 100 turns |
 | billing | Claude Code subscription |
 | caching | on (an agent re-sends its transcript every turn) |
 
-The example material is the two provision texts and the court's verbatim words,
-and nothing more; the examples' full contracts are deliberately absent from the
-workspace. The judging criteria live in `prompts/risk_detect.md` and its `SYSTEM`
-section is used **verbatim**.
+The example material is each worked contract's construed provisions, one
+provision no court construed, and the court's verbatim words, and nothing more;
+the examples' full contracts are deliberately absent from the workspace. The
+judging criteria live in `prompts/risk_detect/risk_detect.md` and its `SYSTEM` section is
+used **verbatim**; the file's other sections are not sent. What to do with the
+workspace — the order of work, the answer format, the calibration rules quoted
+in §3 — is the task prompt `risk_detect_agent.task_prompt()` builds.
 
 ---
 
 ## 1. Evaluation set
 
-Every contract of the dataset that is not used as a worked example. One example
-is picked per risk code present — three of them, drawn from **two** contracts,
-since two codes happened to select clauses of the same document. Those two
-contracts are held out permanently and appear in no evaluation.
+Every contract of the dataset that is not used as a worked example. The worked
+examples are three whole **contracts**, named in `runs.EXAMPLE_CONTRACTS` and
+chosen by reading them: one whose defects are all risk type 1, one all risk
+type 2, one carrying both. `runs.load_examples` checks each is the kind it is
+filed under and fails loudly if a rebuild changes that. Every contract filed in
+an example's **case** is held out with it, since a case's other documents are
+mounted as `context/` — here that is the three example contracts themselves.
+They appear in no evaluation.
 
 ```
-11,921 clauses  |  220 positive  (1.8%)  |  101 contracts
-300 issues — the defects the courts construed, counted one by one
-type 1: 172 positive   type 2: 68 positive   (not exclusive)
+9,890 clauses  |  163 positive  (1.6%)  |  84 contracts
+213 issues — the defects the courts construed, counted one by one
+type 1: 120 positive   type 2: 68 positive   (not exclusive)
 ```
 
 The issue count is the denominator that matters for §10. A positive can carry
 more than one defect, so "how many of the court's findings did the model reach"
 is a different and larger question than "how many provisions did it flag".
 
-Examples are picked per risk code, not per comma-joined taxonomy string — a
-clause labelled `1.1,1.3` counts as a candidate for both codes. Getting that
-wrong invents codes that do not exist and holds out more contracts than
-intended.
+The examples' own 12 defects are therefore in no denominator.
 
 ---
 
 ## 2. What the model is given
 
-**Worked examples — one pair per risk code.** Each pair is two real provisions
-from the same contract: one a court construed, together with **the passage of the
-opinion showing the dispute**, and one no court construed in that case. The
-second is labelled **LOWER RISK**, never clean, because that is all the data
-supports.
+**Worked examples — three whole contracts.** Each shows **every** provision of
+its contract a court construed, under each one every distinct defect the court
+found in it, and **the passage of the opinion showing the dispute**. Beside them
+sits one provision of the same contract no court construed — the one closest in
+length to the construed ones, so the contrast does not teach length. It is
+labelled **LOWER RISK**, never clean, because that is all the data supports. The
+gold `issue` sentences are never shown: they are what §10 scores against.
 
 Each example states its contract's full count — how many provisions a court
-construed and how many it did not (3/95, 4/251, 3/18) — framed as the base rate
-to expect, not a quota to reproduce.
+construed out of how many (3 of 9, 2 of 86, 2 of 117) — framed as the reference
+for a high probability, not a quota to reproduce.
 
 **The contract**, in full.
 
@@ -210,8 +216,9 @@ it.
 defence rather than the last. The image has no `~/.claude`, no user `CLAUDE.md`,
 no skills, no MCP registration and no `/etc/claude-code/managed-settings.json`
 — managed policy being the one channel an environment sweep cannot reach. Only
-the contract's own workspace is mounted, so `dataset.csv` and the other 63
-contracts are not on the filesystem at all. The two prompts are mounted
+the contract's own workspace is mounted, so `dataset.csv` and every contract
+outside this one's case are not on the filesystem at all; the case's other
+filings sit in the workspace as `context/`. The two prompts are mounted
 read-only outside the workspace, so the workspace holds exactly what the model
 is meant to see.
 
@@ -232,7 +239,7 @@ The last two were once missing, and an audit found sessions issuing
 `/**/<other-contract>*/contract.txt` that the hook never saw. Nothing escaped —
 they returned "No files found" or hit ripgrep's timeout — but that is
 containment by filesystem layout, not by construction.
-`src/experiments/test_isolation.py` now pins all 22 cases, costs nothing, and
+`src/experiments/risk_detect/test_isolation.py` now pins all 22 cases, costs nothing, and
 runs on host and container alike.
 
 Auto memory, `CLAUDE.md` injection, the auto-updater and the CLI's non-essential
@@ -299,16 +306,16 @@ of one prompt, or two prompts, are compared; there is no second arm any more.
 Named with `<run>` being `agent`:
 
 ```
-output/risk_detect_<run>_preds.csv                    one row per provision
+output/risk_detect/risk_detect_<run>_preds.csv                    one row per provision
                                                (carries the whole issue list in
                                                `issues`, plus the derived
                                                `prob_type1` / `prob_type2`)
-output/risk_detect_<run>/<cid>.json                   returned judgments + the id map
-output/llm_logs/risk_detect_<run>/<cid>.json          request, response, token usage
-output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl  every tool call and thinking
+output/risk_detect/risk_detect_<run>/<cid>.json                   returned judgments + the id map
+output/risk_detect/llm_logs/risk_detect_<run>/<cid>.json          request, response, token usage
+output/risk_detect/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl  every tool call and thinking
                                                block of the session
-output/figures/risk_detect_<run>_threshold_curves.png the three panels
-output/risk_detect_agent_ws/<cid>/                    the agent's workspace, kept
+output/risk_detect/figures/risk_detect_<run>_threshold_curves.png the three panels
+output/risk_detect/risk_detect_agent_ws/<cid>/                    the agent's workspace, kept
 ```
 
 `preds.csv` is append-only. A row with `ok=0` is a provision that came back
@@ -341,7 +348,7 @@ issue on 68% of provisions, so a 0.99 ceiling on `risky` means almost every
 provision got something, not that almost every construed provision was
 recognised.
 
-Figures: `output/figures/risk_detect_agent_threshold_curves.png` and
+Figures: `output/risk_detect/figures/risk_detect_agent_threshold_curves.png` and
 `issue_alignment_threshold_curves.png`. [REPORT.md](REPORT.md) reads them.
 
 **Run-to-run variance is unquantified**: no seed, no temperature control, and
@@ -391,11 +398,11 @@ safely anyway.
 
 ```bash
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
-python src/experiments/test_isolation.py                  # 22 cases, no cost
-python src/experiments/preflight.py --container           # one real session, audited
+python src/experiments/risk_detect/test_isolation.py                  # 22 cases, no cost
+python src/experiments/risk_detect/preflight.py                       # one real session, audited
 
-python src/experiments/risk_detect_agent.py --shuffle --parallel 8   # the experiment
-python src/experiments/plot_risk_detect_thresholds.py --run agent
+python src/experiments/risk_detect/risk_detect_agent.py --shuffle --parallel 8   # the experiment
+python src/experiments/risk_detect/plot_risk_detect_thresholds.py --run agent
 ```
 
 `--parallel` sets how many containers run at once; they are independent
@@ -469,11 +476,8 @@ the same case, so the passage alone cannot tell two of them apart.
 **Scope.** Every named issue on a provision the court construed. An issue on a
 provision no court construed has no defect to check against. Precision is
 therefore **conditional** on the provision being right — not a second shot at
-the ranking. Recall is not conditional: it is over every gold defect, including
-those on provisions the agent said nothing about.
-
-Recall is not conditional in the same way: its denominator is every defect in
-the evaluation set, including those on provisions the agent said nothing about.
+the ranking. Recall is not conditional: its denominator is every defect in the
+evaluation set, including those on provisions the agent said nothing about.
 A defect the check could never reach — no issue of that type was named on that
 provision at any probability — caps recall, and the figure draws that ceiling.
 Those are risk-detection misses, not wrong reasons, and the report separates
@@ -517,8 +521,8 @@ Both write outside `output/` — a throwaway experiment should leave no artifact
 behind:
 
 ```bash
-python src/experiments/issue_alignment_check.py --control corpus --out /tmp/ctl
-python src/experiments/issue_alignment_check.py --control case   --out /tmp/ctl
+python src/experiments/issue_alignment/issue_alignment_check.py --control corpus --out /tmp/ctl
+python src/experiments/issue_alignment/issue_alignment_check.py --control case   --out /tmp/ctl
 ```
 
 ### What the control showed

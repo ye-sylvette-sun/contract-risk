@@ -3,7 +3,7 @@
 Three binary tasks swept over a flagging threshold t in [0, 1] -- risky vs not
 (score `max(prob_type1, prob_type2)`), risk type 1 vs not (`prob_type1`), risk type 2
 vs not (`prob_type2`). The two risk-type panels are ONE-VS-REST, matching
-src/experiments/plot_risk_detect_thresholds.py, because each probability is an
+src/experiments/risk_detect/plot_risk_detect_thresholds.py, because each probability is an
 independent judgement rather than a share of one distribution.
 
 Precision and recall on top, the share of provisions flagged underneath. The
@@ -30,7 +30,7 @@ ROOT = HERE.parents[1]                          # the repo root
 sys.path.insert(0, str(HERE))
 import score  # noqa: E402
 
-FIG = ROOT / "output" / "figures" / "spellbook_vs_agent_threshold_curves.png"
+FIG = ROOT / "output" / "spellbook" / "figures" / "spellbook_vs_agent_threshold_curves.png"
 
 PANELS = [("Risky vs not", "risky"),
           ("risk type 1 vs not — intrinsic defect", "type1"),
@@ -58,7 +58,7 @@ def sweep(scores, labels, thresholds):
 
 def main():
     sb, cids, missing, _lines, n_all, _bad = score.collect()
-    agent = score.arm_rows("risk_detect_agent_preds.csv", cids)
+    agent = score.arm_rows("risk_detect/risk_detect_agent_preds.csv", cids)
     n = len(sb)
     print(f"{len(cids)} of {n_all} contracts, {n} provisions")
     if missing:

@@ -47,7 +47,8 @@ sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec
 ```
 
 容器里没有 `~/.claude`、没有 settings、没有 skill、没有托管策略，只有这份合同的工作区
-被挂载。`dataset.csv` 和其他合同根本不在它的文件系统上。
+被挂载 —— 合同本身、同案其他文书（`context/`）和 worked example 的 notes。`dataset.csv`
+和本案以外的合同根本不在它的文件系统上。
 
 **凭据。** `CLAUDE_CODE_OAUTH_TOKEN` 作为单个环境变量传入 —— 订阅凭据，**从不使用
 API key** —— 使鉴权进入容器时不带入任何配置。
@@ -73,11 +74,12 @@ API key** —— 使鉴权进入容器时不带入任何配置。
 ## 3. 记录了什么、记在哪
 
 ```
-output/llm_logs/risk_detect_agent/<cid>.json             请求、响应、用量
-output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl session 的每一轮
-output/risk_detect_agent/<cid>.json                      返回的判断
-output/risk_detect_agent_ws/<cid>/                       挂载时的工作区
-output/run_manifest_<timestamp>.json                     镜像 digest、CLI 版本、
+output/risk_detect/llm_logs/risk_detect_agent/<cid>.json             请求、响应、用量
+output/risk_detect/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl session 的每一轮
+output/risk_detect/risk_detect_agent/<cid>.json                      返回的判断
+output/risk_detect/risk_detect_agent_ws/<cid>/                       挂载时的工作区
+output/risk_detect/llm_logs/risk_detect_agent/run_manifest_<timestamp>.json
+                                                         镜像 digest、CLI 版本、
                                                          请求与计费的模型、
                                                          各项选项、依赖版本
 ```
@@ -97,7 +99,7 @@ CONTAINER    镜像与工作目录是钉死的那一个
 MEMORY       没有加载任何 memory 文件
 CLAUDE_MD    没有注入任何 CLAUDE.md
 SKILLS       没有加载任何 skill
-REMINDERS    没有 system reminder 包裹工具结果
+REMINDERS    没有独立出现的 system reminder —— 只允许 CLI 包裹在工具结果外的那种
 CLI          trajectory 中的 CLI 版本就是 SDK 实际启动的那个
 MODEL        计费的模型就是请求的模型，且只有这一个
 PATHS        有多少路径参数落在工作区之外，其中多少被拒绝
@@ -129,24 +131,24 @@ ENV          清扫了多少变量，以及每个开关是否都已设置
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
 export CLAUDE_CODE_OAUTH_TOKEN=...          # 订阅凭据
 
-python src/experiments/preflight.py         # 十四项必须全部通过
-python src/experiments/risk_detect_agent.py --parallel 6
+python src/experiments/risk_detect/preflight.py         # 十四项必须全部通过
+python src/experiments/risk_detect/risk_detect_agent.py --parallel 6
 
-python src/experiments/compare_risk_detect.py
-python src/experiments/plot_risk_detect_thresholds.py
+python src/experiments/risk_detect/compare_risk_detect.py
+python src/experiments/risk_detect/plot_risk_detect_thresholds.py
 
-python src/experiments/issue_alignment_check.py --parallel 6
-python src/experiments/issue_alignment_check.py --control case --out DIR
-python src/experiments/plot_issue_alignment_thresholds.py
+python src/experiments/issue_alignment/issue_alignment_check.py --parallel 6
+python src/experiments/issue_alignment/issue_alignment_check.py --control case --out DIR
+python src/experiments/issue_alignment/plot_issue_alignment_thresholds.py
 ```
 
 从语料重建数据集：
 
 ```bash
-python src/step1_inventory.py  --parallel 6
-python src/step2_disputes.py   --parallel 6
-python src/step3_issue_scope.py --parallel 6
-python src/build_dataset.py
+python src/dataset/step1_inventory.py  --parallel 6
+python src/dataset/step2_disputes.py   --parallel 6
+python src/dataset/step3_issue_scope.py --parallel 6
+python src/dataset/build_dataset.py
 ```
 
 `step2_disputes.py` 和 `step3_issue_scope.py` 支持续跑：已在产物中的案件会被跳过。

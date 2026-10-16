@@ -77,7 +77,7 @@ ENV HOME=/home/judge
 # The harness, baked in rather than mounted, and NOT under /work — so the
 # confinement hook denies the agent access to it like any other outside path.
 COPY --chown=judge:judge docker/judge_one.py \
-                         src/experiments/isolation.py \
+                         src/experiments/risk_detect/isolation.py \
                          src/experiments/predictions.py \
                          /opt/harness/
 

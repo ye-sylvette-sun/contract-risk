@@ -2,7 +2,7 @@
 
 Reads every non-empty spellbook/chatbot/output/<cid>.json, maps the opaque provision
 ids back to dataset clause ids through the id map stored with the one-shot
-run, and scores the same three panels as src/experiments/compare_risk_detect.py.
+run, and scores the same three panels as src/experiments/risk_detect/compare_risk_detect.py.
 
 A provision Spellbook did not judge is scored as not_risky at probability 0 --
 never dropped. Dropping it would forgive the omission and, on a positive,
@@ -211,7 +211,7 @@ def collect():
     # Gold is multi-label: `taxonomy` is a comma-separated list of codes, so a
     # positive can be both risk types at once.
     gold = defaultdict(dict)
-    for r in csv.DictReader(open(ROOT / "output" / "dataset.csv", encoding="utf-8")):
+    for r in csv.DictReader(open(ROOT / "output" / "dataset" / "dataset.csv", encoding="utf-8")):
         codes = [c.strip() for c in r["taxonomy"].split(",") if c.strip()]
         pos = r["label"] == "POSITIVE"
         gold[r["contract_id"]][r["clause_id"]] = {
@@ -266,7 +266,7 @@ def main():
 
     report("SPELLBOOK", sb)
     for name, path in (("llm_api", "risk_detect_llm_api_preds.csv"),
-                       ("agent", "risk_detect_agent_preds.csv")):
+                       ("agent", "risk_detect/risk_detect_agent_preds.csv")):
         report(name, arm_rows(path, cids))
 
 

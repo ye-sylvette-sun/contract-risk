@@ -338,7 +338,7 @@ def load_examples(rows):
 
         # The foil is the CLOSEST IN LENGTH to the construed provisions, not the
         # longest. Length is the strongest baseline signal in this corpus (AUC
-        # 0.731), so contrasting a construed provision with the longest thing
+        # 0.691 on the evaluation set), so contrasting a construed provision with the longest thing
         # nobody sued over teaches length as much as it teaches drafting — and
         # the longest provision is often a page of boilerplate that costs the
         # prompt more than it is worth.
@@ -382,9 +382,9 @@ def held_out(rows, examples):
 def anonymise(clauses):
     """Present the provisions under opaque ids, in the order they appear.
 
-    The dataset's `pos1`/`neg14` ids would put the gold label on the door of
-    every provision and group the answers at the top of the list. So the model
-    sees `c001`, `c002`, ... in `source_span` order — the sequence a reader
+    The dataset's ids are positional too now, but its old `pos1`/`neg14` ids
+    put the gold label on the door of every provision, and renumbering keeps
+    the run independent of how the dataset keys its rows. So the model sees `c001`, `c002`, ... in `source_span` order — the sequence a reader
     meets them in, carrying no signal, each provision beside its neighbours,
     which is what a risk type 2 judgement needs.
 

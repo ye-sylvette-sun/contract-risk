@@ -55,8 +55,9 @@ sha256:b5f50d7dc71f6eae1ce623fbbcad0853e927ce6c564ae44d9ff53015f1bb1fec
 ```
 
 The container has no `~/.claude`, no settings, no skills, no managed policy, and
-only this contract's workspace is mounted. `dataset.csv` and the other contracts
-are not on its filesystem at all.
+only this contract's workspace is mounted — the contract, its case's other
+filings as `context/`, and the worked examples' notes. `dataset.csv` and every
+contract outside the case are not on its filesystem at all.
 
 **Credentials.** `CLAUDE_CODE_OAUTH_TOKEN` is passed as a single environment
 variable — a subscription credential, never an API key — so authentication
@@ -86,11 +87,12 @@ was billed, which is as far as the alias allows.
 ## 3. What is logged, and where
 
 ```
-output/llm_logs/risk_detect_agent/<cid>.json             request, response, usage
-output/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl every turn of the session
-output/risk_detect_agent/<cid>.json                      the judgments returned
-output/risk_detect_agent_ws/<cid>/                       the workspace as mounted
-output/run_manifest_<timestamp>.json                     image digest, CLI version,
+output/risk_detect/llm_logs/risk_detect_agent/<cid>.json             request, response, usage
+output/risk_detect/llm_logs/risk_detect_agent/<cid>.trajectory.jsonl every turn of the session
+output/risk_detect/risk_detect_agent/<cid>.json                      the judgments returned
+output/risk_detect/risk_detect_agent_ws/<cid>/                       the workspace as mounted
+output/risk_detect/llm_logs/risk_detect_agent/run_manifest_<timestamp>.json
+                                                         image digest, CLI version,
                                                          model asked for and billed,
                                                          options, dependency versions
 ```
@@ -112,7 +114,7 @@ CONTAINER    the image and working directory are the pinned ones
 MEMORY       no memory file was loaded
 CLAUDE_MD    no CLAUDE.md was injected
 SKILLS       no skill was loaded
-REMINDERS    no system reminders wrapped the tool results
+REMINDERS    no free-standing system reminder — only the CLI's wrapper on a tool result
 CLI          the CLI version in the trajectory is the one the SDK spawns
 MODEL        the model billed is the model asked for, and only that model
 PATHS        how many path arguments fell outside the workspace, and how many
@@ -136,7 +138,7 @@ A failure here is a reason not to run, not a warning to note.
   cannot be compared until it has been; `compare_risk_detect.py --against`
   exists for that.
 - **The clause-to-passage link in the dataset is a model's judgment**, not a
-  verified fact — see [DATASET.md](DATASET.md) §5. Isolation makes the *run*
+  verified fact — see [DATASET.md](DATASET.md) §6. Isolation makes the *run*
   reproducible; it does not make the labels correct.
 
 ---
@@ -147,24 +149,24 @@ A failure here is a reason not to run, not a warning to note.
 docker build -f docker/Dockerfile -t contract-risk-judge:0.2.139 .
 export CLAUDE_CODE_OAUTH_TOKEN=...          # subscription credential
 
-python src/experiments/preflight.py         # must pass all fourteen
-python src/experiments/risk_detect_agent.py --parallel 6
+python src/experiments/risk_detect/preflight.py         # must pass all fourteen
+python src/experiments/risk_detect/risk_detect_agent.py --parallel 6
 
-python src/experiments/compare_risk_detect.py
-python src/experiments/plot_risk_detect_thresholds.py
+python src/experiments/risk_detect/compare_risk_detect.py
+python src/experiments/risk_detect/plot_risk_detect_thresholds.py
 
-python src/experiments/issue_alignment_check.py --parallel 6
-python src/experiments/issue_alignment_check.py --control case --out DIR
-python src/experiments/plot_issue_alignment_thresholds.py
+python src/experiments/issue_alignment/issue_alignment_check.py --parallel 6
+python src/experiments/issue_alignment/issue_alignment_check.py --control case --out DIR
+python src/experiments/issue_alignment/plot_issue_alignment_thresholds.py
 ```
 
 Rebuilding the dataset from the corpus:
 
 ```bash
-python src/step1_inventory.py  --parallel 6
-python src/step2_disputes.py   --parallel 6
-python src/step3_issue_scope.py --parallel 6
-python src/build_dataset.py
+python src/dataset/step1_inventory.py  --parallel 6
+python src/dataset/step2_disputes.py   --parallel 6
+python src/dataset/step3_issue_scope.py --parallel 6
+python src/dataset/build_dataset.py
 ```
 
 `step2_disputes.py` and `step3_issue_scope.py` resume: a case already in the

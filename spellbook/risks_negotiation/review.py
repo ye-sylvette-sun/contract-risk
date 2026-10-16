@@ -241,7 +241,7 @@ def locate(snippet, tokens, index):
 def clause_index(cid):
     """(start, end, clause_id, label, name) per extracted clause, in order."""
     spans = []
-    with open(ROOT / "output" / "dataset.csv", newline="", encoding="utf-8") as fh:
+    with open(ROOT / "output" / "dataset" / "dataset.csv", newline="", encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
             if r["contract_id"] != cid:
                 continue
@@ -299,7 +299,7 @@ def parse_party(path, raw, tokens, index, spans):
 
 # ========================================================== 3. CLASSIFYING ==
 
-# Lifted verbatim from `prompts/risk_detect.md` so this pass and the main experiment
+# Lifted verbatim from `prompts/risk_detect/risk_detect.md` so this pass and the main experiment
 # judge against the same definitions -- otherwise the comparison is between two
 # different questions.
 RISK_TYPES = """\
@@ -503,7 +503,7 @@ def rollup(items):
 
 # ===================================================================== run ==
 def read_contract(cid):
-    return (ROOT / "output" / "contracts" / f"{cid}.md").read_text(
+    return (ROOT / "output" / "dataset" / "contracts" / f"{cid}.md").read_text(
         encoding="utf-8")
 
 

@@ -35,7 +35,7 @@ recall 天花板是阈值取 0.01 时的 recall:gold 条款中拿到过该类型
 **risk type 2 没有超过条款长度基线。** 0.690 对 0.691。模型相对长度基线的全部
 增益都在 type 1 和 risky/not 这个二元问题上;在关系型这一半上没有可测量的贡献。
 
-图:`output/figures/risk_detect_agent_threshold_curves.png`
+图:`output/risk_detect/figures/risk_detect_agent_threshold_curves.png`
 
 ## 2. 没有可用的工作点
 
@@ -84,7 +84,7 @@ precision 与 recall 在 t ≈ 0.45 相交,两者都在 0.25 附近。在 1.6% �
 类型一致性单独报告:69 个匹配对中 52 个(75.4%)粗类型一致,其余 17 个说的是同
 一个缺陷但归了不同的类型。
 
-图:`output/figures/issue_alignment_threshold_curves.png`
+图:`output/issue_alignment/figures/issue_alignment_threshold_curves.png`
 
 ## 4. 两个测量放在一起说明了什么
 
