@@ -93,7 +93,7 @@ prompts/<name>/           <name>.md (SYSTEM/DOCUMENT/INSTRUCTIONS/TASK) + <name>
   risk_detect/              the risk-detection experiment's judging criteria (SYSTEM only)
   issue_alignment_check/    did an issue match the dispute the court had?
   spellbook_issue_types/    type Spellbook's findings and restate them in the dataset's form
-  review_difficulty/        how hard is a case for a human to review?
+  review_difficulty/        how hard is a case, and what its court construed, to understand?
 
 src/lib.py                paths, taxonomy, ask(), locate(), normalise()
 
@@ -126,7 +126,7 @@ src/experiments/
     spellbook_review_types.py       type Spellbook's Risks & Negotiation issues (LLM, per contract)
     spellbook_review_preds.py       Spellbook's review rewritten as a preds.csv
   review_difficulty/
-    review_difficulty.py            how hard each case is for a human reviewer (LLM, per case)
+    review_difficulty.py            how hard each case is to understand (LLM, per case); see AGENT.md
 
 docker/Dockerfile         the judging sandbox, base pinned by digest
 docker/judge_one.py       the only code that runs inside it

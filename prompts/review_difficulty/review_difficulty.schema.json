@@ -6,7 +6,7 @@
     "score",
     "estimated_minutes",
     "factors",
-    "hardest_item",
+    "hardest_defect",
     "reason"
   ],
   "properties": {
@@ -17,27 +17,26 @@
         "intermediate",
         "hard"
       ],
-      "description": "How hard this case is for a law-trained, non-specialist reviewer to check: whether each judged item's call by the alignment judge is right, wrong or unsure."
+      "description": "How hard it is for a law-trained, non-specialist reviewer to understand this case and every court defect in it. The number of court defects plays no part."
     },
     "score": {
       "type": "integer",
-      "description": "An integer from 1 to 10. 1-3 easy (about half an hour or less, reviewer ends confident), 4-6 intermediate, 7-10 hard (about an hour and a half or more, or the reviewer may still be unsure). Must agree with `difficulty`."
+      "description": "An integer from 1 to 10, using the whole range. 1-3 easy (1-2: every defect plain on one read; 3: a little context needed), 4-6 intermediate, 7-10 hard (9-10: a careful reader may stay unsure what the court construed). Must agree with `difficulty`. The number of court defects plays no part."
     },
     "estimated_minutes": {
       "type": "integer",
-      "description": "Estimated total review time for this case in minutes, reading included."
+      "description": "Minutes a law-trained non-specialist needs to understand the case and every court defect well enough to recognise each in someone else's words, reading included. Set by how hard the defects are to understand, not by how many there are."
     },
     "factors": {
       "type": "object",
       "additionalProperties": false,
-      "description": "How much each factor adds to the reviewer's work in THIS case.",
+      "description": "How much each factor adds to the difficulty of understanding THIS case.",
       "required": [
         "transaction_background",
         "domain_knowledge",
         "defect_spread",
-        "agent_claims",
-        "judge_call",
-        "volume"
+        "court_reasoning",
+        "issue_distinctness"
       ],
       "properties": {
         "transaction_background": {
@@ -55,14 +54,14 @@
                 "medium",
                 "high"
               ],
-              "description": "How much this factor adds to the reviewer's work in this case."
+              "description": "How much this factor adds to the difficulty of understanding this case."
             },
             "note": {
               "type": "string",
               "description": "One sentence specific to this case: name the provision, term or background involved."
             }
           },
-          "description": "How much of the deal, the parties and who wants what procedurally must be learned before any item can be decided."
+          "description": "How much of the deal, the parties and who wants what procedurally must be learned before any court defect can be understood."
         },
         "domain_knowledge": {
           "type": "object",
@@ -79,7 +78,7 @@
                 "medium",
                 "high"
               ],
-              "description": "How much this factor adds to the reviewer's work in this case."
+              "description": "How much this factor adds to the difficulty of understanding this case."
             },
             "note": {
               "type": "string",
@@ -103,7 +102,7 @@
                 "medium",
                 "high"
               ],
-              "description": "How much this factor adds to the reviewer's work in this case."
+              "description": "How much this factor adds to the difficulty of understanding this case."
             },
             "note": {
               "type": "string",
@@ -112,7 +111,7 @@
           },
           "description": "Whether the court's defects sit in one phrase of one clause, or span several provisions or another document, so the contract must be reread."
         },
-        "agent_claims": {
+        "court_reasoning": {
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -127,16 +126,16 @@
                 "medium",
                 "high"
               ],
-              "description": "How much this factor adds to the reviewer's work in this case."
+              "description": "How much this factor adds to the difficulty of understanding this case."
             },
             "note": {
               "type": "string",
               "description": "One sentence specific to this case: name the provision, term or background involved."
             }
           },
-          "description": "Whether the agent's issues are single checkable claims, or multi-step, bundled, or carry factual claims that must be verified."
+          "description": "Whether the court states what it construed plainly, or the construction is entangled with procedural rulings, spread across the opinion, carried by precedent, or left unresolved on a narrow ground."
         },
-        "judge_call": {
+        "issue_distinctness": {
           "type": "object",
           "additionalProperties": false,
           "required": [
@@ -151,44 +150,20 @@
                 "medium",
                 "high"
               ],
-              "description": "How much this factor adds to the reviewer's work in this case."
+              "description": "How much this factor adds to the difficulty of understanding this case."
             },
             "note": {
               "type": "string",
               "description": "One sentence specific to this case: name the provision, term or background involved."
             }
           },
-          "description": "Whether the judge's call can be confirmed by seeing that both sides point at the same words, or needs interpretation: relational defects, misses that the agent may have found on a neighbouring provision, unclear whether two descriptions are one defect."
-        },
-        "volume": {
-          "type": "object",
-          "additionalProperties": false,
-          "required": [
-            "level",
-            "note"
-          ],
-          "properties": {
-            "level": {
-              "type": "string",
-              "enum": [
-                "low",
-                "medium",
-                "high"
-              ],
-              "description": "How much this factor adds to the reviewer's work in this case."
-            },
-            "note": {
-              "type": "string",
-              "description": "One sentence specific to this case: name the provision, term or background involved."
-            }
-          },
-          "description": "How many items there are to decide, and how much text must be read."
+          "description": "Whether each court defect is clearly separate, or defects share passages, overlap in the words at issue, or are relational readings of one another. About how hard they are to tell apart, not how many there are."
         }
       }
     },
-    "hardest_item": {
+    "hardest_defect": {
       "type": "string",
-      "description": "The id of the judged item that will take longest (e.g. \"j03\"), and in one or two sentences why. If there are no judged items, say so."
+      "description": "The id of the court defect hardest to understand (e.g. \"d03\"), and in one or two sentences why."
     },
     "reason": {
       "type": "string",
