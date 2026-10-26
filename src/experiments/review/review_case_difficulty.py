@@ -28,13 +28,13 @@ those cases (122 F.Supp.3d 1157, hard; 787 F.Supp.2d 118, easy) can test it.
 Input : output/dataset/dataset.csv, output/dataset/cases.json,
         output/dataset/contracts.json, output/dataset/contracts/*.md,
         output/dataset/opinions/<id>.txt
-Output: output/review_difficulty/review_difficulty.json  (resumable — re-runs only what is missing)
-        output/review_difficulty/llm_logs/review_difficulty/<case_id>.json
+Output: output/review/review_case_difficulty.json  (resumable — re-runs only what is missing)
+        output/review/llm_logs/review_case_difficulty/<case_id>.json
 
 Usage:
-    python src/experiments/review_difficulty/review_difficulty.py --dry-run     # sizes, no calls
-    python src/experiments/review_difficulty/review_difficulty.py --case "122 F.Supp.3d 1157" --out DIR
-    python src/experiments/review_difficulty/review_difficulty.py [--case CITATION] [--parallel N]
+    python src/experiments/review/review_case_difficulty.py --dry-run     # sizes, no calls
+    python src/experiments/review/review_case_difficulty.py --case "122 F.Supp.3d 1157" --out DIR
+    python src/experiments/review/review_case_difficulty.py [--case CITATION] [--parallel N]
 """
 import argparse
 import concurrent.futures as cf
@@ -54,7 +54,7 @@ csv.field_size_limit(min(sys.maxsize, 2**31 - 1))
 
 MODEL = "gpt-6.1-sol"
 EFFORT = "medium"
-PROMPT = "review_difficulty"
+PROMPT = "review_case_difficulty"
 DATASET = lib.DATASET_OUT / "dataset.csv"
 CLAUSE_CAP = 3000           # a construed clause; the contract above has it whole
 FENCE = "```"
@@ -83,8 +83,11 @@ def packet(rows):
     printed for an earlier defect is referred to rather than repeated: that two
     defects share the court's words is itself something the reader has to work
     through, so it is said, not hidden.
+
+    Also returns each defect's id under the alignment check's key for it,
+    `<contract>__<clause>__i<n>`, n counting from 1 within the provision.
     """
-    out, ids, seen = [], [], {}
+    out, ids, keys, seen = [], [], {}, {}
     by_contract = defaultdict(list)
     for r in rows:
         by_contract[r["contract_id"]].append(r)
@@ -99,9 +102,10 @@ def packet(rows):
             golds = json.loads(r["issues"] or "[]")
             out += [f"#### {r['clause_id']} — {r['clause_name']}", "",
                     f"{FENCE}\n{clip(r['clause_text'], CLAUSE_CAP)}\n{FENCE}", ""]
-            for g in golds:
+            for n, g in enumerate(golds, 1):
                 did = f"d{len(ids) + 1:02d}"
                 ids.append(did)
+                keys[f"{cid}__{r['clause_id']}__i{n}"] = did
                 needs = f" — needs {g['scope_needs']}" if g.get("scope_needs") else ""
                 lines = g.get("opinion_lines") or ["?", "?"]
                 passage = (g.get("opinion_comment") or "").strip()
@@ -114,7 +118,60 @@ def packet(rows):
                     seen[passage] = did
                     out.append(f"{FENCE}\n{passage}\n{FENCE}")
                 out.append("")
-    return "\n".join(out), ids
+    return "\n".join(out), ids, keys
+
+
+def material(crow, cases, registry):
+    """One case's numbered opinion, its contracts, its packet, and the ids."""
+    citation = crow[0]["citation"]
+    ids = sorted({r["contract_id"] for r in crow})
+    texts = {cid: (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
+             for cid in ids}
+    opinion = lib.numbered((lib.OPINIONS / f"{cases[citation]['id']}.txt")
+                           .read_text(encoding="utf-8"))
+    pk, defect_ids, keys = packet(crow)
+    return opinion, documents(ids, texts), pk, defect_ids, keys
+
+
+def logged(log_dir, name, model, call_id, fields):
+    """The answer already in this call's log, if that log is this exact call.
+
+    A call that was answered and logged but never reached the result file —
+    the run died on another worker first — is read back rather than billed
+    again. Only when the log is the same request: same model, same prompt
+    sections, same document by digest.
+    """
+    path = log_dir / f"{call_id}.json"
+    if not path.exists():
+        return None
+    log = json.loads(path.read_text(encoding="utf-8"))
+    p = lib.prompt(name, **fields)
+    same = (log.get("ok") and str(log.get("model", "")).startswith(model)
+            and log["system"] == p["SYSTEM"]
+            and log["instructions"] == p["INSTRUCTIONS"]
+            and log["task"] == p["TASK"]
+            and log["document_sha256"] == hashlib.sha256(
+                p["DOCUMENT"].encode("utf-8")).hexdigest())
+    if not same:
+        return None
+    text = "".join(c.get("text", "") for b in log["response"]
+                   if b.get("type") == "message"
+                   for c in b.get("content") or []
+                   if c.get("type") == "output_text")
+    return json.loads(text) if text else None
+
+
+def eval_cases():
+    """The evaluation set's dataset rows, by citation, and the case registries."""
+    cases = lib.read_json(lib.DATASET_OUT / "cases.json", {})
+    registry = lib.read_json(lib.DATASET_OUT / "contracts.json", {})
+    rows = runs.load_rows(DATASET)
+    taught = runs.held_out(rows, runs.load_examples(rows))
+    by_case = defaultdict(list)
+    for r in rows:
+        if r["contract_id"] not in taught:
+            by_case[r["citation"]].append(r)
+    return by_case, cases, registry
 
 
 def check(answer, ids):
@@ -139,23 +196,16 @@ def main():
     ap.add_argument("--model", default=MODEL)
     ap.add_argument("--effort", default=EFFORT)
     ap.add_argument("--out", help="directory for a trial run's result and logs, "
-                                  "instead of output/review_difficulty/")
+                                  "instead of output/review/")
     ap.add_argument("--dry-run", action="store_true",
                     help="build every packet and print its size; no calls")
     args = ap.parse_args()
 
-    stage = Path(args.out) if args.out else lib.DIFFICULTY_OUT
-    result = stage / "review_difficulty.json"
+    stage = Path(args.out) if args.out else lib.REVIEW_OUT
+    result = stage / f"{PROMPT}.json"
     log_dir = stage / "llm_logs" / PROMPT
 
-    cases = lib.read_json(lib.DATASET_OUT / "cases.json", {})
-    registry = lib.read_json(lib.DATASET_OUT / "contracts.json", {})
-    rows = runs.load_rows(DATASET)
-    taught = runs.held_out(rows, runs.load_examples(rows))
-    by_case = defaultdict(list)
-    for r in rows:
-        if r["contract_id"] not in taught:
-            by_case[r["citation"]].append(r)
+    by_case, cases, registry = eval_cases()
     done = lib.read_json(result, {}) or {}
 
     if args.case:
@@ -169,62 +219,25 @@ def main():
     if empty:
         print(f"{len(empty)} case(s) skipped, no court defect: {', '.join(empty)}")
 
-    def material(citation):
-        crow = by_case[citation]
-        ids = sorted({r["contract_id"] for r in crow})
-        texts = {cid: (lib.ROOT / registry[cid]["file"]).read_text(encoding="utf-8")
-                 for cid in ids}
-        opinion = lib.numbered((lib.OPINIONS / f"{cases[citation]['id']}.txt")
-                               .read_text(encoding="utf-8"))
-        pk, defect_ids = packet(crow)
-        return opinion, documents(ids, texts), pk, defect_ids
-
     if args.dry_run:
         total = 0
         for c in todo:
-            opinion, contracts, pk, defect_ids = material(c)
+            opinion, contracts, pk, defect_ids, _ = material(by_case[c], cases, registry)
             t = lib.n_tokens(opinion + contracts + pk)
             total += t
             print(f"{c:24s} {len(defect_ids):3d} court defect(s)  {t:>8,} tokens")
         print(f"\n{len(todo)} case(s), {total:,} input tokens before the prompt's own text")
         return
 
-    def logged(cid, fields):
-        """The answer already in this case's log, if that log is this exact call.
-
-        A call that was answered and logged but never reached the result file —
-        the run died on another worker first — is read back rather than billed
-        again. Only when the log is the same request: same model, same prompt
-        sections, same document by digest.
-        """
-        path = log_dir / f"{cid}.json"
-        if not path.exists():
-            return None
-        log = json.loads(path.read_text(encoding="utf-8"))
-        p = lib.prompt(PROMPT, **fields)
-        same = (log.get("ok") and str(log.get("model", "")).startswith(args.model)
-                and log["system"] == p["SYSTEM"]
-                and log["instructions"] == p["INSTRUCTIONS"]
-                and log["task"] == p["TASK"]
-                and log["document_sha256"] == hashlib.sha256(
-                    p["DOCUMENT"].encode("utf-8")).hexdigest())
-        if not same:
-            return None
-        text = "".join(c.get("text", "") for b in log["response"]
-                       if b.get("type") == "message"
-                       for c in b.get("content") or []
-                       if c.get("type") == "output_text")
-        return json.loads(text) if text else None
-
     def one(citation):
-        opinion, contracts, pk, defect_ids = material(citation)
+        opinion, contracts, pk, defect_ids, _ = material(by_case[citation], cases, registry)
         why = lib.out_of_bounds(opinion + contracts + pk)
         if why:
             print(f"skip   {citation}: {why}", flush=True)
             return citation, None
         fields = dict(citation=citation, opinion=opinion, contracts=contracts,
                       packet=pk)
-        answer = logged(cases[citation]["id"], fields)
+        answer = logged(log_dir, PROMPT, args.model, cases[citation]["id"], fields)
         if answer is not None:
             print(f"from log  {citation}", flush=True)
         else:

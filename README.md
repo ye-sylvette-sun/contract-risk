@@ -93,7 +93,8 @@ prompts/<name>/           <name>.md (SYSTEM/DOCUMENT/INSTRUCTIONS/TASK) + <name>
   risk_detect/              the risk-detection experiment's judging criteria (SYSTEM only)
   issue_alignment_check/    did an issue match the dispute the court had?
   spellbook_issue_types/    type Spellbook's findings and restate them in the dataset's form
-  review_difficulty/        how hard is a case, and what its court construed, to understand?
+  review_case_difficulty/   how hard is a case, and what its court construed, to understand?
+  review_issue_difficulty/  how hard is one alignment call to check, once the case is understood?
 
 src/lib.py                paths, taxonomy, ask(), locate(), normalise()
 
@@ -125,8 +126,9 @@ src/experiments/
   spellbook/
     spellbook_review_types.py       type Spellbook's Risks & Negotiation issues (LLM, per contract)
     spellbook_review_preds.py       Spellbook's review rewritten as a preds.csv
-  review_difficulty/
-    review_difficulty.py            how hard each case is to understand (LLM, per case); see AGENT.md
+  review/                         see AGENT.md
+    review_case_difficulty.py       how hard each case is to understand (LLM, per case)
+    review_issue_difficulty.py      how hard each alignment call is to check (LLM, per case, one rating per call)
 
 docker/Dockerfile         the judging sandbox, base pinned by digest
 docker/judge_one.py       the only code that runs inside it
@@ -154,7 +156,8 @@ output/<stage>/           one directory per stage: its results, llm_logs/<step>/
                                   git commit, the environment sweep, the options, the input hashes
   issue_alignment/          issue_alignment_check.{json,csv}: one row per issue judged against the court's words
   spellbook/                spellbook_review_{types.json,preds.csv,alignment.json,alignment.csv}
-  review_difficulty/        review_difficulty.json: one difficulty assessment per case
+  review/                   review_case_difficulty.json: one assessment per case;
+                            review_issue_difficulty.json: one per alignment call
 ```
 
 `data/` and `contract_risk/` are gitignored — they are large and provided

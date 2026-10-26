@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "items"
+  ],
+  "properties": {
+    "items": {
+      "type": "array",
+      "description": "Exactly one entry per item shown, in the order given.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "difficulty",
+          "score",
+          "estimated_minutes",
+          "reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The item's id as shown, e.g. \"a03\"."
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": [
+              "easy",
+              "intermediate",
+              "hard"
+            ],
+            "description": "How hard it is for a reviewer who already understands the case to check this item's call: how unclear the comparison is. Not how close the description is to the court defect, not whether the call is right, and not how hard the case is."
+          },
+          "score": {
+            "type": "integer",
+            "description": "An integer from 1 to 10, using the whole range. 1-3 easy (1-2: plain at a glance; 3: one more look needed), 4-6 intermediate, 7-10 hard (9-10: two careful reviewers could reasonably decide it differently). Must agree with `difficulty`."
+          },
+          "estimated_minutes": {
+            "type": "integer",
+            "description": "Minutes a reviewer who already understands the case needs to reach a decision on this item. Only the work this item adds."
+          },
+          "reason": {
+            "type": "string",
+            "description": "One or two sentences specific to this item: the step that takes the work, and the words, claim or court defect it turns on."
+          }
+        }
+      }
+    }
+  }
+}

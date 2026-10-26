@@ -56,7 +56,7 @@ DATASET_OUT = OUT / "dataset"             # steps 0-3 and build_dataset.py
 RISK_DETECT_OUT = OUT / "risk_detect"     # the agent run
 ALIGNMENT_OUT = OUT / "issue_alignment"   # the issue-alignment check
 SPELLBOOK_OUT = OUT / "spellbook"         # the Spellbook comparison
-DIFFICULTY_OUT = OUT / "review_difficulty"
+REVIEW_OUT = OUT / "review"
 
 LOGS = DATASET_OUT / "llm_logs"           # the dataset steps' logs; experiments pass log_dir
 CONTRACTS = DATASET_OUT / "contracts"
